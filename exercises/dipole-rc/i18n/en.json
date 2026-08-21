@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A capacitor stores electric charge like a tiny rechargeable battery. Click the switch $K$ to toggle between CHARGE (connect the battery) and DISCHARGE (short through the resistor). Slide $R$ and $C$, complete one full charge AND one full discharge to advance.",
+      "concept": "Charge: $u_C(t) = E\\,(1 - e^{-t/\\tau})$. The time constant $\\tau = R\\,C$ sets the pace — at $t = \\tau$, $u_C$ reaches $63\\%$ of $E$. This is the same $\\tau$ that governs a camera-flash recharge, a brake-light dimming, and every low-pass filter in your phone.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit the orange crosshair: $u_C$ must reach $V^{*}$ at exactly $t^{*}$. Tune $R$ and $C$ so your live curve passes through the target. Many $(R, C)$ pairs work — success only depends on $\\tau = R\\,C$.",
+      "concept": "$V^{*} = E\\,(1 - e^{-t^{*}/\\tau})\\ \\Rightarrow\\ \\tau^{*} = -\\dfrac{t^{*}}{\\ln(1 - V^{*}/E)}$. Adjust $R$ and $C$ to match $\\tau^{*}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Only the target curve is drawn — pick $R$ and $C$ blind, then press RUN to see your curve overlaid. Match $\\tau$ to within $\\pm 3\\%$. Peek reveals $\\tau^{*}$ for $1.5\\,\\text{s}$.",
+      "concept": "Read the curve: at $t = \\tau^{*}$, the curve crosses $0.63\\,E$. Estimate $\\tau^{*}$ from that intersection, then pick any $(R, C)$ whose product equals $\\tau^{*}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "circuit",
+    "hit": "hit!",
+    "match_ok": "match",
+    "match_off": "off",
+    "peek_reveal": "true:",
+    "target_short": "target",
+    "submit_button": "RUN",
+    "charge_label": "charge",
+    "discharge_label": "discharge",
+    "click_switch": "click K to toggle",
+    "tip1": "cycle K → CHARGE, wait for full charge, K → DISCHARGE, wait for full discharge",
+    "tip2": "adjust R and C so the crosshair sits on your curve",
+    "tip3": "estimate τ* from where the target hits 0.63·E, then set R·C = τ*"
+  },
+  "hints": {
+    "1": {
+      "1": "Click K once for CHARGE, again for DISCHARGE, again for OPEN.",
+      "2": "The dashed 0.63·E line marks where the curve is at t = τ. Watch it move when you change R or C.",
+      "3": "Full charge = u_C reaches 99% of E (about 5τ). Full discharge = u_C drops to 1% of E."
+    },
+    "2": {
+      "1": "Compute the target τ*: τ* = −t* / ln(1 − V*/E). Then set R·C ≈ τ*.",
+      "2": "Doubling R and halving C keeps τ the same — try it, the curve won't change.",
+      "3": "Fine-tune with the C slider once you're close; small C changes = small τ changes."
+    },
+    "3": {
+      "1": "On the target curve, find the t-value where u_C = 0.63·E — that's τ*.",
+      "2": "Or find where the curve visibly asymptotes (≈ 5τ*). Divide by 5 for τ*.",
+      "3": "Peek gives you τ* directly for 1.5 s. Then pick any R, C with R·C = τ*."
+    }
+  }
+}

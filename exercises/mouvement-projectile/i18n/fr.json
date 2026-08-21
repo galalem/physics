@@ -1,0 +1,50 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais pivoter le canon pour viser, utilise le curseur $v_0$ pour la vitesse initiale, puis appuie sur TIRER. Essaie au moins deux angles différents et modifie $v_0$ pour voir la trajectoire changer.",
+      "concept": "Trajectoire parabolique : $x = v_0 \\cos\\alpha \\cdot t$, $z = v_0 \\sin\\alpha \\cdot t - \\tfrac{1}{2} g t^2$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Touche les trois cibles. L'arc en pointillés prévisualise la trajectoire — vise, ajuste, puis tire.",
+      "concept": "Portée : $x_P = \\dfrac{v_0^{2} \\sin(2\\alpha)}{g}$ — maximale à $\\alpha = 45^{\\circ}$. Les angles complémentaires donnent la même portée.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas d'arc de prévisualisation. Lis les coordonnées $(x, z)$ de chaque cible et choisis $\\alpha$ et $v_0$ pour que le projectile franchisse le mur ET atteigne la cible. Peek révèle l'arc brièvement.",
+      "concept": "Flèche : $z_S = \\dfrac{v_0^{2} \\sin^{2}\\alpha}{2g}$. Pour franchir un obstacle de hauteur $h$ : $z(x_{\\text{obstacle}}) > h$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "hits": "TOUCHES",
+    "stage": "ÉTAPE",
+    "tip1": "vise, change v₀, puis TIRER",
+    "tip2": "utilise l'arc de prévisualisation pour aligner chaque cible",
+    "tip3": "calcule α et v₀ depuis les coordonnées, puis TIRER"
+  },
+  "hints": {
+    "1": {
+      "1": "Fais pivoter le canon vers le haut ou le bas pour changer l'angle α.",
+      "2": "Le curseur v₀ à droite contrôle la vitesse initiale. Plus v₀ est grand, plus la portée l'est.",
+      "3": "Observe comment la parabole s'étend avec v₀ et comment sa forme change avec α."
+    },
+    "2": {
+      "1": "L'arc en pointillés prévisualise la trajectoire. Aligne-le avec une cible avant de tirer.",
+      "2": "Les cibles hautes demandent un α plus grand. Les cibles éloignées demandent plus de v₀ ou un α proche de 45°.",
+      "3": "Deux angles différents (complémentaires : α₁ + α₂ = 90°) atteignent le même point au sol — essaie les deux."
+    },
+    "3": {
+      "1": "Lis les coordonnées (x, z) de chaque cible. Choisis α, v₀ pour que la parabole passe par ces points.",
+      "2": "Portée : x_P = v₀²·sin(2α)/g. Hauteur en x : z(x) = x·tan α − g·x² / (2·v₀²·cos²α).",
+      "3": "Pour le mur : choisis α, v₀ tels que z(x_mur) > h_mur. Utilise Peek pour vérifier avant de tirer."
+    }
+  }
+}

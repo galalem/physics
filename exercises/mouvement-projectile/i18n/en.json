@@ -1,0 +1,50 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the cannon barrel to aim, use the $v_0$ slider to set launch speed, then press FIRE. Try at least two different angles and change $v_0$ to see how the trajectory reacts.",
+      "concept": "Parabolic trajectory: $x = v_0 \\cos\\alpha \\cdot t$, $z = v_0 \\sin\\alpha \\cdot t - \\tfrac{1}{2} g t^2$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit all three targets. The dashed preview arc shows where the projectile will land — aim, adjust, then fire.",
+      "concept": "Range: $x_P = \\dfrac{v_0^{2} \\sin(2\\alpha)}{g}$ — maximum at $\\alpha = 45^{\\circ}$. Complementary angles give the same range.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No preview arc. Read each target's coordinates $(x, z)$ and pick $\\alpha$ and $v_0$ so the projectile clears the wall AND lands on the target. Peek reveals the arc briefly if you need to verify.",
+      "concept": "Peak height: $z_S = \\dfrac{v_0^{2} \\sin^{2}\\alpha}{2g}$. To clear an obstacle at height $h$, ensure $z(x_{\\text{obstacle}}) > h$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "hits": "HITS",
+    "stage": "STAGE",
+    "tip1": "aim, change v₀, then FIRE",
+    "tip2": "use the preview arc to line up each target",
+    "tip3": "compute α and v₀ from the target coordinates, then FIRE"
+  },
+  "hints": {
+    "1": {
+      "1": "Drag the barrel up or down to change the launch angle α.",
+      "2": "The v₀ slider on the right controls initial speed. Higher v₀ = further reach.",
+      "3": "Watch how the parabola stretches with v₀ and how its shape changes with α."
+    },
+    "2": {
+      "1": "The dashed arc previews the projectile's path. Line it up with a target before firing.",
+      "2": "Higher targets need a steeper α. Distant targets need more v₀ or an α closer to 45°.",
+      "3": "Two different α values (complementary: α₁ + α₂ = 90°) reach the same ground point — try both."
+    },
+    "3": {
+      "1": "Read each target's (x, z) coordinates. Choose α, v₀ so the parabola passes through them.",
+      "2": "Range: x_P = v₀²·sin(2α)/g. Height at x: z(x) = x·tan α − g·x² / (2·v₀²·cos²α).",
+      "3": "For the wall: pick α, v₀ such that z(x_wall) > h_wall. Peek to verify your arc before firing."
+    }
+  }
+}

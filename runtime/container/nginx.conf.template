@@ -1,0 +1,45 @@
+server {
+    listen 80;
+    server_name _;
+    root /usr/share/nginx/html;
+    charset utf-8;
+
+    # Bundle root — the iframe's src URL. Must arrive with a valid
+    # signature (?exp=…&sig=…) minted by the backend signer.
+    #
+    # `$secure_link_md5` hashes over "$secure_link_expires/runtime$uri $secret"
+    # — the "/runtime" prefix reconstructs the browser-visible path the
+    # backend signed against (the outer proxy strips "/runtime/" before
+    # forwarding to this container).
+    #
+    # Sub-assets (main.js, images, css …) are loaded relatively from
+    # inside the iframe, which drops the query params, so they fall
+    # through to `location /` below and serve unrestricted. In prod,
+    # the public nginx runs `auth_request` on every `/runtime/*` request
+    # (per D19), so unauth'd requests never reach this container.
+    location ~ ^/[^/]+/$ {
+        secure_link $arg_sig,$arg_exp;
+        secure_link_md5 "$secure_link_expires/runtime$uri ${RUNTIME_SIGNING_SECRET}";
+        if ($secure_link = "")  { return 403; }
+        if ($secure_link = "0") { return 410; }
+        try_files ${uri}index.html =404;
+        add_header Cache-Control "no-cache" always;
+        add_header Access-Control-Allow-Origin "*" always;
+    }
+
+    # Sub-assets under a bundle folder, plus anything else. Immutable-hashed
+    # by Vite so cache-forever is safe. ACAO=* is required because the
+    # sandbox="allow-scripts" iframe has "null" origin.
+    location / {
+        try_files $uri $uri/index.html =404;
+        add_header Cache-Control "public, max-age=31536000, immutable" always;
+        add_header Access-Control-Allow-Origin "*" always;
+    }
+
+    # Health check for the public nginx / orchestrator.
+    location = /_health {
+        access_log off;
+        return 200 "ok\n";
+        add_header Content-Type text/plain;
+    }
+}

@@ -1,0 +1,33 @@
+# Deps + build output — reinstalled/rebuilt in the image
+**/node_modules
+**/dist
+**/build
+**/.turbo
+**/.vite
+**/.cache
+
+# Not needed for building images
+docs/
+design/
+assets/
+.git
+.github
+.gitignore
+.editorconfig
+.vscode
+.idea
+*.log
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# System
+.DS_Store
+Thumbs.db
+
+# Project-level docs the build doesn't need
+README.md
+CLAUDE.md
+BACKEND-DESIGN.md

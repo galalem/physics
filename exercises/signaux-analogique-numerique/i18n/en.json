@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Same source sinusoid, three faces: continuous analog (top), sampled-and-quantized numeric (middle), and binary logic (bottom). Slide $f_s$ (sample rate) and $N$ (bit depth) — watch the staircase get finer or coarser. Advance after moving both sliders at least twice.",
+      "concept": "Analog signals vary continuously in both time and amplitude. Logic signals take two levels only ($0$ / $1$). Numeric signals are discrete in time (sampled at $f_s$) and in amplitude (quantized to $2^N$ levels). Shannon–Nyquist: $f_s \\geq 2\\,f_0$ or the reconstruction lies about the frequency (aliasing).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A single waveform is shown. Pick the family it belongs to: analog, logic, or numeric. Get all $5$ right in a row to advance.",
+      "concept": "Cues: smooth curve → analog. Jumps between two flat levels only → logic. Flat plateaus at multiple discrete levels (staircase) → numeric. If it looks pixelated in amplitude but not just two levels, it's numeric.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The orange target was made from the same source sine with some $(f_s^{*},\\,N^{*})$. Match it by tuning your own $f_s$ and $N$. Peek reveals the answer for $1.5\\,\\text{s}$.",
+      "concept": "Count the plateaus per window → the number of samples ≈ $f_s^{*} \\cdot T$. Count the distinct vertical levels → $2^{N^{*}}$. Then set $f_s$ and $N$ to match.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "analog": "analog",
+    "logic": "logic",
+    "numeric": "numeric",
+    "classify": "waveform",
+    "target": "target",
+    "yours": "yours",
+    "match_ok": "match",
+    "peek_reveal": "answer:",
+    "progress": "progress",
+    "correct": "correct",
+    "wrong": "not this one",
+    "tip1": "move f_s and N · watch staircase change · below 2·f_0 = aliasing",
+    "tip2": "smooth curve = analog · 2 flat levels = logic · staircase = numeric",
+    "tip3": "count plateaus → f_s · count vertical levels → 2^N"
+  },
+  "hints": {
+    "1": {
+      "1": "Try f_s = 4 Hz then f_s = 12 Hz — see how the staircase gets finer along t.",
+      "2": "Try N = 1 then N = 6 — see how the vertical steps shrink from 2 levels to 64.",
+      "3": "Set f_s = 3 Hz (below 2·f_0 = 4). The staircase drifts — that's aliasing."
+    },
+    "2": {
+      "1": "Is the trace smooth all the way, no jumps? That's analog.",
+      "2": "Only two flat lines, jumps between them? That's logic (binary).",
+      "3": "Flat plateaus at 4, 8, 16 distinct levels? That's numeric (quantized)."
+    },
+    "3": {
+      "1": "Count the horizontal plateaus in the target: that gives you f_s* ≈ plateaus per second.",
+      "2": "Count the distinct vertical levels: that's 2^N* (2 = N*1, 4 = N*2, 8 = N*3, 16 = N*4).",
+      "3": "Peek reveals f_s* and N* directly for 1.5 s."
+    }
+  }
+}

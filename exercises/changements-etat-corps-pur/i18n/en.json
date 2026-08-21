@@ -1,0 +1,69 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Turn up the Bunsen and watch the temperature climb. Notice the two plateaus where $T$ stops rising even though heat keeps flowing — that's fusion and vaporisation. The molecule box tracks the state. Advance once you've reached $4$ of the $5$ phase states.",
+      "concept": "Heating a pure substance at constant heat rate: $T$ rises inside a single phase, then flatlines at each phase transition. The heat absorbed during a plateau (latent heat) goes into breaking bonds, not raising $T$. For water: solid $\\to$ fusion at $0\\,^\\circ\\text{C}$ $\\to$ liquid $\\to$ vaporisation at $100\\,^\\circ\\text{C}$ $\\to$ vapour.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "The dashed teal curve is the target. Choose the substance and mass that reproduce it. Only one combination matches all plateau lengths and slopes.",
+      "concept": "Plateau length $= m\\,L$ (mass $\\times$ latent heat). Segment slope $= 1/(m\\,c)$. Doubling mass doubles every plateau's length and halves every slope. Changing substance shifts plateau temperatures and swaps in different $L$ / $c$ values.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The heating curve is drawn but the state names are stripped. Label each numbered segment with the correct phase state.",
+      "concept": "A rising segment means the substance is inside a single phase (heat raises $T$). A flat segment means a phase transition in progress (heat breaks bonds, $T$ unchanged). The sequence for a substance that melts and boils is fixed: solid $\\to$ fusion $\\to$ liquid $\\to$ vaporisation $\\to$ vapour.",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "beaker": "beaker",
+    "plot_title": "T vs Q",
+    "controls_title": "controls",
+    "field_substance": "substance",
+    "field_mass": "mass",
+    "field_heat": "bunsen",
+    "field_status": "status",
+    "substance_water": "water",
+    "substance_iode": "iodine",
+    "state_solid": "solid",
+    "state_fusion": "fusion",
+    "state_liquid": "liquid",
+    "state_vap": "vaporisation",
+    "state_vapor": "vapour",
+    "states_seen": "states",
+    "match_target": "match target",
+    "matched": "matched",
+    "labels": "labels",
+    "reset_sim": "reset heat",
+    "evaluate_prompt": "Assign the correct phase to each numbered segment.",
+    "pick_label": "pick",
+    "tip1": "turn up the bunsen; watch the plateaus at 0°C and 100°C",
+    "tip2": "one substance + one mass reproduce the dashed target",
+    "tip3": "rising segments are single-phase; flat segments are transitions"
+  },
+  "hints": {
+    "1": {
+      "1": "Turn the Bunsen up. Watch how T rises, then holds flat, rises again, holds flat, then rises to the top.",
+      "2": "The two flat plateaus are fusion (0°C for water) and vaporisation (100°C). Heat keeps flowing but T doesn't move.",
+      "3": "You need to reach the vapour segment past 100°C to have witnessed 4 states. Let the sim run."
+    },
+    "2": {
+      "1": "Look at where the dashed curve's plateaus sit on the T axis — that fixes the substance.",
+      "2": "Once substance is right, compare plateau lengths. Longer plateau = larger mass.",
+      "3": "The target is water at mass 1.0. Try that combination."
+    },
+    "3": {
+      "1": "Segment 1 goes from below 0°C up to 0°C — the substance is being warmed as a solid.",
+      "2": "Flat segments are transitions: segment 2 is fusion (0°C), segment 4 is vaporisation (100°C).",
+      "3": "Order: solid → fusion → liquid → vaporisation → vapour."
+    }
+  }
+}

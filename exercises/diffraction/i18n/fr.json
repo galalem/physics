@@ -1,0 +1,54 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un laser rouge traverse une fente étroite de largeur $a$ et atteint un écran distant. Au lieu d'un unique point, on obtient une large bande centrale brillante flanquée de franges latérales plus faibles — c'est la diffraction. Balaie les trois curseurs (fente $a$, longueur d'onde $\\lambda$, distance $D$) pour voir comment chacun façonne la figure.",
+      "concept": "Largeur de la frange centrale : $L = \\dfrac{2\\,\\lambda\\,D}{a}$. Demi-écart angulaire : $\\theta \\approx \\dfrac{\\lambda}{a}$. Fente plus étroite ou longueur d'onde plus grande → figure plus large. La diffraction est « appréciable » quand $\\lambda / a$ n'est pas petit.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Reproduis la figure fantôme à droite de l'écran : sa largeur $L^{*}$ ET sa couleur $\\lambda^{*}$ doivent correspondre. Comme $L = 2\\lambda D / a$ a trois inconnues pour une largeur, plusieurs $(a, D)$ conviennent — mais un seul $\\lambda$.",
+      "concept": "$L^{*} = \\dfrac{2\\,\\lambda^{*}\\,D}{a}\\ \\Rightarrow\\ a = \\dfrac{2\\,\\lambda^{*}\\,D}{L^{*}}$. Choisis d'abord $\\lambda$ (accorder la couleur du fantôme), puis règle $a$ et $D$ pour atteindre $L^{*}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La figure d'intensité est cachée — l'écran ne montre que deux points cibles à $\\pm d^{*}$. Choisis $a$, $\\lambda$, $D$ pour que les premières franges sombres tombent exactement sur les points ($L/2 = d^{*}$). Aperçu révèle brièvement la vraie figure.",
+      "concept": "Position du premier minimum : $\\dfrac{L}{2} = \\dfrac{\\lambda\\,D}{a} = d^{*}$. Donc $\\dfrac{\\lambda\\,D}{a} = d^{*}$ — plusieurs triplets fonctionnent, choisis-en un et vérifie que le repère gris s'aligne.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "banc optique",
+    "laser": "laser",
+    "screen": "écran",
+    "match_ok": "OK",
+    "peek_reveal": "vraie :",
+    "target_short": "cible",
+    "tip1": "déplace chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "accorde à la fois la largeur L et la couleur λ du fantôme",
+    "tip3": "aligne la première frange sombre (L/2) avec les points cibles"
+  },
+  "hints": {
+    "1": {
+      "1": "Divise a par deux — la bande centrale doit environ doubler de largeur.",
+      "2": "Passe λ du rouge (633) au violet (400) — la figure se resserre.",
+      "3": "Doubler D double aussi L (relation linéaire avec la distance d'écran)."
+    },
+    "2": {
+      "1": "Lis la couleur du fantôme : rouge ≈ 633 nm, vert ≈ 532 nm, bleu ≈ 450 nm.",
+      "2": "Une fois λ accordé, règle a seul — L = 2λD/a signifie petit a = grand L.",
+      "3": "Si tu n'atteins pas L*, ajuste D aussi. Résolution : a = 2λD / L*."
+    },
+    "3": {
+      "1": "Les points sont à ±d* du centre. Il faut L/2 = d*, donc L = 2d*.",
+      "2": "Réorganise : a = λD / d*. Choisis n'importe quels λ et D, puis calcule a.",
+      "3": "Aperçu affiche la figure pendant 1,5 s. Si son premier zéro touche les points, c'est bon."
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Try each of the three modes — magnet ↔ magnet, magnet ↔ solenoid, wire ↔ wire. Flip the poles or current directions and watch how the interaction between $A$ and $B$ changes. Advance after you've tried all $3$ modes and seen both an attract and a repel result.",
+      "concept": "Magnets and current-carrying conductors interact through magnetic fields. Two magnets attract when opposite poles ($N \\to S$) face each other, and repel when like poles face each other. A solenoid (coil) with current behaves like a bar magnet — the current direction sets which end is $N$ and which is $S$ (right-hand rule). Two parallel wires attract when their currents flow in the same direction, and repel when they flow in opposite directions.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "For each mode, configure $A$ and $B$ so the interaction matches the target shown at the bottom. Switch modes with the tabs on the right and mark all three targets ✓ to advance.",
+      "concept": "In each mode, apply the rule: same poles / same-direction currents $\\Rightarrow$ repel; opposite poles / opposite-direction currents $\\Rightarrow$ attract. For the solenoid, flipping the current effectively flips its $N$ / $S$ ends, so the same rule applies to it as to a bar magnet.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The interaction indicator is hidden. Look at the configuration shown, predict whether $A$ and $B$ will attract or repel, then click your answer to reveal the truth. Peek briefly reveals the correct arrows if you're stuck.",
+      "concept": "Read the configuration: identify the two facing poles (for magnets), or the two current directions (for wires). Same-facing $\\Rightarrow$ repel; opposite-facing $\\Rightarrow$ attract. For the solenoid: current direction $\\to$ $N$ / $S$ ends via right-hand rule $\\to$ compare with the magnet's facing pole.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "scene_title": "magnetic interaction lab",
+    "controls_title": "controls",
+    "attract": "attract",
+    "repel": "repel",
+    "mode_aa": "magnet ↔ magnet",
+    "mode_ac": "magnet ↔ solenoid",
+    "mode_cc": "wire ↔ wire",
+    "mode_aa_short": "A ↔ A",
+    "mode_ac_short": "A ↔ C",
+    "mode_cc_short": "C ↔ C",
+    "obj_magnet": "bar magnet",
+    "obj_solenoid": "solenoid",
+    "obj_wire": "current wire",
+    "field_mode": "mode",
+    "flip_poles": "flip poles",
+    "flip_current": "flip current",
+    "target": "target",
+    "targets": "targets",
+    "all_targets_hit": "all targets hit",
+    "modes_tried": "modes",
+    "outcomes_seen": "outcomes",
+    "progress": "progress",
+    "question": "question",
+    "given_config": "given config",
+    "predict_prompt": "Predict the interaction between A and B, then click to reveal.",
+    "next_q": "next",
+    "correct": "correct",
+    "tip1": "try each mode; flip poles or current to see both outcomes",
+    "tip2": "one target per mode — switch modes with the tabs on the right",
+    "tip3": "guess first, then click; peek briefly reveals the truth"
+  },
+  "hints": {
+    "1": {
+      "1": "Use the mode tabs to switch between A↔A, A↔C, and C↔C. Try flipping A or B in each.",
+      "2": "For magnets: same poles facing = repel, opposite = attract. For wires: same direction = attract, opposite = repel.",
+      "3": "You need to visit all 3 modes and see at least one attract + one repel outcome. Flip a pole or current to change the outcome."
+    },
+    "2": {
+      "1": "Switch modes on the right panel. Each mode has one target — try to hit them all.",
+      "2": "aa: opposite poles attract. cc: same-direction currents attract. ac: N-face facing S-face attracts.",
+      "3": "For ac (repel): flip the magnet or the current so the two facing poles are the SAME (N-N or S-S)."
+    },
+    "3": {
+      "1": "Look at the visible configuration. What are the two facing poles (or current directions)?",
+      "2": "Same-facing = repel. Opposite-facing = attract. Peek briefly reveals the answer if you're stuck.",
+      "3": "For a solenoid, apply the right-hand rule: curl fingers along current, thumb points to N. Then compare with the magnet's facing pole."
+    }
+  }
+}

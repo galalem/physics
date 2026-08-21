@@ -1,0 +1,65 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une diode ne laisse passer le courant que dans un sens. Fais varier la source $E$ du négatif au positif et observe le point de fonctionnement $(V_D,\\,I)$ se déplacer le long de la caractéristique. Passe par un réglage inverse ($E < 0$) et un réglage direct bien au-delà du coude ($E > 1\\,\\text{V}$) pour avancer.",
+      "concept": "Shockley : $I = I_S\\,(e^{V_D/V_T} - 1)$. Sous le seuil $V_{th} \\approx 0.6\\,\\text{V}$, le courant est quasi nul — la diode bloque. Au-dessus du seuil, le courant monte presque exponentiellement — la diode conduit. En inverse ($V_D < 0$) : seulement un faible courant de fuite.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "La source est maintenant alternative : $V_{in}(t) = V_p \\sin(2\\pi f t)$. Fais varier $V_p$ et observe la sortie $V_R$ (vert) — la diode coupe la demi-alternance négative et la petite tranche $V_{th}$. Bouge le curseur au moins deux fois pour avancer.",
+      "concept": "Redressement demi-onde : $V_R(t) = \\max(0,\\,V_{in}(t) - V_{th})$. Seules les demi-alternances positives au-dessus de $V_{th}$ passent. La demi-alternance négative est intégralement bloquée.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'oscilloscope montre la sortie cible (orange) pour la même entrée AC. Choisis la topologie qui la produit. Le peek révèle la réponse pendant $1.5\\,\\text{s}$.",
+      "concept": "La topologie fixe la forme. Diode simple directe → demi-onde (bosses positives). Diode inversée → coupée sur la demi-alternance négative (bosses négatives). Pont de 4 diodes → les deux demi-alternances redressées positives (double alternance).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "circuit",
+    "characteristic": "caractéristique I(U)",
+    "scope": "oscilloscope",
+    "peek_reveal": "réponse :",
+    "target": "cible",
+    "your_pick": "ton choix",
+    "correct": "juste",
+    "wrong": "pas celle-là",
+    "pick_topology": "choisis une topologie",
+    "topo_half": "diode simple",
+    "topo_reverse": "diode inversée",
+    "topo_full": "pont de 4 diodes",
+    "tip1": "balaie E autour de zéro · inverse bloque, direct conduit après V_th",
+    "tip2": "V_p fixe l'amplitude · la diode coupe toujours à V_th",
+    "tip3": "associe la forme de la cible à la topologie",
+    "swept_ok": "balayé dans les deux sens",
+    "reverse": "inverse",
+    "forward": "direct",
+    "observed_clip": "coupure observée",
+    "change_vp": "bouge V_p"
+  },
+  "hints": {
+    "1": {
+      "1": "Fais glisser E sous zéro — rien ne conduit (I ≈ 0). C'est la polarisation inverse.",
+      "2": "Puis fais glisser E au-delà de +0,6 V — le courant grimpe soudainement. Le coude est V_th.",
+      "3": "Il faut une visite à E < 0 ET une à E > 1 V pour avancer."
+    },
+    "2": {
+      "1": "V_p est le pic de l'entrée AC (pointillé). V_R (trait plein) est ce qui reste.",
+      "2": "Essaie V_p = 1 V — la sortie est minuscule (V_th mange presque tout). Puis V_p = 5 V — la majorité de la demi-alternance positive passe.",
+      "3": "La demi-alternance négative reste toujours à zéro. C'est le sens de « demi-onde »."
+    },
+    "3": {
+      "1": "Bosses positives seules → diode simple directe. Bosses négatives seules → diode inversée.",
+      "2": "Toutes bosses positives (sans creux) → pont de 4 diodes. Les deux demi-alternances sont retournées vers le haut.",
+      "3": "Le peek montre la réponse directement pendant 1,5 s."
+    }
+  }
+}

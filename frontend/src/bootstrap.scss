@@ -1,0 +1,293 @@
+// =====================================================================
+//  Brand overrides for Bootstrap 5.3.8 (loaded from CDN)
+// ---------------------------------------------------------------------
+//  Bootstrap is served as compiled CSS from a CDN, so we cannot rebuild
+//  it with custom $primary / $secondary / $success. Many classes
+//  (buttons, form controls, pagination, etc.) bake stock shades into the
+//  compiled output as hardcoded hex / embedded SVGs that never read the
+//  --bs-* CSS vars.
+//
+//  This file pulls in ONLY Bootstrap's SCSS toolkit (functions /
+//  variables / maps / mixins — which emit almost no CSS), sets our
+//  brand tokens, then re-emits just the token-bearing pieces using
+//  Bootstrap's own machinery so the shade math is byte-identical.
+//
+//  It must be loaded AFTER the CDN stylesheet so equal-specificity
+//  rules win on source order. Color- and font-only, so the single file
+//  covers both the LTR and RTL CDN builds.
+// =====================================================================
+
+@import "bootstrap/scss/functions";
+
+// --- Brand tokens ----------------------------------------------------
+// Set before importing variables so every derived value (theme map,
+// text-emphasis / bg-subtle / border-subtle, link color, focus ring,
+// component active colors, …) is recomputed from them.
+$primary: #F97316;   // orange — CTAs, brand
+$secondary: #0D1524; // navy — dark panels, hero cards
+$success: #37C9B8;   // teal — targets, achievement
+
+// Surfaces + text
+$body-bg: #EFEDE7;      // cream page background
+$body-color: #16151C;   // ink body text
+$border-color: #E2DFD4; // cream-tinted default border
+
+// Typography (Google Fonts loaded from CDN in index.html)
+$font-family-sans-serif: 'Space Grotesk', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
+// ---------------------------------------------------------------------
+//  1. Global CSS variables
+//  Recolors every variable-driven class for free: .bg-*, .text-*,
+//  .border-*, .text-bg-*, .alert-*, .list-group-item-*, *-subtle /
+//  *-emphasis utilities, links, and the shared focus ring.
+// ---------------------------------------------------------------------
+:root {
+  // Primary
+  --#{$prefix}primary: #{$primary};
+  --#{$prefix}primary-rgb: #{to-rgb($primary)};
+  --#{$prefix}primary-text-emphasis: #{$primary-text-emphasis};
+  --#{$prefix}primary-bg-subtle: #{$primary-bg-subtle};
+  --#{$prefix}primary-border-subtle: #{$primary-border-subtle};
+
+  // Secondary
+  --#{$prefix}secondary: #{$secondary};
+  --#{$prefix}secondary-rgb: #{to-rgb($secondary)};
+  --#{$prefix}secondary-text-emphasis: #{$secondary-text-emphasis};
+  --#{$prefix}secondary-bg-subtle: #{$secondary-bg-subtle};
+  --#{$prefix}secondary-border-subtle: #{$secondary-border-subtle};
+
+  // Success
+  --#{$prefix}success: #{$success};
+  --#{$prefix}success-rgb: #{to-rgb($success)};
+  --#{$prefix}success-text-emphasis: #{$success-text-emphasis};
+  --#{$prefix}success-bg-subtle: #{$success-bg-subtle};
+  --#{$prefix}success-border-subtle: #{$success-border-subtle};
+
+  // Body + border
+  --#{$prefix}body-bg: #{$body-bg};
+  --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
+  --#{$prefix}body-color: #{$body-color};
+  --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+  --#{$prefix}border-color: #{$border-color};
+
+  // Typography (literal to avoid Sass list-interpolation quirks)
+  --#{$prefix}body-font-family: 'Space Grotesk', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --#{$prefix}font-monospace: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  // Links (derived from primary)
+  --#{$prefix}link-color: #{$link-color};
+  --#{$prefix}link-color-rgb: #{to-rgb($link-color)};
+  --#{$prefix}link-hover-color: #{$link-hover-color};
+  --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color)};
+
+  --#{$prefix}focus-ring-color: #{$focus-ring-color};
+}
+
+// ---------------------------------------------------------------------
+//  2. Buttons
+//  --bs-btn-* shades are hardcoded hex emitted by the button-variant
+//  mixin, so re-run the mixin for each brand token.
+// ---------------------------------------------------------------------
+// Bootstrap's color-contrast() picks BLACK text on #F97316 (contrast >
+// threshold), but the design uses white on orange. Force it.
+.btn-primary {
+  @include button-variant(
+    $primary,
+    $primary,
+    $color: #fff,
+    $hover-color: #fff,
+    $active-color: #fff,
+    $disabled-color: #fff
+  );
+}
+
+.btn-outline-primary {
+  @include button-outline-variant(
+    $primary,
+    $color-hover: #fff,
+    $active-color: #fff
+  );
+}
+
+.btn-secondary {
+  @include button-variant($secondary, $secondary);
+}
+
+.btn-outline-secondary {
+  @include button-outline-variant($secondary);
+}
+
+.btn-success {
+  @include button-variant($success, $success);
+}
+
+.btn-outline-success {
+  @include button-outline-variant($success);
+}
+
+// ---------------------------------------------------------------------
+//  3. Coloured links
+//  .link-primary base reads --bs-primary-rgb (covered above); only the
+//  hover/focus shade is baked as a hardcoded RGB.
+// ---------------------------------------------------------------------
+@if $link-shade-percentage != 0 {
+  $link-primary-hover: if(color-contrast($primary) == $color-contrast-light, shade-color($primary, $link-shade-percentage), tint-color($primary, $link-shade-percentage));
+
+  .link-primary {
+    &:hover,
+    &:focus {
+      color: RGBA(#{to-rgb($link-primary-hover)}, var(--#{$prefix}link-opacity, 1)) if($enable-important-utilities, !important, null);
+      text-decoration-color: RGBA(#{to-rgb($link-primary-hover)}, var(--#{$prefix}link-underline-opacity, 1)) if($enable-important-utilities, !important, null);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------
+//  4. Components whose local CSS vars default to the literal primary hex
+//  (set inside the component rule, so the global :root override above
+//  doesn't reach them). Re-declare just the primary-bearing vars.
+// ---------------------------------------------------------------------
+.pagination {
+  --#{$prefix}pagination-color: #{$pagination-color};
+  --#{$prefix}pagination-hover-color: #{$pagination-hover-color};
+  --#{$prefix}pagination-focus-color: #{$pagination-focus-color};
+  --#{$prefix}pagination-active-bg: #{$pagination-active-bg};
+  --#{$prefix}pagination-active-border-color: #{$pagination-active-border-color};
+}
+
+.dropdown-menu {
+  --#{$prefix}dropdown-link-active-bg: #{$dropdown-link-active-bg};
+}
+
+.nav-pills {
+  --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
+}
+
+.nav-underline {
+  --#{$prefix}nav-underline-link-active-color: #{$nav-underline-link-active-color};
+}
+
+.progress,
+.progress-stacked {
+  --#{$prefix}progress-bar-bg: #{$progress-bar-bg};
+}
+
+.accordion {
+  --#{$prefix}accordion-active-color: #{$accordion-button-active-color};
+  --#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
+  --#{$prefix}accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)};
+}
+
+// ---------------------------------------------------------------------
+//  5. Form controls
+//  Focus borders/rings, checked state and the primary-tinted switch
+//  knob are baked directly into rules / embedded SVGs (not exposed as
+//  overridable component vars), so re-emit those selectors.
+// ---------------------------------------------------------------------
+.form-control:focus,
+.form-select:focus {
+  border-color: $input-focus-border-color;
+  box-shadow: $input-focus-box-shadow;
+}
+
+.form-check-input:focus {
+  border-color: $form-check-input-focus-border;
+  box-shadow: $form-check-input-focus-box-shadow;
+}
+
+.form-check-input:checked {
+  background-color: $form-check-input-checked-bg-color;
+  border-color: $form-check-input-checked-border-color;
+}
+
+// Switch knob: only the focus image embeds the primary tint
+// (unchecked = grey, checked = white on the primary track above).
+.form-switch .form-check-input:focus {
+  --#{$prefix}form-switch-bg: #{escape-svg($form-switch-focus-bg-image)};
+}
+
+// Range slider thumb
+.form-range {
+  &::-webkit-slider-thumb {
+    background-color: $form-range-thumb-bg;
+
+    &:active {
+      background-color: $form-range-thumb-active-bg;
+    }
+  }
+
+  &::-moz-range-thumb {
+    background-color: $form-range-thumb-bg;
+
+    &:active {
+      background-color: $form-range-thumb-active-bg;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------
+//  6. RTL icon mirroring utility
+//  Apply .icon-rtl-flip to directional glyphs (arrows, chevrons) that
+//  should visually flip when the surrounding layout is RTL. Do NOT apply
+//  to non-directional icons (magnifier, gear, etc.) or to elements that
+//  carry meaning independent of reading direction (physics diagrams).
+// ---------------------------------------------------------------------
+[dir="rtl"] .icon-rtl-flip {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+// ---------------------------------------------------------------------
+//  7. Horizontal scroll-shadow utility
+//  Add `.scroll-shadow-x` to any horizontally scrolling container to get
+//  CSS-only edge shadows that reveal themselves when there's more content
+//  in that direction. Two cover gradients scroll WITH the content
+//  (background-attachment: local) and mask two shadow gradients pinned to
+//  the element's edges (background-attachment: scroll). Reach an edge →
+//  the cover overlays that shadow → shadow disappears.
+//
+//  Consumer sets its own display/flex/gap. Children should be
+//  `flex-shrink: 0` and `white-space: nowrap` if they mustn't compress.
+//  Override `--sh-bg-rgb` on the scroller if it sits on a background
+//  other than `--bs-body-bg` (the cover has to match that background).
+// ---------------------------------------------------------------------
+.scroll-shadow-x {
+  --sh-bg-rgb: var(--bs-body-bg-rgb);
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar { display: none; }
+
+  background-image:
+    linear-gradient(to right, rgba(var(--sh-bg-rgb), 1) 30%, rgba(var(--sh-bg-rgb), 0)),
+    linear-gradient(to left,  rgba(var(--sh-bg-rgb), 1) 30%, rgba(var(--sh-bg-rgb), 0)),
+    radial-gradient(farthest-side at 0% 50%,   rgba(16, 24, 40, 0.18), rgba(16, 24, 40, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(16, 24, 40, 0.18), rgba(16, 24, 40, 0));
+  background-position: left, right, left, right;
+  background-size: 32px 100%, 32px 100%, 12px 100%, 12px 100%;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+}
+
+// ---------------------------------------------------------------------
+//  8. Pagination — warm disabled state
+//  Bootstrap's default `.page-item.disabled` uses cool `#6c757d` gray,
+//  which reads foreign against our warm cream palette. Retint the
+//  disabled trio to warm neutrals that sit in the same family as the
+//  border color and muted text tokens used across the app.
+// ---------------------------------------------------------------------
+.pagination {
+  --bs-pagination-disabled-color: #b8b3a3;
+  --bs-pagination-disabled-bg: transparent;
+  --bs-pagination-disabled-border-color: #e2dfd4;
+}

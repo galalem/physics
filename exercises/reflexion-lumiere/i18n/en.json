@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Grab the mirror and rotate it. Watch the orange beam bounce — the two angles around the dotted normal always stay equal.",
+      "concept": "Law of reflection: $\\theta_i = \\theta_r$ — the angle of incidence equals the angle of reflection.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Aim the mirror, then press Fire (or Space) to shoot the beam. Light all 3 stars — you have 7 shots.",
+      "concept": "You aim only by controlling the mirror's angle.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The beam is invisible. Read the coordinates of $S$, $M$ and $T$, compute the mirror angle $\\varphi$ that sends the beam onto the target, set the mirror, then Fire. Peek reveals your current $\\varphi$ so you can verify your calculation.",
+      "concept": "The mirror is perpendicular to the bisector of the angle formed by $\\overrightarrow{MS}$ and $\\overrightarrow{MT}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "shots": "SHOTS",
+    "lit": "LIT",
+    "target": "TARGET",
+    "mirror": "MIRROR",
+    "angles": "ANGLES",
+    "exhausted": "OUT OF SHOTS · RESET TO RETRY",
+    "stage": "STAGE",
+    "tip1": "drag the mirror to rotate",
+    "tip2": "aim, then press SPACE to fire",
+    "tip3": "compute φ from coordinates, then fire"
+  },
+  "hints": {
+    "1": {
+      "1": "Grab the mirror by its endpoints and rotate it slowly.",
+      "2": "The dotted line is the normal — perpendicular to the mirror at its pivot.",
+      "3": "Watch the two arcs: the beam and its reflection make equal angles with the normal."
+    },
+    "2": {
+      "1": "The beam only fires when you press Fire (or Space). Aim first.",
+      "2": "Rotating the mirror by X° rotates the reflected beam by 2X°.",
+      "3": "For each star: orient the mirror so its perpendicular bisects the angle from source-to-mirror and mirror-to-star."
+    },
+    "3": {
+      "1": "You need to compute the mirror angle from the coordinates. Read S, M and T from the scene.",
+      "2": "Compute the direction from M to S: α₁ = atan2(S.y − M.y, S.x − M.x). Do the same for T: α₂ = atan2(T.y − M.y, T.x − M.x).",
+      "3": "The mirror angle is φ = (α₁ + α₂)/2 − 90°. Set it, Peek to verify, then Fire."
+    }
+  }
+}

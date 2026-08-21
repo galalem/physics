@@ -1,0 +1,7 @@
+{
+  "name": "@physics/create-exercise",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Scaffolder for new exercise packages. Run via `pnpm new-exercise <slug>` from the repo root."
+}

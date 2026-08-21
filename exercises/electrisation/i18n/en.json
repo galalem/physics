@@ -1,0 +1,77 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "The pith ball starts neutral. First, bring an un-rubbed rod near it — nothing happens. Now rub a rod with a cloth and bring it near again — the ball is attracted (induction). Advance once you've witnessed both nothing AND attraction.",
+      "concept": "An uncharged rod near an uncharged ball does nothing. Rubbing separates charge — glass + silk makes glass +, ebonite + fur makes ebonite −. A charged rod near a neutral ball always attracts (it polarizes the ball).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Explore",
+      "instruction": "Same bench, but now the ball's sign is yours to set — click the ball to cycle neutral → + → −. Combine charged rods with any ball sign and witness all three possible outcomes: attract, repel, and nothing at all.",
+      "concept": "Two rules: (1) like signs repel, opposite signs attract; (2) a charged object always attracts a neutral one (induction). Only two neutrals → nothing.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Predict",
+      "instruction": "Now you're shown the two signs upfront — predict what will happen before hitting the button. The rod animates in to confirm. Answer 4 in a row correctly to finish.",
+      "concept": "Product of signs decides: same sign → repel, opposite → attract, one neutral + one charged → attract (induction).",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "electrostatic bench",
+    "controls": "controls",
+    "question": "question",
+    "outcomes_seen": "outcomes",
+    "streak": "streak",
+    "field_rod": "rod",
+    "field_cloth": "cloth",
+    "field_ball": "ball",
+    "field_status": "status",
+    "rod": "rod",
+    "ball": "ball",
+    "glass": "glass",
+    "ebonite": "ebonite",
+    "silk": "silk",
+    "fur": "fur",
+    "rub_progress": "rub",
+    "click_ball_hint": "click the ball to cycle its charge",
+    "ball_prefixed": "ball is neutral (locked)",
+    "hint_drag_cloth": "drag cloth across the rod",
+    "hint_drag_rod": "drag rod toward the ball",
+    "attract": "attract",
+    "repel": "repel",
+    "neither": "nothing",
+    "next_q": "next",
+    "rod_is": "The rod is",
+    "ball_is": "The ball is",
+    "charge_pos": "positive",
+    "charge_neg": "negative",
+    "charge_neutral": "neutral",
+    "tip1": "try approaching the ball with and without rubbing — see nothing then attract",
+    "tip2": "click the ball to change its charge; find all 3 outcomes",
+    "tip3": "same sign repels, opposite attracts, neutral is always attracted"
+  },
+  "hints": {
+    "1": {
+      "1": "Bring the rod near the ball without rubbing first — nothing should happen.",
+      "2": "Now rub the rod with a matching cloth, then approach — the ball moves toward it (attraction).",
+      "3": "You need to witness both nothing AND attract to advance."
+    },
+    "2": {
+      "1": "Click the ball to change its sign. The ball has three states: neutral, +, −.",
+      "2": "Try a charged rod near a neutral ball — it still attracts (induction).",
+      "3": "Two neutrals is the only combination that produces nothing."
+    },
+    "3": {
+      "1": "First: what sign is on each? Then multiply the signs.",
+      "2": "Positive product (same sign) = repel. Negative product = attract.",
+      "3": "If either is neutral (and the other charged), always attract — that's induction."
+    }
+  }
+}

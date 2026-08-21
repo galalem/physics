@@ -1,0 +1,376 @@
+// Subtle warm-grey pill button — used by Reset/Peek in the controls,
+// and Back-to-catalogue in the error card. Sits outside .exercise-page
+// because the error card is a sibling.
+.btn-subtle {
+  background: transparent;
+  color: #16151c;
+  border: 1px solid #d8d4c8;
+  font-size: 14px;
+  font-weight: 500;
+
+  &:hover {
+    background: #f3f1ea;
+    color: #16151c;
+    border-color: #c9c4b5;
+  }
+}
+
+// Shared centered layout for full-page loading + error states.
+.exercise-loading,
+.exercise-error {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 90px;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exercise-loading {
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.exercise-error {
+  .error-card {
+    max-width: 480px;
+    text-align: center;
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+
+    p {
+      color: #54514a;
+      line-height: 1.5;
+      margin: 0 0 24px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.exercise-page {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  grid-template-areas:
+    "back-link   canvas"
+    "title       canvas"
+    "stage-rail  canvas"
+    "stage-label canvas"
+    "stage-title canvas"
+    "instruction canvas"
+    "concept     canvas"
+    "readout     canvas"
+    "controls    canvas";
+  gap: 18px 26px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 34px 24px 90px;
+  box-sizing: border-box;
+
+  .back-link {
+    grid-area: back-link;
+    font-family: var(--bs-font-monospace);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8a8779;
+    text-decoration: none;
+
+    &:hover {
+      color: #16151c;
+    }
+  }
+
+  .exercise-title {
+    grid-area: title;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .stage-rail {
+    grid-area: stage-rail;
+    display: flex;
+    gap: 6px;
+
+    .segment {
+      flex: 1;
+      height: 4px;
+      border-radius: 2px;
+      background: #d8d4c8;
+      transition: background 200ms ease;
+
+      &.is-filled {
+        background: #f97316;
+      }
+    }
+  }
+
+  .stage-label {
+    grid-area: stage-label;
+    font-family: var(--bs-font-monospace);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8a8779;
+  }
+
+  .stage-title {
+    grid-area: stage-title;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .instruction {
+    grid-area: instruction;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #54514a;
+    margin: 0;
+  }
+
+  .concept {
+    grid-area: concept;
+    background: #f3f1ea;
+    border: 1px solid #e2dfd4;
+    border-radius: 10px;
+    padding: 16px 18px;
+
+    .label {
+      font-family: var(--bs-font-monospace);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8a8779;
+      margin-bottom: 6px;
+    }
+
+    .text {
+      font-size: 14px;
+      color: #16151c;
+      line-height: 1.5;
+    }
+  }
+
+  .readout {
+    grid-area: readout;
+    background: #faf9f5;
+    border: 1px solid #e2dfd4;
+    border-radius: 10px;
+    padding: 14px 18px;
+
+    .label {
+      font-family: var(--bs-font-monospace);
+      font-size: 12px;
+      color: #8a8779;
+      margin-bottom: 4px;
+    }
+
+    .value {
+      font-family: var(--bs-font-monospace);
+      font-size: 20px;
+      font-weight: 700;
+      color: #f97316;
+    }
+  }
+
+  .controls {
+    grid-area: controls;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .canvas {
+    grid-area: canvas;
+    aspect-ratio: 16 / 9;
+    max-height: calc(100vh - 120px);
+    position: sticky;
+    // PublicNav is sticky top: 0 (~72px tall); leave a small gap below it.
+    top: 88px;
+    background: #0d1524;
+    border-radius: 16px;
+    box-shadow: 0 28px 60px -30px rgba(13, 21, 36, 0.6);
+    overflow: hidden;
+
+    .loading-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: #0d1524;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+
+      .eyebrow {
+        font-family: var(--bs-font-monospace);
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #6c7a93;
+        margin-bottom: 8px;
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: #eaf0fa;
+        margin-bottom: 12px;
+        max-width: 80%;
+      }
+
+      .hint {
+        font-family: var(--bs-font-monospace);
+        font-size: 11px;
+        color: #6c7a93;
+      }
+
+      .progress-indicator {
+        width: 180px;
+        height: 3px;
+        margin-top: 20px;
+        border-radius: 999px;
+        background: rgba(234, 240, 250, 0.1);
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          inset-inline-start: 0;
+          height: 100%;
+          width: 40%;
+          background: #f97316;
+          border-radius: 999px;
+          animation: exercise-loading-slide 1.4s ease-in-out infinite;
+        }
+      }
+
+      // Pinned to the overlay's bottom edge; disappears with the overlay
+      // once the iframe reports READY.
+      .fullscreen-hint {
+        position: absolute;
+        bottom: 12px;
+        inset-inline: 0;
+        text-align: center;
+        font-family: var(--bs-font-monospace);
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        color: #6c7a93;
+      }
+    }
+
+    // Completion overlay: sits above the iframe (z-index 3) when the
+    // exercise fires COMPLETE. Semi-transparent so the finished state
+    // stays visible behind it. Retry sends RESET with a fresh seed.
+    .completion-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background: rgba(13, 21, 36, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+
+      .completion-card {
+        text-align: center;
+        color: #eaf0fa;
+        max-width: 400px;
+
+        .badge {
+          font-family: var(--bs-font-monospace);
+          font-size: 11px;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: #37c9b8;
+          margin-bottom: 8px;
+        }
+
+        h2 {
+          font-size: 30px;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          margin: 0 0 12px;
+        }
+
+        .meta {
+          font-family: var(--bs-font-monospace);
+          font-size: 13px;
+          color: #b9c4d6;
+          margin-top: 4px;
+        }
+
+        .completion-actions {
+          margin-top: 24px;
+          display: flex;
+          gap: 12px;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+
+      &.is-failed .badge {
+        color: #f9a968;
+      }
+    }
+  }
+}
+
+@keyframes exercise-loading-slide {
+  0% {
+    inset-inline-start: -40%;
+  }
+  100% {
+    inset-inline-start: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .exercise-page {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "back-link"
+      "title"
+      "stage-rail"
+      "stage-label"
+      "stage-title"
+      "instruction"
+      "concept"
+      "canvas"
+      "readout"
+      "controls";
+    padding: 24px 16px 60px;
+
+    .canvas {
+      position: static;
+      max-height: none;
+    }
+  }
+}

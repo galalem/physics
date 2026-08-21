@@ -1,0 +1,10 @@
+packages:
+  - frontend
+  - backend
+  - runtime/protocol
+  - runtime/sdk
+  - runtime/host
+  - runtime/preview
+  - exercises/*
+  - scripts/*
+  - e2e

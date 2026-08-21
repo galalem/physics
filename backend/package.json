@@ -1,0 +1,27 @@
+{
+  "name": "@physics/backend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file=.env src/index.ts",
+    "start": "tsx --env-file=.env src/index.ts",
+    "typecheck": "tsc",
+    "migrate": "tsx --env-file=.env src/scripts/migrate.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@hono/zod-validator": "^0.9.0",
+    "@node-rs/argon2": "^2.0.2",
+    "hono": "^4.6.14",
+    "nodemailer": "^9.0.5",
+    "postgres": "^3.4.5",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.2",
+    "@types/nodemailer": "^8.0.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Le cadre est une boucle rectangulaire fermée avec quatre emplacements vides. Fais glisser des composants depuis la palette de droite vers les emplacements. Pour retirer un composant, sors-le de son emplacement et lâche-le hors de la boucle. Clique l'interrupteur pour l'ouvrir/fermer. Avance après avoir allumé la lampe ET vu au moins une configuration cassée.",
+      "concept": "Un circuit s'allume quand il forme une boucle fermée contenant un générateur (pile) et un récepteur (lampe). Coupe la boucle en n'importe quel point et le courant s'arrête. L'interrupteur est justement cette coupure contrôlée.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Construis un circuit correct — une pile, un interrupteur, une lampe et un fil, un par emplacement — puis vérifie que fermer l'interrupteur allume la lampe et que l'ouvrir l'éteint. Les deux conditions doivent être observées.",
+      "concept": "L'interrupteur est une coupure contrôlée. Ouvert = boucle cassée = pas de courant. Fermé = boucle intacte = courant circule et la lampe s'allume.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Trois emplacements sont pré-remplis. La lampe ne s'allume pas car un emplacement est vide. Glisse le fil dans l'emplacement vide pour fermer la boucle. Aperçu révèle un fantôme de la solution pendant 1,5 s.",
+      "concept": "Un fil est un conducteur de résistance nulle — la pièce manquante pour fermer la boucle. Une seule interruption suffit à couper tout le courant.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "schéma",
+    "palette": "palette",
+    "comp_battery": "pile",
+    "comp_switch": "interrupteur",
+    "comp_lamp": "lampe",
+    "comp_wire": "fil",
+    "lit_once": "lampe allumée",
+    "broken_once": "boucle cassée",
+    "on_when_closed": "allumée si fermé",
+    "off_when_open": "éteinte si ouvert",
+    "slot_missing": "remplis l'emplacement vide",
+    "diag_empty_prefix": "boucle cassée :",
+    "diag_empty_suffix": "emplacement(s) vide(s)",
+    "diag_no_battery": "pas de pile — rien pour faire circuler le courant",
+    "diag_no_lamp": "boucle fermée, mais pas de lampe dessus",
+    "diag_switch_open": "interrupteur ouvert — clique pour fermer",
+    "diag_ok": "circuit fermé, lampe allumée",
+    "tip1": "glisse depuis la palette ; sors un composant placé hors de la boucle pour le retirer ; clique l'interrupteur pour le basculer",
+    "tip2": "utilise un exemplaire de chaque composant, puis manipule l'interrupteur",
+    "tip3": "un emplacement est vide — dépose le fil dedans"
+  },
+  "hints": {
+    "1": {
+      "1": "Essaie de glisser un composant sur un emplacement. Puis un autre. Observe.",
+      "2": "Une boucle complète nécessite 4 pièces dans les 4 emplacements — dont une pile.",
+      "3": "Une fois allumée, sors un composant placé hors de la boucle pour voir la lampe s'éteindre."
+    },
+    "2": {
+      "1": "Utilise un exemplaire de chaque : pile, interrupteur, lampe, fil — l'ordre n'importe pas.",
+      "2": "Clique sur l'interrupteur du schéma pour l'ouvrir/fermer.",
+      "3": "Tu dois voir LES DEUX : lampe allumée avec interrupteur fermé, ET lampe éteinte avec interrupteur ouvert."
+    },
+    "3": {
+      "1": "Regarde les quatre emplacements — un manque un composant.",
+      "2": "L'interrupteur est déjà fermé. Que faut-il pour ponter le trou ?",
+      "3": "Dépose le fil dans l'emplacement vide (à droite)."
+    }
+  }
+}

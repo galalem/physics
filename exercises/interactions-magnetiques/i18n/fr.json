@@ -1,0 +1,75 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Essaie les trois modes — aimant ↔ aimant, aimant ↔ solénoïde, fil ↔ fil. Inverse les pôles ou les sens de courant et observe comment l'interaction entre $A$ et $B$ change. Passe à l'étape suivante après avoir essayé les $3$ modes et vu à la fois une attraction et une répulsion.",
+      "concept": "Les aimants et les conducteurs parcourus par un courant interagissent par leurs champs magnétiques. Deux aimants s'attirent quand des pôles opposés ($N \\to S$) se font face, et se repoussent quand des pôles identiques se font face. Un solénoïde (bobine) parcouru par un courant se comporte comme un aimant droit — le sens du courant fixe quelle extrémité est $N$ et laquelle est $S$ (règle de la main droite). Deux fils parallèles s'attirent quand leurs courants circulent dans le même sens, et se repoussent quand ils circulent en sens opposés.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Pour chaque mode, configure $A$ et $B$ pour que l'interaction corresponde à la cible affichée en bas. Change de mode avec les onglets à droite et coche les trois cibles ✓ pour avancer.",
+      "concept": "Dans chaque mode, applique la règle : pôles identiques / courants de même sens $\\Rightarrow$ répulsion ; pôles opposés / courants de sens opposés $\\Rightarrow$ attraction. Pour le solénoïde, inverser le courant revient à inverser ses pôles $N$ / $S$ — la même règle s'applique.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'indicateur d'interaction est caché. Regarde la configuration affichée, prédis si $A$ et $B$ vont s'attirer ou se repousser, puis clique ta réponse pour révéler la vérité. L'aperçu (peek) montre brièvement les flèches correctes si tu es bloqué.",
+      "concept": "Lis la configuration : identifie les deux pôles qui se font face (aimants) ou les deux sens de courant (fils). Face-à-face identique $\\Rightarrow$ répulsion ; face-à-face opposé $\\Rightarrow$ attraction. Pour le solénoïde : sens du courant $\\to$ pôles $N$ / $S$ par la règle de la main droite $\\to$ comparer avec le pôle de l'aimant.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "étape",
+    "scene_title": "labo d'interactions magnétiques",
+    "controls_title": "commandes",
+    "attract": "attirer",
+    "repel": "repousser",
+    "mode_aa": "aimant ↔ aimant",
+    "mode_ac": "aimant ↔ solénoïde",
+    "mode_cc": "fil ↔ fil",
+    "mode_aa_short": "A ↔ A",
+    "mode_ac_short": "A ↔ S",
+    "mode_cc_short": "F ↔ F",
+    "obj_magnet": "aimant droit",
+    "obj_solenoid": "solénoïde",
+    "obj_wire": "fil parcouru",
+    "field_mode": "mode",
+    "flip_poles": "inverser pôles",
+    "flip_current": "inverser courant",
+    "target": "cible",
+    "targets": "cibles",
+    "all_targets_hit": "toutes les cibles atteintes",
+    "modes_tried": "modes",
+    "outcomes_seen": "résultats",
+    "progress": "progression",
+    "question": "question",
+    "given_config": "configuration donnée",
+    "predict_prompt": "Prédis l'interaction entre A et B, puis clique pour révéler.",
+    "next_q": "suivant",
+    "correct": "correct",
+    "tip1": "essaie chaque mode ; inverse pôles ou courant pour voir les deux résultats",
+    "tip2": "une cible par mode — change de mode avec les onglets à droite",
+    "tip3": "devine d'abord, puis clique ; l'aperçu révèle brièvement la vérité"
+  },
+  "hints": {
+    "1": {
+      "1": "Utilise les onglets pour passer d'un mode à l'autre : A↔A, A↔S, F↔F. Essaie de flipper A ou B dans chacun.",
+      "2": "Aimants : pôles identiques face-à-face = répulsion, opposés = attraction. Fils : même sens = attraction, opposés = répulsion.",
+      "3": "Il faut visiter les 3 modes et voir au moins une attraction + une répulsion. Inverse un pôle ou un courant pour changer le résultat."
+    },
+    "2": {
+      "1": "Change de mode sur le panneau de droite. Chaque mode a une cible — essaie de toutes les atteindre.",
+      "2": "aa : pôles opposés → attraction. cc : courants de même sens → attraction. ac : N face à S → attraction.",
+      "3": "Pour ac (répulsion) : inverse l'aimant ou le courant pour que les deux pôles face-à-face soient IDENTIQUES (N-N ou S-S)."
+    },
+    "3": {
+      "1": "Regarde la configuration visible. Quels sont les deux pôles face-à-face (ou les deux sens de courant) ?",
+      "2": "Face-à-face identique = répulsion. Opposé = attraction. L'aperçu montre brièvement la réponse si tu es bloqué.",
+      "3": "Pour un solénoïde, applique la règle de la main droite : les doigts suivent le courant, le pouce indique le N. Puis compare avec le pôle de l'aimant."
+    }
+  }
+}

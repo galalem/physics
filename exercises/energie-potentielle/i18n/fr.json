@@ -1,0 +1,69 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Choisis une masse, règle la hauteur de départ $h_0$ avec le curseur, puis Libère. Regarde la bille glisser : $E_p$ (vert) diminue, $E_c$ (orange) augmente, mais $E_m$ (violet) reste constante — l'énergie mécanique se conserve. Avance après avoir libéré depuis au moins $2$ hauteurs différentes.",
+      "concept": "Énergie potentielle de pesanteur : $E_p = m\\,g\\,h$ ($h$ mesurée par rapport au sol). Énergie cinétique : $E_c = \\tfrac{1}{2}\\,m\\,v^2$. Sans frottements, l'énergie mécanique $E_m = E_p + E_c$ est conservée pendant le mouvement. Les énergies potentielle et cinétique se transforment donc l'une en l'autre, un pour un.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trouve la hauteur de départ $h_0$ qui fait arriver la bille en bas avec la vitesse cible. Regarde le repère orange en pointillés — il indique la solution.",
+      "concept": "En haut : $E_c = 0$, donc $E_m = m\\,g\\,h_0$. En bas ($h = 0$) : $E_p = 0$, donc $E_m = \\tfrac{1}{2}\\,m\\,v^2$. En égalant : $m\\,g\\,h_0 = \\tfrac{1}{2}\\,m\\,v^2$, d'où $v = \\sqrt{2\\,g\\,h_0}$. La masse se simplifie — la vitesse finale ne dépend que de $h_0$ (et de $g$).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les barres d'énergie sont masquées. On te donne la masse $m$ et la hauteur de départ $h_0$. Calcule $v$ en bas et choisis la bonne valeur. Prends $g = 10\\,\\text{m/s}^2$.",
+      "concept": "Application directe : $v = \\sqrt{2\\,g\\,h}$. Calcule mentalement : $2\\,g\\,h$, puis racine carrée. Les distracteurs incluent la réponse sans le facteur $2$, ou $v^2$ au lieu de $v$.",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "étape",
+    "scene_title": "bille sur rampe",
+    "controls_title": "commandes",
+    "bars_title": "bilan d'énergie",
+    "bars_hidden": "barres masquées — calcule v toi-même",
+    "field_mass": "masse m",
+    "field_h0": "hauteur départ h₀",
+    "field_status": "état",
+    "drops": "lâchers",
+    "heights": "hauteurs",
+    "matched": "cible atteinte",
+    "target": "cible",
+    "target_h": "h₀ cible",
+    "question": "question",
+    "given": "donné",
+    "v_at_bottom": "quelle est v en bas ?",
+    "release": "libérer",
+    "running": "en glisse…",
+    "at_bottom": "arrivée au sol",
+    "next_q": "suivant",
+    "correct": "correct",
+    "evaluate_prompt": "Barres masquées. Utilise E_p = E_c → v = √(2·g·h).",
+    "tip1": "libère, regarde E_p devenir E_c ; E_m reste constant",
+    "tip2": "v² = 2·g·h₀ → trouve h₀ pour que v = 6 m/s en bas",
+    "tip3": "v = √(2·g·h) ; la masse n'intervient pas ici"
+  },
+  "hints": {
+    "1": {
+      "1": "Bouge le curseur h₀ puis appuie sur Libérer. Regarde les trois barres évoluer pendant la glisse.",
+      "2": "Essaie une petite hauteur puis une grande. Note que E_m reste constant — seule la répartition E_p / E_c change.",
+      "3": "Il faut libérer depuis au moins 2 hauteurs différentes. Change le curseur entre deux lâchers."
+    },
+    "2": {
+      "1": "Il faut v = 6 m/s en bas. Utilise v = √(2·g·h₀) pour trouver h₀.",
+      "2": "v² = 36. Et 2·g = 20. Donc h₀ = 36 / 20 = 1,8 m.",
+      "3": "Règle h₀ ≈ 1,8 m (± 0,05), puis libère. La bille doit arriver avec v ≈ 6 m/s."
+    },
+    "3": {
+      "1": "v = √(2·g·h). La masse n'apparaît pas — elle se simplifie.",
+      "2": "Pour h = 1,25 m : 2·10·1,25 = 25, donc v = √25 = 5 m/s.",
+      "3": "Attention : les distracteurs incluent √(g·h) (facteur 2 oublié) et 2·g·h (v² au lieu de v)."
+    }
+  }
+}

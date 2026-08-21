@@ -1,0 +1,127 @@
+.auth-layout {
+  &__headline {
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    margin: 0;
+  }
+
+  &__points {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 28px 0 0;
+    max-width: 26em;
+
+    li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #b9c4d6;
+      line-height: 1.5;
+    }
+  }
+
+  &__form-panel {
+    background: #faf9f5;
+    padding: clamp(28px, 4vw, 48px);
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 26px;
+  border-bottom: 1px solid var(--bs-border-color);
+  margin-bottom: 30px;
+
+  &__tab {
+    font-size: 17px;
+    font-weight: 600;
+    padding-bottom: 14px;
+    margin-bottom: -1px;
+    border-bottom: 2px solid transparent;
+    color: #8a8779;
+    text-decoration: none;
+
+    &:hover { color: var(--bs-body-color); }
+
+    &.active {
+      color: var(--bs-body-color);
+      border-bottom-color: var(--bs-primary);
+    }
+  }
+}
+
+.auth-form {
+  .form-label {
+    font-family: var(--bs-font-monospace);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8a8779;
+    margin-bottom: 7px;
+  }
+
+  .form-body {
+    font-size: 13px;
+    color: #8a8779;
+    line-height: 1.5;
+  }
+
+  .form-control {
+    padding: 13px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    background: #fff;
+
+    &::placeholder {
+      color: #a8a498;
+    }
+  }
+
+  .form-submit {
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0;
+    color: #b7b3a6;
+    font-family: var(--bs-font-monospace);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--bs-border-color);
+    }
+  }
+
+  .form-google {
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid var(--bs-border-color);
+    color: var(--bs-body-color);
+
+    &:hover {
+      background: #faf9f5;
+    }
+  }
+}

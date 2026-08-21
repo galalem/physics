@@ -1,0 +1,27 @@
+{
+  "name": "@physics/protocol",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "postMessage contract between the LMS host and sandboxed exercise iframes",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

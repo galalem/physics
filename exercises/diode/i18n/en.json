@@ -1,0 +1,65 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A diode passes current one way only. Sweep the DC source $E$ from negative to positive and watch the operating point $(V_D,\\,I)$ crawl along the characteristic. Reach both a reverse setting ($E < 0$) and a forward setting well past the knee ($E > 1\\,\\text{V}$) to advance.",
+      "concept": "Shockley: $I = I_S\\,(e^{V_D/V_T} - 1)$. Below the threshold $V_{th} \\approx 0.6\\,\\text{V}$ current is essentially zero — the diode blocks. Above threshold, current climbs almost exponentially — the diode conducts. Reverse bias ($V_D < 0$): only a tiny leakage.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "The source is now AC: $V_{in}(t) = V_p \\sin(2\\pi f t)$. Change $V_p$ and watch the output $V_R$ (green) — the diode chops off the negative half and the small $V_{th}$ slice. Move the slider at least twice to advance.",
+      "concept": "Half-wave rectification: $V_R(t) = \\max(0,\\,V_{in}(t) - V_{th})$. Only positive half-cycles above $V_{th}$ pass. The negative half-cycle is blocked entirely.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The scope shows a target output waveform (orange) for the same AC input. Pick the diode topology that produces it. Peek reveals the answer for $1.5\\,\\text{s}$.",
+      "concept": "Topology decides the shape. Single forward diode → half-wave (positive humps). Reversed diode → clips to the negative half (negative humps). Bridge of 4 diodes → both half-cycles flipped positive (full-wave).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "circuit",
+    "characteristic": "I(U) characteristic",
+    "scope": "scope",
+    "peek_reveal": "answer:",
+    "target": "target",
+    "your_pick": "your pick",
+    "correct": "correct",
+    "wrong": "not this one",
+    "pick_topology": "pick a topology",
+    "topo_half": "single diode",
+    "topo_reverse": "reversed diode",
+    "topo_full": "4-diode bridge",
+    "tip1": "sweep E through zero · reverse blocks, forward conducts past V_th",
+    "tip2": "V_p sets amplitude · the diode always chops at V_th",
+    "tip3": "match the target waveform shape to the topology",
+    "swept_ok": "swept both ways",
+    "reverse": "reverse",
+    "forward": "forward",
+    "observed_clip": "clipping seen",
+    "change_vp": "change V_p"
+  },
+  "hints": {
+    "1": {
+      "1": "Slide E below zero — nothing conducts (I ≈ 0). That's reverse bias.",
+      "2": "Now slide E past +0.6 V — current suddenly climbs. The knee is V_th.",
+      "3": "You need one visit at E < 0 AND one at E > 1 V to advance."
+    },
+    "2": {
+      "1": "V_p is the peak of the AC input (dashed). V_R (solid) is what survives.",
+      "2": "Try V_p = 1 V — the output is tiny (V_th eats most of it). Then V_p = 5 V — most of the top half-cycle passes.",
+      "3": "The negative half is always zero. That's what 'half-wave' means."
+    },
+    "3": {
+      "1": "Positive humps only → single forward diode. Negative humps only → reversed diode.",
+      "2": "All humps positive (no gap between them) → 4-diode bridge. Both halves are flipped up.",
+      "3": "Peek shows the answer directly for 1.5 s."
+    }
+  }
+}

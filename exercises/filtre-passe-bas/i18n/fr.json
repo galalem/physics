@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Bouge les curseurs $R$ et $C$. La courbe de gain (diagramme de Bode) à droite se décale à gauche/droite. Le repère violet marque la fréquence de coupure $f_c$ (où $|H| = -3\\,\\text{dB}$). En dessous de $f_c$ le filtre laisse passer ; au-dessus il atténue à $-20\\,\\text{dB/décade}$. Avance après avoir visité au moins $3$ décades différentes de $f_c$.",
+      "concept": "Un filtre RC passe-bas du premier ordre a pour fonction de transfert $|H(f)| = 1 / \\sqrt{1 + (f/f_c)^2}$, avec $f_c = 1/(2\\pi\\,R\\,C)$. En décibels : $|H|_{\\text{dB}} = -10\\,\\log_{10}\\!\\bigl(1 + (f/f_c)^2\\bigr)$. Le gain vaut $\\approx 0\\,\\text{dB}$ (plat) bien en dessous de $f_c$, chute de $3\\,\\text{dB}$ à $f_c$, puis décroît linéairement (log-log) avec la pente $-20\\,\\text{dB/décade}$ au-dessus de $f_c$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Règle $R$ et $C$ pour placer la coupure à la fréquence cible indiquée par la ligne orange ($f_c = 1\\,\\text{kHz}$). Plusieurs couples $(R, C)$ marchent — il suffit que $R\\,C = 1/(2\\pi\\,f_c)$.",
+      "concept": "Formule de conception : $f_c = 1/(2\\pi\\,R\\,C)$, donc $R\\,C = 1/(2\\pi\\,f_c)$. Pour $f_c = 1000\\,\\text{Hz}$ il faut $R\\,C \\approx 1{,}59\\times10^{-4}\\,\\text{s}$ ($159\\,\\mu\\text{s}$). Exemples : $R = 1{,}59\\,\\text{k}\\Omega$ avec $C = 100\\,\\text{nF}$, ou $R = 15{,}9\\,\\text{k}\\Omega$ avec $C = 10\\,\\text{nF}$. Ce qui compte c'est le produit, pas les valeurs individuelles.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les valeurs des composants sont masquées. Lis $f_c$ directement sur la courbe — c'est la fréquence où $|H|$ croise $-3\\,\\text{dB}$, ou le coude entre la partie plate et la pente $-20\\,\\text{dB/décade}$.",
+      "concept": "Lecture de $f_c$ sur un Bode : cherche l'endroit où la courbe est $3\\,\\text{dB}$ sous le gain continu (la ligne $-3\\,\\text{dB}$ est tracée). Autrement, l'intersection des deux asymptotes (droite plate et droite en pente) donne exactement $f_c$. Les deux méthodes convergent.",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "étape",
+    "circuit_title": "passe-bas RC",
+    "bode_title": "|H(f)| — Bode (module)",
+    "controls_title": "commandes",
+    "field_R": "résistance R",
+    "field_C": "capacité C",
+    "field_derived": "dérivé",
+    "v_in": "u_e",
+    "v_out": "u_s",
+    "fc_seen": "régions",
+    "matched": "cible atteinte",
+    "target": "cible",
+    "target_fc": "f_c cible",
+    "question": "question",
+    "read_fc": "lis f_c sur le graphe",
+    "fc_definition": "f_c : où |H| = −3 dB (repère violet)",
+    "next_q": "suivant",
+    "correct": "correct",
+    "evaluate_prompt": "Les valeurs des composants sont masquées. Lis la fréquence de coupure f_c à partir du diagramme de Bode.",
+    "tip1": "R↑ ou C↑ → f_c décalée à gauche ; f_c = 1/(2π·R·C)",
+    "tip2": "ajuste R·C jusqu'à ce que le repère violet touche la ligne orange",
+    "tip3": "lis f_c sur le graphe là où |H| = −3 dB"
+  },
+  "hints": {
+    "1": {
+      "1": "Le point violet sur le graphe marque f_c. Augmente R et regarde-le se déplacer.",
+      "2": "f_c = 1/(2π·R·C). Si tu doubles R, f_c est divisée par 2. Si tu divises C par 2, f_c double.",
+      "3": "Il faut visiter 3 décades différentes de f_c. Essaie R = 100 Ω avec un petit C, puis un grand C, puis un grand R."
+    },
+    "2": {
+      "1": "Il faut R·C = 1/(2π·1000) ≈ 1,59×10⁻⁴ s. Choisis C rond puis calcule R.",
+      "2": "Essaie C = 100 nF (= 10⁻⁷ F). Alors R = 1,59×10⁻⁴ / 10⁻⁷ = 1590 Ω ≈ 1,6 kΩ.",
+      "3": "Ou : C = 10 nF et R = 16 kΩ. Ou : C = 1 µF et R = 160 Ω. Tous donnent f_c = 1 kHz."
+    },
+    "3": {
+      "1": "Regarde là où la courbe traverse la ligne horizontale −3 dB (pointillé orange).",
+      "2": "Ou repère le 'coude' — l'endroit où la partie plate rejoint la pente. Ce coin est f_c.",
+      "3": "Lis alors l'abscisse à ce point. Attention c'est une échelle log : chaque graduation majeure vaut un facteur 10."
+    }
+  }
+}

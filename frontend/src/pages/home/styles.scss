@@ -1,0 +1,225 @@
+.home-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px 104px;
+  background-image:
+    linear-gradient(rgba(13, 21, 36, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 21, 36, 0.045) 1px, transparent 1px);
+  background-size: 38px 38px;
+
+  section {
+    margin-top: clamp(72px, 10vw, 120px);
+    scroll-margin-top: 74px;
+  }
+}
+
+.hero-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: clamp(28px, 4vw, 56px);
+  padding: clamp(20px, 4vw, 52px) 0 clamp(16px, 3vw, 32px);
+
+  // Below Bootstrap `lg`: stack copy above the demo canvas, cap canvas width
+  // so it doesn't stretch to full viewport on tablets, and tighten vertical
+  // rhythm so the fold doesn't feel bottom-heavy.
+  @media (max-width: 991.98px) {
+    grid-template-columns: 1fr;
+    gap: clamp(24px, 5vw, 40px);
+    text-align: center;
+
+    .hero-eyebrow { justify-content: center; }
+    .hero-sub { margin-inline: auto; }
+    // The CTA row is a flex container on the copy side — center it too.
+    > div > .d-flex { justify-content: center; }
+    .hero-canvas { justify-self: center; width: 100%; max-width: 560px; }
+  }
+}
+
+.hero-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8a8779;
+  gap: 11px;
+
+  span {
+    width: 26px;
+    height: 1px;
+    background: #c6c1b2;
+  }
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5.1vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+}
+
+.hero-sub {
+  font-size: clamp(1.02rem, 1.5vw, 1.25rem);
+  line-height: 1.55;
+  color: #54514a;
+  margin: 24px 0 34px;
+  max-width: 28em;
+}
+
+.hero-cta {
+  padding: 15px 26px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.hero-canvas {
+  position: relative;
+  background: #0d1524;
+  border-radius: 16px;
+  padding: 13px;
+  box-shadow: 0 28px 60px -30px rgba(13, 21, 36, 0.6);
+
+  &__label,
+  &__lit-count {
+    position: absolute;
+    z-index: 2;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    color: #6c7a93;
+  }
+
+  &__label--top-start {
+    top: 23px;
+    inset-inline-start: 25px;
+    text-transform: uppercase;
+  }
+  &__label--bottom-start {
+    bottom: 23px;
+    inset-inline-start: 25px;
+  }
+  &__label--bottom-end {
+    bottom: 21px;
+    inset-inline-end: 25px;
+  }
+  &__lit-count {
+    top: 23px;
+    inset-inline-end: 25px;
+    color: #37c9b8;
+    letter-spacing: normal;
+  }
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8a8779;
+  margin-bottom: 13px;
+}
+
+.section-heading {
+  font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.section-lede {
+  font-size: 1.08rem;
+  line-height: 1.55;
+  color: #54514a;
+  margin: 16px auto 0;
+  max-width: 32em;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+#how article {
+  background: #faf9f5;
+  border: 1px solid #e2dfd4;
+  border-radius: 12px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      font-size: 13px;
+      color: #f97316;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  p {
+    color: #54514a;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+#teachers {
+  > div {
+    position: relative;
+    overflow: hidden;
+    background: #0d1524;
+    color: #eaf0fa;
+    border-radius: 16px;
+    padding: clamp(34px, 5vw, 60px);
+
+    > svg {
+      position: absolute;
+      inset-inline-end: -30px;
+      bottom: -30px;
+      opacity: 0.4;
+      max-width: 52%;
+    }
+
+    > div {
+      position: relative;
+      max-width: 32em;
+    }
+
+    header {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #f9a968;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 1.08rem;
+      line-height: 1.6;
+      color: #b9c4d6;
+      margin: 18px 0 28px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    span {
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: #6c7a93;
+    }
+  }
+}

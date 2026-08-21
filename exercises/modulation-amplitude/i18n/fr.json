@@ -1,0 +1,72 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Manipule les trois curseurs et observe deux vues réagir : en haut, la forme d'onde AM $s(t) = [1 + m\\cos(2\\pi f_m t)]\\cos(2\\pi f_p t)$ avec son enveloppe en ambre ; en bas, le spectre — une raie porteuse à $f_p$ encadrée de deux bandes latérales à $f_p \\pm f_m$. Pousse l'indice de modulation $m$ au-delà de $1$ pour voir la surmodulation. Avance après avoir utilisé les trois curseurs et une fois $m > 1$ observé.",
+      "concept": "La modulation d'amplitude emballe un signal message basse fréquence $u(t)$ sur une porteuse haute fréquence $p(t) = \\cos(2\\pi f_p t)$ en modulant son amplitude : $s(t) = [1 + m\\cos(2\\pi f_m t)]\\cos(2\\pi f_p t)$. Trois paramètres : fréquence du message $f_m$, fréquence porteuse $f_p \\gg f_m$, indice de modulation $m$. L'enveloppe suit $1 + m\\cos(2\\pi f_m t)$ ; un récepteur récupère le message en suivant cette enveloppe. Dans le domaine fréquentiel, la multiplication devient convolution : le spectre du message (raie unique en $f_m$) est copié en $f_p - f_m$ et $f_p + f_m$ autour de la porteuse. La bande passante AM vaut donc $2 f_m$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Chaque cible fixe un triplet $(f_m, f_p, m)$. Règle tes curseurs pour que le signal teal solide coïncide avec la courbe grise pointillée. Les deux vues se mettent à jour en direct — sers-toi des raies du spectre comme repères. Tolérance : $\\pm 5\\%$ sur les fréquences, $\\pm 0.05$ sur $m$.",
+      "concept": "Lecture visuelle d'un signal AM : le nombre de bosses d'enveloppe dans la fenêtre donne $f_m$ ; la densité des oscillations rapides sous l'enveloppe donne $f_p$ ; la profondeur de l'enveloppe (crête vs creux) donne $m$. Quand $m = 1$ l'enveloppe frôle zéro — c'est la modulation critique, le point idéal avant distorsion.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La forme d'onde est masquée. À partir du spectre seul — trois raies verticales avec leurs fréquences étiquetées — déduis $f_p$, $f_m$ et $m$. Lis $f_p$ sur la grande raie centrale ; $f_m$ vaut la moitié de l'écart entre bandes latérales ; $m$ vaut deux fois le rapport d'amplitude bande latérale/porteuse. Peek redévoile brièvement la forme d'onde si besoin.",
+      "concept": "Lecture spectrale pure : la position de la porteuse donne $f_p$ ; l'écart entre bandes latérales donne $2 f_m$ ; l'amplitude relative des bandes latérales donne $m/2$. Donc $m = 2 \\cdot (\\text{amp bande latérale}) / (\\text{amp porteuse})$. C'est exactement ce que voit un technicien qui débogue un émetteur AM sur un analyseur de spectre — tout est dans trois pics."
+    }
+  ],
+  "labels": {
+    "stage": "étape",
+    "scene_title": "modulation d'amplitude",
+    "controls_title": "commandes",
+    "sliders": "curseurs",
+    "target": "cible",
+    "matched": "atteintes",
+    "matched_msg": "cible atteinte — avance ou passe à la suivante",
+    "question": "question",
+    "solved": "résolues",
+    "field_fm": "message f_m",
+    "field_fp": "porteuse f_p",
+    "field_m": "indice de modulation m",
+    "problem_prompt": "Lis le spectre et saisis les trois paramètres.",
+    "correct": "correct",
+    "exact_was": "réponse exacte :",
+    "next_q": "suivant",
+    "hidden_peek": "forme d'onde masquée — peek pour la révéler",
+    "plot_time": "domaine temporel",
+    "plot_spectrum": "spectre",
+    "legend_signal": "signal s(t)",
+    "legend_envelope": "enveloppe",
+    "legend_target": "cible",
+    "carrier_amp": "porteuse",
+    "sideband_amp": "bandes latérales",
+    "overmod_title": "surmodulation (m > 1)",
+    "overmod_desc": "l'enveloppe s'inverse — un détecteur d'enveloppe ne peut plus récupérer le message",
+    "tip1": "manipule les trois curseurs ; pousse m au-delà de 1",
+    "tip2": "colle-toi à la courbe cible en pointillés",
+    "tip3": "spectre : f_p au centre, f_m = ½·écart des bandes"
+  },
+  "hints": {
+    "1": {
+      "1": "Attrape chaque curseur et fais-le glisser. En haut la forme d'onde, en bas son spectre.",
+      "2": "Bosses d'enveloppe = cycles de f_m dans la fenêtre. Oscillations rapides = porteuse à f_p. Profondeur = m.",
+      "3": "Mets m au-dessus de 1 pour voir la surmodulation : l'enveloppe traverse zéro et le signal se déforme."
+    },
+    "2": {
+      "1": "Compte les bosses pour caler f_m. L'écart des bandes latérales du spectre vaut 2·f_m.",
+      "2": "La raie centrale du spectre est f_p. Fais glisser la porteuse jusqu'à la cible.",
+      "3": "Profondeur d'enveloppe = m. À m = 1 le creux touche zéro."
+    },
+    "3": {
+      "1": "Raie centrale = f_p. Lis directement son étiquette.",
+      "2": "Écart des bandes latérales = 2·f_m. Divise par deux.",
+      "3": "m = 2 × (hauteur bande latérale) / (hauteur porteuse). Lis le rapport."
+    }
+  }
+}

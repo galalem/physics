@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un condensateur stocke la charge électrique comme une petite batterie rechargeable. Clique sur l'interrupteur K pour basculer entre CHARGE (relier la pile) et DÉCHARGE (court-circuiter par la résistance). Ajuste R et C, effectue une charge ET une décharge complètes pour avancer.",
+      "concept": "Charge : u_C(t) = E·(1 − exp(−t/τ)). La constante de temps τ = R·C impose le rythme — à t = τ, u_C atteint 63% de E. C'est le même τ qui gouverne la recharge d'un flash d'appareil photo, l'extinction progressive d'un feu stop, et tout filtre passe-bas dans ton téléphone.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Vise la croix orange : u_C doit atteindre V* exactement à l'instant t*. Ajuste R et C pour que ta courbe live passe par la cible. Plusieurs couples (R, C) marchent — seule τ = R·C compte.",
+      "concept": "V* = E·(1 − exp(−t*/τ)) ⇒ τ* = −t* / ln(1 − V*/E). Règle R et C pour atteindre τ*.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Seule la courbe cible est tracée — choisis R et C à l'aveugle, puis appuie sur LANCER pour superposer la tienne. Écart toléré sur τ : ±3%. Peek révèle τ* pendant 1,5 s.",
+      "concept": "Lecture graphique : à t = τ*, la courbe passe par 0,63·E. Estime τ* à partir de ce point, puis choisis n'importe quel (R, C) dont le produit vaut τ*.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "circuit",
+    "hit": "touché !",
+    "match_ok": "concordance",
+    "match_off": "écart",
+    "peek_reveal": "réel :",
+    "target_short": "cible",
+    "submit_button": "LANCER",
+    "charge_label": "charge",
+    "discharge_label": "décharge",
+    "click_switch": "clic sur K pour basculer",
+    "tip1": "K → CHARGE, attendre pleine charge, K → DÉCHARGE, attendre décharge complète",
+    "tip2": "ajuste R et C pour que la croix soit sur ta courbe",
+    "tip3": "estime τ* là où la cible croise 0,63·E, puis règle R·C = τ*"
+  },
+  "hints": {
+    "1": {
+      "1": "Un clic sur K = CHARGE, deux clics = DÉCHARGE, trois clics = OUVERT.",
+      "2": "Le trait pointillé 0,63·E marque la valeur de la courbe à t = τ. Regarde-le bouger quand tu changes R ou C.",
+      "3": "Pleine charge = u_C atteint 99% de E (environ 5τ). Pleine décharge = u_C tombe à 1% de E."
+    },
+    "2": {
+      "1": "Calcule le τ* cible : τ* = −t* / ln(1 − V*/E). Puis règle R·C ≈ τ*.",
+      "2": "Doubler R et diviser C par 2 laisse τ inchangé — essaie, la courbe ne bouge pas.",
+      "3": "Affine avec C une fois près du but ; petites variations de C = petites variations de τ."
+    },
+    "3": {
+      "1": "Sur la courbe cible, trouve le t où u_C = 0,63·E — c'est τ*.",
+      "2": "Ou repère où la courbe s'aplatit (≈ 5τ*). Divise par 5 pour obtenir τ*.",
+      "3": "Peek donne τ* directement pendant 1,5 s. Ensuite prends n'importe quel R, C avec R·C = τ*."
+    }
+  }
+}

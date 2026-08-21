@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Move the $R$ and $C$ sliders. Watch the Bode magnitude curve on the right shift left/right. The purple marker sits on the cutoff frequency $f_c$ (where $|H| = -3\\,\\text{dB}$). Below $f_c$ the filter passes; above, it attenuates at $-20\\,\\text{dB/décade}$. Advance after visiting at least $3$ different $f_c$ decades.",
+      "concept": "A first-order RC low-pass has transfer function $|H(f)| = 1 / \\sqrt{1 + (f/f_c)^2}$, with cutoff $f_c = 1/(2\\pi\\,R\\,C)$. In decibels: $|H|_{\\text{dB}} = -10\\,\\log_{10}\\!\\bigl(1 + (f/f_c)^2\\bigr)$. The gain is $\\approx 0\\,\\text{dB}$ (flat) far below $f_c$, drops by $3\\,\\text{dB}$ at $f_c$, then falls linearly on the log-log plot with slope $-20\\,\\text{dB/décade}$ above $f_c$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Adjust $R$ and $C$ to place the cutoff at the target frequency shown by the dashed orange line ($f_c = 1\\,\\text{kHz}$). Many $(R, C)$ pairs work — you just need $R\\,C = 1/(2\\pi\\,f_c)$.",
+      "concept": "Design formula: $f_c = 1/(2\\pi\\,R\\,C)$, so $R\\,C = 1/(2\\pi\\,f_c)$. For $f_c = 1000\\,\\text{Hz}$ you need $R\\,C \\approx 1.59\\times10^{-4}\\,\\text{s}$ ($159\\,\\mu\\text{s}$). Example combinations: $R = 1.59\\,\\text{k}\\Omega$ with $C = 100\\,\\text{nF}$, or $R = 15.9\\,\\text{k}\\Omega$ with $C = 10\\,\\text{nF}$. What matters is the product, not the individual values.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Component values are hidden. Read $f_c$ directly from the Bode magnitude curve — it's the frequency where $|H|$ crosses $-3\\,\\text{dB}$, or equivalently the corner where the flat region meets the $-20\\,\\text{dB/décade}$ slope.",
+      "concept": "Reading $f_c$ off a Bode plot: find where the curve is $3\\,\\text{dB}$ below the DC gain (the $-3\\,\\text{dB}$ horizontal line is drawn). Alternatively, the intersection of the two asymptotes (flat top-line and sloping side-line) is exactly $f_c$. Both methods give the same answer.",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "circuit_title": "RC low-pass",
+    "bode_title": "|H(f)| — Bode magnitude",
+    "controls_title": "controls",
+    "field_R": "resistance R",
+    "field_C": "capacitance C",
+    "field_derived": "derived",
+    "v_in": "u_in",
+    "v_out": "u_out",
+    "fc_seen": "regions",
+    "matched": "target reached",
+    "target": "target",
+    "target_fc": "target f_c",
+    "question": "question",
+    "read_fc": "read f_c from the plot",
+    "fc_definition": "f_c is where |H| = −3 dB (purple marker)",
+    "next_q": "next",
+    "correct": "correct",
+    "evaluate_prompt": "The component values are hidden. Read the cutoff frequency f_c from the Bode plot alone.",
+    "tip1": "R↑ or C↑ → f_c shifts left ; f_c = 1/(2π·R·C)",
+    "tip2": "adjust R·C until the purple marker sits on the orange line",
+    "tip3": "read f_c off the plot where |H| = −3 dB"
+  },
+  "hints": {
+    "1": {
+      "1": "The purple dot on the plot marks f_c. Try increasing R and watch it shift.",
+      "2": "f_c = 1/(2π·R·C). If you double R, f_c halves. If you halve C, f_c doubles.",
+      "3": "You need to visit 3 different decades of f_c. Try R = 100 Ω with small C, then large C, then large R."
+    },
+    "2": {
+      "1": "You need R·C = 1/(2π·1000) ≈ 1.59×10⁻⁴ s. Pick round C then compute R.",
+      "2": "Try C = 100 nF (= 10⁻⁷ F). Then R = 1.59×10⁻⁴ / 10⁻⁷ = 1590 Ω ≈ 1.6 kΩ.",
+      "3": "Or try C = 10 nF and R = 16 kΩ. Or C = 1 µF and R = 160 Ω. All give f_c = 1 kHz."
+    },
+    "3": {
+      "1": "Look at where the curve crosses the horizontal −3 dB line (the orange dashed line).",
+      "2": "Or find the 'knee' — where the flat part turns into the sloped part. That corner is f_c.",
+      "3": "Read the x-axis at that point. Remember it's a log scale: each major tick is a factor of 10."
+    }
+  }
+}

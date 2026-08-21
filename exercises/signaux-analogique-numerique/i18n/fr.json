@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Même sinusoïde source, trois visages : analogique continu (haut), numérique échantillonné-quantifié (milieu), et logique binaire (bas). Fais varier $f_s$ (fréquence d'échantillonnage) et $N$ (nombre de bits) — regarde l'escalier s'affiner ou grossir. Avance après avoir bougé les deux curseurs au moins deux fois.",
+      "concept": "Les signaux analogiques varient continûment en temps et en amplitude. Les signaux logiques ne prennent que deux niveaux ($0$ / $1$). Les signaux numériques sont discrets en temps (échantillonnés à $f_s$) et en amplitude (quantifiés sur $2^N$ niveaux). Shannon–Nyquist : $f_s \\geq 2\\,f_0$ ou la reconstruction ment sur la fréquence (repliement spectral).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une seule forme d'onde est affichée. Choisis la famille à laquelle elle appartient : analogique, logique ou numérique. Enchaîne $5$ bonnes réponses pour avancer.",
+      "concept": "Indices : courbe lisse → analogique. Sauts entre deux niveaux plats uniquement → logique. Plateaux plats à plusieurs niveaux distincts (escalier) → numérique. Si c'est pixelisé en amplitude mais avec plus de deux niveaux, c'est numérique.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La cible orange vient de la même sinusoïde source avec un $(f_s^{*},\\,N^{*})$ caché. Reproduis-la en ajustant tes propres $f_s$ et $N$. Le peek révèle la réponse pendant $1.5\\,\\text{s}$.",
+      "concept": "Compte les plateaux par fenêtre → nombre d'échantillons ≈ $f_s^{*} \\cdot T$. Compte les niveaux verticaux distincts → $2^{N^{*}}$. Puis règle $f_s$ et $N$ en conséquence.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "analog": "analogique",
+    "logic": "logique",
+    "numeric": "numérique",
+    "classify": "forme d'onde",
+    "target": "cible",
+    "yours": "à toi",
+    "match_ok": "correspondance",
+    "peek_reveal": "réponse :",
+    "progress": "avancement",
+    "correct": "juste",
+    "wrong": "pas celle-là",
+    "tip1": "bouge f_s et N · l'escalier change · sous 2·f_0 = repliement",
+    "tip2": "courbe lisse = analogique · 2 niveaux plats = logique · escalier = numérique",
+    "tip3": "compte les plateaux → f_s · compte les niveaux verticaux → 2^N"
+  },
+  "hints": {
+    "1": {
+      "1": "Essaie f_s = 4 Hz puis f_s = 12 Hz — l'escalier s'affine en temps.",
+      "2": "Essaie N = 1 puis N = 6 — les paliers verticaux passent de 2 à 64.",
+      "3": "Règle f_s = 3 Hz (sous 2·f_0 = 4). L'escalier dérive — c'est le repliement."
+    },
+    "2": {
+      "1": "Trace continue et lisse, sans saut ? C'est analogique.",
+      "2": "Seulement deux lignes plates avec des sauts ? C'est logique (binaire).",
+      "3": "Plateaux à 4, 8 ou 16 niveaux distincts ? C'est numérique (quantifié)."
+    },
+    "3": {
+      "1": "Compte les plateaux horizontaux dans la cible : ça donne f_s* ≈ plateaux par seconde.",
+      "2": "Compte les niveaux verticaux distincts : c'est 2^N* (2 = N*1, 4 = N*2, 8 = N*3, 16 = N*4).",
+      "3": "Le peek révèle f_s* et N* directement pendant 1,5 s."
+    }
+  }
+}

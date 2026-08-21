@@ -1,0 +1,65 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "The frame is a closed rectangular loop with four empty slots. Drag components from the right palette onto the slots. To remove a component, drag it out of its slot and drop it anywhere off-loop. Click the switch to open/close it. Advance once you've lit the lamp AND experienced at least one broken configuration.",
+      "concept": "A circuit lights when there is a closed loop that includes a source (battery) and a receiver (lamp). Break any point in the loop and the current stops. The switch is a make/break in that loop.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Build a proper circuit — one battery, one switch, one lamp, and one wire, one per slot — then verify that closing the switch lights the lamp and opening it turns it off. Both conditions must be observed.",
+      "concept": "The switch is a controlled break. Open switch = broken loop = no current. Closed switch = intact loop = current flows and the lamp lights.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Three slots are pre-filled. The lamp won't light because one slot is empty. Drag the wire into the empty slot to close the loop. Peek reveals a ghost of the answer for 1.5 s.",
+      "concept": "A wire is a zero-resistance conductor — the missing piece needed to complete the loop. Even a single break kills the whole current.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "schematic",
+    "palette": "palette",
+    "comp_battery": "battery",
+    "comp_switch": "switch",
+    "comp_lamp": "lamp",
+    "comp_wire": "wire",
+    "lit_once": "lamp lit",
+    "broken_once": "broken loop",
+    "on_when_closed": "on when closed",
+    "off_when_open": "off when open",
+    "slot_missing": "fill the empty slot",
+    "diag_empty_prefix": "loop broken:",
+    "diag_empty_suffix": "empty slot(s)",
+    "diag_no_battery": "no battery — nothing to drive current",
+    "diag_no_lamp": "loop is closed, but no lamp on it",
+    "diag_switch_open": "switch is open — click it to close",
+    "diag_ok": "circuit closed, lamp lit",
+    "tip1": "drag from the palette; drag a placed component out to remove it; click the switch to toggle",
+    "tip2": "use exactly one of each component, then toggle the switch",
+    "tip3": "one slot is empty — drop the wire in"
+  },
+  "hints": {
+    "1": {
+      "1": "Try dragging one component onto any slot. Then drag another. See what happens.",
+      "2": "A full loop needs 4 things in the 4 slots — including a battery.",
+      "3": "Once lit, drag one of the placed components off-loop to see the lamp die."
+    },
+    "2": {
+      "1": "Use one of each: battery, switch, lamp, wire — order doesn't matter.",
+      "2": "Click the switch on the canvas to toggle it open/closed.",
+      "3": "You must witness BOTH: lamp on with switch closed, AND lamp off with switch open."
+    },
+    "3": {
+      "1": "Look at the four slots — one is missing a component.",
+      "2": "The switch is already closed. What's needed to bridge the gap?",
+      "3": "Drop the wire into the empty (right) slot."
+    }
+  }
+}

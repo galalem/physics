@@ -1,0 +1,77 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "La boule commence neutre. D'abord, approche une tige non-frottée — il ne se passe rien. Maintenant frotte une tige avec un tissu et approche à nouveau — la boule est attirée (influence). Avance après avoir vu à la fois rien ET attraction.",
+      "concept": "Une tige non chargée près d'une boule non chargée ne produit rien. Le frottement sépare les charges — verre + soie rend le verre +, ébonite + fourrure rend l'ébonite −. Une tige chargée près d'une boule neutre l'attire toujours (elle la polarise).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Explorer",
+      "instruction": "Même banc, mais cette fois c'est toi qui règles le signe de la boule — clique dessus pour cycler neutre → + → −. Combine des tiges chargées avec les différents signes de la boule et observe les trois issues possibles : attraction, répulsion, rien du tout.",
+      "concept": "Deux règles : (1) mêmes signes se repoussent, signes opposés s'attirent ; (2) un objet chargé attire toujours un objet neutre (influence). Deux neutres → rien.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Prédire",
+      "instruction": "Les deux signes sont donnés d'emblée — prédis ce qui se passera avant de cliquer. La tige s'anime pour confirmer. Réponds juste 4 fois d'affilée pour terminer.",
+      "concept": "Le produit des signes tranche : mêmes signes → répulsion, signes opposés → attraction, un neutre + un chargé → attraction (influence).",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "banc électrostatique",
+    "controls": "commandes",
+    "question": "question",
+    "outcomes_seen": "issues",
+    "streak": "série",
+    "field_rod": "tige",
+    "field_cloth": "tissu",
+    "field_ball": "boule",
+    "field_status": "état",
+    "rod": "tige",
+    "ball": "boule",
+    "glass": "verre",
+    "ebonite": "ébonite",
+    "silk": "soie",
+    "fur": "fourrure",
+    "rub_progress": "frottement",
+    "click_ball_hint": "clique la boule pour changer sa charge",
+    "ball_prefixed": "boule neutre (verrouillée)",
+    "hint_drag_cloth": "glisse le tissu sur la tige",
+    "hint_drag_rod": "glisse la tige vers la boule",
+    "attract": "attraction",
+    "repel": "répulsion",
+    "neither": "rien",
+    "next_q": "suivant",
+    "rod_is": "La tige est",
+    "ball_is": "La boule est",
+    "charge_pos": "positive",
+    "charge_neg": "négative",
+    "charge_neutral": "neutre",
+    "tip1": "approche la boule sans et avec frottement — vois rien puis attraction",
+    "tip2": "clique la boule pour changer sa charge ; trouve les 3 issues",
+    "tip3": "mêmes signes se repoussent, opposés s'attirent, neutre est toujours attiré"
+  },
+  "hints": {
+    "1": {
+      "1": "Approche la tige de la boule sans la frotter d'abord — rien ne devrait se passer.",
+      "2": "Frotte maintenant la tige avec un tissu adapté, puis approche — la boule vient vers elle (attraction).",
+      "3": "Il te faut voir à la fois rien ET attraction pour avancer."
+    },
+    "2": {
+      "1": "Clique sur la boule pour changer son signe. Elle a trois états : neutre, +, −.",
+      "2": "Essaie une tige chargée près d'une boule neutre — elle attire quand même (influence).",
+      "3": "Deux neutres est la seule combinaison qui ne produit rien."
+    },
+    "3": {
+      "1": "D'abord : quel signe pour chacun ? Puis multiplie les signes.",
+      "2": "Produit positif (même signe) = répulsion. Produit négatif = attraction.",
+      "3": "Si l'un est neutre (et l'autre chargé), toujours attraction — c'est l'influence."
+    }
+  }
+}

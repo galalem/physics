@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Chaque point est un noyau atomique — le cœur dense d'un atome. Dans un échantillon radioactif, chaque noyau est instable : il se désintègre spontanément à un instant aléatoire, en émettant une particule. Balaie $T_{1/2}$ (la demi-vie caractéristique de cet isotope), bascule LOG, et laisse la simulation dépasser $T_{1/2}$.",
+      "concept": "$N(t) = N_0\\,e^{-\\lambda t}$, avec $\\lambda = \\ln 2 \\,/\\, T_{1/2}$. $T_{1/2}$ est propre à l'isotope — c'est pourquoi le carbone-14 date les fossiles ($T_{1/2} \\approx 5730$ ans), pourquoi l'iode-131 des traceurs disparaît du corps ($T_{1/2} \\approx 8$ jours), et pourquoi les déchets d'uranium restent dangereux des millénaires.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "La courbe de décroissance d'un isotope mystère (orange vif) est tracée sur le graphe avec trois points de mesure. Règle $T_{1/2}$ pour que ta courbe corresponde à $\\pm 5\\%$.",
+      "concept": "Deux isotopes de même $T_{1/2}$ décroissent au même rythme relatif. L'ajustement est plus facile en échelle log — pentes égales = $\\lambda$ égales.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas de simulation en direct. Seules trois mesures bruitées $(t, N)$ d'un échantillon caché te sont données. Calcule $T_{1/2} = \\ln 2 \\,/\\, \\lambda$ à partir des données et saisis la valeur. Peek révèle la vraie courbe pendant $1{,}5$ s.",
+      "concept": "À partir de deux relevés : $\\lambda = \\dfrac{\\ln(N_1/N_2)}{t_2 - t_1}$, puis $T_{1/2} = \\ln 2 \\,/\\, \\lambda$. Sur un graphe log-$N$, la pente vaut $-\\lambda$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "nuclei": "noyaux",
+    "field_measurements": "mesures de terrain",
+    "find_T": "trouve T½ à partir des données",
+    "match_ok": "concordance",
+    "match_off": "hors tolérance — revois ton calcul",
+    "enter_prompt": "saisis T½ puis valide",
+    "peek_reveal": "valeur réelle :",
+    "log_toggle": "LOG",
+    "restart_sim": "REPRENDRE",
+    "submit": "VALIDER",
+    "expect_half": "attendu ≈ 0,50 à T½",
+    "analytic": "analytique",
+    "tip1": "balaie T½, bascule LOG, laisse la sim dépasser T½",
+    "tip2": "aligne-toi sur la cible orange — essaie LOG pour un ajustement linéaire",
+    "tip3": "calcule λ à partir de deux points, puis T½ = ln 2 / λ"
+  },
+  "hints": {
+    "1": {
+      "1": "T½ est le temps nécessaire pour que la moitié des noyaux se désintègrent.",
+      "2": "Basculer LOG transforme l'exponentielle en une droite — la pente vaut −λ.",
+      "3": "La courbe pointillée turquoise est le N(t) théorique ; la courbe pleine orange est le comptage stochastique. Elles doivent coïncider en moyenne."
+    },
+    "2": {
+      "1": "La courbe orange vif est l'isotope cible. Aligne la pente, pas juste les extrémités.",
+      "2": "En linéaire, T½ est là où la courbe croise N₀/2. En log, les courbes de même T½ sont parallèles.",
+      "3": "Δ affiche ton écart en pourcentage à la cible. Sous 5%, c'est gagné."
+    },
+    "3": {
+      "1": "Choisis deux points (t₁, N₁) et (t₂, N₂). Alors λ = ln(N₁/N₂) / (t₂ − t₁).",
+      "2": "Une fois λ obtenu, la demi-vie est T½ = ln 2 / λ ≈ 0,693 / λ.",
+      "3": "Les mesures étant bruitées, prévois une petite dispersion — la tolérance est de ±3%."
+    }
+  }
+}

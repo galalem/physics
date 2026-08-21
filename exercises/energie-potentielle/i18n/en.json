@@ -1,0 +1,69 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Pick a mass, set the starting height $h_0$ with the slider, then Release. Watch the ball slide down the ramp: $E_p$ (green) drops, $E_c$ (orange) rises, but $E_m$ (purple) stays flat — mechanical energy is conserved. Advance after releasing from at least $2$ different heights.",
+      "concept": "Gravitational potential energy: $E_p = m\\,g\\,h$ (with $h$ measured from the ground). Kinetic energy: $E_c = \\tfrac{1}{2}\\,m\\,v^2$. When friction is negligible, the mechanical energy $E_m = E_p + E_c$ is constant during the motion. So potential and kinetic energies convert into each other, one-for-one.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Find the starting height $h_0$ that makes the ball arrive at the bottom with the target speed. Watch the dashed orange guide — it marks the answer.",
+      "concept": "At the top: $E_c = 0$, so $E_m = m\\,g\\,h_0$. At the bottom ($h = 0$): $E_p = 0$, so $E_m = \\tfrac{1}{2}\\,m\\,v^2$. Setting them equal gives $m\\,g\\,h_0 = \\tfrac{1}{2}\\,m\\,v^2$, so $v = \\sqrt{2\\,g\\,h_0}$. Notice: mass drops out — the final speed depends only on $h_0$ (and $g$).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The energy bars are hidden. You're given the mass $m$ and starting height $h_0$. Compute $v$ at the bottom and pick the right value. Take $g = 10\\,\\text{m/s}^2$.",
+      "concept": "Direct application: $v = \\sqrt{2\\,g\\,h}$. Compute mentally: $2\\,g\\,h$ then take the square root. Distractors include the answer with the wrong factor of $2$, or $v^2$ instead of $v$.",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "scene_title": "ball on ramp",
+    "controls_title": "controls",
+    "bars_title": "energy ledger",
+    "bars_hidden": "bars hidden — compute v yourself",
+    "field_mass": "mass m",
+    "field_h0": "start height h₀",
+    "field_status": "state",
+    "drops": "drops",
+    "heights": "heights",
+    "matched": "target reached",
+    "target": "target",
+    "target_h": "target h₀",
+    "question": "question",
+    "given": "given",
+    "v_at_bottom": "what is v at the bottom?",
+    "release": "release",
+    "running": "sliding…",
+    "at_bottom": "reached the ground",
+    "next_q": "next",
+    "correct": "correct",
+    "evaluate_prompt": "The bars are hidden. Use E_p = E_c → v = √(2·g·h).",
+    "tip1": "release, watch E_p turn into E_c; E_m stays flat",
+    "tip2": "v² = 2·g·h₀ → find h₀ such that v = 6 m/s at the bottom",
+    "tip3": "v = √(2·g·h) ; mass does not matter here"
+  },
+  "hints": {
+    "1": {
+      "1": "Move the h₀ slider and press Release. Watch the three bars evolve during the slide.",
+      "2": "Try a low height, then a high one. Notice E_m stays the same — only how it splits between E_p and E_c changes.",
+      "3": "You need to release from at least 2 different heights. Move the slider between drops."
+    },
+    "2": {
+      "1": "You need v = 6 m/s at the bottom. Use v = √(2·g·h₀) to find the right h₀.",
+      "2": "v² = 36. And 2·g = 20. So h₀ = 36 / 20 = 1.8 m.",
+      "3": "Set h₀ ≈ 1.8 m (± 0.05), then release. The ball must reach the ground with v ≈ 6 m/s."
+    },
+    "3": {
+      "1": "v = √(2·g·h). Mass does not appear — it cancels out.",
+      "2": "For h = 1.25 m: 2·10·1.25 = 25, so v = √25 = 5 m/s.",
+      "3": "Careful: distractors include √(g·h) (missing factor 2) and 2·g·h (v² instead of v)."
+    }
+  }
+}

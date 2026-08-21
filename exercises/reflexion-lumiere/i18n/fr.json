@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Attrape le miroir et fais-le pivoter. Le faisceau orange se réfléchit — les deux angles autour de la normale en pointillés restent toujours égaux.",
+      "concept": "Loi de la réflexion : $\\theta_i = \\theta_r$ — l'angle d'incidence est égal à l'angle de réflexion.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Oriente le miroir, puis appuie sur Tirer (ou Espace) pour lancer le faisceau. Allume les 3 étoiles — tu disposes de 7 tirs.",
+      "concept": "Tu vises uniquement en contrôlant l'angle du miroir.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le faisceau est invisible. Lis les coordonnées de $S$, $M$ et $T$, calcule l'angle $\\varphi$ du miroir qui dirige le faisceau vers la cible, oriente le miroir puis tire. Peek révèle ton $\\varphi$ actuel pour vérifier ton calcul.",
+      "concept": "Le miroir est perpendiculaire à la bissectrice de l'angle formé par $\\overrightarrow{MS}$ et $\\overrightarrow{MT}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "shots": "TIRS",
+    "lit": "ALLUMÉES",
+    "target": "CIBLE",
+    "mirror": "MIROIR",
+    "angles": "ANGLES",
+    "exhausted": "TIRS ÉPUISÉS · RÉINITIALISE POUR RÉESSAYER",
+    "stage": "ÉTAPE",
+    "tip1": "fais pivoter le miroir",
+    "tip2": "vise, puis appuie sur ESPACE pour tirer",
+    "tip3": "calcule φ depuis les coordonnées, puis tire"
+  },
+  "hints": {
+    "1": {
+      "1": "Attrape le miroir par ses extrémités et fais-le pivoter lentement.",
+      "2": "La ligne en pointillés est la normale — perpendiculaire au miroir en son pivot.",
+      "3": "Regarde les deux arcs : le faisceau et sa réflexion forment des angles égaux avec la normale."
+    },
+    "2": {
+      "1": "Le faisceau ne part que lorsque tu appuies sur Feu (ou Espace). Vise d'abord.",
+      "2": "Faire pivoter le miroir de X° fait pivoter le faisceau réfléchi de 2X°.",
+      "3": "Pour chaque étoile : oriente le miroir pour que sa perpendiculaire bissectrice de l'angle source-miroir et miroir-étoile."
+    },
+    "3": {
+      "1": "Tu dois calculer l'angle du miroir à partir des coordonnées. Lis S, M et T dans la scène.",
+      "2": "Calcule la direction de M vers S : α₁ = atan2(S.y − M.y, S.x − M.x). Fais de même pour T : α₂ = atan2(T.y − M.y, T.x − M.x).",
+      "3": "L'angle du miroir est φ = (α₁ + α₂)/2 − 90°. Oriente-le, utilise Peek pour vérifier, puis tire."
+    }
+  }
+}

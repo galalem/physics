@@ -1,0 +1,89 @@
+.markdown-doc {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+  color: var(--bs-body-color);
+  line-height: 1.65;
+  font-size: 16px;
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    margin: 48px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e2dfd4;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 32px 0 10px;
+  }
+
+  p {
+    margin: 0 0 16px;
+  }
+
+  ul,
+  ol {
+    margin: 0 0 20px;
+    padding-inline-start: 24px;
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    li::marker {
+      color: var(--bs-primary);
+    }
+  }
+
+  a {
+    color: var(--bs-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: var(--bs-link-hover-color);
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  em {
+    font-style: italic;
+    color: #54514a;
+  }
+
+  code {
+    font-family: var(--bs-font-monospace);
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e2dfd4;
+    margin: 40px 0;
+  }
+
+  // First "Effective:" line rendered as `_..._` sits directly under H1.
+  h1 + p em {
+    display: inline-block;
+    color: #54514a;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+}

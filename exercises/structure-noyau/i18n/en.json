@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Slide $A$ (mass number) and $Z$ (atomic number) to build a nucleus. Orange dots are protons, teal are neutrons. The chart on the right places the isotope on the $(Z, N)$ map — the green band is the stability zone. Advance after visiting at least $5$ different elements.",
+      "concept": "A nucleus is described by two counts: $Z$ (protons, fixes the element) and $A$ (total nucleons). $N = A - Z$ is the neutron count. Two nuclei with the same $Z$ but different $A$ are isotopes of the same element. The nucleus symbol $^{A}_{Z}X$ bundles all three: mass number, atomic number, element symbol.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Build each named target isotope by setting $A$ and $Z$. The element name tells you $Z$; the number after the dash is $A$.",
+      "concept": "Isotope name $\\to$ composition: the element name determines $Z$ (Carbon means $Z = 6$, Uranium means $Z = 92$). The dash-number is the mass number $A$. Then $N = A - Z$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "You're given only $Z$ and $N$. Pick the correct isotope name from the four choices. The element symbol on the nucleus is hidden this time.",
+      "concept": "Reverse mapping: given $(Z, N)$, first compute $A = Z + N$, then look up the element from $Z$. The full label is then $\\text{Element-}A$. Distractors will differ by $Z$ (wrong element) or by $A$ (wrong isotope of the right element).",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "controls_title": "controls",
+    "nucleus": "nucleus",
+    "stability_chart": "N vs Z (stability)",
+    "field_A": "mass number A",
+    "field_Z": "atomic number Z",
+    "field_N": "neutron count N",
+    "elements_seen": "elements",
+    "matched": "matched",
+    "correct": "correct",
+    "target": "target isotope",
+    "given": "given",
+    "which_isotope": "which isotope is this?",
+    "next_q": "next",
+    "tip1": "slide A and Z; watch protons + neutrons rearrange",
+    "tip2": "element name → Z; number after dash → A",
+    "tip3": "A = Z + N; then look up the element from Z"
+  },
+  "hints": {
+    "1": {
+      "1": "Z is the number of protons — it fixes the element. Try sliding just Z.",
+      "2": "A is the total nucleon count. If you fix Z and change A, you're making isotopes of the same element.",
+      "3": "You need to visit 5 different Z values. Slide Z through H (1), He (2), C (6), O (8), etc."
+    },
+    "2": {
+      "1": "For Carbon-14: Carbon means Z = 6. The 14 is the mass number A. Set A = 14, Z = 6.",
+      "2": "For Oxygen-16: Oxygen is Z = 8. A = 16, so N = 8.",
+      "3": "For Uranium-235: Uranium is Z = 92 (biggest natural element). A = 235 — a big neutron count."
+    },
+    "3": {
+      "1": "Compute A first: A = Z + N. Then figure out which element has that Z.",
+      "2": "Watch for distractors that share Z (same element, wrong A) or share A (right A, wrong element).",
+      "3": "Z = 6 always means Carbon. Z = 2 means Helium. Z = 92 means Uranium."
+    }
+  }
+}

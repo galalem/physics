@@ -1,0 +1,349 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.public-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(239, 237, 231, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2dfd4;
+
+  .bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 13px 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+    margin-inline-start: 16px;
+    color: #54514a;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover { color: #16151c; }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-inline-start: auto;
+  }
+
+  .login {
+    padding: 8px 6px;
+
+    &:hover { color: #16151c; }
+  }
+
+  .signup {
+    padding: 9px 18px;
+    font-weight: 500;
+  }
+
+  .burger {
+    display: none;
+    margin-inline-start: auto;
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    color: #16151c;
+    line-height: 0;
+    border-radius: 8px;
+
+    &:hover { background: rgba(22, 21, 28, 0.06); }
+  }
+
+  .user-menu {
+    position: relative;
+  }
+
+  .user-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px 4px 4px;
+    background: transparent;
+    border: 1px solid #d9d5c8;
+    border-radius: 999px;
+    color: #16151c;
+    line-height: 1;
+    font-size: 0.875rem;
+    transition: background 120ms ease, border-color 120ms ease;
+
+    &:hover, &[aria-expanded="true"] {
+      background: rgba(22, 21, 28, 0.04);
+      border-color: #c7c2b1;
+    }
+
+    .avatar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #16151c;
+      color: #efede7;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .name {
+      font-weight: 500;
+      max-width: 12ch;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    svg { opacity: 0.7; }
+  }
+
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    inset-inline-end: 0;
+    min-width: 180px;
+    padding: 6px;
+    background: #efede7;
+    border: 1px solid #e2dfd4;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(22, 21, 28, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 30;
+
+    a, button {
+      display: block;
+      padding: 9px 12px;
+      background: transparent;
+      border: 0;
+      border-radius: 8px;
+      color: #16151c;
+      text-decoration: none;
+      text-align: start;
+      font-size: 0.9rem;
+      width: 100%;
+
+      &:hover { background: rgba(22, 21, 28, 0.06); }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .links, .actions { display: none; }
+    .burger { display: inline-flex; }
+    .bar { padding: 10px 16px; }
+  }
+}
+
+// Portalled to <body> — sits outside `.public-nav` because the sticky
+// header uses `backdrop-filter`, which per spec creates a containing
+// block for fixed-position descendants (so they'd clip to the header).
+.public-nav-offcanvas {
+  .backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(22, 21, 28, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+    z-index: 1040;
+  }
+
+  .drawer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    inset-inline-end: 0;
+    width: min(320px, 86vw);
+    background: #efede7;
+    border-inline-start: 1px solid #e2dfd4;
+    box-shadow: -12px 0 32px rgba(22, 21, 28, 0.12);
+    transform: translateX(100%);
+    transition: transform 220ms ease;
+    z-index: 1041;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+
+    [dir="rtl"] & {
+      transform: translateX(-100%);
+      box-shadow: 12px 0 32px rgba(22, 21, 28, 0.12);
+    }
+  }
+
+  .drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 20px;
+    border-bottom: 1px solid #e2dfd4;
+  }
+
+  .close {
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    color: #16151c;
+    line-height: 0;
+    border-radius: 8px;
+
+    &:hover { background: rgba(22, 21, 28, 0.06); }
+  }
+
+  .drawer-links {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 8px;
+    gap: 2px;
+    flex-grow: 1;
+
+    a {
+      padding: 12px 16px;
+      color: #16151c;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 1.05rem;
+
+      &:hover { background: rgba(22, 21, 28, 0.05); }
+    }
+  }
+
+  .drawer-foot {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+    border-top: 1px solid #e2dfd4;
+  }
+
+  .drawer-auth {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    .btn { padding-block: 9px; }
+  }
+
+  .drawer-user {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .user-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background: rgba(22, 21, 28, 0.04);
+    border-radius: 12px;
+
+    .avatar {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #16151c;
+      color: #efede7;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .who { min-width: 0; }
+
+    .name {
+      font-weight: 500;
+      color: #16151c;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .email {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .drawer-user-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    .btn { padding-block: 9px; }
+  }
+
+  &.is-open {
+    .backdrop {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .drawer {
+      transform: translateX(0);
+      visibility: visible;
+    }
+  }
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.public-footer {
+  border-top: 1px solid #e2dfd4;
+  padding: 20px 24px;
+  font-size: 13px;
+  color: var(--bs-secondary-color);
+
+  .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .copyright { text-align: start; }
+  .tag       { text-align: center; }
+  .links     {
+    text-align: end;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  a:hover { color: var(--bs-body-color); }
+
+  .dot { opacity: 0.5; }
+
+  // Below sm: stack, center all three regions. Order stays copyright →
+  // tag → links so the love message reads first in the visual middle.
+  @media (max-width: 575.98px) {
+    .inner { flex-direction: column; text-align: center; }
+    .copyright, .tag, .links { text-align: center; }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Choisis une réaction nucléaire et étudie le bilan — une petite quantité de masse ($\\Delta m$) disparaît et se transforme en énergie $E$. Essaie les $3$ réactions et déplace le curseur $\\Delta m$ pour voir comment $E$ évolue. Avance après avoir exploré les trois réactions.",
+      "concept": "Équivalence d'Einstein : $E = \\Delta m \\, c^2$, avec $c = 3 \\times 10^8\\,\\text{m/s}$. Dans une réaction nucléaire, la masse totale des produits est légèrement inférieure à celle des réactifs — la masse manquante $\\Delta m$ est libérée sous forme d'énergie. En unités atomiques, l'astuce utile est $1\\,\\text{u} \\cdot c^2 = 931{,}5\\,\\text{MeV}$, donc $E\\,(\\text{MeV}) = \\Delta m\\,(\\text{u}) \\times 931{,}5$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Pour un défaut de masse $\\Delta m$ donné en unités atomiques, calcule l'énergie libérée $E$ en MeV. La carte de conversion en bas te rappelle la constante. Tape ta réponse et appuie sur ✓ (ou Entrée).",
+      "concept": "Application directe : $E\\,(\\text{MeV}) = \\Delta m\\,(\\text{u}) \\times 931{,}5$. Une simple multiplication — pas de racine, pas de log. Tolérance : $\\pm 3\\%$ (ou $\\pm 0{,}5\\,\\text{MeV}$, selon le plus grand).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'aide de conversion est masquée. Calcule $E$ en MeV à partir de $\\Delta m$ en u en te souvenant de la constante. L'aperçu (peek) révèle brièvement l'aide si tu es bloqué.",
+      "concept": "Retiens l'astuce : $1\\,\\text{u} \\to 931{,}5\\,\\text{MeV}$. Quand un défaut de masse est donné en $\\text{u}$ et que l'énergie est demandée en MeV, multiplie par $\\approx 931{,}5$. C'est l'une des constantes les plus utilisées en physique nucléaire — à mémoriser précisément.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "étape",
+    "scene_title": "équivalence masse-énergie",
+    "controls_title": "commandes",
+    "constant": "constante",
+    "field_reaction": "réaction",
+    "field_dm": "défaut de masse Δm",
+    "computed": "énergie calculée",
+    "reactions": "réactions",
+    "adjusted": "ajusté",
+    "question": "question",
+    "solved": "résolu",
+    "given": "donné",
+    "answer_E": "énergie E",
+    "correct": "correct",
+    "exact_was": "réponse exacte :",
+    "next_q": "suivant",
+    "reaction_fusion": "D + T → He + n  (fusion)",
+    "reaction_alpha": "²¹⁰Po → ²⁰⁶Pb + α  (désintégration α)",
+    "reaction_fission": "n + ²³⁵U → ¹⁴¹Ba + ⁹²Kr + 3n  (fission)",
+    "before": "avant",
+    "after": "après",
+    "unit_converter": "conversion d'unités",
+    "so": "donc",
+    "helper_hidden": "aide masquée — utilise la constante de mémoire",
+    "problem_prompt": "Calcule l'énergie libérée E en MeV pour le défaut de masse donné.",
+    "tip1": "essaie chaque réaction et regarde Δm → E ; déplace le curseur pour sentir l'échelle",
+    "tip2": "E (MeV) = Δm (u) × 931,5 — multiplie et réponds",
+    "tip3": "même formule, sans l'aide — souviens-toi de 931,5 MeV par u"
+  },
+  "hints": {
+    "1": {
+      "1": "Clique sur chaque réaction à droite. Regarde comment le bilan additionne les masses de chaque côté.",
+      "2": "La masse manquante Δm (avant − après) devient de l'énergie via E = Δm · c².",
+      "3": "Essaie les 3 réactions ET déplace le curseur Δm au moins une fois. Cela complète l'étape 1."
+    },
+    "2": {
+      "1": "Utilise la constante sur la carte d'aide : E (MeV) = Δm (u) × 931,5.",
+      "2": "Pour Δm = 0,030 u, E = 0,030 × 931,5 = 27,945 MeV. Entre ≈ 27,9.",
+      "3": "Arrondis à 1 décimale ; la tolérance est ±3 % (ou ±0,5 MeV)."
+    },
+    "3": {
+      "1": "Même formule que l'étape 2 : E (MeV) = Δm (u) × 931,5. L'aide est simplement masquée.",
+      "2": "Pour Δm = 0,020 u, E ≈ 18,63 MeV. L'aperçu révèle l'aide brièvement si tu as oublié.",
+      "3": "Retiens : 1 u ↔ 931,5 MeV. C'est la conversion la plus utilisée dans les problèmes d'énergie nucléaire."
+    }
+  }
+}

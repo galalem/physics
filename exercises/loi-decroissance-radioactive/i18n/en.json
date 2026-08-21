@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Each dot is an atomic nucleus — the dense core of an atom. In a radioactive sample, every nucleus is unstable: it will fall apart on its own (\"decay\") at some random moment, giving off a particle. Sweep $T_{1/2}$ (this isotope's characteristic half-life), toggle LOG, and let the sim run past $T_{1/2}$.",
+      "concept": "$N(t) = N_0\\,e^{-\\lambda t}$, with $\\lambda = \\ln 2 \\,/\\, T_{1/2}$. $T_{1/2}$ is intrinsic to the isotope — it's why carbon-14 dates fossils ($T_{1/2} \\approx 5730$ y), why iodine-131 tracers wear off in the body ($T_{1/2} \\approx 8$ days), and why uranium waste stays hazardous for millennia.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A mystery isotope's decay curve (bright orange) is drawn over the plot with three sample points. Tune $T_{1/2}$ so your simulation's curve matches within $\\pm 5\\%$.",
+      "concept": "Two isotopes with the same $T_{1/2}$ decay at the same relative rate. Fit is easiest on a log scale — matching slopes = matching $\\lambda$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No live simulation. Only three noisy measurements $(t, N)$ from a hidden sample are given. Compute $T_{1/2} = \\ln 2 \\,/\\, \\lambda$ from the data and type it in. Peek reveals the true curve for $1.5$ s.",
+      "concept": "From any two readings: $\\lambda = \\dfrac{\\ln(N_1/N_2)}{t_2 - t_1}$, then $T_{1/2} = \\ln 2 \\,/\\, \\lambda$. On a log-$N$ plot the slope is $-\\lambda$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "nuclei": "nuclei",
+    "field_measurements": "field measurements",
+    "find_T": "find T½ from the data",
+    "match_ok": "match",
+    "match_off": "off — check your reading",
+    "enter_prompt": "enter T½ and submit",
+    "peek_reveal": "true value:",
+    "log_toggle": "LOG",
+    "restart_sim": "RESTART",
+    "submit": "SUBMIT",
+    "expect_half": "expected ≈ 0.50 at T½",
+    "analytic": "analytic",
+    "tip1": "sweep T½, toggle LOG, let the sim pass T½",
+    "tip2": "match the bright orange target — try LOG for a linear fit",
+    "tip3": "compute λ from two points, then T½ = ln 2 / λ"
+  },
+  "hints": {
+    "1": {
+      "1": "T½ is the time it takes for half the nuclei to decay.",
+      "2": "Toggling LOG turns the exponential into a straight line — the slope is −λ.",
+      "3": "The dashed teal curve is the theoretical N(t); the solid orange is the stochastic count. They should agree on average."
+    },
+    "2": {
+      "1": "The bright orange curve is the target isotope. Match its slope, not just its ends.",
+      "2": "On a linear plot, T½ is where the curve crosses N₀/2. On a log plot, curves with the same T½ are parallel.",
+      "3": "Δ shows your percentage gap to the target. Under 5% wins."
+    },
+    "3": {
+      "1": "Pick any two points (t₁, N₁) and (t₂, N₂). Then λ = ln(N₁/N₂) / (t₂ − t₁).",
+      "2": "Once you have λ, the half-life is T½ = ln 2 / λ ≈ 0.693 / λ.",
+      "3": "Because the measurements are noisy, expect a small spread — the tolerance is ±3%."
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser $A$ (nombre de masse) et $Z$ (numéro atomique) pour construire un noyau. Points orange = protons, turquoise = neutrons. Le graphe à droite place l'isotope sur la carte $(Z, N)$ — la bande verte est la zone de stabilité. Avance après avoir visité au moins $5$ éléments différents.",
+      "concept": "Un noyau est décrit par deux nombres : $Z$ (protons, fixe l'élément) et $A$ (nombre total de nucléons). $N = A - Z$ est le nombre de neutrons. Deux noyaux de même $Z$ mais $A$ différents sont des isotopes du même élément. Le symbole $^{A}_{Z}X$ regroupe les trois : nombre de masse, numéro atomique, symbole.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Construis chaque isotope cible en réglant $A$ et $Z$. Le nom de l'élément donne $Z$ ; le nombre après le tiret est $A$.",
+      "concept": "Nom d'isotope $\\to$ composition : le nom de l'élément fixe $Z$ (Carbone = $Z = 6$, Uranium = $Z = 92$). Le nombre après le tiret est le nombre de masse $A$. Ensuite $N = A - Z$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "On te donne uniquement $Z$ et $N$. Choisis le bon nom d'isotope parmi les quatre choix. Le symbole sur le noyau est masqué cette fois.",
+      "concept": "Correspondance inverse : à partir de $(Z, N)$, calcule d'abord $A = Z + N$, puis retrouve l'élément à partir de $Z$. L'étiquette complète est $\\text{Élément-}A$. Les distracteurs diffèrent par $Z$ (mauvais élément) ou par $A$ (mauvais isotope du bon élément).",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "étape",
+    "controls_title": "commandes",
+    "nucleus": "noyau",
+    "stability_chart": "N vs Z (stabilité)",
+    "field_A": "nombre de masse A",
+    "field_Z": "numéro atomique Z",
+    "field_N": "nombre de neutrons N",
+    "elements_seen": "éléments",
+    "matched": "trouvés",
+    "correct": "correct",
+    "target": "isotope cible",
+    "given": "donné",
+    "which_isotope": "quel isotope est-ce ?",
+    "next_q": "suivant",
+    "tip1": "règle A et Z ; regarde protons + neutrons se réorganiser",
+    "tip2": "nom d'élément → Z ; nombre après le tiret → A",
+    "tip3": "A = Z + N ; puis retrouve l'élément à partir de Z"
+  },
+  "hints": {
+    "1": {
+      "1": "Z est le nombre de protons — il fixe l'élément. Essaie de bouger seulement Z.",
+      "2": "A est le nombre total de nucléons. Si Z est fixe et A change, tu fais des isotopes du même élément.",
+      "3": "Il faut visiter 5 valeurs de Z. Passe par H (1), He (2), C (6), O (8), etc."
+    },
+    "2": {
+      "1": "Pour Carbone-14 : Carbone signifie Z = 6. Le 14 est A. Mets A = 14, Z = 6.",
+      "2": "Pour Oxygène-16 : Oxygène = Z = 8. A = 16, donc N = 8.",
+      "3": "Pour Uranium-235 : Uranium = Z = 92 (plus grand élément naturel). A = 235 — beaucoup de neutrons."
+    },
+    "3": {
+      "1": "Calcule d'abord A : A = Z + N. Puis retrouve quel élément a ce Z.",
+      "2": "Attention aux distracteurs : même Z (bon élément, mauvais A) ou même A (bon A, mauvais élément).",
+      "3": "Z = 6 = toujours Carbone. Z = 2 = Hélium. Z = 92 = Uranium."
+    }
+  }
+}

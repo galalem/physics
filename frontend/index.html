@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Φysics</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="preloader" style="width:100vw;height:100vh;background:#efede7;position:absolute;inset:0;z-index:99999999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px;">
+      <div dir="ltr" style="display:inline-flex;align-items:center;gap:2px;transform:scale(1.5);">
+        <svg viewBox="45 14 90 152" width="18" height="30" fill="#f97316" aria-hidden="true">
+          <path d="m82.5945 133.4772v-16.512q-17.3397 0-27.0933-9.7536-9.7536-9.9342-9.7536-26.7321v-33.9569q0-13.3661 8.4892-21.1328 8.3086-7.7667 22.7584-7.7667v12.6437q-7.5861 0-11.921 4.3349-4.3349 4.3349-4.3349 11.921v33.9569q0 11.0179 5.9605 17.3397 5.9605 6.3218 16.7978 6.3218v-86.5179h19.5072q14.4498 0 22.7584 7.7667 8.4892 7.7667 8.4892 21.1328v33.9569q0 16.7978-9.7536 26.7321-9.7536 9.7536-27.0933 9.7536v16.512q0 13.3661-8.4892 21.1328-8.3086 7.7667-22.7584 7.7667v-12.6437q7.5861 0 11.921-4.3349 4.5156-4.3349 4.5156-11.921zm13.9079-29.3361q10.6567 0 16.6172-6.3218 6.1411-6.3218 6.1411-17.3397v-33.9569q0-7.5861-4.3349-11.921-4.3349-4.3349-11.921-4.3349h-6.5024z"/>
+        </svg>
+        <span style="color:#16151c;font-size:22px;font-weight:600;letter-spacing:-0.045em">ysics</span>
+        <span aria-hidden="true" style="align-self:flex-start;width:6px;height:6px;border-radius:50%;background:#1FA595;margin-top:5px;"></span>
+      </div>
+      <style>
+        #preloader > div[role="progressbar"] { width: 256px; height:4px; border-radius: 999px; background: #0d1524; overflow: hidden; position: relative;}
+        #preloader > div[role="progressbar"]::before { content: ''; position: absolute; top: 0; inset-inline-start: 0; height: 100%; width: 40%; background: #f97316; border-radius: 999px; animation: preloading-slide 1.4s ease-in-out infinite;}
+        @keyframes preloading-slide { 0% {inset-inline-start: -40%;} 100% {inset-inline-start: 100%;}}
+      </style>
+      <div role="progressbar" aria-label="loading..."></div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

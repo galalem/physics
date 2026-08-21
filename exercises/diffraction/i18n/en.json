@@ -1,0 +1,54 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A red laser passes through a narrow slit of width $a$ and lands on a distant screen. Instead of a single spot, you get a wide central bright band flanked by dimmer side fringes — this is diffraction. Sweep all three sliders (slit $a$, wavelength $\\lambda$, distance $D$) to see how each one shapes the pattern.",
+      "concept": "Central fringe width: $L = \\dfrac{2\\,\\lambda\\,D}{a}$. Half-angular width: $\\theta \\approx \\dfrac{\\lambda}{a}$. Narrower slit or longer wavelength → wider pattern. Diffraction is 'appreciable' when $\\lambda / a$ is not small.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Match the ghost pattern on the right side of the screen: its width $L^{*}$ AND its color $\\lambda^{*}$ must both match. Since $L = 2\\lambda D / a$ has three unknowns for one width, many $(a, D)$ pairs work — but only one $\\lambda$.",
+      "concept": "$L^{*} = \\dfrac{2\\,\\lambda^{*}\\,D}{a}\\ \\Rightarrow\\ a = \\dfrac{2\\,\\lambda^{*}\\,D}{L^{*}}$. Pick $\\lambda$ first (color-matches the ghost), then tune $a$ and $D$ to hit $L^{*}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The intensity pattern is hidden — the screen just shows two target dots at $\\pm d^{*}$. Pick $a$, $\\lambda$, $D$ so that the first dark fringes land exactly on the dots (i.e. $L/2 = d^{*}$). Peek briefly reveals the true pattern.",
+      "concept": "First-minimum position: $\\dfrac{L}{2} = \\dfrac{\\lambda\\,D}{a} = d^{*}$. So $\\dfrac{\\lambda\\,D}{a} = d^{*}$ — many triples work, pick one and check the grey marker aligns.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "optical bench",
+    "laser": "laser",
+    "screen": "screen",
+    "match_ok": "match",
+    "peek_reveal": "true:",
+    "target_short": "target",
+    "tip1": "move each slider across at least half its range",
+    "tip2": "match both the width L and the color λ of the ghost",
+    "tip3": "align the first dark fringe (L/2) with the target dots"
+  },
+  "hints": {
+    "1": {
+      "1": "Try halving a — the central band should roughly double in width.",
+      "2": "Switch λ from red (633) toward violet (400) — the pattern narrows.",
+      "3": "Doubling D also doubles L (linear scaling with screen distance)."
+    },
+    "2": {
+      "1": "Read the ghost color: red ≈ 633 nm, green ≈ 532 nm, blue ≈ 450 nm.",
+      "2": "Once λ matches, tune a alone — L = 2λD/a means small a = wide L.",
+      "3": "If you can't reach L*, adjust D too. Solve: a = 2λD / L*."
+    },
+    "3": {
+      "1": "The dots are at ±d* from center. You need L/2 = d*, so L = 2d*.",
+      "2": "Rearrange: a = λD / d*. Pick any λ and D, then compute a.",
+      "3": "Peek to see the pattern for 1.5 s. If it's centered and its first zero hits the dots, you're done."
+    }
+  }
+}

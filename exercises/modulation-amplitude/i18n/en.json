@@ -1,0 +1,72 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the three sliders and watch two views react: on top, the AM waveform $s(t) = [1 + m\\cos(2\\pi f_m t)]\\cos(2\\pi f_p t)$ with its envelope in amber; on the bottom, the spectrum — a carrier line at $f_p$ flanked by two sidebands at $f_p \\pm f_m$. Push the modulation index $m$ past $1$ to witness over-modulation. Advance after using every slider and once witnessing $m > 1$.",
+      "concept": "Amplitude modulation packages a low-frequency message $u(t)$ onto a high-frequency carrier $p(t) = \\cos(2\\pi f_p t)$ by scaling its amplitude: $s(t) = [1 + m\\cos(2\\pi f_m t)]\\cos(2\\pi f_p t)$. Three parameters: message frequency $f_m$, carrier frequency $f_p \\gg f_m$, and modulation index $m$. The envelope traces $1 + m\\cos(2\\pi f_m t)$; a receiver recovers the message by tracking that envelope. In the frequency domain the multiplication becomes convolution: the message spectrum (a single line at $f_m$) is copied to $f_p - f_m$ and $f_p + f_m$ around the carrier. That's why AM bandwidth is $2 f_m$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Each target locks in a specific $(f_m, f_p, m)$. Tune your sliders so the solid teal signal matches the dashed grey target curve. Both plots update live — use the spectrum lines as landmarks. Tolerance: $\\pm 5\\%$ on frequencies, $\\pm 0.05$ on $m$.",
+      "concept": "Reading AM by eye: the number of envelope bumps in the window tells you $f_m$; the density of fast oscillations under the envelope tells you $f_p$; the envelope depth (peak vs. trough) tells you $m$. When $m = 1$ the envelope just touches zero — that's critical modulation, the sweet spot before distortion.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The waveform is hidden. From the spectrum alone — three vertical lines with their frequencies labeled — deduce $f_p$, $f_m$, and $m$. Read $f_p$ from the tall middle line; $f_m$ is half the sideband spacing; $m$ is twice the sideband-to-carrier amplitude ratio. Peek briefly re-shows the waveform if you need a sanity check.",
+      "concept": "Spectrum-only reading: carrier position gives $f_p$ directly; sideband spacing gives $2 f_m$; sideband amplitude relative to the carrier gives $m/2$. So $m = 2 \\cdot (\\text{sideband amp}) / (\\text{carrier amp})$. This is exactly what a spectrum analyzer shows a technician debugging an AM transmitter — everything you need is in three peaks."
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "scene_title": "amplitude modulation",
+    "controls_title": "controls",
+    "sliders": "sliders",
+    "target": "target",
+    "matched": "matched",
+    "matched_msg": "target matched — advance or try the next",
+    "question": "question",
+    "solved": "solved",
+    "field_fm": "message f_m",
+    "field_fp": "carrier f_p",
+    "field_m": "modulation index m",
+    "problem_prompt": "Read the spectrum and enter the three parameters.",
+    "correct": "correct",
+    "exact_was": "exact answer:",
+    "next_q": "next",
+    "hidden_peek": "waveform hidden — peek to reveal briefly",
+    "plot_time": "time domain",
+    "plot_spectrum": "spectrum",
+    "legend_signal": "signal s(t)",
+    "legend_envelope": "envelope",
+    "legend_target": "target",
+    "carrier_amp": "carrier",
+    "sideband_amp": "sidebands",
+    "overmod_title": "over-modulation (m > 1)",
+    "overmod_desc": "envelope inverts — an envelope detector can no longer recover the message",
+    "tip1": "drag all three sliders; push m past 1",
+    "tip2": "match the dashed target curve",
+    "tip3": "read spectrum: f_p center, f_m = ½·sideband spacing"
+  },
+  "hints": {
+    "1": {
+      "1": "Grab each slider and drag. The top plot is the waveform; the bottom is its spectrum.",
+      "2": "Envelope bumps = f_m cycles per window. Fast oscillations = carrier at f_p. Envelope depth = m.",
+      "3": "Set m above 1 to see over-modulation: the envelope inverts through zero and the signal distorts."
+    },
+    "2": {
+      "1": "Count the number of envelope humps to match f_m. The spectrum's sideband spacing = 2·f_m.",
+      "2": "The middle spectrum line is f_p. Slide the carrier until it lands on the target.",
+      "3": "Depth of the envelope = m. At m = 1 the envelope's trough kisses zero."
+    },
+    "3": {
+      "1": "Middle line = f_p. Read its label directly.",
+      "2": "Sideband spacing (from one sideband to the next) is 2·f_m. Half it.",
+      "3": "m = 2 × (sideband height) / (carrier height). Read the ratio from the plot."
+    }
+  }
+}

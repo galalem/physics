@@ -1,0 +1,69 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Augmente le bec Bunsen et regarde la température monter. Repère les deux paliers où $T$ cesse de croître alors que la chaleur continue d'arriver — c'est la fusion et la vaporisation. La boîte de molécules suit l'état. Avance après avoir vu $4$ des $5$ états.",
+      "concept": "Chauffer un corps pur à débit constant : $T$ monte à l'intérieur d'une phase, puis se stabilise à chaque changement d'état. La chaleur absorbée pendant un palier (chaleur latente) sert à casser les liaisons, pas à faire monter $T$. Pour l'eau : solide $\\to$ fusion à $0\\,^\\circ\\text{C}$ $\\to$ liquide $\\to$ vaporisation à $100\\,^\\circ\\text{C}$ $\\to$ vapeur.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "La courbe pointillée turquoise est la cible. Choisis la substance et la masse qui la reproduisent. Une seule combinaison colle à la fois aux paliers et aux pentes.",
+      "concept": "Longueur d'un palier $= m\\,L$ (masse $\\times$ chaleur latente). Pente d'un segment $= 1/(m\\,c)$. Doubler la masse double chaque palier et divise chaque pente par deux. Changer de substance décale les températures de palier et les valeurs $L$ / $c$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La courbe de chauffage est tracée mais les noms d'états ont disparu. Étiquette chaque segment numéroté avec la bonne phase.",
+      "concept": "Un segment ascendant : la substance est dans une phase (la chaleur fait monter $T$). Un segment plat : un changement d'état se produit (la chaleur casse les liaisons, $T$ ne bouge pas). Ordre fixe pour un corps qui fond puis bout : solide $\\to$ fusion $\\to$ liquide $\\to$ vaporisation $\\to$ vapeur.",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "étape",
+    "beaker": "bécher",
+    "plot_title": "T vs Q",
+    "controls_title": "commandes",
+    "field_substance": "substance",
+    "field_mass": "masse",
+    "field_heat": "bunsen",
+    "field_status": "état",
+    "substance_water": "eau",
+    "substance_iode": "iode",
+    "state_solid": "solide",
+    "state_fusion": "fusion",
+    "state_liquid": "liquide",
+    "state_vap": "vaporisation",
+    "state_vapor": "vapeur",
+    "states_seen": "états",
+    "match_target": "vise la cible",
+    "matched": "identifié",
+    "labels": "étiquettes",
+    "reset_sim": "réinit. chaleur",
+    "evaluate_prompt": "Attribue la bonne phase à chaque segment numéroté.",
+    "pick_label": "choisir",
+    "tip1": "monte le bunsen ; repère les paliers à 0°C et 100°C",
+    "tip2": "une substance + une masse reproduisent la cible pointillée",
+    "tip3": "segment montant = une phase ; segment plat = un changement d'état"
+  },
+  "hints": {
+    "1": {
+      "1": "Monte le bec Bunsen. Regarde T monter, se stabiliser, remonter, se stabiliser, puis remonter jusqu'en haut.",
+      "2": "Les deux paliers plats sont la fusion (0°C pour l'eau) et la vaporisation (100°C). La chaleur continue mais T ne bouge pas.",
+      "3": "Il faut atteindre le segment vapeur au-dessus de 100°C pour avoir vu 4 états. Laisse tourner la sim."
+    },
+    "2": {
+      "1": "Regarde où sont les paliers de la courbe pointillée sur l'axe T — ça fixe la substance.",
+      "2": "Substance trouvée, compare les longueurs de palier. Palier plus long = masse plus grande.",
+      "3": "La cible est de l'eau à masse 1,0. Essaie cette combinaison."
+    },
+    "3": {
+      "1": "Le segment 1 va de sous 0°C jusqu'à 0°C — la substance chauffe à l'état solide.",
+      "2": "Les segments plats sont des changements d'état : segment 2 = fusion (0°C), segment 4 = vaporisation (100°C).",
+      "3": "Ordre : solide → fusion → liquide → vaporisation → vapeur."
+    }
+  }
+}

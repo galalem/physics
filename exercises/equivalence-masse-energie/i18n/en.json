@@ -1,0 +1,72 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Pick a nuclear reaction and study the ledger — a tiny amount of mass ($\\Delta m$) disappears and re-appears as energy $E$. Try all $3$ reactions and drag the $\\Delta m$ slider to see how $E$ scales. Advance when you've explored all three reactions.",
+      "concept": "Einstein's equivalence: $E = \\Delta m \\, c^2$, with $c = 3 \\times 10^8\\,\\text{m/s}$. In a nuclear reaction the total mass of the products is slightly less than the total mass of the reactants — the missing mass $\\Delta m$ is released as energy. Working in atomic units, the useful shortcut is $1\\,\\text{u} \\cdot c^2 = 931.5\\,\\text{MeV}$, so $E\\,(\\text{MeV}) = \\Delta m\\,(\\text{u}) \\times 931.5$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Given a mass defect $\\Delta m$ in atomic units, compute the released energy $E$ in MeV. The unit-converter card at the bottom shows the constant you need. Type your answer and press ✓ (or Enter).",
+      "concept": "Direct application: $E\\,(\\text{MeV}) = \\Delta m\\,(\\text{u}) \\times 931.5$. Multiply — no square-roots, no logs. Tolerance is $\\pm 3\\%$ (or $\\pm 0.5\\,\\text{MeV}$, whichever is larger).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The unit-converter helper is hidden. Compute $E$ in MeV from $\\Delta m$ in u using the constant from memory. Peek briefly re-reveals the helper if you're stuck.",
+      "concept": "Memorize the shortcut: $1\\,\\text{u} \\to 931.5\\,\\text{MeV}$. Whenever a mass defect is given in $\\text{u}$ and you want energy in MeV, multiply by $\\approx 931.5$. This is one of the most-used constants in nuclear physics — worth memorizing exactly.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "scene_title": "mass-energy equivalence",
+    "controls_title": "controls",
+    "constant": "constant",
+    "field_reaction": "reaction",
+    "field_dm": "mass defect Δm",
+    "computed": "computed energy",
+    "reactions": "reactions",
+    "adjusted": "adjusted",
+    "question": "question",
+    "solved": "solved",
+    "given": "given",
+    "answer_E": "energy E",
+    "correct": "correct",
+    "exact_was": "exact answer:",
+    "next_q": "next",
+    "reaction_fusion": "D + T → He + n  (fusion)",
+    "reaction_alpha": "²¹⁰Po → ²⁰⁶Pb + α  (alpha decay)",
+    "reaction_fission": "n + ²³⁵U → ¹⁴¹Ba + ⁹²Kr + 3n  (fission)",
+    "before": "before",
+    "after": "after",
+    "unit_converter": "unit converter",
+    "so": "so",
+    "helper_hidden": "helper hidden — use the constant from memory",
+    "problem_prompt": "Compute the released energy E in MeV for the given mass defect.",
+    "tip1": "pick each reaction and watch how Δm → E; drag the slider to feel the scale",
+    "tip2": "E (MeV) = Δm (u) × 931.5 — multiply and answer",
+    "tip3": "same formula, no helper card — remember 931.5 MeV per u"
+  },
+  "hints": {
+    "1": {
+      "1": "Click each reaction chip on the right. Notice how the ledger sums the masses on each side.",
+      "2": "The missing mass Δm (before − after) becomes energy via E = Δm · c².",
+      "3": "Try all 3 reactions AND drag the Δm slider at least once. That completes stage 1."
+    },
+    "2": {
+      "1": "Use the constant on the helper card: E (MeV) = Δm (u) × 931.5.",
+      "2": "For Δm = 0.030 u, E = 0.030 × 931.5 = 27.945 MeV. Enter ≈ 27.9.",
+      "3": "Round to 1 decimal place; the tolerance is ±3% (or ±0.5 MeV)."
+    },
+    "3": {
+      "1": "Same formula as stage 2: E (MeV) = Δm (u) × 931.5. The helper is just hidden.",
+      "2": "For Δm = 0.020 u, E ≈ 18.63 MeV. Peek reveals the helper briefly if you forgot.",
+      "3": "Memorize this: 1 u ↔ 931.5 MeV. It's the most-used conversion in nuclear energy problems."
+    }
+  }
+}
