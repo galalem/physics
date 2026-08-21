@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "typecheck": "tsc -b --noEmit",
-    "preview": "vite preview",
-    "mock": "node mocks/server.cjs"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@galalem/react-localization": "^0.3.0",

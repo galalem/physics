@@ -26,7 +26,6 @@ interface WebhookSession {
   currency: string;
   livemode: boolean;
   metadata: Record<string, string> | null;
-  charge_id?: string;
 }
 
 function parseSignatureHeader(header: string | undefined): { t: number; v1: string } | null {
@@ -84,9 +83,8 @@ export default function registerRoutes(app: Hono): void {
 
     const session = envelope.data?.object;
     const meta = session?.metadata;
-    const chargeId = session?.charge_id;
-    if (!session || !meta || !chargeId) {
-      console.error('[gp-webhook] checkout.completed missing session / metadata / charge_id', {
+    if (!session || !meta) {
+      console.error('[gp-webhook] checkout.completed missing session / metadata', {
         event_id: envelope.id,
       });
       return c.body(null, 200);
@@ -124,18 +122,17 @@ export default function registerRoutes(app: Hono): void {
         validUntil,
         scopeFilter,
         promoCodeId,
-        paymentChargeId: chargeId,
+        paymentSessionId: session.id,
         paymentMetadata: {
-          session_id: session.id,
           amount_minor: session.amount_total_minor,
           currency: session.currency,
           livemode: session.livemode,
         },
       });
       if (id === null) {
-        console.log('[gp-webhook] duplicate charge, no-op', { charge_id: chargeId });
+        console.log('[gp-webhook] duplicate session, no-op', { session_id: session.id });
       } else {
-        console.log('[gp-webhook] entitlement issued', { id, user_id: userId, charge_id: chargeId });
+        console.log('[gp-webhook] entitlement issued', { id, user_id: userId, session_id: session.id });
       }
     } catch (err: unknown) {
       // 23503 = FK violation (deleted user). 23505 = unique violation on
@@ -144,7 +141,7 @@ export default function registerRoutes(app: Hono): void {
       if (err && typeof err === 'object' && 'code' in err) {
         const code = (err as { code: string }).code;
         if (code === '23503') {
-          console.error('[gp-webhook] user_id references deleted user', { user_id: userId, charge_id: chargeId });
+          console.error('[gp-webhook] user_id references deleted user', { user_id: userId, session_id: session.id });
           return c.body(null, 200);
         }
         if (code === '23505') {

@@ -175,25 +175,25 @@ CREATE TABLE promo_codes (
 -- string leaves. Evaluated in TypeScript at request time, not in SQL.
 --
 -- Idempotency guards:
---   payment_charge_id unique (partial)  — webhook replay is a no-op
+--   payment_session_id unique (partial)  — webhook replay is a no-op
 --   (user_id, promo_code_id) unique (partial) — one redemption per user
 CREATE TABLE entitlements (
-  id                 uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id            uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  granted_at         timestamptz NOT NULL DEFAULT now(),
-  valid_until        timestamptz NOT NULL,
-  scope_filter       jsonb,
-  source             text NOT NULL,
-  promo_code_id      uuid REFERENCES promo_codes(id),
-  payment_charge_id  text,
-  payment_metadata   jsonb
+  id                  uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id             uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  granted_at          timestamptz NOT NULL DEFAULT now(),
+  valid_until         timestamptz NOT NULL,
+  scope_filter        jsonb,
+  source              text NOT NULL,
+  promo_code_id       uuid REFERENCES promo_codes(id),
+  payment_session_id  text,
+  payment_metadata    jsonb
 );
 CREATE UNIQUE INDEX entitlements_user_promo_idx
   ON entitlements (user_id, promo_code_id)
   WHERE promo_code_id IS NOT NULL;
-CREATE UNIQUE INDEX entitlements_charge_idx
-  ON entitlements (payment_charge_id)
-  WHERE payment_charge_id IS NOT NULL;
+CREATE UNIQUE INDEX entitlements_session_idx
+  ON entitlements (payment_session_id)
+  WHERE payment_session_id IS NOT NULL;
 CREATE INDEX entitlements_user_valid_idx
   ON entitlements (user_id, valid_until DESC);
 
