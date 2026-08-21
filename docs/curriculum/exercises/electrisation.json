@@ -1,0 +1,30 @@
+{
+  "id": "electrisation",
+  "title": {
+    "fr": "Le phénomène d'électrisation",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "concept-card-quiz"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-1",
+      "page": 10
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "concept-card-quiz",
+  "sketch": "Observe: SVG scene with a glass rod, a plastic rod, a cloth, and a\nlight pith ball on a stand. Student drags the cloth onto a rod to\n\"rub\" it (short animation of + / − symbols separating), then brings\nthe rod near the ball and sees attraction or repulsion. HUD toggles\nshow the sign of each object's charge. Experiment: predict the outcome\nfor a new (rod, ball-sign) pair before releasing. Evaluate: three\nmultiple-choice cards (\"this pair attracts / repels / nothing\") with\nthe visual hidden until answer. Wrinkle: neutralization by touching a\nmetal — a single conductor primitive."
+}

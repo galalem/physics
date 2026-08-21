@@ -1,0 +1,30 @@
+{
+  "id": "changements-etat-corps-pur",
+  "title": {
+    "fr": "Les changements d'état physique d'un corps pur",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "matiere"
+    ],
+    "pattern": "state-transition-diagram"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-9",
+      "page": 132
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "Q = m · L   (chaleur latente de changement d'état, plateau T constant)",
+  "pattern": "state-transition-diagram",
+  "sketch": "Observe: split view — left is a beaker with cartoon water molecules\nand a Bunsen slider (heat input Q̇); right is a live T vs. Q plot.\nStudent turns the Bunsen up, watches T rise, then flat-line during\nfusion (0 °C) and vaporisation (100 °C) as latent heat is absorbed.\nMolecule animation transitions between states at each plateau.\nExperiment: reproduce a target T(Q) curve by choosing initial mass +\nheat rate. Evaluate: T(Q) curve is shown but state-labels stripped\nfrom the molecule box; student names each plateau. Wrinkle: sublime a\ncorps that skips liquid (iode) — same UI, different plateau structure."
+}

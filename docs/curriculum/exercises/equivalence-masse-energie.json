@@ -1,0 +1,37 @@
+{
+  "id": "equivalence-masse-energie",
+  "title": {
+    "fr": "Équivalence masse-énergie",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp"
+    ],
+    "field": [
+      "nucleaire"
+    ],
+    "pattern": "formula-calculator"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-10",
+      "page": 273
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-10",
+      "page": 279
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "E = m · c²   avec  c = 3·10⁸ m/s",
+  "pattern": "formula-calculator",
+  "sketch": "Observe: SVG display of Einstein's E = mc² with 3 interactive\nfields — m (in kg or u), Δm (mass defect in u), and computed E\n(in J or MeV). Student edits any two, third computes; unit\nconverters (1 u = 931.5 MeV/c²) surface prominently. A \"conservation\nledger\" panel shows before/after masses for a chosen nuclear\nreaction, revealing the Δm that becomes energy. Experiment: 3\nseeded (reaction, target E) tuples; student computes Δm. Evaluate:\nunit-converter helper hidden; student enters E in MeV from raw Δm\nin u using the constant from memory."
+}

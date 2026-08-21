@@ -1,0 +1,44 @@
+{
+  "id": "superposition-champs-electriques",
+  "title": {
+    "fr": "Superposition de champs électriques (deux charges ponctuelles)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech"
+    ],
+    "field": [
+      "electromagnetisme"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-1",
+      "page": 23
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-1",
+      "page": 16
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-2",
+      "page": 28
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "E_total = Σ E_i   (superposition vectorielle)",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas with two source charges q₁, q₂ (draggable, ±\ntoggle, magnitude sliders) and a draggable test point M. Canvas2D\noverlay draws E₁ and E₂ as separate colored arrows at M plus the\nresultant E = E₁ + E₂ as a bold arrow (vector sum shown graphically\nhead-to-tail). HUD: |E₁|, |E₂|, |E|, angle of E. Experiment: hit a\ntarget resultant direction at M (e.g., horizontal E) by placing\ncharges symmetrically. Evaluate: E arrows hidden; a target arrow\nsilhouette shown at M — student picks charge positions/signs so\ntheir (hidden) resultant matches. Wrinkle: vector addition is\ngraphical, no coordinates required."
+}

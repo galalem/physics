@@ -1,0 +1,37 @@
+{
+  "id": "conductibilite-electrique",
+  "title": {
+    "fr": "Conductibilité électrique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-2",
+      "page": 23
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-2",
+      "page": 33
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: SVG schematic with a battery, ammeter, and a \"material slot\"\nbetween two electrodes. Dropdown selects a material sample: copper,\naluminum, tap water, salt water, distilled water, plastic, graphite.\nSlider adjusts sample cross-section S and length ℓ. HUD: I (A),\ncomputed resistivity ρ (Ω·m) via R = ρ·ℓ/S. A qualitative labeled\nbar (conductor / semi-conductor / insulator) lights up per material.\nExperiment: pick material + geometry to reach a target I. Evaluate:\ncurrent readout hidden; student predicts whether the circuit will\npass a \"test lamp\" threshold before revealing. Wrinkle: ρ values\npre-tabulated per material."
+}

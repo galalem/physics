@@ -1,0 +1,30 @@
+{
+  "id": "propagation-lumiere",
+  "title": {
+    "fr": "La lumière et sa propagation",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-16",
+      "page": 244
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "c ≈ 3·10⁸ m/s ;  v_milieu = c / n",
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG scene with a point source S emitting straight rays\nthrough a translucent medium; student drags an opaque screen to see\nthe sharp geometric shadow, and drags S to see the umbra/penumbra\nshift. HUD shows \"propagation rectiligne\" reminder. Advance after\nboth source and obstacle moved. Experiment: 3 seeded targets\n(illuminated stars) behind the obstacle; student positions S so each\nin turn lies on an unblocked ray. Evaluate: rays hidden; only source\ndisk and shadow polygon shown; student must position S to illuminate\n3 new hidden targets, inferring ray direction from shadow edges alone\n(peek button available, penalized)."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "mouvement-champ-electrique-uniforme",
+  "title": {
+    "fr": "Mouvement d'une particule chargée dans un champ électrique uniforme",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech",
+      "3eme-info"
+    ],
+    "field": [
+      "mecanique",
+      "electromagnetisme"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-10",
+      "page": 245
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-8",
+      "page": 196
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-10",
+      "page": 191
+    },
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-10",
+      "page": 142
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "a = q·E/m ;  y = ½·(q·E/m)·(x/v₀)²   (parabole de déviation)",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG scene of two parallel plates ±U, uniform E between; a\ncharged particle enters horizontally with v₀. Student sets q, m, U,\nv₀; trajectory is a parabola (analog of projectile with a = qE/m).\nHUD reads déviation Y at exit. Experiment: 3 seeded exit-Y targets\n(oscilloscope-like); student tunes U so particle exits at target Y.\nEvaluate: trajectory hidden; only plates and target Y-marker on far\nscreen shown; student submits U blind. Wrinkle: sign of q flips\ndeflection direction; sign in HUD."
+}

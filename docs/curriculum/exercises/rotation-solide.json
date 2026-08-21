@@ -1,0 +1,37 @@
+{
+  "id": "rotation-solide",
+  "title": {
+    "fr": "Rotation d'un solide autour d'un axe fixe",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-tech"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-7",
+      "page": 169
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-8",
+      "page": null
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "ω = dθ/dt ;  α = dω/dt   (angulaires)",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG disk with two marker points at r₁, r₂ from axis;\nstudent sets θ̇ (angular velocity); linear speeds v₁ = r₁·θ̇,\nv₂ = r₂·θ̇ shown as tangent arrows. Ticker rotates disk; angular\nposition θ(t) HUD. Experiment: 3 seeded (r, v-target) pairs; student\npicks θ̇ so marker speed matches. Evaluate: arrows hidden; student\npicks θ̇ from relationship alone. Wrinkle: solid-body constraint —\nall points share same θ̇, θ̈, unlike orbital motion."
+}

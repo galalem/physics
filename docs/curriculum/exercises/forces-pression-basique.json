@@ -1,0 +1,30 @@
+{
+  "id": "forces-pression-basique",
+  "title": {
+    "fr": "Forces et pression (introduction)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "concept-card-quiz"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-13",
+      "page": 196
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "p = F / S   (unit: Pa = N/m²)",
+  "pattern": "concept-card-quiz",
+  "sketch": "Observe: SVG canvas showing pictorial scenarios (nail hammered vs.\nlying flat; thumbtack vs. blunt stick pressing skin; tank tread vs.\ncar tire on sand). Each scene has a force arrow (same magnitude) and\na \"contact area\" indicator. Student toggles between scenarios and\nreads a p = F/S bar. HUD: F (N), S (cm²), p (Pa or bar). Observe:\nsame force, different area → different pressure — heart of the\nconcept. Experiment: given a target \"does it penetrate?\" outcome,\npick a scenario. Evaluate: pressure bar hidden; student selects\n(multiple choice) which scenario causes greater penetration effect.\nWrinkle: 1ère-depth — numbers are illustrative, no unit calculations."
+}

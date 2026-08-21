@@ -1,0 +1,37 @@
+{
+  "id": "refraction-onde",
+  "title": {
+    "fr": "Réfraction d'une onde mécanique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-info"
+    ],
+    "field": [
+      "ondes"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-8",
+      "page": 219
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-11",
+      "page": 309
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "sin(i₁)/sin(i₂) = v₁/v₂ = λ₁/λ₂",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: 2D ripple-tank with two zones of different celerities c₁,\nc₂ (shallow/deep water analogy). Plane wave crosses interface; λ\nshrinks or grows per λ₂/λ₁ = c₂/c₁ and angle changes per\nsin(i₁)/sin(i₂) = c₁/c₂. Wavefronts drawn in both zones. Student\nsets c₁, c₂, i₁; i₂ HUD. Experiment: 3 seeded target (i₂, λ₂);\nstudent sets c-ratio. Evaluate: refracted wavefronts hidden; only\nincident wave and interface; submit c-ratio. Wrinkle: index n\nanalog is the celerity ratio, tied to Snell."
+}

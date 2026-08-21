@@ -1,0 +1,51 @@
+{
+  "id": "onde-sinusoidale-entretenue",
+  "title": {
+    "fr": "Propagation d'une onde sinusoïdale entretenue",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "ondes"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-7",
+      "page": 185
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-7",
+      "page": 191
+    },
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-9",
+      "page": 241
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-10",
+      "page": 275
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "y(x, t) = A · sin(ω·t − k·x) ;  v = λ·f = ω/k",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG rope with sinusoidal source y(0,t) = a·sin(2πt/T).\nCanvas 2D overlay renders wave y(x,t) = a·sin(2π(t/T − x/λ)) with\nλ = c·T. Student sweeps T, a; snapshot (fixed t) shows spatial\nperiod λ, and a point-vs-time trace shows temporal period T.\nExperiment: 3 seeded target λ values; student picks (c, T) to match.\nEvaluate: wave rendering hidden; only two marker points on the rope\nshown; student sets T so their oscillations are in phase\n(Δx = k·λ). Wrinkle: introduces λ = c·T explicitly."
+}

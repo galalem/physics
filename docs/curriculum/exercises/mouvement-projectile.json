@@ -1,0 +1,37 @@
+{
+  "id": "mouvement-projectile",
+  "title": {
+    "fr": "Mouvement d'un projectile dans un champ gravitationnel",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-9",
+      "page": 208
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-8",
+      "page": 173
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "x(t) = v₀·cos(α)·t ;  y(t) = −½·g·t² + v₀·sin(α)·t + y₀",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG 16:9 scene with launcher at origin, ground at bottom;\nstudent sets v₀ and α via sliders; parabolic trajectory previews\ninstantly (sampleParabola). HUD reads portée D and flèche H.\nExperiment: 3 seeded targets on the ground; student picks (v₀, α)\nto land each — two solutions per target (tir tendu vs. cloche).\nEvaluate: preview line hidden; only launcher and target shown;\nticker simulates the shot on release. Wrinkle: g fixed; no drag;\nportée and flèche are named French quantities used in HUD."
+}

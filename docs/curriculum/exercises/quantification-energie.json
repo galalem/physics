@@ -1,0 +1,37 @@
+{
+  "id": "quantification-energie",
+  "title": {
+    "fr": "Quantification de l'énergie",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp"
+    ],
+    "field": [
+      "atomique"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-9",
+      "page": 249
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-9",
+      "page": 247
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "ΔE = h·ν = h·c/λ   (photon : E = h·ν)",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG energy-level diagram (horizontal lines E_n < 0) for an\natom; a \"photon\" ball with adjustable hν slider approaches. If hν\nmatches an allowed transition E_n − E_m, the ball is absorbed and\nthe atom jumps; otherwise it passes through. HUD reads current n.\nExperiment: 3 seeded target transitions; student sets hν to trigger\neach. Evaluate: transition lines hidden; only ground state and\ntarget n shown; student picks hν from ΔE alone. Wrinkle: introduces\nquantization as \"only certain hν work\" — sharp contrast with\ncontinuous classical spectrum."
+}

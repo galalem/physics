@@ -1,0 +1,37 @@
+{
+  "id": "spectre-atome-hydrogene",
+  "title": {
+    "fr": "Spectre de l'atome d'hydrogène",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp"
+    ],
+    "field": [
+      "atomique"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-9",
+      "page": 249
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-9",
+      "page": 247
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "1/λ = R_H · (1/n₁² − 1/n₂²)   (formule de Rydberg)",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: split view — SVG energy diagram of hydrogen (E_n =\n−13.6/n² eV) left; Canvas 2D spectrum strip right showing\nLyman/Balmer/Paschen series color-coded. Student picks initial n_i\nand final n_f; the transition arrow draws on the diagram and the\ncorresponding λ line lights up on the strip via Rydberg 1/λ =\nR_H(1/n_f² − 1/n_i²). Experiment: 3 seeded target λ values; student\npicks (n_i, n_f) to emit each. Evaluate: strip hidden; only ΔE HUD;\nstudent picks (n_i, n_f) blind. Wrinkle: Rydberg constant surfaced\nexplicitly."
+}

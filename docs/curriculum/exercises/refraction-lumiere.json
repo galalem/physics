@@ -1,0 +1,37 @@
+{
+  "id": "refraction-lumiere",
+  "title": {
+    "fr": "Réfraction de la lumière (optique géométrique)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-20",
+      "page": 302
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-13",
+      "page": 409
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "n₁ · sin(i₁) = n₂ · sin(i₂)   (Snell-Descartes)",
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG scene with dioptre air/water, incident ray SI from\nabove, dotted normal, refracted ray IR' bending toward normal; HUD\nshows i₁, i₂ and the ratio n₁·sin(i₁) / n₂·sin(i₂) staying ≈ 1 as\nstudent rotates the source. Experiment: 3 seeded underwater targets;\nstudent aims incident ray so refracted ray hits each — Snell-Descartes\nintuition required. Evaluate: refracted ray hidden below the\ninterface (peek allowed, bounded). Wrinkle: near critical angle\n(glass-air variant), a \"réflexion totale\" toast appears and target is\nunreachable — student must move source."
+}

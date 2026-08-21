@@ -1,0 +1,37 @@
+{
+  "id": "energie-potentielle",
+  "title": {
+    "fr": "Énergie potentielle",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "energie"
+    ],
+    "pattern": "energy-conservation-bar-chart"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-16",
+      "page": 246
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-10",
+      "page": 340
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "E_p(pesanteur) = m·g·h ;  E_p(élastique) = ½·k·x²",
+  "pattern": "energy-conservation-bar-chart",
+  "sketch": "Observe: SVG canvas with a ball on an inclined ramp (or a\nspring-loaded launcher). Bars on the side: E_p (gravitational,\n= m·g·h), E_c (kinetic, = ½·m·v²), E_m = E_p + E_c (constant when\nno friction). Ticker runs a simple sim; student drags the ball to\nany starting height, sets slider m, releases. Bars swap values as\nball slides down (E_p ↓, E_c ↑) with E_m flat. Experiment: pick\nstarting h so ball reaches a target speed at the bottom. Evaluate:\nbars hidden — student computes v at bottom via mgh = ½mv² and enters\nvalue. Wrinkle: E_p reference = ground level; g = 10 m/s² for 2ème."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "diffraction",
+  "title": {
+    "fr": "Diffraction (mécanique et lumineuse)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-info"
+    ],
+    "field": [
+      "ondes"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-8",
+      "page": 219
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-8",
+      "page": 227
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-11",
+      "page": 309
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "θ ≈ λ / a   (demi-écart angulaire de la tache centrale)",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG schematic (laser, slit width a, screen at distance D)\nleft; Canvas 2D intensity pattern I(x) = sinc²(π·a·x/(λD)) drawn on\na simulated screen right, with central fringe half-width θ = λ/a.\nHUD reads θ. Student sweeps a, λ, D. Experiment: 3 seeded target\nfringe-widths L on the screen; student picks (a, λ, D) to match.\nEvaluate: intensity pattern hidden; only screen with target\nfringe-edge markers; student submits parameters blind. Wrinkle:\nclassic λ/a inverse relationship is the pedagogical target."
+}

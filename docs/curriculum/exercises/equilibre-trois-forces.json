@@ -1,0 +1,37 @@
+{
+  "id": "equilibre-trois-forces",
+  "title": {
+    "fr": "Équilibre d'un solide soumis à trois forces",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-10",
+      "page": 149
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-7",
+      "page": 234
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "F₁ + F₂ + F₃ = 0   (fermeture du triangle)",
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG scene of a ring pulled by 3 strings at variable angles\nwith weights on pulleys. Student drags string angles; force arrows\nF₁, F₂, F₃ redraw as a closed triangle (dynamique) when equilibrium\nholds; an open triangle shows out-of-equilibrium. HUD reads ΣF and\nclosure gap. Experiment: 3 seeded (F₁, F₂) pairs; student picks F₃\nmagnitude+direction to close the triangle. Evaluate: dynamique panel\nhidden; student sets F₃ from component sums alone, submits, then\ntriangle is revealed on feedback."
+}

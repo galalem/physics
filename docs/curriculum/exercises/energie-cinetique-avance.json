@@ -1,0 +1,45 @@
+{
+  "id": "energie-cinetique-avance",
+  "title": {
+    "fr": "Énergie cinétique et théorème de l'énergie cinétique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech"
+    ],
+    "field": [
+      "mecanique",
+      "energie"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-8",
+      "page": 184
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-7",
+      "page": 155
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-9",
+      "page": 158
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "ΔE_c = Σ W(F_ext)   (théorème de l'énergie cinétique)",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG scene of a cart accelerated by a constant force F over\ndistance d; student sets m, v₀; Eₖ = ½mv² gauge fills in real time\nalongside the moving cart. Work done W = F·d displayed; théorème\nEₖ_final − Eₖ_init = W verified live. Experiment: 3 seeded target Eₖ\nvalues; student picks m and v to hit. Evaluate: gauge hidden; student\npicks m, v from numeric Eₖ target alone. Wrinkle: introduces the\nthéorème de l'énergie cinétique explicitly at 3ème depth."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "mouvement-champ-magnetique-uniforme",
+  "title": {
+    "fr": "Mouvement d'une particule chargée dans un champ magnétique uniforme",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech",
+      "3eme-info"
+    ],
+    "field": [
+      "mecanique",
+      "electromagnetisme"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-11",
+      "page": 273
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-8",
+      "page": 223
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-11",
+      "page": 215
+    },
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-11",
+      "page": 158
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "r = m·v / (|q|·B) ;  ω = |q|·B / m   (trajectoire circulaire)",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG scene with uniform B (dots or crosses) and a charged\nparticle entering perpendicular to B; trajectory closes into a\ncircle of radius R = mv/(|q|B). Student sets q, m, v, B; R updates\nand the circle redraws. Experiment: 3 seeded target radii; student\npicks B to match. Evaluate: circle hidden; only entry point, target\nchord, and B-indicator shown; student submits B blind. Wrinkle:\nsign of q flips rotation sense (horaire vs. anti-horaire)."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "courant-du-secteur",
+  "title": {
+    "fr": "Le courant du secteur (dangers et sécurité)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "concept-card-quiz"
+  },
+  "sources": [
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-6",
+      "page": 178
+    }
+  ],
+  "status": "ready",
+  "format": "reading-quiz",
+  "formula": null,
+  "pattern": "concept-card-quiz",
+  "sketch": "Observe (read): short primer on domestic AC supply — 230 V effective,\n50 Hz, phase/neutre/terre wires, safety devices (disjoncteur, prise\nde terre, différentiel). SVG cutaway of a wall outlet + a fuse box\nas illustration. Evaluate: 5 concept cards covering typical safety\nscenarios (why the third-pin? why does a wet hand matter? what\ntrips the differential? etc.). No Experiment stage — this is a\nliteracy/safety topic, not a physics simulation."
+}

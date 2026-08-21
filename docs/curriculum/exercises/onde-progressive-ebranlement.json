@@ -1,0 +1,51 @@
+{
+  "id": "onde-progressive-ebranlement",
+  "title": {
+    "fr": "Propagation d'un ébranlement (onde mécanique progressive)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "ondes"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-7",
+      "page": 185
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-7",
+      "page": 191
+    },
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-9",
+      "page": 241
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-10",
+      "page": 275
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "y(x, t) = y_S(t − x/v)   (retard de propagation)",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG rope stretched horizontally, source at left end.\nStudent triggers an ébranlement (single pulse); a Gaussian bump\ntravels along the rope at celerity c. Snapshots at t₁, t₂, t₃\nshown stacked; student sees translation without deformation. Retard\nτ = d/c HUD for a chosen point along the rope. Experiment: 3 seeded\ntarget-points along the rope with target-arrival-times; student\npicks c so pulse arrives at t_target. Evaluate: snapshot rendering\nhidden; only source pulse and target-point shown; student submits c."
+}

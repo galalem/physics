@@ -1,0 +1,37 @@
+{
+  "id": "relation-conjugaison-grandissement",
+  "title": {
+    "fr": "Relation de conjugaison et grandissement",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-12",
+      "page": 309
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-9",
+      "page": 254
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "γ = A'B'/AB = OA'/OA",
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG bench showing object at OA=p (algebraic), image at\nOA'=p', lens f'. Live formula panel prints 1/p' − 1/p = 1/f' and\nγ = p'/p as numbers, updating when student drags AB. Advance after\nChasles-sign convention explored on both sides of the lens.\nExperiment: 3 seeded (p, γ) targets; student sets p and f' so p'\nand γ hit the target within tolerance. Evaluate: image region\nhidden; only p, f' inputs and target (p', γ) shown. Wrinkle: sign\nconvention (p<0 for real object) is surfaced explicitly in HUD;\nwrong sign → out-of-tolerance."
+}

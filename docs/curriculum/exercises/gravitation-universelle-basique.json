@@ -1,0 +1,31 @@
+{
+  "id": "gravitation-universelle-basique",
+  "title": {
+    "fr": "Gravitation universelle (attraction, introduction)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences"
+    ],
+    "field": [
+      "astronomie",
+      "mecanique"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-21",
+      "page": 316
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas with two spherical bodies (Earth + apple, Earth +\nMoon); student toggles between preset pairs. Force arrows on each body\n(attractive). HUD: descriptive labels only — \"Toutes les masses\ns'attirent\". 2S-level qualitative introduction to universal gravitation.\nExperiment: drag one body closer/farther; arrows scale. Pick a preset\nwhose arrow matches a target strength. Evaluate: 3 concept cards\n(\"what's bigger: Earth-pulling-you or you-pulling-Earth?\"). Wrinkle:\nno algebra, no G — just the universal proportionality intuition."
+}

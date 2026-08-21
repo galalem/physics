@@ -1,0 +1,37 @@
+{
+  "id": "pression-atmospherique",
+  "title": {
+    "fr": "Pression atmosphérique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "fluides"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-22",
+      "page": 325
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-9",
+      "page": 304
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "p_atm ≈ 1013 hPa au niveau de la mer ;  ρ_air ≈ 1,2 kg/m³",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas showing a Torricelli mercury barometer: an\ninverted tube of mercury standing in a reservoir open to the\natmosphere. Sliders: atmospheric pressure p_atm (kPa) and altitude\n(which auto-adjusts p_atm via a barometric formula\np(z) = p₀·exp(-z/H)). Height h of mercury column readout live via\np_atm = ρ_Hg·g·h. HUD: h (mm Hg), p_atm (kPa or hPa), altitude (m).\nExperiment: match a target h (mm Hg) by choosing altitude. Evaluate:\nmercury column hidden; student estimates h at a given altitude.\nWrinkle: unit gymnastics — mm Hg, hPa, bar — surfaced explicitly."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "dipole-rc",
+  "title": {
+    "fr": "Le dipôle RC (charge et décharge)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-1",
+      "page": 11
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-1",
+      "page": 11
+    },
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-1",
+      "page": 11
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-1",
+      "page": 11
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "u_C(t) = E · (1 − exp(−t/τ))   (charge) ;  τ = R·C",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: SVG schematic (E, R, C, switch) left; SVG polyline u_C(t)\nright. Student sweeps R, C, E; τ = RC HUD; live curve updates via\nexact integrator u_C(t) = E·(1 − exp(−t/τ)). Experiment: 3 seeded\ntarget curves (hidden R*, C*, E*); student tunes to overlay.\nEvaluate: live curve hidden; only target curve shown; student\nsubmits (R, C, E) blind; on submit, curves overlay for feedback.\nWrinkle: τ = RC is the load-bearing insight; time-scaling per\nexercise via simTime = animTime · scale."
+}

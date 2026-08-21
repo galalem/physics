@@ -1,0 +1,30 @@
+{
+  "id": "terre-univers",
+  "title": {
+    "fr": "La Terre et l'univers",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "astronomie"
+    ],
+    "pattern": "concept-card-quiz"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-15",
+      "page": 228
+    }
+  ],
+  "status": "ready",
+  "format": "reading-quiz",
+  "formula": null,
+  "pattern": "concept-card-quiz",
+  "sketch": "Observe (read): short primer with an SVG solar-system schematic\n(log-scaled radii toggle for legibility) and a zoom-out sequence\nthrough orders of magnitude (Earth → Solar System → Milky Way →\nLocal Group). Scale-bar HUD in AU / ly. No numeric target-matching —\njust reading, scrubbing a time slider to see planetary revolutions,\nand toggling the seasons demo (Earth's tilted axis + moving subsolar\npoint). Evaluate: 5 concept cards on distances, seasons, night/day,\nrelative sizes, and where Earth sits in the Milky Way. No Experiment\nstage — order-of-magnitude astronomy at 1ère depth is descriptive,\nnot simulate-able."
+}

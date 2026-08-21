@@ -1,0 +1,51 @@
+{
+  "id": "dipole-rl",
+  "title": {
+    "fr": "Le dipôle RL (établissement et rupture du courant)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-2",
+      "page": 43
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-2",
+      "page": 45
+    },
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-2",
+      "page": 45
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-2",
+      "page": 43
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "i(t) = (E/R) · (1 − exp(−t/τ))   (établissement) ;  τ = L/R",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: SVG schematic (E, R, L, switch); polyline i(t) growing to\nI_max = E/R with τ = L/R via exact integrator i(t) = I_max·(1 −\nexp(−t/τ)). Student sweeps R, L, E. HUD reads τ, I_max. Experiment:\n3 seeded target curves; student tunes (R, L, E) to match. Evaluate:\nlive curve hidden, only target; submit blind. Wrinkle: τ = L/R\n(not RC); analogy with RC surfaced in HUD tooltip."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "etats-physiques-matiere",
+  "title": {
+    "fr": "Les états physiques de la matière",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "matiere"
+    ],
+    "pattern": "state-transition-diagram"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-6",
+      "page": 88
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "state-transition-diagram",
+  "sketch": "Observe: SVG beaker of H₂O molecules with a thermometer and a heater/\ncooler slider (temperature control). Molecules animate lattice-locked\n(ice), sliding (liquid), or free-flight (vapour) depending on current\nT; a small T(t) chart to the side records the temperature history and\nshows the fusion/vaporisation plateaus (latent heat) as horizontal\nsegments. Experiment: given a target state (\"liquid at 40 °C\"),\nstudent picks initial state + T set-point to reach it. Evaluate:\nT(t) curve is shown with state-labels stripped; student labels each\nsegment (solid / fusion / liquid / vaporisation / vapour). Wrinkle:\nshares its plateau-curve engine with changements-etat-corps-pur."
+}

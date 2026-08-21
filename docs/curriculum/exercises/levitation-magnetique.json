@@ -1,0 +1,38 @@
+{
+  "id": "levitation-magnetique",
+  "title": {
+    "fr": "La lévitation magnétique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech"
+    ],
+    "field": [
+      "electromagnetisme"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-2",
+      "page": 53
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-3",
+      "page": null
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas with a levitating object (small permanent magnet\nor superconductor puck) hovering above a base magnet or\ncurrent-carrying coil. Sliders: base magnetic force B₀ (or coil\ncurrent I) and object mass m. HUD: repulsive force F_rep(h)\n(modeled as F₀/h²), weight P = mg, net vertical force. Student\nadjusts sliders; simulation computes equilibrium height h* where\nF_rep = P and animates the object floating there. Experiment: reach\ntarget hover height by tuning I. Evaluate: hover animation hidden,\nonly equation-of-equilibrium shown symbolically; student solves for\nI and submits. Wrinkle: the F₀/h² model is pedagogical — this is a\n\"how forces balance\" exercise, not full Meissner-effect simulation."
+}

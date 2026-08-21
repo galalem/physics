@@ -1,0 +1,37 @@
+{
+  "id": "spectres-lumineux",
+  "title": {
+    "fr": "Spectres lumineux (émission, absorption)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp"
+    ],
+    "field": [
+      "atomique"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-9",
+      "page": 249
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-9",
+      "page": 247
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: Canvas 2D horizontal spectrum strip; student toggles source\ntype (thermal continuum / atomic emission / absorption). For\nemission and absorption, student picks an element (Na, H, He) from\na picker; the strip renders correct line positions at that element's\nλ set. Experiment: 3 seeded target element-spectra; student\nidentifies element from line pattern. Evaluate: element labels\nhidden; student matches unlabeled spectrum strips to element names.\nWrinkle: no dynamic simulation — pure visualization exercise driven\nby a small lookup table."
+}

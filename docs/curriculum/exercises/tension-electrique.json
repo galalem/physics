@@ -1,0 +1,30 @@
+{
+  "id": "tension-electrique",
+  "title": {
+    "fr": "La tension électrique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-4",
+      "page": 58
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "U_AB = V_A − V_B   (unit: V)",
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: same schematic canvas as intensite-courant, but student drops\na voltmeter across any two nodes (parallel-legal placements\nhighlighted). HUD shows U in V; a coloured \"potential-height\" bar\noverlay along the loop reifies the analogy to hydraulic head.\nExperiment: student places voltmeters across each dipole to verify\nloop law (ΣU = 0). Evaluate: given target voltages for three dipoles,\nstudent picks resistor values that satisfy them all. Wrinkle: U is a\ndifference between two points, not a property of a wire — enforced by\nthe two-terminal probe UI."
+}

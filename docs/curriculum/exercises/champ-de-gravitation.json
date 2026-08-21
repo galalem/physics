@@ -1,0 +1,37 @@
+{
+  "id": "champ-de-gravitation",
+  "title": {
+    "fr": "Champ de gravitation",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp"
+    ],
+    "field": [
+      "electromagnetisme"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-4",
+      "page": 94
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-3",
+      "page": 79
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "𝒢 = G · M / r²   (direction radiale attractive)",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas with a large source mass M (a planet) at center.\nCanvas2D overlay renders radial gravitational field 𝒢 = G·M/r² ·\n(-r̂) as inward-pointing arrows. Draggable test point shows local 𝒢\nmagnitude readout (in N/kg or m/s²). Student adjusts M via slider\n(planet grows visually). Experiment: match a target |𝒢| at a fixed\nradius by choosing M (e.g., \"what mass gives lunar surface\ngravity?\"). Evaluate: field arrows hidden; only a marker at target\nr and target |𝒢| — student picks M. Wrinkle: N/kg (equivalent to\nm/s²) — good moment to surface the unit duality. Directly reuses\nchamp-electrique infrastructure."
+}

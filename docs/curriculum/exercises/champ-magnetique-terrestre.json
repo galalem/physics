@@ -1,0 +1,45 @@
+{
+  "id": "champ-magnetique-terrestre",
+  "title": {
+    "fr": "Champ magnétique terrestre",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech",
+      "3eme-info"
+    ],
+    "field": [
+      "electromagnetisme"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-2",
+      "page": 43
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-4",
+      "page": 50
+    },
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-4",
+      "page": 50
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas showing a stylized Earth with geographic and\nmagnetic poles offset. Field-line overlay rendered as dipole\nstreamlines. Draggable \"compass\" test object placed on the surface:\nshows local B̄ arrow with two readouts — declinaison (angle to\ngeographic north) and inclinaison (angle to horizontal). Slider\nadjusts observer latitude. Experiment: match a target inclinaison\nby moving the compass to the right latitude. Evaluate: field-line\noverlay hidden; student predicts declinaison + inclinaison at a\nmarked location, then reveals. Wrinkle: uses simple centered-dipole\nmodel; no secular variation."
+}

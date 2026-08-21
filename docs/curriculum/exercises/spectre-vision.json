@@ -1,0 +1,30 @@
+{
+  "id": "spectre-vision",
+  "title": {
+    "fr": "Spectre de lumière et vision",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-17",
+      "page": 260
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG scene with a white-light source, a triangular prism, and\na screen; student drags the prism to rotate its orientation and sees\nthe spectrum band (rouge → violet) fan out on the screen from a\nCanvas 2D gradient. HUD reads deviation angle per wavelength.\nExperiment: 3 seeded colored slits on the screen; student rotates\nprism so each spectral band-region aligns with its matching slit.\nEvaluate: only the incident white ray and the slit targets visible —\ndispersed rays hidden; student must place prism using memorized\nordering of colors. Wrinkle: 2ème vision-level treatment\n(qualitative), not Bac dispersion."
+}

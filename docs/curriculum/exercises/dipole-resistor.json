@@ -1,0 +1,30 @@
+{
+  "id": "dipole-resistor",
+  "title": {
+    "fr": "Le dipôle résistor (loi d'Ohm)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-5",
+      "page": 72
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "U = R·I   (loi d'Ohm)",
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: schematic with a variable pile (E slider) and a resistor\nslot; student swaps resistor cartridges (10 Ω, 47 Ω, 100 Ω …) and\nwatches I vs. U populate a small live scatter plot. The Ohm-line\nslope emerges as they add points. Experiment: given a target\nresistance R and voltage U, student picks the resistor + adjusts E\nuntil the ammeter reads the target I. Evaluate: I/U scatter shown\nwithout the resistor label; student reads slope and picks the matching\nresistor from a bin. Wrinkle: a light-bulb \"resistor\" in the palette\ncurves the I(U) line — foreshadows non-ohmic dipoles."
+}

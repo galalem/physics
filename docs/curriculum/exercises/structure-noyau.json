@@ -1,0 +1,37 @@
+{
+  "id": "structure-noyau",
+  "title": {
+    "fr": "Structure du noyau atomique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp"
+    ],
+    "field": [
+      "nucleaire"
+    ],
+    "pattern": "nuclear-composition-explorer"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-10",
+      "page": 273
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-10",
+      "page": 279
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "A = Z + N   (nombre de masse = protons + neutrons)",
+  "pattern": "nuclear-composition-explorer",
+  "sketch": "Observe: SVG nucleus rendered as A nucleons (Z protons red,\nN = A−Z neutrons blue) packed in a circle. Student adjusts A and Z\nsliders; the composition redraws. HUD reads symbol ᴬ_ZX by looking\nup Z in a small periodic-table map (Z=1→H, 2→He, 6→C, 92→U…).\nExperiment: 3 seeded target isotopes (e.g., ²³⁵U, ¹⁴C); student\nsets (A, Z) to match. Evaluate: symbol HUD hidden; student sets\n(A, Z) from symbol name alone. Wrinkle: isotope concept — same Z,\ndifferent A — surfaced by comparing two configurations side-by-side."
+}

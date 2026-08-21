@@ -1,0 +1,30 @@
+{
+  "id": "modeles-equivalents-thevenin-norton",
+  "title": {
+    "fr": "Modèles équivalents (Thévenin et Norton)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-13",
+      "page": 187
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "Thévenin: U = E − r·I   ⇔   Norton: I = I₀ − U/r  avec  I₀ = E/r",
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: schematic canvas with a real generator (E, r) driving a\nvariable load R. Two side panels show the Thévenin model (voltage\nsource E in series with r) and the Norton model (current source I₀\nin parallel with conductance G₀ = 1/r). Sliders: E, r, R. Live\nreadouts of U(R) and I(R) confirm both models yield identical\nterminal behavior. Experiment: given a Thévenin source, derive the\nequivalent Norton (or vice versa) by choosing I₀, G₀; students\nverify equivalence by matching U(R) curves. Evaluate: one model\nhidden; student picks the missing parameters. Wrinkle: three-terminal\n\"black box\" mode — student determines (E_eq, r_eq) from two measured\noperating points, without ever seeing inside."
+}

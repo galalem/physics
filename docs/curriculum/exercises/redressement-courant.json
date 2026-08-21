@@ -1,0 +1,30 @@
+{
+  "id": "redressement-courant",
+  "title": {
+    "fr": "Redressement du courant alternatif",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-6",
+      "page": 178
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: SVG schematic with AC source and a builder area where\nstudent places diodes: options are (a) single diode (half-wave),\n(b) bridge of 4 diodes (full-wave), (c) add a filter capacitor C in\nparallel with the load. Oscilloscope panel shows u_out(t) live.\nSliders: input peak U_max, load R, cap C (when present). Experiment:\nreach a target average U_out and target ripple amplitude by choosing\nconfiguration + C. Evaluate: output trace hidden; only average and\nripple readouts — student must pick configuration blindly to match.\nWrinkle: diode is idealized (0 V or 0.6 V threshold toggle); \"AC →\nDC conversion\" clicks."
+}

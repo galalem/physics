@@ -1,0 +1,37 @@
+{
+  "id": "fission-nucleaire",
+  "title": {
+    "fr": "La réaction de fission",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp"
+    ],
+    "field": [
+      "nucleaire"
+    ],
+    "pattern": "stochastic-population-decay"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-11",
+      "page": 287
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-11",
+      "page": 315
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "stochastic-population-decay",
+  "sketch": "Observe: SVG grid with heavy nuclei (²³⁵U); a triggering neutron\nhits one, which fissions into 2 daughters + ν neutrons (per a\nseeded physics fork) — the emitted neutrons then trigger neighbors,\nproducing a chain reaction. Population counters and time-series of\nreleased Q per fission shown. Student adjusts k (multiplication\nfactor) via neutron-absorber slider. Experiment: 3 seeded target\npower-time-profiles; student sets k. Evaluate: grid hidden, only\npower curve; student submits k blind. Wrinkle: same E_l/A hook —\ndaughters more bound than parent → Q > 0."
+}

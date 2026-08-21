@@ -1,0 +1,44 @@
+{
+  "id": "caracteristiques-lentille",
+  "title": {
+    "fr": "Caractéristiques d'une lentille mince",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-12",
+      "page": 297
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-9",
+      "page": 244
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-13",
+      "page": 274
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "C = 1/f'   (vergence, unit: δ = m⁻¹)",
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG lens (convergente) with optical axis, centre optique O,\nfoyer objet F, foyer image F', focal length f' as a labelled\nsegment. Student drags F' along the axis; f' HUD updates and lens\nthickness hint changes to suggest vergence C = 1/f'. Experiment: 3\nseeded target positions for F'; student sets f' (via slider or by\ndragging F') to match, watching vergence C in diopters. Evaluate:\nfocal marks hidden; only a lens icon and target distance shown;\nstudent sets f' from the target vergence C given in HUD, blind to\non-axis foci."
+}

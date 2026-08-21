@@ -1,0 +1,37 @@
+{
+  "id": "radioactivite-types-rayonnements",
+  "title": {
+    "fr": "Radioactivité et types de rayonnements (α, β, γ)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp"
+    ],
+    "field": [
+      "nucleaire"
+    ],
+    "pattern": "stochastic-population-decay"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-11",
+      "page": 287
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-11",
+      "page": 315
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "stochastic-population-decay",
+  "sketch": "Observe: SVG parent-nucleus population grid + polyline daughter\ncounts right, one colored trace per rayonnement type (α, β⁻, β⁺,\nγ). Student picks parent isotope; each nucleus emits its\ncharacteristic rayonnement with lifetime drawn from its own seeded\nfork. HUD writes the transformation equation (e.g., ²³⁸U → ²³⁴Th\n+ α). Experiment: 3 seeded (parent → daughter + rayon) quiz\ntriples; student picks the rayonnement type from a 4-option chooser.\nEvaluate: symbols hidden; student writes ᴬ_ZX and daughter given\nonly the arrow. Wrinkle: conservation of A and Z in HUD."
+}

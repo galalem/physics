@@ -1,0 +1,37 @@
+{
+  "id": "filtre-passe-bande",
+  "title": {
+    "fr": "Filtre passe-bande",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "transfer-function-plot"
+  },
+  "sources": [
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-8",
+      "page": 203
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-7",
+      "page": 175
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "f₀ = 1/(2π·√(L·C)) ;  Q = f₀ / Δf",
+  "pattern": "transfer-function-plot",
+  "sketch": "Observe: R-L-C série (or parallel) montage; sliders on R, L, C.\nBode plot has a peak at f_0 = 1/(2π√LC) with bandwidth set by\nQ = L·ω_0/R. Two cut-offs f_1, f_2 flank the peak. A phasor gadget\nshows Z(jω) sweeping. Experiment: hit a target (f_0, Δf) — student\npicks L·C for f_0, then R for Δf. Evaluate: from a Bode plot pick\nthe (L, C, R) triple. Wrinkle: resonance / réactance sign flips at\nf_0 — inductive above, capacitive below."
+}

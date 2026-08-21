@@ -1,0 +1,30 @@
+{
+  "id": "convertisseur-numerique-analogique",
+  "title": {
+    "fr": "Convertisseur numérique-analogique (CNA)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "step-response-builder"
+  },
+  "sources": [
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-9",
+      "page": 249
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "V_s = V_ref · N / 2ⁿ   (N valeur binaire codée sur n bits)",
+  "pattern": "step-response-builder",
+  "sketch": "Observe: R-2R ladder DAC schematic with N=4 bit switches at the\ntop; student flips each bit, sees the analogue output V_s step\nthrough 2^N levels. Bar plot of V_s vs. binary input fills in as\nthey scan. Experiment: reconstruct a target sine wave by feeding a\npre-recorded bit stream — output \"staircase\" approximates the\nsinusoid; student picks bit-depth N to bound the error. Evaluate:\ngiven a target V_s, dial in the correct bit pattern. Wrinkle:\nmonotonicity glitch at bit transitions when resistors mismatch —\nteaches DAC linearity."
+}

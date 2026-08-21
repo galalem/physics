@@ -1,0 +1,37 @@
+{
+  "id": "amplificateur-operationnel",
+  "title": {
+    "fr": "L'amplificateur opérationnel",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-tech",
+      "3eme-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "step-response-builder"
+  },
+  "sources": [
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-12",
+      "page": 234
+    },
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-14",
+      "page": 204
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "V_s = A₀ · (V₊ − V₋)   (en boucle ouverte, A₀ très grand)",
+  "pattern": "step-response-builder",
+  "sketch": "Observe: ampli op symbol with V+, V−, output, ±V_sat rails; student\nwires it as follower, inverting, or non-inverting via a small preset\ndropdown OR manually by dragging feedback resistors. Live scope\nshows V_e (sine) and V_s superimposed; gain reads out from the slope\nof V_s vs. V_e. Saturation clips the output when input exceeds\nV_sat / G. Experiment: given a target gain G, pick R_1 and R_2 in a\nmontage inverseur. Evaluate: scope shows an unknown V_s(t); student\npicks montage + resistor ratios that reproduce it. Wrinkle:\ncomparateur mode (open-loop) — output snaps to ±V_sat, a\nqualitative jump to the logic-gate exercise."
+}

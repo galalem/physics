@@ -1,0 +1,31 @@
+{
+  "id": "mouvement-satellites",
+  "title": {
+    "fr": "Mouvement des satellites",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths"
+    ],
+    "field": [
+      "mecanique",
+      "astronomie"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-9",
+      "page": 218
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "T² = (4π²/(G·M)) · r³   (3ème loi de Kepler)",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG scene with Terre centered, a satellite at r; student\nsets orbital speed v; if v = √(GM/r) circular orbit closes; else\nellipse or escape. HUD reads T = 2π√(r³/GM) (3rd law) and v.\nExperiment: 3 seeded target periods T; student picks r so satellite\norbits at that period. Evaluate: orbit trace hidden; only Terre and\nsatellite dot shown; ticker runs full period; student submits r\nblind. Wrinkle: closed-form circular is what's tested at 3ème depth\n(no numerical Kepler integrator needed)."
+}

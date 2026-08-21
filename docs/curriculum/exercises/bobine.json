@@ -1,0 +1,51 @@
+{
+  "id": "bobine",
+  "title": {
+    "fr": "La bobine",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-2",
+      "page": 43
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-2",
+      "page": 45
+    },
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-2",
+      "page": 45
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-2",
+      "page": 43
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "u_L = L · di/dt ;  E_stockée = ½ · L · i²",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: SVG schematic with inductor L and current-limited source;\nwhen switch closes, i(t) ramps and u_L = L·di/dt appears as a spike\nthen decays; polyline shows i(t) and u_L(t). HUD reads L, current\ni, and stored Eₘ = ½L·i². Student sweeps L. Experiment: 3 seeded\ntarget di/dt slopes; student picks L to hit each given a fixed\nvoltage. Evaluate: u_L curve hidden; only i(t) shown; student\nsubmits L blind. Wrinkle: introduces L, u = L·di/dt before full RL\ntransient."
+}

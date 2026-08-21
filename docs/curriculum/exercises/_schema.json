@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://galalem.tn/physics/exercise.schema.json",
+  "title": "Exercise",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "tags",
+    "sources",
+    "status",
+    "format",
+    "pattern",
+    "sketch"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]+$",
+      "description": "kebab-case slug, matches filename."
+    },
+    "title": {
+      "type": "object",
+      "required": [
+        "fr",
+        "en",
+        "ar"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "fr": {
+          "type": "string",
+          "description": "French title (authoritative for Phase 1)."
+        },
+        "en": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "English title (deferred to i18n pass; null in Phase 1)."
+        },
+        "ar": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Arabic title (deferred to i18n pass; null in Phase 1)."
+        }
+      }
+    },
+    "tags": {
+      "type": "object",
+      "required": [
+        "level",
+        "field",
+        "pattern"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "One or more level ids from families.yaml (e.g., 1ere, bac-maths)."
+        },
+        "field": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "One or more field ids from families.yaml (e.g., mecanique, nucleaire)."
+        },
+        "pattern": {
+          "type": "string",
+          "description": "Exactly one pattern id from families.yaml (e.g., 2d-trajectory-launcher). Also mirrored in top-level `pattern`."
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "book",
+          "book_title",
+          "chapter",
+          "page"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "book": {
+            "type": "string",
+            "description": "Book code (matches books.yaml file field, no .pdf)."
+          },
+          "book_title": {
+            "type": "string"
+          },
+          "chapter": {
+            "type": "string",
+            "description": "Chapter slug (e.g., chapitre-3)."
+          },
+          "page": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "First page of the chapter body."
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ready"
+      ],
+      "description": "Phase 1 sign-off marker. Always 'ready' post Phase 1."
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "interactive",
+        "reading-quiz"
+      ],
+      "description": "'interactive' = full 3-stage O/E/E; 'reading-quiz' = 2-stage (Observe + Evaluate, no Experiment)."
+    },
+    "formula": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Anchor formula(s) for the exercise, or null for purely qualitative/descriptive topics."
+    },
+    "pattern": {
+      "type": "string",
+      "description": "Convenience mirror of tags.pattern. Look up spec + guidance in ../patterns.md."
+    },
+    "sketch": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Free-form design sketch: O/E/E flow, canvas layout, HUD, wrinkles. Written during Phase 4 and refined during Phase 1 close-out."
+    }
+  }
+}

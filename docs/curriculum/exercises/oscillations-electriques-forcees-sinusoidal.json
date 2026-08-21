@@ -1,0 +1,51 @@
+{
+  "id": "oscillations-electriques-forcees-sinusoidal",
+  "title": {
+    "fr": "Oscillations électriques forcées en régime sinusoïdal",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-4",
+      "page": 111
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-4",
+      "page": 115
+    },
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-4",
+      "page": 115
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-5",
+      "page": 131
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "Z = √(R² + (L·ω − 1/(C·ω))²) ;  résonance à ω₀ = 1/√(L·C)",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: SVG schematic (R, L, C, GBF at pulsation ω) left; polyline\nshows steady-state i(t) = I_max·cos(ωt − φ) with I_max = U_max/Z(ω)\nand Z = √(R² + (Lω − 1/(Cω))²). Student sweeps ω; resonance curve\nI_max(ω) drawn beneath, peak at ω₀ = 1/√(LC). Experiment: 3 seeded\ntarget I_max values; student picks ω. Evaluate: live i(t) hidden;\nonly I_max target and Z HUD; submit ω blind. Wrinkle: phase φ\ntan(φ) = (Lω − 1/(Cω))/R also probed as a secondary target."
+}

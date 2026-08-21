@@ -1,0 +1,37 @@
+{
+  "id": "oeil-modele-optique",
+  "title": {
+    "fr": "L'œil (modèle optique et défauts)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-13",
+      "page": 324
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-10",
+      "page": 275
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG cross-section of the reduced eye — cornea+cristallin\nmodelled as a single lens of variable f', retina fixed at ~17 mm.\nStudent toggles between distant/near objects and drags a \"muscle\ntension\" slider that changes f' (accommodation); image sharpness on\nretina shown. Experiment: 3 seeded object distances (∞, 1 m, 25 cm);\nstudent sets accommodation to focus each on the retina. Evaluate:\nwith \"myope\" / \"hypermétrope\" variants, student picks the corrective\nlens (divergente / convergente) that restores focus at PR/PP —\nblind to individual rays."
+}

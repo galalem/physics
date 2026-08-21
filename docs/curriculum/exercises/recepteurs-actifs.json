@@ -1,0 +1,38 @@
+{
+  "id": "recepteurs-actifs",
+  "title": {
+    "fr": "Récepteurs actifs",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info",
+      "3eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-5",
+      "page": 69
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-3",
+      "page": 47
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "U = E' + r'·I   (E' f.c.é.m., r' résistance interne)",
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: SVG schematic with a DC generator E in series with a\nreceiver: choose electrolyzer or DC motor. Ammeter + voltmeter wired.\nTicker off (DC steady state). Sliders: E, external R. Live U(I)\ncharacteristic on side panel — a straight line U = E' + r'·I\n(E' = back-EMF, r' = internal resistance of the active receiver).\nStudent varies E and traces the line. Experiment: given a target\ncurve, choose which receiver + which r' matches. Evaluate:\ncharacteristic hidden — student picks E to just barely start the\nreceiver (I crosses threshold), verifying knowledge of E'. Wrinkle:\nback-EMF is the key conceptual leap; power balance U·I = E'·I + r'·I²\nshown as HUD bars."
+}

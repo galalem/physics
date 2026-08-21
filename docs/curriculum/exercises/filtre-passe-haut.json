@@ -1,0 +1,37 @@
+{
+  "id": "filtre-passe-haut",
+  "title": {
+    "fr": "Filtre passe-haut",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "transfer-function-plot"
+  },
+  "sources": [
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-8",
+      "page": 203
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-7",
+      "page": 175
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "|H|² = (f/f_c)² / (1 + (f/f_c)²) ;  f_c = 1/(2π·R·C)",
+  "pattern": "transfer-function-plot",
+  "sketch": "Observe: C-R high-pass schematic (dual of passe-bas); +20 dB/déc\nrising asymptote below f_c, flat above. Phase plot shows +90° →\n0°. Time-domain inset shows the derivative-like response to a step\n(a decaying pulse). Experiment: hit a target f_c to attenuate a\nspecified low-frequency hum (e.g., 50 Hz mains). Evaluate: from an\nobserved clipped waveform, identify whether a high-pass or low-pass\nis at play, and its f_c. Wrinkle: DC-blocking capacitor framing —\na common practical use."
+}

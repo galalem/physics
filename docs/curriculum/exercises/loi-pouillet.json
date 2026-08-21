@@ -1,0 +1,30 @@
+{
+  "id": "loi-pouillet",
+  "title": {
+    "fr": "Adaptation : loi de Pouillet",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-7",
+      "page": 97
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "I = E / (R + r)",
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: SVG schematic with a generator (E, r) and one or two\nresistors R₁, R₂ (series switch to combine). Sliders: E, r, R₁, R₂.\nAmmeter reads I. Formula strip: I = E / (r + R_total). Live\nsubstitution — the formula evaluates numerically as sliders move.\nExperiment: given an E and required I, pick R_total. Evaluate:\nammeter hidden; student computes I mentally from Pouillet and enters\na numeric value. Wrinkle: analytic close of the operating-point\nexercise; drills the \"series = sum of resistances including internal\"\ngotcha."
+}

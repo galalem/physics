@@ -1,0 +1,51 @@
+{
+  "id": "condensateur",
+  "title": {
+    "fr": "Le condensateur",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-1",
+      "page": 11
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-1",
+      "page": 11
+    },
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-1",
+      "page": 11
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-1",
+      "page": 11
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "Q = C · U ;  E_stockée = ½ · C · U²",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: SVG schematic of C in a switch-and-battery circuit;\npolyline shows q(t) filling to Q_max = C·E and u_C(t) → E via\nexact-integrator closed form (τ implicit if a small R is present,\nelse instant fill). HUD reads instantaneous q, u_C, and\nEₑ = ½C·u_C². Student toggles switch and sweeps C. Experiment: 3\nseeded target Q values; student picks C to match given E. Evaluate:\nq(t) curve hidden, only target Q; student submits C blind. Wrinkle:\nintroduces q, u, C relationship before RC dynamics."
+}

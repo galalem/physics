@@ -1,0 +1,30 @@
+{
+  "id": "diode",
+  "title": {
+    "fr": "La diode",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "step-response-builder"
+  },
+  "sources": [
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-4",
+      "page": 99
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "step-response-builder",
+  "sketch": "Observe: schematic with a variable DC source, a resistor, and a diode\nslot; student sweeps E from −5 V to +5 V and watches the live I(U)\ncharacteristic populate — a knee near +0.6 V (seuil) emerges, current\nstays ~0 in reverse. Experiment: build a half-wave redresseur — swap\nDC for AC source, add scope probes at input and output, observe the\ntruncated sinusoid. Evaluate: given a target output waveform\n(half-wave / full-wave via bridge), student wires 1–4 diodes into the\ncorrect bridge configuration. Wrinkle: LED variant with polarity\nmistake fries the diode (small anim)."
+}

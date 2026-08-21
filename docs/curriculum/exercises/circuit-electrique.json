@@ -1,0 +1,30 @@
+{
+  "id": "circuit-electrique",
+  "title": {
+    "fr": "Le circuit électrique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-2",
+      "page": 26
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: SVG canvas with a component palette (pile, interrupteur,\nlampe, fils) and an empty schematic grid. Student drags components\nonto grid nodes, wires them, closes the switch, and the lamp\nilluminates when the loop is complete (topology check). Experiment:\ngiven a target (\"allumer 2 lampes en série puis en parallèle\"),\nstudent builds each and toggles a switch to compare brightness.\nEvaluate: component palette hidden; only a partial schematic given —\nstudent adds the missing wire / switch to close it. Wrinkle:\nshort-circuit detection blows a fuse (small anim), teaching the\ndifference série/dérivation."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "dynamique-translation",
+  "title": {
+    "fr": "Dynamique de translation (lois de Newton, théorème du centre d'inertie)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech",
+      "3eme-info"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-6",
+      "page": 147
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-6",
+      "page": 139
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-7",
+      "page": 122
+    },
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-9",
+      "page": 123
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "Σ F_ext = m · a_G   (2ème loi de Newton, théorème du centre d'inertie)",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG scene with a block on horizontal surface; student\ntoggles applied force F, mass m, friction f. ΣF arrow drawn as\nvector sum; block accelerates per a = ΣF/m (2ème loi de Newton).\nPosition and velocity graphs drawn. Experiment: 3 seeded target\nacceleration values; student picks F, m combos to match. Evaluate:\nforce arrows and acceleration HUD hidden; student picks F from\nobserved motion alone. Wrinkle: référentiel galiléen assumption\nsurfaced explicitly."
+}

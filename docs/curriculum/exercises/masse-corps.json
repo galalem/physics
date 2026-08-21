@@ -1,0 +1,30 @@
+{
+  "id": "masse-corps",
+  "title": {
+    "fr": "La masse (mesure et unités)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "matiere"
+    ],
+    "pattern": "concept-card-quiz"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-8",
+      "page": 116
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "ρ = m / V   (masse volumique)",
+  "pattern": "concept-card-quiz",
+  "sketch": "Observe: SVG balance à plateaux; student drags masses marquées onto\none pan and a sample onto the other, watches the beam tilt with an\ninverse-pendulum tween until equilibrium. HUD shows the reading in\ng / kg. Experiment: measure three samples to a target precision,\nchoosing the mass set that makes the fewest weighings. Evaluate:\ngiven a target mass, student picks the smallest subset of standard\nmasses that sums to it (small combinatorial puzzle). Wrinkle:\nunit-conversion HUD between mg/g/kg/t. Possibly merged with\nproprietes-matiere."
+}

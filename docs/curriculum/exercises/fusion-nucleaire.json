@@ -1,0 +1,37 @@
+{
+  "id": "fusion-nucleaire",
+  "title": {
+    "fr": "La réaction de fusion",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp"
+    ],
+    "field": [
+      "nucleaire"
+    ],
+    "pattern": "stochastic-population-decay"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-11",
+      "page": 287
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-11",
+      "page": 315
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "stochastic-population-decay",
+  "sketch": "Observe: SVG plasma view of a soup of D and T nuclei bouncing at\ntemperature-derived speeds; occasionally two collide with enough\nkinetic energy to overcome the Coulomb barrier and fuse into ⁴He +\nneutron + Q ≈ 17.6 MeV (per a seeded physics fork on collision\noutcomes). Student adjusts T (kinetic proxy) and density; fusion\nrate + released energy time-series drawn. Experiment: 3 seeded\ntarget fusion-rate targets; student tunes (T, ρ). Evaluate:\ncollision events hidden; only energy curve; submit blind. Wrinkle:\nCoulomb-barrier threshold is the pedagogical hook."
+}

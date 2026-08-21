@@ -1,0 +1,30 @@
+{
+  "id": "mouvement-circulaire-uniforme",
+  "title": {
+    "fr": "Mouvement circulaire uniforme",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-info"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-8",
+      "page": 286
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "v = R·ω ;  a_n = v²/R = R·ω²",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG disk with a marker on the rim moving at constant angular\nspeed ω. Student sets radius R and ω; v = Rω tangent and centripetal\na = v²/R = Rω² arrows redraw at every instant, always perpendicular.\nExperiment: 3 seeded (target v, target a) pairs; student picks R, ω\nto hit both. Evaluate: v and a arrows hidden; student sets R, ω from\ntarget numeric v, a alone. Wrinkle: emphasises a ≠ 0 despite |v|\nconstant — targets a common misconception."
+}

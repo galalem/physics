@@ -1,0 +1,30 @@
+{
+  "id": "moteur-electrique",
+  "title": {
+    "fr": "Le moteur électrique (application de la force de Laplace)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-sciexp"
+    ],
+    "field": [
+      "electromagnetisme"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-2",
+      "page": 60
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "M = B·I·N·S·cos(α)   (moment du couple sur une spire)",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG canvas showing a rectangular current loop inside a\nuniform B field (magnets N/S on either side). Sliders: current I,\nfield |B|, coil area, initial angle θ₀. Ticker computes torque\nτ = N·I·A·B·sin(θ), integrates θ̈ = τ/J via semi-implicit Euler;\ncommutator flips current sign every half-turn so the loop\naccelerates continuously. HUD: θ (deg), ω (rad/s), τ (N·m).\nExperiment: reach target ω in target time by tuning I and B.\nEvaluate: torque arrow + angle readout hidden — only a mechanical\nload (target angular position by target time) shown; student picks I\nto win. Wrinkle: commutator model is idealized (instant switch);\nno back-EMF."
+}

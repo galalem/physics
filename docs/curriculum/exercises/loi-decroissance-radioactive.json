@@ -1,0 +1,37 @@
+{
+  "id": "loi-decroissance-radioactive",
+  "title": {
+    "fr": "Évolution temporelle de la radioactivité (loi de décroissance)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp"
+    ],
+    "field": [
+      "nucleaire"
+    ],
+    "pattern": "stochastic-population-decay"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-11",
+      "page": 287
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-11",
+      "page": 315
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "N(t) = N₀ · exp(−λ·t) ;  T_{1/2} = ln(2) / λ",
+  "pattern": "stochastic-population-decay",
+  "sketch": "Observe: split view — SVG grid of N nuclei (each dies at a random\ntime drawn from Exp(λ) via a physics fork of useSeed) and SVG\npolyline N(t) = N₀·exp(−λt) beside. Student sweeps T (demi-vie)\nand N₀; live population + curve update. HUD reads T = ln2/λ.\nExperiment: 3 seeded target curves; student tunes T, N₀. Evaluate:\ngrid killed, only sparse polyline data-points; numeric input\nreplaces slider; student submits T from graph. Wrinkle: RNG fork\ndiscipline is critical — one fork for physics, one for target, one\nfor cosmetic α-particle sprites."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "bande-passante-filtre",
+  "title": {
+    "fr": "Bande passante et fréquences de coupure d'un filtre",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "transfer-function-plot"
+  },
+  "sources": [
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-7",
+      "page": 185
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-6",
+      "page": 159
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "Δf = f_H − f_L   (à −3 dB)",
+  "pattern": "transfer-function-plot",
+  "sketch": "Observe: Bode magnitude plot with a movable \"−3 dB\" horizontal\ncursor; student drags cursor onto the curve, cut-off frequencies\nf_1 and f_2 auto-mark on the x-axis, bandwidth Δf = f_2 − f_1\nhighlights. For low/high-pass only one f_c exists. Experiment:\nchange R (or C) and watch f_c shift; student derives the R·C ↔ f_c\nrelationship from three data points. Evaluate: given a target\nbandwidth, pick R and C (or R, L, C for a band-pass) that produce\nit. Wrinkle: Q-factor for band-pass — narrow vs. wide, teaches\nselectivity."
+}

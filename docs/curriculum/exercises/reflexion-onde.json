@@ -1,0 +1,37 @@
+{
+  "id": "reflexion-onde",
+  "title": {
+    "fr": "Réflexion d'une onde mécanique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-info"
+    ],
+    "field": [
+      "ondes"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-8",
+      "page": 219
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-11",
+      "page": 309
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "i = i'   (angles des directions de propagation par rapport à la normale)",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: 2D ripple-tank view (SVG + Canvas 2D). Plane wavefronts of\nwavelength λ hit a barrier at angle i; reflected wavefronts leave\nat angle r = i (Huygens construction visible as small circles at\neach barrier point). Student rotates barrier and sweeps λ; angle\narcs redraw. Experiment: 3 seeded target reflected-directions;\nstudent sets i so reflected wavefronts propagate toward each.\nEvaluate: reflected wavefronts hidden; only incident wave and\nbarrier; student submits i blind. Wrinkle: wave-theoretic version\n(wavefronts, not rays) — distinct from geometric reflexion-lumiere."
+}

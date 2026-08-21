@@ -1,0 +1,30 @@
+{
+  "id": "actions-mecaniques-basique",
+  "title": {
+    "fr": "Les actions mécaniques",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-11",
+      "page": 164
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG scene of a ball on a table with 3 candidate \"actions\"\nshown as labelled arrows (contact avec la table, poids, action d'une\nmain). Student toggles each action on/off and drags its point of\napplication; a summary panel classifies each as contact/distance,\nlocalisée/répartie. Advance after each action inspected. Experiment:\n3 seeded scenes (livre sur étagère, aimant, ressort tiré); student\nidentifies which arrows belong on each. Evaluate: arrows hidden;\nstudent places arrows at correct application points from scratch.\nWrinkle: 1ère — no vector algebra, just inventaire des actions."
+}

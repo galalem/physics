@@ -1,0 +1,37 @@
+{
+  "id": "energie-thermique",
+  "title": {
+    "fr": "Énergie thermique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "energie"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-17",
+      "page": 258
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-10",
+      "page": 340
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "Q = m · c · ΔT   (chaleur sensible ; c = capacité massique)",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: SVG schematic of a beaker of water on a hot plate (or\ncooling in air). Sliders: initial temperature T₀, ambient T_amb, mass\nm, power supplied P (heating) or convective coefficient (cooling).\nRight panel: T(t) curve. For heating: linear T = T₀ + P·t/(m·c). For\ncooling: exponential T(t) = T_amb + (T₀ − T_amb)·exp(-t/τ). Ticker\nuses exact-integrator for cooling to stay stable at the 1/30s dt\nclamp. HUD: current T, time elapsed, Q = m·c·ΔT. Experiment: reach a\ntarget T at target time by tuning P (heating case). Evaluate: live\ncurve hidden, only target curve shown; student picks P, mass to\nreproduce. Wrinkle: 2ème time-series prototype — reuses closed-form\nupdate pattern as dipole-rc at Bac depth."
+}

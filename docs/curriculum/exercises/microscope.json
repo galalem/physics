@@ -1,0 +1,30 @@
+{
+  "id": "microscope",
+  "title": {
+    "fr": "Le microscope",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-sciexp"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-10",
+      "page": 278
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "G = γ_objectif · G_oculaire",
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG bench with objectif f'₁ (short) forming a real enlarged\nintermediate image A₁B₁ just inside F₂ of the oculaire f'₂; oculaire\nthen acts as a loupe producing a virtual image at infinity. HUD\nprints G = γ₁ · G_oc = (Δ/f'₁)·(d_m/f'₂). Student drags AB near F₁\nto see A₁B₁ shift. Experiment: 3 seeded (γ₁, G_oc) targets; student\nsets f'₁, f'₂, tube length Δ. Evaluate: intermediate rays and A₁B₁\nhidden; only final virtual image angle shown; student picks\nparameters blind."
+}

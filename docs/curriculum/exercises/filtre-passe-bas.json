@@ -1,0 +1,37 @@
+{
+  "id": "filtre-passe-bas",
+  "title": {
+    "fr": "Filtre passe-bas",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "transfer-function-plot"
+  },
+  "sources": [
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-8",
+      "page": 203
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-7",
+      "page": 175
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "|H|² = 1 / (1 + (f/f_c)²) ;  f_c = 1/(2π·R·C)",
+  "pattern": "transfer-function-plot",
+  "sketch": "Observe: R-C low-pass schematic with R and C sliders; live Bode\nplot with the −20 dB/décade asymptote and the flat DC gain\nhighlighted; the −3 dB point marks f_c = 1/(2πRC). Time-domain\ninset shows a step response filling in with time constant τ = RC.\nExperiment: choose R and C to hit a target f_c (e.g., 1 kHz for\naudio anti-alias). Evaluate: given a Bode magnitude curve, read\nf_c and pick the (R, C) pair. Wrinkle: cascade two low-passes and\nsee the slope steepen to −40 dB/décade."
+}

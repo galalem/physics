@@ -1,0 +1,44 @@
+{
+  "id": "dispersion-lumiere",
+  "title": {
+    "fr": "Dispersion de la lumière",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-info"
+    ],
+    "field": [
+      "ondes"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-8",
+      "page": 219
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-8",
+      "page": 227
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-11",
+      "page": 309
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "n = n(λ)   (indice dépend de la longueur d'onde)",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG prism with monochromatic input at wavelength λ;\nCanvas 2D overlay shows refracted ray colored per λ using Cauchy\nn(λ) = A + B/λ². Student sweeps λ; deviation angle D(λ) = f(n(λ),\nprism angle A) HUD; when λ swept across visible range, ray fans out\nin a continuous spectrum. Experiment: 3 seeded target\nexit-directions; student picks λ (or prism angle) to hit each.\nEvaluate: ray hidden; only prism and target markers on screen;\nstudent submits λ blind. Wrinkle: distinguishes Bac dispersion\n(quantitative n(λ)) from 2ème spectre-vision (qualitative)."
+}

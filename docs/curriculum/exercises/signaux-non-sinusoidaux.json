@@ -1,0 +1,30 @@
+{
+  "id": "signaux-non-sinusoidaux",
+  "title": {
+    "fr": "Production de signaux non sinusoïdaux (multivibrateurs astables)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "step-response-builder"
+  },
+  "sources": [
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-8",
+      "page": 221
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "step-response-builder",
+  "sketch": "Observe: astable multivibrator schematic (2 transistors + 2 caps +\n4 resistors, or ampli-op astable variant). Student watches the two\ncollectors alternate — square wave at each output, complementary.\nSliders on R and C set the period T = 2·R·C·ln 2. Experiment: hit\na target frequency by choosing R and C. Also inspect a triangular\nwave from a follow-up integrator. Evaluate: given a target waveform\n(square, triangular, sawtooth), assemble the correct astable +\nshaping stage. Wrinkle: duty cycle asymmetry via mismatched R_1,\nR_2."
+}

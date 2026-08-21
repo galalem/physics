@@ -1,0 +1,37 @@
+{
+  "id": "champ-de-pesanteur",
+  "title": {
+    "fr": "Champ de pesanteur",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp"
+    ],
+    "field": [
+      "electromagnetisme"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-4",
+      "page": 100
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-3",
+      "page": 83
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "g(h) = G·M / (R+h)² ;  g₀ ≈ 9,81 N/kg à la surface",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas showing an Earth cross-section with a \"near\nsurface\" zoomed region. Above the surface, g field drawn as uniform\ndownward arrows of magnitude g₀ = 9.81 N/kg; farther out, arrows\nshrink and radiate 1/r². Sliders: altitude h (km), planet mass M.\nDraggable test object shows local g(h) = G·M/(R+h)². HUD: g at test\npoint, ratio g(h)/g₀. Experiment: reach a target g(h) by choosing\naltitude. Evaluate: field hidden; only altitude slider and target g\n— student picks h. Wrinkle: the uniform-vs-radial distinction is the\npedagogical crux; R_Earth = 6400 km baked in."
+}

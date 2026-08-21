@@ -1,0 +1,31 @@
+{
+  "id": "energie-cinetique-basique",
+  "title": {
+    "fr": "Énergie cinétique (introduction, mesure)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences"
+    ],
+    "field": [
+      "mecanique",
+      "energie"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-15",
+      "page": 231
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "E_c = ½ · m · v²",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG cart on a track; sliders for m and v; a large Eₖ = ½mv²\ngauge fills in real time as the student changes either. No forces, no\nwork — pure formula visualization at 2S level. Experiment: reach a\ntarget Eₖ by choosing m and v (multiple valid solutions surface the\ntrade-off). Evaluate: gauge hidden; given a target Eₖ, student picks\n(m, v). Wrinkle: v² dependence is the pedagogical hook — doubling v\nquadruples Eₖ."
+}

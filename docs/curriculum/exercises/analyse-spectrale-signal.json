@@ -1,0 +1,31 @@
+{
+  "id": "analyse-spectrale-signal",
+  "title": {
+    "fr": "Analyse spectrale d'un signal",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-info"
+    ],
+    "field": [
+      "electronique",
+      "ondes"
+    ],
+    "pattern": "waveform-classifier"
+  },
+  "sources": [
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-12",
+      "page": 339
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "waveform-classifier",
+  "sketch": "Observe: time-domain scope (left) + magnitude spectrum (right),\nlinked. Student adds harmonics one by one to build a square /\ntriangle / sawtooth from Fourier partials — spectral bars grow as\nthe time-domain waveform sharpens. Experiment: given a target\ntime-domain waveform, pick the set of harmonics (frequency +\namplitude) that reproduces it. Evaluate: only spectrum shown;\nstudent identifies the waveform family and its fundamental.\nWrinkle: windowing/leakage — a non-integer harmonic smears\nspectral lines."
+}

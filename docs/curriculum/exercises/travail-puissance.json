@@ -1,0 +1,37 @@
+{
+  "id": "travail-puissance",
+  "title": {
+    "fr": "Travail et puissance mécanique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "energie"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-18",
+      "page": 275
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-11",
+      "page": 371
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "W(F) = F · d · cos(α) ;  P = W/t",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas showing a person pulling a crate along a floor\nwith a rope at angle α to horizontal. Sliders: applied force F (N),\nangle α (deg), displacement d (m), time Δt (s). HUD: work\nW = F·d·cos(α) (J), power P = W/Δt (W). Force vector shown on crate\nwith cos(α) projection highlighted as a dashed component along\ndirection of motion. Experiment: reach target power by tuning F and\nΔt. Evaluate: HUD hidden; student picks F, α to maximize W for fixed\nd, then submits. Wrinkle: cos(α) is the classic 2ème gotcha; \"force\nperpendicular to displacement does no work\" is the discovery."
+}

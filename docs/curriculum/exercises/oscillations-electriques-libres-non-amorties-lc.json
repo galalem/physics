@@ -1,0 +1,51 @@
+{
+  "id": "oscillations-electriques-libres-non-amorties-lc",
+  "title": {
+    "fr": "Oscillations électriques libres non amorties (circuit LC)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-3",
+      "page": 79
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-3",
+      "page": 83
+    },
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-3",
+      "page": 83
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-3",
+      "page": 79
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "d²q/dt² + q/(L·C) = 0 ;  T₀ = 2π·√(L·C)",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: SVG schematic (L, C, switch) with ideal LC oscillator;\npolyline u_C(t) = U₀·cos(ω₀t) with ω₀ = 1/√(LC), T₀ = 2π√(LC).\nStudent sweeps L, C; HUD reads T₀ and total energy E_total = ½C·U₀²\nconserved. Experiment: 3 seeded target T₀; student picks (L, C)\npairs. Evaluate: live curve hidden; only target period shown;\nstudent submits (L, C) blind. Wrinkle: closed form used; energy\nconservation gauge is a secondary insight."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "stabilite-noyau",
+  "title": {
+    "fr": "Stabilité du noyau",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp"
+    ],
+    "field": [
+      "nucleaire"
+    ],
+    "pattern": "nuclear-composition-explorer"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-10",
+      "page": 273
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-10",
+      "page": 279
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "Δm = Z·m_p + N·m_n − m_noyau ;  E_ℓ = Δm · c²",
+  "pattern": "nuclear-composition-explorer",
+  "sketch": "Observe: Canvas 2D (N, Z) plot with the vallée de stabilité shaded;\nstudent places a nucleus dot at chosen (N, Z) via sliders. Binding\nenergy per nucleon E_l/A computed and shown on a companion curve\nvs. A (peak near A=60). Experiment: 3 seeded target nuclei —\nstudent places each on the diagram and reads whether it's stable,\nβ⁻ prone (excess N), or β⁺ prone (excess Z). Evaluate: stability\nshading hidden; only axis; student classifies each nucleus from\n(N, Z) alone. Wrinkle: E_l/A curve is the cross-check for\nfission/fusion later."
+}

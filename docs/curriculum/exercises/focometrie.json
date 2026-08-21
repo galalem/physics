@@ -1,0 +1,37 @@
+{
+  "id": "focometrie",
+  "title": {
+    "fr": "Focométrie : détermination de la distance focale d'une lentille",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-12",
+      "page": 313
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-9",
+      "page": 255
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG bench with unknown-f' convergente, object AB at fixed\np, movable screen. Student slides screen until image is sharp (a\n\"sharpness bar\" derived from computed p' vs. screen distance peaks\nwhen they match). HUD reads measured p and p'; formula panel\ncomputes f' via 1/p' − 1/p = 1/f'. Experiment: 3 seeded hidden f'\nvalues; student measures each via the sharp-screen protocol.\nEvaluate: no sharpness bar; student must estimate focus from a\nblurred image rendering (Canvas 2D convolution proxy) and submit\nmeasured f'."
+}

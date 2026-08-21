@@ -1,0 +1,37 @@
+{
+  "id": "reflexion-lumiere",
+  "title": {
+    "fr": "Réflexion de la lumière (optique géométrique)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-19",
+      "page": 292
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-12",
+      "page": 392
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "i₁ = i₂   (angles mesurés par rapport à la normale)",
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG scene with source S, plane mirror M, incident ray SI,\ndotted normal at I, reflected ray IR, HUD reading θᵢ = θᵣ. Student\nrotates the mirror; both angle arcs update and stay equal. Advance\nafter ~15° cumulative rotation. Experiment: 3 seeded target stars in\nthe reflected half-plane; student rotates mirror to aim reflected ray\nat each. Evaluate: beam hidden, only a short dashed stub at source\nshows incidence; 3 new seeded stars; optional bounded \"peek\" briefly\nreveals full beam with score penalty. Success from ray-target\nhit-test."
+}

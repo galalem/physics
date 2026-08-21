@@ -1,0 +1,30 @@
+{
+  "id": "portes-logiques",
+  "title": {
+    "fr": "Les portes logiques",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "step-response-builder"
+  },
+  "sources": [
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-15",
+      "page": 222
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "step-response-builder",
+  "sketch": "Observe: canvas with a small palette of gates (ET, OU, NON, NAND,\nNOR, XOR) and input toggle switches (0/1) driving LEDs at the\noutput. Student drops one gate, flips inputs, and a truth table\nauto-fills row by row. Experiment: combine 2–3 gates to build a\ntarget function (e.g., a half-adder: sum via XOR, carry via AND) —\nLEDs verify against the target truth table. Evaluate: gate labels\nhidden inside a boxed network; student flips inputs, observes\noutputs, and identifies the function. Wrinkle: NAND-only\ncompleteness — rebuild XOR using only NANDs."
+}

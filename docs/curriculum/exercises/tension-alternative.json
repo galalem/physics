@@ -1,0 +1,37 @@
+{
+  "id": "tension-alternative",
+  "title": {
+    "fr": "Tension alternative (période, fréquence, valeur maximale)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-8",
+      "page": 109
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-6",
+      "page": 178
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "u(t) = U_max · sin(2π·f·t) ;  U_eff = U_max / √2 ;  T = 1/f",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: SVG schematic with a 50 Hz AC source driving a resistor;\noscilloscope panel shows u(t) = U_max·sin(2πf·t) and i(t) in phase.\nSliders: U_max (peak voltage), f (frequency), R. HUD: period T = 1/f,\neffective value U_eff = U_max/√2, I_eff. Live trace scrolls across\nthe oscilloscope. Experiment: match a target U_eff by choosing U_max,\nand identify period from a target curve. Evaluate: live trace hidden;\na target trace is shown with hidden parameters — student sets f,\nU_max to reproduce it. Wrinkle: introduces U_eff, the value\nmultimeters read."
+}

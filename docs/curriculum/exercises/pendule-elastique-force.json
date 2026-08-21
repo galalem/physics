@@ -1,0 +1,44 @@
+{
+  "id": "pendule-elastique-force",
+  "title": {
+    "fr": "Oscillations forcées d'un pendule élastique en régime sinusoïdal",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-tech"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-6",
+      "page": 163
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-6",
+      "page": 169
+    },
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-6",
+      "page": 169
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "m·d²x/dt² + h·dx/dt + k·x = F₀·cos(ω·t)",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: SVG mass-spring schematic with driving oscillator at\npulsation Ω and damping h; polyline shows steady-state x(t) with\namplitude A(Ω) = F₀/√((k−mΩ²)² + h²Ω²). Student sweeps Ω via\nslider; a resonance curve A(Ω) draws beneath; peak near Ω = ω₀.\nExperiment: 3 seeded target amplitudes A*; student picks Ω to match\n(two solutions on either side of resonance for A < A_max). Evaluate:\nlive x(t) hidden; only A(Ω) target height shown; student submits Ω\nblind. Wrinkle: sub-resonance (Ω < ω₀) vs. supra (Ω > ω₀)."
+}

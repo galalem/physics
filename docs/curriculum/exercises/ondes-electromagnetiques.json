@@ -1,0 +1,30 @@
+{
+  "id": "ondes-electromagnetiques",
+  "title": {
+    "fr": "Les ondes électromagnétiques",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-info"
+    ],
+    "field": [
+      "ondes"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-12",
+      "page": 339
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "c = λ · f   avec  c = 3·10⁸ m/s (vide)",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: 3D-ish isometric view of a plane EM wave — E-vector (red)\nand B-vector (blue) oscillating perpendicularly, propagating along\nz. Sliders control frequency f, amplitude E_0, polarization angle.\nBelow, a colour-banded electromagnetic spectrum (radio → gamma)\nhighlights the current f. Experiment: match a target photon energy\nor wavelength by picking f, verify c = λ·f. Evaluate: given only λ,\nplace the wave on the correct spectrum band and state its use\n(radio, WiFi, IR, visible…). Wrinkle: polarization filter demo —\ncross-polarized filter extinguishes E."
+}

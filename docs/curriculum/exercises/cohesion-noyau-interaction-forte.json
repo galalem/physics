@@ -1,0 +1,37 @@
+{
+  "id": "cohesion-noyau-interaction-forte",
+  "title": {
+    "fr": "Cohésion du noyau et interaction forte",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp"
+    ],
+    "field": [
+      "nucleaire"
+    ],
+    "pattern": "nuclear-composition-explorer"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-4",
+      "page": 106
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-4",
+      "page": 100
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "R = R₀ · A^(1/3) ;  E_ℓ = Δm · c²   (courbe E_ℓ/A vs A)",
+  "pattern": "nuclear-composition-explorer",
+  "sketch": "Observe: SVG canvas with a \"nucleus\" visualization — a cluster of\nprotons (red) and neutrons (blue), radius R = R₀·A^(1/3). Sliders:\nZ, N. Two force-magnitude bars in the HUD: strong nuclear attraction\n(short-range, saturates with A) vs. Coulomb repulsion (long-range,\ngrows with Z²). A second panel overlays the semi-empirical binding-\nenergy-per-nucleon curve E_ℓ/A vs. A (peak near A≈56 Fe/Ni region)\nwith a moving marker at the student's current (Z, N). Experiment:\nreach maximum E_ℓ/A by tuning Z, N; observe how strong>Coulomb\ncorresponds to bound nuclei. Evaluate: bars + curve hidden; student\npredicts stable/unstable and estimates the position on the B/A curve\nfrom Z, N alone. Wrinkle: 3ème-level qualitative — no MeV numbers,\njust the visual/relational story. Feeds into Bac fission/fusion."
+}

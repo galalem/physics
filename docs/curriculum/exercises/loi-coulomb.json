@@ -1,0 +1,51 @@
+{
+  "id": "loi-coulomb",
+  "title": {
+    "fr": "Loi de Coulomb",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech",
+      "3eme-info"
+    ],
+    "field": [
+      "electromagnetisme"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-1",
+      "page": 16
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-1",
+      "page": 9
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-1",
+      "page": 14
+    },
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-1",
+      "page": 10
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "F = k · |q₁·q₂| / r²   avec  k = 1/(4π·ε₀) ≈ 9·10⁹ N·m²/C²",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas with two point charges q₁, q₂ at seeded positions\non a metric grid. Force vector F₁₂ drawn on q₂ (arrow length ∝ |F|,\ncolor coded by attraction/repulsion). HUD readouts: r (cm), q₁, q₂\n(μC or nC), |F| in N via F = k·|q₁q₂|/r². Student drags either charge\nin 2D and toggles each charge's sign; slider adjusts |q|. Experiment:\ngiven target force magnitude and direction on q₂, choose r and\ncharges to match. Evaluate: force arrow hidden — student places\ncharges to achieve a target |F| (readout kept). Wrinkle: k = 9·10⁹\nN·m²/C² baked in; charges in μC to keep numeric scale tractable."
+}

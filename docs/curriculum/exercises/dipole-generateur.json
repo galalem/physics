@@ -1,0 +1,38 @@
+{
+  "id": "dipole-generateur",
+  "title": {
+    "fr": "Le dipôle générateur",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info",
+      "3eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-6",
+      "page": 81
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-3",
+      "page": 47
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "U = E − r·I   (E f.é.m., r résistance interne)",
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: SVG schematic of a real battery (EMF E, internal resistance\nr) driving an external variable load R. Ammeter, voltmeter across\nbattery terminals. Sliders: E, r, R. Live U(I) characteristic of the\ngenerator: U = E − r·I, straight line with intercept E and slope −r.\nStudent varies R (from ∞ open-circuit to 0 short-circuit) and watches\nthe operating point slide along the line. HUD: U, I, P_delivered =\nU·I, P_lost = r·I². Experiment: match a target characteristic by\npicking E, r. Evaluate: characteristic hidden; student measures at\ntwo loads (peek button) to deduce E and r analytically, then submits.\nWrinkle: internal resistance unlocks Pouillet and point de\nfonctionnement."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "interactions-magnetiques",
+  "title": {
+    "fr": "Interactions magnétiques (aimant-aimant, aimant-courant, courant-courant)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech",
+      "3eme-info"
+    ],
+    "field": [
+      "electromagnetisme"
+    ],
+    "pattern": "interactive-behavior-explorer"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-2",
+      "page": 39
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-2",
+      "page": 30
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-3",
+      "page": 42
+    },
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-3",
+      "page": 40
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "interactive-behavior-explorer",
+  "sketch": "Observe: SVG canvas with a mode selector (three tabs: bar-magnet\npair, magnet-vs-wire, two parallel wires). In each mode, two\ndraggable objects with orientation controls (flip N/S for magnets,\nreverse current arrow for wires). A dashed interaction arrow between\nthem shows attract (green, →←) or repel (red, ←→), or \"none\" (grey).\nExperiment: given a target label (\"attract\") in each mode, set\norientations to produce it. Evaluate: interaction label hidden;\nstudent predicts behavior first, then reveal to check. Wrinkle:\npurely qualitative — no numeric force computed."
+}

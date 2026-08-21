@@ -1,0 +1,58 @@
+{
+  "id": "mouvement-rectiligne-uniformement-varie",
+  "title": {
+    "fr": "Mouvement rectiligne uniformément varié",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-info",
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech",
+      "3eme-info"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-8",
+      "page": 286
+    },
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-5",
+      "page": 125
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-5",
+      "page": 116
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-6",
+      "page": 100
+    },
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-7",
+      "page": 97
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "x(t) = x₀ + v₀·t + ½·a·t² ;  v² − v₀² = 2·a·Δx",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG horizontal track with a car at constant a; student sets\nx₀, v₀, a; x(t), v(t), a(t) graphs drawn side-by-side (parabola,\nline, constant). Ticker at reasonable time-scale. Experiment: 3\nseeded \"stop before wall\" scenarios; student picks a<0 so car halts\nat target using v² − v₀² = 2a·Δx. Evaluate: graphs hidden; student\npicks a from wall distance and initial v alone. Wrinkle: signs of a\nvs. v distinguish accéléré from retardé."
+}

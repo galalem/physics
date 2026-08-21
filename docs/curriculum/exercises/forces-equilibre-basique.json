@@ -1,0 +1,30 @@
+{
+  "id": "forces-equilibre-basique",
+  "title": {
+    "fr": "Forces et équilibre (introduction)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-12",
+      "page": 180
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "Σ F_ext = 0   (équilibre)",
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG scene with a hanging weight on a spring and a book on a\ntable; student drags the mass slider to grow poids P, watches spring\nelongation ΔL and reaction R adjust so ΣF = 0. HUD shows P, R, ΣF.\nAdvance after equilibrium demonstrated with two configurations.\nExperiment: 3 seeded target masses; student sets ΔL by adjusting a\nsupport height so equilibrium holds. Evaluate: force arrows hidden;\nonly the object and its rest position shown; student judges\nequilibrium from stillness alone and submits a P value. Wrinkle:\n1ère depth — 2 collinear forces only, no equilibrium-of-3 yet."
+}

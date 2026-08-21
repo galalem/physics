@@ -1,0 +1,44 @@
+{
+  "id": "force-de-laplace",
+  "title": {
+    "fr": "Force de Laplace",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech"
+    ],
+    "field": [
+      "electromagnetisme"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-3",
+      "page": 64
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-2",
+      "page": 54
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-5",
+      "page": 71
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "F = I · L ⋀ B ;  |F| = B·I·L·sin(α)",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas with a horizontal current-carrying rod immersed\nin a uniform B field (represented by ⊙/⊗ symbols on the page plane).\nSliders: current I (A), rod length ℓ (cm), field |B| (mT), angle α\nbetween I and B. Force vector F drawn on the rod using\nF = I·ℓ·B·sin(α), direction by right-hand rule. HUD shows |F|, α.\nRight-hand-rule helper: three-finger diagram updates live.\nExperiment: adjust I, α to reach target |F|. Evaluate: force arrow\nhidden; student picks parameters to match target |F| and direction\n(checked on submit). Wrinkle: sin(α) dependence is the pedagogical\nhook; unit chain A·m·T = N."
+}

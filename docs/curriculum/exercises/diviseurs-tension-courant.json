@@ -1,0 +1,30 @@
+{
+  "id": "diviseurs-tension-courant",
+  "title": {
+    "fr": "Diviseurs de tension et de courant",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-13",
+      "page": 187
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "Diviseur de tension: U₂ = E · R₂/(R₁+R₂) ;  Diviseur de courant: I₁ = I · R₂/(R₁+R₂)",
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: schematic canvas with two configurations: (a) voltage\ndivider — E driving R₁ in series with R₂, voltmeter across R₂\nshows U₂ = E·R₂/(R₁+R₂); (b) current divider — I feeding R₁ ∥ R₂,\nammeters in each branch show I₁ = I·R₂/(R₁+R₂). Sliders: R₁, R₂,\nE (or I). Formula HUD updates live. Experiment: reach a target U₂\nor I₁ by choosing R₁, R₂. Evaluate: one resistor slider hidden;\nstudent solves for it from a target reading. Wrinkle: pedagogical\nsymmetry — the two configurations are dual (voltage ↔ current,\nseries ↔ parallel)."
+}

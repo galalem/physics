@@ -1,0 +1,51 @@
+{
+  "id": "classification-lentilles",
+  "title": {
+    "fr": "Classification et généralités des lentilles minces",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech",
+      "3eme-info"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-12",
+      "page": 295
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-9",
+      "page": 242
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-13",
+      "page": 269
+    },
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-16",
+      "page": 245
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG bench with a lens slot; student swaps between 6 lens\nshapes (biconvex, plan-convex, ménisque convergent, biconcave,\nplan-concave, ménisque divergent) via a picker. Parallel rays from a\ndistant source pass through; convergents focus to a point F',\ndivergents diverge from a virtual F'. HUD labels type. Experiment:\n3 seeded lens cards are shown; student assigns each to \"convergente\"\nor \"divergente\" by dragging into two bins, judging by shape rules\n(thicker-in-middle vs. edges). Evaluate: cards obscured to\nsilhouettes; classify blind."
+}

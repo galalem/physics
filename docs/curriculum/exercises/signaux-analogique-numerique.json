@@ -1,0 +1,30 @@
+{
+  "id": "signaux-analogique-numerique",
+  "title": {
+    "fr": "Signaux analogiques, logiques et numériques",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "waveform-classifier"
+  },
+  "sources": [
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-9",
+      "page": 249
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "waveform-classifier",
+  "sketch": "Observe: three scope panels showing an analogue sinusoid, a\nquantized (staircase) numeric version, and a two-level logic signal\nderived from the same source. Sliders control sample rate f_s and\nquantization bit depth N; student sees aliasing when f_s < 2·f_signal\nand steps coarsen as N drops. Experiment: classify a set of\nwaveforms by dragging them onto (analogique / logique / numérique)\nbins. Evaluate: given a numeric signal, pick the (f_s, N) that\ngenerated it. Wrinkle: Shannon-Nyquist threshold snap when the\naliased frequency crosses."
+}

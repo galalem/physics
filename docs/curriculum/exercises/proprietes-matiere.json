@@ -1,0 +1,30 @@
+{
+  "id": "proprietes-matiere",
+  "title": {
+    "fr": "Quelques propriétés de la matière",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "matiere"
+    ],
+    "pattern": "concept-card-quiz"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-7",
+      "page": 102
+    }
+  ],
+  "status": "ready",
+  "format": "reading-quiz",
+  "formula": "ρ = m / V   (masse volumique)",
+  "pattern": "concept-card-quiz",
+  "sketch": "Observe: SVG bench with four instruments (balance, éprouvette graduée,\nthermomètre, aimant); student drags one of six samples onto each\ninstrument in turn and reads off masse / volume / température /\nattraction magnétique. A table auto-fills. Experiment: given a\n\"mystery\" sample, student uses the instruments in any order to fill\nits row. Evaluate: given only a filled row, student picks which of\nthree unknown samples it belongs to. Wrinkle: two samples have same\nmass but different volume — introduces density qualitatively."
+}

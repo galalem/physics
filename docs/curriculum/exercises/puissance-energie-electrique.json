@@ -1,0 +1,37 @@
+{
+  "id": "puissance-energie-electrique",
+  "title": {
+    "fr": "Puissance et énergie électrique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-1",
+      "page": 8
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-1",
+      "page": 12
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "P = U·I ;  W = P·t",
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: SVG schematic with a battery, switch, and a resistor R\n(slider). Ammeter A in series and voltmeter V across R. Sliders:\nE (battery EMF), R (Ω). On closing the switch, meters display I, U\ninstantly (DC steady state). HUD also shows P = U·I (W) and, if a\nduration slider Δt is set, W = P·Δt (J). Student varies R and\nobserves P = U²/R = R·I². Experiment: reach a target P (e.g., make a\n60 W bulb glow correctly under 12 V) by picking R. Evaluate: meters\nhidden; student sets R blind, then closes switch to reveal readings.\nWrinkle: steady-state only (no transient) — reinforces P = U·I is\ninstantaneous while W is integrated over time."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "lunette-astronomique",
+  "title": {
+    "fr": "La lunette astronomique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-13",
+      "page": 330
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "G = f'_objectif / f'_oculaire   (afocale)",
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG bench with two lenses — objectif f'₁ and oculaire f'₂\nspaced by f'₁ + f'₂ (afocal setup). Parallel rays from a distant\nstar focus at intermediate F'₁ = F₂, then re-emerge parallel to the\neye. Student drags spacing; when afocal, HUD shows G = f'₁/f'₂.\nExperiment: 3 seeded magnification targets; student picks f'₁, f'₂\npairs to match. Evaluate: intermediate rays hidden; only object\nangle α and image angle α' shown as HUD numbers; student sets lenses\nso α'/α equals target G blind. Wrinkle: afocal-condition check\nseparate from G."
+}

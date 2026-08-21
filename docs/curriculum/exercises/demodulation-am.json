@@ -1,0 +1,30 @@
+{
+  "id": "demodulation-am",
+  "title": {
+    "fr": "Démodulation d'amplitude",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "modulation-signal-mixer"
+  },
+  "sources": [
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-13",
+      "page": 365
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "modulation-signal-mixer",
+  "sketch": "Observe: demodulator chain — diode envelope detector followed by\nRC low-pass. Student sees the AM input, half-wave rectified signal,\nthen smoothed envelope (recovered m(t)). RC slider tunes the\nlow-pass; too fast → ripple, too slow → envelope distortion.\nExperiment: recover a hidden m(t) by tuning RC given known f_p and\nf_m. Evaluate: from a distorted output, diagnose the RC mismatch.\nWrinkle: coherent demodulation preview — multiply by cos(2πf_p t)\n+ LPF gives cleaner recovery; hints at the phase requirement in\nthe FM exercise."
+}

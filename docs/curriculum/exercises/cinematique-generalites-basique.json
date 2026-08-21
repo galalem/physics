@@ -1,0 +1,37 @@
+{
+  "id": "cinematique-generalites-basique",
+  "title": {
+    "fr": "Cinématique : généralités (référentiel, trajectoire — introduction)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-12",
+      "page": 182
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-8",
+      "page": 286
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG scene with a car on a road; student picks a référentiel\n(road / passing pedestrian / another car) via a picker. Trajectory of\na marked point (a fly on the roof) redraws differently depending on\nchosen frame — horizontal line, stationary dot, inclined line. HUD:\nscalar position s(t) along the road; introduces \"trajectoire\" and\n\"vitesse instantanée\" qualitatively. Experiment: student reproduces\na target trajectory (e.g., \"the fly's path relative to the pedestrian\")\nby picking the right référentiel. Evaluate: given a trajectory, student\nnames the frame that produced it. 2ème-level, scalars only, no vectors."
+}

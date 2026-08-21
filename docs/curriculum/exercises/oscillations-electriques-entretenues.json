@@ -1,0 +1,30 @@
+{
+  "id": "oscillations-electriques-entretenues",
+  "title": {
+    "fr": "Oscillations électriques entretenues (à résistance négative)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-4",
+      "page": 111
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "u_R_neg = −k·i   (résistance négative compense la dissipation)",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: SVG schematic with RLC + a \"négative-resistance\" amplifier\ncompensating Joule losses; polyline shows sustained sinusoid at\nω₀ = 1/√(LC) with amplitude clamped by the amplifier saturation.\nStudent sweeps the compensation gain G; below threshold G < R,\noscillations decay; at G = R, sustained; above, amplitude clips.\nExperiment: 3 seeded target amplitudes; student tunes G, L, C.\nEvaluate: live curve hidden; only target amplitude and period\nshown; submit blind. Wrinkle: distinguishes entretenues\n(autonomous) from forcées (external drive)."
+}

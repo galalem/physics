@@ -1,0 +1,44 @@
+{
+  "id": "recepteurs-passifs",
+  "title": {
+    "fr": "Récepteurs passifs",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info",
+      "3eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-3",
+      "page": 37
+    },
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-4",
+      "page": 55
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-3",
+      "page": 47
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "U = R·I   (dissipation Joule : P = R·I²)",
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: SVG schematic with a variable DC generator E, switch, and a\ncomponent slot for a passive receiver (resistor, capacitor, or coil —\ndropdown selector). Voltmeter across receiver, ammeter in series. For\nresistor: linear U(I) plot builds up as E is swept. For capacitor:\ncurrent spike then decay (steady-state I=0 in DC). For coil: initial\ntransient then steady I = E/r. Sliders: E, R (or C, or L).\nExperiment: identify the mystery component from its U(I) trace by\nmatching a target curve. Evaluate: component label hidden; student\nproposes which type it is based on characteristic shape. Wrinkle:\nkeeps DC steady-state for resistor (main 2ème focus); capacitor/coil\ntransients hinted, not derived."
+}

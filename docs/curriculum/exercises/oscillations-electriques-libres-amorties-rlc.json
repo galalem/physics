@@ -1,0 +1,51 @@
+{
+  "id": "oscillations-electriques-libres-amorties-rlc",
+  "title": {
+    "fr": "Oscillations électriques libres amorties (circuit RLC série)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-tech",
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-3",
+      "page": 79
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-3",
+      "page": 83
+    },
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-3",
+      "page": 83
+    },
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-3",
+      "page": 79
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "L · d²q/dt² + R · dq/dt + q/C = 0   (équation différentielle)",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: SVG schematic (R, L, C, switch charged to E) left; polyline\nu_C(t) damped oscillation right. Depending on regime (pseudo-\npériodique, critique, apériodique), curve shape changes. Student\nsweeps R with L, C fixed; pseudo-period T ≈ 2π√(LC) HUD; critical\nR = 2√(L/C) threshold marker. Experiment: 3 seeded target\nenvelopes; student picks R to match damping. Evaluate: curve\nhidden, only target envelope + T; submit R, L, C blind. Wrinkle:\nneeds Euler (not exact integrator) since 2nd-order; dt clamp OK."
+}

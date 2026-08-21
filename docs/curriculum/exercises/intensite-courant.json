@@ -1,0 +1,30 @@
+{
+  "id": "intensite-courant",
+  "title": {
+    "fr": "L'intensité du courant électrique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-3",
+      "page": 44
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "I = ΔQ / Δt   (unit: A = C/s)",
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: prebuilt schematic with a pile, resistor, and lamp; student\ninserts an ammeter by dragging it onto any wire segment (only\nseries-legal placements light up). HUD displays I in mA; a coloured\n\"electron flow\" animation speeds up as R decreases. Experiment: match\na target current by choosing the correct dipole from a bin. Compare I\nat three points to discover I is uniform in a series loop vs. splits\nat a node. Evaluate: schematic with ammeters hidden; student predicts\neach reading, then reveals. Wrinkle: node-law demo (Kirchhoff current)\nas a small parallel branch."
+}

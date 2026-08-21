@@ -1,0 +1,51 @@
+{
+  "id": "image-lentille",
+  "title": {
+    "fr": "Image d'un objet lumineux donnée par une lentille",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp",
+      "3eme-tech",
+      "3eme-info"
+    ],
+    "field": [
+      "optique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-12",
+      "page": 302
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-9",
+      "page": 249
+    },
+    {
+      "book": "223351P00",
+      "book_title": "Physique — 3ème année, Sciences techniques",
+      "chapter": "chapitre-13",
+      "page": 279
+    },
+    {
+      "book": "223371P00",
+      "book_title": "Physique — 3ème année, Sciences de l'informatique",
+      "chapter": "chapitre-16",
+      "page": 245
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "1/OA' − 1/OA = 1/f'   (relation de conjugaison, lentille mince)",
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG bench with object AB (upright arrow), convergente of\nfixed f', and the three characteristic rays traced from B\n(parallel→F', through O straight, through F→parallel) intersecting\nat B'. Student drags AB along axis; image A'B' moves, flips through\ninfinity as AB crosses F. HUD labels réel/virtuel, droit/renversé.\nExperiment: 3 seeded object positions with target image positions;\nstudent places AB so A'B' lands on each. Evaluate: construction rays\nhidden, only AB and a ghost outline of A'B'-region shown; peek\nreveals one ray briefly."
+}

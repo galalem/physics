@@ -1,0 +1,30 @@
+{
+  "id": "convertisseur-analogique-numerique",
+  "title": {
+    "fr": "Convertisseur analogique-numérique (CAN)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "step-response-builder"
+  },
+  "sources": [
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-9",
+      "page": 249
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "step-response-builder",
+  "sketch": "Observe: single-slope (or SAR) ADC schematic; input analogue\nvoltage feeds a comparator + counter. Student sweeps V_e and reads\nthe resulting N-bit binary code; step-size = V_ref / 2^N is\nhighlighted. A time-vs-count animation shows conversion latency.\nExperiment: sample a live sine — student picks (f_s, N) to\nreproduce it faithfully on a reconstruction plot. Evaluate: given\na bit stream, deduce the original V_e(t). Wrinkle: quantization\nnoise floor visible on a small spectrum inset — bridges to the\nspectrum analyzer exercise."
+}

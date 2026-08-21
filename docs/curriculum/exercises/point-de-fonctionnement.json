@@ -1,0 +1,30 @@
+{
+  "id": "point-de-fonctionnement",
+  "title": {
+    "fr": "Point de fonctionnement d'un circuit",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-3",
+      "page": 47
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: SVG schematic with a generator (E, r) driving a non-linear\nreceiver (dropdown: resistor, motor, or diode). Side panel shows two\noverlaid curves: generator characteristic U = E − r·I (decreasing\nline) and receiver characteristic. The intersection = point de\nfonctionnement — highlighted with a big dot; readouts I*, U*.\nSliders adjust E, r, and receiver parameter. Student sweeps\nparameters and watches the operating point move. Experiment: reach a\ntarget operating point (I*, U*) by tuning E. Evaluate: intersection\ndot hidden; student predicts I* by mental line-intersection, then\nreveals. Wrinkle: \"two curves = one solution\" clicks; non-linear\nreceiver (diode) shows why graphical solving beats algebraic."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "transistor",
+  "title": {
+    "fr": "Le transistor",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "step-response-builder"
+  },
+  "sources": [
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-5",
+      "page": 110
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "step-response-builder",
+  "sketch": "Observe: NPN transistor schematic with base current I_B slider and a\ncollector-emitter voltage V_CE slider; live plot of I_C vs. V_CE\ncurves for several I_B values (fan of characteristics). Zones\ncut-off / linéaire / saturation are colour-banded. Experiment: use\ntransistor as switch — feed base with a square wave and watch a lamp\nin the collector branch blink; then use as amplifier — feed base with\na small sinusoid and observe scaled output. Evaluate: given a target\noutput amplitude, pick R_B and R_C. Wrinkle: β variation across a\nbatch introduces tolerance."
+}

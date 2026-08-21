@@ -1,0 +1,30 @@
+{
+  "id": "modulation-frequence",
+  "title": {
+    "fr": "Modulation de fréquence (FM)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "modulation-signal-mixer"
+  },
+  "sources": [
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-13",
+      "page": 365
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "s(t) = A · cos(2π·f_p·t + φ(t))   avec  dφ/dt ∝ u(t)",
+  "pattern": "modulation-signal-mixer",
+  "sketch": "Observe: same split canvas as AM but the carrier's instantaneous\nfrequency f_i(t) = f_p + Δf·m(t) is time-varying. Time-domain\nshows the \"compressed / stretched\" waveform; spectrum shows the\nBessel-sideband structure spread over a bandwidth ≈ 2(Δf + f_m)\n(Carson). Sliders for Δf (deviation) and f_m. Experiment: hit a\ntarget bandwidth by choosing Δf. Evaluate: given only spectrum,\ninfer Δf and f_m. Wrinkle: threshold effect — very small Δf\ncollapses to a narrow-band spectrum."
+}

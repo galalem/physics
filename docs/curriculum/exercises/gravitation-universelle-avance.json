@@ -1,0 +1,38 @@
+{
+  "id": "gravitation-universelle-avance",
+  "title": {
+    "fr": "Gravitation universelle (loi de Newton, champ vectoriel)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "3eme-maths",
+      "3eme-sciexp"
+    ],
+    "field": [
+      "astronomie",
+      "mecanique"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223332P00",
+      "book_title": "Physique — 3ème année, Mathématiques",
+      "chapter": "chapitre-4",
+      "page": 86
+    },
+    {
+      "book": "223333P00",
+      "book_title": "Physique — 3ème année, Sciences expérimentales",
+      "chapter": "chapitre-3",
+      "page": 73
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "F = G · m₁·m₂ / r²   avec  G = 6,67·10⁻¹¹ N·m²/kg²",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas with two spherical masses m₁, m₂ (draggable,\nradius encodes mass). Attractive force vector F₁₂ on each mass,\nlength ∝ |F| = G·m₁m₂/r². HUD: r (in scaled units — Earth radii or\nAU), m₁, m₂ (kg or Earth-masses), |F| (N). Student drags either mass\nand scales m via slider. Experiment: given target |F| between Earth\nand a satellite, pick orbital radius. Evaluate: force arrow hidden —\nstudent picks r to match a target |F| (readout kept). Wrinkle:\nG = 6.67·10⁻¹¹ baked in; problem framed in astronomical units to\nmake numbers tractable. Explicitly compared to Coulomb structure.\n3ème-level: full vector field-theory treatment."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "energie-controle-basique",
+  "title": {
+    "fr": "Énergie et contrôle (introduction)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "energie"
+    ],
+    "pattern": "concept-card-quiz"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-14",
+      "page": 210
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "concept-card-quiz",
+  "sketch": "Observe: SVG scene showing an energy flow: a source (sun, wind,\nbattery), a converter (solar panel, turbine, motor), and a use (light\nbulb, heater, mechanical work). Colored arrows animate energy\ntransferring from box to box (thickness ∝ power, red band = lost as\nheat). Sliders: input power, converter efficiency (%). HUD: P_in,\nP_out = η·P_in, P_lost = (1-η)·P_in. Student picks a source /\nconverter / use combination from dropdowns. Experiment: reach a target\nuseful output by tuning input and picking a converter. Evaluate:\nenergy arrows hidden; student picks correct converter type from\ndropdown to match a target output. Wrinkle: 1ère-depth — names forms\n(chemical, kinetic, thermal, radiant) and \"chaîne énergétique\"."
+}

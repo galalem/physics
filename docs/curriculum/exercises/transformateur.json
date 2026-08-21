@@ -1,0 +1,30 @@
+{
+  "id": "transformateur",
+  "title": {
+    "fr": "Le transformateur",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-info"
+    ],
+    "field": [
+      "electricite"
+    ],
+    "pattern": "circuit-schematic-builder"
+  },
+  "sources": [
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-6",
+      "page": 178
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "U₂/U₁ = N₂/N₁ = I₁/I₂   (transformateur idéal)",
+  "pattern": "circuit-schematic-builder",
+  "sketch": "Observe: SVG schematic showing primary coil (N₁ turns) and secondary\ncoil (N₂ turns) linked by an iron core. AC source drives primary.\nVoltmeters across both coils, ammeters in both. Sliders: N₁, N₂, U₁.\nHUD: transformer ratio m = N₂/N₁; U₂ = m·U₁; ideal-transformer\nrelation I₂ = I₁/m (with a \"P_out ≈ P_in\" indicator when ideal).\nLoad resistor on secondary. Experiment: reach a target U₂ by choosing\nN₂/N₁. Evaluate: U₂, I₂ readouts hidden; student picks the ratio\nblind. Wrinkle: only the ideal transformer is modeled (no losses).\nLive oscilloscope shows both waves are in phase and same frequency."
+}

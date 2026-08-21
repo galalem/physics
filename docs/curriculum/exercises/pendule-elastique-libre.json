@@ -1,0 +1,44 @@
+{
+  "id": "pendule-elastique-libre",
+  "title": {
+    "fr": "Oscillations libres d'un pendule élastique",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-maths",
+      "bac-sciexp",
+      "bac-tech"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "time-series-target-match"
+  },
+  "sources": [
+    {
+      "book": "223432P00",
+      "book_title": "Physique — 4ème année (Bac), Mathématiques",
+      "chapter": "chapitre-5",
+      "page": 139
+    },
+    {
+      "book": "223433P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences expérimentales",
+      "chapter": "chapitre-5",
+      "page": 146
+    },
+    {
+      "book": "223451P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences techniques",
+      "chapter": "chapitre-5",
+      "page": 146
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "d²x/dt² + (k/m) · x = 0 ;  T₀ = 2π·√(m/k)",
+  "pattern": "time-series-target-match",
+  "sketch": "Observe: split view — SVG mass-spring schematic left (mass m on\nspring k, either horizontal or vertical), SVG polyline x(t) graph\nright. Student sets m, k, x₀; ticker (with per-exercise time-scale)\ndrives the SHM x(t) = Xₘ·cos(ω₀t + φ) with ω₀ = √(k/m), T₀ =\n2π·√(m/k). HUD reads T₀. Experiment: 3 seeded target curves\n(T*, Xₘ*); student tunes m, k, x₀ to overlay. Evaluate: live curve\nhidden, only target curve; student submits and curves overlay for\nfeedback. Wrinkle: undamped closed-form; no Euler."
+}

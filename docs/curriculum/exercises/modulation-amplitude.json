@@ -1,0 +1,30 @@
+{
+  "id": "modulation-amplitude",
+  "title": {
+    "fr": "Modulation d'amplitude (AM)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "bac-info"
+    ],
+    "field": [
+      "electronique"
+    ],
+    "pattern": "modulation-signal-mixer"
+  },
+  "sources": [
+    {
+      "book": "223471P00",
+      "book_title": "Physique — 4ème année (Bac), Sciences de l'informatique",
+      "chapter": "chapitre-13",
+      "page": 365
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "s(t) = (A₀ + m·u(t)) · cos(2π·f_p·t)",
+  "pattern": "modulation-signal-mixer",
+  "sketch": "Observe: split view. Top-left: modulating signal m(t) (sinusoid,\nsliders for f_m, amplitude); top-right: carrier p(t) (sliders for\nf_p ≫ f_m). Bottom-left: AM output s(t) = (1 + k·m(t))·cos(2πf_p t)\nwith envelope highlighted. Bottom-right: spectrum showing carrier\nline at f_p flanked by two sidebands at f_p ± f_m. Sliders for\nmodulation depth m. Experiment: hit a target time-domain envelope\nor a target spectrum. Evaluate: given only the spectrum, deduce\nf_p, f_m, m. Wrinkle: over-modulation (m > 1) inverts the envelope\n— visible catastrophe teaches why we keep m ≤ 1."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "equilibre-axe-fixe",
+  "title": {
+    "fr": "Équilibre d'un solide assujetti à tourner autour d'un axe fixe",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-11",
+      "page": 163
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-7",
+      "page": 234
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "Σ M_Δ(F_ext) = 0   (moments par rapport à l'axe Δ)",
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG lever pivoted at Δ, with two hangable weights P₁, P₂ at\ndistances d₁, d₂ from axis. Student drags weights along the arm; a\nmoments panel shows M₁ = P₁·d₁ and M₂ = P₂·d₂ with signs; a\ntilt-indicator swings until M₁ = M₂ (théorème des moments).\nExperiment: 3 seeded (P₁, d₁, P₂) triples; student sets d₂ to balance.\nEvaluate: moments panel hidden; student sets d₂ from arithmetic alone;\nthe lever \"settles\" only if within tolerance. Wrinkle: sign of moment\n(couple horaire vs. anti-horaire)."
+}

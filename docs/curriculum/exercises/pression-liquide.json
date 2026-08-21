@@ -1,0 +1,37 @@
+{
+  "id": "pression-liquide",
+  "title": {
+    "fr": "Pression en un point d'un liquide (hydrostatique)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences",
+      "2eme-info"
+    ],
+    "field": [
+      "fluides"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-13",
+      "page": 201
+    },
+    {
+      "book": "223272P00",
+      "book_title": "Physique — 2ème année, Technologie de l'informatique",
+      "chapter": "chapitre-9",
+      "page": 304
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "p(z) = p₀ + ρ · g · h   (statique)",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas showing a tall transparent tank filled with\nliquid. Sliders: liquid density ρ (dropdown: water, oil, mercury),\ndepth h of a pressure probe (draggable vertically). HUD:\np = p_atm + ρ·g·h (Pa or bar). Small pressure gauge on the probe\nshows current reading. Side view of tank with pressure vs. depth\nline (linear, slope ρg). Experiment: reach target pressure by\nchoosing liquid + depth. Evaluate: gauge hidden; student picks depth\nblindly for a target p. Wrinkle: p_atm ≈ 10⁵ Pa baked in; densities\nin kg/m³; g = 10. \"Pressure at depth h is the same everywhere at\ndepth h regardless of container shape\" surprise is highlighted."
+}

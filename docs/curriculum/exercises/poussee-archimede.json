@@ -1,0 +1,30 @@
+{
+  "id": "poussee-archimede",
+  "title": {
+    "fr": "Poussée d'Archimède",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences"
+    ],
+    "field": [
+      "fluides"
+    ],
+    "pattern": "parametric-visualization-target-match"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-14",
+      "page": 213
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": "F_A = ρ_fluide · V_immergé · g",
+  "pattern": "parametric-visualization-target-match",
+  "sketch": "Observe: SVG canvas showing a beaker of liquid with an object\npartially or fully submerged. Sliders: object volume V (mL), object\ndensity ρ_obj, liquid density ρ_liq. HUD: weight P = ρ_obj·V·g,\nbuoyancy Π = ρ_liq·V_immerged·g, net force, floating/sinking state.\nObject animates: if ρ_obj < ρ_liq it floats; else it sinks. Both P\nand Π arrows drawn on the object. Experiment: reach a target immersed\nfraction (e.g., \"iceberg hides 90% below waterline\") by picking\ndensity ratio. Evaluate: force arrows hidden; student predicts\nfloat/sink from densities alone. Wrinkle: only equilibrium immersion\nis animated (statics exercise at 2ème)."
+}

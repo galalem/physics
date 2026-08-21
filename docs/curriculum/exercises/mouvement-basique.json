@@ -1,0 +1,30 @@
+{
+  "id": "mouvement-basique",
+  "title": {
+    "fr": "Le mouvement (référentiel, trajectoire)",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "1ere"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "2d-trajectory-launcher"
+  },
+  "sources": [
+    {
+      "book": "223103P00",
+      "book_title": "Physique — 1ère année de l'enseignement secondaire",
+      "chapter": "chapitre-10",
+      "page": 148
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "2d-trajectory-launcher",
+  "sketch": "Observe: SVG scene with a red car moving on a straight road and a\npedestrian on the sidewalk; student toggles the référentiel (road /\ncar / pedestrian) via a picker. Trajectory of the same point (a fly\non the car roof) redraws as a horizontal line, a stationary dot, or\nan inclined line depending on reference frame chosen. Advance after\nall 3 frames viewed. Experiment: 3 seeded (frame, expected trajectory)\nquiz pairings — student picks the correct frame. Evaluate: only the\ndot's motion visible in one frame; student names the frame it appears\nstationary in. Wrinkle: 1ère depth — no vectors, purely qualitative."
+}

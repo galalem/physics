@@ -1,0 +1,30 @@
+{
+  "id": "systemes-interactions-mecaniques",
+  "title": {
+    "fr": "Systèmes et interactions mécaniques",
+    "en": null,
+    "ar": null
+  },
+  "tags": {
+    "level": [
+      "2eme-sciences"
+    ],
+    "field": [
+      "mecanique"
+    ],
+    "pattern": "interactive-ray-diagram"
+  },
+  "sources": [
+    {
+      "book": "223231P00",
+      "book_title": "Physique — 2ème année, Sciences",
+      "chapter": "chapitre-9",
+      "page": 136
+    }
+  ],
+  "status": "ready",
+  "format": "interactive",
+  "formula": null,
+  "pattern": "interactive-ray-diagram",
+  "sketch": "Observe: SVG scene with 3 objects (livre, table, Terre); student\nselects a system boundary (dashed lasso) and the app labels forces as\nintérieures/extérieures, and pairs Newton's 3rd-law couples with\ncolored arrows across the boundary. Advance after 2 boundary choices\nexplored. Experiment: 3 seeded scenes; student picks correct system\nto isolate a target force. Evaluate: arrows hidden; student draws\naction-reaction pairs by connecting dots between labelled objects.\nWrinkle: emphasises \"système\" as a chosen abstraction, not a given."
+}
