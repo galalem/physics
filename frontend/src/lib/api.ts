@@ -40,7 +40,7 @@ type HttpConfig = {
   // Pass through to fetch — keeps the request alive across document unload
   // (tab close, nav). Same-origin, POST/PATCH, small body only. Used by
   // fire-and-forget "final" writes like attempt.complete + save-state.
-  keepalive?: boolean
+  keepalive?: boolean|undefined
 }
 
 type PostOpts = { keepalive?: boolean }
@@ -73,7 +73,7 @@ async function request(path: string, config?: HttpConfig): Promise<Response> {
         ...config?.headers,
       },
       body: hasBody ? JSON.stringify(config!.body) : null,
-      keepalive: config?.keepalive,
+      ...(config?.keepalive ? { keepalive: true } : {}),
     })
   } catch {
     return { status: 0, error: { code: 'network_error', message: 'Network error' } }
