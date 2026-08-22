@@ -27,6 +27,35 @@ export async function getUser(email: string): Promise<UserRow | null> {
   return rows[0] ?? null
 }
 
+// Provisioning helper for tests that need a logged-in user without going
+// through the email-verify UI (prod runs against real SMTP, so the verify
+// token isn't scrapeable). Signs up via the backend API (real argon2id
+// hash) then flips `email_verified = true` directly.
+export async function createVerifiedUser(
+  email: string,
+  password: string,
+  apiBaseUrl: string,
+): Promise<UserRow> {
+  const res = await fetch(`${apiBaseUrl}/api/v1/auth/signup`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password, firstName: 'E2E', lastName: 'Checkout', locale: 'en' }),
+  })
+  if (!res.ok) throw new Error(`Signup failed: HTTP ${res.status} — ${await res.text()}`)
+  await sql`UPDATE users SET email_verified = true WHERE email = ${email.toLowerCase()}`
+  const user = await getUser(email)
+  if (!user) throw new Error('User row missing after signup')
+  return user
+}
+
+export async function hasActiveEntitlement(userId: string): Promise<boolean> {
+  const rows = await sql<{ count: string }[]>`
+    SELECT count(*)::text FROM entitlements
+    WHERE user_id = ${userId} AND valid_until > now()
+  `
+  return Number(rows[0]?.count ?? '0') > 0
+}
+
 // Deletes any user whose email matches the test patterns. Cascades to
 // sessions, email_changes, password_reset_tokens, password_changes,
 // attempts. Returns the deleted emails.

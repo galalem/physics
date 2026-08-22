@@ -1,8 +1,10 @@
 import { createHmac, timingSafeEqual } from 'node:crypto';
 import type { Hono } from 'hono';
-import { requireEnv } from '~/config';
+import { type Locale, requireEnv } from '~/config';
 import { errors } from '~/lib/error';
 import { Entitlement } from '~/models/entitlement';
+import { User } from '~/models/user';
+import { sendPaymentSuccessNotice } from './mails.helper';
 
 // Public, unauthenticated, HMAC-verified. The SOLE path from a successful
 // payment to an `entitlements` row (per D24). Bad signature → 400; every
@@ -133,6 +135,18 @@ export default function registerRoutes(app: Hono): void {
         console.log('[gp-webhook] duplicate session, no-op', { session_id: session.id });
       } else {
         console.log('[gp-webhook] entitlement issued', { id, user_id: userId, session_id: session.id });
+        // Fire-and-forget notice. Mail failure never blocks the 200 back
+        // to GP — a stuck webhook loop is worse than a missed email.
+        void (async () => {
+          try {
+            const user = await User.findById(userId);
+            if (!user) return;
+            const days = Math.max(1, Math.round((validUntil.getTime() - Date.now()) / 86_400_000));
+            await sendPaymentSuccessNotice(user.email, user.locale as Locale, { days, validUntil });
+          } catch (mailErr) {
+            console.error('[gp-webhook] payment-success mail failed', mailErr);
+          }
+        })();
       }
     } catch (err: unknown) {
       // 23503 = FK violation (deleted user). 23505 = unique violation on

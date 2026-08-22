@@ -109,6 +109,14 @@ export class User {
     return User.fromRow(row);
   }
 
+  static async findById(userId: string, db: Db = sql): Promise<UserRow | null> {
+    const [row] = await db<UserRow[]>`
+      SELECT id, email, first_name, last_name, locale, role, email_verified
+      FROM users WHERE id = ${userId}
+    `;
+    return row ?? null;
+  }
+
   static async getCustomerId(userId: string, db: Db = sql): Promise<string | null> {
     const [row] = await db<{ customer_id: string | null }[]>`
       SELECT customer_id FROM users WHERE id = ${userId}

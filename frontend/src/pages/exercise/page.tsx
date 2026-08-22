@@ -60,6 +60,7 @@ export function ExercisePage() {
   const [iframeReady, setIframeReady] = useState(false)
   const [iframeError, setIframeError] = useState<string | null>(null)
   const [paywallUrl, setPaywallUrl] = useState<string | null>(null)
+  const [isFullscreen, setIsFullscreen] = useState(false)
 
   // Playback state fed by @physics/host callbacks.
   const [stages, setStages] = useState<StageInfo[]>([])
@@ -166,6 +167,41 @@ export function ExercisePage() {
       attempt.reset()
     }
   }, [bundleUrl, exerciseSlug, resumableAttemptId, locale])
+
+  // Sync React state with the browser's fullscreen state so ESC / F11 /
+  // browser-native exits flip our class off too. Also covers the case
+  // where the user right-clicks → exit fullscreen.
+  useEffect(() => {
+    const onChange = () => setIsFullscreen(document.fullscreenElement === canvasRef.current)
+    document.addEventListener('fullscreenchange', onChange)
+    return () => document.removeEventListener('fullscreenchange', onChange)
+  }, [])
+
+  async function toggleFullscreen() {
+    const el = canvasRef.current
+    if (!el) return
+    if (isFullscreen) {
+      if (document.fullscreenElement) await document.exitFullscreen().catch(() => {})
+      else setIsFullscreen(false)
+      // Best-effort unlock — irrelevant on desktop, quietly ignored on iOS.
+      try { screen.orientation?.unlock?.() } catch { /* noop */ }
+    } else {
+      if (typeof el.requestFullscreen === 'function') {
+        try {
+          await el.requestFullscreen()
+          // Android Chrome + Firefox honor orientation.lock() only from
+          // inside a fullscreen element with a fresh user gesture. iOS
+          // Safari doesn't allow it at all — .catch swallows the
+          // rejection so the flow doesn't fail on unsupported browsers.
+          try { await screen.orientation?.lock?.('landscape') } catch { /* noop */ }
+          return
+        } catch {
+          // fall through to CSS fallback (iOS iPhone Safari)
+        }
+      }
+      setIsFullscreen(true)
+    }
+  }
 
   async function onReset() {
     if (!exerciseSlug) return
@@ -275,7 +311,15 @@ export function ExercisePage() {
           </div>
         )}
 
-        <div className="canvas" ref={canvasRef}>
+        <div className={`canvas${isFullscreen ? ' is-fullscreen' : ''}`} ref={canvasRef}>
+          <button
+            type="button"
+            className="fullscreen-toggle"
+            onClick={toggleFullscreen}
+            aria-label={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
+          >
+            <i className={`bi ${isFullscreen ? 'bi-fullscreen-exit' : 'bi-arrows-fullscreen'}`} aria-hidden="true" />
+          </button>
           {(paywallUrl || iframeError || !iframeReady) && (
             <div className="loading-overlay">
               {paywallUrl ? (

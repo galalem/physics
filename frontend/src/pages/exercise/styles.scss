@@ -212,6 +212,73 @@
     border-radius: 16px;
     box-shadow: 0 28px 60px -30px rgba(13, 21, 36, 0.6);
     overflow: hidden;
+    // Enables cqi (container-inline-size) for children so the fullscreen
+    // toggle scales with the canvas width (canvas is aspect-ratio locked,
+    // so width ∝ height). `inline-size` only — full `size` containment
+    // breaks the aspect-ratio-driven height on mobile grid layout.
+    container-type: inline-size;
+
+    // BR-corner overlay. Convention: BR of the in-iframe HUD is reserved
+    // for parent chrome (this button). clamp() caps the scaling so the
+    // button is neither too tiny on small canvases nor too big on huge
+    // ones. Bounds tuned for ~193px-tall mobile canvas → ~28px button.
+    .fullscreen-toggle {
+      position: absolute;
+      bottom: clamp(6px, 1.6cqi, 12px);
+      inset-inline-end: clamp(6px, 1.6cqi, 12px);
+      width: clamp(28px, 4cqi, 44px);
+      height: clamp(28px, 4cqi, 44px);
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(13, 21, 36, 0.55);
+      color: #eaf0fa;
+      border: 1px solid rgba(234, 240, 250, 0.18);
+      border-radius: 8px;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+      transition: background 150ms ease, border-color 150ms ease;
+
+      i {
+        font-size: clamp(14px, 2cqi, 20px);
+        line-height: 1;
+      }
+
+      &:hover,
+      &:focus-visible {
+        background: rgba(13, 21, 36, 0.8);
+        border-color: rgba(234, 240, 250, 0.35);
+      }
+    }
+
+    // Fullscreen state — applied whether the browser Fullscreen API was
+    // used (`:fullscreen` also matches) or we're falling back to CSS
+    // pseudo-fullscreen (iOS iPhone Safari).
+    &.is-fullscreen,
+    &:fullscreen {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+      aspect-ratio: unset;
+      top: 0;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      z-index: 9999;
+
+      iframe {
+        aspect-ratio: 16 / 9;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto !important;
+        height: auto !important;
+      }
+    }
 
     .loading-overlay {
       position: absolute;
@@ -369,7 +436,9 @@
     padding: 24px 16px 60px;
 
     .canvas {
-      position: static;
+      // `relative` (not `static`) so the loading overlay + fullscreen
+      // toggle position against the canvas, not the page body.
+      position: relative;
       max-height: none;
     }
   }

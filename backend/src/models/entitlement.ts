@@ -52,7 +52,7 @@ export class Entitlement {
       VALUES
         (${p.userId}, ${p.validUntil}, ${sql.json(p.scopeFilter as never)}, 'purchase',
          ${p.promoCodeId}, ${p.paymentSessionId}, ${sql.json(p.paymentMetadata as never)})
-      ON CONFLICT (payment_session_id) DO NOTHING
+      ON CONFLICT (payment_session_id) WHERE payment_session_id IS NOT NULL DO NOTHING
       RETURNING id
     `;
     return row?.id ?? null;

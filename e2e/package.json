@@ -6,6 +6,7 @@
   "scripts": {
     "test": "playwright test",
     "test:ui": "playwright test --ui",
+    "test:prod": "PLAYWRIGHT_BASE_URL=https://physics.galalem.tn node --env-file=../backend/.env node_modules/@playwright/test/cli.js test specs/checkout-happy.spec.ts",
     "mail:purge": "tsx --env-file=../backend/.env helpers/mailpit.ts purge",
     "mail:latest": "tsx --env-file=../backend/.env helpers/mailpit.ts latest",
     "db:user": "tsx --env-file=../backend/.env helpers/db.ts user",
