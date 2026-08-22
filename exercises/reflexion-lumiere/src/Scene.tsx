@@ -444,13 +444,12 @@ export default function Scene() {
           display: 'block',
           touchAction: 'none',
           userSelect: 'none',
-          borderRadius: 14,
         }}
         onPointerMove={svgMove}
         onPointerUp={() => setDragging(false)}
         onPointerLeave={() => setDragging(false)}
       >
-        <rect x={0} y={0} width={W} height={H} fill="#0D1524" rx={14} />
+        <rect x={0} y={0} width={W} height={H} fill="#0D1524" />
         {gridLines}
         {axisLabels}
 

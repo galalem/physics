@@ -401,11 +401,10 @@ export default function Scene() {
           width: '100%',
           height: '100%',
           display: 'block',
-          borderRadius: 14,
           userSelect: 'none',
         }}
       >
-        <rect x={0} y={0} width={W} height={H} fill="#0D1524" rx={14} />
+        <rect x={0} y={0} width={W} height={H} fill="#0D1524" />
 
         {/* ─── Left panel: dot grid (Stages 1 & 2) ─────────────────── */}
         {!isStage3 && (

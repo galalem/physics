@@ -218,37 +218,46 @@
     // breaks the aspect-ratio-driven height on mobile grid layout.
     container-type: inline-size;
 
-    // BR-corner overlay. Convention: BR of the in-iframe HUD is reserved
-    // for parent chrome (this button). clamp() caps the scaling so the
-    // button is neither too tiny on small canvases nor too big on huge
-    // ones. Bounds tuned for ~193px-tall mobile canvas → ~28px button.
-    .fullscreen-toggle {
+    // BR-corner control cluster. Convention: BR of the in-iframe HUD is
+    // reserved for parent chrome. font-size drives em-based children —
+    // cqi tracks canvas width, which (since canvas is aspect-ratio locked
+    // in normal flow) proportionally matches the in-iframe HUD's 1vh
+    // unit. Kept transparent + borderless, video-controls style.
+    .canvas-controls {
       position: absolute;
-      bottom: clamp(6px, 1.6cqi, 12px);
-      inset-inline-end: clamp(6px, 1.6cqi, 12px);
-      width: clamp(28px, 4cqi, 44px);
-      height: clamp(28px, 4cqi, 44px);
+      bottom: 0;
+      inset-inline-end: 0;
       z-index: 4;
       display: flex;
       align-items: center;
-      justify-content: center;
-      background: rgba(13, 21, 36, 0.55);
+      gap: 0.3em;
+      padding: 0.6em;
+      font-size: clamp(12px, 2cqi, 22px);
       color: #eaf0fa;
-      border: 1px solid rgba(234, 240, 250, 0.18);
-      border-radius: 8px;
-      cursor: pointer;
-      backdrop-filter: blur(4px);
-      transition: background 150ms ease, border-color 150ms ease;
+      line-height: 1;
 
-      i {
-        font-size: clamp(14px, 2cqi, 20px);
-        line-height: 1;
-      }
+      button {
+        background: transparent;
+        border: 0;
+        padding: 0.35em;
+        color: inherit;
+        cursor: pointer;
+        opacity: 0.75;
+        transition: opacity 150ms ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
 
-      &:hover,
-      &:focus-visible {
-        background: rgba(13, 21, 36, 0.8);
-        border-color: rgba(234, 240, 250, 0.35);
+        &:hover,
+        &:focus-visible {
+          opacity: 1;
+          outline: none;
+        }
+
+        i {
+          font-size: 1.2em;
+          line-height: 1;
+        }
       }
     }
 
@@ -264,7 +273,7 @@
       max-height: none;
       aspect-ratio: unset;
       top: 0;
-      border-radius: 0;
+      border-radius: 0 !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -272,11 +281,8 @@
       z-index: 9999;
 
       iframe {
-        aspect-ratio: 16 / 9;
-        max-width: 100%;
-        max-height: 100%;
-        width: auto !important;
-        height: auto !important;
+        width: min(100dvw, calc(100dvh * 16 / 9)) !important;
+        height: min(100dvh, calc(100dvw * 9 / 16)) !important;
       }
     }
 

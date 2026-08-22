@@ -319,14 +319,15 @@ export function ExercisePage() {
         )}
 
         <div className={`canvas${isFullscreen ? ' is-fullscreen' : ''}`} ref={canvasRef}>
-          <button
-            type="button"
-            className="fullscreen-toggle"
-            onClick={toggleFullscreen}
-            aria-label={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
-          >
-            <i className={`bi ${isFullscreen ? 'bi-fullscreen-exit' : 'bi-arrows-fullscreen'}`} aria-hidden="true" />
-          </button>
+          <div className="canvas-controls">
+            <button
+              type="button"
+              onClick={toggleFullscreen}
+              aria-label={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
+            >
+              <i className={`bi ${isFullscreen ? 'bi-fullscreen-exit' : 'bi-arrows-fullscreen'}`} aria-hidden="true" />
+            </button>
+          </div>
           {(paywallUrl || iframeError || !iframeReady) && (
             <div className="loading-overlay">
               {paywallUrl ? (

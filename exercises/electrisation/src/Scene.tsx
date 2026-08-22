@@ -341,11 +341,11 @@ export default function Scene() {
       <svg
         viewBox={`0 0 ${W} ${H}`}
         preserveAspectRatio="xMidYMid meet"
-        style={{ width: '100%', height: '100%', display: 'block', borderRadius: 14, userSelect: 'none', touchAction: 'none' }}
+        style={{ width: '100%', height: '100%', display: 'block', userSelect: 'none', touchAction: 'none' }}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
       >
-        <rect x={0} y={0} width={W} height={H} fill="#0D1524" rx={14} />
+        <rect x={0} y={0} width={W} height={H} fill="#0D1524" />
 
         {/* Scene panel — title outside above box */}
         <rect x={40} y={60} width={500} height={340} fill="none" stroke="#12203a" strokeWidth={1} rx={6} />
