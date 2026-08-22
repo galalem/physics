@@ -178,13 +178,20 @@ export function ExercisePage() {
   }, [])
 
   async function toggleFullscreen() {
+    // TS lib.dom.d.ts is behind reality here — `screen.orientation.lock`
+    // exists on Android Chrome/Firefox but isn't in the standard type. The
+    // narrow structural type covers both `lock` and `unlock` as optional.
+    const orientation = screen.orientation as ScreenOrientation & {
+      lock?: (o: 'landscape' | 'portrait' | 'natural' | 'any') => Promise<void>
+      unlock?: () => void
+    }
     const el = canvasRef.current
     if (!el) return
     if (isFullscreen) {
       if (document.fullscreenElement) await document.exitFullscreen().catch(() => {})
       else setIsFullscreen(false)
       // Best-effort unlock — irrelevant on desktop, quietly ignored on iOS.
-      try { screen.orientation?.unlock?.() } catch { /* noop */ }
+      try { orientation?.unlock?.() } catch { /* noop */ }
     } else {
       if (typeof el.requestFullscreen === 'function') {
         try {
@@ -193,7 +200,7 @@ export function ExercisePage() {
           // inside a fullscreen element with a fresh user gesture. iOS
           // Safari doesn't allow it at all — .catch swallows the
           // rejection so the flow doesn't fail on unsupported browsers.
-          try { await screen.orientation?.lock?.('landscape') } catch { /* noop */ }
+          try { await orientation?.lock?.('landscape') } catch { /* noop */ }
           return
         } catch {
           // fall through to CSS fallback (iOS iPhone Safari)
