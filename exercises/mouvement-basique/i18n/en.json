@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Watch the fly on the red car's roof. Change the frame of reference (référentiel) using the buttons on the right, and observe how the fly's trajectory is redrawn each time.",
+      "concept": "A trajectory is the set of positions of a moving point, and its shape depends on the chosen reference frame. The same point $M$ can trace a horizontal line, a stationary dot, or an inclined line depending on the frame.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "For each shown trajectory, pick the reference frame that produces it. Confirm with $\\text{CONFIRM}$. All three pairings must be matched to advance.",
+      "concept": "In the road frame, the fly moves horizontally with the car. In the car's frame, the fly is stationary. In the walking-pedestrian's frame, the fly's path is inclined because the pedestrian's own motion adds a component.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Only the fly's motion is shown — the car and pedestrian are hidden. Read the trajectory shape, then name the reference frame that produces it. You have 3 attempts total — no guessing.",
+      "concept": "Ask yourself: in which frame does the point of interest not move? A body is at rest in the frame that shares its velocity. If the fly is fixed on the car, it is stationary in the car's frame.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "CONFIRM",
+    "stage": "STAGE",
+    "frame_road": "Road",
+    "frame_car": "Car",
+    "frame_pedestrian": "Pedestrian",
+    "trajectory": "Trajectory",
+    "pick_frame": "Which frame?",
+    "attempts": "ATTEMPTS",
+    "frames_seen": "FRAMES",
+    "matched": "MATCHED",
+    "tip1": "toggle each frame and watch the trajectory change",
+    "tip2": "pick the frame that matches the shown trajectory, then CONFIRM",
+    "tip3": "read the trajectory, then name the frame",
+    "peek_tip_rest": "A point is at rest in a frame that moves at the same velocity as the point. Look for the frame where the trajectory shrinks to a stationary dot.",
+    "peek_tip_horizontal": "A horizontal line means the observer sits still while the point moves at constant velocity along the ground direction.",
+    "peek_tip_inclined": "An inclined line means the observer is moving in a direction different from the point's motion — think about the walking pedestrian.",
+    "correct": "Correct",
+    "wrong": "Wrong",
+    "fly": "M (fly)",
+    "car": "car",
+    "pedestrian": "pedestrian",
+    "road": "road"
+  },
+  "hints": {
+    "1": {
+      "1": "Click each of the three frame buttons on the right.",
+      "2": "Watch the dashed line — it is the fly's trajectory in the chosen frame.",
+      "3": "You must view all three frames (Road, Car, Pedestrian) to advance."
+    },
+    "2": {
+      "1": "Ask: what is the observer's own motion? A stationary observer sees the fly move horizontally.",
+      "2": "If the observer moves with the car, the fly is fixed relative to them — the trajectory shrinks to a dot.",
+      "3": "The pedestrian walks at an angle, so the fly's motion relative to them is inclined."
+    },
+    "3": {
+      "1": "Which frame has the same velocity as the fly?",
+      "2": "The fly sits on the car's roof. Its velocity relative to the road equals the car's velocity.",
+      "3": "In the car's frame the fly does not move at all — that is the answer for the 'stationary dot' case."
+    }
+  }
+}

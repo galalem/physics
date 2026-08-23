@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Faites glisser les deux curseurs et observez comment le champ magnétique autour du fil rectiligne réagit au courant $I$ et à la distance $r$ de la sonde. Avancez lorsque chaque curseur a parcouru au moins la moitié de sa plage.",
+      "concept": "Le champ autour d'un fil rectiligne infini est $B = \\mu_0 I / (2\\pi r)$. Les lignes de champ sont des cercles concentriques autour du fil. Doubler $I$ double $B$ ; doubler $r$ divise $B$ par deux. En unités SI, cela se simplifie en $B[\\mu\\text{T}] = 20\\,I / r$ lorsque $I$ est en ampères et $r$ en centimètres.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une valeur cible $B^*$ du champ est affichée au point M. Ajustez le courant $I$ et la distance $r$ de la sonde jusqu'à ce que le champ à votre sonde atteigne la cible.",
+      "concept": "De nombreuses paires courant-distance produisent le même $B$. La contrainte est $\\mu_0 I / (2\\pi r) = B^*$, qui admet une famille à un paramètre de solutions — choisissez un $r$ puis résolvez en $I$, ou inversement.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La visualisation du champ est masquée. La valeur cible $B^*$ du champ au point M reste affichée. Calculez sur papier un courant et une distance valides, puis réglez les curseurs et validez. Vous avez un seul essai sur ce montage.",
+      "concept": "Réarrangez la formule en $I = 2\\pi r B^* / \\mu_0$. Choisissez d'abord une distance $r$ dans la plage du curseur, puis calculez le $I$ requis. Comme $\\mu_0 = 4\\pi \\times 10^{-7}$, le calcul se réduit à $I[\\text{A}] = r[\\text{cm}] \\cdot B^*[\\mu\\text{T}] / 20$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "FIL RECTILIGNE — VUE EN COUPE",
+    "wire": "fil (I)",
+    "probe": "sonde",
+    "match_ok": "atteint",
+    "target_short": "cible",
+    "tip1": "faites glisser les deux curseurs — regardez les lignes de champ s'intensifier avec I, s'affaiblir avec r",
+    "tip2": "tout couple (I, r) avec mu0*I/(2*pi*r) = B* convient — essayez r d'abord, puis résolvez I",
+    "tip3": "calculez sur papier : choisissez r, puis I = r * B* / 20 (I en A, r en cm, B* en uT)",
+    "peek_tip_formula": "Réarrangez : I = 2*pi*r*B / mu0. Choisissez r, puis calculez I.",
+    "peek_tip_anchor": "Raccourci : I[A] = r[cm] * B[uT] / 20. Pour B=40uT à r=5cm, I=10A."
+  },
+  "hints": {
+    "1": {
+      "1": "Faites varier le courant I de bas en haut en regardant les lignes de champ autour du fil s'intensifier ou s'estomper.",
+      "2": "Faites maintenant varier la distance r de la sonde. Les lignes de champ proches du fil sont plus intenses — c'est la décroissance en 1/r.",
+      "3": "Continuez jusqu'à ce que chaque barre de curseur ait visité les deux extrémités de sa plage (la jauge de couverture le suit)."
+    },
+    "2": {
+      "1": "Lisez la valeur cible B* sur le repère M. Le champ à votre sonde doit atteindre cette valeur.",
+      "2": "Fixez r à une valeur pratique (par exemple 5 cm), puis utilisez B = mu0*I/(2*pi*r) pour résoudre le I requis.",
+      "3": "Raccourci direct dans ces unités : I[A] = r[cm] * B*[uT] / 20. Essayez r=5cm, alors I = 5 * B*/20."
+    },
+    "3": {
+      "1": "La formule B = mu0*I/(2*pi*r) reste valable — la visualisation n'est qu'un support pédagogique.",
+      "2": "Réarrangez pour I : I = 2*pi*r*B*/mu0. Choisissez un r dans la plage du curseur, puis calculez I.",
+      "3": "En unités de la classe : I[A] = r[cm] * B*[uT] / 20. Substituez votre r choisi et le B* affiché pour obtenir I directement."
+    }
+  }
+}

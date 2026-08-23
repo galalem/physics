@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Sweep the three sliders (angle of incidence $i$, barrier tilt $\\alpha$, wavelength $\\lambda$) and watch how the reflected plane wave leaves the barrier. Advance when each slider has covered at least half of its range.",
+      "concept": "A plane wave reflects off a straight barrier so that the angle of reflection equals the angle of incidence, both measured from the barrier normal. The wavelength $\\lambda$ is preserved during reflection — only the direction changes.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target reflected direction $r^*$ is drawn as a dashed orange arrow. Adjust $i$ and $\\alpha$ until the reflected wavefronts propagate along that direction. Wavelength does not affect direction — it only changes the wavefront spacing.",
+      "concept": "The barrier's normal makes an angle $180° + \\alpha$ with the $+x$ axis (screen frame, clockwise). Reflecting the incident propagation vector across the normal yields the reflected direction $r = 180° + 2\\alpha - i$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The reflected wave is hidden. Only the incident direction, the barrier and the target arrow remain. Compute an $(i, \\alpha)$ pair that produces $r^*$ on paper, then set the sliders and submit. One try per setup — a miss rotates you to a new target.",
+      "concept": "Inverse formula: $i = 2\\alpha + 180° - r^*$. Pick any convenient $\\alpha$ in $[-30°, 30°]$ that keeps $i$ inside $[20°, 70°]$, then read off $i$. Wavelength is irrelevant — leave $\\lambda$ anywhere.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "wave tank",
+    "barrier": "barrier",
+    "source": "source",
+    "normal": "n",
+    "incident": "incident",
+    "reflected": "reflected",
+    "target_short": "target",
+    "match_ok": "aligned",
+    "tip1": "sweep every slider past half its range",
+    "tip2": "align the reflected wavefronts with the target arrow",
+    "tip3": "compute i and α on paper before touching the sliders",
+    "peek_tip_formula": "r = 180 + 2α − i (deg). Rearrange: i = 2α + 180 − r*.",
+    "peek_tip_anchor": "Anchor: try α = 0 (barrier vertical). Then i = 180 − r*."
+  },
+  "hints": {
+    "1": {
+      "1": "Which slider changes the reflected direction, and which one only changes the spacing between wavefronts?",
+      "2": "Sweep each of i, α and λ to at least half its range. The stage advances automatically when all three coverage bits are lit.",
+      "3": "Wavelength never changes the direction. If you're stuck on λ coverage, drag it end-to-end once — that's enough."
+    },
+    "2": {
+      "1": "The orange arrow shows where the reflected wave should point. Start by matching the barrier tilt α, then fine-tune with i.",
+      "2": "Lower i (steeper incidence) rotates the reflected direction farther from the barrier. Increasing α rotates both barrier and reflection clockwise.",
+      "3": "Reflected direction (deg from +x on screen) equals 180 + 2α − i. Try α = 0 first and read off the required i."
+    },
+    "3": {
+      "1": "The wavefront rendering is gone but the formula still holds. Write it on paper.",
+      "2": "Formula: r = 180 + 2α − i. Choose α, then solve for i. Keep both inside their slider ranges.",
+      "3": "Peek reveals the rearranged formula. Apply it directly to the target value shown by the r* label."
+    }
+  }
+}

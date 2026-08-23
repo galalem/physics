@@ -1,0 +1,64 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une planète attire toute masse proche par son champ de pesanteur $g$. Déplacez les curseurs (masse de la planète $M$ et altitude $h$) et observez comment les flèches du champ, dirigées vers le bas, changent. Près de la surface, les flèches semblent uniformes ; loin, elles décroissent en $1/r^2$. Faites glisser les deux curseurs sur au moins la moitié de leur plage pour continuer.",
+      "concept": "Loi de la gravitation de Newton : $g(h) = \\dfrac{G\\,M}{(R+h)^2}$, avec $G = 6{,}67 \\times 10^{-11}$, rayon de la planète $R = 6400$ km. À la surface ($h = 0$) avec $M = M_\\oplus$ : $g_0 \\approx 9{,}8$ N/kg. Doubler $M$ double $g$ ; doubler $r = R+h$ divise $g$ par 4.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une planète cible est décrite : masse $M^*$ et champ de pesanteur souhaité $g^*$ au point d'essai. Réglez le curseur $M$ sur $M^*$, puis ajustez l'altitude $h$ jusqu'à ce que le champ à la sonde atteigne $g^*$. Un anneau guide indique l'altitude à laquelle se trouve le $g$ cible pour votre masse actuelle.",
+      "concept": "Résolvez $g^* = \\dfrac{G\\,M^*}{(R+h^*)^2}$ en $h^*$ : $\\;h^* = \\sqrt{\\dfrac{G\\,M^*}{g^*}} - R$. Deux degrés de liberté, une paire de contraintes $(M^*, g^*)$ — les deux doivent être fixés. L'anneau n'atteint l'altitude correcte que lorsque $M = M^*$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches du champ sont masquées. Vous ne voyez que la planète, les valeurs cibles $M^*$ et $g^*$, et vos deux curseurs. Calculez l'altitude sur papier, réglez les deux curseurs, et validez une fois. Un échec fait tourner le montage — pas de second essai sur la même planète.",
+      "concept": "Réarrangez : $r = R + h = \\sqrt{\\dfrac{G\\,M^*}{g^*}}\\ \\Rightarrow\\ h^* = \\sqrt{\\dfrac{G\\,M^*}{g^*}} - R$. Travaillez en SI ($M$ en kg avec $M_\\oplus = 5{,}97 \\times 10^{24}$, $R = 6{,}4 \\times 10^6$ m, $g^*$ en N/kg), puis convertissez $h$ en km.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "panel": "champ de pesanteur · vue en coupe",
+    "planet": "planète",
+    "surface": "surface",
+    "probe": "masse d'essai",
+    "target": "cible",
+    "match_ok": "atteint",
+    "tip1": "faites glisser les deux curseurs sur au moins la moitié de leur plage",
+    "tip2": "réglez M sur M*, puis déplacez h jusqu'à ce que la sonde atteigne l'anneau",
+    "tip3": "calculez h sur papier avant de toucher aux curseurs — une seule validation",
+    "peek_tip_formula": "h* = sqrt(G·M*/g*) − R. Calculez d'abord r en mètres, puis soustrayez R = 6,4×10^6 m.",
+    "peek_tip_anchor": "À M = 1 M⊕, g₀ ≈ 9,8 N/kg à h = 0. Diviser g par deux signifie que r croît de √2 (h ≈ 2650 km).",
+    "altitude_short": "h",
+    "mass_short": "M",
+    "field_short": "g",
+    "g_units": "N/kg",
+    "h_units": "km",
+    "m_units": "M⊕",
+    "miss_message": "échec — g calculé",
+    "next_setup": "nouvelle planète chargée"
+  },
+  "hints": {
+    "1": {
+      "1": "Déplacez d'abord le curseur M. Les flèches varient linéairement avec M — deux fois plus de masse, deux fois plus d'attraction.",
+      "2": "Augmentez maintenant h. Les flèches décroissent en 1/r², pas linéairement — passer de 0 à 6400 km divise g par quatre.",
+      "3": "La couverture dans le coin haut-droit suit la portion de plage parcourue par chaque curseur. Amenez les deux au-dessus de 50 %."
+    },
+    "2": {
+      "1": "D'abord, ajustez M à la cible M*. L'anneau en pointillés se déplacera à l'altitude correcte.",
+      "2": "Une fois M = M*, faites glisser h jusqu'à ce que le point de la sonde atteigne l'anneau. C'est là que g = g* sur cette planète.",
+      "3": "Algébriquement : h* = sqrt(G·M*/g*) − R. Vérifiez en substituant vos valeurs de curseur."
+    },
+    "3": {
+      "1": "Les flèches ont disparu. Écrivez la formule sur papier avant de déplacer les curseurs : g = G·M/(R+h)².",
+      "2": "Résolvez pour h : h = sqrt(G·M*/g*) − R. Substituez M* en kg (multipliez par 5,97×10²⁴) et R = 6,4×10⁶ m.",
+      "3": "L'aperçu révèle la formule réarrangée. Calculez d'abord r, puis soustrayez R = 6400 km pour obtenir h en km."
+    }
+  }
+}

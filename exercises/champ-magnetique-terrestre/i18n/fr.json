@@ -1,0 +1,63 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Faites varier les trois curseurs et observez la carte de chaleur d'inclinaison et la flèche de la boussole évoluer. Le pôle magnétique (M) se situe à la latitude géographique $90^\\circ - \\alpha$. Passez à l'étape suivante quand chaque curseur a couvert au moins la moitié de sa plage.",
+      "concept": "Le champ terrestre est modélisé comme un dipôle centré, incliné d'un angle $\\alpha$ par rapport à l'axe de rotation. À la latitude magnétique $\\lambda_m$, l'angle d'inclinaison vérifie $\\tan I = 2 \\tan \\lambda_m$. La déclinaison $D$ est la déviation horizontale par rapport au nord géographique.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une inclinaison cible $I^*$ est affichée. La courbe en pointillés (isocline) trace toutes les positions où l'inclinaison locale est égale à $I^*$. Déplacez la boussole sur cette courbe en ajustant les curseurs.",
+      "concept": "Chaque point de l'isocline partage la même latitude magnétique $\\lambda_m^* = \\arctan(\\tan I^* / 2)$. La courbe est un petit cercle sur la sphère centré au pôle magnétique M — de nombreux triplets $(\\lambda_g, \\varphi, \\alpha)$ tombent dessus.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La carte de chaleur et l'isocline sont masquées. Seule l'inclinaison cible $I^*$ est donnée. Calculez un triplet $(\\lambda_g, \\varphi, \\alpha)$ valide sur papier, puis réglez les curseurs. Une seule validation par configuration — un échec vous fait passer au scénario suivant.",
+      "concept": "Inversez la formule du dipôle. Fixez $\\varphi = 0$ (boussole sur le méridien magnétique) de sorte que $\\lambda_m = \\lambda_g + \\alpha$. Alors $\\tan I^* = 2 \\tan(\\lambda_g + \\alpha)$ se résout en $\\lambda_g = \\arctan(\\tan I^* / 2) - \\alpha$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "map": "planisphère",
+    "n_pole": "N",
+    "s_pole": "S",
+    "mag_pole": "M",
+    "compass": "C",
+    "target": "cible",
+    "match_ok": "atteint",
+    "isocline": "isocline",
+    "tip1": "faites varier chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "déplacez la boussole sur l'isocline en pointillés",
+    "tip3": "calculez les paramètres sur papier, puis réglez les curseurs",
+    "peek_tip_formula": "fixez phi=0 pour que lambda_m = lat + alpha ; alors lat = atan(tan(I*)/2) - alpha",
+    "peek_tip_anchor": "pour I* = 60°, tan(I*) = sqrt(3), donc lambda_m ~ 40,9°. soustrayez alpha pour obtenir lat.",
+    "setup_equatorial": "équateur magnétique",
+    "setup_temperate": "zone tempérée",
+    "setup_mid_northern": "hémisphère nord tempéré",
+    "setup_high_northern": "hautes latitudes nord",
+    "setup_southern": "hémisphère sud"
+  },
+  "hints": {
+    "1": {
+      "1": "Quel curseur modifie le plus l'inclinaison ? Essayez la latitude en premier.",
+      "2": "Remarquez que la longitude a peu d'effet près des pôles mais un fort effet près de l'équateur quand alpha est grand.",
+      "3": "L'inclinaison du dipôle alpha décale toute la grille de latitude magnétique ; faites-la varier et regardez la carte de chaleur glisser."
+    },
+    "2": {
+      "1": "La courbe en pointillés est l'isocline. Chaque point sur celle-ci a la même inclinaison locale.",
+      "2": "Fixez un curseur (essayez phi = 0) et ajustez les deux autres jusqu'à ce que la boussole atterrisse sur la courbe.",
+      "3": "L'isocline est un cercle sur la sphère centré au pôle magnétique M. Déplacez-vous autour de M à latitude magnétique constante."
+    },
+    "3": {
+      "1": "Écrivez la formule du dipôle : tan(I) = 2 tan(lambda_m). Résolvez d'abord pour lambda_m, puis reliez-la à vos curseurs.",
+      "2": "Prenez phi = 0 et alpha = 11 (valeur terrestre). Alors lambda_m = lat + alpha, donc lat = atan(tan(I)/2) - 11.",
+      "3": "L'indice révèle la formule réarrangée. Calculez lat numériquement pour le I* donné, puis réglez le curseur avant de valider."
+    }
+  }
+}

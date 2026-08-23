@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A bar magnet lives on the right side of the workspace. A compass sits at the fixed probe on the left. Sweep the three sliders — magnet position $X$, $Y$, and the bearing $\\theta$ that its N pole points to — and watch how the field arrows around the magnet, and the compass needle at the probe, both change.",
+      "concept": "The magnet's moment $\\vec{m}$ points from its S pole to its N pole. Along the magnet's axis, the field $\\vec{B}$ is parallel to $\\vec{m}$. Perpendicular to the axis, $\\vec{B}$ is antiparallel to $\\vec{m}$. Everywhere else it interpolates: $\\vec{B} \\propto 3(\\vec{m}\\cdot\\hat{r})\\hat{r} - \\vec{m}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "An orange arrow inside the compass shows the target bearing. Place and rotate the magnet so the red compass needle lines up with the orange arrow. Many placements work — you just need the direction of $\\vec{B}$ at the probe to match.",
+      "concept": "Handy heuristic: if you place the magnet somewhere along the target bearing line and rotate its N pole to point in the target direction, the probe sits on the magnet's axis and $\\vec{B}$ at the probe points along $\\vec{m}$ — i.e., at the target bearing.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The field arrows and the compass needle are hidden. Only the target arrow, the probe position, and the magnet stay visible. Use the axis heuristic (or the full dipole formula) on paper to pick $X$, $Y$, $\\theta$ that make $\\vec{B}$ at the probe point at the target bearing. You get one submit per setup — if you miss, a new target is drawn.",
+      "concept": "Inverse strategy: pick a direction $\\hat{u}$ pointing at the target bearing. Place the magnet at any point on the ray $\\vec{r}_m = \\vec{r}_p + d\\,\\hat{u}$ (any $d > 0$ in the workspace), and set $\\theta$ so the N pole points at the target bearing. Both signs of $d$ work — the field is parallel to $\\vec{m}$ everywhere along the axis.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "workspace": "workspace",
+    "match_ok": "aligned",
+    "target": "target",
+    "n": "N",
+    "e": "E",
+    "s": "S",
+    "w": "W",
+    "probe": "probe",
+    "target_label_prefix": "target →",
+    "tip1": "sweep each slider across at least half its range",
+    "tip2": "line up the red needle with the orange target arrow",
+    "tip3": "solve for X, Y, θ on paper, then set the sliders and submit",
+    "peek_tip_formula": "Axis trick: place the magnet on the target-bearing ray from the probe, point N along that bearing.",
+    "peek_tip_anchor": "Only direction matters. Any distance along the axis gives the same B direction — pick a convenient one."
+  },
+  "hints": {
+    "1": {
+      "1": "Try leaving X and Y alone and only rotating θ. Which way does the needle swing?",
+      "2": "Now move the magnet to the same height as the probe (Y = 0) and slide it in X. On-axis, the needle follows the N pole.",
+      "3": "Move Y off-axis. Notice the needle tilts differently — perpendicular to the axis, the field is opposite to the moment."
+    },
+    "2": {
+      "1": "Read the orange arrow's bearing (E = 90°, N = 0°). That's the direction B must point at the probe.",
+      "2": "Simplest solution: put the magnet on the line from the probe pointing at the target, and rotate N to match the target bearing.",
+      "3": "Example: target E (90°). Set Y = 0 (aligned with probe), any X, and θ = 90°. The N pole faces east, the probe is on-axis, B points east."
+    },
+    "3": {
+      "1": "The visualization is gone — the physics isn't. Sketch it on paper first.",
+      "2": "Along the magnet's axis, B is parallel to m. Off-axis it isn't. Prefer an on-axis solution.",
+      "3": "Solution recipe: (a) pick the target bearing; (b) place the magnet somewhere on that bearing line from the probe; (c) set θ equal to the target bearing so the N pole points that way."
+    }
+  }
+}

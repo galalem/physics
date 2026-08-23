@@ -1,0 +1,79 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A thumbtack pressed onto skin with the same force $F$ acts very differently depending on which end touches the surface. Toggle between point-down and flat-down to watch the pressure $p = F/S$ change. Advance once you've witnessed both orientations.",
+      "concept": "Pressure is force spread over area: $p = F/S$. Same force $F$, smaller area $S$ → much larger $p$. That's why the sharp end bites and the flat end doesn't.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Explore",
+      "instruction": "Swap between three benches — nail on wood, thumbtack on skin, tank vs car on sand — and try both contact configurations for each. Witness four distinct pressure regimes to advance.",
+      "concept": "Two rules from $p = F/S$: (1) shrink the area, pressure spikes (nail, tack, cleats); (2) spread the area, pressure drops (flat side, tank tread, snowshoes). The force didn't change — only how it's distributed.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Predict",
+      "instruction": "The pressure bar is hidden. For each pair, pick which side presses harder into its surface. Do the mental math from $F$ and $S$ shown in the HUD before choosing. Answer all cases correctly in one pass; a wrong pick restarts the deck.",
+      "concept": "Same force, different area → different pressure. Bigger $F$ with the same $S$ also raises $p$. When both change, compute $F/S$ mentally and compare the two ratios.",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "scene_title": "pressure bench",
+    "controls": "controls",
+    "question": "question",
+    "regimes_seen": "regimes",
+    "deck": "deck",
+    "bench_nail": "nail on wood",
+    "bench_tack": "thumbtack on skin",
+    "bench_track": "tank vs car on sand",
+    "orient_point": "point down",
+    "orient_flat": "flat side down",
+    "orient_tank": "tank tread",
+    "orient_tire": "car tire",
+    "field_bench": "bench",
+    "field_orient": "contact",
+    "field_readout": "readout",
+    "force_lbl": "F",
+    "area_lbl": "S",
+    "pressure_lbl": "p",
+    "unit_n": "N",
+    "unit_cm2": "cm²",
+    "unit_pa": "Pa",
+    "regime_high": "high pressure",
+    "regime_low": "low pressure",
+    "penetrates": "sinks in",
+    "no_penetrate": "barely marks",
+    "pick_side": "which side presses harder?",
+    "left": "left",
+    "right": "right",
+    "same": "same",
+    "next_q": "next",
+    "restart_deck": "restart deck",
+    "tip1": "same force — flip the tack to change the contact area",
+    "tip2": "witness four distinct high/low pressure regimes across the three benches",
+    "tip3": "compute F ÷ S mentally for each side — bigger ratio wins"
+  },
+  "hints": {
+    "1": {
+      "1": "The force applied is the same. What changes is the contact area S.",
+      "2": "Smaller S with the same F gives a bigger F/S — that's why the point bites.",
+      "3": "Toggle from point-down to flat-down and back to see p jump by a large factor."
+    },
+    "2": {
+      "1": "Each bench has two contact configurations — try both on all three benches.",
+      "2": "You need four different pressure regimes (high or low) across the six configurations.",
+      "3": "Nail-point + tack-point + tank-tread + car-tire covers all four regimes."
+    },
+    "3": {
+      "1": "Write down F and S for each side on paper. Then divide.",
+      "2": "The bigger ratio F/S is the higher pressure — that side penetrates more.",
+      "3": "Same F, smaller S wins. Same S, bigger F wins. When both differ, do the division."
+    }
+  }
+}

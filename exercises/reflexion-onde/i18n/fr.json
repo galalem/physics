@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Balayez les trois curseurs (angle d'incidence $i$, inclinaison de l'obstacle $\\alpha$, longueur d'onde $\\lambda$) et observez comment l'onde plane réfléchie quitte l'obstacle. Passez à l'étape suivante lorsque chaque curseur a parcouru au moins la moitié de sa plage.",
+      "concept": "Une onde plane se réfléchit sur un obstacle rectiligne de sorte que l'angle de réflexion soit égal à l'angle d'incidence, tous deux mesurés par rapport à la normale à l'obstacle. La longueur d'onde $\\lambda$ est conservée lors de la réflexion — seule la direction change.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une direction réfléchie cible $r^*$ est tracée sous forme de flèche orange en pointillés. Ajustez $i$ et $\\alpha$ jusqu'à ce que les fronts d'onde réfléchis se propagent selon cette direction. La longueur d'onde n'affecte pas la direction — elle ne modifie que l'espacement des fronts d'onde.",
+      "concept": "La normale à l'obstacle fait un angle $180° + \\alpha$ avec l'axe $+x$ (repère écran, sens horaire). En réfléchissant le vecteur de propagation incident par rapport à la normale, on obtient la direction réfléchie $r = 180° + 2\\alpha - i$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'onde réfléchie est masquée. Seuls la direction incidente, l'obstacle et la flèche cible restent visibles. Calculez sur papier un couple $(i, \\alpha)$ produisant $r^*$, puis réglez les curseurs et validez. Un essai par configuration — un échec vous fait passer à une nouvelle cible.",
+      "concept": "Formule inverse : $i = 2\\alpha + 180° - r^*$. Choisissez un $\\alpha$ pratique dans $[-30°, 30°]$ qui maintient $i$ dans $[20°, 70°]$, puis lisez $i$. La longueur d'onde n'a aucune importance — laissez $\\lambda$ n'importe où.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "cuve à ondes",
+    "barrier": "obstacle",
+    "source": "source",
+    "normal": "n",
+    "incident": "incident",
+    "reflected": "réfléchi",
+    "target_short": "cible",
+    "match_ok": "aligné",
+    "tip1": "balayez chaque curseur au-delà de la moitié de sa plage",
+    "tip2": "alignez les fronts d'onde réfléchis avec la flèche cible",
+    "tip3": "calculez i et α sur papier avant de toucher aux curseurs",
+    "peek_tip_formula": "r = 180 + 2α − i (deg). Réarrangez : i = 2α + 180 − r*.",
+    "peek_tip_anchor": "Repère : essayez α = 0 (obstacle vertical). Alors i = 180 − r*."
+  },
+  "hints": {
+    "1": {
+      "1": "Quel curseur change la direction réfléchie, et lequel ne change que l'espacement entre les fronts d'onde ?",
+      "2": "Balayez chacun de i, α et λ au moins à la moitié de sa plage. L'étape avance automatiquement lorsque les trois indicateurs de couverture sont allumés.",
+      "3": "La longueur d'onde ne change jamais la direction. Si vous êtes bloqué sur la couverture de λ, faites-le glisser d'un bout à l'autre une fois — cela suffit."
+    },
+    "2": {
+      "1": "La flèche orange indique où l'onde réfléchie doit pointer. Commencez par ajuster l'inclinaison α de l'obstacle, puis affinez avec i.",
+      "2": "Diminuer i (incidence plus raide) éloigne la direction réfléchie de l'obstacle. Augmenter α fait tourner l'obstacle et la réflexion dans le sens horaire.",
+      "3": "La direction réfléchie (deg par rapport à +x à l'écran) vaut 180 + 2α − i. Essayez α = 0 en premier et lisez le i nécessaire."
+    },
+    "3": {
+      "1": "Le rendu des fronts d'onde a disparu mais la formule reste valable. Écrivez-la sur papier.",
+      "2": "Formule : r = 180 + 2α − i. Choisissez α, puis résolvez i. Gardez les deux dans les plages des curseurs.",
+      "3": "L'aperçu révèle la formule réarrangée. Appliquez-la directement à la valeur cible indiquée par l'étiquette r*."
+    }
+  }
+}

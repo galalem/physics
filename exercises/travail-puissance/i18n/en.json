@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A person pulls a crate along the floor with a rope tilted at angle $\\alpha$ from the horizontal. Sweep all four sliders ($F$, $\\alpha$, $d$, $\\Delta t$) and watch how the work $W$ and power $P$ react. Notice what happens as $\\alpha \\to 90°$.",
+      "concept": "Work of a constant force: $W = F \\cdot d \\cdot \\cos(\\alpha)$. Only the projection of $F$ along the displacement does work — the vertical component is 'wasted'. Mean power: $P = W / \\Delta t$. When $\\alpha = 90°$, $\\cos(\\alpha) = 0$ and no work is done, no matter how strong the pull.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target power $P^{*}$ is displayed. Tune the four sliders so that the delivered mean power $P = W / \\Delta t$ matches $P^{*}$. Many combinations of $(F, \\alpha, d, \\Delta t)$ produce the same $P$ — pick any that works.",
+      "concept": "$P^{*} = \\dfrac{F \\cdot d \\cdot \\cos(\\alpha)}{\\Delta t}$. Doubling $F$ or $d$ doubles $P$; doubling $\\Delta t$ halves $P$; increasing $\\alpha$ shrinks $\\cos(\\alpha)$ and cuts $P$. Try holding three sliders and moving the fourth to fine-tune.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The force diagram and live readouts are hidden. You are given a target work $W^{*}$ and a fixed distance $d^{*}$. Compute $F$ and $\\alpha$ on paper so that $W = F \\cdot d^{*} \\cdot \\cos(\\alpha) = W^{*}$, then set the sliders (including $d = d^{*}$) and submit.",
+      "concept": "Inverse formula: $F \\cdot \\cos(\\alpha) = \\dfrac{W^{*}}{d^{*}}$. Many $(F, \\alpha)$ pairs satisfy it. The simplest choice is $\\alpha = 0°$, which gives $F = W^{*} / d^{*}$ directly. $\\Delta t$ does not enter — it only affects power, not work.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "scene",
+    "floor": "floor",
+    "crate": "crate",
+    "rope": "F",
+    "cos_proj": "F cos α",
+    "sin_proj": "F sin α",
+    "motion": "displacement d",
+    "match_ok": "match",
+    "target_short": "target",
+    "tip1": "sweep every slider across at least half its range",
+    "tip2": "tune F, α, d, Δt so that P = W/Δt hits the target",
+    "tip3": "compute F and α on paper first, then set the sliders",
+    "peek_tip_formula": "Rearrange: F·cos(α) = W*/d*. Try α = 0° first, then F = W*/d*.",
+    "peek_tip_anchor": "Δt does not enter the work formula — set it anywhere. Only F, α, d matter for W."
+  },
+  "hints": {
+    "1": {
+      "1": "Push F to the top and Δt to the bottom — power should spike.",
+      "2": "Now sweep α from 0° to 90°. What happens to W near 90°?",
+      "3": "Only the horizontal component F·cos(α) does work. The vertical part just lifts the rope."
+    },
+    "2": {
+      "1": "Read the target on the right. Which slider changes P fastest for you right now?",
+      "2": "Fix α at 0° and Δt at a round number, then tune F and d to reach P*.",
+      "3": "Direct solve: pick d and α, then F = P*·Δt / (d·cos α)."
+    },
+    "3": {
+      "1": "Set d to the shown d* first — it is fixed. Then F and α are your two unknowns.",
+      "2": "The simplest path: pick α = 0°, then F = W*/d* is a single division.",
+      "3": "If you want a non-trivial α: F = W* / (d*·cos α). Pick α, plug in, read F."
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Balayez les deux curseurs et observez comment l'intensité du champ électrique $|\\vec{E}|$ au point de sonde $M$ dépend de la charge $|q|$ et de la distance $r$. Passez à l'étape suivante lorsque chaque curseur a couvert au moins la moitié de sa plage.",
+      "concept": "Une charge ponctuelle $q$ crée un champ électrique radial. Sa norme à une distance $r$ est $|\\vec{E}| = k \\cdot |q| / r^2$, avec $k \\approx 8,99 \\times 10^9\\,\\mathrm{N\\,m^2/C^2}$. Le champ décroît en $1/r^2$ avec la distance.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Un point de sonde cible $M^{\\star}$ est tracé à un rayon fixe $r^{\\star}$ autour de la charge, avec une norme de champ requise $|E^{\\star}|$. Amenez la sonde sur la cible et ajustez $|q|$ jusqu'à ce que le $|\\vec{E}|$ mesuré coïncide.",
+      "concept": "Pour une cible fixe $(r^{\\star}, |E^{\\star}|)$, une seule valeur de charge satisfait la loi de Coulomb : $|q| = |E^{\\star}|\\,r^{\\star 2} / k$. Vous devez aligner les deux degrés de liberté — la distance de la sonde ET la charge — pour atteindre la cible.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La visualisation du champ est masquée. Seuls le marqueur cible à $r^{\\star}$ et sa norme requise $|E^{\\star}|$ restent visibles. Calculez la charge sur papier à partir de $|q| = |E^{\\star}|\\,r^{\\star 2} / k$, puis réglez les deux curseurs et validez une seule fois.",
+      "concept": "Avec des unités choisies telles que $r$ est en centimètres, $|q|$ en nanocoulombs et $|\\vec{E}|$ en $\\mathrm{kV/m}$, la formule de travail est $|E|(\\mathrm{kV/m}) = 89{,}9 \\cdot |q|(\\mathrm{nC}) / r^2(\\mathrm{cm}^2)$. Faites le calcul sur papier avant de toucher aux curseurs.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "scene_label": "charge ponctuelle — champ radial",
+    "charge_label": "Q",
+    "probe_label": "M",
+    "target_label": "M*",
+    "e_units": "kV/m",
+    "q_units": "nC",
+    "r_units": "cm",
+    "match_ok": "coïncidence",
+    "tip1": "balayez |q| et r sur au moins la moitié de leurs plages",
+    "tip2": "alignez la sonde avec le cercle cible, puis ajustez q",
+    "tip3": "calculez |q| sur papier d'abord, puis réglez les deux curseurs",
+    "peek_tip_formula": "Réarrangez : |q| = |E*| · r*² / k. Calcul direct — sans inconnue.",
+    "peek_tip_anchor": "Unités de travail : |E|(kV/m) = 89,9 · |q|(nC) / r²(cm). Vérifiez les ordres de grandeur."
+  },
+  "hints": {
+    "1": {
+      "1": "Quel curseur modifie le plus fortement |E| — |q| ou r ?",
+      "2": "Doubler |q| double |E|. Doubler r divise |E| par quatre — la loi en 1/r².",
+      "3": "|E| varie linéairement avec |q| et en 1/r². Balayez chaque curseur sur toute sa plage pour ressentir l'asymétrie."
+    },
+    "2": {
+      "1": "Lisez les deux coordonnées de la cible orange : le rayon r* et la norme de champ requise |E*|.",
+      "2": "Amenez d'abord la sonde (curseur r) sur le cercle cible en pointillés. Puis ajustez |q| jusqu'à ce que |E| en ce point coïncide avec |E*|.",
+      "3": "Résolvez la loi de Coulomb pour la charge : |q| = |E*| · r*² / k. Réglez votre curseur Q sur cette valeur et placez la sonde à r = r*."
+    },
+    "3": {
+      "1": "La visualisation est masquée, mais la formule reste inchangée. Écrivez |E*| = k |q| / r*² sur papier.",
+      "2": "Résolvez pour |q| : |q| = |E*| · r*² / k. Utilisez les unités de travail : |E|(kV/m) = 89,9 · |q|(nC) / r²(cm).",
+      "3": "Calculez |q|(nC) = |E*|(kV/m) · r*²(cm²) / 89,9. Réglez r exactement à r* et Q à votre |q| calculé, puis validez."
+    }
+  }
+}

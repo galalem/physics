@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "The generator forces a sinusoidal EMF $u(t) = U_\\text{max}\\cos(\\omega t)$ on the series RLC circuit. Sweep the pulsation $\\omega$ and the resistance $R$ — watch $i(t)$: the peak swells as $\\omega$ approaches the resonance value $\\omega_0 = 1/\\sqrt{L\\,C}$. Move BOTH sliders AND cross through resonance to advance.",
+      "concept": "In steady state $i(t) = I_\\text{max}\\cos(\\omega t - \\varphi)$ with $I_\\text{max} = U_\\text{max}/Z$ and $Z = \\sqrt{R^{2} + (L\\omega - 1/(C\\omega))^{2}}$. Amplitude peaks when the reactive part vanishes: $L\\omega_0 = 1/(C\\omega_0)\\ \\Rightarrow\\ \\omega_0 = 1/\\sqrt{L\\,C}$, where $Z = R$ and $I_\\text{max} = U_\\text{max}/R$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit the target amplitude marker $I^{*}$ on the chart — tune $\\omega$ and $R$ so your peak current matches within $\\pm 5\\%$. Many $(\\omega, R)$ pairs work: only the impedance $Z$ matters here.",
+      "concept": "$I^{*} = U_\\text{max}/Z^{*}\\ \\Rightarrow\\ Z^{*} = U_\\text{max}/I^{*}$. Pick any $(\\omega, R)$ with $\\sqrt{R^{2} + (L\\omega - 1/(C\\omega))^{2}} = Z^{*}$. Fastest route: at $\\omega = \\omega_0$ the reactance vanishes, so $R = Z^{*}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Only the target sinusoid is drawn. Read its period $T$ from the peak-to-peak spacing, compute $\\omega^{*} = 2\\pi/T$, set the $\\omega$ slider, then press RUN to overlay your curve. Match $\\omega$ to within $\\pm 3\\%$.",
+      "concept": "The forced current has the same period as the drive: $T = 2\\pi/\\omega$. Read $T$ from two consecutive peaks of the target curve, invert to get $\\omega^{*}$. $R$ shifts the amplitude but does not change the period.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "series RLC + generator",
+    "chart_title": "i(t)",
+    "y_axis_label": "i (mA)",
+    "t_axis_label": "t (s)",
+    "hit": "hit!",
+    "match_ok": "match",
+    "match_off": "off",
+    "submit_button": "RUN",
+    "gbf_label": "GBF ω",
+    "resonance_marker": "ω₀",
+    "peek_hint": "read the period T between two peaks on the target — ω = 2·π / T",
+    "tip1": "sweep ω across its range; watch the peak grow near ω₀ = 1/√(L·C)",
+    "tip2": "tune ω and R so the peak of your curve touches the orange I* line",
+    "tip3": "read the target's period, compute ω, then press RUN"
+  },
+  "hints": {
+    "1": {
+      "1": "Slide ω slowly from small to large. The peak of i(t) grows, maxes out, then shrinks again.",
+      "2": "The maximum occurs at ω₀ = 1/√(L·C). With L = 1 H and C = 1 mF, ω₀ ≈ 31.6 rad/s.",
+      "3": "At resonance, Z reduces to R. Smaller R gives a taller peak — try R at its minimum and sweep ω through resonance."
+    },
+    "2": {
+      "1": "Compute Z* = U_max / I*. Then any (ω, R) whose impedance equals Z* hits the target.",
+      "2": "Set ω = ω₀ so the reactance is zero — then R alone controls I_max. Adjust R until R = Z*.",
+      "3": "If I* is large (≥ 200 mA), you need a small R near resonance. If I* is small (< 100 mA), move ω far from ω₀."
+    },
+    "3": {
+      "1": "Look at the target sinusoid: measure the horizontal distance between two consecutive peaks — that is the period T.",
+      "2": "Invert: ω* = 2π / T. Set the ω slider to that value; ignore R for now (only ω is judged).",
+      "3": "R does not change the period, only the peak height. The reveal shows amplitude mismatch but tolerance is on ω."
+    }
+  }
+}

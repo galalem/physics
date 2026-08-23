@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Sweep all three sliders to see how the gravitational attraction $F$ between two bodies depends on each mass and their separation. Advance once each slider has covered at least half its range.",
+      "concept": "Newton's law of universal gravitation: $F = G\\,\\dfrac{m_1 m_2}{r^2}$ with $G = 6.67\\times 10^{-11}\\,\\mathrm{N\\,m^2/kg^2}$. $F$ scales linearly with either mass and falls as $1/r^2$ with separation. Same $1/r^2$ shape as Coulomb's law — the physics of central forces.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target force magnitude $|F^*|$ is shown. Adjust $m_1$, $m_2$, and $r$ until the live force arrow matches the dashed target arrow. Many triples produce the same force.",
+      "concept": "$F$ has three degrees of freedom, so infinitely many $(m_1, m_2, r)$ triples yield the same $|F^*|$. Fixing any two of the three constrains the third: $r = \\sqrt{G\\,m_1 m_2 / |F^*|}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Force arrows are hidden. Only the target $|F^*|$ is shown. Compute a valid $(m_1, m_2, r)$ triple on paper, then set the sliders to your values and submit. One submit per setup — a miss rotates to a new target.",
+      "concept": "Rearrange the formula: pick two of the three parameters (typical: fix $m_1$ near an Earth-mass value $\\sim 6\\times 10^{24}\\,\\mathrm{kg}$ and $m_2$ near a satellite value), then solve $r = \\sqrt{G\\,m_1 m_2 / |F^*|}$. Convert back to slider units — the sliders show $m_1$ in $10^{24}\\,\\mathrm{kg}$, $m_2$ in $10^{22}\\,\\mathrm{kg}$, $r$ in $\\mathrm{Mm}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "gravitational scene",
+    "primary": "m1",
+    "secondary": "m2",
+    "distance": "r",
+    "target": "TARGET",
+    "target_short": "target",
+    "match_ok": "match",
+    "force_arrow": "F",
+    "tip1": "sweep m1, m2, r each across at least half their range",
+    "tip2": "match the force arrow to the dashed target arrow",
+    "tip3": "compute a valid (m1, m2, r) on paper, then set sliders",
+    "peek_tip_formula": "Rearrange: r = sqrt(G · m1 · m2 / F*). Fix m1 near 6 (Earth) and m2 near 10, then solve r.",
+    "peek_tip_anchor": "In slider units: F [N] = 6.67e23 · m1 · m2 / r_Mm². Cross-check by order of magnitude first."
+  },
+  "hints": {
+    "1": {
+      "1": "The force depends on THREE parameters — each slider changes the arrow differently. Which changes it fastest?",
+      "2": "Doubling m1 or m2 doubles the force. Doubling r divides the force by four.",
+      "3": "The 1/r^2 dependence dominates — a small change in r shifts F much more than a small change in either mass."
+    },
+    "2": {
+      "1": "Read the target |F*| in the top-right HUD. Which combination of sliders would produce that magnitude?",
+      "2": "Fix two parameters at round values, then solve for the third. For example, keep m1 = 6 and r = 100 Mm, then find m2.",
+      "3": "F = G · m1 · m2 / r². Isolate: m2 = F · r² / (G · m1). Plug in your target and your two chosen values."
+    },
+    "3": {
+      "1": "The visualization is gone by design — you must compute. Write Newton's formula on paper and identify what's known.",
+      "2": "The sliders are in scaled units. The full formula in slider units is F [N] = 6.67 × 10^23 · m1 · m2 / r_Mm² — much simpler than the raw SI form.",
+      "3": "Pick a round value for m1 (say 6 or 10), and another for m2 (say 5 or 20). Then solve r = sqrt(6.67e23 · m1 · m2 / F*) directly — no unknowns left."
+    }
+  }
+}

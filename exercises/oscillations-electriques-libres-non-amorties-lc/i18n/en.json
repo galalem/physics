@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "An ideal $LC$ loop trades energy between the coil and the capacitor forever. The capacitor starts charged at $U_0$; the current is initially zero. Sweep $L$ and $C$, watch $u_C(t)$ oscillate, and wait for one full period to advance.",
+      "concept": "$\\ddot{u}_C + \\dfrac{u_C}{L\\,C} = 0\\ \\Rightarrow\\ u_C(t) = U_0\\,\\cos(\\omega_0\\,t)$ with $\\omega_0 = \\dfrac{1}{\\sqrt{L\\,C}}$ and $T_0 = 2\\pi\\sqrt{L\\,C}$. Total energy $E = \\tfrac{1}{2}\\,C\\,U_0^2$ is conserved — nothing dissipates.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit the orange crosshair: $u_C$ must equal $V^{*}$ at exactly $t^{*}$. Tune $L$ and $C$ so your live curve passes through it. Many $(L, C)$ pairs work — success depends only on $T_0$.",
+      "concept": "Read the target's phase: a peak means $t^{*} = k\\,T_0$, a zero means $t^{*} = (2k+1)\\,T_0/4$, a trough means $t^{*} = (2k+1)\\,T_0/2$. That fixes $T_0^{*}$; then set $L\\,C = (T_0^{*}/(2\\pi))^2$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Only the target curve is drawn. Read $T_0^{*}$ off its shape on paper, pick $L$ and $C$ blind, then press RUN to overlay your curve. Match $T_0$ to within $\\pm 3\\%$.",
+      "concept": "$T_0^{*} = 2\\pi\\sqrt{L^{*}\\,C^{*}}\\ \\Rightarrow\\ L^{*}\\,C^{*} = \\left(\\dfrac{T_0^{*}}{2\\pi}\\right)^2$. Any pair with the right product hits the tolerance.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "circuit LC",
+    "chart_title": "u_C (t)",
+    "y_axis_label": "u_C (V) →",
+    "x_axis_label": "t (ms) →",
+    "coil_label": "L",
+    "cap_label": "C",
+    "u0_label": "u_C(0) = U0",
+    "hit": "hit!",
+    "match_ok": "match",
+    "match_off": "off",
+    "submit_button": "RUN",
+    "peek_hint": "count peaks: T0 is the time between two successive maxima — read it off the t-axis",
+    "tip1": "sweep L and C — watch T0 stretch and shrink. Wait for one full period.",
+    "tip2": "adjust L and C until the crosshair sits on your live curve",
+    "tip3": "measure T0* between two peaks on the target, compute L·C = (T0*/(2π))², then RUN"
+  },
+  "hints": {
+    "1": {
+      "1": "Both L and C set the period. Try quadrupling L then quartering C — see what changes.",
+      "2": "T0 = 2π√(L·C). Larger L·C means slower oscillation, and vice versa.",
+      "3": "A full period is the time from one peak back to the next peak. Watch two peaks go by."
+    },
+    "2": {
+      "1": "Read the crosshair: is it at a peak (u_C = +U0), a zero, or a trough (-U0)?",
+      "2": "If it sits at u_C = -U0 at t*, then t* = T0*/2, so T0* = 2·t*. If u_C = 0 at t*, then t* = T0*/4.",
+      "3": "Once you know T0*, pick any (L, C) with L·C = (T0*/(2π))². Halving L means doubling C."
+    },
+    "3": {
+      "1": "Find two successive peaks (or the first zero-crossing) on the target curve — that gives you T0*.",
+      "2": "Compute L·C = (T0*/(2π))². Then any (L, C) pair with that product works.",
+      "3": "Halving L and doubling C keeps L·C constant — use this to fine-tune within slider ranges."
+    }
+  }
+}

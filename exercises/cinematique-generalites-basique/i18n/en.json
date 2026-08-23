@@ -1,0 +1,62 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A fly sits on the roof of car A moving at speed $v_A$. Pick a reference frame (road, pedestrian, car B) and press TRACE to draw the fly's trajectory. Change frames and change $v_A$ to see how the same motion produces different trajectories.",
+      "concept": "A **trajectory** is the set of successive positions of a point, and it always depends on the chosen **reference frame** (référentiel). The fly's ground-frame motion is $x(t) = x_0 + v_A\\,t$ with a small vertical hop. Change the observer, and the shape of the trajectory changes.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Three ghosted target trajectories are shown. For each one, pick the reference frame and set $v_A$ so your TRACE matches the ghost. A live preview shows the shape you're about to draw.",
+      "concept": "In the car-A frame, the fly only bobs vertically. In the road frame, its path stretches to the right at $v_A$. In a frame moving at $v_F$, the horizontal velocity of the fly becomes $v_A - v_F$ — negative velocity flips the trajectory to the left.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The live preview is hidden. Read each ghosted target trajectory and reason on paper about which reference frame produced it and what value of $v_A$ is needed. You have limited traces — no spray-and-pray.",
+      "concept": "Ask yourself: which observer sees the fly move to the right? to the left? not at all? For horizontal travel over $T = 3\\,\\text{s}$, the trace length in metres equals $|v_A - v_F| \\cdot T$. A vertical-only ghost means $v_A - v_F = 0$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "trace": "TRACE",
+    "stage": "STAGE",
+    "frame": "FRAME",
+    "frame_road": "Road (ground)",
+    "frame_pedestrian": "Pedestrian",
+    "frame_carB": "Car B",
+    "frame_carA": "Car A",
+    "vA": "v_A",
+    "vB": "v_B",
+    "vP": "v_p",
+    "matches": "MATCHES",
+    "traces": "TRACES",
+    "tip1": "pick a frame, move v_A, then TRACE",
+    "tip2": "use the dashed preview to line up each ghost",
+    "tip3": "compute v_A − v_frame from the ghost, then TRACE",
+    "peek_tip_relative": "In a frame moving at v_F, the fly's horizontal velocity is v_A − v_F. A leftward trace means v_F > v_A.",
+    "peek_tip_dot": "A vertical-only trace (no horizontal drift) means v_A − v_frame = 0. Match the frame's velocity to v_A.",
+    "peek_tip_length": "Trace duration is 3 s. Horizontal length in metres ≈ |v_A − v_frame| · 3."
+  },
+  "hints": {
+    "1": {
+      "1": "Pick a frame from the panel on the left, then press TRACE.",
+      "2": "Try the same v_A in two different frames — the trajectory shape changes.",
+      "3": "In the car-A frame the fly barely moves horizontally: the car and the fly share the same velocity."
+    },
+    "2": {
+      "1": "The dashed preview shows the trace you're about to draw. Adjust v_A and swap frames until it overlaps the ghost.",
+      "2": "A horizontal ghost heading right means v_A > v_frame. Heading left means v_A < v_frame.",
+      "3": "A vertical-only ghost means v_A − v_frame = 0: the fly appears stationary along x."
+    },
+    "3": {
+      "1": "There's no preview. Read each ghost and figure out which observer sees it before touching the controls.",
+      "2": "Trace length ≈ |v_A − v_frame| · 3 s. Direction tells you the sign of v_A − v_frame.",
+      "3": "If the ghost is a vertical hop, pick the frame whose velocity matches v_A. If it drifts left, pick a frame moving faster than v_A."
+    }
+  }
+}

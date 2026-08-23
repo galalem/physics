@@ -1,0 +1,63 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Sweep the three sliders and watch the inclinaison heatmap and compass arrow change. The magnetic pole (M) sits at geographic latitude $90^\\circ - \\alpha$. Advance when each slider has covered at least half its range.",
+      "concept": "Earth's field is modeled as a centered dipole tilted by angle $\\alpha$ from the rotation axis. At magnetic latitude $\\lambda_m$ the dip angle satisfies $\\tan I = 2 \\tan \\lambda_m$. Declinaison $D$ is the horizontal deflection from geographic north.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target inclinaison $I^*$ is shown. The dashed curve (isocline) traces every position where the local inclinaison equals $I^*$. Move the compass onto that curve by tuning the sliders.",
+      "concept": "Every point on the isocline shares the same magnetic latitude $\\lambda_m^* = \\arctan(\\tan I^* / 2)$. The curve is a small circle on the sphere centered at the magnetic pole M — many $(\\lambda_g, \\varphi, \\alpha)$ triples land on it.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Heatmap and isocline are hidden. Only the target inclinaison $I^*$ is given. Compute a valid $(\\lambda_g, \\varphi, \\alpha)$ on paper, then set the sliders. One submit per setup — a miss rotates you to the next scenario.",
+      "concept": "Invert the dipole formula. Fix $\\varphi = 0$ (compass on the magnetic meridian) so $\\lambda_m = \\lambda_g + \\alpha$. Then $\\tan I^* = 2 \\tan(\\lambda_g + \\alpha)$ solves as $\\lambda_g = \\arctan(\\tan I^* / 2) - \\alpha$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "map": "world map",
+    "n_pole": "N",
+    "s_pole": "S",
+    "mag_pole": "M",
+    "compass": "C",
+    "target": "target",
+    "match_ok": "match",
+    "isocline": "isocline",
+    "tip1": "sweep each slider to at least half its range",
+    "tip2": "drag the compass onto the dashed isocline",
+    "tip3": "compute the parameters on paper, then set the sliders",
+    "peek_tip_formula": "fix phi=0 so lambda_m = lat + alpha; then lat = atan(tan(I*)/2) - alpha",
+    "peek_tip_anchor": "for I* = 60deg, tan(I*) = sqrt(3), so lambda_m ~ 40.9deg. subtract alpha to get lat.",
+    "setup_equatorial": "magnetic equator",
+    "setup_temperate": "temperate zone",
+    "setup_mid_northern": "mid-northern",
+    "setup_high_northern": "high-northern",
+    "setup_southern": "southern hemisphere"
+  },
+  "hints": {
+    "1": {
+      "1": "Which slider changes the inclinaison the most? Try the latitude first.",
+      "2": "Notice that longitude has little effect near the poles but a strong effect near the equator when alpha is large.",
+      "3": "The dipole tilt alpha shifts the whole magnetic-latitude grid; sweep it and watch the heatmap slide."
+    },
+    "2": {
+      "1": "The dashed curve is the isocline. Every point on it has the same local inclinaison.",
+      "2": "Fix one slider (try phi = 0) and adjust the other two until the compass lands on the curve.",
+      "3": "The isocline is a circle on the sphere centered at the magnetic pole M. Move around M at constant magnetic latitude."
+    },
+    "3": {
+      "1": "Write the dipole formula: tan(I) = 2 tan(lambda_m). Solve for lambda_m first, then relate it to your sliders.",
+      "2": "Pick phi = 0 and alpha = 11 (Earth's value). Then lambda_m = lat + alpha, so lat = atan(tan(I)/2) - 11.",
+      "3": "Peek reveals the rearranged formula. Compute lat numerically for the given I*, then set the slider before you submit."
+    }
+  }
+}

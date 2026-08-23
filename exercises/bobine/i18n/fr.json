@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une bobine $L$ s'oppose aux variations du courant. Cliquez sur l'interrupteur $K$ pour fermer le circuit. Observez $u_L = L\\,\\dfrac{di}{dt}$ bondir jusqu'à $E$ puis décroître pendant que le courant $i$ s'établit. Ajustez $L$ et $R$, complétez une montée entière pour progresser.",
+      "concept": "Établissement : $i(t) = \\dfrac{E}{R}\\,(1 - e^{-t/\\tau})$ et $u_L(t) = E\\,e^{-t/\\tau}$, avec $\\tau = \\dfrac{L}{R}$. À $t = \\tau$, $u_L$ a décru à $37\\%$ de $E$ — le même $\\tau$ que dans les bobines d'allumage, les moteurs DC, et tout régulateur à découpage.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteignez le viseur orange : $u_L$ doit valoir $V^{*}$ à exactement $t^{*}$. Ajustez $L$ et $R$ pour que votre courbe en direct passe par la cible. De nombreux couples $(L, R)$ fonctionnent — la réussite dépend de $\\tau = L/R$.",
+      "concept": "$V^{*} = E\\,e^{-t^{*}/\\tau}\\ \\Rightarrow\\ \\tau^{*} = -\\dfrac{t^{*}}{\\ln(V^{*}/E)}$. Ajustez $L$ et $R$ pour retrouver $\\tau^{*}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Seule la courbe cible $u_L(t)$ est tracée. Lisez $\\tau^{*}$ à partir de sa forme sur papier, choisissez $L$ et $R$, puis appuyez sur LANCER pour révéler votre courbe. Atteignez $\\tau$ à $\\pm 3\\%$ près.",
+      "concept": "Méthode de lecture : à $t = \\tau^{*}$, la courbe croise $0.37\\,E$ (car $e^{-1} \\approx 0.37$). Estimez $\\tau^{*}$ à partir de ce croisement, puis choisissez tout couple $(L, R)$ dont le rapport est égal à $\\tau^{*}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "circuit",
+    "chart_title": "u_L (t)",
+    "y_axis_label": "u_L (V)",
+    "hit": "réussi !",
+    "match_ok": "correct",
+    "match_off": "hors cible",
+    "submit_button": "LANCER",
+    "closed_label": "fermé",
+    "open_label": "ouvert",
+    "click_switch": "cliquez K pour fermer / ouvrir",
+    "peek_hint": "trouvez où la cible croise 0.37·E — cette valeur de t est tau*",
+    "tip1": "fermez K, attendez que le courant s'établisse entièrement, puis rouvrez pour réinitialiser",
+    "tip2": "ajustez L et R pour que votre courbe u_L passe par le viseur cible",
+    "tip3": "lisez tau* là où la cible atteint 0.37·E, calculez L/R = tau*, puis appuyez sur LANCER"
+  },
+  "hints": {
+    "1": {
+      "1": "Cliquez K une fois pour fermer, à nouveau pour ouvrir. u_L est la tension aux bornes de la bobine.",
+      "2": "La ligne pointillée 0.37·E marque où u_L se situe à t = tau. Observez-la en modifiant L ou R.",
+      "3": "Montée complète signifie que i atteint 99% de E/R (environ 5 tau). u_L devrait avoir décru près de zéro à ce moment."
+    },
+    "2": {
+      "1": "Calculez la cible tau* : tau* = -t* / ln(V*/E). Puis réglez L/R ≈ tau*.",
+      "2": "Doubler L et doubler R laisse tau inchangé — la courbe u_L ne change pas.",
+      "3": "Affinez avec un seul curseur une fois proche ; petites variations de L = petites variations de tau."
+    },
+    "3": {
+      "1": "Sur la courbe cible, trouvez la valeur de t où u_L = 0.37·E — c'est tau*.",
+      "2": "Ou trouvez où la courbe se stabilise visiblement près de zéro (≈ 5 tau*). Divisez par 5 pour tau*.",
+      "3": "Peek donne une méthode de lecture. Réglez L/R = tau*, puis appuyez sur LANCER — faites les calculs sur papier d'abord."
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Sweep the density $\\rho$ and depth $h$ sliders. Watch how the pressure gauge on the probe changes. Advance when each slider has covered at least half its range.",
+      "concept": "Hydrostatic pressure at depth $h$ in a liquid of density $\\rho$: $p(h) = p_0 + \\rho\\,g\\,h$. Here $p_0 = 100\\,\\text{kPa}$ (atmospheric) and $g = 10\\,\\text{m/s}^2$. Pressure grows linearly with depth, and the slope $\\rho g$ depends only on the liquid — the tank shape does not enter.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target pressure $p^*$ is shown at the top. Choose a liquid (density) and a probe depth so that the probe reads $p^*$ within $\\pm 3\\%$.",
+      "concept": "Many pairs $(\\rho, h)$ can satisfy $p_0 + \\rho g h = p^*$. Pick a liquid first, then solve $h = (p^* - p_0) / (\\rho g)$ for the required depth. If your depth falls outside the tank, try a denser (or less dense) liquid.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The pressure gauge and colour gradient are hidden. Only the target pressure $p^*$ remains. Compute the depth on paper for your chosen liquid, then set the sliders and submit. One try per setup.",
+      "concept": "Rearrange the formula: $h^* = (p^* - p_0) / (\\rho\\,g)$. Convert $p^*$ from kPa to Pa first (multiply by $1000$). Pick a liquid whose $\\rho$ makes $h^*$ land inside the tank ($0 \\le h \\le 20\\,\\text{m}$).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "tank_label": "hydrostatic tank",
+    "surface_label": "surface (p₀)",
+    "probe_label": "probe",
+    "match_ok": "match",
+    "target_short": "target",
+    "tip1": "sweep both sliders to at least half their range",
+    "tip2": "pick a liquid first, then choose a depth so the gauge reads p*",
+    "tip3": "compute h = (p* − p₀) / (ρ·g) on paper before touching the sliders",
+    "peek_tip_formula": "Rearrange: h* = (p* − p₀) / (ρ·g). Convert p* to Pa (×1000). Pick ρ so h* fits in 0..20 m.",
+    "peek_tip_anchor": "Anchor: water (ρ=1000) at h=10 m gives p = 200 kPa. Denser liquid → shallower depth."
+  },
+  "hints": {
+    "1": {
+      "1": "Move each slider from one end to the other. Watch the probe gauge.",
+      "2": "Density controls the slope of the pressure vs. depth line. Depth moves you along that line.",
+      "3": "The pressure gauge shows p = p₀ + ρ·g·h. At h = 0 you read p₀ regardless of ρ."
+    },
+    "2": {
+      "1": "Read the target pressure p* at the top. It is the total pressure, not the excess.",
+      "2": "Subtract atmospheric: ρ·g·h = p* − p₀. Now pick any ρ and solve for h.",
+      "3": "For example, if p* = 200 kPa, you need ρ·g·h = 100 kPa = 100000 Pa. Water (ρ=1000, g=10) gives h = 10 m."
+    },
+    "3": {
+      "1": "The gauge is off, but the formula still holds. Write it on paper.",
+      "2": "h* = (p* − p₀) / (ρ·g). Pick a liquid whose ρ puts h* between 0 and 20 m.",
+      "3": "Convert p* from kPa to Pa first (multiply by 1000). Then divide by (ρ·g) — with g = 10 that is just ρ·10."
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A large mass creates an attractive gravitational field around it — the field pulls inward and weakens with distance. Sweep the source mass $M$ and the probe distance $r$ and watch how the field magnitude at the probe changes. Advance when both sliders have covered at least half of their range.",
+      "concept": "Newton's law of gravitation: $|\\vec{\\mathcal{G}}| = \\dfrac{G\\,M}{r^{2}}$, with $G = 6.674 \\times 10^{-11}\\,\\mathrm{N\\,m^{2}/kg^{2}}$. The field points radially toward the source. Doubling $M$ doubles the field; halving $r$ quadruples it. Units: $\\mathrm{N/kg} \\equiv \\mathrm{m/s^{2}}$ — the same quantity described as force per unit mass or as acceleration.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A dashed target ring marks the radius $r^{*}$ and the target field magnitude $|\\vec{\\mathcal{G}^{*}}|$. Slide the probe out to $r = r^{*}$, then tune the source mass $M$ until the field magnitude at the probe matches the target.",
+      "concept": "$|\\vec{\\mathcal{G}^{*}}| = \\dfrac{G\\,M^{*}}{r^{*2}}\\ \\Rightarrow\\ M^{*} = \\dfrac{|\\vec{\\mathcal{G}^{*}}|\\,r^{*2}}{G}$. One field magnitude at a fixed radius fixes the source mass exactly — no free variable to play with.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The field heatmap is hidden. Only the target ring at $r^{*}$ with its label $|\\vec{\\mathcal{G}^{*}}|$ remains. Compute the source mass $M^{*}$ on paper, then set both sliders to your computed values and submit. One submit per setup — an incorrect answer rotates to a new target.",
+      "concept": "Inverse formula: $M^{*} = \\dfrac{|\\vec{\\mathcal{G}^{*}}|\\,r^{*2}}{G}$. Work in SI: convert $r^{*}$ from $\\mathrm{Mm}$ to metres ($\\times 10^{6}$). Express the answer in $10^{24}\\,\\mathrm{kg}$ (Earth mass $\\approx 5.97 \\times 10^{24}\\,\\mathrm{kg}$).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "field_label": "gravitational field",
+    "source_label": "source mass",
+    "probe_label": "probe",
+    "target_label": "target",
+    "match_ok": "match",
+    "coverage_label": "coverage",
+    "target_short": "target",
+    "tip1": "sweep M and r across at least half their ranges",
+    "tip2": "place the probe on the target ring, then tune M",
+    "tip3": "compute M on paper first, then set both sliders",
+    "peek_tip_formula": "Rearrange: |g| = G*M / r^2  =>  M = |g*| * r*^2 / G. Plug the target values in directly.",
+    "peek_tip_anchor": "G ~ 6.67e-11. Convert r* from Mm to m (x 1e6). Answer scales in units of 10^24 kg."
+  },
+  "hints": {
+    "1": {
+      "1": "Which slider has the stronger effect on |g| — mass or distance? Try halving r.",
+      "2": "|g| grows linearly with M but as 1/r^2 with distance. Halving r quadruples |g|.",
+      "3": "Sweep each slider from its minimum all the way to its maximum to hit the 50% coverage bar on both."
+    },
+    "2": {
+      "1": "Read the target labels near the dashed ring: r* is the radius, |g*| is the field magnitude.",
+      "2": "First move the probe to r = r*. With r fixed, M alone controls |g|.",
+      "3": "Solve directly: M = |g*| * r*^2 / G. Plug the on-screen numbers into this formula."
+    },
+    "3": {
+      "1": "The heatmap is gone but the formula still holds. Write |g*| = G*M*/r*^2 on paper.",
+      "2": "Rearrange to M* = |g*| * r*^2 / G. Convert r* from Mm to metres (multiply by 1e6) before you square it.",
+      "3": "Peek reveals the exact rearrangement. Apply it to the r* and |g*| shown on screen, then read the result in units of 10^24 kg."
+    }
+  }
+}

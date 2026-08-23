@@ -1,0 +1,67 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Faites varier le temps $t$ à l'aide du curseur. Observez $\\vec{OM}$, $\\vec{v}$ (tangent à la trajectoire) et $\\vec{a}$ se redessiner à chaque instant. Notez comment $|\\vec{v}|$ et $|\\vec{a}|$ évoluent le long de la trajectoire.",
+      "concept": "Cinématique vectorielle : $\\vec{v} = \\dfrac{d\\vec{OM}}{dt}$ (toujours tangent à la trajectoire), $\\vec{a} = \\dfrac{d\\vec{v}}{dt}$. L'angle $(\\vec{v}, \\vec{a})$ indique si le mouvement est accéléré ($<90°$), décéléré ($>90°$) ou de courbure pure ($=90°$).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Déplacez le curseur jusqu'au temps demandé. Lisez $|\\vec{v}|$ sur le HUD, puis appuyez sur CONFIRMER. Réussissez les trois temps cibles pour avancer.",
+      "concept": "Les trois épreuves exercent des signatures différentes : $|\\vec{v}|$ constant sur un cercle (mouvement circulaire uniforme), $|\\vec{v}|$ linéaire en $t$ sur une droite avec $\\vec{a}$ constant, $|\\vec{v}|$ minimum au sommet d'une parabole.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches $\\vec{v}$ sont masquées. À chaque point marqué, faites glisser la petite poignée pour esquisser la direction de $\\vec{v}$. Une fois les trois placées, appuyez sur VALIDER. Vous avez un nombre limité d'essais — réfléchissez avant de glisser.",
+      "concept": "$\\vec{v}$ est toujours tangent à la trajectoire dans le sens du mouvement. Utilisez la forme de la trajectoire et le sens de parcours ($t$ croissant) pour fixer chaque flèche — pas de norme requise, seulement la direction.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "CONFIRMER",
+    "submit": "VALIDER",
+    "hits": "RÉUSSIS",
+    "stage": "ÉTAPE",
+    "attempts": "ESSAIS",
+    "target": "CIBLE",
+    "time": "t",
+    "speed": "|v|",
+    "accel": "|a|",
+    "va_angle": "(v,a)",
+    "origin": "O",
+    "point_m": "M",
+    "vector_v": "v",
+    "vector_a": "a",
+    "curve_parabola": "parabole",
+    "curve_circle": "arc de cercle",
+    "curve_line": "droite uniformément accélérée",
+    "tip1": "faites varier t, observez OM, v, a se redessiner",
+    "tip2": "atteignez t, lisez |v|, puis CONFIRMER",
+    "tip3": "faites glisser chaque flèche tangente à la trajectoire, dans le sens du mouvement",
+    "peek_tip_tangent": "v est TOUJOURS tangent à la trajectoire. Regardez la pente locale de la courbe au point marqué.",
+    "peek_tip_direction": "v pointe dans le sens du mouvement (t croissant). Si M se déplace vers la droite sur la courbe, v pointe vers la droite.",
+    "peek_tip_circle": "Sur un cercle, v est perpendiculaire à OM uniquement si O est au centre. Fiez-vous à la tangente à la forme, pas au vecteur vers O."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplacez le curseur de temps d'avant en arrière. Qu'est-ce qui reste fixe et qu'est-ce qui change ?",
+      "2": "v est toujours tangent à la trajectoire ; a pointe vers le côté concave de la courbe.",
+      "3": "Quand |v| augmente avec le temps, le mouvement est accéléré : l'angle (v, a) est aigu. Quand |v| diminue, l'angle est obtus."
+    },
+    "2": {
+      "1": "Le HUD affiche le t courant et |v|. Atteignez le t demandé à la tolérance près, puis CONFIRMER.",
+      "2": "Vous n'avez rien à calculer — placez M à l'instant demandé et lisez la norme sur le HUD.",
+      "3": "Si une cible semble hors de portée, vérifiez que le curseur couvre 0 à T. Toute cible se trouve dans cet intervalle par construction."
+    },
+    "3": {
+      "1": "Pour chaque point marqué, la direction de v est fixée par la forme de la trajectoire en ce point.",
+      "2": "Tangent à la courbe, dans le sens des t croissants. Si M se déplace de gauche à droite sur ce segment, la flèche pointe vers la droite.",
+      "3": "Pour un cercle parcouru dans le sens trigonométrique, v en haut pointe vers la gauche ; en bas il pointe vers la droite. Même forme, sens opposé = flèche opposée."
+    }
+  }
+}

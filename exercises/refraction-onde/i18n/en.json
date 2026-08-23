@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A plane wave in a ripple tank crosses the boundary between two zones of different celerities. The source period $T = 50\\,\\text{ms}$ is fixed, so $\\lambda = c\\,T$. Sweep celerities $c_1$, $c_2$ and incidence angle $i_1$ to see how the refracted wave bends and how its wavelength changes.",
+      "concept": "Snell's law for waves: $\\dfrac{\\sin i_1}{\\sin i_2} = \\dfrac{c_1}{c_2} = \\dfrac{\\lambda_1}{\\lambda_2}$. Slower zone $\\Rightarrow$ smaller angle from the normal AND shorter wavelength. Frequency is preserved across the interface.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target refracted angle $i_2^{*}$ and target refracted wavelength $\\lambda_2^{*}$ are shown at the interface. Tune $c_1$, $c_2$, $i_1$ until the refracted wavefronts align with both target markers. Many triples work — only the ratios matter.",
+      "concept": "$\\lambda_2^{*} = c_2\\,T\\ \\Rightarrow\\ c_2 = \\lambda_2^{*}/T$ pins $c_2$. Then $\\sin i_2^{*} = \\dfrac{c_2}{c_1}\\,\\sin i_1$ leaves $(c_1, i_1)$ constrained on one curve — pick any convenient $c_1$ and solve for $i_1$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The refracted wavefronts are hidden. Only the incident wave, the interface, and the target markers $i_2^{*}$ and $\\lambda_2^{*}$ remain. Compute $c_1$, $c_2$, $i_1$ on paper, set the sliders, then submit. One shot per setup.",
+      "concept": "From $\\lambda_2^{*}$: $c_2 = \\lambda_2^{*}/T$. From $i_2^{*}$: $\\sin i_1 = \\dfrac{c_1}{c_2}\\,\\sin i_2^{*}$. Fix a convenient $c_1$ (say, the midpoint), then $i_1 = \\arcsin\\!\\left(\\dfrac{c_1}{c_2}\\,\\sin i_2^{*}\\right)$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "tank_label": "ripple tank",
+    "medium1_label": "medium 1",
+    "medium2_label": "medium 2",
+    "interface_label": "interface",
+    "normal_label": "normal",
+    "incidence_label": "i1",
+    "refraction_label": "i2",
+    "target_label": "target",
+    "match_ok": "match",
+    "tip1": "sweep each slider to at least half its range",
+    "tip2": "align the refracted wave with both target markers",
+    "tip3": "compute c1, c2, i1 on paper, then set the sliders",
+    "peek_tip_formula": "λ₂* = c₂·T pins c₂. Then sin(i₁) = (c₁/c₂)·sin(i₂*). Pick c₁, solve for i₁.",
+    "peek_tip_anchor": "T = 50 ms. If λ₂* = 10 mm, then c₂ = 0.20 m/s. Every 5 mm of λ₂ = 0.10 m/s of c."
+  },
+  "hints": {
+    "1": {
+      "1": "Which slider changes the refracted angle most? Try holding two fixed and moving the third.",
+      "2": "λ₁ = c₁·T. Watch the spacing of the incident wavefronts as you slide c₁.",
+      "3": "When c₂ < c₁, i₂ < i₁ (wave bends toward the normal). Reverse if c₂ > c₁."
+    },
+    "2": {
+      "1": "The refracted wavelength target λ₂* depends only on c₂. Start there.",
+      "2": "With c₂ fixed, the ratio sin(i₁)/sin(i₂*) = c₁/c₂ leaves one degree of freedom.",
+      "3": "Fix c₁ at 0.30 m/s. Then i₁ = arcsin((c₁/c₂)·sin(i₂*)) is a direct calculation."
+    },
+    "3": {
+      "1": "The refracted wave is hidden but the formulas still hold. Write them on paper first.",
+      "2": "Step 1: c₂ = λ₂*/T. Step 2: pick any c₁ in range. Step 3: i₁ = arcsin((c₁/c₂)·sin(i₂*)).",
+      "3": "Peek reveals the inverse formula. Apply it to the numeric target shown at the interface."
+    }
+  }
+}

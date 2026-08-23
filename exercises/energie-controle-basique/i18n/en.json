@@ -1,0 +1,100 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Watch a simple energy chain: a source feeds a converter, which delivers useful energy to a device. Move the input-power slider — watch the flow arrow grow. The red band is energy lost as heat. Advance once you've seen the chain react to a change in input.",
+      "concept": "Energy is never destroyed — it changes form. A chain like $P_{in} \\rightarrow \\text{converter} \\rightarrow P_{out}$ obeys $P_{out} = \\eta \\cdot P_{in}$ and $P_{lost} = (1-\\eta) \\cdot P_{in}$. The efficiency $\\eta$ is fixed by the converter (a solar panel is not a motor).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Explore",
+      "instruction": "Now you pick the source, the converter, and the device. Only chains whose forms line up work — you cannot feed a wind turbine with sunlight. Tune input power and try enough combinations to witness at least four different converters delivering useful output.",
+      "concept": "Every converter has a fixed input form (chemical, kinetic, radiant, electric) and a fixed output form. A chain works only when the forms match end-to-end. Efficiency values: solar panel $\\eta \\approx 0.20$, wind turbine $\\eta \\approx 0.40$, dynamo $\\eta \\approx 0.70$, electric motor $\\eta \\approx 0.80$, LED lamp $\\eta \\approx 0.30$, incandescent lamp $\\eta \\approx 0.05$, resistor heater $\\eta = 1$.",
+      "peekable": true
+    },
+    {
+      "index": 3,
+      "name": "Predict",
+      "instruction": "The arrows are hidden. You are shown a source, a target device, and a required useful power $P_{out}$ given an input power $P_{in}$. Pick the converter that both matches the forms AND delivers the required $P_{out}$. Answer all scenarios in one pass — one wrong answer restarts the deck.",
+      "concept": "Two checks: (1) forms must line up (source form = converter input form, converter output form = device input form); (2) $P_{out} = \\eta \\cdot P_{in}$ must match the target within tolerance. A wind turbine cannot use sunlight; an LED lamp cannot deliver 80 W of light from 100 W of electricity.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "scene_title": "energy chain",
+    "controls": "controls",
+    "question": "question",
+    "outcomes_seen": "converters",
+    "streak": "solved",
+    "source": "source",
+    "converter": "converter",
+    "use": "device",
+    "input_power": "input power",
+    "output_power": "useful output",
+    "lost_power": "lost as heat",
+    "efficiency": "efficiency",
+    "form_chemical": "chemical",
+    "form_kinetic": "kinetic",
+    "form_radiant": "radiant",
+    "form_electric": "electric",
+    "form_thermal": "thermal",
+    "form_mechanical": "mechanical",
+    "src_sun": "sun",
+    "src_wind": "wind",
+    "src_battery": "battery",
+    "src_bike": "pedaling",
+    "conv_solar_panel": "solar panel",
+    "conv_wind_turbine": "wind turbine",
+    "conv_dynamo": "dynamo",
+    "conv_motor": "electric motor",
+    "conv_led": "LED lamp",
+    "conv_incandescent": "incandescent lamp",
+    "conv_heater": "resistor heater",
+    "use_bulb": "light",
+    "use_fan": "fan (rotation)",
+    "use_heater": "room heater",
+    "use_device": "electric device",
+    "field_source": "source",
+    "field_converter": "converter",
+    "field_use": "device",
+    "field_input": "input power",
+    "field_status": "chain status",
+    "chain_ok": "chain OK",
+    "chain_bad_forms": "mismatched forms",
+    "target": "target",
+    "given": "given",
+    "delivers": "delivers",
+    "tolerance": "tolerance",
+    "watts": "W",
+    "correct": "correct",
+    "wrong": "wrong",
+    "next_q": "next",
+    "restart_deck": "restart",
+    "tip1": "drag the input-power slider — watch the flow scale with $P_{in}$",
+    "tip2": "pick different sources and converters — only matching forms produce useful output",
+    "tip3": "arrows are hidden — do the math: $P_{out} = \\eta \\cdot P_{in}$",
+    "hint_pick_source": "pick a source",
+    "hint_pick_converter": "pick a converter",
+    "hint_pick_use": "pick a device"
+  },
+  "hints": {
+    "1": {
+      "1": "Grab the input-power slider on the right and slide it up.",
+      "2": "Watch the flow arrow between the source and the converter grow with input.",
+      "3": "You just need to change the input once and see the chain react to advance."
+    },
+    "2": {
+      "1": "Change the source, then change the converter. If they mismatch, the chain reports 'mismatched forms'.",
+      "2": "A wind turbine needs kinetic input (wind or pedaling). A solar panel needs radiant input (sun).",
+      "3": "Cycle through: solar panel with sun, wind turbine with wind, motor with battery, heater with battery — that is already four converters delivering useful output."
+    },
+    "3": {
+      "1": "First eliminate options whose input form doesn't match the source or whose output form doesn't match the device.",
+      "2": "Then compute $P_{out} = \\eta \\cdot P_{in}$ for the surviving options and match the target within tolerance.",
+      "3": "Remember the efficiencies: solar 0.20, wind turbine 0.40, dynamo 0.70, motor 0.80, LED 0.30, incandescent 0.05, heater 1.00."
+    }
+  }
+}

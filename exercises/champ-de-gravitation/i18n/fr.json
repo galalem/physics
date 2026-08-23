@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une masse importante crée autour d'elle un champ de gravitation attractif — le champ pointe vers l'intérieur et s'affaiblit avec la distance. Faites glisser la masse source $M$ et la distance $r$ de la sonde, et observez comment la valeur du champ à la sonde change. Avancez lorsque les deux curseurs ont parcouru au moins la moitié de leur plage.",
+      "concept": "Loi de la gravitation de Newton : $|\\vec{\\mathcal{G}}| = \\dfrac{G\\,M}{r^{2}}$, avec $G = 6{,}674 \\times 10^{-11}\\,\\mathrm{N\\,m^{2}/kg^{2}}$. Le champ est dirigé radialement vers la source. Doubler $M$ double le champ ; diviser $r$ par deux le multiplie par quatre. Unités : $\\mathrm{N/kg} \\equiv \\mathrm{m/s^{2}}$ — la même grandeur décrite comme force par unité de masse ou comme accélération.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Un anneau cible en pointillés marque le rayon $r^{*}$ et la valeur cible du champ $|\\vec{\\mathcal{G}^{*}}|$. Faites glisser la sonde jusqu'à $r = r^{*}$, puis ajustez la masse source $M$ jusqu'à ce que la valeur du champ à la sonde atteigne la cible.",
+      "concept": "$|\\vec{\\mathcal{G}^{*}}| = \\dfrac{G\\,M^{*}}{r^{*2}}\\ \\Rightarrow\\ M^{*} = \\dfrac{|\\vec{\\mathcal{G}^{*}}|\\,r^{*2}}{G}$. Une valeur du champ à un rayon fixé détermine la masse source exactement — aucune variable libre.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La carte du champ est masquée. Seul l'anneau cible à $r^{*}$ avec son étiquette $|\\vec{\\mathcal{G}^{*}}|$ demeure. Calculez la masse source $M^{*}$ sur papier, puis réglez les deux curseurs à vos valeurs calculées et validez. Une seule validation par montage — une réponse incorrecte fait tourner vers une nouvelle cible.",
+      "concept": "Formule inverse : $M^{*} = \\dfrac{|\\vec{\\mathcal{G}^{*}}|\\,r^{*2}}{G}$. Travaillez en SI : convertissez $r^{*}$ de $\\mathrm{Mm}$ en mètres ($\\times 10^{6}$). Exprimez la réponse en $10^{24}\\,\\mathrm{kg}$ (masse terrestre $\\approx 5{,}97 \\times 10^{24}\\,\\mathrm{kg}$).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "field_label": "champ de gravitation",
+    "source_label": "masse source",
+    "probe_label": "sonde",
+    "target_label": "cible",
+    "match_ok": "atteint",
+    "coverage_label": "couverture",
+    "target_short": "cible",
+    "tip1": "faites glisser M et r sur au moins la moitié de leurs plages",
+    "tip2": "placez la sonde sur l'anneau cible, puis ajustez M",
+    "tip3": "calculez d'abord M sur papier, puis réglez les deux curseurs",
+    "peek_tip_formula": "Réarrangez : |g| = G*M / r^2  =>  M = |g*| * r*^2 / G. Substituez directement les valeurs cibles.",
+    "peek_tip_anchor": "G ~ 6,67e-11. Convertissez r* de Mm en m (x 1e6). La réponse s'exprime en unités de 10^24 kg."
+  },
+  "hints": {
+    "1": {
+      "1": "Quel curseur a l'effet le plus fort sur |g| — la masse ou la distance ? Essayez de diviser r par deux.",
+      "2": "|g| croît linéairement avec M mais en 1/r^2 avec la distance. Diviser r par deux quadruple |g|.",
+      "3": "Faites glisser chaque curseur de son minimum jusqu'à son maximum pour atteindre la barre de 50 % de couverture sur les deux."
+    },
+    "2": {
+      "1": "Lisez les étiquettes cibles près de l'anneau en pointillés : r* est le rayon, |g*| est la valeur du champ.",
+      "2": "Amenez d'abord la sonde à r = r*. Avec r fixé, M seul contrôle |g|.",
+      "3": "Résolvez directement : M = |g*| * r*^2 / G. Substituez les valeurs affichées dans cette formule."
+    },
+    "3": {
+      "1": "La carte est masquée mais la formule reste valable. Écrivez |g*| = G*M*/r*^2 sur papier.",
+      "2": "Réarrangez en M* = |g*| * r*^2 / G. Convertissez r* de Mm en mètres (multipliez par 1e6) avant de l'élever au carré.",
+      "3": "L'aperçu révèle le réarrangement exact. Appliquez-le au r* et au |g*| affichés, puis lisez le résultat en unités de 10^24 kg."
+    }
+  }
+}

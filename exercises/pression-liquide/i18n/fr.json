@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Balayez les curseurs de masse volumique $\\rho$ et de profondeur $h$. Observez comment le manomètre sur la sonde change. Avancez lorsque chaque curseur a couvert au moins la moitié de sa plage.",
+      "concept": "Pression hydrostatique à la profondeur $h$ dans un liquide de masse volumique $\\rho$ : $p(h) = p_0 + \\rho\\,g\\,h$. Ici $p_0 = 100\\,\\text{kPa}$ (atmosphérique) et $g = 10\\,\\text{m/s}^2$. La pression croît linéairement avec la profondeur, et la pente $\\rho g$ ne dépend que du liquide — la forme du réservoir n'intervient pas.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une pression cible $p^*$ est affichée en haut. Choisissez un liquide (masse volumique) et une profondeur de sonde pour que la sonde indique $p^*$ à $\\pm 3\\%$ près.",
+      "concept": "De nombreux couples $(\\rho, h)$ peuvent satisfaire $p_0 + \\rho g h = p^*$. Choisissez d'abord un liquide, puis résolvez $h = (p^* - p_0) / (\\rho g)$ pour la profondeur requise. Si votre profondeur dépasse le réservoir, essayez un liquide plus (ou moins) dense.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le manomètre et le dégradé de couleur sont masqués. Seule la pression cible $p^*$ reste. Calculez la profondeur sur papier pour le liquide de votre choix, puis réglez les curseurs et validez. Un seul essai par configuration.",
+      "concept": "Réarrangez la formule : $h^* = (p^* - p_0) / (\\rho\\,g)$. Convertissez d'abord $p^*$ de kPa en Pa (multipliez par $1000$). Choisissez un liquide dont le $\\rho$ fait que $h^*$ tombe dans le réservoir ($0 \\le h \\le 20\\,\\text{m}$).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "tank_label": "réservoir hydrostatique",
+    "surface_label": "surface (p₀)",
+    "probe_label": "sonde",
+    "match_ok": "correspondance",
+    "target_short": "cible",
+    "tip1": "balayez les deux curseurs sur au moins la moitié de leur plage",
+    "tip2": "choisissez d'abord un liquide, puis choisissez une profondeur pour que le manomètre indique p*",
+    "tip3": "calculez h = (p* − p₀) / (ρ·g) sur papier avant de toucher aux curseurs",
+    "peek_tip_formula": "Réarrangez : h* = (p* − p₀) / (ρ·g). Convertissez p* en Pa (×1000). Choisissez ρ pour que h* rentre dans 0..20 m.",
+    "peek_tip_anchor": "Repère : eau (ρ=1000) à h=10 m donne p = 200 kPa. Liquide plus dense → profondeur plus faible."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplacez chaque curseur d'un bout à l'autre. Observez le manomètre de la sonde.",
+      "2": "La masse volumique contrôle la pente de la droite pression / profondeur. La profondeur vous déplace le long de cette droite.",
+      "3": "Le manomètre affiche p = p₀ + ρ·g·h. À h = 0 vous lisez p₀ quel que soit ρ."
+    },
+    "2": {
+      "1": "Lisez la pression cible p* en haut. C'est la pression totale, pas l'excès.",
+      "2": "Soustrayez l'atmosphérique : ρ·g·h = p* − p₀. Maintenant choisissez n'importe quel ρ et résolvez pour h.",
+      "3": "Par exemple, si p* = 200 kPa, il faut ρ·g·h = 100 kPa = 100000 Pa. L'eau (ρ=1000, g=10) donne h = 10 m."
+    },
+    "3": {
+      "1": "Le manomètre est éteint, mais la formule tient toujours. Écrivez-la sur papier.",
+      "2": "h* = (p* − p₀) / (ρ·g). Choisissez un liquide dont le ρ place h* entre 0 et 20 m.",
+      "3": "Convertissez d'abord p* de kPa en Pa (multipliez par 1000). Puis divisez par (ρ·g) — avec g = 10 c'est juste ρ·10."
+    }
+  }
+}

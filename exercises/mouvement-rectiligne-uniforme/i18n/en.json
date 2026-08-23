@@ -1,0 +1,56 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the puck (or use the $x_0$ slider on the left) to set the starting position, use the $v$ slider on the right to set velocity, then press GO. Try at least two different velocities and change $x_0$ to see how the position-vs-time line reacts.",
+      "concept": "Uniform rectilinear motion: $x(t) = x_0 + v \\cdot t$. The graph of $x$ versus $t$ is a straight line — slope $= v$, y-intercept $= x_0$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit all three rendezvous points. Each $(x^{*}, t^{*})$ demands the puck be at $x^{*}$ exactly when $t^{*}$ elapses. The dashed preview line shows the trajectory your current $v$ will draw — line it up so it passes through every dot.",
+      "concept": "Solve for $v$ from the rendezvous condition: $x^{*} = x_0 + v \\cdot t^{*} \\;\\Rightarrow\\; v = \\dfrac{x^{*} - x_0}{t^{*}}$. Positive $v$ moves right, negative $v$ moves left.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No graph, no preview line. Read each target's $(x^{*}, t^{*})$ from the labels, compute $v = (x^{*} - x_0) / t^{*}$ on paper, dial it in and press GO. You have limited shots — commit only when your calculation is done.",
+      "concept": "Beware the sign: if $x^{*} < x_0$ the puck must move backward, so $v < 0$. Check the units — $v$ is in m/s, not m.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "go": "GO",
+    "hits": "HITS",
+    "shots": "SHOTS",
+    "stage": "STAGE",
+    "t_axis": "t (s)",
+    "x_axis": "x (m)",
+    "tip1": "drag the puck, change v, then GO — watch the graph draw a straight line",
+    "tip2": "pick v so the dashed line passes through every dot, then GO",
+    "tip3": "compute v = (x* − x₀) / t* on paper, then GO — no preview, no retries",
+    "peek_tip_formula": "Uniform motion: v = (x* − x₀) / t*. Read the coordinates, plug in, done.",
+    "peek_tip_sign": "Check the sign of x* − x₀. If the target is behind the puck, v must be negative.",
+    "peek_tip_bounds": "v ranges from −10 to +10 m/s. If your calculation lands outside, re-check t* or the arithmetic."
+  },
+  "hints": {
+    "1": {
+      "1": "Drag the puck along the track to set x₀, then move the v slider on the right.",
+      "2": "Press GO to release the puck. Watch how the graph draws a straight line whose slope is v.",
+      "3": "Try v = 0 first (the puck stays put), then a positive v (moves right), then a negative v (retour — moves left)."
+    },
+    "2": {
+      "1": "The dashed teal line previews where the puck will be at each instant. Aim it through every dot.",
+      "2": "Each dot's t (horizontal) tells you WHEN to be there; its x (vertical) tells you WHERE.",
+      "3": "Solve v = (x* − x₀) / t* for one target, dial that v in, GO. Repeat for each target — you can adjust v between runs."
+    },
+    "3": {
+      "1": "Read a target's (x*, t*). Take a moment to compute v = (x* − x₀) / t* on paper.",
+      "2": "Sign matters. x* < x₀ ⇒ v < 0. x* > x₀ ⇒ v > 0. x* = x₀ ⇒ v = 0.",
+      "3": "You have 3 shots for 3 targets — one calculation per target. Commit only when your paper math is done."
+    }
+  }
+}

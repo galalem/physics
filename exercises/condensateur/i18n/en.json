@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A capacitor stores electric charge on two plates. Close the switch $K$ to start charging. Sweep $C$ and $U$, and complete one full charge (watch $u_C \\to U$) to advance.",
+      "concept": "Charge stored: $Q = C \\cdot u_C$. When the capacitor is fully charged, $u_C \\to U$ so $Q_{max} = C \\cdot U$. Energy stored: $E_e = \\tfrac{1}{2}\\,C\\,u_C^2$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Match the target plateau: your curve must level off at $Q^{*}$. Tune $C$ and $U$ so the product $C \\cdot U$ equals $Q^{*}$ within $\\pm 5\\%$.",
+      "concept": "The plateau of $q(t)$ is $Q_{max} = C \\cdot U$. Many $(C, U)$ pairs reach the same $Q_{max}$ — success only depends on the product.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Only the target curve is shown. Read $Q^{*}$ from its plateau, pick $C$ and $U$ so that $C \\cdot U = Q^{*}$, then press RUN. Your curve appears on submit — match $Q_{max}$ to within $\\pm 3\\%$.",
+      "concept": "The target's flat asymptote is $Q^{*}$. Read it off the y-axis, then choose any $(C, U)$ with $C \\cdot U = Q^{*}$. Example: $Q^{*} = 3.0\\,\\text{mC}$ → $C = 500\\,\\mu\\text{F},\\ U = 6\\,\\text{V}$ or $C = 300\\,\\mu\\text{F},\\ U = 10\\,\\text{V}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "circuit",
+    "chart_title": "q (t)",
+    "y_axis_label": "q (mC)",
+    "x_axis_label": "t (s) →",
+    "hit": "hit!",
+    "match_ok": "match",
+    "match_off": "off",
+    "submit_button": "RUN",
+    "closed_label": "closed",
+    "open_label": "open",
+    "click_switch": "click K to open / close",
+    "qmax_label": "Q_max",
+    "peek_hint": "the curve levels off at Q_max = C·U — read Q* from the plateau on the y-axis, then pick C and U with C·U = Q*",
+    "tip1": "close K, watch q(t) fill toward Q_max = C·U, then sweep C and U",
+    "tip2": "adjust C and U so your curve's plateau lines up with the orange Q* line",
+    "tip3": "read Q* off the plateau of the target curve, then set C·U = Q* and press RUN"
+  },
+  "hints": {
+    "1": {
+      "1": "Click K to close the switch. The capacitor charges: q(t) rises toward Q_max = C·U.",
+      "2": "Try doubling C — the plateau doubles. Try doubling U — the plateau also doubles. The product C·U is what sets the plateau.",
+      "3": "Full charge means u_C reaches 99% of U (a few time constants). The plateau of q(t) sits at Q_max = C·U."
+    },
+    "2": {
+      "1": "Compute Q_max = C·U. Adjust C and U until Q_max equals the target Q*.",
+      "2": "Doubling C and halving U keeps Q_max the same — the plateau won't move. Any (C, U) with C·U = Q* works.",
+      "3": "Fine-tune the C slider once you're close; small C changes = small Q_max changes at fixed U."
+    },
+    "3": {
+      "1": "On the target curve, find the y-value the curve flattens to — that is Q*.",
+      "2": "Once you know Q*, pick a round U (say 6 V) and set C = Q* / U.",
+      "3": "Press Peek for a reading-method hint. Then set C·U = Q* and press RUN."
+    }
+  }
+}

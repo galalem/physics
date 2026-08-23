@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une onde plane dans une cuve à ondes traverse la frontière entre deux zones de célérités différentes. La période source $T = 50\\,\\text{ms}$ est fixée, donc $\\lambda = c\\,T$. Balayez les célérités $c_1$, $c_2$ et l'angle d'incidence $i_1$ pour voir comment l'onde réfractée s'infléchit et comment sa longueur d'onde change.",
+      "concept": "Loi de Snell-Descartes pour les ondes : $\\dfrac{\\sin i_1}{\\sin i_2} = \\dfrac{c_1}{c_2} = \\dfrac{\\lambda_1}{\\lambda_2}$. Zone plus lente $\\Rightarrow$ angle plus petit par rapport à la normale ET longueur d'onde plus courte. La fréquence est conservée à la traversée de l'interface.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Un angle réfracté cible $i_2^{*}$ et une longueur d'onde réfractée cible $\\lambda_2^{*}$ sont indiqués à l'interface. Réglez $c_1$, $c_2$, $i_1$ jusqu'à ce que les fronts d'onde réfractés s'alignent avec les deux marqueurs cibles. De nombreux triplets fonctionnent — seuls les rapports comptent.",
+      "concept": "$\\lambda_2^{*} = c_2\\,T\\ \\Rightarrow\\ c_2 = \\lambda_2^{*}/T$ fixe $c_2$. Ensuite $\\sin i_2^{*} = \\dfrac{c_2}{c_1}\\,\\sin i_1$ laisse $(c_1, i_1)$ contraints sur une courbe — choisissez n'importe quel $c_1$ pratique et résolvez pour $i_1$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les fronts d'onde réfractés sont masqués. Seuls l'onde incidente, l'interface et les marqueurs cibles $i_2^{*}$ et $\\lambda_2^{*}$ restent. Calculez $c_1$, $c_2$, $i_1$ sur papier, réglez les curseurs, puis validez. Un seul essai par configuration.",
+      "concept": "À partir de $\\lambda_2^{*}$ : $c_2 = \\lambda_2^{*}/T$. À partir de $i_2^{*}$ : $\\sin i_1 = \\dfrac{c_1}{c_2}\\,\\sin i_2^{*}$. Fixez un $c_1$ pratique (par exemple la valeur médiane), puis $i_1 = \\arcsin\\!\\left(\\dfrac{c_1}{c_2}\\,\\sin i_2^{*}\\right)$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "tank_label": "cuve à ondes",
+    "medium1_label": "milieu 1",
+    "medium2_label": "milieu 2",
+    "interface_label": "interface",
+    "normal_label": "normale",
+    "incidence_label": "i1",
+    "refraction_label": "i2",
+    "target_label": "cible",
+    "match_ok": "correspondance",
+    "tip1": "balayez chaque curseur à au moins la moitié de sa plage",
+    "tip2": "alignez l'onde réfractée avec les deux marqueurs cibles",
+    "tip3": "calculez c1, c2, i1 sur papier, puis réglez les curseurs",
+    "peek_tip_formula": "λ₂* = c₂·T fixe c₂. Ensuite sin(i₁) = (c₁/c₂)·sin(i₂*). Choisissez c₁, résolvez pour i₁.",
+    "peek_tip_anchor": "T = 50 ms. Si λ₂* = 10 mm, alors c₂ = 0,20 m/s. Chaque 5 mm de λ₂ = 0,10 m/s de c."
+  },
+  "hints": {
+    "1": {
+      "1": "Quel curseur change le plus l'angle réfracté ? Essayez d'en maintenir deux fixes et de déplacer le troisième.",
+      "2": "λ₁ = c₁·T. Observez l'espacement des fronts d'onde incidents lorsque vous déplacez c₁.",
+      "3": "Quand c₂ < c₁, i₂ < i₁ (l'onde se rapproche de la normale). Inverse si c₂ > c₁."
+    },
+    "2": {
+      "1": "La longueur d'onde réfractée cible λ₂* ne dépend que de c₂. Commencez par là.",
+      "2": "Avec c₂ fixé, le rapport sin(i₁)/sin(i₂*) = c₁/c₂ laisse un degré de liberté.",
+      "3": "Fixez c₁ à 0,30 m/s. Alors i₁ = arcsin((c₁/c₂)·sin(i₂*)) est un calcul direct."
+    },
+    "3": {
+      "1": "L'onde réfractée est masquée mais les formules restent valables. Écrivez-les d'abord sur papier.",
+      "2": "Étape 1 : c₂ = λ₂*/T. Étape 2 : choisissez un c₁ dans la plage. Étape 3 : i₁ = arcsin((c₁/c₂)·sin(i₂*)).",
+      "3": "L'aperçu révèle la formule inverse. Appliquez-la à la cible numérique indiquée à l'interface."
+    }
+  }
+}

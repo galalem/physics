@@ -1,0 +1,56 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Two parallel plates create a uniform electric field in the gap between them. The voltage $U$ between the plates and the gap $d$ set the field magnitude $E$. A test charge $q$ placed in the field feels a force $F = qE$. Sweep all three sliders and watch how the field arrows and the force on the charge respond.",
+      "concept": "Uniform field between parallel plates: $E = \\dfrac{U}{d}$. Force on a test charge: $F = q\\,E = \\dfrac{q\\,U}{d}$. Direction of $E$: from the positive plate to the negative one. Field magnitude does not depend on where in the gap you place the charge — that is the point of 'uniform'.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target field magnitude $E^{*}$ is labeled at the probe point between the plates. Set $U$ and $d$ so that $E = U/d$ hits $E^{*}$ within tolerance. $q$ is a free parameter here — it does not change $E$.",
+      "concept": "$E^{*} = \\dfrac{U}{d}\\ \\Rightarrow\\ U = E^{*}\\,d$. Many $(U, d)$ pairs work: pick $d$ first (round value in cm), then compute $U$. Convert $d$ from cm to m before comparing units: $E$ is in V/m, so $d$ in m gives V/m directly.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The field arrows are hidden. Only the plates, the test charge, and the target force $F^{*}$ remain. Compute $U$, $d$, and $q$ on paper so that the force on the charge is $F^{*}$, then set the sliders and submit. One try per setup: if you miss, a new setup rotates in.",
+      "concept": "Combine both formulas: $F = q\\,E = \\dfrac{q\\,U}{d}$. Given target $F^{*}$, pick two of $(q, U, d)$ freely then solve for the third: $q = \\dfrac{F^{*}\\,d}{U}$, or $U = \\dfrac{F^{*}\\,d}{q}$. Watch unit conversions: $q$ in nC $=10^{-9}$ C, $d$ in cm $=10^{-2}$ m, $F$ in μN $=10^{-6}$ N.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "parallel-plate capacitor",
+    "plate_pos": "+",
+    "plate_neg": "−",
+    "probe": "M",
+    "charge": "q",
+    "match_ok": "match",
+    "tip1": "sweep U, d, and q across at least half of each range",
+    "tip2": "hit the target field E* by adjusting U and d",
+    "tip3": "compute U, d, q on paper first — one submit per setup",
+    "peek_tip_formula": "Rearrange: q = F*·d / U. Fix a round U and d in SI units, then solve q.",
+    "peek_tip_anchor": "F in μN ≈ q(nC) · U(V) / d(cm) · 0.1. Sanity-check the order of magnitude."
+  },
+  "hints": {
+    "1": {
+      "1": "Move the U slider up — do the field arrows grow or shrink?",
+      "2": "Now hold U and shrink d. Field E = U/d, so smaller d should give a bigger E.",
+      "3": "The force arrow on q tracks the field arrows: F = qE. Doubling q doubles F."
+    },
+    "2": {
+      "1": "Read E* off the label at the probe. Only U and d control E — q is a spectator.",
+      "2": "Pick d first (say 2 cm = 0.02 m). Then U = E* · d. Convert kV/m to V/m first.",
+      "3": "If you set d = 2 cm and E* = 10 kV/m, you need U = 10000 · 0.02 = 200 V."
+    },
+    "3": {
+      "1": "The field is invisible but the formula still holds: F = qU/d.",
+      "2": "Pick U and d first — anything convenient in SI — then compute q = F*·d / U in coulombs, then convert to nC.",
+      "3": "Worked pattern: F* = 60 μN, pick U = 300 V and d = 1.5 cm = 0.015 m. Then q = 60e-6 · 0.015 / 300 = 3e-9 C = 3 nC."
+    }
+  }
+}

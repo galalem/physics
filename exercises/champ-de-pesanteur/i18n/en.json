@@ -1,0 +1,64 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A planet pulls every nearby mass with its gravitational field $g$. Move the sliders (planet mass $M$ and altitude $h$) and watch how the downward field arrows change. Near the surface, arrows look uniform; far out, they shrink as $1/r^2$. Sweep both sliders across at least half their range to continue.",
+      "concept": "Newton's law of gravitation: $g(h) = \\dfrac{G\\,M}{(R+h)^2}$, with $G = 6.67 \\times 10^{-11}$, planet radius $R = 6400$ km. At the surface ($h = 0$) with $M = M_\\oplus$: $g_0 \\approx 9.8$ N/kg. Doubling $M$ doubles $g$; doubling $r = R+h$ divides $g$ by 4.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target planet is described: mass $M^*$ and desired gravitational field $g^*$ at the test point. Set the $M$ slider to $M^*$, then adjust the altitude $h$ until the field on the probe matches $g^*$. A guide ring shows where the target $g$ sits at your current mass.",
+      "concept": "Solve $g^* = \\dfrac{G\\,M^*}{(R+h^*)^2}$ for $h^*$: $\\;h^* = \\sqrt{\\dfrac{G\\,M^*}{g^*}} - R$. Two DOFs, one constraint pair $(M^*, g^*)$ — both must be set. The ring only reaches the correct altitude when $M = M^*$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The field arrows are hidden. You see only the planet, the target values $M^*$ and $g^*$, and your two sliders. Compute the altitude on paper, set both sliders, and submit once. A miss rotates the setup — no second try on the same planet.",
+      "concept": "Rearrange: $r = R + h = \\sqrt{\\dfrac{G\\,M^*}{g^*}}\\ \\Rightarrow\\ h^* = \\sqrt{\\dfrac{G\\,M^*}{g^*}} - R$. Work in SI ($M$ in kg with $M_\\oplus = 5.97 \\times 10^{24}$, $R = 6.4 \\times 10^6$ m, $g^*$ in N/kg), then convert $h$ to km.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "panel": "gravity field · cross section",
+    "planet": "planet",
+    "surface": "surface",
+    "probe": "test mass",
+    "target": "target",
+    "match_ok": "match",
+    "tip1": "sweep both sliders to at least half their range",
+    "tip2": "set M to M*, then move h until the probe reaches the ring",
+    "tip3": "compute h on paper before touching the sliders — one submit",
+    "peek_tip_formula": "h* = sqrt(G·M*/g*) − R. Compute r first in metres, then subtract R = 6.4×10^6 m.",
+    "peek_tip_anchor": "At M = 1 M⊕, g₀ ≈ 9.8 N/kg at h = 0. Halving g means r grows by √2 (h ≈ 2650 km).",
+    "altitude_short": "h",
+    "mass_short": "M",
+    "field_short": "g",
+    "g_units": "N/kg",
+    "h_units": "km",
+    "m_units": "M⊕",
+    "miss_message": "miss — computed g",
+    "next_setup": "new planet loaded"
+  },
+  "hints": {
+    "1": {
+      "1": "Move the M slider first. The arrows scale linearly with M — twice the mass, twice the pull.",
+      "2": "Now raise h. The arrows shrink as 1/r², not linearly — going from 0 to 6400 km quarters g.",
+      "3": "Coverage in the TR corner tracks how much of each slider's range you have visited. Get both above 50%."
+    },
+    "2": {
+      "1": "First, dial M to the target M*. The dashed ring will move to the correct altitude.",
+      "2": "Once M = M*, slide h until the probe dot lands on the ring. That is where g = g* at this planet.",
+      "3": "Algebraically: h* = sqrt(G·M*/g*) − R. Verify by plugging in your slider values."
+    },
+    "3": {
+      "1": "The arrows are gone. Write the formula on paper before moving sliders: g = G·M/(R+h)².",
+      "2": "Solve for h: h = sqrt(G·M*/g*) − R. Plug in M* in kg (multiply by 5.97×10²⁴) and R = 6.4×10⁶ m.",
+      "3": "Peek reveals the rearranged formula. Compute r first, then subtract R = 6400 km to get h in km."
+    }
+  }
+}

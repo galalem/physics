@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Three snapshots of the rope at successive times are stacked. Sweep the three sliders and watch how the pulse propagates. Advance when each slider has covered at least half its range.",
+      "concept": "For a non-dispersive medium the source signal $y_S(t)$ propagates without deformation: $y(x, t) = y_S(t - x/v)$. Between two snapshots taken $\\Delta t$ apart the pulse shifts by $\\Delta x = v \\, \\Delta t$ while keeping the same shape.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "This is a single snapshot taken at time $t = \\tau^*$. A dashed marker shows the target position $d^*$. Adjust the celerity $v$ until the pulse peak coincides with the marker. Amplitude and pulse width do not change the arrival time.",
+      "concept": "At the snapshot instant the pulse peak sits at $x_\\text{peak} = v \\, \\tau^*$. Matching the marker means $v \\, \\tau^* = d^*$, i.e. $v = d^* / \\tau^*$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The pulse is hidden. Only the source at $x = 0$ and the target point $M$ at $d^*$ with its expected arrival time $\\tau^*$ are shown. Compute the celerity on paper, set the $v$ slider to your value, then submit. A wrong submit rotates to a new target.",
+      "concept": "Inverse of the retard formula $\\tau = d / v$: given a target position $d^*$ and target arrival time $\\tau^*$, the required celerity is $v^* = d^* / \\tau^*$. Neither amplitude nor pulse width affect this result.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "rope_label": "rope",
+    "source_label": "source",
+    "snapshot_label": "snapshot at",
+    "target_short": "target",
+    "match_ok": "match",
+    "tip1": "sweep each slider to at least half of its range",
+    "tip2": "align the pulse peak with the dashed marker at d*",
+    "tip3": "compute v = d*/tau* on paper first, then set the slider",
+    "peek_tip_formula": "Rearrange tau = d / v so v = d* / tau*. Direct algebra — no other unknowns.",
+    "peek_tip_anchor": "Mechanical pulses on a rope typically live in the 5-30 m/s range. If your answer is far outside, recheck the units."
+  },
+  "hints": {
+    "1": {
+      "1": "Which slider changes the pulse shape and which one changes how far it travels between snapshots?",
+      "2": "Only the celerity slider changes the spacing between the three peaks. Amplitude and width stay locked to the shape of the pulse itself.",
+      "3": "The distance between two consecutive peaks equals v times the time gap between the snapshots — that gap is the same across the three ropes."
+    },
+    "2": {
+      "1": "The pulse peak sits at v times the snapshot time. Which slider moves it left or right?",
+      "2": "Amplitude and width do not shift the peak. Move only the celerity slider until the peak crosses the dashed target line.",
+      "3": "At the snapshot instant tau*, the peak position is v * tau*. Setting it to d* means v = d* / tau*."
+    },
+    "3": {
+      "1": "The visualization is hidden but the retard formula still holds. Write it down before touching a slider.",
+      "2": "Retard tau = d / v. Read tau* and d* from the scene and solve for v.",
+      "3": "v = d* / tau*. Compute the ratio, then set the celerity slider to that number."
+    }
+  }
+}

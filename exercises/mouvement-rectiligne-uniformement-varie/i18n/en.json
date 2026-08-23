@@ -1,0 +1,63 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Set an initial speed $v_0$ and an acceleration $a$, then press LAUNCH. Watch $x(t)$, $v(t)$, $a(t)$ on the right — the position curves as a parabola, the speed as a straight line, the acceleration stays flat. Try positive and negative $a$ to feel the difference between accelerated and retarded motion.",
+      "concept": "Uniformly-varied rectilinear motion: $x(t) = x_0 + v_0\\,t + \\tfrac{1}{2} a\\,t^{2}$, $v(t) = v_0 + a\\,t$, with $a$ constant.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Stop the car inside the green target zone before the wall. The live $v(t)$ line shows when the car reaches $v = 0$; tune $v_0$ and $a$ (with $a < 0$) so the car halts at the flag. Complete every setup to advance.",
+      "concept": "Time-independent relation: $v^{2} - v_0^{2} = 2\\,a\\,\\Delta x$. When the car stops, $v = 0$, so the stopping distance is $\\Delta x = -\\dfrac{v_0^{2}}{2a}$ (positive because $a < 0$).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No graphs. The car's initial speed $v_0$ is fixed and the target distance $\\Delta x$ is labelled on the track. Compute the acceleration $a$ that stops the car exactly at the flag, set the $a$ slider, then LAUNCH. You have limited attempts — no spray-and-pray.",
+      "concept": "Solve for $a$ from $v^{2} - v_0^{2} = 2\\,a\\,\\Delta x$ with $v = 0$: $\\;a = -\\dfrac{v_0^{2}}{2\\,\\Delta x}$. The sign is negative because the motion is retarded (opposed to velocity).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "launch": "LAUNCH",
+    "stage": "STAGE",
+    "hits": "HITS",
+    "shots": "SHOTS",
+    "v0": "v₀",
+    "a": "a",
+    "tip1": "set v₀ and a, then LAUNCH",
+    "tip2": "use the v(t) graph to line up v = 0 with the target",
+    "tip3": "compute a from Δx and v₀, then LAUNCH",
+    "graph_x": "x (m)",
+    "graph_v": "v (m/s)",
+    "graph_a": "a (m/s²)",
+    "graph_t": "t (s)",
+    "delta_x": "Δx",
+    "target_flag": "stop here",
+    "wall": "wall",
+    "peek_tip_sign": "Retarded motion means a and v have opposite signs. With v₀ > 0, a must be negative to stop the car.",
+    "peek_tip_formula": "Use v² − v₀² = 2·a·Δx with v = 0 at the target: a = −v₀² / (2·Δx). No time needed.",
+    "peek_tip_units": "Δx is in metres, v₀ in m/s, so a comes out in m/s². Round to one decimal — the tolerance is generous."
+  },
+  "hints": {
+    "1": {
+      "1": "Move the v₀ slider on the right, then the a slider on the left, and press LAUNCH.",
+      "2": "The x(t) graph is a parabola; the v(t) graph is a straight line whose slope is a.",
+      "3": "Positive a with positive v₀ = accelerated; negative a with positive v₀ = decelerated (retarded)."
+    },
+    "2": {
+      "1": "Pick a negative acceleration so the car slows down. Read v(t) to find when v hits zero.",
+      "2": "The stopping distance grows with v₀² and shrinks with |a|. Too small |a| overshoots; too large stops short.",
+      "3": "For a fixed v₀, solve Δx = v₀² / (2·|a|) to pick |a|. Adjust and re-launch until the car halts in the green band."
+    },
+    "3": {
+      "1": "Read the target Δx off the track label. The v₀ readout in the HUD is fixed for this setup.",
+      "2": "Apply v² − v₀² = 2·a·Δx with v = 0. Solve algebraically for a.",
+      "3": "a = −v₀² / (2·Δx). Convert to m/s² and set the slider. The sign is negative — the car is retarded."
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Faites glisser le palet (ou utilisez le curseur $x_0$ à gauche) pour définir la position de départ, utilisez le curseur $v$ à droite pour régler la vitesse, puis appuyez sur GO. Essayez au moins deux vitesses différentes et changez $x_0$ pour voir comment la droite position-temps réagit.",
+      "concept": "Mouvement rectiligne uniforme : $x(t) = x_0 + v \\cdot t$. Le graphique de $x$ en fonction de $t$ est une droite — pente $= v$, ordonnée à l'origine $= x_0$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteignez les trois points de rendez-vous. Chaque $(x^{*}, t^{*})$ exige que le palet soit à $x^{*}$ exactement quand $t^{*}$ s'est écoulé. La ligne d'aperçu en pointillés montre la trajectoire que votre $v$ actuel va tracer — alignez-la de sorte qu'elle passe par chaque point.",
+      "concept": "Résolvez $v$ à partir de la condition de rendez-vous : $x^{*} = x_0 + v \\cdot t^{*} \\;\\Rightarrow\\; v = \\dfrac{x^{*} - x_0}{t^{*}}$. Un $v$ positif se déplace vers la droite, un $v$ négatif se déplace vers la gauche.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas de graphique, pas de ligne d'aperçu. Lisez les $(x^{*}, t^{*})$ de chaque cible sur les étiquettes, calculez $v = (x^{*} - x_0) / t^{*}$ sur papier, réglez-le et appuyez sur GO. Vous avez un nombre limité d'essais — ne validez que lorsque votre calcul est terminé.",
+      "concept": "Attention au signe : si $x^{*} < x_0$, le palet doit reculer, donc $v < 0$. Vérifiez les unités — $v$ est en m/s, pas en m.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "go": "GO",
+    "hits": "RÉUSSIS",
+    "shots": "ESSAIS",
+    "stage": "ÉTAPE",
+    "t_axis": "t (s)",
+    "x_axis": "x (m)",
+    "tip1": "faites glisser le palet, changez v, puis GO — observez le graphique tracer une droite",
+    "tip2": "choisissez v pour que la ligne en pointillés passe par chaque point, puis GO",
+    "tip3": "calculez v = (x* − x₀) / t* sur papier, puis GO — pas d'aperçu, pas de reprise",
+    "peek_tip_formula": "Mouvement uniforme : v = (x* − x₀) / t*. Lisez les coordonnées, remplacez, terminé.",
+    "peek_tip_sign": "Vérifiez le signe de x* − x₀. Si la cible est derrière le palet, v doit être négatif.",
+    "peek_tip_bounds": "v varie de −10 à +10 m/s. Si votre calcul sort de cet intervalle, revérifiez t* ou l'arithmétique."
+  },
+  "hints": {
+    "1": {
+      "1": "Faites glisser le palet sur la piste pour régler x₀, puis déplacez le curseur v à droite.",
+      "2": "Appuyez sur GO pour relâcher le palet. Observez comment le graphique trace une droite dont la pente est v.",
+      "3": "Essayez d'abord v = 0 (le palet reste immobile), puis un v positif (se déplace vers la droite), puis un v négatif (retour — se déplace vers la gauche)."
+    },
+    "2": {
+      "1": "La ligne turquoise en pointillés prévisualise où sera le palet à chaque instant. Visez à travers chaque point.",
+      "2": "Le t (horizontal) de chaque point indique QUAND y être ; son x (vertical) indique OÙ.",
+      "3": "Résolvez v = (x* − x₀) / t* pour une cible, réglez ce v, GO. Répétez pour chaque cible — vous pouvez ajuster v entre les essais."
+    },
+    "3": {
+      "1": "Lisez le (x*, t*) d'une cible. Prenez un instant pour calculer v = (x* − x₀) / t* sur papier.",
+      "2": "Le signe compte. x* < x₀ ⇒ v < 0. x* > x₀ ⇒ v > 0. x* = x₀ ⇒ v = 0.",
+      "3": "Vous avez 3 essais pour 3 cibles — un calcul par cible. Ne validez que lorsque votre calcul sur papier est terminé."
+    }
+  }
+}

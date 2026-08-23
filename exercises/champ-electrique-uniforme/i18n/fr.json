@@ -1,0 +1,56 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Deux plaques parallèles créent un champ électrique uniforme dans l'espace qui les sépare. La tension $U$ entre les plaques et l'écartement $d$ déterminent la valeur du champ $E$. Une charge d'essai $q$ placée dans le champ subit une force $F = qE$. Faites varier les trois curseurs et observez comment les flèches du champ et la force sur la charge réagissent.",
+      "concept": "Champ uniforme entre plaques parallèles : $E = \\dfrac{U}{d}$. Force sur une charge d'essai : $F = q\\,E = \\dfrac{q\\,U}{d}$. Direction de $E$ : de la plaque positive vers la plaque négative. La valeur du champ ne dépend pas de l'endroit où l'on place la charge dans l'espace inter-armatures — c'est tout l'intérêt d'un champ « uniforme ».",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une valeur cible du champ $E^{*}$ est affichée au point de mesure entre les plaques. Réglez $U$ et $d$ pour que $E = U/d$ atteigne $E^{*}$ à la tolérance près. $q$ est ici un paramètre libre — il ne modifie pas $E$.",
+      "concept": "$E^{*} = \\dfrac{U}{d}\\ \\Rightarrow\\ U = E^{*}\\,d$. De nombreux couples $(U, d)$ conviennent : choisissez d'abord $d$ (valeur ronde en cm), puis calculez $U$. Convertissez $d$ des cm en m avant de comparer les unités : $E$ est en V/m, donc $d$ en m donne directement des V/m.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches du champ sont masquées. Seules les plaques, la charge d'essai et la force cible $F^{*}$ restent visibles. Calculez $U$, $d$ et $q$ sur papier pour que la force sur la charge soit $F^{*}$, puis réglez les curseurs et validez. Un seul essai par configuration : en cas d'échec, une nouvelle configuration apparaît.",
+      "concept": "Combinez les deux formules : $F = q\\,E = \\dfrac{q\\,U}{d}$. Pour une cible $F^{*}$, choisissez librement deux des trois grandeurs $(q, U, d)$ puis résolvez pour la troisième : $q = \\dfrac{F^{*}\\,d}{U}$, ou $U = \\dfrac{F^{*}\\,d}{q}$. Attention aux conversions d'unités : $q$ en nC $=10^{-9}$ C, $d$ en cm $=10^{-2}$ m, $F$ en μN $=10^{-6}$ N.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "condensateur à plaques parallèles",
+    "plate_pos": "+",
+    "plate_neg": "−",
+    "probe": "M",
+    "charge": "q",
+    "match_ok": "atteint",
+    "tip1": "faites varier U, d et q sur au moins la moitié de chaque plage",
+    "tip2": "atteignez le champ cible E* en ajustant U et d",
+    "tip3": "calculez U, d, q sur papier d'abord — une seule validation par configuration",
+    "peek_tip_formula": "Réarrangez : q = F*·d / U. Fixez un U et un d ronds en unités SI, puis résolvez q.",
+    "peek_tip_anchor": "F en μN ≈ q(nC) · U(V) / d(cm) · 0,1. Vérifiez l'ordre de grandeur."
+  },
+  "hints": {
+    "1": {
+      "1": "Augmentez le curseur U — les flèches du champ grandissent-elles ou rétrécissent-elles ?",
+      "2": "Maintenant, gardez U constant et diminuez d. Le champ E = U/d, donc un d plus petit doit donner un E plus grand.",
+      "3": "La flèche de force sur q suit les flèches du champ : F = qE. Doubler q double F."
+    },
+    "2": {
+      "1": "Lisez E* sur l'étiquette au point de mesure. Seuls U et d contrôlent E — q est spectateur.",
+      "2": "Choisissez d'abord d (par exemple 2 cm = 0,02 m). Puis U = E* · d. Convertissez d'abord les kV/m en V/m.",
+      "3": "Si vous prenez d = 2 cm et E* = 10 kV/m, il faut U = 10000 · 0,02 = 200 V."
+    },
+    "3": {
+      "1": "Le champ est invisible mais la formule reste valable : F = qU/d.",
+      "2": "Choisissez d'abord U et d — n'importe quelles valeurs pratiques en SI — puis calculez q = F*·d / U en coulombs, puis convertissez en nC.",
+      "3": "Exemple type : F* = 60 μN, prenez U = 300 V et d = 1,5 cm = 0,015 m. Alors q = 60e-6 · 0,015 / 300 = 3e-9 C = 3 nC."
+    }
+  }
+}

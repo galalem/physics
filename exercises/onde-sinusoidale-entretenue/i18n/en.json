@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Sweep the amplitude $A$, period $T$, and celerity $c$ sliders. Notice how the spatial wavelength $\\lambda$ visible along the rope depends on both $c$ and $T$. Advance when each slider has swept at least half of its range.",
+      "concept": "For a sinusoidal traveling wave $y(x,t) = A\\,\\sin(\\omega t - k x)$, the spatial period is the wavelength $\\lambda = c \\cdot T = c / f$. $A$ sets the height of the crests, $T$ sets how long one full oscillation lasts, and $c$ sets how fast the pattern moves along the rope.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target wavelength $\\lambda^*$ is bracketed on the rope. Adjust $c$ and $T$ so that the visible spatial wavelength matches the bracket. Many pairs $(c, T)$ satisfy $c \\cdot T = \\lambda^*$.",
+      "concept": "Feature match: $\\lambda = c \\cdot T$. If you fix $T$, then $c = \\lambda^* / T$. If you fix $c$, then $T = \\lambda^* / c$. The amplitude $A$ does not affect $\\lambda$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The wave rendering is hidden. Two points $M_A$ and $M_B$ marked on the rope must oscillate in phase, and they are exactly one wavelength apart: $\\Delta x = \\lambda$. Compute $(c, T)$ on paper so that $c \\cdot T = \\Delta x$, then set the sliders and submit.",
+      "concept": "Two points on the rope oscillate in phase iff their separation is an integer multiple of the wavelength: $\\Delta x = n \\lambda$ with $n \\in \\mathbb{N}$. Here $n = 1$, so $\\lambda = \\Delta x$ and any pair $(c, T)$ with $c \\cdot T = \\Delta x$ is a valid answer.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench_label": "vibrating rope",
+    "source_label": "source S",
+    "spatial_axis": "y (x, t = 0)",
+    "temporal_axis": "y (x = 0, t)",
+    "marker_a": "M_A",
+    "marker_b": "M_B",
+    "delta_x": "Δx",
+    "lambda_target": "λ*",
+    "match_ok": "match",
+    "tip1": "sweep A, T, c to see how each shapes the wave",
+    "tip2": "align the visible spatial wavelength with the bracket Δx = λ*",
+    "tip3": "compute c · T = Δx on paper, then set the sliders",
+    "peek_tip_formula": "Rearrange: λ = c · T → T = λ / c. Pick any c, then compute T.",
+    "peek_tip_anchor": "Order of magnitude: at c = 2 m/s, T = λ/2 seconds. Adjust from there."
+  },
+  "hints": {
+    "1": {
+      "1": "Which slider changes the amplitude of the wave? Which one changes its wavelength?",
+      "2": "Fix c and sweep T. The spatial wavelength scales linearly with T: doubling T doubles λ.",
+      "3": "The core relationship is λ = c · T. Sweep c and T independently and watch λ track their product."
+    },
+    "2": {
+      "1": "Read the target bracket Δx = λ* on the rope. Which product of your sliders must equal this length?",
+      "2": "Fix one of c or T at a round value, then solve the other from c · T = λ*.",
+      "3": "For λ* = 1.5 m, one direct choice is c = 3 m/s and T = 0.5 s (3 × 0.5 = 1.5)."
+    },
+    "3": {
+      "1": "The two markers M_A and M_B are exactly one wavelength apart. What does that tell you about λ?",
+      "2": "Substitute λ = Δx into λ = c · T. That is one equation with two unknowns — you get to pick one of them.",
+      "3": "Pick a convenient c (say, 2 m/s), then T = Δx / c. Set both sliders and submit."
+    }
+  }
+}

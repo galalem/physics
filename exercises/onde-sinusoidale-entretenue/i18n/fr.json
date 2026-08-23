@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Balayez les curseurs d'amplitude $A$, de période $T$ et de célérité $c$. Observez comment la longueur d'onde spatiale $\\lambda$ visible le long de la corde dépend à la fois de $c$ et de $T$. Passez à l'étape suivante lorsque chaque curseur a parcouru au moins la moitié de sa plage.",
+      "concept": "Pour une onde progressive sinusoïdale $y(x,t) = A\\,\\sin(\\omega t - k x)$, la période spatiale est la longueur d'onde $\\lambda = c \\cdot T = c / f$. $A$ fixe la hauteur des crêtes, $T$ fixe la durée d'une oscillation complète, et $c$ fixe la vitesse à laquelle le motif se propage le long de la corde.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une longueur d'onde cible $\\lambda^*$ est encadrée sur la corde. Ajustez $c$ et $T$ pour que la longueur d'onde spatiale visible corresponde à l'encadrement. De nombreux couples $(c, T)$ vérifient $c \\cdot T = \\lambda^*$.",
+      "concept": "Correspondance de caractéristique : $\\lambda = c \\cdot T$. Si vous fixez $T$, alors $c = \\lambda^* / T$. Si vous fixez $c$, alors $T = \\lambda^* / c$. L'amplitude $A$ n'a pas d'influence sur $\\lambda$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le rendu de l'onde est masqué. Deux points $M_A$ et $M_B$ marqués sur la corde doivent osciller en phase, et ils sont séparés d'exactement une longueur d'onde : $\\Delta x = \\lambda$. Calculez $(c, T)$ sur papier de sorte que $c \\cdot T = \\Delta x$, puis réglez les curseurs et validez.",
+      "concept": "Deux points de la corde oscillent en phase si et seulement si leur distance est un multiple entier de la longueur d'onde : $\\Delta x = n \\lambda$ avec $n \\in \\mathbb{N}$. Ici $n = 1$, donc $\\lambda = \\Delta x$ et tout couple $(c, T)$ tel que $c \\cdot T = \\Delta x$ est une réponse valide.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench_label": "corde vibrante",
+    "source_label": "source S",
+    "spatial_axis": "y (x, t = 0)",
+    "temporal_axis": "y (x = 0, t)",
+    "marker_a": "M_A",
+    "marker_b": "M_B",
+    "delta_x": "Δx",
+    "lambda_target": "λ*",
+    "match_ok": "correspondance",
+    "tip1": "balayez A, T, c pour voir comment chacun modèle l'onde",
+    "tip2": "alignez la longueur d'onde spatiale visible avec l'encadrement Δx = λ*",
+    "tip3": "calculez c · T = Δx sur papier, puis réglez les curseurs",
+    "peek_tip_formula": "Réarrangez : λ = c · T → T = λ / c. Choisissez un c, puis calculez T.",
+    "peek_tip_anchor": "Ordre de grandeur : à c = 2 m/s, T = λ/2 secondes. Ajustez à partir de là."
+  },
+  "hints": {
+    "1": {
+      "1": "Quel curseur change l'amplitude de l'onde ? Lequel change sa longueur d'onde ?",
+      "2": "Fixez c et balayez T. La longueur d'onde spatiale varie linéairement avec T : doubler T double λ.",
+      "3": "La relation centrale est λ = c · T. Balayez c et T indépendamment et observez λ suivre leur produit."
+    },
+    "2": {
+      "1": "Lisez l'encadrement cible Δx = λ* sur la corde. Quel produit de vos curseurs doit être égal à cette longueur ?",
+      "2": "Fixez l'un des deux (c ou T) à une valeur ronde, puis résolvez l'autre à partir de c · T = λ*.",
+      "3": "Pour λ* = 1,5 m, un choix direct est c = 3 m/s et T = 0,5 s (3 × 0,5 = 1,5)."
+    },
+    "3": {
+      "1": "Les deux marqueurs M_A et M_B sont séparés d'exactement une longueur d'onde. Que cela vous apprend-il sur λ ?",
+      "2": "Substituez λ = Δx dans λ = c · T. C'est une équation à deux inconnues — vous pouvez en choisir une.",
+      "3": "Choisissez un c pratique (par exemple 2 m/s), puis T = Δx / c. Réglez les deux curseurs et validez."
+    }
+  }
+}

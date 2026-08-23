@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "An inductor stores energy in its magnetic field. Click the switch $K$ to toggle between ESTABLISH (drive current through $L$) and BREAK (short the coil through $R$, current decays). Slide $R$ and $L$ — complete one full establishment AND one full break to advance.",
+      "concept": "Establishment: $i(t) = I_\\max\\,(1 - e^{-t/\\tau})$ with $I_\\max = E/R$. The time constant $\\tau = L/R$ — at $t = \\tau$, $i$ reaches $63\\%$ of $I_\\max$. Same exponential shape as the RC circuit, but the roles swap: $L$ replaces $C$, $R$ moves to the denominator of $\\tau$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit the orange crosshair: current $i$ must reach $i^{*}$ at exactly $t^{*}$. Tune $R$ and $L$ so your live curve passes through the target. Multiple $(R, L)$ pairs work — success depends on $I_\\max = E/R$ AND $\\tau = L/R$ together.",
+      "concept": "$i^{*} = \\dfrac{E}{R}\\,(1 - e^{-t^{*}/\\tau})$. Two unknowns, one equation — pick a comfortable $R$ first (which fixes $I_\\max$), then solve for $\\tau$ (which fixes $L = R\\,\\tau$).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Only the target curve is drawn — pick $R$ and $L$ blind, then press RUN to see your curve overlaid. Match $\\tau$ to within $\\pm 3\\%$. Peek gives a reading method, not the answer.",
+      "concept": "Read the curve: at $t = \\tau^{*}$, the curve crosses $0.63\\,I_\\max^{*}$. First identify $I_\\max^{*}$ from where the curve levels off, then find the t-value where it hits $0.63\\,I_\\max^{*}$ — that is $\\tau^{*}$. Any $(R, L)$ with $L/R = \\tau^{*}$ scores.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "circuit",
+    "hit": "hit!",
+    "match_ok": "match",
+    "match_off": "off",
+    "submit_button": "RUN",
+    "establish_label": "establish",
+    "break_label": "break",
+    "click_switch": "click K to toggle",
+    "target_short": "target",
+    "peek_hint": "read i_max from where the target levels off, then find t where curve = 0.63·i_max — that t is tau*",
+    "tip1": "cycle K → ESTABLISH, wait for full current, K → BREAK, wait for full decay",
+    "tip2": "adjust R and L so your live curve passes through the target crosshair",
+    "tip3": "read tau* from the target: level-off gives I_max*, then find t where i = 0.63·I_max*"
+  },
+  "hints": {
+    "1": {
+      "1": "Click K once for ESTABLISH, again for BREAK, again for OPEN.",
+      "2": "The dashed 0.63·I_max line marks where the curve is at t = tau. Watch it move when you change R or L.",
+      "3": "Full establishment means i reaches 99% of I_max = E/R (about 5 tau). Full break means i drops to 1% of I_max."
+    },
+    "2": {
+      "1": "The crosshair has two coordinates: t* and i*. Pick R so I_max = E/R sits above i*, then solve for tau.",
+      "2": "Doubling L and doubling R keeps tau = L/R the same but halves I_max — try it, the shape stays but the height changes.",
+      "3": "Once your curve is close, fine-tune with the L slider — L changes tau without changing I_max."
+    },
+    "3": {
+      "1": "Two reads on the target: I_max* = where the curve asymptotes, tau* = t where i hits 0.63·I_max*.",
+      "2": "Or find where the curve visibly asymptotes (~5·tau*). Divide by 5 for tau*.",
+      "3": "Once tau* is estimated, pick any (R, L) with L/R = tau*. The I_max produced won't necessarily match target's, but tau will — that's what scores."
+    }
+  }
+}

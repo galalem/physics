@@ -172,14 +172,15 @@ if (import.meta.env.DEV) {
 
 const sceneTsx = () => `import { useEffect, useMemo, useState } from 'react'
 import {
-  useAdvanceStage,
   useComplete,
+  useCurrentStage,
   useDeclareStages,
   useInit,
   useNext,
   usePeek,
   useProgress,
   useReset,
+  useSetStage,
 } from '@physics/sdk/react'
 import { getStagesFor } from './stages'
 
@@ -188,30 +189,28 @@ export default function Scene() {
   const stages = useMemo(() => getStagesFor(locale), [locale])
   useDeclareStages(stages)
 
-  const [stageIdx, setStageIdx] = useState(1)
+  const stageIdx = useCurrentStage()
+  const setStage = useSetStage()
   const [peekVisible, setPeekVisible] = useState(false)
 
   const complete = useComplete()
   const progress = useProgress()
-  const advance = useAdvanceStage()
 
-  // Notify chrome each time the internal stage changes.
   useEffect(() => {
-    advance(stageIdx)
     progress(stageIdx / stages.length, {
       stage: stageIdx,
       canSubmit: true,
     })
-  }, [stageIdx, stages.length, advance, progress])
+  }, [stageIdx, stages.length, progress])
 
   useReset(() => {
-    setStageIdx(1)
+    setStage(1)
     setPeekVisible(false)
   })
 
   useNext(() => {
     if (stageIdx < stages.length) {
-      setStageIdx(stageIdx + 1)
+      setStage(stageIdx + 1)
     } else {
       complete({ success: true })
     }

@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une boucle $LC$ idéale échange indéfiniment de l'énergie entre la bobine et le condensateur. Le condensateur est initialement chargé à $U_0$ ; le courant est initialement nul. Faites varier $L$ et $C$, observez $u_C(t)$ osciller et attendez une période complète pour avancer.",
+      "concept": "$\\ddot{u}_C + \\dfrac{u_C}{L\\,C} = 0\\ \\Rightarrow\\ u_C(t) = U_0\\,\\cos(\\omega_0\\,t)$ avec $\\omega_0 = \\dfrac{1}{\\sqrt{L\\,C}}$ et $T_0 = 2\\pi\\sqrt{L\\,C}$. L'énergie totale $E = \\tfrac{1}{2}\\,C\\,U_0^2$ se conserve — rien ne se dissipe.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteignez le réticule orange : $u_C$ doit valoir $V^{*}$ exactement à $t^{*}$. Réglez $L$ et $C$ pour que votre courbe en direct passe par la cible. De nombreux couples $(L, C)$ conviennent — le succès ne dépend que de $T_0$.",
+      "concept": "Lisez la phase de la cible : un maximum signifie $t^{*} = k\\,T_0$, un zéro signifie $t^{*} = (2k+1)\\,T_0/4$, un minimum signifie $t^{*} = (2k+1)\\,T_0/2$. Cela fixe $T_0^{*}$ ; ensuite posez $L\\,C = (T_0^{*}/(2\\pi))^2$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Seule la courbe cible est tracée. Lisez $T_0^{*}$ à partir de sa forme sur papier, choisissez $L$ et $C$ à l'aveugle, puis appuyez sur LANCER pour superposer votre courbe. Faites correspondre $T_0$ à $\\pm 3\\%$ près.",
+      "concept": "$T_0^{*} = 2\\pi\\sqrt{L^{*}\\,C^{*}}\\ \\Rightarrow\\ L^{*}\\,C^{*} = \\left(\\dfrac{T_0^{*}}{2\\pi}\\right)^2$. Tout couple ayant le bon produit reste dans la tolérance.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "circuit LC",
+    "chart_title": "u_C (t)",
+    "y_axis_label": "u_C (V) →",
+    "x_axis_label": "t (ms) →",
+    "coil_label": "L",
+    "cap_label": "C",
+    "u0_label": "u_C(0) = U0",
+    "hit": "réussi !",
+    "match_ok": "correspond",
+    "match_off": "écart",
+    "submit_button": "LANCER",
+    "peek_hint": "comptez les maxima : T0 est le temps entre deux maxima successifs — lisez-le sur l'axe des t",
+    "tip1": "faites varier L et C — observez T0 s'étirer et se raccourcir. Attendez une période complète.",
+    "tip2": "ajustez L et C jusqu'à ce que le réticule soit sur votre courbe en direct",
+    "tip3": "mesurez T0* entre deux maxima sur la cible, calculez L·C = (T0*/(2π))², puis LANCER"
+  },
+  "hints": {
+    "1": {
+      "1": "L et C fixent tous deux la période. Essayez de quadrupler L puis de diviser C par quatre — observez ce qui change.",
+      "2": "T0 = 2π√(L·C). Un L·C plus grand donne une oscillation plus lente, et inversement.",
+      "3": "Une période complète est le temps entre un maximum et le maximum suivant. Regardez passer deux maxima."
+    },
+    "2": {
+      "1": "Lisez le réticule : est-il à un maximum (u_C = +U0), à un zéro ou à un minimum (-U0) ?",
+      "2": "S'il est à u_C = -U0 en t*, alors t* = T0*/2, donc T0* = 2·t*. Si u_C = 0 en t*, alors t* = T0*/4.",
+      "3": "Une fois T0* connu, choisissez n'importe quel couple (L, C) avec L·C = (T0*/(2π))². Diviser L par deux revient à doubler C."
+    },
+    "3": {
+      "1": "Repérez deux maxima successifs (ou le premier passage à zéro) sur la courbe cible — cela vous donne T0*.",
+      "2": "Calculez L·C = (T0*/(2π))². Puis tout couple (L, C) ayant ce produit convient.",
+      "3": "Diviser L par deux et doubler C laisse L·C constant — utilisez cela pour affiner dans les plages des curseurs."
+    }
+  }
+}

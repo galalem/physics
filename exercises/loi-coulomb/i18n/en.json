@@ -1,0 +1,56 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Sweep each slider — $q_1$, $q_2$, and $r$ — across at least half its range. Notice how doubling a charge doubles $F$, and how halving $r$ multiplies $F$ by four.",
+      "concept": "Coulomb's law: $F = k \\cdot |q_1 q_2| / r^2$ with $k \\approx 9 \\times 10^9 \\text{ N} \\cdot \\text{m}^2/\\text{C}^2$. $F$ is linear in each charge and inverse-square in the separation $r$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target force $F^{*}$ is displayed. Adjust $q_1$, $q_2$, and $r$ until the live force arrow on $q_2$ matches the dashed target arrow.",
+      "concept": "Many $(q_1, q_2, r)$ triples yield the same $|F|$. The visualization couples all three parameters into a single scalar — use it to build intuition for the inverse-square scaling.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The force arrow is hidden. Only the target $F^{*}$ and the current slider values remain. Compute $q_1$, $q_2$, $r$ on paper so that $F = F^{*}$, then set the sliders and submit.",
+      "concept": "Inverse form: $r = \\sqrt{k \\cdot |q_1 q_2| / F^{*}}$, or equivalently $|q_1 q_2| = F^{*} r^{2} / k$. Fix two of the three variables at convenient values and solve for the third.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "coulomb bench",
+    "match_ok": "match",
+    "q1_label": "q1",
+    "q2_label": "q2",
+    "r_label": "r",
+    "target_short": "target",
+    "tip1": "sweep every slider at least half its range",
+    "tip2": "match the live arrow to the dashed target arrow",
+    "tip3": "compute q1, q2, r on paper — then set the sliders",
+    "peek_tip_formula": "F = k·|q1·q2|/r²  →  r = sqrt(k·|q1·q2|/F). Pick two charges, solve for r.",
+    "peek_tip_anchor": "Anchor: 1 µC × 1 µC at r = 10 cm gives F = 0.9 N. Scale from there."
+  },
+  "hints": {
+    "1": {
+      "1": "Nudge each slider. Which one changes the arrow the most?",
+      "2": "Doubling q1 doubles F. Halving r multiplies F by four.",
+      "3": "Coverage bars show your progress. Push each slider to both extremes."
+    },
+    "2": {
+      "1": "The target |F*| is displayed. Rearrange F = k·|q1·q2|/r² to isolate one variable.",
+      "2": "Fix q1 = q2 = 2 µC, then solve r = sqrt(k·|q1·q2|/F*).",
+      "3": "Try r = sqrt(90·q1·q2/F*) with q, F in µC and N and r in cm. Any valid triple works."
+    },
+    "3": {
+      "1": "The arrow is hidden, but the formula still holds. Write it on paper first.",
+      "2": "In display units: F(N) = 90·q1(µC)·q2(µC)/r(cm)². Solve for one variable.",
+      "3": "Pick round charges — e.g. q1 = q2 = 2 µC — then compute r = sqrt(90·q1·q2/F*)."
+    }
+  }
+}

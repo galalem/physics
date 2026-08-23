@@ -1,0 +1,54 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Deux charges ponctuelles $q_1$ et $q_2$ sont placées sur l'axe des $x$ en $(\\pm d, 0)$. Un point test fixe $M$ est situé au-dessus du milieu en $(0, h)$. Balayez les trois curseurs et observez comment les deux flèches de champ individuelles $\\vec{E}_1$, $\\vec{E}_2$ se combinent en un champ résultant $\\vec{E}$ en $M$.",
+      "concept": "Superposition : $\\vec{E}(M) = \\vec{E}_1(M) + \\vec{E}_2(M)$. Chaque contribution : $\\vec{E}_i = \\dfrac{k\\, q_i}{r_i^{2}}\\,\\hat{r}_i$, dirigée en s'éloignant d'une charge positive, vers une charge négative. Par symétrie, les deux sources sont à la même distance $r = \\sqrt{d^{2} + h^{2}}$ de $M$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une flèche cible en pointillés en $M$ indique le champ résultant $\\vec{E}^{*}$ que vous devez produire. Ajustez $q_1$, $q_2$ et $d$ pour que votre flèche résultante pleine tombe sur la cible. De nombreux triplets $(q_1, q_2, d)$ conviennent — beaucoup de degrés de liberté, seulement deux composantes cibles.",
+      "concept": "Avec les sources en $(\\pm d, 0)$ et $M = (0, h)$ : $E_x = \\dfrac{k\\,d\\,(q_1 - q_2)}{r^{3}}$, $E_y = \\dfrac{k\\,h\\,(q_1 + q_2)}{r^{3}}$, où $r^{3} = (d^{2} + h^{2})^{3/2}$. Mêmes signes $\\Rightarrow$ $\\vec{E}$ vertical ; signes opposés $\\Rightarrow$ $\\vec{E}$ horizontal.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches de champ individuelles et résultante sont masquées. Seuls la flèche cible en $M$ et ses composantes $(E_x^{*}, E_y^{*})$ sont affichées. Calculez $q_1$, $q_2$, $d$ sur papier d'abord, puis réglez les curseurs et validez une seule fois. Une validation fausse vous fait passer à une nouvelle cible.",
+      "concept": "Inversez la forme fermée : $q_1 + q_2 = \\dfrac{E_y^{*}\\, r^{3}}{k\\,h}$ et $q_1 - q_2 = \\dfrac{E_x^{*}\\, r^{3}}{k\\,d}$. Choisissez n'importe quel $d$ pratique, calculez $r^{3}$, puis résolvez le système linéaire pour $q_1$, $q_2$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "banc électrostatique",
+    "point_m": "M",
+    "target_arrow": "E*",
+    "match_ok": "coïncidence",
+    "tip1": "balayez chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "alignez votre flèche pleine avec la cible en pointillés en M",
+    "tip3": "calculez q1, q2, d sur papier d'abord — une seule validation par cible",
+    "peek_tip_formula": "Inversez : q1 + q2 = Ey*·r^3 / (k·h),  q1 - q2 = Ex*·r^3 / (k·d). Choisissez d, résolvez.",
+    "peek_tip_anchor": "Mêmes signes annulent Ex (E vertical) ; signes opposés annulent Ey (E horizontal)."
+  },
+  "hints": {
+    "1": {
+      "1": "Essayez les deux charges de même signe — où pointe la résultante ?",
+      "2": "Inversez un signe pour que q1 = -q2. La composante verticale s'annule ; E devient horizontal.",
+      "3": "Augmentez d avec q1 = q2 fixés. r grandit, donc |E| diminue en 1/r^3."
+    },
+    "2": {
+      "1": "Lisez les composantes cibles (Ex*, Ey*) affichées en M. Laquelle est dominante ?",
+      "2": "Si Ex* est petit, visez q1 proche de q2 (même signe). Si Ey* est petit, visez q1 proche de -q2.",
+      "3": "Fixez d à une valeur ronde, puis résolvez q1 + q2 à partir de Ey* et q1 - q2 à partir de Ex*. Faites la demi-somme et la demi-différence."
+    },
+    "3": {
+      "1": "Même formule qu'à l'étape 2 : Ex = k·d·(q1-q2)/r^3, Ey = k·h·(q1+q2)/r^3. h est fixé à 1,5 m.",
+      "2": "Choisissez d vous-même (par exemple d = 1 m). Calculez r^3 = (d^2 + h^2)^{3/2}, puis le système linéaire pour q1 et q2.",
+      "3": "Avec d = 1 m et h = 1,5 m : r^3 ≈ 5,86 m^3. Multipliez Ex*, Ey* par r^3 et divisez par (k·d) ou (k·h) pour obtenir les sommes de charges."
+    }
+  }
+}

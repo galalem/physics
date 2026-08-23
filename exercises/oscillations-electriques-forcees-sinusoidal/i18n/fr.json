@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Le générateur impose une f.é.m. sinusoïdale $u(t) = U_\\text{max}\\cos(\\omega t)$ au circuit RLC série. Faites varier la pulsation $\\omega$ et la résistance $R$ — observez $i(t)$ : l'amplitude enfle à mesure que $\\omega$ s'approche de la valeur de résonance $\\omega_0 = 1/\\sqrt{L\\,C}$. Déplacez les DEUX curseurs ET traversez la résonance pour avancer.",
+      "concept": "En régime permanent $i(t) = I_\\text{max}\\cos(\\omega t - \\varphi)$ avec $I_\\text{max} = U_\\text{max}/Z$ et $Z = \\sqrt{R^{2} + (L\\omega - 1/(C\\omega))^{2}}$. L'amplitude est maximale quand la partie réactive s'annule : $L\\omega_0 = 1/(C\\omega_0)\\ \\Rightarrow\\ \\omega_0 = 1/\\sqrt{L\\,C}$, où $Z = R$ et $I_\\text{max} = U_\\text{max}/R$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteignez le repère d'amplitude cible $I^{*}$ sur le graphique — réglez $\\omega$ et $R$ pour que votre courant crête corresponde à $\\pm 5\\%$ près. De nombreux couples $(\\omega, R)$ conviennent : seule l'impédance $Z$ compte ici.",
+      "concept": "$I^{*} = U_\\text{max}/Z^{*}\\ \\Rightarrow\\ Z^{*} = U_\\text{max}/I^{*}$. Choisissez n'importe quel $(\\omega, R)$ avec $\\sqrt{R^{2} + (L\\omega - 1/(C\\omega))^{2}} = Z^{*}$. Voie la plus rapide : à $\\omega = \\omega_0$ la réactance s'annule, donc $R = Z^{*}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Seule la sinusoïde cible est tracée. Lisez sa période $T$ à partir de l'espacement de crête à crête, calculez $\\omega^{*} = 2\\pi/T$, réglez le curseur $\\omega$, puis appuyez sur LANCER pour superposer votre courbe. Faites correspondre $\\omega$ à $\\pm 3\\%$ près.",
+      "concept": "Le courant forcé a la même période que l'excitation : $T = 2\\pi/\\omega$. Lisez $T$ entre deux maxima consécutifs de la courbe cible, inversez pour obtenir $\\omega^{*}$. $R$ décale l'amplitude mais ne change pas la période.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "RLC série + générateur",
+    "chart_title": "i(t)",
+    "y_axis_label": "i (mA)",
+    "t_axis_label": "t (s)",
+    "hit": "réussi !",
+    "match_ok": "correspond",
+    "match_off": "écart",
+    "submit_button": "LANCER",
+    "gbf_label": "GBF ω",
+    "resonance_marker": "ω₀",
+    "peek_hint": "lisez la période T entre deux maxima sur la cible — ω = 2·π / T",
+    "tip1": "faites varier ω sur toute sa plage ; observez l'amplitude croître près de ω₀ = 1/√(L·C)",
+    "tip2": "réglez ω et R pour que l'amplitude de votre courbe touche la ligne orange I*",
+    "tip3": "lisez la période de la cible, calculez ω, puis appuyez sur LANCER"
+  },
+  "hints": {
+    "1": {
+      "1": "Faites glisser ω lentement du petit vers le grand. L'amplitude de i(t) croît, atteint un maximum, puis décroît à nouveau.",
+      "2": "Le maximum se produit à ω₀ = 1/√(L·C). Avec L = 1 H et C = 1 mF, ω₀ ≈ 31.6 rad/s.",
+      "3": "À la résonance, Z se réduit à R. Un R plus petit donne une amplitude plus grande — essayez R au minimum et balayez ω à travers la résonance."
+    },
+    "2": {
+      "1": "Calculez Z* = U_max / I*. Puis tout couple (ω, R) dont l'impédance vaut Z* atteint la cible.",
+      "2": "Fixez ω = ω₀ pour que la réactance soit nulle — alors R seul contrôle I_max. Ajustez R jusqu'à R = Z*.",
+      "3": "Si I* est grand (≥ 200 mA), il faut un R faible près de la résonance. Si I* est petit (< 100 mA), éloignez ω de ω₀."
+    },
+    "3": {
+      "1": "Observez la sinusoïde cible : mesurez la distance horizontale entre deux maxima consécutifs — c'est la période T.",
+      "2": "Inversez : ω* = 2π / T. Réglez le curseur ω à cette valeur ; ignorez R pour l'instant (seul ω est évalué).",
+      "3": "R ne change pas la période, seulement l'amplitude. La révélation montre un écart d'amplitude mais la tolérance porte sur ω."
+    }
+  }
+}

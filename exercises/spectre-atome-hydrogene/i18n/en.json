@@ -1,0 +1,62 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A hydrogen atom emits a photon when an electron drops from an upper level $n_i$ to a lower level $n_f$. Sweep both sliders across their ranges to see which transitions land in the ultraviolet, visible, or infrared band.",
+      "concept": "Rydberg formula: $\\dfrac{1}{\\lambda} = R_H \\left(\\dfrac{1}{n_f^2} - \\dfrac{1}{n_i^2}\\right)$ with $R_H \\approx 1.097\\times10^{7}\\,m^{-1}$. Energy levels: $E_n = -\\dfrac{13.6}{n^2}\\,\\text{eV}$. Emission requires $n_i > n_f$; the transition energy is $\\Delta E = E_{n_i} - E_{n_f}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target wavelength $\\lambda^{\\star}$ is marked on the spectrum strip. Adjust $n_i$ and $n_f$ so the emitted line lands on the marker. Which spectral series does it belong to?",
+      "concept": "Fix $n_f$ first — it selects the series (Lyman: UV, Balmer: visible, Paschen: IR). Then vary $n_i$: as $n_i$ grows, $1/\\lambda$ approaches $R_H / n_f^2$ (series limit), so $\\lambda$ shortens toward that limit.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The spectrum is hidden. Only the target wavelength $\\lambda^{\\star}$ is shown. Compute $n_i$ and $n_f$ on paper from $1/\\lambda^{\\star} = R_H(1/n_f^2 - 1/n_i^2)$, then set the sliders. You get one submit per target — a wrong answer rotates you to a new target.",
+      "concept": "Rearrange: $\\dfrac{1}{n_i^2} = \\dfrac{1}{n_f^2} - \\dfrac{1}{R_H\\,\\lambda^{\\star}}$. Try each $n_f \\in \\{1, 2, 3\\}$: the one that yields an integer $n_i \\ge 2$ is the transition.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "diagram_label": "energy levels (eV)",
+    "spectrum_label": "emission spectrum",
+    "band_uv": "UV",
+    "band_vis": "visible",
+    "band_ir": "IR",
+    "series_lyman": "Lyman",
+    "series_balmer": "Balmer",
+    "series_paschen": "Paschen",
+    "series_higher": "higher series",
+    "match_ok": "match",
+    "target_short": "target",
+    "invalid_transition": "n_i must exceed n_f",
+    "tip1": "sweep n_i and n_f; watch the color shift and series jumps",
+    "tip2": "pick the series first (n_f), then tune n_i to hit the target",
+    "tip3": "solve for n_f then n_i on paper; you only get one submit per target",
+    "peek_tip_formula": "Rearrange: 1/n_i^2 = 1/n_f^2 - 1/(R_H·lambda*). Try n_f = 1, 2, 3 and pick the one that gives an integer n_i.",
+    "peek_tip_anchor": "R_H·lambda(nm)·1e-9 ≈ 0.011·lambda(nm). Balmer visible: n_f=2 puts lambda in 380-780 nm."
+  },
+  "hints": {
+    "1": {
+      "1": "Nudge n_i one step. The color on the strip should shift — larger n_i means shorter wavelength for a fixed n_f.",
+      "2": "Set n_f = 2 and sweep n_i from 3 to 7. All lines stay in the visible band (Balmer series).",
+      "3": "Set n_f = 1: every transition sits in the UV. Set n_f = 3: every transition sits in the IR. The floor level chooses the series."
+    },
+    "2": {
+      "1": "Read the target color. Blue-violet → Balmer with high n_i. Red → Balmer H-α (n_i = 3). Off the visible band → n_f = 1 (UV) or n_f = 3 (IR).",
+      "2": "Compute 1/(R_H · lambda*) in metres. Compare with 1/n_f^2 for n_f = 1, 2, 3. The correct n_f leaves a difference equal to 1/n_i^2 for integer n_i.",
+      "3": "Direct: n_i = 1 / sqrt(1/n_f^2 - 1/(R_H · lambda*)). Round to nearest integer; verify by plugging back into the formula."
+    },
+    "3": {
+      "1": "The spectrum is hidden but the formula still holds. Write it out with the target lambda* substituted.",
+      "2": "Try n_f = 1, 2, 3 in turn: for each, compute 1/n_i^2 = 1/n_f^2 - 1/(R_H · lambda*). Only one yields an integer n_i between 2 and 7.",
+      "3": "Peek reveals the rearranged formula. Apply it to the specific lambda* shown, then set the sliders to those integer values."
+    }
+  }
+}

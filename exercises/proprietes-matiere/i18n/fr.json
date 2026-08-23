@@ -1,0 +1,69 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Cliquez sur chaque puce d'échantillon pour la placer sur les quatre instruments — balance, éprouvette graduée, thermomètre et aimant. Lisez sa masse, son volume, sa température, et s'il colle à l'aimant. Le tableau se remplit au fur et à mesure. Avancez lorsque vous avez mesuré chaque échantillon.",
+      "concept": "La matière peut être décrite par des propriétés mesurables : masse (avec une balance), volume (avec une éprouvette graduée), température (avec un thermomètre) et comportement magnétique (avec un aimant). Remarquez que deux échantillons peuvent partager la même masse tout en occupant des volumes différents — cette différence de compacité s'appelle la masse volumique : $\\rho = m / V$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Évaluer",
+      "instruction": "Les échantillons sont masqués. On vous montre une ligne remplie de mesures. Parmi trois échantillons candidats, choisissez celui dont les propriétés correspondent à la ligne. Répondez correctement à tous les scénarios en un seul passage — un mauvais choix relance le paquet.",
+      "concept": "Chaque échantillon est une empreinte unique de propriétés. Comparez la ligne mesurée à ce que vous avez mémorisé de l'étape 1 : éliminez les candidats par tout écart isolé — une mauvaise masse, un mauvais volume ou une mauvaise réponse magnétique suffit à en écarter un.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "banc d'instruments",
+    "controls": "échantillons",
+    "question": "question",
+    "measured": "mesurés",
+    "target": "scénarios",
+    "streak": "corrects",
+    "balance": "balance",
+    "cylinder": "éprouvette graduée",
+    "thermometer": "thermomètre",
+    "magnet": "aimant",
+    "mass": "masse",
+    "volume": "volume",
+    "temperature": "température",
+    "magnetic": "magnétique",
+    "yes": "oui",
+    "no": "non",
+    "sample": "échantillon",
+    "unknown": "?",
+    "reading": "lecture",
+    "row_title": "ligne mesurée",
+    "candidates": "quel échantillon ?",
+    "next_q": "suivant",
+    "restart_deck": "recommencer",
+    "tip1": "cliquez sur un échantillon pour le placer sur les quatre instruments",
+    "tip2": "faites correspondre la ligne mesurée à l'un des trois candidats",
+    "sample_iron": "fer",
+    "sample_aluminium": "aluminium",
+    "sample_copper": "cuivre",
+    "sample_water": "eau",
+    "sample_oil": "huile",
+    "sample_wood": "bois",
+    "unit_g": "g",
+    "unit_ml": "mL",
+    "unit_c": "°C",
+    "click_prompt": "choisissez un échantillon",
+    "hint_click_sample": "cliquez sur une puce ci-dessous"
+  },
+  "hints": {
+    "1": {
+      "1": "Il y a six échantillons en bas. Cliquez sur n'importe quelle puce pour la placer sur les instruments.",
+      "2": "Chaque échantillon fournit quatre lectures à la fois : masse, volume, température et réponse magnétique.",
+      "3": "Vous devez mesurer les six échantillons pour continuer — surveillez le compteur en haut à droite."
+    },
+    "2": {
+      "1": "Examinez chaque lecture ligne par ligne : masse, puis volume, puis température, puis magnétique.",
+      "2": "Un seul écart élimine un candidat — vous n'avez pas besoin de vérifier chaque champ.",
+      "3": "La colonne magnétique est le discriminant le plus rapide : un seul échantillon colle à l'aimant."
+    }
+  }
+}

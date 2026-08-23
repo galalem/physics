@@ -1,0 +1,62 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une mouche est posée sur le toit de la voiture A qui se déplace à la vitesse $v_A$. Choisissez un référentiel (route, piéton, voiture B) et appuyez sur TRACER pour tracer la trajectoire de la mouche. Changez de référentiel et modifiez $v_A$ pour voir comment un même mouvement produit des trajectoires différentes.",
+      "concept": "Une **trajectoire** est l'ensemble des positions successives d'un point, et elle dépend toujours du **référentiel** choisi. Le mouvement de la mouche dans le référentiel du sol s'écrit $x(t) = x_0 + v_A\\,t$ avec un petit saut vertical. Changez d'observateur, et la forme de la trajectoire change.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois trajectoires cibles fantômes sont affichées. Pour chacune, choisissez le référentiel et réglez $v_A$ pour que votre TRACER coïncide avec le fantôme. Un aperçu en direct montre la forme que vous êtes sur le point de dessiner.",
+      "concept": "Dans le référentiel de la voiture A, la mouche ne fait qu'osciller verticalement. Dans le référentiel de la route, sa trajectoire s'étire vers la droite à $v_A$. Dans un référentiel se déplaçant à $v_F$, la vitesse horizontale de la mouche devient $v_A - v_F$ — une vitesse négative inverse la trajectoire vers la gauche.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'aperçu en direct est masqué. Lisez chaque trajectoire cible fantôme et raisonnez sur papier pour déterminer quel référentiel l'a produite et quelle valeur de $v_A$ est nécessaire. Vous avez un nombre limité de tracés — pas de tir à l'aveugle.",
+      "concept": "Demandez-vous : quel observateur voit la mouche se déplacer vers la droite ? vers la gauche ? pas du tout ? Pour un déplacement horizontal pendant $T = 3\\,\\text{s}$, la longueur du tracé en mètres est égale à $|v_A - v_F| \\cdot T$. Un fantôme purement vertical signifie $v_A - v_F = 0$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "trace": "TRACER",
+    "stage": "ÉTAPE",
+    "frame": "RÉFÉRENTIEL",
+    "frame_road": "Route (sol)",
+    "frame_pedestrian": "Piéton",
+    "frame_carB": "Voiture B",
+    "frame_carA": "Voiture A",
+    "vA": "v_A",
+    "vB": "v_B",
+    "vP": "v_p",
+    "matches": "RÉUSSIS",
+    "traces": "TRACÉS",
+    "tip1": "choisissez un référentiel, réglez v_A, puis TRACER",
+    "tip2": "utilisez l'aperçu en pointillés pour aligner chaque fantôme",
+    "tip3": "calculez v_A − v_référentiel à partir du fantôme, puis TRACER",
+    "peek_tip_relative": "Dans un référentiel se déplaçant à v_F, la vitesse horizontale de la mouche est v_A − v_F. Un tracé vers la gauche signifie v_F > v_A.",
+    "peek_tip_dot": "Un tracé purement vertical (sans dérive horizontale) signifie v_A − v_référentiel = 0. Faites correspondre la vitesse du référentiel à v_A.",
+    "peek_tip_length": "La durée du tracé est de 3 s. La longueur horizontale en mètres ≈ |v_A − v_référentiel| · 3."
+  },
+  "hints": {
+    "1": {
+      "1": "Choisissez un référentiel dans le panneau de gauche, puis appuyez sur TRACER.",
+      "2": "Essayez le même v_A dans deux référentiels différents — la forme de la trajectoire change.",
+      "3": "Dans le référentiel de la voiture A, la mouche se déplace à peine horizontalement : la voiture et la mouche ont la même vitesse."
+    },
+    "2": {
+      "1": "L'aperçu en pointillés montre le tracé que vous êtes sur le point de dessiner. Ajustez v_A et changez de référentiel jusqu'à ce qu'il recouvre le fantôme.",
+      "2": "Un fantôme horizontal se dirigeant vers la droite signifie v_A > v_référentiel. Vers la gauche signifie v_A < v_référentiel.",
+      "3": "Un fantôme purement vertical signifie v_A − v_référentiel = 0 : la mouche apparaît immobile selon x."
+    },
+    "3": {
+      "1": "Il n'y a pas d'aperçu. Lisez chaque fantôme et déterminez quel observateur le voit avant de toucher aux commandes.",
+      "2": "Longueur du tracé ≈ |v_A − v_référentiel| · 3 s. La direction vous donne le signe de v_A − v_référentiel.",
+      "3": "Si le fantôme est un saut vertical, choisissez le référentiel dont la vitesse est égale à v_A. S'il dérive vers la gauche, choisissez un référentiel se déplaçant plus vite que v_A."
+    }
+  }
+}

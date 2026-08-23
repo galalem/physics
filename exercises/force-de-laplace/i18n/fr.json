@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un conducteur rectiligne parcouru par un courant $I$ est placé dans un champ magnétique uniforme $\\vec{B}$. Le conducteur subit une force $\\vec{F}$ — la force de Laplace. Faites glisser les quatre curseurs et observez la flèche de force (marquée $\\odot$, sortant du plan) grandir ou rétrécir.",
+      "concept": "Formule de Laplace : $|\\vec{F}| = B \\cdot I \\cdot \\ell \\cdot \\sin(\\alpha)$, où $\\alpha$ est l'angle entre la direction du courant et $\\vec{B}$. Lorsque le conducteur est parallèle à $\\vec{B}$ ($\\alpha = 0$) la force s'annule ; la force est maximale lorsque le conducteur est perpendiculaire ($\\alpha = 90^{\\circ}$).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une valeur cible de la force $F^{\\star}$ est indiquée par un anneau orange en pointillés sur le conducteur. Ajustez $I$, $\\ell$, $B$ et $\\alpha$ jusqu'à ce que votre anneau de force turquoise, mis à jour en direct, coïncide avec l'anneau cible.",
+      "concept": "$F^{\\star} = B \\cdot I \\cdot \\ell \\cdot \\sin(\\alpha)$. De nombreux quadruplets $(I, \\ell, B, \\alpha)$ vérifient cette égalité — c'est le produit $B \\cdot I \\cdot \\ell \\cdot \\sin(\\alpha)$ qui compte, pas un curseur pris isolément.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches du champ et l'anneau de force sont masqués. Seule la valeur cible $F^{\\star}$ est affichée. Calculez sur papier un quadruplet $(I, \\ell, B, \\alpha)$ valide, réglez les curseurs, puis validez. Un seul essai par cible — une réponse erronée fait tourner vers une nouvelle cible.",
+      "concept": "Formule inverse : fixez $I$, $\\ell$, $B$ à des valeurs pratiques, puis $\\sin(\\alpha) = \\dfrac{F^{\\star}}{B \\cdot I \\cdot \\ell}$. Choisissez $I$, $\\ell$, $B$ tels que $B \\cdot I \\cdot \\ell \\ge F^{\\star}$, sinon aucun $\\alpha$ ne convient.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "field_label": "région du champ",
+    "b_arrow_label": "B",
+    "rod_label": "conducteur (I)",
+    "force_label": "F",
+    "target_short": "cible",
+    "match_ok": "atteint",
+    "target_prefix": "F* =",
+    "tip1": "faites glisser chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "faites coïncider l'anneau turquoise en direct avec l'anneau cible orange en pointillés",
+    "tip3": "calculez d'abord le quadruplet sur papier, puis réglez les curseurs",
+    "peek_tip_formula": "Réarrangez : sin(α) = F* / (B·I·ℓ). Choisissez I, ℓ, B d'abord, puis α = arcsin(F* / (B·I·ℓ)).",
+    "peek_tip_anchor": "Repère : à α = 90° la force est maximale, F_max = B·I·ℓ. Assurez-vous donc que B·I·ℓ ≥ F*, puis diminuez α."
+  },
+  "hints": {
+    "1": {
+      "1": "Essayez de doubler I en gardant les autres curseurs fixes — l'anneau de force doit doubler.",
+      "2": "Faites tourner α de 90° vers 0° — la force diminue jusqu'à zéro même avec de grands I, ℓ, B.",
+      "3": "Le produit B·I·ℓ·sin(α) détermine la force. Chacun des quatre curseurs peut compenser un autre."
+    },
+    "2": {
+      "1": "Lisez le rayon de l'anneau orange en pointillés. Agrandissez ou réduisez l'anneau turquoise jusqu'à ce qu'ils se superposent.",
+      "2": "Fixez trois curseurs à des valeurs rondes pratiques (par ex. I=5A, ℓ=15cm, B=100mT), puis ajustez α seul.",
+      "3": "Formule inverse : sin(α) = F* / (B·I·ℓ). Choisissez I, ℓ, B pour que le rapport soit compris entre 0 et 1."
+    },
+    "3": {
+      "1": "L'anneau de force est masqué — vous ne pouvez pas ajuster à l'œil. Écrivez sin(α) = F* / (B·I·ℓ) sur papier.",
+      "2": "Choisissez des I, ℓ, B assez grands pour que B·I·ℓ soit confortablement au-dessus de F*, puis calculez α = arcsin(F* / (B·I·ℓ)).",
+      "3": "Un seul essai par cible. Vérifiez la chaîne d'unités : A × m × T = N. Si B·I·ℓ < F*, aucun α n'existe — augmentez l'un d'eux."
+    }
+  }
+}

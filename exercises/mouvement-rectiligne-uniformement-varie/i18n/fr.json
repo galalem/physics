@@ -1,0 +1,63 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Réglez une vitesse initiale $v_0$ et une accélération $a$, puis appuyez sur LANCER. Observez $x(t)$, $v(t)$, $a(t)$ à droite — la position dessine une parabole, la vitesse une droite, l'accélération reste constante. Essayez des valeurs positives et négatives de $a$ pour ressentir la différence entre mouvement accéléré et retardé.",
+      "concept": "Mouvement rectiligne uniformément varié : $x(t) = x_0 + v_0\\,t + \\tfrac{1}{2} a\\,t^{2}$, $v(t) = v_0 + a\\,t$, avec $a$ constante.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Arrêtez la voiture dans la zone cible verte avant le mur. La courbe $v(t)$ en direct indique quand la voiture atteint $v = 0$ ; ajustez $v_0$ et $a$ (avec $a < 0$) pour que la voiture s'immobilise au drapeau. Complétez chaque configuration pour progresser.",
+      "concept": "Relation indépendante du temps : $v^{2} - v_0^{2} = 2\\,a\\,\\Delta x$. Quand la voiture s'arrête, $v = 0$, donc la distance d'arrêt est $\\Delta x = -\\dfrac{v_0^{2}}{2a}$ (positive car $a < 0$).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas de graphes. La vitesse initiale $v_0$ de la voiture est fixée et la distance cible $\\Delta x$ est indiquée sur la piste. Calculez l'accélération $a$ qui arrête la voiture exactement au drapeau, réglez le curseur $a$, puis LANCER. Vous avez un nombre limité d'essais — pas de tâtonnement.",
+      "concept": "Résolvez $a$ à partir de $v^{2} - v_0^{2} = 2\\,a\\,\\Delta x$ avec $v = 0$ : $\\;a = -\\dfrac{v_0^{2}}{2\\,\\Delta x}$. Le signe est négatif car le mouvement est retardé (opposé à la vitesse).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "launch": "LANCER",
+    "stage": "ÉTAPE",
+    "hits": "RÉUSSIS",
+    "shots": "TIRS",
+    "v0": "v₀",
+    "a": "a",
+    "tip1": "réglez v₀ et a, puis LANCER",
+    "tip2": "utilisez le graphe v(t) pour aligner v = 0 avec la cible",
+    "tip3": "calculez a à partir de Δx et v₀, puis LANCER",
+    "graph_x": "x (m)",
+    "graph_v": "v (m/s)",
+    "graph_a": "a (m/s²)",
+    "graph_t": "t (s)",
+    "delta_x": "Δx",
+    "target_flag": "arrêt ici",
+    "wall": "mur",
+    "peek_tip_sign": "Un mouvement retardé signifie que a et v ont des signes opposés. Avec v₀ > 0, a doit être négative pour arrêter la voiture.",
+    "peek_tip_formula": "Utilisez v² − v₀² = 2·a·Δx avec v = 0 à la cible : a = −v₀² / (2·Δx). Aucun temps nécessaire.",
+    "peek_tip_units": "Δx est en mètres, v₀ en m/s, donc a s'obtient en m/s². Arrondissez à une décimale — la tolérance est généreuse."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplacez le curseur v₀ à droite, puis le curseur a à gauche, et appuyez sur LANCER.",
+      "2": "Le graphe x(t) est une parabole ; le graphe v(t) est une droite dont la pente est a.",
+      "3": "a positive avec v₀ positive = accéléré ; a négative avec v₀ positive = décéléré (retardé)."
+    },
+    "2": {
+      "1": "Choisissez une accélération négative pour que la voiture ralentisse. Lisez v(t) pour trouver quand v atteint zéro.",
+      "2": "La distance d'arrêt croît avec v₀² et décroît avec |a|. Un |a| trop petit dépasse la cible ; trop grand s'arrête trop tôt.",
+      "3": "Pour v₀ fixée, résolvez Δx = v₀² / (2·|a|) pour choisir |a|. Ajustez et relancez jusqu'à ce que la voiture s'immobilise dans la bande verte."
+    },
+    "3": {
+      "1": "Lisez la cible Δx sur l'étiquette de la piste. La valeur v₀ affichée dans le HUD est fixée pour cette configuration.",
+      "2": "Appliquez v² − v₀² = 2·a·Δx avec v = 0. Résolvez algébriquement pour a.",
+      "3": "a = −v₀² / (2·Δx). Convertissez en m/s² et réglez le curseur. Le signe est négatif — la voiture est retardée."
+    }
+  }
+}

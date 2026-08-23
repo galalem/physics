@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Study the diagram: the domestic mains supply in Tunisia delivers an alternating voltage of effective value $U_{eff} = 230\\,\\text{V}$ at frequency $f = 50\\,\\text{Hz}$. Three wires enter the outlet: the phase (live), the neutral, and the earth. The fuse box protects the installation with a circuit breaker (disjoncteur) and a residual-current device (différentiel). Click the labels on the diagram to reveal each part.",
+      "concept": "The phase wire carries the alternating potential; the neutral returns the current; the earth wire (connected to a grounded rod, prise de terre) safely diverts any leakage from a metal appliance frame. The disjoncteur cuts the current on overload or short-circuit. The différentiel (30 mA) trips when phase and neutral currents differ — the sign that current is leaking through a person or a fault.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Evaluate",
+      "instruction": "Diagram hidden. Answer each safety scenario using the concepts alone. You must answer all cards correctly in one pass — a wrong answer restarts the deck with a fresh order.",
+      "concept": "Two invariants to remember: (1) the earth wire's only job is to give leakage current a safer path than through you; (2) the différentiel compares phase and neutral currents — any imbalance means current is going somewhere it shouldn't.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "scene_title": "domestic ac supply",
+    "controls": "diagram",
+    "question": "safety scenario",
+    "cards_progress": "cards",
+    "reveal": "reveal all",
+    "hide": "hide all",
+    "phase": "phase (live) — 230 V rms",
+    "neutral": "neutral — return path",
+    "earth": "earth — safety ground",
+    "outlet": "wall outlet",
+    "socket": "socket",
+    "third_pin": "earth pin",
+    "breaker": "disjoncteur",
+    "rcd": "différentiel (30 mA)",
+    "fuse_box": "fuse box",
+    "u_label": "U_eff = 230 V",
+    "f_label": "f = 50 Hz",
+    "sine_label": "u(t) alternating",
+    "next": "next card",
+    "restart": "restart deck",
+    "correct": "correct",
+    "wrong": "wrong — deck resets",
+    "card": "card",
+    "peek_hint": "For each card, ask: which wire or device is designed to handle that exact fault? Earth = leakage path. Différentiel = detects imbalance. Disjoncteur = overload / short. Insulation and dry skin = your own resistance."
+  },
+  "hints": {
+    "1": {
+      "1": "The mains voltage is described by an effective value and a frequency — read them off the diagram.",
+      "2": "There are three wires in a modern outlet, each with a distinct job. Click each label to see which is which.",
+      "3": "Two devices sit in the fuse box: one for overload, one for leakage detection. Note how they differ."
+    },
+    "2": {
+      "1": "For each card, identify which fault is happening: overload, short-circuit, leakage to ground, or a person becoming a path.",
+      "2": "Then match the fault to the device or wire that was designed for it. Earth wire = safe path for leakage. Différentiel = detects current imbalance. Disjoncteur = overcurrent.",
+      "3": "Wet skin lowers your body's resistance drastically, so a small voltage can drive a dangerous current — that is why you never touch outlets with wet hands."
+    }
+  }
+}

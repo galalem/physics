@@ -1,0 +1,67 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Scrub time $t$ with the slider. Watch $\\vec{OM}$, $\\vec{v}$ (tangent to the path) and $\\vec{a}$ redraw at each instant. Note how $|\\vec{v}|$ and $|\\vec{a}|$ change along the trajectory.",
+      "concept": "Vectorial kinematics: $\\vec{v} = \\dfrac{d\\vec{OM}}{dt}$ (always tangent to the path), $\\vec{a} = \\dfrac{d\\vec{v}}{dt}$. The angle $(\\vec{v}, \\vec{a})$ tells whether motion is accelerating ($<90°$), decelerating ($>90°$) or purely curving ($=90°$).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Move the slider to the requested time. Read $|\\vec{v}|$ from the HUD, then press CONFIRM. Nail all three target times to advance.",
+      "concept": "The three probes exercise different signatures: $|\\vec{v}|$ constant on a circle (uniform circular motion), $|\\vec{v}|$ linear in $t$ on a straight line with constant $\\vec{a}$, $|\\vec{v}|$ minimum at the vertex of a parabola.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The $\\vec{v}$ arrows are hidden. At each marked point, drag the small handle to sketch the direction of $\\vec{v}$. When all three are set, press SUBMIT. You have a limited number of attempts — reason before you drag.",
+      "concept": "$\\vec{v}$ is always tangent to the trajectory in the direction of motion. Use the trajectory shape and the sense of travel (increasing $t$) to fix each arrow — no magnitude required, only direction.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "CONFIRM",
+    "submit": "SUBMIT",
+    "hits": "HITS",
+    "stage": "STAGE",
+    "attempts": "ATTEMPTS",
+    "target": "TARGET",
+    "time": "t",
+    "speed": "|v|",
+    "accel": "|a|",
+    "va_angle": "(v,a)",
+    "origin": "O",
+    "point_m": "M",
+    "vector_v": "v",
+    "vector_a": "a",
+    "curve_parabola": "parabola",
+    "curve_circle": "circular arc",
+    "curve_line": "uniformly accelerated line",
+    "tip1": "scrub t, watch OM, v, a redraw",
+    "tip2": "match t, read |v|, then CONFIRM",
+    "tip3": "drag each arrow tangent to the path, in the direction of motion",
+    "peek_tip_tangent": "v is ALWAYS tangent to the trajectory. Look at the local slope of the curve at the marked point.",
+    "peek_tip_direction": "v points in the direction of motion (increasing t). If M moves rightward on the curve, v points rightward.",
+    "peek_tip_circle": "On a circle, v is perpendicular to OM only if O sits at the centre. Trust the tangent to the shape, not the vector to O."
+  },
+  "hints": {
+    "1": {
+      "1": "Drag the time slider back and forth. What stays fixed and what changes?",
+      "2": "v is always tangent to the path; a points toward the concave side of the curve.",
+      "3": "When |v| grows with time, the motion accelerates: the angle (v, a) is acute. When |v| shrinks, the angle is obtuse."
+    },
+    "2": {
+      "1": "The HUD shows the current t and |v|. Match the requested t within tolerance, then CONFIRM.",
+      "2": "You do not need to compute anything — position M at the requested instant and read the magnitude from the HUD.",
+      "3": "If a target seems out of reach, check the slider covers 0 to T. Every target sits inside that range by construction."
+    },
+    "3": {
+      "1": "For each marked point, the direction of v is fixed by the shape of the trajectory at that point.",
+      "2": "Tangent to the curve, in the sense of increasing t. If M moves left-to-right on that segment, the arrow points to the right.",
+      "3": "For a circle traced counter-clockwise, v at the top points left; at the bottom it points right. Same shape, opposite sense = opposite arrow."
+    }
+  }
+}

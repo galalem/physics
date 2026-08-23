@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un condensateur stocke des charges électriques sur deux armatures. Fermez l'interrupteur $K$ pour lancer la charge. Balayez $C$ et $U$, et complétez une charge entière (observez $u_C \\to U$) pour progresser.",
+      "concept": "Charge stockée : $Q = C \\cdot u_C$. Quand le condensateur est complètement chargé, $u_C \\to U$ donc $Q_{max} = C \\cdot U$. Énergie stockée : $E_e = \\tfrac{1}{2}\\,C\\,u_C^2$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteignez le plateau cible : votre courbe doit se stabiliser à $Q^{*}$. Ajustez $C$ et $U$ pour que le produit $C \\cdot U$ soit égal à $Q^{*}$ à $\\pm 5\\%$ près.",
+      "concept": "Le plateau de $q(t)$ est $Q_{max} = C \\cdot U$. De nombreux couples $(C, U)$ atteignent le même $Q_{max}$ — la réussite ne dépend que du produit.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Seule la courbe cible est affichée. Lisez $Q^{*}$ sur son plateau, choisissez $C$ et $U$ tels que $C \\cdot U = Q^{*}$, puis appuyez sur LANCER. Votre courbe apparaît à la validation — atteignez $Q_{max}$ à $\\pm 3\\%$ près.",
+      "concept": "L'asymptote horizontale de la cible est $Q^{*}$. Lisez-la sur l'axe des y, puis choisissez tout couple $(C, U)$ avec $C \\cdot U = Q^{*}$. Exemple : $Q^{*} = 3.0\\,\\text{mC}$ → $C = 500\\,\\mu\\text{F},\\ U = 6\\,\\text{V}$ ou $C = 300\\,\\mu\\text{F},\\ U = 10\\,\\text{V}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "circuit",
+    "chart_title": "q (t)",
+    "y_axis_label": "q (mC)",
+    "x_axis_label": "t (s) →",
+    "hit": "réussi !",
+    "match_ok": "correct",
+    "match_off": "hors cible",
+    "submit_button": "LANCER",
+    "closed_label": "fermé",
+    "open_label": "ouvert",
+    "click_switch": "cliquez K pour ouvrir / fermer",
+    "qmax_label": "Q_max",
+    "peek_hint": "la courbe se stabilise à Q_max = C·U — lisez Q* sur le plateau de l'axe des y, puis choisissez C et U avec C·U = Q*",
+    "tip1": "fermez K, observez q(t) monter vers Q_max = C·U, puis balayez C et U",
+    "tip2": "ajustez C et U pour que le plateau de votre courbe s'aligne avec la ligne orange Q*",
+    "tip3": "lisez Q* sur le plateau de la courbe cible, puis réglez C·U = Q* et appuyez sur LANCER"
+  },
+  "hints": {
+    "1": {
+      "1": "Cliquez K pour fermer l'interrupteur. Le condensateur se charge : q(t) monte vers Q_max = C·U.",
+      "2": "Essayez de doubler C — le plateau double. Essayez de doubler U — le plateau double aussi. C'est le produit C·U qui fixe le plateau.",
+      "3": "Charge complète signifie que u_C atteint 99% de U (quelques constantes de temps). Le plateau de q(t) se situe à Q_max = C·U."
+    },
+    "2": {
+      "1": "Calculez Q_max = C·U. Ajustez C et U jusqu'à ce que Q_max soit égal à la cible Q*.",
+      "2": "Doubler C et diviser U par deux laisse Q_max inchangé — le plateau ne bouge pas. Tout couple (C, U) avec C·U = Q* fonctionne.",
+      "3": "Affinez le curseur C une fois proche ; petites variations de C = petites variations de Q_max à U fixée."
+    },
+    "3": {
+      "1": "Sur la courbe cible, trouvez la valeur en y vers laquelle la courbe se stabilise — c'est Q*.",
+      "2": "Une fois Q* connu, choisissez un U rond (par exemple 6 V) et réglez C = Q* / U.",
+      "3": "Appuyez sur Peek pour un indice de lecture. Puis réglez C·U = Q* et appuyez sur LANCER."
+    }
+  }
+}

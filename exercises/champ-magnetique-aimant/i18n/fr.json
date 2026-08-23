@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un aimant droit se trouve à droite de l'espace de travail. Une boussole est placée au point de mesure fixe à gauche. Faites varier les trois curseurs — position de l'aimant $X$, $Y$, et l'orientation $\\theta$ vers laquelle pointe son pôle N — et observez comment les flèches du champ autour de l'aimant, ainsi que l'aiguille de la boussole au point de mesure, évoluent.",
+      "concept": "Le moment magnétique de l'aimant $\\vec{m}$ est dirigé de son pôle S vers son pôle N. Sur l'axe de l'aimant, le champ $\\vec{B}$ est parallèle à $\\vec{m}$. Perpendiculairement à l'axe, $\\vec{B}$ est antiparallèle à $\\vec{m}$. Partout ailleurs, il s'interpole : $\\vec{B} \\propto 3(\\vec{m}\\cdot\\hat{r})\\hat{r} - \\vec{m}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une flèche orange à l'intérieur de la boussole indique la direction cible. Placez et orientez l'aimant de sorte que l'aiguille rouge de la boussole s'aligne avec la flèche orange. De nombreux placements fonctionnent — il suffit que la direction de $\\vec{B}$ au point de mesure corresponde.",
+      "concept": "Astuce pratique : si vous placez l'aimant quelque part sur la droite de la direction cible et que vous orientez son pôle N dans la direction cible, le point de mesure se trouve sur l'axe de l'aimant et $\\vec{B}$ au point de mesure pointe selon $\\vec{m}$ — c'est-à-dire dans la direction cible.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches du champ et l'aiguille de la boussole sont masquées. Seuls la flèche cible, la position du point de mesure et l'aimant restent visibles. Utilisez l'astuce de l'axe (ou la formule complète du dipôle) sur papier pour choisir $X$, $Y$, $\\theta$ qui font que $\\vec{B}$ au point de mesure pointe dans la direction cible. Vous n'avez qu'une seule validation par configuration — en cas d'échec, une nouvelle cible est tirée.",
+      "concept": "Stratégie inverse : choisissez une direction $\\hat{u}$ pointant vers la direction cible. Placez l'aimant en n'importe quel point du rayon $\\vec{r}_m = \\vec{r}_p + d\\,\\hat{u}$ (n'importe quel $d > 0$ dans l'espace de travail), et réglez $\\theta$ pour que le pôle N pointe dans la direction cible. Les deux signes de $d$ fonctionnent — le champ est parallèle à $\\vec{m}$ partout le long de l'axe.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "workspace": "espace de travail",
+    "match_ok": "aligné",
+    "target": "cible",
+    "n": "N",
+    "e": "E",
+    "s": "S",
+    "w": "O",
+    "probe": "sonde",
+    "target_label_prefix": "cible →",
+    "tip1": "faites varier chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "alignez l'aiguille rouge avec la flèche orange cible",
+    "tip3": "résolvez X, Y, θ sur papier, puis réglez les curseurs et validez",
+    "peek_tip_formula": "Astuce de l'axe : placez l'aimant sur le rayon de direction cible partant de la sonde, orientez N selon cette direction.",
+    "peek_tip_anchor": "Seule la direction compte. Toute distance le long de l'axe donne la même direction de B — choisissez-en une pratique."
+  },
+  "hints": {
+    "1": {
+      "1": "Essayez de laisser X et Y tranquilles et de ne faire tourner que θ. Dans quel sens l'aiguille tourne-t-elle ?",
+      "2": "Maintenant déplacez l'aimant à la même hauteur que la sonde (Y = 0) et faites-le glisser en X. Sur l'axe, l'aiguille suit le pôle N.",
+      "3": "Déplacez Y hors de l'axe. Remarquez que l'aiguille s'incline différemment — perpendiculairement à l'axe, le champ est opposé au moment."
+    },
+    "2": {
+      "1": "Lisez la direction de la flèche orange (E = 90°, N = 0°). C'est la direction que doit avoir B au point de mesure.",
+      "2": "Solution la plus simple : placez l'aimant sur la ligne partant de la sonde vers la cible, et tournez N pour correspondre à la direction cible.",
+      "3": "Exemple : cible E (90°). Réglez Y = 0 (aligné avec la sonde), n'importe quel X, et θ = 90°. Le pôle N fait face à l'est, la sonde est sur l'axe, B pointe vers l'est."
+    },
+    "3": {
+      "1": "La visualisation a disparu — la physique, elle, reste. Faites d'abord un schéma sur papier.",
+      "2": "Le long de l'axe de l'aimant, B est parallèle à m. Hors axe, ce n'est pas le cas. Préférez une solution sur l'axe.",
+      "3": "Recette de résolution : (a) choisissez la direction cible ; (b) placez l'aimant sur la ligne de cette direction partant de la sonde ; (c) réglez θ égal à la direction cible pour que le pôle N pointe dans ce sens."
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Déplacez les curseurs pour régler l'amplitude $X_m$, la pulsation $\\omega$, et la phase $\\varphi$, puis appuyez sur JOUER. Observez comment $x(t) = X_m \\cos(\\omega t + \\varphi)$ façonne le mouvement de va-et-vient du mobile.",
+      "concept": "Mouvement rectiligne sinusoïdal : $x(t) = X_m \\cos(\\omega t + \\varphi)$. Période $T = \\dfrac{2\\pi}{\\omega}$. L'amplitude $X_m$ est l'élongation maximale ; $\\varphi$ décale horizontalement toute la courbe.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Reproduisez le mobile fantôme. Ajustez $X_m$, $\\omega$, $\\varphi$ pour que votre mobile (orange) suive le fantôme cible (bleu-vert) pendant une période complète. La superposition des courbes montre les deux — alignez-les.",
+      "concept": "Deux mouvements sinusoïdaux coïncident quand ils partagent $X_m$, $\\omega$ (ou de manière équivalente $T = 2\\pi/\\omega$), et $\\varphi$. Une avance de phase $\\varphi$ décale $x(t)$ vers la gauche de $\\varphi / \\omega$ secondes.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas de courbe. Lisez $X_m$, $T$, $\\varphi$ de la cible, calculez $\\omega = 2\\pi / T$ sur papier, réglez vos curseurs, puis JOUER. Un essai par cible — pas de tâtonnement.",
+      "concept": "À partir de $T$ : $\\omega = \\dfrac{2\\pi}{T}$. À partir d'une élongation initiale $x_0 = X_m \\cos\\varphi$ à $t=0$ : $\\varphi = \\arccos(x_0 / X_m)$. Le signe de la vitesse initiale choisit la bonne branche.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "play": "JOUER",
+    "stop": "STOP",
+    "stage": "ÉTAPE",
+    "target": "CIBLE",
+    "attempts": "ESSAIS",
+    "matches": "RÉUSSIS",
+    "amplitude": "Xm",
+    "omega": "ω",
+    "phase": "φ",
+    "period": "T",
+    "tip1": "déplacez chaque curseur, appuyez sur JOUER, puis observez",
+    "tip2": "alignez votre mobile (orange) avec le fantôme (bleu-vert)",
+    "tip3": "calculez ω = 2π/T à partir de la cible, réglez les curseurs, puis JOUER",
+    "peek_tip_period": "T et ω sont liés : ω = 2π/T. Un T plus court signifie une oscillation plus rapide (ω plus grande).",
+    "peek_tip_phase": "À t = 0 le mobile est à x₀ = Xm·cos(φ). Lisez la position initiale de la cible pour déterminer φ.",
+    "peek_tip_amplitude": "Xm est le |x| maximal atteint — il ne dépend ni de ω ni de φ. Réglez-le avant d'ajuster les autres."
+  },
+  "hints": {
+    "1": {
+      "1": "Les trois curseurs contrôlent l'amplitude Xm (m), la pulsation ω (rad/s), et la phase φ (rad).",
+      "2": "Appuyez sur JOUER pour lancer l'animation. Le mobile glisse le long du rail ; la courbe à droite montre x(t).",
+      "3": "Essayez des ω grandes vs petites pour voir la période rétrécir ou grandir. T = 2π/ω."
+    },
+    "2": {
+      "1": "Le mobile fantôme bleu-vert suit le mouvement cible. Votre mobile orange suit vos réglages de curseurs.",
+      "2": "Alignez Xm d'abord (les deux mobiles doivent atteindre les mêmes extrêmes), puis ω (même période), puis φ (les deux à la même position à t = 0).",
+      "3": "La superposition des courbes montre les deux tracés. Deux sinusoïdes identiques se superposent parfaitement."
+    },
+    "3": {
+      "1": "Les Xm, T, φ de la cible sont étiquetés à côté du fantôme. Calculez ω = 2π/T à partir de T.",
+      "2": "Réglez Xm à l'amplitude étiquetée. Réglez ω = 2π/T. Réglez φ à la phase étiquetée (radians).",
+      "3": "Un essai par cible. Vérifiez que vos curseurs correspondent aux étiquettes avant d'appuyer sur JOUER."
+    }
+  }
+}

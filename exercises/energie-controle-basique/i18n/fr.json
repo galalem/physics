@@ -1,0 +1,100 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Observez une chaîne énergétique simple : une source alimente un convertisseur, qui délivre une énergie utile à un appareil. Déplacez le curseur de puissance d'entrée — regardez la flèche de flux grandir. La bande rouge est l'énergie perdue sous forme de chaleur. Avancez lorsque vous avez vu la chaîne réagir à un changement d'entrée.",
+      "concept": "L'énergie ne se détruit jamais — elle change de forme. Une chaîne comme $P_{in} \\rightarrow \\text{convertisseur} \\rightarrow P_{out}$ obéit à $P_{out} = \\eta \\cdot P_{in}$ et $P_{lost} = (1-\\eta) \\cdot P_{in}$. Le rendement $\\eta$ est fixé par le convertisseur (un panneau solaire n'est pas un moteur).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "À vous de choisir la source, le convertisseur et l'appareil. Seules les chaînes dont les formes s'accordent fonctionnent — vous ne pouvez pas alimenter une éolienne avec de la lumière solaire. Réglez la puissance d'entrée et essayez suffisamment de combinaisons pour voir au moins quatre convertisseurs différents délivrer une sortie utile.",
+      "concept": "Chaque convertisseur a une forme d'entrée fixe (chimique, cinétique, rayonnante, électrique) et une forme de sortie fixe. Une chaîne fonctionne uniquement lorsque les formes correspondent d'un bout à l'autre. Rendements : panneau solaire $\\eta \\approx 0.20$, éolienne $\\eta \\approx 0.40$, dynamo $\\eta \\approx 0.70$, moteur électrique $\\eta \\approx 0.80$, lampe LED $\\eta \\approx 0.30$, lampe à incandescence $\\eta \\approx 0.05$, résistance chauffante $\\eta = 1$.",
+      "peekable": true
+    },
+    {
+      "index": 3,
+      "name": "Prédire",
+      "instruction": "Les flèches sont masquées. On vous montre une source, un appareil cible, et une puissance utile requise $P_{out}$ pour une puissance d'entrée $P_{in}$. Choisissez le convertisseur qui à la fois fait correspondre les formes ET délivre la $P_{out}$ requise. Répondez à tous les scénarios en un seul passage — une mauvaise réponse relance le paquet.",
+      "concept": "Deux vérifications : (1) les formes doivent s'aligner (forme de la source = forme d'entrée du convertisseur, forme de sortie du convertisseur = forme d'entrée de l'appareil) ; (2) $P_{out} = \\eta \\cdot P_{in}$ doit correspondre à la cible, à la tolérance près. Une éolienne ne peut pas utiliser la lumière solaire ; une lampe LED ne peut pas délivrer 80 W de lumière à partir de 100 W d'électricité.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "scene_title": "chaîne énergétique",
+    "controls": "commandes",
+    "question": "question",
+    "outcomes_seen": "convertisseurs",
+    "streak": "résolus",
+    "source": "source",
+    "converter": "convertisseur",
+    "use": "appareil",
+    "input_power": "puissance d'entrée",
+    "output_power": "sortie utile",
+    "lost_power": "perdue en chaleur",
+    "efficiency": "rendement",
+    "form_chemical": "chimique",
+    "form_kinetic": "cinétique",
+    "form_radiant": "rayonnante",
+    "form_electric": "électrique",
+    "form_thermal": "thermique",
+    "form_mechanical": "mécanique",
+    "src_sun": "soleil",
+    "src_wind": "vent",
+    "src_battery": "pile",
+    "src_bike": "pédalage",
+    "conv_solar_panel": "panneau solaire",
+    "conv_wind_turbine": "éolienne",
+    "conv_dynamo": "dynamo",
+    "conv_motor": "moteur électrique",
+    "conv_led": "lampe LED",
+    "conv_incandescent": "lampe à incandescence",
+    "conv_heater": "résistance chauffante",
+    "use_bulb": "lumière",
+    "use_fan": "ventilateur (rotation)",
+    "use_heater": "chauffage",
+    "use_device": "appareil électrique",
+    "field_source": "source",
+    "field_converter": "convertisseur",
+    "field_use": "appareil",
+    "field_input": "puissance d'entrée",
+    "field_status": "état de la chaîne",
+    "chain_ok": "chaîne OK",
+    "chain_bad_forms": "formes incompatibles",
+    "target": "cible",
+    "given": "donné",
+    "delivers": "délivre",
+    "tolerance": "tolérance",
+    "watts": "W",
+    "correct": "correct",
+    "wrong": "faux",
+    "next_q": "suivant",
+    "restart_deck": "recommencer",
+    "tip1": "faites glisser le curseur de puissance d'entrée — regardez le flux évoluer avec $P_{in}$",
+    "tip2": "choisissez différentes sources et convertisseurs — seules les formes qui s'accordent produisent une sortie utile",
+    "tip3": "les flèches sont masquées — faites le calcul : $P_{out} = \\eta \\cdot P_{in}$",
+    "hint_pick_source": "choisissez une source",
+    "hint_pick_converter": "choisissez un convertisseur",
+    "hint_pick_use": "choisissez un appareil"
+  },
+  "hints": {
+    "1": {
+      "1": "Saisissez le curseur de puissance d'entrée à droite et faites-le monter.",
+      "2": "Observez la flèche de flux entre la source et le convertisseur grandir avec l'entrée.",
+      "3": "Il suffit de modifier l'entrée une fois et de voir la chaîne réagir pour avancer."
+    },
+    "2": {
+      "1": "Changez la source, puis changez le convertisseur. S'ils sont incompatibles, la chaîne indique « formes incompatibles ».",
+      "2": "Une éolienne a besoin d'une entrée cinétique (vent ou pédalage). Un panneau solaire a besoin d'une entrée rayonnante (soleil).",
+      "3": "Parcourez : panneau solaire avec soleil, éolienne avec vent, moteur avec pile, résistance chauffante avec pile — cela fait déjà quatre convertisseurs délivrant une sortie utile."
+    },
+    "3": {
+      "1": "Éliminez d'abord les options dont la forme d'entrée ne correspond pas à la source ou dont la forme de sortie ne correspond pas à l'appareil.",
+      "2": "Puis calculez $P_{out} = \\eta \\cdot P_{in}$ pour les options restantes et faites correspondre à la cible dans la tolérance.",
+      "3": "Rappelez-vous les rendements : solaire 0.20, éolienne 0.40, dynamo 0.70, moteur 0.80, LED 0.30, incandescence 0.05, chauffage 1.00."
+    }
+  }
+}

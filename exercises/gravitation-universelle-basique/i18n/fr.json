@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Faites glisser les trois curseurs et observez comment chaque paramètre modifie la force d'attraction gravitationnelle entre les deux corps. Avancez lorsque chaque curseur a parcouru au moins la moitié de sa plage.",
+      "concept": "Toute masse attire toute autre masse. Newton : $F = G\\,\\frac{m_1 m_2}{r^2}$ avec $G = 6{,}674 \\times 10^{-11}\\ \\mathrm{N\\,m^2/kg^2}$. Doubler l'une des masses double $F$. Doubler $r$ divise $F$ par quatre.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une force cible $F^*$ est affichée. Ajustez $m_1$, $m_2$ et $r$ jusqu'à ce que la force en direct atteigne la cible à ±5 %.",
+      "concept": "De nombreux triplets de paramètres donnent la même $F$. $F$ varie linéairement avec chaque masse et en $1/r^2$ avec la distance. Tout triplet $(m_1, m_2, r)$ satisfaisant $G\\,m_1 m_2 / r^2 = F^*$ est une solution valide.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches de force sont masquées. Seule la cible $F^*$ est affichée. Calculez d'abord $m_1$, $m_2$ et $r$ sur papier, puis réglez les curseurs. Une seule validation par montage.",
+      "concept": "Forme inverse : choisissez deux des trois paramètres, puis résolvez $r = \\sqrt{G\\,m_1 m_2 / F^*}$ (ou résolvez en $m_2$ étant donnés $m_1$, $r$). Posez l'algèbre, puis réglez les curseurs.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench_label": "attraction gravitationnelle",
+    "body1": "M1",
+    "body2": "M2",
+    "match_ok": "atteint",
+    "target_short": "cible",
+    "tip1": "faites glisser chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "alignez la longueur de la flèche en direct sur celle de la flèche cible",
+    "tip3": "calculez d'abord les paramètres sur papier, puis réglez les curseurs",
+    "peek_tip_formula": "Réarrangez : choisissez m1 et m2, puis r = sqrt(G · m1 · m2 / F*).",
+    "peek_tip_anchor": "G · 10^46 / 10^14 = 6,67 × 10^21. Donc F [×10^21 N] ≈ 6,67 · m1 · m2 / r^2 (m1,m2 en ×10^23 kg, r en ×10^7 m).",
+    "force_live": "F",
+    "force_target": "F*",
+    "attempt": "essai",
+    "last_fail": "dernière validation"
+  },
+  "hints": {
+    "1": {
+      "1": "Essayez de ne changer qu'un curseur à la fois. Lequel modifie la longueur de la flèche le plus fortement ?",
+      "2": "Diviser r par deux quadruple environ F. Doubler l'une des masses ne fait que doubler F. La distance domine.",
+      "3": "Pour atteindre la couverture, faites glisser lentement chaque curseur d'une extrémité à l'autre."
+    },
+    "2": {
+      "1": "Lisez la longueur de la flèche cible. La flèche en direct est-elle plus courte ou plus longue ?",
+      "2": "Fixez r à une valeur ronde, puis augmentez m1 ou m2 jusqu'à ce que F atteigne la cible.",
+      "3": "Résolvez : r = sqrt(G · m1 · m2 / F*). Choisissez m1 et m2, calculez r directement."
+    },
+    "3": {
+      "1": "La visualisation est masquée mais la formule reste valable. Écrivez F = G · m1 · m2 / r^2 sur papier.",
+      "2": "Substituez la cible F* et les deux paramètres choisis, puis résolvez pour le troisième.",
+      "3": "Repère numérique : F [×10^21 N] ≈ 6,67 · m1 · m2 / r^2 avec m1, m2 en ×10^23 kg et r en ×10^7 m."
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un condensateur chargé $C$ se décharge à travers une résistance $R$ et une bobine $L$. L'énergie stockée oscille entre $C$ et $L$ pendant que $R$ la dissipe en chaleur. Faites varier $R$ et $C$ sur toute la plage. Franchissez le seuil d'amortissement critique $R_c = 2\\sqrt{L/C}$ et observez le changement de forme de la courbe : oscillatoire en dessous, monotone au-dessus.",
+      "concept": "Le circuit obéit à $L\\,\\ddot{q} + R\\,\\dot{q} + q/C = 0$. Sous-amorti ($R < R_c$) : $u_C(t) = E\\,e^{-\\lambda t}\\cos(\\omega_1 t + \\varphi)$, avec décroissance de l'enveloppe $\\lambda = R/(2L)$ et pseudo-période $T \\approx T_0 = 2\\pi\\sqrt{LC}$ quand l'amortissement est faible. Deux invariants : le taux de décroissance de l'enveloppe, fixé par $R$ ; la période, fixée par $\\sqrt{LC}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une courbe cible est tracée en orange. Réglez $R$ et $C$ pour que votre courbe cyan en direct la superpose. Faites correspondre à la fois la pseudo-période $T$ (espacement des maxima) et la décroissance de l'enveloppe (vitesse à laquelle les maxima diminuent).",
+      "concept": "Deux réglages, deux invariants : $T_0 = 2\\pi\\sqrt{LC}$ fixe la période (ajustez $C$), $\\lambda = R/(2L)$ fixe la décroissance (ajustez $R$). Résolvez $C^* = T_0^{*2}/(4\\pi^2 L)$ puis $R^* = 2L\\,\\lambda^*$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Seule la courbe cible est tracée. Lisez $T_0^*$ à partir de l'espacement des maxima et estimez $\\lambda^*$ à partir de la vitesse de décroissance des maxima successifs, calculez $C^*$ et $R^*$ sur papier, réglez les curseurs, puis appuyez sur LANCER. Faites correspondre $T_0$ et $\\lambda$ à $\\pm 3\\%$ près pour avancer. Un seul essai par cible.",
+      "concept": "$T_0^* = 2\\pi\\sqrt{L\\,C^*}$ donne $C^* = T_0^{*2}/(4\\pi^2 L)$. Décroissance d'amplitude de maximum à maximum : $A_{n+1}/A_n = e^{-\\lambda T_0}$, donc $\\lambda^* = \\ln(A_n/A_{n+1})/T_0^*$, puis $R^* = 2L\\,\\lambda^*$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "circuit",
+    "chart_title": "u_C (t)",
+    "y_axis_label": "u_C (V)",
+    "hit": "réussi !",
+    "match_ok": "correspond",
+    "match_off": "écart",
+    "submit_button": "LANCER",
+    "param1_name": "R",
+    "param2_name": "C",
+    "regime_under": "sous-amorti",
+    "regime_critical": "critique",
+    "regime_over": "sur-amorti",
+    "peek_hint": "comptez deux maxima : T est leur espacement sur l'axe des t ; puis A_n+1 / A_n = exp(-lambda T), donc lambda = ln(A_n/A_n+1)/T",
+    "tip1": "faites varier R autour de R_c pour voir sous-amorti -> critique -> sur-amorti ; faites varier C pour changer la période",
+    "tip2": "faites correspondre la période T (espacement des maxima) avec C, puis la décroissance de l'enveloppe avec R",
+    "tip3": "lisez T à partir de l'espacement des maxima -> C = T^2/(4 pi^2 L) ; lisez la décroissance d'amplitude des maxima -> R = 2 L ln(A_n/A_n+1)/T",
+    "coil": "L",
+    "capacitor": "C",
+    "resistor": "R",
+    "close_switch": "fermez K pour démarrer"
+  },
+  "hints": {
+    "1": {
+      "1": "Essayez R aux deux extrêmes : R faible donne des oscillations marquées ; R élevé (au-dessus de R_c) donne une décroissance monotone lente.",
+      "2": "Les enveloppes pointillées +/- E * exp(-lambda t) encadrent l'oscillation. R contrôle la vitesse à laquelle elles se referment ; L et C contrôlent la période.",
+      "3": "R_c critique = 2 sqrt(L/C). En dessous : pseudo-périodique. Égal : critique (décroissance non oscillatoire la plus rapide). Au-dessus : apériodique (sur-amorti)."
+    },
+    "2": {
+      "1": "D'abord, ignorez R et ajustez C jusqu'à ce que l'espacement de vos maxima corresponde à celui de la cible.",
+      "2": "Puis ajustez R pour que l'enveloppe de votre courbe décroisse au même rythme que celle de la cible.",
+      "3": "Les deux invariants comptent : T = 2 pi sqrt(L C) et lambda = R / (2 L). Réglez d'abord C pour la période, puis R pour l'amortissement."
+    },
+    "3": {
+      "1": "L'espacement des maxima sur la cible = T. Calculez C = T^2 / (4 pi^2 * L) avec L = 0.1 H.",
+      "2": "Rapport des maxima : mesurez deux hauteurs de maxima successives A_n, A_n+1. Calculez lambda = ln(A_n / A_n+1) / T. Puis R = 2 * L * lambda.",
+      "3": "Réglez d'abord C (période), puis R (décroissance). Le HUD affiche vos T et lambda actuels pour les aligner sur vos valeurs papier."
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the sliders to set amplitude $X_m$, angular frequency $\\omega$, and phase $\\varphi$, then press PLAY. Watch how $x(t) = X_m \\cos(\\omega t + \\varphi)$ shapes the bob's back-and-forth motion.",
+      "concept": "Rectilinear sinusoidal motion: $x(t) = X_m \\cos(\\omega t + \\varphi)$. Period $T = \\dfrac{2\\pi}{\\omega}$. Amplitude $X_m$ is the maximum elongation; $\\varphi$ shifts the whole curve horizontally.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Match the ghost bob. Tune $X_m$, $\\omega$, $\\varphi$ so your bob (orange) tracks the target ghost (teal) for a full period. The waveform overlay shows both curves — line them up.",
+      "concept": "Two sinusoidal motions coincide when they share $X_m$, $\\omega$ (or equivalently $T = 2\\pi/\\omega$), and $\\varphi$. A phase advance of $\\varphi$ shifts $x(t)$ leftward by $\\varphi / \\omega$ seconds.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No waveform. Read the target's $X_m$, $T$, $\\varphi$, compute $\\omega = 2\\pi / T$ on paper, set your sliders, then PLAY. One attempt per target — no spray-and-pray.",
+      "concept": "From $T$: $\\omega = \\dfrac{2\\pi}{T}$. From an initial elongation $x_0 = X_m \\cos\\varphi$ at $t=0$: $\\varphi = \\arccos(x_0 / X_m)$. The sign of the initial velocity picks the correct branch.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "play": "PLAY",
+    "stop": "STOP",
+    "stage": "STAGE",
+    "target": "TARGET",
+    "attempts": "ATTEMPTS",
+    "matches": "MATCHES",
+    "amplitude": "Xm",
+    "omega": "ω",
+    "phase": "φ",
+    "period": "T",
+    "tip1": "move each slider, press PLAY, then observe",
+    "tip2": "align your bob (orange) with the ghost (teal)",
+    "tip3": "compute ω = 2π/T from the target, set sliders, then PLAY",
+    "peek_tip_period": "T and ω are locked together: ω = 2π/T. Shorter T means a faster oscillation (larger ω).",
+    "peek_tip_phase": "At t = 0 the bob sits at x₀ = Xm·cos(φ). Read the target's starting position to pin down φ.",
+    "peek_tip_amplitude": "Xm is the maximum |x| reached — it does not depend on ω or φ. Set it before tuning the others."
+  },
+  "hints": {
+    "1": {
+      "1": "The three sliders control amplitude Xm (m), angular frequency ω (rad/s), and phase φ (rad).",
+      "2": "Press PLAY to start the animation. The bob slides along the track; the waveform on the right shows x(t).",
+      "3": "Try large vs small ω to see the period shrink or grow. T = 2π/ω."
+    },
+    "2": {
+      "1": "The teal ghost bob follows the target motion. Your orange bob follows your slider settings.",
+      "2": "Match Xm first (both bobs should reach the same extremes), then ω (same period), then φ (both at the same position at t = 0).",
+      "3": "The waveform overlay shows both curves. Two identical sinusoids overlap perfectly."
+    },
+    "3": {
+      "1": "The target's Xm, T, φ are labeled next to the ghost. Compute ω = 2π/T from T.",
+      "2": "Set Xm to the labeled amplitude. Set ω = 2π/T. Set φ to the labeled phase (radians).",
+      "3": "One attempt per target. Verify your slider readings match the labels before pressing PLAY."
+    }
+  }
+}

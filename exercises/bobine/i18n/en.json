@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "An inductor $L$ resists changes in current. Click the switch $K$ to close the circuit. Watch $u_L = L\\,\\dfrac{di}{dt}$ spike to $E$ then decay as the current $i$ ramps up. Slide $L$ and $R$, complete one full ramp to advance.",
+      "concept": "Establishment: $i(t) = \\dfrac{E}{R}\\,(1 - e^{-t/\\tau})$ and $u_L(t) = E\\,e^{-t/\\tau}$, with $\\tau = \\dfrac{L}{R}$. At $t = \\tau$, $u_L$ has decayed to $37\\%$ of $E$ — the same $\\tau$ that shapes ignition coils, DC motors, and every switching regulator.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit the orange crosshair: $u_L$ must equal $V^{*}$ at exactly $t^{*}$. Tune $L$ and $R$ so your live curve passes through the target. Many $(L, R)$ pairs work — success depends on $\\tau = L/R$.",
+      "concept": "$V^{*} = E\\,e^{-t^{*}/\\tau}\\ \\Rightarrow\\ \\tau^{*} = -\\dfrac{t^{*}}{\\ln(V^{*}/E)}$. Adjust $L$ and $R$ to match $\\tau^{*}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Only the target $u_L(t)$ curve is drawn. Read $\\tau^{*}$ from the shape on paper, pick $L$ and $R$, then press RUN to reveal your curve. Match $\\tau$ to within $\\pm 3\\%$.",
+      "concept": "Reading method: at $t = \\tau^{*}$, the curve crosses $0.37\\,E$ (since $e^{-1} \\approx 0.37$). Estimate $\\tau^{*}$ from that crossing, then pick any $(L, R)$ whose ratio equals $\\tau^{*}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "circuit",
+    "chart_title": "u_L (t)",
+    "y_axis_label": "u_L (V)",
+    "hit": "hit!",
+    "match_ok": "match",
+    "match_off": "off",
+    "submit_button": "RUN",
+    "closed_label": "closed",
+    "open_label": "open",
+    "click_switch": "click K to close / open",
+    "peek_hint": "find where the target crosses 0.37·E — that t-value is tau*",
+    "tip1": "close K, wait for the current to fully establish, then re-open to reset",
+    "tip2": "adjust L and R so your u_L curve passes through the target crosshair",
+    "tip3": "read tau* from where the target hits 0.37·E, compute L/R = tau*, then press RUN"
+  },
+  "hints": {
+    "1": {
+      "1": "Click K once to close, again to open. u_L is the voltage across the coil.",
+      "2": "The dashed 0.37·E line marks where u_L sits at t = tau. Watch it as you change L or R.",
+      "3": "Full ramp means i reaches 99% of E/R (about 5 tau). u_L should have decayed to near zero by then."
+    },
+    "2": {
+      "1": "Compute the target tau*: tau* = -t* / ln(V*/E). Then set L/R ≈ tau*.",
+      "2": "Doubling L and doubling R keeps tau the same — the u_L curve won't change.",
+      "3": "Fine-tune with one slider once you're close; small L changes = small tau changes."
+    },
+    "3": {
+      "1": "On the target curve, find the t-value where u_L = 0.37·E — that is tau*.",
+      "2": "Or find where the curve visibly settles near zero (≈ 5 tau*). Divide by 5 for tau*.",
+      "3": "Peek gives a reading method. Set L/R = tau*, then press RUN — do the math on paper first."
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Sweep each of the three sliders and watch how the hovering puck moves. Advance once every slider has covered at least half its range.",
+      "concept": "A permanent-magnet puck hovers over a coil. Two forces act on it: its weight $P = m\\,g$ pointing down, and a repulsive magnetic force $F_{rep}(h) = F_0/h^2$ pointing up, where $F_0 = C \\cdot N \\cdot I$ collects the coil geometry, its number of turns $N$, and its current $I$. Equilibrium sits at the height where $F_{rep}(h) = P$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target hover height is drawn as a dashed line. Tune $I$, $N$ and $m$ until the puck sits on the line.",
+      "concept": "The equilibrium height is $h^{*} = \\sqrt{F_0/(m\\,g)} = \\sqrt{C\\,N\\,I/(m\\,g)}$. Many parameter triples give the same $h^{*}$ — you can trade current against turns or against mass.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The puck and its force arrows are hidden. Only the target height remains. Compute a valid current $I$ on paper for a mass and turn count of your choice, then set the sliders and finish.",
+      "concept": "Inverse: from $h^{*2} = C\\,N\\,I/(m\\,g)$ you get $I = m\\,g\\,h^{*2}/(C\\,N)$. Pick $m$ and $N$ first, then compute $I$. Values are in SI: $m$ in kg (convert from grams), $h^{*}$ in metres.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench_label": "magnetic levitator",
+    "coil_label": "coil",
+    "puck_label": "puck",
+    "height_axis": "h (cm)",
+    "target_line": "target h*",
+    "match_ok": "on target",
+    "force_up": "F_rep",
+    "force_down": "P",
+    "tip1": "sweep each slider — cover at least half of its range",
+    "tip2": "raise F_rep or lower m·g until the puck reaches the dashed line",
+    "tip3": "compute I on paper, then set the sliders and finish",
+    "peek_tip_formula": "Rearrange F_0/h*^2 = m g  ->  I = m g h*^2 / (C N).  Pick m and N first, then compute I.",
+    "peek_tip_anchor": "At h* = 10 cm with m = 20 g you need C N I ~ 2e-3 N m^2.  With C = 5e-6, that means N I ~ 400."
+  },
+  "hints": {
+    "1": {
+      "1": "Which slider changes the hover height the fastest? Try one at a time.",
+      "2": "Increasing I or N raises F_0, which lifts the puck. Increasing m adds weight and lowers it.",
+      "3": "Halving m at fixed I and N multiplies the hover height by sqrt(2). Halving I divides it by sqrt(2)."
+    },
+    "2": {
+      "1": "Read the target height off the dashed line before touching the sliders.",
+      "2": "Fix m and N at round values, then move I to bring the puck to the line.",
+      "3": "You can freeze N and m at their defaults and adjust I only — that leaves one unknown."
+    },
+    "3": {
+      "1": "Write down the equilibrium condition F_0/h*^2 = m g on paper before touching sliders.",
+      "2": "Substitute h* (metres!) into I = m g h*^2 / (C N). Try m = 20 g, N = 300 first.",
+      "3": "Peek gives you the rearranged formula. Plug in your chosen m and N, get I, then read the sliders."
+    }
+  }
+}

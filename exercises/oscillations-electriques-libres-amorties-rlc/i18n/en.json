@@ -1,0 +1,65 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A charged capacitor $C$ discharges through a resistor $R$ and an inductor $L$. The stored energy sloshes between $C$ and $L$ while $R$ bleeds it as heat. Sweep $R$ and $C$ across the full range. Cross the critical damping threshold $R_c = 2\\sqrt{L/C}$ and watch the curve shape change: oscillatory below, monotonic above.",
+      "concept": "The circuit obeys $L\\,\\ddot{q} + R\\,\\dot{q} + q/C = 0$. Under-damped ($R < R_c$): $u_C(t) = E\\,e^{-\\lambda t}\\cos(\\omega_1 t + \\varphi)$, with envelope decay $\\lambda = R/(2L)$ and pseudo-period $T \\approx T_0 = 2\\pi\\sqrt{LC}$ when damping is weak. Two invariants: the envelope's decay rate, set by $R$; the period, set by $\\sqrt{LC}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target curve is drawn in orange. Tune $R$ and $C$ so your live cyan curve overlays it. Match both the pseudo-period $T$ (peak spacing) and the envelope decay (how fast the peaks shrink).",
+      "concept": "Two knobs, two invariants: $T_0 = 2\\pi\\sqrt{LC}$ picks the period (adjust $C$), $\\lambda = R/(2L)$ picks the decay (adjust $R$). Solve $C^* = T_0^{*2}/(4\\pi^2 L)$ then $R^* = 2L\\,\\lambda^*$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Only the target curve is drawn. Read $T_0^*$ off the peak spacing and estimate $\\lambda^*$ from how fast successive peaks decay, compute $C^*$ and $R^*$ on paper, set the sliders, then press RUN. Match $T_0$ and $\\lambda$ within $\\pm 3\\%$ to advance. One submit per target.",
+      "concept": "$T_0^* = 2\\pi\\sqrt{L\\,C^*}$ gives $C^* = T_0^{*2}/(4\\pi^2 L)$. Peak-to-peak amplitude decay: $A_{n+1}/A_n = e^{-\\lambda T_0}$, so $\\lambda^* = \\ln(A_n/A_{n+1})/T_0^*$, then $R^* = 2L\\,\\lambda^*$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "circuit",
+    "chart_title": "u_C (t)",
+    "y_axis_label": "u_C (V)",
+    "hit": "hit!",
+    "match_ok": "match",
+    "match_off": "off",
+    "submit_button": "RUN",
+    "param1_name": "R",
+    "param2_name": "C",
+    "regime_under": "under-damped",
+    "regime_critical": "critical",
+    "regime_over": "over-damped",
+    "peek_hint": "count two peaks: T is their spacing on the t-axis; then A_n+1 / A_n = exp(-lambda T), so lambda = ln(A_n/A_n+1)/T",
+    "tip1": "sweep R across R_c to see under-damped -> critical -> over-damped; sweep C to change period",
+    "tip2": "match period T (peak spacing) with C, then match envelope decay with R",
+    "tip3": "read T from peak spacing -> C = T^2/(4 pi^2 L); read peak-amplitude decay -> R = 2 L ln(A_n/A_n+1)/T",
+    "coil": "L",
+    "capacitor": "C",
+    "resistor": "R",
+    "close_switch": "close K to start"
+  },
+  "hints": {
+    "1": {
+      "1": "Try R at both extremes: low R shows sharp oscillations; high R (above R_c) shows a slow monotonic decay.",
+      "2": "The dashed +/- E * exp(-lambda t) envelopes bound the oscillation. R controls how fast they collapse; L, C control the period.",
+      "3": "Critical R_c = 2 sqrt(L/C). Below it: pseudo-periodic. At it: critical (fastest non-oscillatory decay). Above it: aperiodic (over-damped)."
+    },
+    "2": {
+      "1": "First, ignore R and adjust C until your peak spacing matches the target's peak spacing.",
+      "2": "Then adjust R so the envelope of your curve decays at the same rate as the target's envelope.",
+      "3": "Both invariants matter: T = 2 pi sqrt(L C) and lambda = R / (2 L). Set C first for period, then R for damping."
+    },
+    "3": {
+      "1": "Peak spacing on the target = T. Compute C = T^2 / (4 pi^2 * L) with L = 0.1 H.",
+      "2": "Peak ratio: measure two successive peak heights A_n, A_n+1. Compute lambda = ln(A_n / A_n+1) / T. Then R = 2 * L * lambda.",
+      "3": "Set C first (period), then R (decay). The HUD shows your current T and lambda so you can align them with your paper values."
+    }
+  }
+}

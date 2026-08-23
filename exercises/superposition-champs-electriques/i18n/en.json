@@ -1,0 +1,54 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Two point charges $q_1$ and $q_2$ sit on the $x$-axis at $(\\pm d, 0)$. A fixed test point $M$ sits above the midpoint at $(0, h)$. Sweep the three sliders and watch how the two individual field arrows $\\vec{E}_1$, $\\vec{E}_2$ combine into a resultant $\\vec{E}$ at $M$.",
+      "concept": "Superposition: $\\vec{E}(M) = \\vec{E}_1(M) + \\vec{E}_2(M)$. Each contribution: $\\vec{E}_i = \\dfrac{k\\, q_i}{r_i^{2}}\\,\\hat{r}_i$, direction away from a positive charge, toward a negative one. By symmetry the two sources sit at the same distance $r = \\sqrt{d^{2} + h^{2}}$ from $M$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A dashed target arrow at $M$ shows the resultant $\\vec{E}^{*}$ you must produce. Tune $q_1$, $q_2$ and $d$ so your solid resultant arrow lands on the target. Many $(q_1, q_2, d)$ triples work — many degrees of freedom, only two target components.",
+      "concept": "With sources at $(\\pm d, 0)$ and $M = (0, h)$: $E_x = \\dfrac{k\\,d\\,(q_1 - q_2)}{r^{3}}$, $E_y = \\dfrac{k\\,h\\,(q_1 + q_2)}{r^{3}}$, where $r^{3} = (d^{2} + h^{2})^{3/2}$. Same signs $\\Rightarrow$ vertical $\\vec{E}$; opposite signs $\\Rightarrow$ horizontal $\\vec{E}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The individual and resultant field arrows are hidden. Only the target arrow at $M$ and its components $(E_x^{*}, E_y^{*})$ are shown. Compute $q_1$, $q_2$, $d$ on paper first, then set the sliders and submit once. A wrong submit rotates you to a fresh target.",
+      "concept": "Invert the closed form: $q_1 + q_2 = \\dfrac{E_y^{*}\\, r^{3}}{k\\,h}$ and $q_1 - q_2 = \\dfrac{E_x^{*}\\, r^{3}}{k\\,d}$. Pick any convenient $d$, compute $r^{3}$, then solve the linear pair for $q_1$, $q_2$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "electrostatic bench",
+    "point_m": "M",
+    "target_arrow": "E*",
+    "match_ok": "match",
+    "tip1": "sweep each slider across at least half its range",
+    "tip2": "align your solid arrow with the dashed target at M",
+    "tip3": "compute q1, q2, d on paper first — one submit per target",
+    "peek_tip_formula": "Invert: q1 + q2 = Ey*·r^3 / (k·h),  q1 - q2 = Ex*·r^3 / (k·d). Pick d, solve.",
+    "peek_tip_anchor": "Same signs cancel Ex (vertical E); opposite signs cancel Ey (horizontal E)."
+  },
+  "hints": {
+    "1": {
+      "1": "Try both charges with the same sign — where does the resultant point?",
+      "2": "Flip one sign so q1 = -q2. The vertical component collapses; E goes horizontal.",
+      "3": "Increase d with q1 = q2 fixed. r grows, so |E| shrinks with 1/r^3 scaling."
+    },
+    "2": {
+      "1": "Read the target components (Ex*, Ey*) shown at M. Which one is dominant?",
+      "2": "If Ex* is small, aim for q1 close to q2 (same sign). If Ey* is small, aim for q1 close to -q2.",
+      "3": "Fix d at a round value, then solve q1 + q2 from Ey* and q1 - q2 from Ex*. Halve/sum those."
+    },
+    "3": {
+      "1": "Same formula as stage 2: Ex = k·d·(q1-q2)/r^3, Ey = k·h·(q1+q2)/r^3. h is fixed at 1.5 m.",
+      "2": "Pick d yourself (e.g. d = 1 m). Compute r^3 = (d^2 + h^2)^{3/2}, then the linear pair for q1 and q2.",
+      "3": "With d = 1 m and h = 1.5 m: r^3 ≈ 5.86 m^3. Multiply Ex*, Ey* by r^3 and divide by (k·d) or (k·h) to get charge sums."
+    }
+  }
+}

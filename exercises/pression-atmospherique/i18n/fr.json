@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un baromètre de Torricelli : un tube de mercure inversé plongé dans un réservoir ouvert. L'atmosphère appuie sur la cuve et maintient une colonne de mercure de hauteur $h$ dans le tube. Balayez les trois curseurs — altitude $z$, pression au niveau de la mer $p_0$ et température de l'air $T$ — et observez comment chacun déplace la colonne.",
+      "concept": "La colonne obéit à $p_\\text{atm} = \\rho_\\text{Hg}\\,g\\,h$ (Torricelli). L'atmosphère se raréfie avec l'altitude selon $p_\\text{atm}(z) = p_0\\,e^{-z/H}$, avec la hauteur d'échelle $H = R\\,T/(M\\,g) \\approx 8.4$ km à $T \\approx 288$ K. Altitude plus élevée $\\to$ $p_\\text{atm}$ plus faible $\\to$ colonne plus courte.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une hauteur de mercure cible $h^*$ est marquée sur le tube. Ajustez $z$, $p_0$ et $T$ jusqu'à ce que la colonne en direct atteigne la ligne cible. De nombreux triplets fonctionneront : ce qui compte, c'est la $p_\\text{atm}$ obtenue.",
+      "concept": "En réarrangeant : $h = \\dfrac{p_0\\,e^{-z/H(T)}}{\\rho_\\text{Hg}\\,g}$. Comme trois paramètres produisent une seule hauteur de colonne, des dizaines de triplets la résolvent. Choisissez une variable à déplacer en premier (généralement $z$), puis affinez avec les autres.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La colonne de mercure est masquée. Seuls le repère $h^*$ cible et les affichages des curseurs restent. Calculez d'abord un triplet valide $(z, p_0, T)$ sur papier, réglez les curseurs, puis validez. Une validation erronée vous fait passer à une nouvelle cible — pas de tentative par force brute.",
+      "concept": "Inverse aveugle : $p_\\text{atm}^* = \\rho_\\text{Hg}\\,g\\,h^*$, puis $e^{-z/H} = p_\\text{atm}^* / p_0$, ce qui donne $z = H\\,\\ln(p_0 / p_\\text{atm}^*)$. Convertissez les unités avec soin : $1\\text{ mmHg} = 133.322\\text{ Pa}$, $1\\text{ hPa} = 100\\text{ Pa}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "baromètre de torricelli",
+    "atmosphere": "atmosphère",
+    "vacuum": "vide",
+    "mercury": "mercure (Hg)",
+    "reservoir": "réservoir",
+    "target": "cible",
+    "match_ok": "correspondance",
+    "column_short": "colonne",
+    "target_short": "cible",
+    "tip1": "balayez chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "alignez le sommet de la colonne de mercure avec le repère cible",
+    "tip3": "calculez d'abord sur papier : p* = ρHg g h*, puis résolvez pour z",
+    "peek_tip_formula": "aide : h* = p0 e^(-z/H) / (rho_Hg g). Résolvez pour z : z = H ln(p0 / p*).",
+    "peek_tip_anchor": "aide : 1 mmHg = 133.3 Pa ; 1 hPa = 100 Pa ; 1 bar = 750 mmHg."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplacez l'altitude z depuis 0 vers le haut : la colonne de mercure doit raccourcir régulièrement.",
+      "2": "À altitude fixée, augmentez p0 — la colonne monte. Même physique, bouton différent.",
+      "3": "La température affecte la hauteur d'échelle H = RT/(Mg) : air plus chaud = H plus grand = décroissance de p avec l'altitude plus lente."
+    },
+    "2": {
+      "1": "Lisez le repère cible — c'est votre h*. Choisissez une variable à déplacer en premier (l'altitude est la plus puissante).",
+      "2": "Si la colonne est trop haute : montez l'altitude, baissez p0 ou baissez T. Trop courte : l'inverse.",
+      "3": "Résolvez h = p0 e^(-z/H) / (rho_Hg g) pour une variable. En fixant p0 = 101 kPa et T = 288 K, balayez z pour atteindre h*."
+    },
+    "3": {
+      "1": "La colonne est masquée mais la formule tient toujours. Écrivez-la sur papier avant de toucher aux curseurs.",
+      "2": "Étape 1 : p*_atm = rho_Hg g h* (Pa). Étape 2 : choisissez p0, puis z = H(T) ln(p0 / p*_atm).",
+      "3": "L'aide révèle la formule réarrangée et les conversions d'unités. Puis remplacez par le h* cible affiché sur le tube."
+    }
+  }
+}

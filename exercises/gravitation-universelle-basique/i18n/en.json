@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Sweep the three sliders and watch how each parameter changes the force of gravitational attraction between the two bodies. Advance once each slider has covered at least half its range.",
+      "concept": "Every mass attracts every other mass. Newton: $F = G\\,\\frac{m_1 m_2}{r^2}$ with $G = 6.674 \\times 10^{-11}\\ \\mathrm{N\\,m^2/kg^2}$. Doubling either mass doubles $F$. Doubling $r$ divides $F$ by four.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target force $F^*$ is shown. Tune $m_1$, $m_2$ and $r$ until the live force matches the target within ±5%.",
+      "concept": "Many parameter triples give the same $F$. $F$ scales linearly with each mass and as $1/r^2$ with distance. Any $(m_1, m_2, r)$ satisfying $G\\,m_1 m_2 / r^2 = F^*$ is a valid solution.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The force arrows are hidden. Only the target $F^*$ is shown. Compute $m_1$, $m_2$ and $r$ on paper first, then set the sliders. One submit per setup.",
+      "concept": "Inverse form: pick any two of the three parameters, then solve $r = \\sqrt{G\\,m_1 m_2 / F^*}$ (or solve for $m_2$ given $m_1$, $r$). Write the algebra, then set the sliders.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench_label": "gravitational attraction",
+    "body1": "M1",
+    "body2": "M2",
+    "match_ok": "match",
+    "target_short": "target",
+    "tip1": "sweep each slider across at least half its range",
+    "tip2": "align the live arrow length with the target arrow",
+    "tip3": "compute the parameters on paper first, then set the sliders",
+    "peek_tip_formula": "Rearrange: pick m1 and m2, then r = sqrt(G · m1 · m2 / F*).",
+    "peek_tip_anchor": "G · 10^46 / 10^14 = 6.67 × 10^21. So F [×10^21 N] ≈ 6.67 · m1 · m2 / r^2 (m1,m2 in ×10^23 kg, r in ×10^7 m).",
+    "force_live": "F",
+    "force_target": "F*",
+    "attempt": "attempt",
+    "last_fail": "last submit"
+  },
+  "hints": {
+    "1": {
+      "1": "Try changing only one slider at a time. Which one changes the arrow length most sharply?",
+      "2": "Halving r roughly quadruples F. Doubling either mass only doubles F. Distance dominates.",
+      "3": "To reach coverage, drag each slider slowly from one end to the other."
+    },
+    "2": {
+      "1": "Read the target arrow length. Is the live arrow shorter or longer?",
+      "2": "Fix r at a round value, then increase m1 or m2 until F matches.",
+      "3": "Solve: r = sqrt(G · m1 · m2 / F*). Pick m1 and m2, compute r directly."
+    },
+    "3": {
+      "1": "The pattern is hidden but the formula still holds. Write F = G · m1 · m2 / r^2 on paper.",
+      "2": "Substitute the target F* and two chosen parameters, then solve for the third.",
+      "3": "Numerical anchor: F [×10^21 N] ≈ 6.67 · m1 · m2 / r^2 with m1, m2 in ×10^23 kg and r in ×10^7 m."
+    }
+  }
+}

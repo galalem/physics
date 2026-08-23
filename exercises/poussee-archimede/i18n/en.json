@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A block sits in a beaker of liquid. Sweep the three sliders — object volume $V$, object density $\\rho_{obj}$, and liquid density $\\rho_{liq}$ — and watch how the block floats, sinks, and how the weight $P$ and buoyancy $\\Pi$ arrows change.",
+      "concept": "Archimedes: $\\Pi = \\rho_{liq}\\,V_{imm}\\,g$. At equilibrium a floating block satisfies $\\Pi = P$, so $\\rho_{liq}\\,V_{imm}\\,g = \\rho_{obj}\\,V\\,g$. The immersed fraction is $f = V_{imm}/V = \\rho_{obj}/\\rho_{liq}$ when $\\rho_{obj} < \\rho_{liq}$, otherwise the block sinks ($f = 1$).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target waterline is shown across the beaker. Tune the sliders so the block's own waterline lands on that dashed line — that is, so the immersed fraction of the block matches the target $f^{*}$.",
+      "concept": "Only the density ratio decides the immersion: $f = \\rho_{obj}/\\rho_{liq}$. The object volume $V$ scales the arrows and total forces but does not change the fraction. Set $\\rho_{obj}/\\rho_{liq} = f^{*}$ any way you like.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The block and the force arrows are hidden — only the beaker with the target waterline remains. Compute the density ratio needed to hit $f^{*}$ on paper, then set the sliders to values that give that ratio and submit.",
+      "concept": "Inverse formula: given $f^{*}$, any pair with $\\rho_{obj} = f^{*}\\cdot\\rho_{liq}$ works. Example: for $f^{*} = 0.90$, choose $\\rho_{liq} = 1000\\,\\text{kg/m}^{3}$ (water) and $\\rho_{obj} = 900\\,\\text{kg/m}^{3}$ (ice).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "hydrostatic tank",
+    "beaker": "beaker",
+    "liquid": "liquid",
+    "block": "block",
+    "waterline": "waterline",
+    "target_waterline": "target",
+    "weight_arrow": "P",
+    "buoyancy_arrow": "Π",
+    "match_ok": "match",
+    "float_state": "FLOAT",
+    "sink_state": "SINK",
+    "tip1": "sweep each slider to at least half its range",
+    "tip2": "align the block waterline with the dashed target",
+    "tip3": "compute the ratio on paper, then set the sliders",
+    "peek_tip_formula": "Rearrange: f = ρ_obj / ρ_liq. Pick ρ_liq, then ρ_obj = f · ρ_liq.",
+    "peek_tip_anchor": "Water is 1000 kg/m³. For f = 0.9 an ice-like block (~900 kg/m³) works."
+  },
+  "hints": {
+    "1": {
+      "1": "Move ρ_obj alone. Does the block rise or sink as density grows?",
+      "2": "With ρ_obj fixed, change ρ_liq. Denser liquid means the block sits higher.",
+      "3": "Try ρ_obj = ρ_liq: the block is neutral — fully immersed but not sinking to the bottom."
+    },
+    "2": {
+      "1": "The target is a fraction f*. Read it from the label near the dashed line.",
+      "2": "Only the ratio matters. Pick a round ρ_liq (e.g. 1000), then set ρ_obj = f* · ρ_liq.",
+      "3": "V does not affect the fraction — leave it alone and focus on the two densities."
+    },
+    "3": {
+      "1": "The block is hidden but Archimedes still holds. Write f = ρ_obj / ρ_liq on paper.",
+      "2": "Rearrange to ρ_obj = f* · ρ_liq. Pick any ρ_liq in range and compute ρ_obj.",
+      "3": "Peek shows the rearranged formula. Substitute the target f* and read off ρ_obj for your chosen ρ_liq."
+    }
+  }
+}

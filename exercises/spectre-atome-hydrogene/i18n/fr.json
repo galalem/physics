@@ -1,0 +1,62 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un atome d'hydrogène émet un photon lorsqu'un électron descend d'un niveau supérieur $n_i$ à un niveau inférieur $n_f$. Balayez les deux curseurs sur leurs plages pour voir quelles transitions tombent dans les domaines ultraviolet, visible ou infrarouge.",
+      "concept": "Formule de Rydberg : $\\dfrac{1}{\\lambda} = R_H \\left(\\dfrac{1}{n_f^2} - \\dfrac{1}{n_i^2}\\right)$ avec $R_H \\approx 1{,}097\\times10^{7}\\,m^{-1}$. Niveaux d'énergie : $E_n = -\\dfrac{13{,}6}{n^2}\\,\\text{eV}$. L'émission nécessite $n_i > n_f$ ; l'énergie de transition est $\\Delta E = E_{n_i} - E_{n_f}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une longueur d'onde cible $\\lambda^{\\star}$ est indiquée sur la bande de spectre. Ajustez $n_i$ et $n_f$ pour que la raie émise tombe sur le marqueur. À quelle série spectrale appartient-elle ?",
+      "concept": "Fixez d'abord $n_f$ — il sélectionne la série (Lyman : UV, Balmer : visible, Paschen : IR). Puis faites varier $n_i$ : lorsque $n_i$ croît, $1/\\lambda$ tend vers $R_H / n_f^2$ (limite de la série), donc $\\lambda$ diminue vers cette limite.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le spectre est masqué. Seule la longueur d'onde cible $\\lambda^{\\star}$ est affichée. Calculez $n_i$ et $n_f$ sur papier à partir de $1/\\lambda^{\\star} = R_H(1/n_f^2 - 1/n_i^2)$, puis réglez les curseurs. Vous avez droit à une validation par cible — une mauvaise réponse vous fait passer à une nouvelle cible.",
+      "concept": "Réarrangez : $\\dfrac{1}{n_i^2} = \\dfrac{1}{n_f^2} - \\dfrac{1}{R_H\\,\\lambda^{\\star}}$. Essayez chaque $n_f \\in \\{1, 2, 3\\}$ : celui qui donne un $n_i$ entier $\\ge 2$ est la transition.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "diagram_label": "niveaux d'énergie (eV)",
+    "spectrum_label": "spectre d'émission",
+    "band_uv": "UV",
+    "band_vis": "visible",
+    "band_ir": "IR",
+    "series_lyman": "Lyman",
+    "series_balmer": "Balmer",
+    "series_paschen": "Paschen",
+    "series_higher": "séries supérieures",
+    "match_ok": "correspondance",
+    "target_short": "cible",
+    "invalid_transition": "n_i doit être supérieur à n_f",
+    "tip1": "balayez n_i et n_f ; observez le changement de couleur et les sauts de série",
+    "tip2": "choisissez d'abord la série (n_f), puis réglez n_i pour atteindre la cible",
+    "tip3": "résolvez pour n_f puis n_i sur papier ; vous n'avez qu'une validation par cible",
+    "peek_tip_formula": "Réarrangez : 1/n_i^2 = 1/n_f^2 - 1/(R_H·lambda*). Essayez n_f = 1, 2, 3 et choisissez celui qui donne un n_i entier.",
+    "peek_tip_anchor": "R_H·lambda(nm)·1e-9 ≈ 0,011·lambda(nm). Balmer visible : n_f=2 place lambda dans 380-780 nm."
+  },
+  "hints": {
+    "1": {
+      "1": "Décalez n_i d'un cran. La couleur sur la bande doit changer — un n_i plus grand signifie une longueur d'onde plus courte pour un n_f fixé.",
+      "2": "Réglez n_f = 2 et balayez n_i de 3 à 7. Toutes les raies restent dans le domaine visible (série de Balmer).",
+      "3": "Réglez n_f = 1 : toute transition se trouve dans l'UV. Réglez n_f = 3 : toute transition se trouve dans l'IR. Le niveau de base choisit la série."
+    },
+    "2": {
+      "1": "Lisez la couleur cible. Bleu-violet → Balmer avec n_i élevé. Rouge → Balmer H-α (n_i = 3). Hors du visible → n_f = 1 (UV) ou n_f = 3 (IR).",
+      "2": "Calculez 1/(R_H · lambda*) en mètres. Comparez avec 1/n_f^2 pour n_f = 1, 2, 3. Le bon n_f laisse une différence égale à 1/n_i^2 pour un n_i entier.",
+      "3": "Direct : n_i = 1 / sqrt(1/n_f^2 - 1/(R_H · lambda*)). Arrondissez à l'entier le plus proche ; vérifiez en réinjectant dans la formule."
+    },
+    "3": {
+      "1": "Le spectre est masqué mais la formule reste valable. Écrivez-la avec la longueur d'onde cible lambda* substituée.",
+      "2": "Essayez n_f = 1, 2, 3 tour à tour : pour chacun, calculez 1/n_i^2 = 1/n_f^2 - 1/(R_H · lambda*). Un seul donne un n_i entier entre 2 et 7.",
+      "3": "L'aperçu révèle la formule réarrangée. Appliquez-la au lambda* spécifique affiché, puis réglez les curseurs à ces valeurs entières."
+    }
+  }
+}

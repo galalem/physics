@@ -1,0 +1,69 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Click each sample chip to place it on the four instruments — balance, graduated cylinder, thermometer, and magnet. Read off its mass, volume, temperature, and whether it sticks to the magnet. The table fills in as you go. Advance once you have measured every sample.",
+      "concept": "Matter can be described by measurable properties: mass (with a balance), volume (with a graduated cylinder), temperature (with a thermometer), and magnetic behavior (with a magnet). Notice that two samples can share the same mass yet fill different volumes — that difference in compactness is called density: $\\rho = m / V$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Evaluate",
+      "instruction": "The samples are hidden. You are shown one filled row of measurements. From three candidate samples, pick the one whose properties match the row. Answer all scenarios correctly in one pass — a wrong pick restarts the deck.",
+      "concept": "Each sample is a unique fingerprint of properties. Compare the measured row against what you memorised from Stage 1: eliminate candidates by any single mismatch — a wrong mass, wrong volume, or wrong magnetic response is enough to rule one out.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "instrument bench",
+    "controls": "samples",
+    "question": "question",
+    "measured": "measured",
+    "target": "scenarios",
+    "streak": "correct",
+    "balance": "balance",
+    "cylinder": "graduated cylinder",
+    "thermometer": "thermometer",
+    "magnet": "magnet",
+    "mass": "mass",
+    "volume": "volume",
+    "temperature": "temperature",
+    "magnetic": "magnetic",
+    "yes": "yes",
+    "no": "no",
+    "sample": "sample",
+    "unknown": "?",
+    "reading": "reading",
+    "row_title": "measured row",
+    "candidates": "which sample?",
+    "next_q": "next",
+    "restart_deck": "restart",
+    "tip1": "click a sample to place it on all four instruments",
+    "tip2": "match the measured row to one of the three candidates",
+    "sample_iron": "iron",
+    "sample_aluminium": "aluminium",
+    "sample_copper": "copper",
+    "sample_water": "water",
+    "sample_oil": "oil",
+    "sample_wood": "wood",
+    "unit_g": "g",
+    "unit_ml": "mL",
+    "unit_c": "°C",
+    "click_prompt": "pick a sample",
+    "hint_click_sample": "click a chip below"
+  },
+  "hints": {
+    "1": {
+      "1": "There are six samples along the bottom. Click any chip to place it on the instruments.",
+      "2": "Each sample gives four readings at once: mass, volume, temperature, and magnetic response.",
+      "3": "You need to measure all six samples to move on — watch the counter in the top right."
+    },
+    "2": {
+      "1": "Look at each row-reading in turn: mass, then volume, then temperature, then magnetic.",
+      "2": "Any single mismatch eliminates a candidate — you do not need to check every field.",
+      "3": "The magnetic column is the fastest discriminator: only one sample sticks to the magnet."
+    }
+  }
+}

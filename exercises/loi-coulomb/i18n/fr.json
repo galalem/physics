@@ -1,0 +1,56 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Balayez chaque curseur — $q_1$, $q_2$ et $r$ — sur au moins la moitié de sa plage. Remarquez comment doubler une charge double $F$, et comment diviser $r$ par deux multiplie $F$ par quatre.",
+      "concept": "Loi de Coulomb : $F = k \\cdot |q_1 q_2| / r^2$ avec $k \\approx 9 \\times 10^9 \\text{ N} \\cdot \\text{m}^2/\\text{C}^2$. $F$ est linéaire en chaque charge et inversement proportionnelle au carré de la distance $r$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une force cible $F^{*}$ est affichée. Ajustez $q_1$, $q_2$ et $r$ jusqu'à ce que la flèche de force en temps réel sur $q_2$ coïncide avec la flèche cible en pointillés.",
+      "concept": "De nombreux triplets $(q_1, q_2, r)$ donnent le même $|F|$. La visualisation couple les trois paramètres en un seul scalaire — utilisez-la pour développer votre intuition de la variation en $1/r^2$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La flèche de force est masquée. Seuls la cible $F^{*}$ et les valeurs actuelles des curseurs restent visibles. Calculez $q_1$, $q_2$, $r$ sur papier pour que $F = F^{*}$, puis réglez les curseurs et validez.",
+      "concept": "Forme inverse : $r = \\sqrt{k \\cdot |q_1 q_2| / F^{*}}$, ou de manière équivalente $|q_1 q_2| = F^{*} r^{2} / k$. Fixez deux des trois variables à des valeurs pratiques et résolvez pour la troisième.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "banc de Coulomb",
+    "match_ok": "coïncidence",
+    "q1_label": "q1",
+    "q2_label": "q2",
+    "r_label": "r",
+    "target_short": "cible",
+    "tip1": "balayez chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "faites coïncider la flèche en temps réel avec la flèche cible en pointillés",
+    "tip3": "calculez q1, q2, r sur papier — puis réglez les curseurs",
+    "peek_tip_formula": "F = k·|q1·q2|/r²  →  r = sqrt(k·|q1·q2|/F). Choisissez deux charges, résolvez pour r.",
+    "peek_tip_anchor": "Repère : 1 µC × 1 µC à r = 10 cm donne F = 0,9 N. Mettez à l'échelle à partir de là."
+  },
+  "hints": {
+    "1": {
+      "1": "Bougez chaque curseur. Lequel change le plus la flèche ?",
+      "2": "Doubler q1 double F. Diviser r par deux multiplie F par quatre.",
+      "3": "Les barres de couverture montrent votre progression. Poussez chaque curseur jusqu'aux deux extrêmes."
+    },
+    "2": {
+      "1": "La cible |F*| est affichée. Réarrangez F = k·|q1·q2|/r² pour isoler une variable.",
+      "2": "Fixez q1 = q2 = 2 µC, puis résolvez r = sqrt(k·|q1·q2|/F*).",
+      "3": "Essayez r = sqrt(90·q1·q2/F*) avec q, F en µC et N et r en cm. Tout triplet valide convient."
+    },
+    "3": {
+      "1": "La flèche est masquée, mais la formule reste valable. Écrivez-la d'abord sur papier.",
+      "2": "En unités d'affichage : F(N) = 90·q1(µC)·q2(µC)/r(cm)². Résolvez pour une variable.",
+      "3": "Choisissez des charges rondes — par exemple q1 = q2 = 2 µC — puis calculez r = sqrt(90·q1·q2/F*)."
+    }
+  }
+}

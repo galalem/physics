@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Balayez chacun des trois curseurs et observez comment le palet en lévitation se déplace. Avancez lorsque chaque curseur a couvert au moins la moitié de sa plage.",
+      "concept": "Un palet aimant permanent lévite au-dessus d'une bobine. Deux forces s'exercent sur lui : son poids $P = m\\,g$ dirigé vers le bas, et une force magnétique répulsive $F_{rep}(h) = F_0/h^2$ dirigée vers le haut, où $F_0 = C \\cdot N \\cdot I$ regroupe la géométrie de la bobine, son nombre de spires $N$ et son intensité $I$. L'équilibre se situe à la hauteur où $F_{rep}(h) = P$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une hauteur de lévitation cible est tracée en pointillés. Réglez $I$, $N$ et $m$ jusqu'à ce que le palet repose sur la ligne.",
+      "concept": "La hauteur d'équilibre est $h^{*} = \\sqrt{F_0/(m\\,g)} = \\sqrt{C\\,N\\,I/(m\\,g)}$. De nombreux triplets de paramètres donnent la même $h^{*}$ — on peut échanger l'intensité contre les spires ou contre la masse.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le palet et ses flèches de forces sont masqués. Seule la hauteur cible reste. Calculez sur papier une intensité $I$ valide pour une masse et un nombre de spires de votre choix, puis réglez les curseurs et terminez.",
+      "concept": "Inverse : à partir de $h^{*2} = C\\,N\\,I/(m\\,g)$ on obtient $I = m\\,g\\,h^{*2}/(C\\,N)$. Choisissez d'abord $m$ et $N$, puis calculez $I$. Les valeurs sont en SI : $m$ en kg (convertir depuis les grammes), $h^{*}$ en mètres.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench_label": "lévitateur magnétique",
+    "coil_label": "bobine",
+    "puck_label": "palet",
+    "height_axis": "h (cm)",
+    "target_line": "cible h*",
+    "match_ok": "sur la cible",
+    "force_up": "F_rep",
+    "force_down": "P",
+    "tip1": "balayez chaque curseur — couvrez au moins la moitié de sa plage",
+    "tip2": "augmentez F_rep ou baissez m·g jusqu'à ce que le palet atteigne la ligne pointillée",
+    "tip3": "calculez I sur papier, puis réglez les curseurs et terminez",
+    "peek_tip_formula": "Réarrangez F_0/h*^2 = m g  ->  I = m g h*^2 / (C N).  Choisissez d'abord m et N, puis calculez I.",
+    "peek_tip_anchor": "À h* = 10 cm avec m = 20 g il faut C N I ~ 2e-3 N m^2.  Avec C = 5e-6, cela signifie N I ~ 400."
+  },
+  "hints": {
+    "1": {
+      "1": "Quel curseur change la hauteur de lévitation le plus vite ? Essayez-en un à la fois.",
+      "2": "Augmenter I ou N augmente F_0, ce qui soulève le palet. Augmenter m ajoute du poids et le fait descendre.",
+      "3": "Diviser m par deux à I et N fixés multiplie la hauteur de lévitation par sqrt(2). Diviser I par deux la divise par sqrt(2)."
+    },
+    "2": {
+      "1": "Lisez la hauteur cible sur la ligne pointillée avant de toucher aux curseurs.",
+      "2": "Fixez m et N à des valeurs rondes, puis déplacez I pour amener le palet à la ligne.",
+      "3": "Vous pouvez figer N et m à leurs valeurs par défaut et n'ajuster que I — cela laisse une seule inconnue."
+    },
+    "3": {
+      "1": "Écrivez la condition d'équilibre F_0/h*^2 = m g sur papier avant de toucher aux curseurs.",
+      "2": "Substituez h* (en mètres !) dans I = m g h*^2 / (C N). Essayez m = 20 g, N = 300 d'abord.",
+      "3": "L'aide vous donne la formule réarrangée. Remplacez par vos m et N choisis, obtenez I, puis lisez les curseurs."
+    }
+  }
+}

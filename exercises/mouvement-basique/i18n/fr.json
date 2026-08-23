@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Observez la mouche sur le toit de la voiture rouge. Changez de référentiel à l'aide des boutons de droite, et observez comment la trajectoire de la mouche est redessinée à chaque fois.",
+      "concept": "Une trajectoire est l'ensemble des positions d'un point mobile, et sa forme dépend du référentiel choisi. Le même point $M$ peut décrire une ligne horizontale, un point fixe, ou une ligne inclinée selon le référentiel.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Pour chaque trajectoire affichée, choisissez le référentiel qui la produit. Validez avec $\\text{CONFIRM}$. Les trois appariements doivent être réussis pour avancer.",
+      "concept": "Dans le référentiel de la route, la mouche se déplace horizontalement avec la voiture. Dans le référentiel de la voiture, la mouche est immobile. Dans le référentiel du piéton en marche, la trajectoire de la mouche est inclinée car le mouvement propre du piéton ajoute une composante.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Seul le mouvement de la mouche est visible — la voiture et le piéton sont masqués. Lisez la forme de la trajectoire, puis nommez le référentiel qui la produit. Vous avez 3 essais au total — pas de devinette.",
+      "concept": "Demandez-vous : dans quel référentiel le point d'intérêt ne bouge-t-il pas ? Un corps est au repos dans le référentiel qui partage sa vitesse. Si la mouche est fixée sur la voiture, elle est immobile dans le référentiel de la voiture.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "CONFIRMER",
+    "stage": "ÉTAPE",
+    "frame_road": "Route",
+    "frame_car": "Voiture",
+    "frame_pedestrian": "Piéton",
+    "trajectory": "Trajectoire",
+    "pick_frame": "Quel référentiel ?",
+    "attempts": "ESSAIS",
+    "frames_seen": "RÉFÉRENTIELS",
+    "matched": "APPARIÉS",
+    "tip1": "activez chaque référentiel et observez la trajectoire changer",
+    "tip2": "choisissez le référentiel correspondant à la trajectoire affichée, puis CONFIRMER",
+    "tip3": "lisez la trajectoire, puis nommez le référentiel",
+    "peek_tip_rest": "Un point est au repos dans un référentiel qui se déplace à la même vitesse que le point. Cherchez le référentiel où la trajectoire se réduit à un point fixe.",
+    "peek_tip_horizontal": "Une ligne horizontale signifie que l'observateur est immobile tandis que le point se déplace à vitesse constante dans la direction du sol.",
+    "peek_tip_inclined": "Une ligne inclinée signifie que l'observateur se déplace dans une direction différente du mouvement du point — pensez au piéton qui marche.",
+    "correct": "Correct",
+    "wrong": "Faux",
+    "fly": "M (mouche)",
+    "car": "voiture",
+    "pedestrian": "piéton",
+    "road": "route"
+  },
+  "hints": {
+    "1": {
+      "1": "Cliquez sur chacun des trois boutons de référentiel à droite.",
+      "2": "Observez la ligne en pointillés — c'est la trajectoire de la mouche dans le référentiel choisi.",
+      "3": "Vous devez visualiser les trois référentiels (Route, Voiture, Piéton) pour avancer."
+    },
+    "2": {
+      "1": "Demandez : quel est le mouvement propre de l'observateur ? Un observateur immobile voit la mouche se déplacer horizontalement.",
+      "2": "Si l'observateur se déplace avec la voiture, la mouche est fixe par rapport à lui — la trajectoire se réduit à un point.",
+      "3": "Le piéton marche en oblique, donc le mouvement de la mouche par rapport à lui est incliné."
+    },
+    "3": {
+      "1": "Quel référentiel a la même vitesse que la mouche ?",
+      "2": "La mouche est posée sur le toit de la voiture. Sa vitesse par rapport à la route est égale à celle de la voiture.",
+      "3": "Dans le référentiel de la voiture, la mouche ne bouge pas du tout — c'est la réponse pour le cas du « point fixe »."
+    }
+  }
+}

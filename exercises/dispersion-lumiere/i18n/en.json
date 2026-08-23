@@ -1,0 +1,54 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Sweep the three sliders and watch how each one reshapes the refracted light. $\\lambda$ picks the colour; $A_c$ and $B_c$ define the glass through Cauchy's law $n(\\lambda) = A_c + B_c/\\lambda^2$. Advance when each slider has covered at least half of its range.",
+      "concept": "Cauchy's dispersion law $n(\\lambda) = A_c + B_c/\\lambda^2$ tells us that the refractive index of a transparent material depends on the wavelength. $A_c$ sets the base index (medium averaged), and $B_c$ controls how strongly short wavelengths (blue, violet) bend more than long ones (red). The prism deviation $D = i_1 + i_2 - A$ then rides directly on $n(\\lambda)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target exit direction $D^{*}$ is drawn as a dashed orange ray. Tune $\\lambda$, $A_c$ and $B_c$ so your solid coloured exit ray becomes parallel to the target. Many parameter combinations produce the same deviation — pick any that works.",
+      "concept": "For fixed prism geometry ($A = 50^{\\circ}$, $i_1 = 30^{\\circ}$), the deviation $D$ depends only on the refractive index: $D(n) = i_1 + \\arcsin\\!\\big(n \\sin(A - \\arcsin(\\sin i_1 / n))\\big) - A$. So any triple $(\\lambda, A_c, B_c)$ that lands on the same $n$ produces the same exit direction.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The coloured rays are gone. Only the prism and the target $D^{*}$ arrow remain. Compute on paper the index $n$ that reaches $D^{*}$, then find a $(\\lambda, A_c, B_c)$ triple through Cauchy's law and set the sliders. You get one submit per target.",
+      "concept": "Invert the deviation formula in two steps. First $D^{*} \\to n$: for the fixed geometry, $n \\sin(A - \\arcsin(\\sin i_1 / n)) = \\sin(i_1 + D^{*} - A)$ — one unknown, one equation, so $n$ is unique. Then $n \\to (\\lambda, A_c, B_c)$ via Cauchy: fix any two of the three parameters and solve for the third.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "prism bench",
+    "source": "source",
+    "tir": "total internal reflection — no exit ray",
+    "match_ok": "match",
+    "tip1": "sweep λ, A_c, and B_c across their ranges",
+    "tip2": "align your coloured exit ray with the dashed target",
+    "tip3": "solve n from D* on paper, then find (λ, A_c, B_c)",
+    "peek_tip_formula": "Rearrange: n·sin(A − arcsin(sin i₁/n)) = sin(i₁ + D* − A). Solve for n first.",
+    "peek_tip_anchor": "Cauchy inversion: pick λ and A_c, then B_c = (n − A_c)·(λ/1000)² μm²."
+  },
+  "hints": {
+    "1": {
+      "1": "Slide λ across the whole rainbow. Does the exit ray move at all when you fix A_c and B_c?",
+      "2": "Now slide B_c from small to large with λ fixed. B_c is what makes different colours bend by different amounts — the dispersion strength.",
+      "3": "A_c is a base offset added to every wavelength. Large A_c bends every colour more; small A_c bends every colour less. Sweep it and watch the whole ray rotate."
+    },
+    "2": {
+      "1": "The target D* only depends on the index n at the current wavelength. First figure out what n produces D*.",
+      "2": "With A = 50° and i₁ = 30°, guess n ≈ 1.51 for D ≈ 30°, n ≈ 1.60 for D ≈ 38°, n ≈ 1.66 for D ≈ 43°, n ≈ 1.71 for D ≈ 47°.",
+      "3": "Once you know n, use Cauchy backwards: fix λ near the middle of the visible range and try A_c + B_c/(λ/1000)² ≈ n. Many triples work."
+    },
+    "3": {
+      "1": "The rays are gone, but the formula still holds. Write D* = i₁ + i₂ − A on paper.",
+      "2": "Invert Snell's law twice. With A = 50°, i₁ = 30°, compute r₁ = arcsin(sin30°/n), then r₂ = 50° − r₁, then check n·sin r₂ = sin(30° + D* − A). One unknown n.",
+      "3": "If you peeked, you already have the numerical n. Now Cauchy: choose λ (any visible), choose A_c below n, then B_c = (n − A_c)·(λ/1000)². Set the sliders to those exact values."
+    }
+  }
+}

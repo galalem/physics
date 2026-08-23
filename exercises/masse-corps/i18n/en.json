@@ -1,0 +1,71 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "The left pan holds a sample of unknown mass. Add standard masses to the right pan by clicking them, and remove them by clicking again. Watch the beam tilt. Advance once you have witnessed all three states: left-heavier, balanced, and right-heavier.",
+      "concept": "Mass is a scalar property of matter. A two-pan balance compares masses directly: the beam tilts toward the heavier side, and levels when the two sides carry equal total mass. The mass of the sample equals the sum of the standard masses that balance it.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "The sample can now be swapped — click it to cycle through three unknown objects. For each one, add standards to the right pan until the beam is balanced. Balance all three samples to advance.",
+      "concept": "The standard unit of mass in the SI system is the kilogram ($\\mathrm{kg}$). Common submultiples: $1\\,\\mathrm{kg} = 1000\\,\\mathrm{g}$, $1\\,\\mathrm{g} = 1000\\,\\mathrm{mg}$. A multiple used for large masses: $1\\,\\mathrm{t} = 1000\\,\\mathrm{kg}$.",
+      "peekable": true
+    },
+    {
+      "index": 3,
+      "name": "Predict",
+      "instruction": "The balance is covered. You are given a mass in one unit and must express it in another. Pick the correct value. Answer 4 in a row correctly to finish — a wrong answer resets your streak.",
+      "concept": "Unit conversion moves the decimal point by three places per step: $\\mathrm{mg} \\to \\mathrm{g} \\to \\mathrm{kg} \\to \\mathrm{t}$ each multiply by $1000$. Going the other way divides by $1000$. Two steps in the same direction is a factor of $10^6$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "scene_title": "balance",
+    "controls": "controls",
+    "question": "question",
+    "outcomes_seen": "outcomes",
+    "balanced_seen": "balanced",
+    "streak": "streak",
+    "sample": "sample",
+    "standards": "standards",
+    "right_pan_total": "right pan",
+    "left_pan_total": "left pan",
+    "verdict_left": "left heavier",
+    "verdict_right": "right heavier",
+    "verdict_balanced": "balanced",
+    "click_standard_hint": "click a standard to add or remove it",
+    "click_sample_hint": "click the sample to change it",
+    "reading": "reading",
+    "field_standards": "standard masses",
+    "field_sample": "sample",
+    "field_status": "status",
+    "convert_prompt": "Convert this mass:",
+    "target_unit": "into",
+    "next_q": "next",
+    "tip1": "try adding a few standards, then a lot — watch the beam pass through balance",
+    "tip2": "each new sample has a different mass — rebuild the right pan to match",
+    "tip3": "moving up (mg to g, g to kg, kg to t) divides by 1000; moving down multiplies by 1000",
+    "hidden": "covered"
+  },
+  "hints": {
+    "1": {
+      "1": "The beam tilts toward the side that carries more mass.",
+      "2": "Add standards one at a time; if you overshoot, remove one and try a smaller one.",
+      "3": "You need three states in your log: left-heavier (no standards), balanced (perfect match), right-heavier (too many)."
+    },
+    "2": {
+      "1": "Each sample has a different mass — the standards that balanced the last one will not balance the next.",
+      "2": "Combine standards of different sizes to reach the target — a 100 g + 20 g + 5 g gives 125 g.",
+      "3": "The reading in grams is the sum of all standards currently on the right pan."
+    },
+    "3": {
+      "1": "Identify the source unit and the target unit. Are you going up (smaller unit to larger) or down?",
+      "2": "Each step in the ladder mg to g to kg to t multiplies by 1000. Going the other way divides by 1000.",
+      "3": "Count the number of steps between the two units, then move the decimal point by 3 places per step."
+    }
+  }
+}

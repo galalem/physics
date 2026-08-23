@@ -1,0 +1,54 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Balayez les trois curseurs et observez comment chacun remodèle la lumière réfractée. $\\lambda$ choisit la couleur ; $A_c$ et $B_c$ définissent le verre par la loi de Cauchy $n(\\lambda) = A_c + B_c/\\lambda^2$. Passez à l'étape suivante lorsque chaque curseur a parcouru au moins la moitié de sa plage.",
+      "concept": "La loi de dispersion de Cauchy $n(\\lambda) = A_c + B_c/\\lambda^2$ indique que l'indice de réfraction d'un matériau transparent dépend de la longueur d'onde. $A_c$ fixe l'indice de base (moyenne du milieu), et $B_c$ contrôle à quel point les courtes longueurs d'onde (bleu, violet) sont plus déviées que les longues (rouge). La déviation du prisme $D = i_1 + i_2 - A$ suit alors directement $n(\\lambda)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une direction de sortie cible $D^{*}$ est tracée sous forme de rayon orange en pointillés. Réglez $\\lambda$, $A_c$ et $B_c$ pour que votre rayon de sortie coloré plein devienne parallèle à la cible. De nombreuses combinaisons de paramètres produisent la même déviation — choisissez-en une qui fonctionne.",
+      "concept": "Pour une géométrie de prisme fixée ($A = 50^{\\circ}$, $i_1 = 30^{\\circ}$), la déviation $D$ ne dépend que de l'indice de réfraction : $D(n) = i_1 + \\arcsin\\!\\big(n \\sin(A - \\arcsin(\\sin i_1 / n))\\big) - A$. Ainsi tout triplet $(\\lambda, A_c, B_c)$ qui donne le même $n$ produit la même direction de sortie.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les rayons colorés ont disparu. Il ne reste que le prisme et la flèche cible $D^{*}$. Calculez sur papier l'indice $n$ permettant d'atteindre $D^{*}$, puis trouvez un triplet $(\\lambda, A_c, B_c)$ via la loi de Cauchy et réglez les curseurs. Vous n'avez droit qu'à une validation par cible.",
+      "concept": "Inversez la formule de déviation en deux étapes. D'abord $D^{*} \\to n$ : pour la géométrie fixée, $n \\sin(A - \\arcsin(\\sin i_1 / n)) = \\sin(i_1 + D^{*} - A)$ — une inconnue, une équation, donc $n$ est unique. Puis $n \\to (\\lambda, A_c, B_c)$ via Cauchy : fixez deux des trois paramètres et résolvez le troisième.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "banc de prisme",
+    "source": "source",
+    "tir": "réflexion totale interne — pas de rayon de sortie",
+    "match_ok": "correspondance",
+    "tip1": "balayez λ, A_c et B_c sur leurs plages",
+    "tip2": "alignez votre rayon de sortie coloré avec la cible en pointillés",
+    "tip3": "résolvez n à partir de D* sur papier, puis trouvez (λ, A_c, B_c)",
+    "peek_tip_formula": "Réarrangez : n·sin(A − arcsin(sin i₁/n)) = sin(i₁ + D* − A). Résolvez d'abord n.",
+    "peek_tip_anchor": "Inversion de Cauchy : choisissez λ et A_c, puis B_c = (n − A_c)·(λ/1000)² μm²."
+  },
+  "hints": {
+    "1": {
+      "1": "Faites glisser λ sur tout l'arc-en-ciel. Le rayon de sortie bouge-t-il lorsque vous fixez A_c et B_c ?",
+      "2": "Maintenant faites glisser B_c de petit à grand avec λ fixé. B_c est ce qui fait dévier les différentes couleurs de quantités différentes — la force de dispersion.",
+      "3": "A_c est un décalage de base ajouté à chaque longueur d'onde. Un grand A_c dévie chaque couleur davantage ; un petit A_c dévie chaque couleur moins. Balayez-le et observez tout le rayon tourner."
+    },
+    "2": {
+      "1": "La cible D* ne dépend que de l'indice n à la longueur d'onde actuelle. D'abord, trouvez le n qui produit D*.",
+      "2": "Avec A = 50° et i₁ = 30°, estimez n ≈ 1,51 pour D ≈ 30°, n ≈ 1,60 pour D ≈ 38°, n ≈ 1,66 pour D ≈ 43°, n ≈ 1,71 pour D ≈ 47°.",
+      "3": "Une fois n connu, utilisez Cauchy à l'envers : fixez λ vers le milieu du domaine visible et essayez A_c + B_c/(λ/1000)² ≈ n. De nombreux triplets fonctionnent."
+    },
+    "3": {
+      "1": "Les rayons ont disparu, mais la formule reste valable. Écrivez D* = i₁ + i₂ − A sur papier.",
+      "2": "Inversez la loi de Snell-Descartes deux fois. Avec A = 50°, i₁ = 30°, calculez r₁ = arcsin(sin30°/n), puis r₂ = 50° − r₁, puis vérifiez n·sin r₂ = sin(30° + D* − A). Une inconnue n.",
+      "3": "Si vous avez consulté l'aperçu, vous avez déjà le n numérique. Maintenant Cauchy : choisissez λ (visible quelconque), choisissez A_c inférieur à n, puis B_c = (n − A_c)·(λ/1000)². Réglez les curseurs à ces valeurs exactes."
+    }
+  }
+}

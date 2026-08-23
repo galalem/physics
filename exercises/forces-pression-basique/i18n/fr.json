@@ -1,0 +1,79 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une punaise appuyée sur la peau avec la même force $F$ agit très différemment selon l'extrémité qui touche la surface. Basculez entre pointe vers le bas et face plate vers le bas pour voir la pression $p = F/S$ changer. Avancez lorsque vous avez observé les deux orientations.",
+      "concept": "La pression est une force répartie sur une surface : $p = F/S$. Même force $F$, plus petite surface $S$ → $p$ beaucoup plus grande. C'est pourquoi la pointe mord et la face plate non.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Basculez entre trois bancs — clou sur bois, punaise sur peau, char contre voiture sur sable — et essayez les deux configurations de contact pour chacun. Observez quatre régimes de pression distincts pour avancer.",
+      "concept": "Deux règles issues de $p = F/S$ : (1) réduire la surface fait exploser la pression (clou, punaise, crampons) ; (2) étaler la surface fait chuter la pression (face plate, chenille de char, raquettes à neige). La force n'a pas changé — seule sa répartition.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Prédire",
+      "instruction": "La barre de pression est masquée. Pour chaque paire, choisissez le côté qui appuie le plus fort sur sa surface. Faites le calcul mental à partir de $F$ et $S$ affichés dans le HUD avant de choisir. Répondez correctement à tous les cas en un seul passage ; un mauvais choix relance le paquet.",
+      "concept": "Même force, surface différente → pression différente. Un $F$ plus grand avec le même $S$ augmente aussi $p$. Lorsque les deux changent, calculez $F/S$ mentalement et comparez les deux rapports.",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "scene_title": "banc de pression",
+    "controls": "commandes",
+    "question": "question",
+    "regimes_seen": "régimes",
+    "deck": "paquet",
+    "bench_nail": "clou sur bois",
+    "bench_tack": "punaise sur peau",
+    "bench_track": "char contre voiture sur sable",
+    "orient_point": "pointe vers le bas",
+    "orient_flat": "face plate vers le bas",
+    "orient_tank": "chenille de char",
+    "orient_tire": "pneu de voiture",
+    "field_bench": "banc",
+    "field_orient": "contact",
+    "field_readout": "lecture",
+    "force_lbl": "F",
+    "area_lbl": "S",
+    "pressure_lbl": "p",
+    "unit_n": "N",
+    "unit_cm2": "cm²",
+    "unit_pa": "Pa",
+    "regime_high": "haute pression",
+    "regime_low": "basse pression",
+    "penetrates": "s'enfonce",
+    "no_penetrate": "marque à peine",
+    "pick_side": "quel côté appuie le plus fort ?",
+    "left": "gauche",
+    "right": "droite",
+    "same": "identique",
+    "next_q": "suivant",
+    "restart_deck": "recommencer",
+    "tip1": "même force — retournez la punaise pour changer la surface de contact",
+    "tip2": "observez quatre régimes de pression haute/basse distincts sur les trois bancs",
+    "tip3": "calculez F ÷ S mentalement pour chaque côté — le plus grand rapport l'emporte"
+  },
+  "hints": {
+    "1": {
+      "1": "La force appliquée est la même. Ce qui change, c'est la surface de contact S.",
+      "2": "Un S plus petit avec le même F donne un F/S plus grand — c'est pourquoi la pointe mord.",
+      "3": "Basculez de pointe vers le bas à face plate vers le bas et inversement pour voir p sauter d'un grand facteur."
+    },
+    "2": {
+      "1": "Chaque banc a deux configurations de contact — essayez les deux sur les trois bancs.",
+      "2": "Il vous faut quatre régimes de pression différents (haute ou basse) parmi les six configurations.",
+      "3": "Pointe de clou + pointe de punaise + chenille de char + pneu de voiture couvre les quatre régimes."
+    },
+    "3": {
+      "1": "Notez F et S pour chaque côté sur papier. Puis divisez.",
+      "2": "Le rapport F/S le plus grand est la pression la plus haute — ce côté s'enfonce davantage.",
+      "3": "Même F, plus petit S l'emporte. Même S, plus grand F l'emporte. Quand les deux diffèrent, faites la division."
+    }
+  }
+}

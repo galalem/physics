@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un bloc est placé dans un bécher de liquide. Balayez les trois curseurs — volume $V$ de l'objet, masse volumique $\\rho_{obj}$ de l'objet et masse volumique $\\rho_{liq}$ du liquide — et observez comment le bloc flotte, coule et comment les flèches du poids $P$ et de la poussée $\\Pi$ changent.",
+      "concept": "Archimède : $\\Pi = \\rho_{liq}\\,V_{imm}\\,g$. À l'équilibre, un bloc flottant vérifie $\\Pi = P$, donc $\\rho_{liq}\\,V_{imm}\\,g = \\rho_{obj}\\,V\\,g$. La fraction immergée est $f = V_{imm}/V = \\rho_{obj}/\\rho_{liq}$ quand $\\rho_{obj} < \\rho_{liq}$, sinon le bloc coule ($f = 1$).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une ligne de flottaison cible est tracée en travers du bécher. Réglez les curseurs pour que la propre ligne de flottaison du bloc coïncide avec cette ligne pointillée — c'est-à-dire pour que la fraction immergée du bloc corresponde à la cible $f^{*}$.",
+      "concept": "Seul le rapport des masses volumiques décide de l'immersion : $f = \\rho_{obj}/\\rho_{liq}$. Le volume de l'objet $V$ met à l'échelle les flèches et les forces totales mais ne change pas la fraction. Réglez $\\rho_{obj}/\\rho_{liq} = f^{*}$ comme vous voulez.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le bloc et les flèches de forces sont masqués — seul reste le bécher avec la ligne de flottaison cible. Calculez sur papier le rapport de masses volumiques nécessaire pour atteindre $f^{*}$, puis réglez les curseurs à des valeurs qui donnent ce rapport et validez.",
+      "concept": "Formule inverse : étant donné $f^{*}$, tout couple avec $\\rho_{obj} = f^{*}\\cdot\\rho_{liq}$ convient. Exemple : pour $f^{*} = 0.90$, choisissez $\\rho_{liq} = 1000\\,\\text{kg/m}^{3}$ (eau) et $\\rho_{obj} = 900\\,\\text{kg/m}^{3}$ (glace).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "réservoir hydrostatique",
+    "beaker": "bécher",
+    "liquid": "liquide",
+    "block": "bloc",
+    "waterline": "ligne de flottaison",
+    "target_waterline": "cible",
+    "weight_arrow": "P",
+    "buoyancy_arrow": "Π",
+    "match_ok": "correspondance",
+    "float_state": "FLOTTE",
+    "sink_state": "COULE",
+    "tip1": "balayez chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "alignez la ligne de flottaison du bloc avec la cible pointillée",
+    "tip3": "calculez le rapport sur papier, puis réglez les curseurs",
+    "peek_tip_formula": "Réarrangez : f = ρ_obj / ρ_liq. Choisissez ρ_liq, puis ρ_obj = f · ρ_liq.",
+    "peek_tip_anchor": "L'eau vaut 1000 kg/m³. Pour f = 0.9 un bloc de type glace (~900 kg/m³) convient."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplacez ρ_obj seul. Le bloc monte-t-il ou coule-t-il quand la masse volumique augmente ?",
+      "2": "Avec ρ_obj fixé, changez ρ_liq. Un liquide plus dense signifie que le bloc flotte plus haut.",
+      "3": "Essayez ρ_obj = ρ_liq : le bloc est neutre — entièrement immergé mais sans couler au fond."
+    },
+    "2": {
+      "1": "La cible est une fraction f*. Lisez-la sur l'étiquette près de la ligne pointillée.",
+      "2": "Seul le rapport compte. Choisissez un ρ_liq rond (par ex. 1000), puis réglez ρ_obj = f* · ρ_liq.",
+      "3": "V n'affecte pas la fraction — laissez-le tranquille et concentrez-vous sur les deux masses volumiques."
+    },
+    "3": {
+      "1": "Le bloc est masqué mais Archimède tient toujours. Écrivez f = ρ_obj / ρ_liq sur papier.",
+      "2": "Réarrangez en ρ_obj = f* · ρ_liq. Choisissez n'importe quel ρ_liq dans la plage et calculez ρ_obj.",
+      "3": "L'aide montre la formule réarrangée. Substituez la cible f* et lisez ρ_obj pour votre ρ_liq choisi."
+    }
+  }
+}

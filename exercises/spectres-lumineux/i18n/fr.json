@@ -1,0 +1,65 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Basculez entre les trois types de sources (continu, émission, absorption) et les trois éléments (H, Na, He). Observez comment la bande de spectre change. Passez à l'étape suivante lorsque vous avez visualisé au moins deux types de sources ET au moins deux éléments.",
+      "concept": "Une source thermique produit un spectre continu sur toutes les longueurs d'onde visibles. Un gaz excité émet uniquement aux longueurs d'onde de transition atomique $\\lambda_{ij}$ (raies brillantes sur fond noir). Un gaz froid placé devant une source continue absorbe ces mêmes longueurs d'onde (raies sombres sur un arc-en-ciel). Les positions des raies constituent l'empreinte de l'atome — pour l'hydrogène, la série de Balmer obéit à $1/\\lambda = R_H(1/2^2 - 1/n^2)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Un spectre cible est affiché en haut. Choisissez le type de source et l'élément qui le reproduisent. Votre bande d'aperçu apparaît en dessous — alignez-la avec la cible.",
+      "concept": "Les spectres d'émission et d'absorption partagent les mêmes positions de raies $\\lambda_{ij}$ pour un élément donné — seul le contraste est inversé. L'identification de l'élément se ramène à faire correspondre un petit nombre de positions de raies à une table connue.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le spectre cible est affiché SANS ÉTIQUETTE. Votre bande d'aperçu est masquée. Lisez le motif des raies, déterminez quel élément et quel type de source l'ont produit, puis validez. Une mauvaise réponse vous fait passer à une nouvelle cible.",
+      "concept": "Vous ne pouvez pas comparer A/B avec un aperçu en direct — vous devez vous rappeler l'empreinte de raies de chaque élément d'après les notes de concept. Posez trois questions dans l'ordre : (1) fond arc-en-ciel ou noir ? (2) raies sombres ou raies brillantes ? (3) les longueurs d'onde des raies correspondent-elles à H (quatre raies de Balmer dont 656 nm rouge et 486 nm cyan), Na (doublet brillant vers 589 nm), ou He (six raies dont 587,6 nm jaune et 447 nm bleu) ?",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "spectroscope",
+    "target_word": "CIBLE",
+    "spectrum_word": "SPECTRE",
+    "source_word": "Source",
+    "element_word": "Élément",
+    "src_short": "SRC",
+    "elt_short": "ÉLT",
+    "hidden_word": "APERÇU",
+    "blind_notice": "APERÇU MASQUÉ — TRAVAILLEZ SUR PAPIER",
+    "source_continuum": "Continu",
+    "source_emission": "Émission",
+    "source_absorption": "Absorption",
+    "element_H": "Hydrogène",
+    "element_Na": "Sodium",
+    "element_He": "Hélium",
+    "tip1": "essayez chaque source avec chaque élément pour construire une empreinte mentale",
+    "tip2": "faites correspondre d'abord le contraste de la source, puis les positions des raies de l'élément",
+    "tip3": "identifiez la source par le fond, puis faites correspondre les positions des raies à un élément",
+    "peek_tip_formula": "Comptez les raies visibles : H en a 4 (Balmer). Na est dominé par un doublet jaune brillant vers 589 nm. He montre 6+ raies réparties sur la bande.",
+    "peek_tip_anchor": "Vérification de la source : fond noir avec raies brillantes = émission ; arc-en-ciel complet avec bandes sombres aux longueurs d'onde des raies = absorption ; dégradé continu sans raies = continu."
+  },
+  "hints": {
+    "1": {
+      "1": "Essayez d'abord de changer le type de source — le fond change radicalement.",
+      "2": "Maintenant essayez de changer l'élément en mode émission — chaque élément a ses propres positions de raies.",
+      "3": "Couvrez la matrice : au moins deux types de sources et au moins deux éléments. Le HUD affiche votre couverture."
+    },
+    "2": {
+      "1": "Regardez le fond de la cible. Est-ce un arc-en-ciel ou est-il noir ?",
+      "2": "Arc-en-ciel avec bandes sombres = absorption. Noir avec raies colorées = émission. Faites d'abord correspondre le type de source.",
+      "3": "Ensuite l'élément : comptez les raies de la cible et notez leurs couleurs. Faites défiler H, Na, He jusqu'à ce que le vôtre recouvre exactement la cible."
+    },
+    "3": {
+      "1": "L'aperçu est masqué. Ne lisez que la bande cible et demandez : quel fond ? quelles raies ?",
+      "2": "Repères de positions de raies — H : 656 rouge, 486 cyan. Na : doublet jaune brillant à 589. He : 587,6 jaune avec plusieurs raies bleu-violet. Utilisez l'axe des longueurs d'onde sous la bande.",
+      "3": "Engagez-vous sur votre meilleure hypothèse avant de valider — une mauvaise réponse vous fait passer à une nouvelle cible avec une source ou un élément différent."
+    }
+  }
+}

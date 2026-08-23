@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Étudiez le schéma : le secteur domestique en Tunisie fournit une tension alternative de valeur efficace $U_{eff} = 230\\,\\text{V}$ à la fréquence $f = 50\\,\\text{Hz}$. Trois fils entrent dans la prise : la phase, le neutre et la terre. Le tableau électrique protège l'installation avec un disjoncteur et un interrupteur différentiel. Cliquez sur les étiquettes du schéma pour révéler chaque partie.",
+      "concept": "Le fil de phase transporte le potentiel alternatif ; le neutre assure le retour du courant ; le fil de terre (relié à une prise de terre enterrée) évacue en toute sécurité toute fuite provenant de la carcasse métallique d'un appareil. Le disjoncteur coupe le courant en cas de surcharge ou de court-circuit. Le différentiel (30 mA) déclenche lorsque les courants de phase et de neutre diffèrent — signe qu'un courant fuit à travers une personne ou un défaut.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Évaluer",
+      "instruction": "Schéma masqué. Répondez à chaque scénario de sécurité en utilisant uniquement les concepts. Vous devez répondre correctement à toutes les cartes en un seul passage — une mauvaise réponse relance le paquet dans un nouvel ordre.",
+      "concept": "Deux invariants à retenir : (1) le seul rôle du fil de terre est d'offrir au courant de fuite un chemin plus sûr que par vous ; (2) le différentiel compare les courants de phase et de neutre — tout déséquilibre signifie que du courant part là où il ne devrait pas.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "scene_title": "alimentation secteur domestique",
+    "controls": "schéma",
+    "question": "scénario de sécurité",
+    "cards_progress": "cartes",
+    "reveal": "tout révéler",
+    "hide": "tout masquer",
+    "phase": "phase — 230 V eff.",
+    "neutral": "neutre — retour du courant",
+    "earth": "terre — masse de sécurité",
+    "outlet": "prise murale",
+    "socket": "prise",
+    "third_pin": "broche de terre",
+    "breaker": "disjoncteur",
+    "rcd": "différentiel (30 mA)",
+    "fuse_box": "tableau électrique",
+    "u_label": "U_eff = 230 V",
+    "f_label": "f = 50 Hz",
+    "sine_label": "u(t) alternative",
+    "next": "carte suivante",
+    "restart": "recommencer",
+    "correct": "correct",
+    "wrong": "faux — paquet réinitialisé",
+    "card": "carte",
+    "peek_hint": "Pour chaque carte, demandez-vous : quel fil ou dispositif est conçu pour gérer exactement ce défaut ? Terre = chemin de fuite. Différentiel = détecte le déséquilibre. Disjoncteur = surcharge / court-circuit. Isolation et peau sèche = votre propre résistance."
+  },
+  "hints": {
+    "1": {
+      "1": "La tension du secteur est décrite par une valeur efficace et une fréquence — lisez-les sur le schéma.",
+      "2": "Il y a trois fils dans une prise moderne, chacun avec un rôle distinct. Cliquez sur chaque étiquette pour voir lequel est lequel.",
+      "3": "Deux dispositifs sont dans le tableau électrique : un pour la surcharge, un pour la détection de fuite. Notez en quoi ils diffèrent."
+    },
+    "2": {
+      "1": "Pour chaque carte, identifiez le défaut en cours : surcharge, court-circuit, fuite à la terre, ou une personne devenant un chemin.",
+      "2": "Puis associez le défaut au dispositif ou au fil qui a été conçu pour lui. Fil de terre = chemin sûr pour la fuite. Différentiel = détecte le déséquilibre de courant. Disjoncteur = surintensité.",
+      "3": "La peau humide abaisse fortement la résistance du corps, si bien qu'une faible tension peut faire circuler un courant dangereux — c'est pourquoi on ne touche jamais une prise avec les mains mouillées."
+    }
+  }
+}

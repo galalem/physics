@@ -1,0 +1,65 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Switch between the three source types (continuum, emission, absorption) and the three elements (H, Na, He). Watch how the spectrum strip changes. Advance when you have viewed at least two source types AND at least two elements.",
+      "concept": "A thermal source produces a continuous spectrum across all visible wavelengths. An excited gas emits only at its atomic transition wavelengths $\\lambda_{ij}$ (bright lines on a dark background). A cold gas in front of a continuum source absorbs those same wavelengths (dark lines on a rainbow). Line positions are the atom's fingerprint — for hydrogen the Balmer series obeys $1/\\lambda = R_H(1/2^2 - 1/n^2)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target spectrum is shown at the top. Choose the source type and element that reproduce it. Your preview strip appears below — align it with the target.",
+      "concept": "Emission and absorption spectra share the same line positions $\\lambda_{ij}$ for a given element — only the contrast is inverted. Element identification reduces to matching a small number of line positions against a known table.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The target spectrum is shown UNLABELED. Your preview strip is hidden. Read the line pattern, decide which element and which source type produced it, then submit. Wrong answer rotates to a new target.",
+      "concept": "You cannot A/B compare against a live preview — you must recall each element's line fingerprint from the concept notes. Ask three questions in order: (1) rainbow background or black? (2) dark gaps or bright lines? (3) do the line wavelengths match H (four Balmer lines including 656 nm red and 486 nm cyan), Na (bright doublet near 589 nm), or He (six lines including 587.6 nm yellow and 447 nm blue)?",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "spectroscope",
+    "target_word": "TARGET",
+    "spectrum_word": "SPECTRUM",
+    "source_word": "Source",
+    "element_word": "Element",
+    "src_short": "SRC",
+    "elt_short": "ELT",
+    "hidden_word": "PREVIEW",
+    "blind_notice": "PREVIEW HIDDEN — WORK ON PAPER",
+    "source_continuum": "Continuum",
+    "source_emission": "Emission",
+    "source_absorption": "Absorption",
+    "element_H": "Hydrogen",
+    "element_Na": "Sodium",
+    "element_He": "Helium",
+    "tip1": "try each source with each element to build a mental fingerprint",
+    "tip2": "match the source contrast first, then the element line positions",
+    "tip3": "identify the source from the background, then match line positions to an element",
+    "peek_tip_formula": "Count visible lines: H has 4 (Balmer). Na is dominated by a bright yellow doublet near 589 nm. He shows 6+ lines spread across the band.",
+    "peek_tip_anchor": "Source check: black background with bright lines = emission; full rainbow with dark gaps at line wavelengths = absorption; smooth gradient with no lines = continuum."
+  },
+  "hints": {
+    "1": {
+      "1": "Try changing the source type first — the background changes dramatically.",
+      "2": "Now try switching the element on emission mode — each element has its own line positions.",
+      "3": "Cover the matrix: at least two source types and at least two elements. The HUD shows your coverage."
+    },
+    "2": {
+      "1": "Look at the target's background. Is it a rainbow or is it black?",
+      "2": "Rainbow with dark gaps means absorption. Black with colored lines means emission. Match the source type first.",
+      "3": "Now the element: count the target's lines and note their colors. Rotate through H, Na, He until yours overlays the target exactly."
+    },
+    "3": {
+      "1": "The preview is hidden. Read only the target strip and ask: what background? what lines?",
+      "2": "Line-position anchors — H: 656 red, 486 cyan. Na: 589 bright yellow doublet. He: 587.6 yellow with several blue-violet lines. Use the wavelength axis under the strip.",
+      "3": "Commit to your best guess before submitting — the wrong answer rotates you to a new target with a different source or element."
+    }
+  }
+}

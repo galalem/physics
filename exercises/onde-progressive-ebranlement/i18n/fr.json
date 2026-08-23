@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Trois clichés de la corde à des instants successifs sont empilés. Balayez les trois curseurs et observez comment l'ébranlement se propage. Avancez lorsque chaque curseur a couvert au moins la moitié de sa plage.",
+      "concept": "Pour un milieu non dispersif, le signal source $y_S(t)$ se propage sans déformation : $y(x, t) = y_S(t - x/v)$. Entre deux clichés pris à $\\Delta t$ d'intervalle, l'ébranlement se décale de $\\Delta x = v \\, \\Delta t$ tout en conservant la même forme.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Ceci est un cliché unique pris à l'instant $t = \\tau^*$. Un repère pointillé indique la position cible $d^*$. Ajustez la célérité $v$ jusqu'à ce que le sommet de l'ébranlement coïncide avec le repère. L'amplitude et la largeur de l'ébranlement ne changent pas le temps d'arrivée.",
+      "concept": "À l'instant du cliché, le sommet de l'ébranlement se trouve en $x_\\text{peak} = v \\, \\tau^*$. Faire coïncider avec le repère signifie $v \\, \\tau^* = d^*$, c'est-à-dire $v = d^* / \\tau^*$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'ébranlement est masqué. Seuls la source en $x = 0$ et le point cible $M$ à $d^*$ avec son temps d'arrivée attendu $\\tau^*$ sont affichés. Calculez la célérité sur papier, réglez le curseur $v$ sur votre valeur, puis validez. Une validation erronée fait passer à une nouvelle cible.",
+      "concept": "Inverse de la formule du retard $\\tau = d / v$ : étant donné une position cible $d^*$ et un temps d'arrivée cible $\\tau^*$, la célérité requise est $v^* = d^* / \\tau^*$. Ni l'amplitude ni la largeur de l'ébranlement n'affectent ce résultat.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "rope_label": "corde",
+    "source_label": "source",
+    "snapshot_label": "cliché à",
+    "target_short": "cible",
+    "match_ok": "correspondance",
+    "tip1": "balayez chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "alignez le sommet de l'ébranlement avec le repère pointillé en d*",
+    "tip3": "calculez v = d*/tau* sur papier d'abord, puis réglez le curseur",
+    "peek_tip_formula": "Réarrangez tau = d / v en v = d* / tau*. Algèbre directe — aucune autre inconnue.",
+    "peek_tip_anchor": "Les ébranlements mécaniques sur une corde se trouvent typiquement dans la plage 5-30 m/s. Si votre réponse est très en dehors, revérifiez les unités."
+  },
+  "hints": {
+    "1": {
+      "1": "Quel curseur change la forme de l'ébranlement et lequel change la distance qu'il parcourt entre les clichés ?",
+      "2": "Seul le curseur de célérité change l'espacement entre les trois sommets. L'amplitude et la largeur restent liées à la forme de l'ébranlement lui-même.",
+      "3": "La distance entre deux sommets consécutifs vaut v fois l'écart temporel entre les clichés — cet écart est le même pour les trois cordes."
+    },
+    "2": {
+      "1": "Le sommet de l'ébranlement se trouve en v fois l'instant du cliché. Quel curseur le déplace à gauche ou à droite ?",
+      "2": "L'amplitude et la largeur ne déplacent pas le sommet. Ne déplacez que le curseur de célérité jusqu'à ce que le sommet croise la ligne cible pointillée.",
+      "3": "À l'instant du cliché tau*, la position du sommet est v * tau*. La régler à d* signifie v = d* / tau*."
+    },
+    "3": {
+      "1": "La visualisation est masquée mais la formule du retard tient toujours. Écrivez-la avant de toucher à un curseur.",
+      "2": "Retard tau = d / v. Lisez tau* et d* dans la scène et résolvez pour v.",
+      "3": "v = d* / tau*. Calculez le rapport, puis réglez le curseur de célérité sur ce nombre."
+    }
+  }
+}

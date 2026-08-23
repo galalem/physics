@@ -1,0 +1,71 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Le plateau gauche contient un échantillon de masse inconnue. Ajoutez des masses étalons sur le plateau droit en cliquant dessus, et retirez-les en cliquant à nouveau. Regardez le fléau s'incliner. Avancez lorsque vous avez observé les trois états : gauche plus lourd, équilibré, et droite plus lourde.",
+      "concept": "La masse est une propriété scalaire de la matière. Une balance à deux plateaux compare directement les masses : le fléau penche vers le côté le plus lourd, et se met à l'horizontale lorsque les deux côtés portent la même masse totale. La masse de l'échantillon est égale à la somme des masses étalons qui l'équilibrent.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "L'échantillon peut maintenant être changé — cliquez dessus pour parcourir trois objets inconnus. Pour chacun, ajoutez des étalons sur le plateau droit jusqu'à ce que le fléau soit équilibré. Équilibrez les trois échantillons pour avancer.",
+      "concept": "L'unité étalon de masse dans le système SI est le kilogramme ($\\mathrm{kg}$). Sous-multiples courants : $1\\,\\mathrm{kg} = 1000\\,\\mathrm{g}$, $1\\,\\mathrm{g} = 1000\\,\\mathrm{mg}$. Un multiple utilisé pour les grandes masses : $1\\,\\mathrm{t} = 1000\\,\\mathrm{kg}$.",
+      "peekable": true
+    },
+    {
+      "index": 3,
+      "name": "Prédire",
+      "instruction": "La balance est masquée. On vous donne une masse dans une unité et vous devez l'exprimer dans une autre. Choisissez la valeur correcte. Répondez correctement à 4 questions d'affilée pour terminer — une mauvaise réponse réinitialise votre série.",
+      "concept": "La conversion d'unité déplace la virgule de trois positions par étape : $\\mathrm{mg} \\to \\mathrm{g} \\to \\mathrm{kg} \\to \\mathrm{t}$ multiplie par $1000$ à chaque fois. Dans l'autre sens, on divise par $1000$. Deux étapes dans le même sens correspondent à un facteur $10^6$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "scene_title": "balance",
+    "controls": "commandes",
+    "question": "question",
+    "outcomes_seen": "résultats",
+    "balanced_seen": "équilibrés",
+    "streak": "série",
+    "sample": "échantillon",
+    "standards": "étalons",
+    "right_pan_total": "plateau droit",
+    "left_pan_total": "plateau gauche",
+    "verdict_left": "gauche plus lourd",
+    "verdict_right": "droite plus lourde",
+    "verdict_balanced": "équilibré",
+    "click_standard_hint": "cliquez sur un étalon pour l'ajouter ou le retirer",
+    "click_sample_hint": "cliquez sur l'échantillon pour le changer",
+    "reading": "lecture",
+    "field_standards": "masses étalons",
+    "field_sample": "échantillon",
+    "field_status": "état",
+    "convert_prompt": "Convertissez cette masse :",
+    "target_unit": "en",
+    "next_q": "suivant",
+    "tip1": "essayez d'ajouter quelques étalons, puis beaucoup — regardez le fléau franchir l'équilibre",
+    "tip2": "chaque nouvel échantillon a une masse différente — reconstruisez le plateau droit pour correspondre",
+    "tip3": "monter (mg à g, g à kg, kg à t) divise par 1000 ; descendre multiplie par 1000",
+    "hidden": "masqué"
+  },
+  "hints": {
+    "1": {
+      "1": "Le fléau penche vers le côté qui porte le plus de masse.",
+      "2": "Ajoutez les étalons un à un ; si vous dépassez, retirez-en un et essayez-en un plus petit.",
+      "3": "Il vous faut trois états dans votre journal : gauche plus lourd (aucun étalon), équilibré (correspondance parfaite), droite plus lourde (trop d'étalons)."
+    },
+    "2": {
+      "1": "Chaque échantillon a une masse différente — les étalons qui ont équilibré le précédent n'équilibreront pas le suivant.",
+      "2": "Combinez des étalons de tailles différentes pour atteindre la cible — 100 g + 20 g + 5 g donne 125 g.",
+      "3": "La lecture en grammes est la somme de tous les étalons actuellement sur le plateau droit."
+    },
+    "3": {
+      "1": "Identifiez l'unité source et l'unité cible. Montez-vous (petite unité vers grande) ou descendez-vous ?",
+      "2": "Chaque étape de l'échelle mg à g à kg à t multiplie par 1000. Dans l'autre sens, on divise par 1000.",
+      "3": "Comptez le nombre d'étapes entre les deux unités, puis déplacez la virgule de 3 positions par étape."
+    }
+  }
+}

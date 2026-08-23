@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une bobine stocke de l'énergie dans son champ magnétique. Cliquez sur l'interrupteur $K$ pour basculer entre ÉTABLIR (faire circuler le courant à travers $L$) et ROMPRE (court-circuiter la bobine à travers $R$, le courant décroît). Faites varier $R$ et $L$ — réalisez un établissement complet ET une rupture complète pour avancer.",
+      "concept": "Établissement : $i(t) = I_\\max\\,(1 - e^{-t/\\tau})$ avec $I_\\max = E/R$. La constante de temps $\\tau = L/R$ — à $t = \\tau$, $i$ atteint $63\\%$ de $I_\\max$. Même forme exponentielle que le circuit RC, mais les rôles s'échangent : $L$ remplace $C$, $R$ passe au dénominateur de $\\tau$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteignez le réticule orange : le courant $i$ doit valoir $i^{*}$ exactement à $t^{*}$. Réglez $R$ et $L$ pour que votre courbe en direct passe par la cible. Plusieurs couples $(R, L)$ conviennent — le succès dépend à la fois de $I_\\max = E/R$ ET de $\\tau = L/R$.",
+      "concept": "$i^{*} = \\dfrac{E}{R}\\,(1 - e^{-t^{*}/\\tau})$. Deux inconnues, une équation — choisissez d'abord un $R$ confortable (qui fixe $I_\\max$), puis résolvez pour $\\tau$ (qui fixe $L = R\\,\\tau$).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Seule la courbe cible est tracée — choisissez $R$ et $L$ à l'aveugle, puis appuyez sur LANCER pour voir votre courbe superposée. Faites correspondre $\\tau$ à $\\pm 3\\%$ près. L'aperçu donne une méthode de lecture, pas la réponse.",
+      "concept": "Lisez la courbe : à $t = \\tau^{*}$, la courbe atteint $0.63\\,I_\\max^{*}$. Identifiez d'abord $I_\\max^{*}$ à l'endroit où la courbe se stabilise, puis trouvez la valeur de $t$ où elle atteint $0.63\\,I_\\max^{*}$ — c'est $\\tau^{*}$. Tout couple $(R, L)$ vérifiant $L/R = \\tau^{*}$ marque le point.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "circuit",
+    "hit": "réussi !",
+    "match_ok": "correspond",
+    "match_off": "écart",
+    "submit_button": "LANCER",
+    "establish_label": "établir",
+    "break_label": "rompre",
+    "click_switch": "cliquez sur K pour basculer",
+    "target_short": "cible",
+    "peek_hint": "lisez i_max là où la cible se stabilise, puis trouvez t où la courbe = 0.63·i_max — ce t est tau*",
+    "tip1": "cyclez K → ÉTABLIR, attendez le courant complet, K → ROMPRE, attendez la décroissance complète",
+    "tip2": "ajustez R et L pour que votre courbe en direct passe par le réticule cible",
+    "tip3": "lisez tau* sur la cible : le palier donne I_max*, puis trouvez t où i = 0.63·I_max*"
+  },
+  "hints": {
+    "1": {
+      "1": "Cliquez K une fois pour ÉTABLIR, à nouveau pour ROMPRE, à nouveau pour OUVRIR.",
+      "2": "La ligne pointillée à 0.63·I_max marque l'endroit où la courbe se trouve à t = tau. Observez-la se déplacer quand vous changez R ou L.",
+      "3": "Un établissement complet signifie que i atteint 99 % de I_max = E/R (environ 5 tau). Une rupture complète signifie que i chute à 1 % de I_max."
+    },
+    "2": {
+      "1": "Le réticule a deux coordonnées : t* et i*. Choisissez R pour que I_max = E/R se place au-dessus de i*, puis résolvez pour tau.",
+      "2": "Doubler L et doubler R laisse tau = L/R inchangé mais divise I_max par deux — essayez, la forme reste mais la hauteur change.",
+      "3": "Une fois votre courbe proche, affinez avec le curseur L — L change tau sans changer I_max."
+    },
+    "3": {
+      "1": "Deux lectures sur la cible : I_max* = là où la courbe atteint son asymptote, tau* = t où i atteint 0.63·I_max*.",
+      "2": "Ou repérez où la courbe atteint visiblement son asymptote (~5·tau*). Divisez par 5 pour obtenir tau*.",
+      "3": "Une fois tau* estimé, choisissez n'importe quel couple (R, L) avec L/R = tau*. Le I_max obtenu ne correspondra pas forcément à celui de la cible, mais tau si — et c'est cela qui compte."
+    }
+  }
+}

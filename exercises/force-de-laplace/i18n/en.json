@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A straight rod carries current $I$ and sits inside a uniform magnetic field $\\vec{B}$. The rod feels a force $\\vec{F}$ — the Laplace force. Sweep all four sliders and watch how the force arrow (marked $\\odot$, out of the page) grows or shrinks.",
+      "concept": "Laplace formula: $|\\vec{F}| = B \\cdot I \\cdot \\ell \\cdot \\sin(\\alpha)$, where $\\alpha$ is the angle between the current direction and $\\vec{B}$. When the rod is parallel to $\\vec{B}$ ($\\alpha = 0$) the force vanishes; the force is maximum when the rod is perpendicular ($\\alpha = 90^{\\circ}$).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target force magnitude $F^{\\star}$ is shown as a dashed orange ring on the rod. Tune $I$, $\\ell$, $B$, and $\\alpha$ until your live teal force ring matches the target ring.",
+      "concept": "$F^{\\star} = B \\cdot I \\cdot \\ell \\cdot \\sin(\\alpha)$. Many quadruples $(I, \\ell, B, \\alpha)$ satisfy this — the product $B \\cdot I \\cdot \\ell \\cdot \\sin(\\alpha)$ is what counts, not any single slider.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The field arrows and the force ring are hidden. Only the target value $F^{\\star}$ is shown. Compute a valid $(I, \\ell, B, \\alpha)$ on paper, set the sliders, then submit. One try per target — a wrong submit rotates to a new target.",
+      "concept": "Inverse: fix $I$, $\\ell$, $B$ at convenient values, then $\\sin(\\alpha) = \\dfrac{F^{\\star}}{B \\cdot I \\cdot \\ell}$. Choose $I$, $\\ell$, $B$ so that $B \\cdot I \\cdot \\ell \\ge F^{\\star}$, otherwise no $\\alpha$ works.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "field_label": "field region",
+    "b_arrow_label": "B",
+    "rod_label": "rod (I)",
+    "force_label": "F",
+    "target_short": "target",
+    "match_ok": "match",
+    "target_prefix": "F* =",
+    "tip1": "sweep each slider across at least half its range",
+    "tip2": "match the live teal ring to the dashed orange target ring",
+    "tip3": "compute the quadruple on paper first, then set the sliders",
+    "peek_tip_formula": "Rearrange: sin(α) = F* / (B·I·ℓ). Pick I, ℓ, B first, then α = arcsin(F* / (B·I·ℓ)).",
+    "peek_tip_anchor": "Anchor: at α = 90° the force is maximal, F_max = B·I·ℓ. So make sure B·I·ℓ ≥ F*, then dial α down."
+  },
+  "hints": {
+    "1": {
+      "1": "Try doubling I while keeping the other sliders fixed — the force ring should double.",
+      "2": "Rotate α from 90° toward 0° — the force shrinks to zero even with large I, ℓ, B.",
+      "3": "The product B·I·ℓ·sin(α) sets the force. Any of the four sliders can trade off against another."
+    },
+    "2": {
+      "1": "Read the dashed orange ring's radius. Grow or shrink the teal ring until they overlap.",
+      "2": "Fix three sliders at convenient round values (e.g. I=5A, ℓ=15cm, B=100mT), then tune α alone.",
+      "3": "Inverse formula: sin(α) = F* / (B·I·ℓ). Pick I, ℓ, B so the ratio is between 0 and 1."
+    },
+    "3": {
+      "1": "The force ring is hidden — you cannot tune by eye. Write out sin(α) = F* / (B·I·ℓ) on paper.",
+      "2": "Pick large-ish I, ℓ, B so B·I·ℓ is comfortably above F*, then compute α = arcsin(F* / (B·I·ℓ)).",
+      "3": "One try per target. Double-check unit chain: A × m × T = N. If B·I·ℓ < F*, no α exists — raise one of them."
+    }
+  }
+}

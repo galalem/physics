@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Sweep both sliders and observe how the electric field strength $|\\vec{E}|$ at the probe point $M$ depends on the charge $|q|$ and the distance $r$. Advance when each slider has covered at least half its range.",
+      "concept": "A point charge $q$ creates a radial electric field. Its magnitude at a distance $r$ is $|\\vec{E}| = k \\cdot |q| / r^2$, with $k \\approx 8.99 \\times 10^9\\,\\mathrm{N\\,m^2/C^2}$. The field falls off with the inverse square of distance.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target probe point $M^{\\star}$ is drawn at a fixed radius $r^{\\star}$ around the charge, with a required field magnitude $|E^{\\star}|$. Move the probe onto the target and tune $|q|$ until the measured $|\\vec{E}|$ matches.",
+      "concept": "For a fixed target $(r^{\\star}, |E^{\\star}|)$, only one charge magnitude satisfies the Coulomb law: $|q| = |E^{\\star}|\\,r^{\\star 2} / k$. You must align both DOFs — the probe distance AND the charge — to hit the target.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The field visualization is hidden. Only the target marker at $r^{\\star}$ and its required $|E^{\\star}|$ remain. Compute the charge on paper from $|q| = |E^{\\star}|\\,r^{\\star 2} / k$, then set both sliders and submit once.",
+      "concept": "With units chosen so $r$ is in centimetres, $|q|$ in nanocoulombs and $|\\vec{E}|$ in $\\mathrm{kV/m}$, the working formula is $|E|(\\mathrm{kV/m}) = 89.9 \\cdot |q|(\\mathrm{nC}) / r^2(\\mathrm{cm}^2)$. Do the arithmetic on paper before touching the sliders.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "scene_label": "point charge — radial field",
+    "charge_label": "Q",
+    "probe_label": "M",
+    "target_label": "M*",
+    "e_units": "kV/m",
+    "q_units": "nC",
+    "r_units": "cm",
+    "match_ok": "match",
+    "tip1": "sweep |q| and r to at least half their ranges",
+    "tip2": "align the probe with the target circle, then adjust q",
+    "tip3": "compute |q| on paper first, then set both sliders",
+    "peek_tip_formula": "Rearrange: |q| = |E*| · r*² / k. Direct calculation — no unknowns.",
+    "peek_tip_anchor": "Working units: |E|(kV/m) = 89.9 · |q|(nC) / r²(cm). Check magnitudes."
+  },
+  "hints": {
+    "1": {
+      "1": "Which slider changes |E| more strongly — |q| or r?",
+      "2": "Doubling |q| doubles |E|. Doubling r divides |E| by four — the inverse square law.",
+      "3": "|E| scales linearly with |q| and as 1/r². Sweep each slider across its full range to feel the asymmetry."
+    },
+    "2": {
+      "1": "Read both coordinates of the orange target: the radius r* and the required field |E*|.",
+      "2": "Move the probe (r slider) onto the dashed target circle first. Then tune |q| until |E| at that point matches |E*|.",
+      "3": "Solve the Coulomb law for the charge: |q| = |E*| · r*² / k. Set your Q slider to that value and place the probe at r = r*."
+    },
+    "3": {
+      "1": "The visualization is hidden, but the formula is unchanged. Write |E*| = k |q| / r*² on paper.",
+      "2": "Solve for |q|: |q| = |E*| · r*² / k. Use the working units: |E|(kV/m) = 89.9 · |q|(nC) / r²(cm).",
+      "3": "Compute |q|(nC) = |E*|(kV/m) · r*²(cm²) / 89.9. Set r to r* exactly and Q to your computed |q|, then submit."
+    }
+  }
+}

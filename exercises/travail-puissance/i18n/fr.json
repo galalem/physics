@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une personne tire une caisse sur le sol avec une corde inclinée d'un angle $\\alpha$ par rapport à l'horizontale. Balayez les quatre curseurs ($F$, $\\alpha$, $d$, $\\Delta t$) et observez comment le travail $W$ et la puissance $P$ réagissent. Remarquez ce qui se passe quand $\\alpha \\to 90°$.",
+      "concept": "Travail d'une force constante : $W = F \\cdot d \\cdot \\cos(\\alpha)$. Seule la projection de $F$ selon le déplacement effectue un travail — la composante verticale est « perdue ». Puissance moyenne : $P = W / \\Delta t$. Quand $\\alpha = 90°$, $\\cos(\\alpha) = 0$ et aucun travail n'est effectué, quelle que soit la force de traction.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une puissance cible $P^{*}$ est affichée. Réglez les quatre curseurs pour que la puissance moyenne délivrée $P = W / \\Delta t$ corresponde à $P^{*}$. De nombreuses combinaisons de $(F, \\alpha, d, \\Delta t)$ produisent la même $P$ — choisissez-en une qui convient.",
+      "concept": "$P^{*} = \\dfrac{F \\cdot d \\cdot \\cos(\\alpha)}{\\Delta t}$. Doubler $F$ ou $d$ double $P$ ; doubler $\\Delta t$ divise $P$ par deux ; augmenter $\\alpha$ réduit $\\cos(\\alpha)$ et diminue $P$. Essayez de figer trois curseurs et de déplacer le quatrième pour affiner.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le diagramme des forces et les affichages en direct sont masqués. On vous donne un travail cible $W^{*}$ et une distance fixe $d^{*}$. Calculez $F$ et $\\alpha$ sur papier de sorte que $W = F \\cdot d^{*} \\cdot \\cos(\\alpha) = W^{*}$, puis réglez les curseurs (dont $d = d^{*}$) et validez.",
+      "concept": "Formule inverse : $F \\cdot \\cos(\\alpha) = \\dfrac{W^{*}}{d^{*}}$. De nombreux couples $(F, \\alpha)$ la satisfont. Le choix le plus simple est $\\alpha = 0°$, qui donne directement $F = W^{*} / d^{*}$. $\\Delta t$ n'intervient pas — il n'affecte que la puissance, pas le travail.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "scène",
+    "floor": "sol",
+    "crate": "caisse",
+    "rope": "F",
+    "cos_proj": "F cos α",
+    "sin_proj": "F sin α",
+    "motion": "déplacement d",
+    "match_ok": "correspondance",
+    "target_short": "cible",
+    "tip1": "balayez chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "réglez F, α, d, Δt pour que P = W/Δt atteigne la cible",
+    "tip3": "calculez F et α sur papier d'abord, puis réglez les curseurs",
+    "peek_tip_formula": "Réarrangez : F·cos(α) = W*/d*. Essayez α = 0° d'abord, puis F = W*/d*.",
+    "peek_tip_anchor": "Δt n'entre pas dans la formule du travail — réglez-le n'importe où. Seuls F, α, d comptent pour W."
+  },
+  "hints": {
+    "1": {
+      "1": "Poussez F au maximum et Δt au minimum — la puissance devrait exploser.",
+      "2": "Maintenant balayez α de 0° à 90°. Que se passe-t-il pour W près de 90° ?",
+      "3": "Seule la composante horizontale F·cos(α) effectue un travail. La partie verticale ne fait que soulever la corde."
+    },
+    "2": {
+      "1": "Lisez la cible à droite. Quel curseur modifie P le plus vite pour vous en ce moment ?",
+      "2": "Fixez α à 0° et Δt à une valeur ronde, puis réglez F et d pour atteindre P*.",
+      "3": "Résolution directe : choisissez d et α, puis F = P*·Δt / (d·cos α)."
+    },
+    "3": {
+      "1": "Réglez d à la valeur d* affichée d'abord — elle est fixée. Puis F et α sont vos deux inconnues.",
+      "2": "Le chemin le plus simple : choisissez α = 0°, puis F = W*/d* est une simple division.",
+      "3": "Si vous voulez un α non trivial : F = W* / (d*·cos α). Choisissez α, remplacez, lisez F."
+    }
+  }
+}

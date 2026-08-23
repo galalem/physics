@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Sweep both sliders and observe how the magnetic field around the straight wire responds to the current $I$ and the probe distance $r$. Advance when each slider has covered at least half its range.",
+      "concept": "The field around an infinite straight wire is $B = \\mu_0 I / (2\\pi r)$. The field lines are concentric circles around the wire. Doubling $I$ doubles $B$; doubling $r$ halves $B$. In SI units, this simplifies to $B[\\mu\\text{T}] = 20\\,I / r$ when $I$ is in amperes and $r$ in centimetres.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target field magnitude $B^*$ is shown at the marked point M. Adjust the current $I$ and the probe distance $r$ until the field magnitude at your probe matches the target.",
+      "concept": "Many current-and-distance pairs produce the same $B$. The constraint is $\\mu_0 I / (2\\pi r) = B^*$, which has a one-parameter family of solutions — pick any $r$ then solve for $I$, or vice versa.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The field visualization is hidden. The target field magnitude $B^*$ at the point M is still shown. Compute a valid current and probe distance on paper, then set the sliders and submit. You have one attempt on this setup.",
+      "concept": "Rearrange the formula to $I = 2\\pi r B^* / \\mu_0$. Choose any probe distance $r$ within the slider range first, then compute the required $I$. Because $\\mu_0 = 4\\pi \\times 10^{-7}$, the algebra collapses to $I[\\text{A}] = r[\\text{cm}] \\cdot B^*[\\mu\\text{T}] / 20$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "STRAIGHT WIRE — CROSS-SECTION",
+    "wire": "wire (I)",
+    "probe": "probe",
+    "match_ok": "match",
+    "target_short": "target",
+    "tip1": "sweep both sliders — watch the field lines brighten with I, weaken with r",
+    "tip2": "any (I, r) with mu0*I/(2*pi*r) = B* works — try r first, then solve I",
+    "tip3": "compute on paper: pick r, then I = r * B* / 20 (I in A, r in cm, B* in uT)",
+    "peek_tip_formula": "Rearrange: I = 2*pi*r*B / mu0. Pick any r, then compute I.",
+    "peek_tip_anchor": "Shortcut: I[A] = r[cm] * B[uT] / 20. For B=40uT at r=5cm, I=10A."
+  },
+  "hints": {
+    "1": {
+      "1": "Slide the current I up and down while watching how the field lines around the wire brighten or fade.",
+      "2": "Now sweep the probe distance r. Field lines closer to the wire are stronger — this is the 1/r falloff.",
+      "3": "Keep going until each slider bar has visited both ends of its range (the coverage meter tracks this)."
+    },
+    "2": {
+      "1": "Read the target B* value on the marker M. The field at your probe must reach that magnitude.",
+      "2": "Fix r at a convenient value (say 5 cm), then use B = mu0*I/(2*pi*r) to solve for the required I.",
+      "3": "Direct shortcut in these units: I[A] = r[cm] * B*[uT] / 20. Try r=5cm, then I = 5 * B*/20."
+    },
+    "3": {
+      "1": "The formula B = mu0*I/(2*pi*r) still holds — the visualization is only pedagogical scaffolding.",
+      "2": "Rearrange for I: I = 2*pi*r*B*/mu0. Pick any r in the slider range, then compute I.",
+      "3": "In classroom units: I[A] = r[cm] * B*[uT] / 20. Substitute your chosen r and the shown B* to get I directly."
+    }
+  }
+}

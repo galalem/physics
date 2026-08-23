@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Faites glisser les trois curseurs pour voir comment l'attraction gravitationnelle $F$ entre deux corps dépend de chaque masse et de leur séparation. Avancez lorsque chaque curseur a parcouru au moins la moitié de sa plage.",
+      "concept": "Loi de la gravitation universelle de Newton : $F = G\\,\\dfrac{m_1 m_2}{r^2}$ avec $G = 6{,}67\\times 10^{-11}\\,\\mathrm{N\\,m^2/kg^2}$. $F$ varie linéairement avec chaque masse et décroît en $1/r^2$ avec la séparation. Même forme en $1/r^2$ que la loi de Coulomb — la physique des forces centrales.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une valeur cible de la force $|F^*|$ est affichée. Ajustez $m_1$, $m_2$ et $r$ jusqu'à ce que la flèche de force en direct atteigne la flèche cible en pointillés. De nombreux triplets produisent la même force.",
+      "concept": "$F$ possède trois degrés de liberté, donc une infinité de triplets $(m_1, m_2, r)$ donnent le même $|F^*|$. Fixer deux des trois contraint le troisième : $r = \\sqrt{G\\,m_1 m_2 / |F^*|}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches de force sont masquées. Seule la cible $|F^*|$ est affichée. Calculez sur papier un triplet $(m_1, m_2, r)$ valide, puis réglez les curseurs à vos valeurs et validez. Une seule validation par montage — un échec fait tourner vers une nouvelle cible.",
+      "concept": "Réarrangez la formule : choisissez deux des trois paramètres (par ex. fixez $m_1$ proche d'une masse terrestre $\\sim 6\\times 10^{24}\\,\\mathrm{kg}$ et $m_2$ proche d'une valeur de satellite), puis résolvez $r = \\sqrt{G\\,m_1 m_2 / |F^*|}$. Reconvertissez en unités des curseurs — les curseurs affichent $m_1$ en $10^{24}\\,\\mathrm{kg}$, $m_2$ en $10^{22}\\,\\mathrm{kg}$, $r$ en $\\mathrm{Mm}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "scène gravitationnelle",
+    "primary": "m1",
+    "secondary": "m2",
+    "distance": "r",
+    "target": "CIBLE",
+    "target_short": "cible",
+    "match_ok": "atteint",
+    "force_arrow": "F",
+    "tip1": "faites glisser m1, m2, r chacun sur au moins la moitié de leur plage",
+    "tip2": "faites correspondre la flèche de force à la flèche cible en pointillés",
+    "tip3": "calculez un (m1, m2, r) valide sur papier, puis réglez les curseurs",
+    "peek_tip_formula": "Réarrangez : r = sqrt(G · m1 · m2 / F*). Fixez m1 proche de 6 (Terre) et m2 proche de 10, puis résolvez r.",
+    "peek_tip_anchor": "En unités des curseurs : F [N] = 6,67e23 · m1 · m2 / r_Mm². Vérifiez d'abord par ordre de grandeur."
+  },
+  "hints": {
+    "1": {
+      "1": "La force dépend de TROIS paramètres — chaque curseur modifie la flèche différemment. Lequel la change le plus vite ?",
+      "2": "Doubler m1 ou m2 double la force. Doubler r divise la force par quatre.",
+      "3": "La dépendance en 1/r^2 domine — une petite variation de r déplace F bien plus qu'une petite variation de l'une des masses."
+    },
+    "2": {
+      "1": "Lisez la cible |F*| dans le HUD en haut à droite. Quelle combinaison de curseurs produirait cette valeur ?",
+      "2": "Fixez deux paramètres à des valeurs rondes, puis résolvez pour le troisième. Par exemple, gardez m1 = 6 et r = 100 Mm, puis trouvez m2.",
+      "3": "F = G · m1 · m2 / r². Isolez : m2 = F · r² / (G · m1). Substituez votre cible et vos deux valeurs choisies."
+    },
+    "3": {
+      "1": "La visualisation a disparu à dessein — vous devez calculer. Écrivez la formule de Newton sur papier et identifiez les données.",
+      "2": "Les curseurs sont en unités réduites. La formule complète en unités des curseurs est F [N] = 6,67 × 10^23 · m1 · m2 / r_Mm² — bien plus simple que la forme SI brute.",
+      "3": "Choisissez une valeur ronde pour m1 (par ex. 6 ou 10) et une autre pour m2 (par ex. 5 ou 20). Puis résolvez r = sqrt(6,67e23 · m1 · m2 / F*) directement — sans inconnue restante."
+    }
+  }
+}
