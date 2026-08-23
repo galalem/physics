@@ -51,10 +51,6 @@ exercisesRoutes.get('/', optionalAuth, async (c) => {
   const q = (c.req.query('q') ?? '').trim().toLowerCase();
   const rawTags = c.req.queries('tag') ?? [];
   const byParent = parseTagFilter(rawTags);
-  const { page: pageNum, size } = parsePagination({
-    page: c.req.query('page'),
-    size: c.req.query('size'),
-  });
 
   const user = c.get('user');
 
@@ -133,8 +129,18 @@ exercisesRoutes.get('/', optionalAuth, async (c) => {
 
   items.sort((a, b) => a.title.localeCompare(b.title, locale));
 
-  const start = (pageNum - 1) * size;
-  return responses.page(c, items.slice(start, start + size), pageNum, size, items.length);
+  // if user didn't request pagination return the full list (most-likely it's the catalogue page)
+  if (c.req.query('page') === undefined && c.req.query('size') === undefined)
+    return responses.page(c, items, 1, items.length, items.length);
+
+  // if pagination is introduced, then paginate
+  const { page, size } = parsePagination({
+    page: c.req.query('page'),
+    size: c.req.query('size'),
+  });
+
+  const start = (page - 1) * size;
+  return responses.page(c, items.slice(start, start + size), page, size, items.length);
 });
 
 exercisesRoutes.get('/:slug', optionalAuth, async (c) => {

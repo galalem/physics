@@ -23,19 +23,19 @@ export const responses = {
     return c.json({ status, content: null }, status);
   },
 
-  page<T>(c: Context, items: T[], pageNum: number, size: number, totalElements: number) {
+  page<T>(c: Context, items: T[], page: number, size: number, totalElements: number) {
     const totalPages = totalElements === 0 ? 0 : Math.ceil(totalElements / size);
     return c.json(
       {
         status: 200,
         content: items,
-        page: pageNum,
+        page,
         size,
         numberOfElements: items.length,
         totalElements,
         totalPages,
-        first: pageNum === 1,
-        last: totalPages === 0 || pageNum >= totalPages,
+        first: page === 1,
+        last: totalPages === 0 || page >= totalPages,
         empty: items.length === 0,
       },
       200,
