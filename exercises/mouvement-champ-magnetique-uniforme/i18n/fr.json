@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "La particule sort de l'émetteur à la vitesse $v$ dans un champ magnétique uniforme $\\vec{B}$ sortant de la page ($\\odot$). Fais glisser $v$ et $B$, bascule le signe de la charge, puis tire. Observe comment le rayon $r$ du cercle et le sens de rotation changent.",
+      "concept": "Force de Lorentz : $\\vec{F} = q\\,\\vec{v} \\times \\vec{B}$. Perpendiculaire à $\\vec{v}$, la norme de la vitesse reste constante et la trajectoire se referme en un cercle de rayon $r = \\dfrac{m v}{|q| B}$ et de pulsation $\\omega = \\dfrac{|q| B}{m}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Touche les trois cibles. Le cercle d'aperçu en pointillés montre la trajectoire pour les $v$, $B$ et signe de charge actuels. Si une cible se trouve au-dessus de la ligne de vitesse initiale, inverse le signe de la charge pour renverser le sens de rotation.",
+      "concept": "$r = \\dfrac{m v}{|q| B}$ — un $B$ plus petit donne un cercle plus large. Le signe de $q$ détermine de quel côté de la vitesse initiale se trouve le centre : $q > 0$ courbe vers le bas, $q < 0$ courbe vers le haut (pour $\\vec{B}$ sortant de la page).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas d'aperçu. Les coordonnées $(x, y)$ de chaque cible sont affichées. Calcule $r$, puis résous $B$ à partir de $r = \\dfrac{m v}{|q| B}$. Tu as exactement un tir par cible — pas de tir à l'aveugle.",
+      "concept": "Pour une cible en $(x, y)$ sur le cercle passant par l'origine, $r = \\dfrac{x^{2} + y^{2}}{2\\,|y|}$. Le signe de $y$ te donne le signe de $q$ : cible au-dessus $(y > 0) \\Rightarrow q < 0$ ; cible en dessous $(y < 0) \\Rightarrow q > 0$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "hits": "TOUCHÉS",
+    "shots": "TIRS",
+    "stage": "ÉTAPE",
+    "charge_sign": "q",
+    "b_unit": "mT",
+    "b_out": "SORT",
+    "tip1": "change v, B et le signe de la charge — observe comment le cercle se déplace",
+    "tip2": "aligne le cercle pointillé pour qu'il passe par chaque cible, puis TIRE",
+    "tip3": "lis (x, y), résous r et B sur papier, choisis le signe de la charge — puis TIRE",
+    "peek_tip_radius": "r = mv/(|q|B). Même r ⇒ plusieurs couples (v, B). Diviser B par 2 double r.",
+    "peek_tip_sign": "Le signe de q inverse le sens de rotation. Cible au-dessus de y = 0 ⇒ q doit être négatif.",
+    "peek_tip_geometry": "Pour une cible sur le cercle passant par l'origine, r = (x² + y²) / (2·|y|)."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplace le curseur v (à gauche) et le curseur B (à droite) — le cercle pointillé se met à jour en direct.",
+      "2": "Bascule q de +e à −e. Le centre du cercle passe d'en dessous à au-dessus de la vitesse initiale.",
+      "3": "v plus grand ⇒ r plus grand. B plus grand ⇒ r plus petit. r = mv/(|q|B)."
+    },
+    "2": {
+      "1": "Déplace le cercle d'aperçu pointillé sur chaque cible, puis tire. Il doit passer PAR la cible.",
+      "2": "Cercle plus large ⇒ B plus petit (ou v plus grand). Cercle plus serré ⇒ B plus grand (ou v plus petit).",
+      "3": "Si une cible se trouve au-dessus de la ligne horizontale de l'émetteur, tu ne peux pas l'atteindre avec q = +e. Bascule q à −e d'abord."
+    },
+    "3": {
+      "1": "Pour chaque cible : lis (x, y). Calcule r = (x² + y²) / (2·|y|). Puis B = mv/(|q|·r).",
+      "2": "Choisis le signe de q à partir du signe de y : cible en dessous ⇒ q = +e ; cible au-dessus ⇒ q = −e.",
+      "3": "Choisis n'importe quel v dans la plage et calcule B à partir de B = v / r (unités sim) — plusieurs couples (v, B) partagent le même r."
+    }
+  }
+}

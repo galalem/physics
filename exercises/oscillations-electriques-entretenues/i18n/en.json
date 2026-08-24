@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "An LC tank loses energy to $R$ every cycle. An amplifier injects energy back with a gain $-G$ that behaves like a $\\textit{negative resistance}$. Slide $L$, $C$, and $G$. Push $G$ below, at, and above $R$. Watch the envelope decay, sustain, then grow to saturation.",
+      "concept": "The loop equation is $L\\,\\ddot{q} + (R - G)\\,\\dot{q} + q/C = 0$. When $G < R$ the effective damping is positive so the envelope decays; when $G > R$ the amplifier over-compensates and the envelope grows until it hits the saturation ceiling $\\pm U_{sat}$. Only then is oscillation $\\textit{sustained}$, at the natural period $T_0 = 2\\pi\\sqrt{L\\,C}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit the orange crosshair: at $t^{*}$ the trace must reach the saturation ceiling $+U_{sat}$. Tune $L$ and $C$ to lock the period to $t^{*}$, and push $G$ above $R$ so the envelope grows and locks at $U_{sat}$.",
+      "concept": "The period condition is $T_0 = 2\\pi\\sqrt{L\\,C} = t^{*}$. The saturation condition is $G > R$: the amplifier must inject more than the loop dissipates. Both conditions must hold — same product $L\\,C$ works for many pairs.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Only the target curve is drawn. Read $T^{*}$ from peak-to-peak on the target, compute $L\\,C = (T^{*}/2\\pi)^{2}$ on paper, pick any $(L, C)$ with that product, and set $G > R$ to sustain. Then press RUN. Match $T$ to within $\\pm 4\\%$.",
+      "concept": "The two conditions collapse to one number: $L\\,C = (T^{*}/2\\pi)^{2}$. Any $(L, C)$ pair with the right product works — that's the pedagogical point of an $\\textit{autonomous}$ oscillator: no external drive, one invariant.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "series LC + R + amplifier",
+    "chart_title": "u_C (t)",
+    "x_axis_label": "t (ms) →",
+    "y_axis_label": "u_C (V) →",
+    "no_drive": "autonomous — no external drive",
+    "status_decay": "decays (G < R)",
+    "status_edge": "edge of sustain (G ≈ R)",
+    "status_sustain": "sustained (G > R)",
+    "match_ok": "match",
+    "match_off": "off",
+    "submit_button": "RUN",
+    "peek_hint": "count peaks: T* = time between two successive maxima on the target",
+    "tip1": "move L, C, G — watch envelope decay, sustain, then grow to saturation",
+    "tip2": "tune L·C so T₀ hits t*, push G above R so the envelope reaches U_sat at t*",
+    "tip3": "read T* from peak-to-peak, compute L·C = (T*/2π)², set G > R, then RUN"
+  },
+  "hints": {
+    "1": {
+      "1": "Start with G = 0: the trace decays because R dissipates every cycle.",
+      "2": "Now push G past R = 10 Ω. The envelope should start growing until it clips at ±4 V.",
+      "3": "Halving L and doubling C keeps L·C the same — same period, but different envelope curvature. Try it."
+    },
+    "2": {
+      "1": "The period is T₀ = 2π√(L·C). Compute the target L·C from t* first, THEN pick any (L, C) with that product.",
+      "2": "If the envelope decays instead of saturating, G is too small. Push G above R = 10 Ω.",
+      "3": "Doubling L and halving C keeps T₀ the same. Use this to trade one slider for the other."
+    },
+    "3": {
+      "1": "Find two successive positive peaks on the target curve. The time gap between them is T*.",
+      "2": "Compute L·C = (T*/2π)² on paper. Pick any (L, C) pair with that product.",
+      "3": "Then push G above R (= 10 Ω) so the envelope saturates. Press RUN — your curve must overlay the target."
+    }
+  }
+}

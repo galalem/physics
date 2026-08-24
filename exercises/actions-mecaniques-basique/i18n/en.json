@@ -1,0 +1,77 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A ball rests on a table with a hand pushing sideways. Click each labelled arrow to inspect the mechanical action it represents. Each action is either $\\text{contact}$ or $\\text{at-a-distance}$, and either $\\text{localised}$ or $\\text{distributed}$.",
+      "concept": "A mechanical action is exerted by one object (the actor) on another (the system). Contact actions require the actor to touch the system; distance actions (weight, magnetism) act through space. An action is $\\text{localised}$ when it applies at a single point, and $\\text{distributed}$ when spread over a surface.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Three scenes cycle through. For each scene, click the candidate arrows so only the correct mechanical actions on the system remain selected, then press $\\text{SUBMIT}$. You have $5$ submits total for $3$ scenes.",
+      "concept": "To make an inventory of mechanical actions, list every neighbouring object that touches the system (contact actions) and every distant object exerting an influence (distance actions). Ignore neglected effects such as air resistance unless explicitly stated.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The scene shows the system alone — no candidate arrows drawn. From the list below, pick the mechanical actions that really apply, then press $\\text{SUBMIT}$. One submit per scene. Miss any and the stage restarts.",
+      "concept": "Recipe: (1) name the system, (2) list every object in contact with it, (3) list every distant actor (Earth, magnet…). Each object exerts exactly one action. Nothing else counts.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "submit": "SUBMIT",
+    "next": "NEXT",
+    "reset": "RESET",
+    "score": "SCORE",
+    "scene": "SCENE",
+    "submits": "SUBMITS",
+    "lit": "LIT",
+    "tip1": "click each arrow to inspect its classification",
+    "tip2": "toggle arrows, then SUBMIT the inventory",
+    "tip3": "pick the applicable actions, then SUBMIT",
+    "category_contact": "CONTACT",
+    "category_distance": "AT A DISTANCE",
+    "distribution_localised": "LOCALISED",
+    "distribution_distributed": "DISTRIBUTED",
+    "action_weight": "Weight (Earth)",
+    "action_table_contact": "Table contact",
+    "action_hand": "Hand push",
+    "action_shelf_contact": "Shelf contact",
+    "action_magnet": "Magnet pull",
+    "action_spring": "Spring pull",
+    "action_air": "Air friction",
+    "action_ground_contact": "Ground contact",
+    "action_thread": "Thread tension",
+    "scene_ball_on_table": "Ball on a table, hand pushing sideways",
+    "scene_book_on_shelf": "Book resting on a shelf",
+    "scene_magnet_nail": "Magnet suspended above an iron nail",
+    "scene_spring_mass": "Mass pulled by a horizontal spring on a table",
+    "select": "SELECT",
+    "chosen": "CHOSEN",
+    "correct": "CORRECT",
+    "miss": "MISS",
+    "peek_hint": "List touching neighbours = contact actions. Distant actors (Earth, magnet) = at-a-distance."
+  },
+  "hints": {
+    "1": {
+      "1": "Click any arrow on the scene to select it.",
+      "2": "Each arrow's classification appears at the top-right when selected: contact vs at-a-distance, and localised vs distributed.",
+      "3": "Weight is the only distance action here; the table contact is distributed over the ball's underside; the hand acts at a single point."
+    },
+    "2": {
+      "1": "Read the scene name in the top bar. Ignore any candidate arrow that has no real actor in that scene.",
+      "2": "For every actor in contact with the system there is one contact action. Distant actors (Earth, magnet) produce distance actions.",
+      "3": "Book on shelf: weight + shelf contact only. Magnet + nail: weight + magnetic pull (no direct contact). Spring pull: weight + table contact + spring pull."
+    },
+    "3": {
+      "1": "Name the system silently, then list every neighbouring object.",
+      "2": "Each neighbouring object gives one action. Add Earth for weight and any magnet or spring acting from afar.",
+      "3": "Cross off distractors: air friction is neglected here, a hand only acts if drawn touching the object."
+    }
+  }
+}

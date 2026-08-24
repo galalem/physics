@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un anneau est tiré par trois fils — forces $\\vec{F_1}$, $\\vec{F_2}$, $\\vec{F_3}$. Fais glisser l'extrémité de $\\vec{F_3}$ autour de l'anneau. À droite, les trois forces sont tracées bout à bout (le 'dynamique'). L'anneau n'est en équilibre que lorsque le triangle se ferme.",
+      "concept": "Pour un solide en équilibre sous trois forces coplanaires : $\\vec{F_1} + \\vec{F_2} + \\vec{F_3} = \\vec{0}$. Placés bout à bout, les trois vecteurs forment un triangle fermé. De manière équivalente : $F_{3x} = -(F_{1x} + F_{2x})$ et $F_{3y} = -(F_{1y} + F_{2y})$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois configurations. Pour chacune : $\\vec{F_1}$ et $\\vec{F_2}$ sont données (magnitude et angle étiquetés sur la scène). Fais glisser $\\vec{F_3}$ jusqu'à ce que le dynamique se ferme, puis appuie sur Confirmer (ou Espace). Tu disposes de 5 tirs pour 3 configurations.",
+      "concept": "Vise en fermant le triangle visuellement : l'extrémité de $\\vec{F_3}$ doit revenir à l'origine du dynamique. Quand c'est le cas, $\\vec{F_1} + \\vec{F_2} + \\vec{F_3} = \\vec{0}$ est exactement vérifié.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le panneau dynamique est caché. Lis $F_1$, $F_2$ et leurs angles sur le schéma de l'anneau. Calcule $F_{3x} = -(F_{1x} + F_{2x})$ et $F_{3y} = -(F_{1y} + F_{2y})$ sur papier, convertis en magnitude et angle, fais glisser $\\vec{F_3}$ à sa place, puis Confirme. Un tir par configuration — un raté et l'étape recommence.",
+      "concept": "Projette sur les axes : $F_{3x} = -(F_1\\cos\\alpha_1 + F_2\\cos\\alpha_2)$, $F_{3y} = -(F_1\\sin\\alpha_1 + F_2\\sin\\alpha_2)$. Puis $F_3 = \\sqrt{F_{3x}^2 + F_{3y}^2}$ et $\\alpha_3 = \\operatorname{atan2}(F_{3y},\\, F_{3x})$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "ring": "anneau",
+    "dynamique": "dynamique",
+    "closed": "FERMÉ",
+    "gap": "ÉCART",
+    "confirm": "CONFIRMER",
+    "setup": "CONFIG",
+    "shots": "TIRS",
+    "cleared": "RÉUSSIES",
+    "tip1": "fais glisser l'extrémité de F3 — le triangle se ferme à l'équilibre",
+    "tip2": "ferme le triangle, puis confirme",
+    "tip3": "somme les composantes, règle F3 puis confirme",
+    "peek_lead": "somme les composantes — F3 = -(F1 + F2)",
+    "post_reveal": "triangle révélé"
+  },
+  "hints": {
+    "1": {
+      "1": "Fais glisser l'extrémité de la flèche orange F3 (celle qui part de l'anneau). Observe le triangle de droite s'ouvrir et se fermer.",
+      "2": "Le panneau de droite place F1, F2, F3 bout à bout. La flèche d'écart montre à quelle distance tu es de l'équilibre.",
+      "3": "Quand le triangle se ferme, F1 + F2 + F3 = 0 — l'anneau est en équilibre. L'écart du HUD passe à 0 N."
+    },
+    "2": {
+      "1": "Lis F1 et F2 sur l'anneau — magnitude et angle. Fais glisser F3 jusqu'à ce que le triangle dynamique se ferme.",
+      "2": "F3 doit être exactement l'opposé de F1 + F2. Regarde où tombe l'extrémité de F2 dans le dynamique — F3 part de là et revient à l'origine.",
+      "3": "Si tu dépasses, la flèche d'écart pointe de ton extrémité de F3 vers l'origine. Ajuste F3 dans cette direction."
+    },
+    "3": {
+      "1": "Le triangle est caché. Lis F1, F2 et leurs angles sur les étiquettes près de l'anneau.",
+      "2": "Calcule F3x = -(F1·cos α1 + F2·cos α2) et F3y = -(F1·sin α1 + F2·sin α2). Puis magnitude = √(F3x² + F3y²), angle = atan2(F3y, F3x).",
+      "3": "Aperçu révèle ta magnitude et ton angle F3 actuels pour que tu puisses les aligner avec ta réponse papier avant de confirmer."
+    }
+  }
+}

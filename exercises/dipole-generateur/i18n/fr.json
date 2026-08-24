@@ -1,0 +1,89 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais débiter une pile réelle dans une charge variable. Bouge chaque curseur — $E$ (f.é.m.), $r$ (résistance interne), $R$ (charge) — et observe comment $U$, $I$ et la droite U(I) réagissent.",
+      "concept": "Un générateur réel obéit à $U = E - r\\cdot I$ : sa tension aux bornes $U$ chute linéairement avec le courant $I$ qu'il débite, à un taux fixé par sa résistance interne $r$. L'ordonnée à l'origine est $E$, la pente vaut $-r$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "La droite en pointillés montre une caractéristique cible. Ajuste $E$ et $r$ (la charge $R$ ne fait que déplacer le point de fonctionnement le long de la droite — elle ne change pas la droite elle-même) pour que ta droite pleine coïncide avec la cible. Deux cibles, ±5 %.",
+      "concept": "Deux piles partagent la même caractéristique seulement si elles partagent à la fois $E$ et $r$. Lecture d'une caractéristique : l'ordonnée à l'origine est $E$, la pente est $-r$, et l'abscisse à l'origine est le courant de court-circuit $I_{cc} = E/r$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Un générateur scellé cache $E$ et $r$. La caractéristique est masquée. Règle la charge $R$ sur n'importe quelle valeur, lis les appareils, note $(U, I)$. Recommence à un autre $R$. Déduis $E$ et $r$ sur papier, puis saisis les deux. 3 essais par pile ; trois piles à la suite.",
+      "concept": "Deux points de fonctionnement sur la même droite la fixent. À partir de $(U_1, I_1)$ et $(U_2, I_2)$ : $r = (U_1 - U_2) / (I_2 - I_1)$, puis $E = U_1 + r \\cdot I_1$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "schéma",
+    "characteristic": "caractéristique U(I)",
+    "controls": "commandes",
+    "battery_case": "pile réelle",
+    "comp_battery": "pile E",
+    "comp_r": "interne r",
+    "comp_R": "charge R",
+    "comp_ammeter": "ampèremètre",
+    "comp_voltmeter": "voltmètre",
+    "slider_E": "E",
+    "slider_r": "r",
+    "slider_R": "R",
+    "unit_V": "V",
+    "unit_Ohm": "Ω",
+    "unit_A": "A",
+    "unit_W": "W",
+    "unit_mW": "mW",
+    "axis_U": "U (V)",
+    "axis_I": "I (A)",
+    "op_point": "point de fonctionnement",
+    "target_line": "cible",
+    "your_line": "toi",
+    "coverage_E": "E balayé",
+    "coverage_r": "r balayé",
+    "coverage_R": "R balayé",
+    "coverage_current": "courant circulant",
+    "targets": "CIBLES",
+    "target_reached": "atteinte",
+    "measure_1": "point 1",
+    "measure_2": "point 2",
+    "measure_pending": "— règle R et lis les appareils",
+    "solve_for_E": "E (V)",
+    "solve_for_r": "r (Ω)",
+    "submit_answer": "VALIDER",
+    "attempts_left": "essais restants",
+    "battery_count": "pile",
+    "of_three": "sur 3",
+    "correct": "correct — pile suivante",
+    "wrong": "faux",
+    "hidden": "?",
+    "tip1": "chaque curseur balaie une facette différente de la physique — essaie aussi court-circuit (R petit) et circuit ouvert (R grand)",
+    "tip2": "E fixe où la droite coupe l'axe U ; r fixe la pente avec laquelle elle chute avec I",
+    "tip3": "lis (U, I) pour deux R différents — puis résous sur papier avant de taper",
+    "peek_tip": "La droite du générateur est $U = E - r\\cdot I$. Deux points de fonctionnement la fixent : $r = (U_1 - U_2)/(I_2 - I_1)$, puis $E = U_1 + r\\cdot I_1$."
+  },
+  "hints": {
+    "1": {
+      "1": "Essaie de pousser R au minimum (proche du court-circuit) et au maximum (proche du circuit ouvert). Regarde U et I échanger leurs rôles.",
+      "2": "En circuit ouvert (R très grand), I est minuscule et U proche de E. En court-circuit (R très petit), U est proche de 0 et I culmine autour de E/r.",
+      "3": "Bouge E : toute la droite se translate vers le haut ou vers le bas. Bouge r : la droite s'incline. Bouge R : seul le point glisse le long d'une droite fixe."
+    },
+    "2": {
+      "1": "L'ordonnée à l'origine de la droite en pointillés est le E cible. Sa pente (montée/course) est l'opposé du r cible. Lis-les avant de toucher aux curseurs.",
+      "2": "Aligne d'abord l'ordonnée à l'origine avec E, puis ajuste r pour que les deux droites se superposent. R n'a pas d'importance à cette étape.",
+      "3": "Tolérance ±5 % : les nombres n'ont pas à être exacts. Tombe à un pas de curseur près de chaque cible et la coche s'allume."
+    },
+    "3": {
+      "1": "Règle R sur une valeur dans la moitié basse de sa plage. Note U et I. Puis règle R plus haut et note U et I à nouveau. Deux points fixent une droite.",
+      "2": "Pente = (U₂ − U₁) / (I₂ − I₁). Comme U chute quand I monte, cette pente est négative, et r est sa valeur absolue.",
+      "3": "Une fois r connu, injecte l'un des deux points dans U = E − r·I et résous pour E. Puis tape les deux valeurs et valide."
+    }
+  }
+}

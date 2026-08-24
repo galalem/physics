@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un microscope composé utilise deux lentilles convergentes alignées. L'objectif ($f'_1$, court) forme une image intermédiaire réelle, inversée et agrandie $A_1B_1$ près du foyer avant $F_2$ de l'oculaire. L'oculaire agit alors comme une loupe produisant une image virtuelle à l'infini. Manipule les trois curseurs ($f'_1$, $f'_2$, $\\Delta$) pour voir comment chacun influence la puissance de grossissement totale.",
+      "concept": "Grandissement linéaire de l'objectif : $\\gamma_1 = -\\Delta / f'_1$. Puissance de l'oculaire (pour image à l'infini) : $G_{oc} = d_m / f'_2$ avec $d_m = 250\\,\\mathrm{mm}$. Total : $G = \\gamma_1 \\cdot G_{oc} = \\dfrac{\\Delta \\cdot d_m}{f'_1 \\cdot f'_2}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Reproduis le microscope cible : mets à la fois $|\\gamma_1|$ (grandissement de l'objectif) ET $G_{oc}$ (puissance de l'oculaire) dans la tolérance. De nombreux triplets $(f'_1, f'_2, \\Delta)$ conviennent pour un $G$ donné — mais un seul couple $(f'_1, \\Delta)$ donne $|\\gamma_1|$, et un seul $f'_2$ donne $G_{oc}$.",
+      "concept": "À partir des cibles : $|\\gamma_1^{*}| = \\Delta / f'_1$ fixe le rapport de l'objectif ; $G_{oc}^{*} = d_m / f'_2$ fixe $f'_2$ directement ($f'_2 = d_m / G_{oc}^{*}$). Choisis $f'_2$ en premier, puis joue avec $f'_1$ et $\\Delta$ pour atteindre $|\\gamma_1^{*}|$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'image intermédiaire $A_1B_1$ et les rayons de construction internes sont cachés. Seuls l'objet $AB$, les deux lentilles (avec $F_1$, $F'_1$, $F_2$, $F'_2$ marqués) et le faisceau parallèle sortant sont visibles. Pour chaque cible $G^{*}$, calcule un triplet valide $(f'_1, f'_2, \\Delta)$ sur papier, règle les curseurs, puis Confirme. Tu as une confirmation par cible — un raté et la cible est perdue.",
+      "concept": "$G = \\dfrac{\\Delta \\cdot d_m}{f'_1 \\cdot f'_2}$ avec $d_m = 250\\,\\mathrm{mm}$. Réarrange : $\\dfrac{\\Delta}{f'_1 \\cdot f'_2} = \\dfrac{G^{*}}{d_m}$. Aperçu révèle le $G$ actuel en direct pour que tu puisses vérifier ton triplet papier.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "microscope composé",
+    "object": "AB",
+    "objective": "objectif",
+    "ocular": "oculaire",
+    "image1": "A1B1",
+    "match_ok": "atteint",
+    "peek_reveal": "en direct",
+    "target_short": "cible",
+    "target": "CIBLE",
+    "confirm": "CONFIRMER",
+    "hits": "TOUCHÉES",
+    "shots": "TIRS",
+    "exhausted": "RATÉ — RÉINITIALISATION",
+    "tip1": "manipule chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "atteins les valeurs objectif et oculaire",
+    "tip3": "calcule un triplet sur papier, règle les curseurs, puis confirme"
+  },
+  "hints": {
+    "1": {
+      "1": "Essaie de réduire f1 avec Delta fixe — l'image intermédiaire A1B1 grandit (gamma_1 plus élevé).",
+      "2": "Réduire f2 augmente G_oc — le faisceau sortant s'étale davantage par mm de A1B1.",
+      "3": "Le G total est le produit : divise f1 par deux et G double ; divise f2 par deux et G double à nouveau."
+    },
+    "2": {
+      "1": "Résous d'abord f2 depuis la cible de l'oculaire : f2 = d_m / G_oc*. Cela fixe un curseur.",
+      "2": "Puis |gamma_1*| = Delta / f1 — choisis n'importe quel Delta dans la plage, calcule f1 = Delta / |gamma_1*|.",
+      "3": "Si f1 tombe hors de sa plage, essaie un autre Delta. Plusieurs couples fonctionnent."
+    },
+    "3": {
+      "1": "Écris G* = (Delta * d_m) / (f1 * f2). Substitue d_m = 250 mm et résous pour un triplet.",
+      "2": "Une bonne route : fixe f2 vers le milieu de sa plage, puis choisis f1 · Delta tels que leur rapport Delta / f1 · (250 / f2) = G*.",
+      "3": "Aperçu pour voir le G actuel en direct. Ajuste les curseurs jusqu'à ce qu'il corresponde à G* dans la tolérance, puis Confirme."
+    }
+  }
+}

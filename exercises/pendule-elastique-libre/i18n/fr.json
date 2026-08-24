@@ -1,0 +1,63 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Tire la masse à $x_0$, relâche et regarde-la osciller. Balaie chaque curseur — masse $m$, raideur $k$, déplacement initial $x_0$ — et laisse le système compléter au moins une période entière.",
+      "concept": "Pendule élastique libre : $\\ddot{x} + \\dfrac{k}{m}\\,x = 0$. Solution $x(t) = x_0\\,\\cos(\\omega_0 t)$ avec $\\omega_0 = \\sqrt{k/m}$ et période $T_0 = 2\\pi\\sqrt{m/k}$. L'amplitude ne dépend que de l'écartement initial ; la période ne dépend que de $m$ et $k$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins la cible orange : ta courbe $x(t)$ en direct doit passer par le repère à l'instant $t^*$ avec le déplacement $x^*$. Ajuste $m$, $k$, $x_0$ pour que les courbes se superposent.",
+      "concept": "Le repère fixe à la fois la période ET l'amplitude. $x^* = x_0\\,\\cos(\\omega_0 t^*)$, donc régler $x_0$ seul ne suffit pas — tu dois aussi ajuster la période $T_0^* = 2\\pi\\sqrt{m/k}$ pour que la courbe soit à $x^*$ à $t = t^*$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La courbe en direct est cachée. Lis la période $T_0^*$ et l'amplitude $x_0^*$ de la cible sur le graphique, règle $m$, $k$, $x_0$ pour que $2\\pi\\sqrt{m/k} = T_0^*$ et $x_0 = x_0^*$, puis appuie sur LANCER.",
+      "concept": "Deux invariants à extraire de la cible : la période $T_0^*$ (temps entre deux maxima successifs) et l'amplitude $x_0^*$ (déplacement maximal). Alors tout couple $(m, k)$ avec $m/k = (T_0^*/2\\pi)^2$ convient.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "pendule élastique",
+    "chart_title": "x (t)",
+    "y_axis_label": "x (cm)",
+    "hit": "atteint !",
+    "match_ok": "correspondance",
+    "match_off": "écart",
+    "submit_button": "LANCER",
+    "param1_name": "m",
+    "param2_name": "k",
+    "param3_name": "x0",
+    "peek_hint": "compte les sommets : T0 = temps entre deux maxima successifs ; amplitude = valeur crête sur l'axe des x",
+    "tip1": "balaie m, k, x0 — observe comment la période dépend de m/k, et l'amplitude de x0",
+    "tip2": "ajuste m, k, x0 pour que ta courbe passe par le repère orange en (t*, x*)",
+    "tip3": "lis T0* et x0* sur la courbe cible, règle m/k et x0 pour correspondre, puis LANCER",
+    "mass_label": "m",
+    "spring_label": "k",
+    "equilibrium_label": "x = 0",
+    "release_hint": "fais glisser la masse ← → pour régler x0"
+  },
+  "hints": {
+    "1": {
+      "1": "Déplace chacun des trois curseurs à tour de rôle et observe ce qui change sur le graphique.",
+      "2": "La période ne dépend que de m et k. L'amplitude ne dépend que de x0. Prouve-le en balayant chaque variable isolément.",
+      "3": "Un cycle complet, c'est la courbe qui va de +x0 à -x0 et revient à +x0. Attends une oscillation complète, puis avance."
+    },
+    "2": {
+      "1": "Calcule d'abord la période cible T0* qui correspond au repère : essaie x* / cos(omega * t*) = x0 pour quelques essais.",
+      "2": "Augmenter m ou diminuer k ralentit l'oscillation (T0 plus grand). Augmenter x0 élève les sommets sans changer le rythme.",
+      "3": "Le couple (m, k) n'est pas unique — seul le rapport m/k compte pour la période. Tout m/k = (T0*/(2·pi))^2 convient."
+    },
+    "3": {
+      "1": "Repère deux sommets consécutifs sur la courbe cible. Le temps qui les sépare est T0*.",
+      "2": "Lis la valeur maximale de la courbe cible — c'est ton amplitude x0*.",
+      "3": "Règle x0 = x0*. Puis choisis n'importe quel couple (m, k) avec m/k = (T0*/(2·pi))^2. Appuie sur LANCER."
+    }
+  }
+}

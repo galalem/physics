@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une masse accrochée à un ressort est secouée par une force périodique $F(t) = F_0 \\cos(\\Omega t)$. Fais glisser la pulsation d'excitation $\\Omega$ et l'amortissement $h$. Balaie $\\Omega$ autour de la pulsation propre $\\omega_0 = \\sqrt{k/m}$ et observe l'amplitude $A$ atteindre un pic à la résonance.",
+      "concept": "Régime permanent : $x(t) = A(\\Omega)\\,\\cos(\\Omega t - \\varphi)$ avec $A(\\Omega) = \\dfrac{F_0}{\\sqrt{(k - m\\Omega^2)^2 + (h\\Omega)^2}}$. $A$ est maximale près de $\\Omega = \\omega_0$ ; l'amortissement $h$ détermine la finesse du pic de résonance.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins l'amplitude cible orange $A^{*}$. Ajuste $\\Omega$ et $h$ pour que ton amplitude en régime permanent atteigne la bande en pointillés. Remarque que deux valeurs de $\\Omega$ — une inférieure et une supérieure à $\\omega_0$ — donnent la même $A$.",
+      "concept": "Pose $A(\\Omega, h) = A^{*}$ et résous : $(k - m\\Omega^2)^2 + (h\\Omega)^2 = (F_0 / A^{*})^2$. Pour un $h < h_{\\text{crit}}$ fixé, il y a deux branches en $\\Omega$ (sous-résonance $\\Omega < \\omega_0$ et sur-résonance $\\Omega > \\omega_0$).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La courbe cible $x^{*}(t)$ est affichée. Lis sa période $T^{*}$ et son amplitude $A^{*}$ sur le graphique, calcule $\\Omega^{*} = 2\\pi / T^{*}$ et isole $h^{*}$ à partir de $A^{*} = F_0 / \\sqrt{(k - m\\Omega^{*2})^2 + (h^{*}\\Omega^{*})^2}$. Règle les curseurs, puis appuie sur LANCER.",
+      "concept": "Lis $T^{*}$ = temps entre deux sommets $\\Rightarrow\\ \\Omega^{*} = 2\\pi / T^{*}$. Lis $A^{*}$ = hauteur du sommet. Puis $h^{*} = \\dfrac{1}{\\Omega^{*}}\\sqrt{(F_0 / A^{*})^2 - (k - m\\Omega^{*2})^2}$. Fais correspondre les deux à $\\pm 5\\%$ près.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "masse-ressort excité",
+    "chart_title": "x(t) — régime permanent",
+    "y_axis": "x (cm)",
+    "x_axis": "t (s) →",
+    "wall": "mur",
+    "spring_label": "k",
+    "damper_label": "h",
+    "omega0_label": "omega_0",
+    "F0_label": "F_0",
+    "hit": "atteint !",
+    "match_ok": "correspondance",
+    "match_off": "écart",
+    "submit_button": "LANCER",
+    "omega_name": "Omega",
+    "h_name": "h",
+    "amplitude_readout": "A",
+    "target_short": "cible",
+    "peek_hint": "lis T entre deux sommets adjacents — Omega = 2*pi/T. Puis A donne h par la formule d'amplitude.",
+    "tip1": "balaie Omega autour de omega_0 = 10 rad/s. Observe A croître puis décroître. Essaie de baisser h pour affiner le pic.",
+    "tip2": "atteins la bande d'amplitude en pointillés. Deux choix de Omega conviennent — un en dessous, un au-dessus de omega_0.",
+    "tip3": "lis T* sur les sommets de la cible -> Omega*. Lis la hauteur A*. Isole h*. Règle les curseurs, appuie sur LANCER."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplace lentement le curseur Omega. L'amplitude de x(t) croît quand Omega s'approche de omega_0 = 10 rad/s.",
+      "2": "Un h plus faible rend le pic de résonance plus fin et plus haut. Un h plus élevé l'aplatit.",
+      "3": "Un balayage complet doit couvrir Omega bien en dessous (~4 rad/s) et bien au-dessus (~15 rad/s) de omega_0."
+    },
+    "2": {
+      "1": "La cible est une amplitude, pas une phase. Seul |x| compte — tu vises la bande en pointillés.",
+      "2": "Essaie d'abord Omega = omega_0 — tu dépasseras A*. Puis éloigne Omega de omega_0 pour ramener A à la cible.",
+      "3": "À h fixé, deux valeurs de Omega donnent la même A : une en dessous de omega_0, une au-dessus. L'une ou l'autre est une réponse valable."
+    },
+    "3": {
+      "1": "Mesure le temps entre deux sommets adjacents de la courbe cible — c'est T*. Puis Omega* = 2*pi / T*.",
+      "2": "Lis A* directement sur la hauteur du sommet de la courbe cible. Étant donné Omega* et A*, isole h* dans la formule d'amplitude.",
+      "3": "h* = (1/Omega*) * sqrt((F0/A*)^2 - (k - m*Omega*^2)^2). Règle les deux curseurs pour correspondre, puis appuie sur LANCER."
+    }
+  }
+}

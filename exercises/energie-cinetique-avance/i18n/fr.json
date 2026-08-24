@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser le canon pour viser, utilise le curseur $v_0$ pour régler la vitesse de lancement, puis TIRE. Observe la jauge $E_c$ en direct. Essaie au moins deux angles différents et change $v_0$ pour voir comment l'énergie cinétique évolue.",
+      "concept": "Énergie cinétique : $E_c = \\tfrac{1}{2} m v^{2}$. Le long d'une trajectoire libre, le théorème de l'énergie cinétique $\\Delta E_c = \\sum W(F_{\\text{ext}})$ se réduit à $\\Delta E_c = W(P) = -m g \\Delta z$, donc $E_c(z) = \\tfrac{1}{2} m v_0^{2} - m g z$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Chaque cible affiche sa position $(x, z)$ et l'$E_c$ requise à l'impact. La masse $m$ est fixée et affichée dans le HUD. Utilise l'arc d'aperçu pour ajuster chaque tir. Déduis $v_0$ à partir de $E_c$, puis vise.",
+      "concept": "Sur une cible à l'altitude $z_T$, l'énergie cinétique à l'impact vaut $E_c^{T} = \\tfrac{1}{2} m v_0^{2} - m g z_T$. Inverse pour obtenir $v_0 = \\sqrt{\\,2 E_c^{T}/m + 2 g z_T\\,}$. L'angle $\\alpha$ choisit ensuite laquelle des trajectoires de vitesse $v_0$ passe par $(x_T, z_T)$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas d'arc d'aperçu. Pas de jauge $E_c$. Lis pour chaque cible $(x, z)$ et l'$E_c$ requise. Calcule $v_0$ à partir du théorème de l'énergie cinétique, puis $\\alpha$ à partir de l'équation de la trajectoire. Un seul tir par cible — pas de tir à l'aveugle.",
+      "concept": "Trajectoire : $z(x) = x \\tan\\alpha - \\dfrac{g x^{2}}{2 v_0^{2} \\cos^{2}\\alpha}$. Si un mur de hauteur $h$ se trouve en $x_w$, il faut $z(x_w) > h$. Deux solutions $\\alpha$ par cible — choisis celle qui franchit l'obstacle.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "hits": "TOUCHÉS",
+    "shots": "TIRS",
+    "stage": "ÉTAPE",
+    "mass": "m",
+    "ec_now": "E_c",
+    "ec_req": "req.",
+    "joule": "J",
+    "tip1": "vise, change v₀, puis TIRE — regarde la jauge E_c se remplir et se vider",
+    "tip2": "calcule v₀ à partir de l'E_c requise, vise α avec l'arc d'aperçu",
+    "tip3": "calcule v₀ à partir de E_c, puis α à partir de (x, z). Un tir par cible.",
+    "peek_tip_energy": "v₀ à partir de l'énergie : ½m·v₀² = E_c(cible) + m·g·z(cible). Résous v₀ d'abord — l'angle ensuite.",
+    "peek_tip_complementary": "Deux angles atteignent le même point à v₀ égal (α₁ + α₂ ≈ 90° sur sol plat). Choisis celui qui franchit le mur.",
+    "peek_tip_range_max": "La portée est maximale à α = 45°. Si (x, z) est hors de portée à ton v₀, aucun angle ne convient — revérifie ton calcul de E_c."
+  },
+  "hints": {
+    "1": {
+      "1": "Fais glisser le canon vers le haut ou le bas pour changer l'angle de lancement α.",
+      "2": "Le curseur v₀ à droite règle la vitesse initiale. Un v₀ plus grand donne plus d'E_c initiale.",
+      "3": "Observe la jauge E_c : au sommet, la gravité a fait le plus de travail contre le projectile, donc E_c est minimale."
+    },
+    "2": {
+      "1": "Pour chaque cible, lis (x, z) et l'E_c requise. La masse m est affichée dans le HUD.",
+      "2": "Théorème de l'énergie cinétique : E_c(cible) = ½m·v₀² − m·g·z. Résous v₀ d'abord, puis vise.",
+      "3": "Une fois v₀ fixé, utilise l'arc d'aperçu pour affiner α. Deux valeurs de α peuvent convenir — l'une ou l'autre touche."
+    },
+    "3": {
+      "1": "Pas d'E_c en direct. Calcule v₀ à partir de ½m·v₀² = E_c + m·g·z. Pas d'essais-erreurs — un tir par cible.",
+      "2": "Équation de la trajectoire : z(x) = x·tan α − g·x²/(2·v₀²·cos²α). Substitue les coordonnées de la cible et résous en tan α.",
+      "3": "Pour tout mur de hauteur h en x_w, il faut z(x_w) > h. Choisis la solution α qui le franchit (généralement la plus raide)."
+    }
+  }
+}

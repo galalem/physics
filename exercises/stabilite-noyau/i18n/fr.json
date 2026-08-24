@@ -1,0 +1,71 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser $Z$ (protons) et $N$ (neutrons) pour construire un noyau. Le diagramme à droite trace $(Z, N)$. Le ruban vert grisé est la vallée de stabilité. Au-dessus de la bande, le noyau a trop de neutrons (émetteur $\\beta^-$) ; en dessous, trop peu (émetteur $\\beta^+$). Visite les trois régions pour avancer.",
+      "concept": "Les noyaux stables se regroupent le long de la vallée de stabilité, où $N/Z \\approx 1$ pour les noyaux légers et dérive vers $N/Z \\approx 1{,}5$ pour les lourds. Les noyaux au-dessus de la bande émettent un électron ($\\beta^-$ : $n \\to p + e^- + \\bar{\\nu}$) pour convertir un neutron en proton. Les noyaux sous la bande émettent un positron ($\\beta^+$ : $p \\to n + e^+ + \\nu$) pour convertir un proton en neutron.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Construis chaque noyau cible en fixant $Z$ et $N$. Lis la classification en direct sous le diagramme — trois cas canoniques, un par classe de stabilité.",
+      "concept": "Même nombre de masse $A$, destins différents. $^{14}_{\\phantom{0}6}\\text{C}$ a trop de neutrons pour son $Z$ : il se désintègre en $\\beta^-$. $^{56}_{26}\\text{Fe}$ est au sommet de la stabilité nucléaire — rien de plus fortement lié. $^{56}_{28}\\text{Ni}$ a le même $A = 56$ mais trop peu de neutrons : il se désintègre en $\\beta^+$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La bande de stabilité, les couleurs de régions et le texte de classification sont masqués. Étant donné seulement $(Z, N)$ sur les axes, décide si chaque noyau est stable, instable $\\beta^-$ (excès de neutrons), ou instable $\\beta^+$ (excès de protons). Les quatre corrects d'un coup — une mauvaise réponse relance le jeu.",
+      "concept": "Correspondance inverse : étant donné $(Z, N)$, compare $N$ à la courbe centrale $N \\approx Z\\,(1 + Z/166)$. Si $N$ est au-dessus de la courbe, le noyau est riche en neutrons ($\\beta^-$). S'il est en dessous, riche en protons ($\\beta^+$). À l'intérieur de la bande étroite autour de la courbe, le noyau est stable vis-à-vis de la désintégration $\\beta$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "étape",
+    "controls_title": "contrôles",
+    "nucleus": "noyau",
+    "stability_chart": "N vs Z (stabilité)",
+    "field_Z": "numéro atomique Z",
+    "field_N": "nombre de neutrons N",
+    "regions_seen": "régions",
+    "matched": "atteint",
+    "correct": "correct",
+    "target": "noyau cible",
+    "given": "donné",
+    "which_class": "à quelle classe appartient ce noyau ?",
+    "class_stable": "stable",
+    "class_beta_minus": "instable β⁻",
+    "class_beta_plus": "instable β⁺",
+    "excess_n": "excès de neutrons",
+    "excess_p": "excès de protons",
+    "in_band": "dans la vallée",
+    "n_axis": "N",
+    "z_axis": "Z",
+    "band_label": "vallée de stabilité",
+    "beta_minus_region": "région β⁻",
+    "beta_plus_region": "région β⁺",
+    "peek_tip": "Calcule le centre de la bande à partir de la géométrie : pour un $Z$ donné, la courbe centrale vaut $N \\approx Z\\,(1 + Z/166)$. Compare ton $N$ à ce nombre. Au-dessus de plus de quelques unités → $\\beta^-$ ; en dessous → $\\beta^+$ ; dans une bande étroite → stable. Ne regarde pas les indices de couleur — il n'y en a pas dans cette étape.",
+    "tip1": "explore les trois régions : au-dessus, dans, en dessous de la bande",
+    "tip2": "même A, trois destins : C-14, Fe-56, Ni-56",
+    "tip3": "N au-dessus de la courbe → β⁻ ; N en dessous → β⁺ ; dans la bande → stable"
+  },
+  "hints": {
+    "1": {
+      "1": "Fais glisser N bien au-dessus de Z à Z fixé (disons Z = 20, N = 40). Le point atterrit au-dessus de la bande et devient orange — c'est la région β⁻.",
+      "2": "Maintenant fais glisser N en dessous de Z. Le point tombe sous la bande et devient violet — la région β⁺.",
+      "3": "Pour les noyaux légers, N ≈ Z est stable (vert). Pour les noyaux plus lourds (Z > 20), les noyaux stables ont besoin de PLUS de neutrons que de protons — la bande s'incurve vers le haut."
+    },
+    "2": {
+      "1": "Carbone-14 : Carbone signifie Z = 6, et 14 est le nombre de masse A. Donc N = A − Z = 14 − 6 = 8.",
+      "2": "Fer-56 (Fe) : Z = 26. 56 est A, donc N = 56 − 26 = 30. Fe-56 se situe au sommet exact de la stabilité nucléaire.",
+      "3": "Nickel-56 : Z = 28. A = 56, donc N = 28. Note que c'est le MÊME A que Fe-56 mais avec deux protons de plus — cela le pousse sous la bande dans la région β⁺."
+    },
+    "3": {
+      "1": "D'abord, calcule le centre de la bande pour ce Z. Pour Z ≤ 20, le centre est environ N ≈ Z. Pour les noyaux plus lourds, N ≈ Z(1 + Z/166).",
+      "2": "Compare N à ce centre. Plus élevé de plus de quelques unités → trop de neutrons → β⁻. Plus bas → trop peu de neutrons → β⁺.",
+      "3": "Pour Z = 6, le centre est à N ≈ 6, et la bande est étroite (±2). N = 8 est au-dessus → β⁻. N = 6 est dedans → stable. Pour Z = 55, le centre est autour de N ≈ 73 ; N = 82 est bien au-dessus → β⁻."
+    }
+  }
+}

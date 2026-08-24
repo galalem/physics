@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A compound microscope uses two converging lenses in a row. The objective ($f'_1$, short) forms a real, inverted, enlarged intermediate image $A_1B_1$ near the front focal point $F_2$ of the ocular. The ocular then acts as a magnifier producing a virtual image at infinity. Sweep all three sliders ($f'_1$, $f'_2$, $\\Delta$) to see how each shapes the total magnifying power.",
+      "concept": "Objective linear magnification: $\\gamma_1 = -\\Delta / f'_1$. Ocular magnifying power (for image at infinity): $G_{oc} = d_m / f'_2$ with $d_m = 250\\,\\mathrm{mm}$. Total: $G = \\gamma_1 \\cdot G_{oc} = \\dfrac{\\Delta \\cdot d_m}{f'_1 \\cdot f'_2}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Match the target microscope: get both $|\\gamma_1|$ (objective magnification) AND $G_{oc}$ (ocular magnifying power) inside tolerance. Many $(f'_1, f'_2, \\Delta)$ triples work for a given $G$ — but only one $(f'_1, \\Delta)$ pair gives $|\\gamma_1|$, and only one $f'_2$ gives $G_{oc}$.",
+      "concept": "From the targets: $|\\gamma_1^{*}| = \\Delta / f'_1$ pins the objective ratio; $G_{oc}^{*} = d_m / f'_2$ pins $f'_2$ directly ($f'_2 = d_m / G_{oc}^{*}$). Pick $f'_2$ first, then trade $f'_1$ against $\\Delta$ to hit $|\\gamma_1^{*}|$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The intermediate image $A_1B_1$ and the internal construction rays are hidden. Only the object $AB$, the two lenses (with $F_1$, $F'_1$, $F_2$, $F'_2$ marked) and the emerging parallel bundle are visible. For each target $G^{*}$, compute a valid $(f'_1, f'_2, \\Delta)$ triple on paper, set the sliders, then Confirm. You have one confirm per target — miss and the target is lost.",
+      "concept": "$G = \\dfrac{\\Delta \\cdot d_m}{f'_1 \\cdot f'_2}$ with $d_m = 250\\,\\mathrm{mm}$. Rearrange: $\\dfrac{\\Delta}{f'_1 \\cdot f'_2} = \\dfrac{G^{*}}{d_m}$. Peek reveals the current live $G$ so you can verify your paper triple.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "compound microscope",
+    "object": "AB",
+    "objective": "objective",
+    "ocular": "ocular",
+    "image1": "A1B1",
+    "match_ok": "match",
+    "peek_reveal": "live",
+    "target_short": "target",
+    "target": "TARGET",
+    "confirm": "CONFIRM",
+    "hits": "HITS",
+    "shots": "SHOTS",
+    "exhausted": "MISSED — RESETTING",
+    "tip1": "sweep each slider across at least half its range",
+    "tip2": "match both objective and ocular values",
+    "tip3": "compute a triple on paper, set sliders, then confirm"
+  },
+  "hints": {
+    "1": {
+      "1": "Try shrinking f1 with Delta fixed — the intermediate image A1B1 grows (higher gamma_1).",
+      "2": "Shrinking f2 makes G_oc larger — the emerging bundle spreads more per mm of A1B1.",
+      "3": "The total G is the product: halve f1 and G doubles; halve f2 and G doubles again."
+    },
+    "2": {
+      "1": "Solve for f2 first from the ocular target: f2 = d_m / G_oc*. That fixes one slider.",
+      "2": "Now |gamma_1*| = Delta / f1 — pick any Delta in range, compute f1 = Delta / |gamma_1*|.",
+      "3": "If f1 falls outside its range, try a different Delta. Multiple pairs work."
+    },
+    "3": {
+      "1": "Write G* = (Delta * d_m) / (f1 * f2). Substitute d_m = 250 mm and solve for one triple.",
+      "2": "One good route: fix f2 near the middle of its range, then pick f1 · Delta such that their ratio Delta / f1 · (250 / f2) = G*.",
+      "3": "Peek to see the current live G. Adjust sliders until it matches G* within tolerance, then Confirm."
+    }
+  }
+}

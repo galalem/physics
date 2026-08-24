@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une masse est suspendue à un ressort. Ajuste la masse $m$ et la raideur $k$ du ressort, puis appuie sur VALIDER pour enregistrer chaque configuration. Observe comment l'allongement $\\Delta L$ varie quand tu changes $m$ et $k$.",
+      "concept": "À l'équilibre, deux forces colinéaires agissent sur la masse : le poids $P = m \\cdot g$ (vers le bas) et la réaction du ressort $R = k \\cdot \\Delta L$ (vers le haut). L'équilibre impose $\\sum F_{\\text{ext}} = 0$, donc $R = P$ et $\\Delta L_{\\text{eq}} = \\dfrac{m g}{k}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins chaque allongement $\\Delta L$ cible mis en évidence. Règle $m$ et $k$ jusqu'à ce que le ressort se stabilise sur la cible, puis appuie sur VALIDER. Touche les trois cibles pour avancer.",
+      "concept": "Deux degrés de liberté, une relation : $\\Delta L_{\\text{eq}} = \\dfrac{m g}{k}$. Tout couple $(m, k)$ qui vérifie cette relation donne le même $\\Delta L$ — doubler $m$ et doubler $k$ laisse $\\Delta L$ inchangé.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches de forces et les lectures de forces sont masquées. Chaque cible affiche l'allongement $\\Delta L$ requis et la raideur $k$ du ressort. Calcule la masse $m$ qui produit l'équilibre à ce $\\Delta L$, règle les curseurs, puis VALIDE. Tu n'as qu'un essai par cible — prévois sur papier avant de t'engager.",
+      "concept": "Équilibre de deux forces colinéaires : $\\sum F = 0 \\Rightarrow R = P \\Rightarrow k \\cdot \\Delta L = m g$. Résous pour l'inconnue : $m = \\dfrac{k \\cdot \\Delta L}{g}$ et $P = k \\cdot \\Delta L$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "confirm": "VALIDER",
+    "stage": "ÉTAPE",
+    "hits": "TOUCHÉS",
+    "shots": "ESSAIS",
+    "mass": "m",
+    "stiffness": "k",
+    "weight": "P",
+    "reaction": "R",
+    "netforce": "ΣF",
+    "elongation": "ΔL",
+    "support": "SUPPORT",
+    "target": "CIBLE",
+    "tip1": "ajuste m, ajuste k, puis VALIDE",
+    "tip2": "atteins chaque ΔL cible, VALIDE pour le figer",
+    "tip3": "calcule m = k·ΔL/g sur papier, puis VALIDE",
+    "peek_tip_balance": "À l'équilibre R = P, donc k·ΔL = m·g. Résous m = k·ΔL/g.",
+    "peek_tip_double": "Doubler k divise ΔL par 2 pour la même masse. Doubler m double ΔL pour le même ressort.",
+    "peek_tip_units": "Garde des unités propres : m en kg, k en N/m, ΔL en m, g ≈ 9,81 m/s². Alors P et R sortent en N.",
+    "eq_label": "équilibre",
+    "no_eq_label": "hors équilibre",
+    "success": "touché",
+    "fail": "raté"
+  },
+  "hints": {
+    "1": {
+      "1": "Fais glisser le curseur de masse à gauche et à droite — regarde le ressort s'allonger.",
+      "2": "Le curseur vertical à droite règle la raideur k. Un ressort plus raide = allongement plus court pour le même poids.",
+      "3": "Appuie sur VALIDER après chaque changement pour enregistrer la configuration. Essaie au moins deux masses très différentes."
+    },
+    "2": {
+      "1": "Lis le ΔL cible sur la règle à côté du ressort. Règle m et k jusqu'à ce que le ressort s'y stabilise.",
+      "2": "Pour un ΔL cible donné, tout couple (m, k) tel que m/k = ΔL/g convient. Il y a une infinité de couples valides.",
+      "3": "Si le ressort est trop court, augmente m ou diminue k. Ne valide que lorsque la masse est sur la ligne cible."
+    },
+    "3": {
+      "1": "La cible affiche ΔL et k. Tout ce qu'il te faut pour calculer m est à l'écran.",
+      "2": "Applique la condition d'équilibre : k·ΔL = m·g. Résous m avant de toucher aux curseurs.",
+      "3": "m = k·ΔL/g. Calcule-le, règle-le, VALIDE. Un tir par cible — fais les maths d'abord."
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Pull the mass to $x_0$, release, and watch it oscillate. Sweep every slider — mass $m$, stiffness $k$, initial displacement $x_0$ — and let the system complete at least one full period.",
+      "concept": "Free elastic pendulum: $\\ddot{x} + \\dfrac{k}{m}\\,x = 0$. Solution $x(t) = x_0\\,\\cos(\\omega_0 t)$ with $\\omega_0 = \\sqrt{k/m}$ and period $T_0 = 2\\pi\\sqrt{m/k}$. The amplitude only depends on how far you pulled it; the period only depends on $m$ and $k$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Match the orange target: your live $x(t)$ curve must pass through the marker at time $t^*$ with displacement $x^*$. Tune $m$, $k$, $x_0$ so the curves overlay.",
+      "concept": "The marker fixes both the period AND the amplitude. $x^* = x_0\\,\\cos(\\omega_0 t^*)$, so setting $x_0$ alone is not enough — you must also match the period $T_0^* = 2\\pi\\sqrt{m/k}$ that puts the curve at $x^*$ at $t = t^*$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The live curve is hidden. Read the target's period $T_0^*$ and amplitude $x_0^*$ off the chart, set $m$, $k$, $x_0$ so that $2\\pi\\sqrt{m/k} = T_0^*$ and $x_0 = x_0^*$, then press RUN.",
+      "concept": "Two invariants to extract from the target: the period $T_0^*$ (time between two successive maxima) and the amplitude $x_0^*$ (peak displacement). Then any $(m, k)$ pair with $m/k = (T_0^*/2\\pi)^2$ works.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "elastic pendulum",
+    "chart_title": "x (t)",
+    "y_axis_label": "x (cm)",
+    "hit": "hit!",
+    "match_ok": "match",
+    "match_off": "off",
+    "submit_button": "RUN",
+    "param1_name": "m",
+    "param2_name": "k",
+    "param3_name": "x0",
+    "peek_hint": "count peaks: T0 = time between two successive maxima; amplitude = peak value on the x-axis",
+    "tip1": "sweep m, k, x0 — watch how the period depends on m/k, and the amplitude on x0",
+    "tip2": "adjust m, k, x0 so your curve passes through the orange marker at (t*, x*)",
+    "tip3": "read T0* and x0* from the target curve, set m/k and x0 to match, then RUN",
+    "mass_label": "m",
+    "spring_label": "k",
+    "equilibrium_label": "x = 0",
+    "release_hint": "drag mass ← → to set x0"
+  },
+  "hints": {
+    "1": {
+      "1": "Move each of the three sliders in turn and watch what changes on the chart.",
+      "2": "The period only depends on m and k. The amplitude only depends on x0. Prove this to yourself by sweeping each in isolation.",
+      "3": "Full cycle means the curve goes from +x0 down to -x0 and back to +x0. Wait for one complete oscillation, then advance."
+    },
+    "2": {
+      "1": "First compute the target period T0* that fits the marker: try x* / cos(omega * t*) = x0 for a few guesses.",
+      "2": "Increasing m or decreasing k slows oscillation (larger T0). Increasing x0 raises the peaks without changing the timing.",
+      "3": "The pair (m, k) is not unique — only the ratio m/k matters for the period. Any m/k = (T0*/(2·pi))^2 works."
+    },
+    "3": {
+      "1": "Find two consecutive peaks on the target curve. The time between them is T0*.",
+      "2": "Read the maximum value of the target curve — that is your amplitude x0*.",
+      "3": "Set x0 = x0*. Then pick any (m, k) with m/k = (T0*/(2·pi))^2. Press RUN."
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A magnetic field $\\vec{B}$ points OUT of the page. Drag the emitter to aim the velocity $\\vec{v}$, use the $v_0$ slider to set the speed, then FIRE the positive charge. Watch how the Lorentz force $\\vec{F} = q\\,\\vec{v} \\wedge \\vec{B}$ (drawn in orange on the particle) stays perpendicular to $\\vec{v}$ and curves the path into a circle.",
+      "concept": "Lorentz force: $\\vec{F} = q\\,\\vec{v} \\wedge \\vec{B}$. With $\\vec{B} \\perp \\vec{v}$, $|\\vec{F}| = q\\,v\\,B$ and $\\vec{F}$ always points toward the centre of the circle. The particle moves in a circle of radius $r = \\dfrac{m\\,v}{q\\,B}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit all three targets inside the field. The dashed preview circle shows where the trajectory will go — aim, tune $v_0$, then FIRE. Remember: with $q > 0$ and $\\vec{B}$ out of the page, the particle curves to the RIGHT of $\\vec{v}$.",
+      "concept": "Radius depends only on the speed: $r = \\dfrac{m\\,v}{q\\,B}$. The centre of the circle sits at $90^{\\circ}$ to the right of $\\vec{v}$ (right-hand rule for $+q$). Doubling $v_0$ doubles $r$; the period $T = \\dfrac{2\\pi m}{q B}$ stays the same.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No preview circle. Read each target's coordinates $(x, z)$, apply the right-hand rule to find the centre direction, and pick $\\alpha$ and $v_0$ so the arc sweeps through the target. You have one shot per target — no spray-and-pray.",
+      "concept": "The centre $C$ of the arc lies at distance $r = \\dfrac{m v}{q B}$ perpendicular-right of $\\vec{v}$. A target at $(x_T, z_T)$ is reachable iff it lies on that circle: $|CT| = r$. Combined with the centre direction, this fixes $\\alpha$ and $v_0$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "hits": "HITS",
+    "shots": "SHOTS",
+    "stage": "STAGE",
+    "field": "B ⊙ (out of page)",
+    "charge": "q > 0",
+    "tip1": "aim v, change v₀, then FIRE",
+    "tip2": "use the preview circle to line up each target",
+    "tip3": "compute α and v₀ from the target coordinates, then FIRE",
+    "peek_tip_radius": "Radius scales with speed: r = m·v / (q·B). Doubling v₀ doubles the arc radius; the period T = 2πm/(qB) is unchanged.",
+    "peek_tip_centre": "The centre of the arc sits 90° to the RIGHT of v (right-hand rule for q > 0, B out of page). Draw that perpendicular first — the target must lie r away from it.",
+    "peek_tip_geometry": "Two unknowns (α, v₀), two constraints: target on the circle AND centre perpendicular-right of v at distance r. Solve r from the target-emitter geometry first."
+  },
+  "hints": {
+    "1": {
+      "1": "Drag the emitter head to change the launch direction α of v.",
+      "2": "The v₀ slider on the right sets the launch speed. Larger v₀ = larger circle.",
+      "3": "The orange arrow F on the particle is the Lorentz force. Notice it always points from the particle toward the centre of the circle."
+    },
+    "2": {
+      "1": "The dashed circle previews the full trajectory. Move it around by adjusting α and v₀.",
+      "2": "Speed sets the radius (r ∝ v₀). Angle rotates the circle around the emitter — the centre of the circle is always perpendicular-right of v.",
+      "3": "If a target is inside the reachable ring, two (α, v₀) pairs usually hit it — try a small radius vs a large one to see."
+    },
+    "3": {
+      "1": "Read each target's (x, z). Sketch the emitter, the target, and the perpendicular-right direction of v on paper.",
+      "2": "For a given α, the centre C = (r sin α, −r cos α) from the emitter. The target must satisfy (x − r sin α)² + (z + r cos α)² = r².",
+      "3": "Expand: x² + z² = 2r(x sin α − z cos α). Given a chosen α, this gives r = (x² + z²) / [2 (x sin α − z cos α)], then v₀ = r · (q B / m)."
+    }
+  }
+}

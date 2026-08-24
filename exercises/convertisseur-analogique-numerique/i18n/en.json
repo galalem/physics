@@ -1,0 +1,81 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "An ADC turns a continuous voltage into a discrete binary code. Sweep the input $V_{in}$ between $0$ and $V_{ref} = 5\\,\\text{V}$ and watch the 4-bit code jump one step at a time. Visit a LOW, a MID and a HIGH region to advance.",
+      "concept": "Uniform quantization with step $\\text{LSB} = V_{ref}/2^n$. For $n = 4$ bits, $\\text{LSB} = 5/16 \\approx 0.3125\\,\\text{V}$. The output code is $\\text{code} = \\lfloor V_{in}/\\text{LSB} \\rfloor$ and the error $\\varepsilon = V_{in} - \\text{code}\\cdot\\text{LSB}$ is at most one LSB.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A sine wave is now fed to the ADC. Choose the number of bits $n$ so the staircase reconstruction (green) hugs the analogue target (orange) closely. Move to $n \\geq 4$ to bring the reconstruction error under one visible tick.",
+      "concept": "Doubling $n$ halves the LSB and quarters the peak quantization error. Signal-to-noise ratio grows as $\\text{SNR} \\approx 6.02\\,n + 1.76\\,\\text{dB}$: each extra bit buys about $6\\,\\text{dB}$ of fidelity.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "A 4-bit code is captured at the ADC output. Before touching anything, compute $V_{in} = \\text{code}\\cdot\\text{LSB}$ on paper. Then pick the voltage band (LOW / MID / HIGH) it belongs to and press $\\text{SUBMIT}$. Ace all three captures in one pass — a wrong pick reshuffles the deck.",
+      "concept": "Bands with $V_{ref} = 5\\,\\text{V}$: LOW $\\in [0,\\,1.25)\\,\\text{V}$ (codes 0000–0011), MID $\\in [1.875,\\,3.125)\\,\\text{V}$ (codes 0110–1001), HIGH $\\in [3.75,\\,5]\\,\\text{V}$ (codes 1100–1111). Convert the code to decimal, multiply by $\\text{LSB} = 0.3125\\,\\text{V}$, look up the band.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "ADC block",
+    "characteristic": "quantization staircase",
+    "scope": "scope",
+    "scenario": "CAPTURE",
+    "solved": "ACED",
+    "submit": "SUBMIT",
+    "correct": "correct",
+    "wrong": "wrong band",
+    "target": "target",
+    "your_pick": "reconstruction",
+    "tip1": "sweep V_in · visit low, mid and high regions",
+    "tip2": "raise n · the staircase snaps closer to the sine",
+    "tip3": "read the code · convert to V_in · pick the band",
+    "peek_tip_1": "LSB = V_ref / 2^n. Multiply the decimal code by the LSB to recover V_in.",
+    "peek_tip_2": "For 4 bits the range 0..15 splits into thirds: bottom quarter is LOW, middle is MID, top quarter is HIGH.",
+    "band_low": "LOW · [0, 1.25) V",
+    "band_mid": "MID · [1.875, 3.125) V",
+    "band_high": "HIGH · [3.75, 5] V",
+    "band_low_short": "LOW",
+    "band_mid_short": "MID",
+    "band_high_short": "HIGH",
+    "vin_label": "V_in",
+    "code_label": "code",
+    "vref_label": "V_ref",
+    "lsb_label": "LSB",
+    "bits_label": "bits",
+    "sine_label": "V_in(t)",
+    "recon_label": "reconstruction",
+    "captured_code": "captured code",
+    "low_seen": "low",
+    "mid_seen": "mid",
+    "high_seen": "high",
+    "regions_seen": "regions seen",
+    "error_peak": "peak error",
+    "advance": "raise n to advance",
+    "n_values": "n tried"
+  },
+  "hints": {
+    "1": {
+      "1": "Move the slider slowly — the code stays the same for a whole LSB-wide band of V_in.",
+      "2": "One LSB is V_ref / 2^n = 5/16 ≈ 0.3125 V. That is how wide each step is.",
+      "3": "Visit V_in < 1.25 V (LOW), V_in in [1.875, 3.125] V (MID), and V_in > 3.75 V (HIGH)."
+    },
+    "2": {
+      "1": "The staircase (green) is what the ADC actually reconstructs. The smooth sine (orange) is the ideal.",
+      "2": "Each extra bit halves the LSB and doubles the number of staircase steps per period.",
+      "3": "n = 2 gives 4 steps — a coarse blocky shape. n = 4 gives 16 steps — the shape starts to look like a sine."
+    },
+    "3": {
+      "1": "Convert the 4-bit code to decimal. code = b3·8 + b2·4 + b1·2 + b0.",
+      "2": "Multiply that decimal by LSB = 0.3125 V. The result is the lower edge of the V_in bucket.",
+      "3": "Compare with band edges: LOW < 1.25 V, MID between 1.875 V and 3.125 V, HIGH > 3.75 V."
+    }
+  }
+}

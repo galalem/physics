@@ -1,0 +1,73 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Pick each of the four filter families and drag the cutoff slider. Watch how the Bode magnitude curve reshapes: flat then falling for low-pass, rising then flat for high-pass, a peak for band-pass, a notch for band-stop. Advance after sampling at least $3$ families.",
+      "concept": "A linear filter is described by its complex transfer function $H(j\\omega) = V_s/V_e$. Its magnitude $|H(f)|$ tells which bands are passed and which are attenuated: **low-pass** keeps $f < f_c$; **high-pass** keeps $f > f_c$; **band-pass** keeps a window around $f_0$; **band-stop** rejects a window around $f_0$. On a $\\log_{10}(f)$ axis the shapes are distinctive — that is why we plot $|H|_{\\text{dB}}$ against $\\log_{10}(f)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Now build a specific low-pass with two components. Adjust $R$ and $C$ so the cutoff $f_c$ lands on the dashed orange target ($1\\,\\text{kHz}$). Many $(R, C)$ pairs work — you need $R\\,C = 1/(2\\pi\\,f_c)$.",
+      "concept": "For the RC low-pass, $H(j\\omega) = 1/(1 + j\\,R\\,C\\,\\omega)$, so $|H(f)| = 1/\\sqrt{1 + (f/f_c)^2}$ with $f_c = 1/(2\\pi\\,R\\,C)$. At $f = f_c$ the gain drops to $1/\\sqrt{2}$ ($-3\\,\\text{dB}$). For $f_c = 1\\,\\text{kHz}$: $R\\,C \\approx 1.59 \\times 10^{-4}\\,\\text{s}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The schematic is hidden. Only the Bode magnitude curve is shown. Classify each filter as low-pass, high-pass, band-pass, or band-stop. Answer every question correctly in one pass — a wrong answer restarts the deck.",
+      "concept": "Classification cues on $|H|_{\\text{dB}}$ vs $\\log_{10}(f)$: **low-pass** — flat at $0\\,\\text{dB}$ on the left, drops on the right; **high-pass** — rises on the left, flat at $0\\,\\text{dB}$ on the right; **band-pass** — peaks near $f_0$ and falls on both sides; **band-stop** — flat then dips sharply near $f_0$ and rises again.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage":           "stage",
+    "circuit_title":   "two-port H(jω)",
+    "bode_title":      "|H(f)| — Bode magnitude",
+    "phase_title":     "arg H  (deg)",
+    "controls_title":  "controls",
+    "field_family":    "filter family",
+    "field_cutoff":    "cutoff f",
+    "field_R":         "resistance R",
+    "field_C":         "capacitance C",
+    "field_derived":   "derived",
+    "families_seen":   "families",
+    "matched":         "target reached",
+    "target_fc":       "target f_c",
+    "question":        "question",
+    "evaluate_prompt": "Classify the filter from its Bode magnitude curve.",
+    "wrong_restart":   "wrong — restarting",
+    "all_correct":     "all correct",
+    "family_lp":       "low-pass",
+    "family_hp":       "high-pass",
+    "family_bp":       "band-pass",
+    "family_bs":       "band-stop",
+    "v_in":            "u_in",
+    "v_out":           "u_out",
+    "tip1":  "each family has a distinct silhouette — flip through the four",
+    "tip2":  "R↑ or C↑ → f_c shifts left ;  f_c = 1/(2π·R·C)",
+    "tip3":  "read the low-f side then the high-f side — flat vs sloped",
+    "peek_tip_1": "Look at the low-frequency end first. Is |H| flat at 0 dB (passes low f) or falling (rejects low f)?",
+    "peek_tip_2": "Now the high-frequency end. Flat = passes high f. Falling = rejects high f. Combine both ends to name the family.",
+    "peek_tip_3": "A single dip in the middle = band-stop. A single peak in the middle = band-pass. No dip and no peak = low- or high-pass."
+  },
+  "hints": {
+    "1": {
+      "1": "Click one of the four family buttons and drag the cutoff slider — the curve reshapes.",
+      "2": "Compare low-pass (drops on the right) vs high-pass (drops on the left). Then band-pass (peak) vs band-stop (notch).",
+      "3": "You need to visit 3 different families. The counter in the top-right tracks progress."
+    },
+    "2": {
+      "1": "You need R·C = 1/(2π·1000) ≈ 1.59×10⁻⁴ s. Pick a round C, then compute R.",
+      "2": "Try C = 100 nF. Then R = 1.59×10⁻⁴ / 10⁻⁷ ≈ 1590 Ω.",
+      "3": "Or C = 10 nF with R = 16 kΩ. Or C = 1 µF with R = 160 Ω — all give f_c ≈ 1 kHz."
+    },
+    "3": {
+      "1": "Scan the two ends of the curve. Low end flat + high end drops = low-pass. Reverse = high-pass.",
+      "2": "A single peak (curve arcs up in the middle) = band-pass. A single dip (curve plunges in the middle) = band-stop.",
+      "3": "Ignore the exact frequency. Only the silhouette matters here — flat / slope / peak / notch."
+    }
+  }
+}

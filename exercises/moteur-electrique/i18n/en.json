@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the rotor to set the starting angle $\\theta_0$, use the $I$ slider on the right to set the current, then press FIRE. The commutator keeps the torque driving in the same direction — the coil spins up as long as the current flows.",
+      "concept": "Laplace force on a current-carrying coil in a uniform field $\\vec B$ produces a moment $M = N \\cdot I \\cdot S \\cdot B \\cdot \\cos\\alpha$, where $\\alpha$ is the angle between the coil plane and $\\vec B$. The commutator flips $I$ at each half-turn so $M$ stays positive on average.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Sweep past all three target angles within the $1.5\\,\\text{s}$ simulation window. Higher $I$ = larger angular acceleration = wider sweep. The dashed arc previews the sweep for your current $I$ and $\\theta_0$.",
+      "concept": "With the commutator, the average moment over one revolution is $M_{\\text{avg}} = \\dfrac{2 N I S B}{\\pi}$. Starting from rest, the coil rotates as $\\theta(t) = \\theta_0 + \\dfrac{M_{\\text{avg}}}{2 J}\\, t^{2}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No preview. A single target angle must be reached at exactly the deadline $t_{\\text{tgt}}$ (tolerance $\\pm 0.1\\,\\text{s}$ and $\\pm 15^{\\circ}$). Compute $I$ from $\\theta_{\\text{tgt}}$ and $t_{\\text{tgt}}$ on paper, then fire. You have three shots — miss all three and the setup rotates.",
+      "concept": "Solve $\\theta_{\\text{tgt}} = \\dfrac{M_{\\text{avg}}}{2 J} t_{\\text{tgt}}^{2}$ for $I$: $I = \\dfrac{\\pi\\, J\\, \\theta_{\\text{tgt}}}{N\\, S\\, B\\, t_{\\text{tgt}}^{2}}$. Doubling $I$ doubles the angular acceleration.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "hits": "HITS",
+    "shots": "SHOTS",
+    "stage": "STAGE",
+    "current": "I",
+    "coil": "coil",
+    "target": "TARGET",
+    "at": "at",
+    "np": "N",
+    "sp": "S",
+    "field": "B → 0.15 T · N = 100 · S = 5 cm²",
+    "tip1": "aim, change I, then FIRE",
+    "tip2": "use the preview arc to reach every target",
+    "tip3": "compute I from the target angle and time, then FIRE",
+    "peek_tip_avg": "Average moment with the commutator: M = 2·N·I·S·B / π. Constant on average.",
+    "peek_tip_formula": "From rest: θ(t) = M·t² / (2J). Solve for I given θ_tgt and t_tgt.",
+    "peek_tip_scaling": "Angular acceleration scales with I. Double I → same angle reached in 1/√2 of the time."
+  },
+  "hints": {
+    "1": {
+      "1": "Drag the rotor to change the starting angle θ₀, then press FIRE.",
+      "2": "The I slider on the right sets the coil current. Bigger I = faster spin-up.",
+      "3": "Try a small I and a large I — notice how the coil sweeps a much wider angle for the same 1.5 s window."
+    },
+    "2": {
+      "1": "The dashed arc is the sweep predicted for your current I and θ₀ over 1.5 s.",
+      "2": "The farthest target sits at the largest angle — dial I up until the arc reaches it.",
+      "3": "Starting angle θ₀ shifts the whole sweep. Adjust it to bracket the closest target too."
+    },
+    "3": {
+      "1": "Read θ_tgt and t_tgt. Use θ = M·t² / (2J) with M = 2NISB/π to solve for I.",
+      "2": "I = π·J·θ_tgt / (N·S·B·t_tgt²). Values: J = 10⁻³ kg·m², N = 100, S = 5·10⁻⁴ m², B = 0.15 T.",
+      "3": "Round I to the slider step (0.1 A) — the ±15° tolerance absorbs the rounding."
+    }
+  }
+}

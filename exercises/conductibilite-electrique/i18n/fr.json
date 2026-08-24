@@ -1,0 +1,83 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Choisis un matériau dans la palette et dépose-le dans l'emplacement d'échantillon. Bouge le curseur de longueur. Regarde comment le courant $I$ et la barre de catégorie réagissent.",
+      "concept": "La résistance d'un échantillon de longueur $\\ell$ et de section $S$ est $R = \\rho \\cdot \\ell / S$, où $\\rho$ est la résistivité du matériau. Faible $\\rho$ (métaux) $\\Rightarrow$ courant fort $\\Rightarrow$ conducteur. Très grande $\\rho$ (plastique, bois sec) $\\Rightarrow$ courant quasi nul $\\Rightarrow$ isolant.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins chaque état cible de la lampe. Choisis un matériau et une longueur pour que la lampe atteigne la luminosité demandée.",
+      "concept": "La lampe brille fort pour les bons conducteurs, luit faiblement pour les matériaux de résistivité intermédiaire (semi-conducteurs comme le graphite), et reste éteinte pour les isolants. La géométrie compte : doubler la longueur double $R$ et divise $I$ par deux.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'affichage du courant est masqué. À partir du matériau et de la géométrie montrés, prédis l'état de la lampe : vive, faible ou éteinte. Trois prédictions correctes d'affilée.",
+      "concept": "Classe les matériaux par ordres de grandeur de $\\rho$. Métaux : $\\rho \\approx 10^{-8}\\,\\Omega\\cdot\\text{m}$. Graphite : $\\rho \\approx 10^{-4}\\,\\Omega\\cdot\\text{m}$. Eau salée : $\\rho \\approx 10^{-1}\\,\\Omega\\cdot\\text{m}$. Eau pure et plastique : $\\rho \\geq 10^{5}\\,\\Omega\\cdot\\text{m}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "circuit",
+    "palette": "matériaux",
+    "predict": "prédiction",
+    "targets": "CIBLES",
+    "chain": "SÉRIE",
+    "sample_hint": "dépose un matériau ici",
+    "length": "longueur ℓ",
+    "cross_section": "S = 1 mm²",
+    "battery": "12 V",
+    "resistivity": "ρ",
+    "ohm_meter": "Ω·m",
+    "current": "I",
+    "milliamp": "mA",
+    "category_conductor": "conducteur",
+    "category_semi": "semi-conducteur",
+    "category_insulator": "isolant",
+    "lamp_bright": "vive",
+    "lamp_dim": "faible",
+    "lamp_off": "éteinte",
+    "mat_copper": "cuivre",
+    "mat_aluminum": "aluminium",
+    "mat_graphite": "graphite",
+    "mat_salt_water": "eau salée",
+    "mat_tap_water": "eau du robinet",
+    "mat_distilled": "eau distillée",
+    "mat_plastic": "plastique",
+    "correct": "correct",
+    "wrong": "faux — série remise à zéro",
+    "target_bright_lamp": "rends la lampe VIVE",
+    "target_dim_lamp": "rends la lampe FAIBLE",
+    "target_off_lamp": "rends la lampe ÉTEINTE",
+    "target_done": "atteinte",
+    "target_pending": "·",
+    "tip1": "choisis les matériaux un par un ; fais glisser la longueur pour la voir étirer et affaiblir le courant",
+    "tip2": "le graphite fait luire la lampe faiblement quand il est long ; un fil métallique brille toujours fort",
+    "tip3": "un seul essai par scénario — raisonne avant de cliquer",
+    "peek_tip": "R = ρ·ℓ/S. Plus ρ est grand ou plus l'échantillon est long ⇒ R plus grand ⇒ I plus petit. Classe la ρ du matériau avant de répondre.",
+    "empty_slot": "aucun matériau — circuit ouvert"
+  },
+  "hints": {
+    "1": {
+      "1": "Dépose n'importe quel matériau dans l'emplacement à droite de la boucle.",
+      "2": "Essaie d'abord un métal, puis un plastique. La luminosité de la lampe devrait être très différente.",
+      "3": "Essaie maintenant le graphite et fais glisser le curseur de longueur. C'est le cas intermédiaire intéressant."
+    },
+    "2": {
+      "1": "Pour VIVE : n'importe quel métal convient. Cuivre ou aluminium à n'importe quelle longueur.",
+      "2": "Pour FAIBLE : graphite avec une grande longueur. La formule R = ρ·ℓ/S fait croître R quand ℓ croît.",
+      "3": "Pour ÉTEINTE : choisis un mauvais conducteur — eau du robinet, eau distillée ou plastique. La longueur n'a presque pas d'importance."
+    },
+    "3": {
+      "1": "Regarde ρ. Si elle est de l'ordre de 10⁻⁸ le matériau est un métal — vive.",
+      "2": "Calcule R = ρ·ℓ/S de tête (S = 10⁻⁶ m²). Puis I ≈ 12 / (100 + R).",
+      "3": "Vive si I > 60 mA. Faible si I entre 3 et 60 mA. Éteinte si I < 3 mA."
+    }
+  }
+}

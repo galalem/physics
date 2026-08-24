@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Chaque point est un noyau père de l'isotope sélectionné. Chaque père se désintègre à un instant aléatoire et émet son rayonnement caractéristique : $\\alpha$, $\\beta^{-}$, $\\beta^{+}$ ou $\\gamma$. Parcours les quatre isotopes ; regarde la grille se vider et lis la transformation écrite au-dessus du graphique.",
+      "concept": "Désintégration $\\alpha$ : ${}^{A}_{Z}X \\rightarrow {}^{A-4}_{Z-2}Y + {}^{4}_{2}\\text{He}$. $\\beta^{-}$ : $n \\rightarrow p + e^{-}$, donc $A$ inchangé, $Z$ augmente de $1$. $\\beta^{+}$ : $p \\rightarrow n + e^{+}$, donc $A$ inchangé, $Z$ diminue de $1$. $\\gamma$ : le noyau excité se désexcite ; $A$ et $Z$ inchangés. Dans tous les cas $A$ et $Z$ sont conservés de part et d'autre de la flèche.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "La transformation est écrite avec le rayonnement caché : ${}^{A}_{Z}X \\rightarrow {}^{A'}_{Z'}Y + \\;?$. Lis la variation de $A$ et de $Z$ et choisis le bon rayonnement. Réussis trois d'affilée pour avancer — une erreur remet le compteur à zéro.",
+      "concept": "Lecture de la flèche : $\\Delta A = A' - A$ et $\\Delta Z = Z' - Z$. $\\Delta A = -4, \\Delta Z = -2 \\Rightarrow \\alpha$. $\\Delta A = 0, \\Delta Z = +1 \\Rightarrow \\beta^{-}$. $\\Delta A = 0, \\Delta Z = -1 \\Rightarrow \\beta^{+}$. $\\Delta A = 0, \\Delta Z = 0 \\Rightarrow \\gamma$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas de simulation en direct. On te montre le père ${}^{A}_{Z}X$ et le rayonnement émis. Saisis $A$ et $Z$ du fils en utilisant la conservation de part et d'autre de la flèche. Trois en une passe — une erreur remet le compteur à zéro. Le peek affiche la règle de conservation du rayonnement en cours comme indice stratégique.",
+      "concept": "Conservation du nombre de nucléons : $A_{\\text{père}} = A_{\\text{fils}} + A_{\\text{rayonnement}}$. Conservation de la charge : $Z_{\\text{père}} = Z_{\\text{fils}} + Z_{\\text{rayonnement}}$. Nombres de masse et de charge des rayonnements : $\\alpha = {}^{4}_{2}\\text{He}$, $\\beta^{-} = {}^{0}_{-1}e$, $\\beta^{+} = {}^{0}_{+1}e$, $\\gamma = {}^{0}_{0}\\gamma$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "parent": "père",
+    "daughter": "fils",
+    "ray": "rayonnement",
+    "select_isotope": "choisis l'isotope",
+    "pick_ray": "quel rayonnement ?",
+    "solve_daughter": "trouve le fils",
+    "streak": "série",
+    "conservation": "conservation",
+    "conservation_A": "ΔA (masse)",
+    "conservation_Z": "ΔZ (charge)",
+    "match_ok": "correct",
+    "match_off": "faux — série remise à zéro",
+    "submit": "VALIDER",
+    "peek_prefix": "indice :",
+    "peek_alpha": "α : A baisse de 4, Z baisse de 2",
+    "peek_beta_minus": "β⁻ : A inchangé, Z augmente de 1 (n → p + e⁻)",
+    "peek_beta_plus": "β⁺ : A inchangé, Z baisse de 1 (p → n + e⁺)",
+    "peek_gamma": "γ : A inchangé, Z inchangé (photon seul)",
+    "tip1": "clique chaque isotope · laisse tourner au-delà de T½",
+    "tip2": "lis ΔA et ΔZ de part et d'autre de la flèche · choisis le rayonnement",
+    "tip3": "écris le fils à partir du père en utilisant la conservation"
+  },
+  "hints": {
+    "1": {
+      "1": "Chaque isotope émet un type précis de rayonnement — parcours les quatre pour voir le motif.",
+      "2": "Les quatre types de rayonnement sont α (noyau d'hélium), β⁻ (électron), β⁺ (positon), γ (photon). Chacun modifie A et Z d'une manière fixée.",
+      "3": "La demi-vie et le type de rayonnement sont deux propriétés distinctes d'un isotope. La vitesse de vidage de la grille montre T½ ; l'équation montre le type de rayonnement."
+    },
+    "2": {
+      "1": "Regarde comment évoluent A et Z de part et d'autre de la flèche. Une baisse de 4 sur A signifie qu'un α a été émis.",
+      "2": "Si A ne change pas mais Z augmente de 1, c'est β⁻ (un neutron s'est transformé en proton). Si A ne change pas et Z baisse de 1, c'est β⁺.",
+      "3": "Si A et Z sont tous deux inchangés, le père était excité et a émis un photon γ — rien d'autre n'a été émis."
+    },
+    "3": {
+      "1": "Écris : A_père = A_fils + A_rayonnement, et Z_père = Z_fils + Z_rayonnement. Puis résous pour A et Z du fils.",
+      "2": "α = ⁴₂He, β⁻ = ⁰₋₁e, β⁺ = ⁰₊₁e, γ = ⁰₀γ. Soustrais ces valeurs de A et Z du père pour obtenir celles du fils.",
+      "3": "Exemple : ²³⁸₉₂U émet un α. A du fils = 238 − 4 = 234. Z du fils = 92 − 2 = 90."
+    }
+  }
+}

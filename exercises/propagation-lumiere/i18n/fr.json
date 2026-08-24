@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser la source $S$ de haut en bas le long de son rail. Les rayons partent en ligne droite depuis $S$ — la barre opaque découpe une ombre géométrique nette, et toute l'ombre se déplace quand $S$ bouge.",
+      "concept": "La lumière se propage en ligne droite. Une source ponctuelle en $S$ émet des rayons radialement ; tout rayon qui rencontre un obstacle opaque s'arrête là, laissant une ombre géométrique derrière l'objet.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois cibles entourent la barre. Positionne $S$ pour que chaque cible ait une ligne droite dégagée vers elle, puis appuie sur Tirer (ou Espace). Tu disposes de 5 tirs pour allumer les 3 cibles.",
+      "concept": "La cible $T$ est éclairée si et seulement si le segment $ST$ évite la barre. La droite $ST$ traverse le plan $x = O_x$ à la hauteur $y_{\\text{hit}} = S_y + \\frac{O_x - S_x}{T_x - S_x}\\,(T_y - S_y)$ ; $T$ est éclairée quand $y_{\\text{hit}}$ tombe hors de l'intervalle vertical de la barre.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les rayons et l'ombre sont masqués. Lis les coordonnées de $S$, de la barre et de la cible $T$ dans la scène. Calcule $y_{\\text{hit}} = S_y + \\frac{O_x - S_x}{T_x - S_x}\\,(T_y - S_y)$ sur papier, règle $S_y$ pour que $y_{\\text{hit}}$ tombe hors de la barre, puis tire. Un seul tir par cible.",
+      "concept": "$y_{\\text{hit}}$ est une interpolation linéaire entre $S_y$ et $T_y$ évaluée en $x = O_x$. Si $y_{\\text{hit}} \\in [O_{y1},\\,O_{y2}]$ le rayon est bloqué et $T$ reste sombre.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "shots": "TIRS",
+    "lit": "ALLUMÉES",
+    "target": "CIBLE",
+    "stage": "ÉTAPE",
+    "exhausted": "TIRS ÉPUISÉS · RÉINITIALISE POUR RÉESSAYER",
+    "tip1": "fais glisser la source le long de son rail",
+    "tip2": "vise, puis appuie sur ESPACE pour tirer",
+    "tip3": "calcule Sy depuis les coordonnées, puis tire",
+    "bar": "BARRE",
+    "source": "SOURCE"
+  },
+  "hints": {
+    "1": {
+      "1": "Attrape le disque orange de la source et fais-le glisser vers le haut ou vers le bas. Il coulisse le long du rail en pointillés en x = 120.",
+      "2": "Chaque rayon issu de S est une ligne droite. La barre arrête tout rayon qui la traverserait.",
+      "3": "Le cône sombre derrière la barre est l'ombre — l'ensemble des points qu'aucune ligne droite issue de S ne peut atteindre."
+    },
+    "2": {
+      "1": "Positionne d'abord S, puis appuie sur Tirer (ou Espace) pour tester la cible courante.",
+      "2": "Pour une cible au-dessus de la barre, remonte S pour que le rayon plonge sous le sommet de la barre. Pour une cible sous la barre, descends S pour que le rayon remonte au-dessus du bas.",
+      "3": "Vérifie le Sy limite : pose y_hit = 175 (haut) ou 275 (bas) et résous pour Sy. Déplace-toi juste au-delà de cette limite."
+    },
+    "3": {
+      "1": "Lis Sx, Tx, Ty et les coordonnées de la barre dans la scène. Sy est alors ta seule inconnue.",
+      "2": "Le rayon S→T atteint x = 400 à y_hit = Sy + (400 − Sx)/(Tx − Sx) · (Ty − Sy). Résous pour Sy afin que y_hit tombe hors de [175, 275].",
+      "3": "Pose y_hit au bord de la barre (175 ou 275) pour trouver le Sy critique, puis dépasse légèrement. Utilise Aperçu pour confirmer que ton Sy correspond à la simulation."
+    }
+  }
+}

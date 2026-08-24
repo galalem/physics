@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the $m$ and $v$ sliders. Watch the $E_c$ gauge fill in real time. Fire at least three shots trying different $v$ values, and change $m$ at least once.",
+      "concept": "Kinetic energy of a body of mass $m$ moving at speed $v$: $E_c = \\tfrac{1}{2}\\,m\\,v^{2}$. Units: $m$ in kg, $v$ in m/s, $E_c$ in joules (J).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit each target energy on the gauge. Adjust $m$ and $v$ until the live $E_c$ needle lands on a target, then FIRE. Notice several $(m, v)$ combos reach the same $E_c$.",
+      "concept": "$E_c$ scales linearly with mass but quadratically with speed: doubling $m$ doubles $E_c$; doubling $v$ quadruples $E_c$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The gauge is hidden. For each target $E_c$, compute $(m, v)$ on paper using $E_c = \\tfrac{1}{2}\\,m\\,v^{2}$, dial in the sliders, then FIRE. One shot per target — no spray-and-pray.",
+      "concept": "Solve for one variable given the other: $v = \\sqrt{2 E_c / m}$, or $m = 2 E_c / v^{2}$. Pick a convenient $m$ first, then compute $v$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "hits": "HITS",
+    "shots": "SHOTS",
+    "stage": "STAGE",
+    "mass": "m",
+    "speed": "v",
+    "energy": "Ec",
+    "unitMass": "kg",
+    "unitSpeed": "m/s",
+    "unitEnergy": "J",
+    "targets": "TARGETS",
+    "tip1": "move m, move v, then FIRE",
+    "tip2": "align the live Ec with a target, then FIRE",
+    "tip3": "compute (m, v) from each target Ec, then FIRE",
+    "peek_tip_v_squared": "Doubling v quadruples Ec. Doubling m only doubles Ec. Prefer v to swing Ec big; use m to fine-tune.",
+    "peek_tip_solve_v": "Fix a convenient m (say 1 or 4 kg), then v = √(2·Ec / m). Slider step is 0.5.",
+    "peek_tip_pairs": "Every target Ec has several (m, v) pairs. If one combo is off-slider, try the paired one: (1 kg, v) ↔ (4 kg, v/2)."
+  },
+  "hints": {
+    "1": {
+      "1": "Grab the m slider on the left and the v slider on the right, then press FIRE.",
+      "2": "Watch the Ec gauge as you move v — a small change in v swings Ec more than the same change in m.",
+      "3": "Try at least two different v values and move m once to unlock Next."
+    },
+    "2": {
+      "1": "The gauge shows current Ec live. Slide until the needle lands on a target bracket, then FIRE.",
+      "2": "Ec = ½·m·v². If Ec is too small, raise v (bigger effect) or m. If too big, lower v.",
+      "3": "Same target Ec is reachable by several (m, v) combos — try (1 kg, high v) or (4 kg, moderate v)."
+    },
+    "3": {
+      "1": "Pick a mass first (say m = 1 or 4 kg), then compute v = √(2·Ec / m) on paper.",
+      "2": "Round to the nearest 0.5 step. If v lands on a clean value like 4, 6, 8, 10 m/s, m was well chosen.",
+      "3": "Example: Ec = 50 J with m = 4 kg → v = √(100/4) = 5 m/s. Or m = 1 kg → v = 10 m/s."
+    }
+  }
+}

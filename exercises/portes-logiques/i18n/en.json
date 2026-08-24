@@ -1,0 +1,79 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Pick a gate from the palette. Toggle the two inputs $A$ and $B$ through all four combinations $(0,0)$, $(0,1)$, $(1,0)$, $(1,1)$ and watch the output LED $S$ light up or stay dark. The truth table on the right auto-records each row you visit. Fully fill the table for at least two different gates to advance.",
+      "concept": "A logic gate is a total function of its Boolean inputs. AND is 1 only when both inputs are 1; OR is 1 when at least one is 1; XOR is 1 when the inputs differ; NAND, NOR are their negations; NOT flips a single input.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Build a half-adder. Given inputs $A$ and $B$, output $S$ (sum) and $C$ (carry). Pick a gate for each slot so the right-side truth table's $S_{yours}$ column matches $S_{target}$ and $C_{yours}$ matches $C_{target}$ on all four rows.",
+      "concept": "A half-adder sums two bits without a carry-in. By inspection: $S = A \\oplus B$ (XOR — 1 only when $A \\ne B$) and $C = A \\cdot B$ (AND — 1 only when both are 1). Together the pair $(C, S)$ is the 2-bit binary sum of $A+B$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "A gate is hidden inside the black box. Toggle $A$ and $B$, watch the LED, and fill in the output column of the truth table by clicking each row's cell to set 0 or 1. Press SUBMIT when the table is complete. A wrong table resets the whole deck.",
+      "concept": "Every 2-input gate is uniquely determined by its 4-row output column. Systematic probing — test all four input combinations — pins down the gate's identity. NAND, NOR, XOR each have a distinctive signature: check the all-zero row and the all-one row first.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "circuit",
+    "table": "truth table",
+    "scenario": "SCENARIO",
+    "solved": "DONE",
+    "submit": "SUBMIT",
+    "correct": "correct",
+    "wrong": "wrong table",
+    "target": "target",
+    "yours": "yours",
+    "your_pick": "your pick",
+    "input_a": "A",
+    "input_b": "B",
+    "output_s": "S",
+    "output_c": "C",
+    "slot_sum": "SUM slot",
+    "slot_carry": "CARRY slot",
+    "record": "RECORD",
+    "hidden": "?",
+    "gates_ok": "gate covered",
+    "match_ok": "half-adder matched",
+    "tip1": "flip A and B through all four combos · try at least two different gates",
+    "tip2": "SUM is 1 only when inputs differ · CARRY is 1 only when both are 1",
+    "tip3": "toggle inputs · read the LED · click each row's cell to set 0 or 1 · then SUBMIT",
+    "peek_tip_1": "Row (0,0) is the most diagnostic: only NAND and NOR output 1 for all-zero inputs.",
+    "peek_tip_2": "Row (1,1) splits the rest: AND and XOR output differ. Cross-check with (0,1) to finish.",
+    "gate_and": "AND",
+    "gate_or": "OR",
+    "gate_not": "NOT",
+    "gate_nand": "NAND",
+    "gate_nor": "NOR",
+    "gate_xor": "XOR",
+    "coverage": "coverage",
+    "gates_done": "gates full",
+    "row": "row"
+  },
+  "hints": {
+    "1": {
+      "1": "Pick a gate. Then toggle A and B — each new combination writes a new row.",
+      "2": "You need every row (0,0), (0,1), (1,0), (1,1) filled for one gate, then repeat for a second gate.",
+      "3": "Try AND then OR: two gates, four rows each — eight recordings total, and you are done."
+    },
+    "2": {
+      "1": "S (sum) should be 1 exactly when A and B are different. Which gate does that?",
+      "2": "C (carry) should be 1 exactly when both A and B are 1. That is the classic AND behaviour.",
+      "3": "SUM = XOR, CARRY = AND. Set the two slots to XOR and AND and read off the matching table."
+    },
+    "3": {
+      "1": "Systematically test (0,0), (0,1), (1,0), (1,1) — record what the LED shows on paper first, then fill the cells.",
+      "2": "Click each output cell to toggle 0/1. Cells start blank. Fill all four before pressing SUBMIT.",
+      "3": "Row (0,0): does the LED light up? If yes, the gate is NAND or NOR. If no, it is one of AND/OR/XOR."
+    }
+  }
+}

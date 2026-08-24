@@ -1,0 +1,63 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser le poids orange $P_2$ le long de la barre. Observe le panneau des moments : $M_1 = P_1 \\cdot d_1$ tire en sens antihoraire, $M_2 = P_2 \\cdot d_2$ tire en sens horaire. La barre se stabilise à l'horizontale quand ils s'annulent.",
+      "concept": "Théorème des moments par rapport à un axe fixe : un solide libre de tourner autour de $\\Delta$ est en équilibre quand la somme algébrique des moments extérieurs s'annule — $\\sum M_\\Delta(\\vec F_{ext}) = 0$. Pour deux poids suspendus de part et d'autre du pivot, cela se réduit à $P_1 \\cdot d_1 = P_2 \\cdot d_2$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois scénarios. Chacun fixe $P_1$, $d_1$ et $P_2$ — tu règles $d_2$ pour que la barre s'équilibre. Fais glisser $P_2$, puis appuie sur Confirmer (ou Espace). Tu disposes de 5 essais pour résoudre les 3.",
+      "concept": "Pour chaque scénario, applique $P_1 \\cdot d_1 = P_2 \\cdot d_2$ et résous pour le bras de levier inconnu : $d_2 = \\dfrac{P_1 \\cdot d_1}{P_2}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le panneau des moments est éteint. La barre n'oscille plus pour te guider. Lis $P_1$, $d_1$ et $P_2$ sur les étiquettes, calcule $d_2$ sur papier, fais glisser $P_2$ à cette position, puis Confirme. Un tir par scénario.",
+      "concept": "Application aveugle du théorème des moments : $d_2 = \\dfrac{P_1 \\cdot d_1}{P_2}$. Le signe compte — si $P_2$ est du même côté de $\\Delta$ que $P_1$, les deux moments poussent dans le même sens et la barre ne peut pas s'équilibrer.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "CONFIRMER",
+    "shots": "TIRS",
+    "lit": "RÉSOLUS",
+    "target": "SCÉNARIO",
+    "exhausted": "ESSAIS ÉPUISÉS · RÉINITIALISE POUR RÉESSAYER",
+    "stage": "ÉTAPE",
+    "tip1": "fais glisser P2 le long de la barre",
+    "tip2": "ajuste d2, puis appuie sur ESPACE",
+    "tip3": "calcule d2, règle-le, puis confirme",
+    "momentM1": "M1",
+    "momentM2": "M2",
+    "momentSum": "ΣM",
+    "momentUnit": "N·cm",
+    "forceUnit": "N",
+    "distUnit": "cm",
+    "balanced": "ÉQUILIBRE",
+    "notBalanced": "DÉSÉQUILIBRÉ",
+    "peekStrategy": "d2 = P1·d1 / P2",
+    "peekNow": "d2 actuel"
+  },
+  "hints": {
+    "1": {
+      "1": "Attrape le poids orange et fais-le glisser le long de la barre. La barre bascule vers le moment qui l'emporte.",
+      "2": "Deux moments agissent sur la barre : $M_1$ dû à $P_1$ (antihoraire, positif) et $M_2$ dû à $P_2$ (horaire, négatif quand $P_2$ est à droite du pivot).",
+      "3": "L'équilibre a lieu quand $M_1 + M_2 = 0$, c'est-à-dire $P_1 \\cdot d_1 = P_2 \\cdot d_2$. Essaie de glisser $P_2$ jusqu'à ce que le panneau des moments affiche $\\Sigma M \\approx 0$."
+    },
+    "2": {
+      "1": "Lis $P_1$, $d_1$ et $P_2$ sur les étiquettes de la barre pour le scénario en cours.",
+      "2": "Calcule la cible $d_2 = P_1 \\cdot d_1 / P_2$. Exemple : $P_1 = 4$ N, $d_1 = 15$ cm, $P_2 = 6$ N donne $d_2 = 10$ cm.",
+      "3": "Fais glisser $P_2$ pour que l'affichage en direct de d2 en haut à droite corresponde à ta valeur calculée, puis appuie sur Confirmer. Le budget est de 5 essais pour 3 scénarios."
+    },
+    "3": {
+      "1": "L'inclinaison est figée — tu ne peux plus deviner l'équilibre à l'œil. Fais d'abord l'arithmétique sur papier.",
+      "2": "$d_2 = P_1 \\cdot d_1 / P_2$. Le $d_2$ actuel apparaît dans le coin en haut à droite quand tu glisses.",
+      "3": "Aperçu affiche le théorème plus ton $d_2$ actuel — vérifie ta réponse papier, puis Confirme. Un tir par scénario."
+    }
+  }
+}

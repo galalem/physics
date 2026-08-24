@@ -1,0 +1,69 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Déplace les curseurs $R$, $L$ et $C$. La courbe de gain de Bode culmine à la fréquence de résonance $f_0 = 1/(2\\pi\\sqrt{L\\,C})$ et décroît de part et d'autre. $R$ contrôle la finesse (facteur de qualité $Q$ et bande passante $\\Delta f$). Avance après avoir visité au moins $3$ décades différentes de $f_0$.",
+      "concept": "Un filtre passe-bande R-L-C série (sortie aux bornes de $R$) a $|H(f)| = 1/\\sqrt{1 + Q^2\\,(f/f_0 - f_0/f)^2}$ avec $f_0 = 1/(2\\pi\\sqrt{L\\,C})$ et $Q = 2\\pi\\,f_0\\,L/R$. À $f_0$ les réactances de $L$ et $C$ se compensent, le courant est maximal et $|H| = 0\\,\\text{dB}$. La bande passante entre les deux points à $-3\\,\\text{dB}$ est $\\Delta f = f_0/Q$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Règle $L$ et $C$ pour que le pic se place sur le trait orange en pointillés à $f_0 = 2\\,\\text{kHz}$. Plusieurs couples $(L, C)$ marchent — il faut $L\\,C = 1/(2\\pi\\,f_0)^2$. $R$ ne change pas $f_0$ ; il ne fait qu'élargir ou resserrer le pic.",
+      "concept": "Dimensionnement : $L\\,C = 1/(2\\pi\\,f_0)^2$. Pour $f_0 = 2000\\,\\text{Hz}$ : $L\\,C \\approx 6{,}33\\times10^{-9}\\,\\text{s}^2$. Exemples : $L = 6{,}33\\,\\text{mH}$ avec $C = 1\\,\\mu\\text{F}$, ou $L = 63{,}3\\,\\text{mH}$ avec $C = 100\\,\\text{nF}$. Seul le produit compte pour $f_0$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les valeurs des composants sont cachées. Lis la fréquence de résonance $f_0$ sur la courbe de gain de Bode — c'est le sommet du pic (où $|H| = 0\\,\\text{dB}$). Réponds correctement à toutes les questions en une seule passe ; une erreur remet le paquet à zéro.",
+      "concept": "Lecture de $f_0$ : repère le sommet du pic, puis fais descendre une verticale sur l'axe des fréquences. Les deux points à $-3\\,\\text{dB}$ de part et d'autre encadrent la bande passante $\\Delta f$ ; le pic se place (en échelle log) entre eux.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit_title": "passe-bande R-L-C série",
+    "bode_title": "|H(f)| — gain de Bode",
+    "phase_title": "arg H(f) — phase",
+    "controls_title": "commandes",
+    "field_R": "résistance R",
+    "field_L": "inductance L",
+    "field_C": "capacité C",
+    "field_derived": "dérivé",
+    "v_in": "u_e",
+    "v_out": "u_s",
+    "regions": "régions",
+    "matched": "cible atteinte",
+    "target": "cible",
+    "target_f0": "f_0 cible",
+    "question": "question",
+    "evaluate_prompt": "Valeurs des composants cachées. Lis f_0 (le pic) uniquement sur le diagramme de Bode.",
+    "wrong_restart": "faux — reprise",
+    "all_correct": "tout correct",
+    "tip1": "L↑ ou C↑ → le pic se décale à gauche ;  f_0 = 1/(2π·√(L·C))",
+    "tip2": "règle L·C pour que le pic tombe sur le trait orange ;  R ne fixe que la largeur",
+    "tip3": "lis f_0 au sommet du pic — une seule erreur remet le paquet à zéro",
+    "peek_tip_1": "À $f = f_0$ le module est maximal ($0\\,\\text{dB}$). Trouve le sommet du pic et lis l'axe des x.",
+    "peek_tip_2": "Les deux croisements à $-3\\,\\text{dB}$ encadrent $f_0$. Sur un axe log, $f_0$ se place à la moyenne géométrique : $f_0 = \\sqrt{f_L\\,f_H}$.",
+    "peek_tip_3": "La courbe de phase croise $0°$ exactement à $f_0$. Prolonge la ligne de phase jusqu'à l'axe au point de croisement zéro."
+  },
+  "hints": {
+    "1": {
+      "1": "Le point violet marque f_0, le sommet de la courbe. Essaie d'augmenter L et regarde-le glisser à gauche.",
+      "2": "f_0 = 1/(2π·√(L·C)). Doubler L divise f_0 par √2. R seul ne déplace pas f_0 — il ne change que Q.",
+      "3": "Visite 3 décades : essaie un petit L·C (pic vers 100 kHz), moyen (vers 1 kHz), et grand (vers 100 Hz)."
+    },
+    "2": {
+      "1": "Il faut L·C = 1/(2π·2000)² ≈ 6,33×10⁻⁹ s². Choisis un C rond puis calcule L.",
+      "2": "Essaie C = 1 µF. Alors L = 6,33×10⁻⁹ / 10⁻⁶ = 6,33 mH.",
+      "3": "Ou C = 100 nF avec L = 63,3 mH. Ou C = 10 µF avec L = 0,633 mH. R est libre — il ne fixe que la largeur."
+    },
+    "3": {
+      "1": "Trouve le sommet du pic. Cette fréquence est f_0.",
+      "2": "Le trait de référence à −3 dB croise la courbe deux fois. f_0 est à mi-chemin des croisements sur l'axe log (moyenne géométrique).",
+      "3": "Recoupe avec le diagramme de phase : phase = 0° à f_0. Lis l'axe des x au passage par zéro de la phase."
+    }
+  }
+}

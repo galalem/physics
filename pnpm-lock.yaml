@@ -70,7 +70,162 @@ importers:
         specifier: ^5.7.2
         version: 5.9.3
 
+  exercises/actions-mecaniques-basique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/amplificateur-operationnel:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/analyse-spectrale-signal:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/bande-passante-filtre:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/bobine:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/caracteristiques-lentille:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -442,6 +597,68 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/classification-lentilles:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/cohesion-noyau-interaction-forte:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/condensateur:
     dependencies:
       '@physics/sdk':
@@ -473,7 +690,131 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/conductibilite-electrique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/convertisseur-analogique-numerique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/convertisseur-numerique-analogique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/courant-du-secteur:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/demodulation-am:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -566,7 +907,69 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/dipole-generateur:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/dipole-rc:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/dipole-resistor:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -659,7 +1062,131 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/diviseurs-tension-courant:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/dynamique-translation:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/electrisation:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/energie-cinetique-avance:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/energie-cinetique-basique:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -752,7 +1279,193 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/energie-thermique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/equilibre-axe-fixe:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/equilibre-trois-forces:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/equivalence-masse-energie:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/etats-physiques-matiere:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/filtrage-generalites:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/filtre-passe-bande:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -814,6 +1527,99 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/filtre-passe-haut:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/fission-nucleaire:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/focometrie:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/force-de-laplace:
     dependencies:
       '@physics/sdk':
@@ -845,7 +1651,100 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/force-de-lorentz:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/forces-equilibre-basique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/forces-pression-basique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/fusion-nucleaire:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -908,6 +1807,68 @@ importers:
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
   exercises/gravitation-universelle-basique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/image-lentille:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/intensite-courant:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -1062,7 +2023,131 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/loi-pouillet:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/lunette-astronomique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/masse-corps:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/microscope:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/modeles-equivalents-thevenin-norton:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -1124,7 +2209,162 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/modulation-frequence:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/moteur-electrique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/mouvement-basique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/mouvement-champ-electrique-uniforme:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/mouvement-champ-magnetique-uniforme:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/mouvement-circulaire-uniforme:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -1279,6 +2519,68 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/mouvement-satellites:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/oeil-modele-optique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/onde-progressive-ebranlement:
     dependencies:
       '@physics/sdk':
@@ -1311,6 +2613,68 @@ importers:
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
   exercises/onde-sinusoidale-entretenue:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/ondes-electromagnetiques:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/oscillations-electriques-entretenues:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -1434,6 +2798,130 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/pendule-elastique-force:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/pendule-elastique-libre:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/point-de-fonctionnement:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/portes-logiques:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/poussee-archimede:
     dependencies:
       '@physics/sdk':
@@ -1527,7 +3015,224 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/propagation-lumiere:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/proprietes-matiere:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/puissance-energie-electrique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/quantification-energie:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/radioactivite-types-rayonnements:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/recepteurs-actifs:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/recepteurs-passifs:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/redressement-courant:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -1620,7 +3325,100 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/refraction-lumiere:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/refraction-onde:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/relation-conjugaison-grandissement:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/rotation-solide:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -1682,6 +3480,37 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/signaux-non-sinusoidaux:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/spectre-atome-hydrogene:
     dependencies:
       '@physics/sdk':
@@ -1713,7 +3542,100 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/spectre-vision:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/spectres-lumineux:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/spectrographe-de-masse:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/stabilite-noyau:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*
@@ -1806,7 +3728,162 @@ importers:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
 
+  exercises/systemes-interactions-mecaniques:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/tension-alternative:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/tension-electrique:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
   exercises/terre-univers:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/transformateur:
+    dependencies:
+      '@physics/sdk':
+        specifier: workspace:*
+        version: link:../../runtime/sdk
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@physics/preview':
+        specifier: workspace:*
+        version: link:../../runtime/preview
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.31
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.7(@types/react@18.3.31)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.3
+        version: 4.7.0(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)(sass@1.101.3)
+
+  exercises/transistor:
     dependencies:
       '@physics/sdk':
         specifier: workspace:*

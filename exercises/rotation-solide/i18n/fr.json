@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Règle la vitesse angulaire initiale $\\omega_0$ et l'accélération angulaire $\\alpha$, puis appuie sur LANCER. Observe les flèches de vitesse tangentielle à chaque repère pendant que le disque tourne. Effectue au moins trois lancements avec deux valeurs différentes de $\\omega_0$ et déplace le curseur $\\alpha$ au moins une fois.",
+      "concept": "Rotation d'un solide : chaque point partage le même $\\omega$ et le même $\\alpha$. La vitesse tangentielle dépend du rayon : $v = r \\cdot \\omega$. Cinématique angulaire : $\\omega(t) = \\omega_0 + \\alpha t$, $\\theta(t) = \\omega_0 t + \\tfrac{1}{2}\\alpha t^{2}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Chaque cible demande une vitesse tangentielle précise à un repère précis. Les flèches en direct montrent la vitesse actuelle à chaque repère — ajuste $\\omega_0$ et $\\alpha$ pour que chaque repère atteigne sa vitesse cible à un instant donné pendant la rotation.",
+      "concept": "Pour le repère $k$ situé au rayon $r_k$, la condition d'atteinte est $r_k \\cdot \\omega(t_k) = v_k$ pour un $t_k \\in [0, T]$. Une rotation uniforme ($\\alpha = 0$) atteint toutes les cibles seulement si tous les $v_k / r_k$ sont égaux ; sinon il faut $\\alpha \\neq 0$ pour balayer $\\omega$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches sont masquées. Lis pour chaque cible le repère, le rayon $r$ et la vitesse requise $v$. Calcule le $\\omega = v/r$ nécessaire pour chacune, puis choisis $\\omega_0$ et $\\alpha$ de sorte que $\\omega(t) = \\omega_0 + \\alpha t$ passe par chaque valeur pendant $t \\in [0, T]$. Tu disposes d'un nombre limité de lancements.",
+      "concept": "Pour un balayage monotone de $\\omega_a$ à $\\omega_b$ sur $T$ : $\\omega_0 = \\omega_a$, $\\alpha = (\\omega_b - \\omega_a)/T$. Toute valeur requise $\\omega^{*} \\in [\\omega_a, \\omega_b]$ est atteinte en $t^{*} = (\\omega^{*} - \\omega_0)/\\alpha$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "spin": "LANCER",
+    "hits": "RÉUSSIES",
+    "shots": "LANCERS",
+    "stage": "ÉTAPE",
+    "targets": "CIBLES",
+    "marker": "REPÈRE",
+    "time": "t",
+    "tip1": "règle ω₀ et α, puis LANCER — essaie deux valeurs différentes de ω₀",
+    "tip2": "observe la flèche de chaque repère — réussie quand sa longueur correspond à la vitesse cible",
+    "tip3": "calcule ω = v/r pour chaque cible, choisis ω₀ et α, puis LANCER",
+    "peek_tip_vromega": "Rappel : v = r·ω. Pour chaque cible, la vitesse angulaire requise est ω = v/r.",
+    "peek_tip_uniform": "La rotation uniforme (α = 0) atteint toutes les cibles seulement si tous les rapports v/r sont égaux.",
+    "peek_tip_sweep": "Pour un balayage : prends ω₀ = plus petit ω requis, puis α = (plus grand − plus petit)/T."
+  },
+  "hints": {
+    "1": {
+      "1": "Le curseur vertical à droite règle ω₀ ; le curseur horizontal en bas règle α.",
+      "2": "Les flèches tangentielles sont proportionnelles à r·ω — un repère plus éloigné de l'axe dessine une flèche plus longue pour le même ω.",
+      "3": "Règle α ≠ 0 et regarde comment la longueur des flèches augmente ou diminue pendant un seul lancement."
+    },
+    "2": {
+      "1": "Pour chaque cible, le ω requis vérifie r·ω = v_cible. Lis l'étiquette de la cible et calcule.",
+      "2": "Si toutes les valeurs de ω requises sont égales, règle cette valeur de ω₀ et laisse α = 0.",
+      "3": "Sinon, ordonne les valeurs de ω requises, place la plus petite comme ω₀ et règle α pour que ω atteigne la plus grande à t = T."
+    },
+    "3": {
+      "1": "Pour chaque cible : lis r, lis v_cible, calcule ω_k = v_cible / r.",
+      "2": "Si toutes les valeurs de ω_k sont égales, α = 0 et ω₀ = cette valeur suffit à valider toutes les cibles en un seul lancement.",
+      "3": "Cas du balayage : ω₀ = min(ω_k), α = (max(ω_k) − min(ω_k)) / T. Chaque ω_k est atteint à t = (ω_k − ω₀)/α."
+    }
+  }
+}

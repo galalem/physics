@@ -1,0 +1,77 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Quatre emplacements forment une boucle série. Fais glisser des composants depuis la palette pour construire un circuit fonctionnel et place l'ampèremètre pour lire l'intensité $I$ (en mA). Déplace l'ampèremètre vers deux emplacements différents et vérifie que la lecture est la même — le courant se conserve autour d'une boucle série.",
+      "concept": "L'intensité du courant $I$ mesure le débit de charges traversant une section : $I = \\Delta Q / \\Delta t$, en ampères ($1\\,\\text{A} = 1\\,\\text{C/s}$). Dans une boucle série, $I$ est la même en tout point — un ampèremètre indique la même valeur où qu'il soit placé dans la boucle.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Deux cibles. Insère l'ampèremètre dans la boucle et choisis les bons dipôles pour que la lecture corresponde tour à tour à chaque intensité cible. Ajouter un résistor fait chuter le courant ; le retirer restaure la valeur pleine.",
+      "concept": "L'intensité $I$ du courant est fixée par la source et par ce que contient le circuit. Pour une pile donnée, une résistance totale plus grande signifie une intensité $I$ plus petite. L'ampèremètre, branché en série, ne perturbe pas la boucle — il ne fait que rapporter.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Trois emplacements sont pré-remplis. Un est vide. Choisis l'unique composant qui satisfait l'objectif affiché dans le coin et dépose-le — un seul essai. La lecture de l'ampèremètre reste cachée jusqu'à validation.",
+      "concept": "Avant de toucher la palette, raisonne sur papier : la boucle est-elle déjà fermée ? Y a-t-il un récepteur ? Faut-il mesurer, compléter, ou recevoir le courant ? Puis valide.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "schéma",
+    "palette": "palette",
+    "targets": "CIBLES",
+    "comp_battery": "pile",
+    "comp_lamp": "lampe",
+    "comp_wire": "fil",
+    "comp_resistor": "résistor",
+    "comp_ammeter": "ampèremètre",
+    "measured_I": "I mesurée",
+    "uniform_I": "même I deux fois",
+    "target_current": "cible",
+    "current_read": "I",
+    "unit_mA": "mA",
+    "hidden_reading": "?",
+    "place_component": "choisis et place",
+    "correct": "correct",
+    "wrong": "faux",
+    "attempts_left": "essais restants",
+    "puzzle_of": "puzzle",
+    "goal_prefix": "objectif",
+    "goal_measure": "ajoute un appareil qui mesure I sans changer le circuit",
+    "goal_receive": "ajoute le récepteur pour que le courant puisse circuler",
+    "goal_close": "ferme la boucle sans changer la lecture de l'ampèremètre",
+    "diag_incomplete": "boucle cassée — remplis chaque emplacement",
+    "diag_no_battery": "pas de source — rien pour faire circuler le courant",
+    "diag_no_lamp": "pas de récepteur dans la boucle",
+    "diag_no_ammeter": "boucle fermée — dépose l'ampèremètre pour lire I",
+    "diag_ok": "circuit fermé",
+    "tip1": "glisse depuis la palette ; sors un composant placé pour le retirer ; l'ampèremètre indique I en mA",
+    "tip2": "l'ampèremètre doit être dans la boucle pour que la lecture compte — change les résistors pour modifier I",
+    "tip3": "lis l'objectif, raisonne sur papier, puis place un composant",
+    "peek_tip": "L'intensité I est la même en tout point d'une boucle série. Demande-toi ce dont l'objectif a vraiment besoin : un appareil de mesure (ampèremètre), un récepteur (lampe), ou un simple conducteur (fil) ?"
+  },
+  "hints": {
+    "1": {
+      "1": "Commence par glisser quatre composants sur les quatre emplacements pour qu'une lampe s'allume.",
+      "2": "Place l'ampèremètre dans l'un des emplacements vides et lis le nombre qui apparaît au-dessus.",
+      "3": "Déplace l'ampèremètre vers un deuxième emplacement de la même boucle. La lecture ne doit pas changer — c'est ce que signifie « I est uniforme »."
+    },
+    "2": {
+      "1": "Seules les lectures prises avec l'ampèremètre réellement dans la boucle comptent pour une cible.",
+      "2": "Le courant pleine puissance est 240 mA. Ajouter un seul résistor le fait chuter à 60 mA.",
+      "3": "Pour la cible 240 mA : pile + fil + lampe + ampèremètre. Pour la cible 60 mA : pile + résistor + lampe + ampèremètre."
+    },
+    "3": {
+      "1": "Lis la puce d'objectif dans le coin supérieur droit. Elle t'indique le rôle que le composant manquant doit jouer.",
+      "2": "Un fil ferme une boucle sans ajouter de résistance. Un ampèremètre mesure I. Une lampe est un récepteur. Un résistor abaisse I.",
+      "3": "Fais correspondre le rôle manquant à l'objectif : « mesurer I » → ampèremètre, « récepteur » → lampe, « fermer la boucle » → fil."
+    }
+  }
+}

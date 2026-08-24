@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A mass hangs from a spring. Adjust the mass $m$ and the spring stiffness $k$, then press CONFIRM to log each configuration. Watch how the elongation $\\Delta L$ changes as you vary $m$ and $k$.",
+      "concept": "At rest, two collinear forces act on the mass: weight $P = m \\cdot g$ (down) and spring reaction $R = k \\cdot \\Delta L$ (up). Equilibrium requires $\\sum F_{\\text{ext}} = 0$, so $R = P$ and $\\Delta L_{\\text{eq}} = \\dfrac{m g}{k}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Match each highlighted target elongation $\\Delta L$. Tune $m$ and $k$ until the spring settles at the target, then press CONFIRM. Hit all three targets to advance.",
+      "concept": "Two DOFs, one relation: $\\Delta L_{\\text{eq}} = \\dfrac{m g}{k}$. Any $(m, k)$ satisfying this reaches the same $\\Delta L$ — double $m$ and double $k$ leaves $\\Delta L$ unchanged.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The force arrows and force readouts are hidden. Each target shows the required elongation $\\Delta L$ and the spring stiffness $k$. Compute the mass $m$ that produces equilibrium at that $\\Delta L$, set the sliders, then CONFIRM. You have one submission per target — plan on paper before you commit.",
+      "concept": "Equilibrium of two collinear forces: $\\sum F = 0 \\Rightarrow R = P \\Rightarrow k \\cdot \\Delta L = m g$. Solve for the unknown: $m = \\dfrac{k \\cdot \\Delta L}{g}$ and $P = k \\cdot \\Delta L$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "confirm": "CONFIRM",
+    "stage": "STAGE",
+    "hits": "HITS",
+    "shots": "SUBMITS",
+    "mass": "m",
+    "stiffness": "k",
+    "weight": "P",
+    "reaction": "R",
+    "netforce": "ΣF",
+    "elongation": "ΔL",
+    "support": "SUPPORT",
+    "target": "TARGET",
+    "tip1": "adjust m, adjust k, then CONFIRM",
+    "tip2": "match each ΔL target, CONFIRM to lock it in",
+    "tip3": "compute m = k·ΔL/g on paper, then CONFIRM",
+    "peek_tip_balance": "At equilibrium R = P, so k·ΔL = m·g. Solve m = k·ΔL/g.",
+    "peek_tip_double": "Doubling k halves ΔL for the same mass. Doubling m doubles ΔL for the same spring.",
+    "peek_tip_units": "Keep units clean: m in kg, k in N/m, ΔL in m, g ≈ 9.81 m/s². Then P and R come out in N.",
+    "eq_label": "equilibrium",
+    "no_eq_label": "not at equilibrium",
+    "success": "hit",
+    "fail": "miss"
+  },
+  "hints": {
+    "1": {
+      "1": "Drag the mass slider left and right — watch the spring stretch.",
+      "2": "The vertical slider on the right sets spring stiffness k. Stiffer spring = shorter elongation for the same weight.",
+      "3": "Press CONFIRM after each change to log the configuration. Try at least two very different masses."
+    },
+    "2": {
+      "1": "Read the target ΔL on the ruler beside the spring. Tune m and k until the spring settles there.",
+      "2": "For a given target ΔL, any (m, k) pair with m/k = ΔL/g works. There are infinitely many valid pairs.",
+      "3": "If the spring is too short, either increase m or decrease k. Confirm only when the mass sits on the target line."
+    },
+    "3": {
+      "1": "The target shows ΔL and k. Everything you need to compute m is on screen.",
+      "2": "Apply the equilibrium condition: k·ΔL = m·g. Solve for m before touching the sliders.",
+      "3": "m = k·ΔL/g. Compute it, dial it in, CONFIRM. One shot per target — do the math first."
+    }
+  }
+}

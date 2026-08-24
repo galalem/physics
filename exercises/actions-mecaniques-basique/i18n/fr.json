@@ -1,0 +1,77 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une balle repose sur une table pendant qu'une main la pousse latéralement. Clique sur chaque flèche étiquetée pour inspecter l'action mécanique qu'elle représente. Chaque action est soit $\\text{de contact}$ soit $\\text{à distance}$, et soit $\\text{localisée}$ soit $\\text{répartie}$.",
+      "concept": "Une action mécanique est exercée par un objet (l'acteur) sur un autre (le système). Les actions de contact nécessitent que l'acteur touche le système ; les actions à distance (poids, magnétisme) agissent à travers l'espace. Une action est $\\text{localisée}$ quand elle s'applique en un seul point, et $\\text{répartie}$ quand elle s'étale sur une surface.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois scènes défilent. Pour chaque scène, clique sur les flèches candidates pour que seules les actions mécaniques correctes sur le système restent sélectionnées, puis appuie sur $\\text{VALIDER}$. Tu disposes de $5$ validations pour $3$ scènes.",
+      "concept": "Pour dresser l'inventaire des actions mécaniques, liste chaque objet voisin qui touche le système (actions de contact) et chaque objet distant exerçant une influence (actions à distance). Ignore les effets négligés comme la résistance de l'air, sauf mention explicite.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La scène ne montre que le système — aucune flèche candidate n'est dessinée. Dans la liste ci-dessous, choisis les actions mécaniques qui s'appliquent réellement, puis appuie sur $\\text{VALIDER}$. Une validation par scène. Un raté et l'étape recommence.",
+      "concept": "Recette : (1) nomme le système, (2) liste chaque objet en contact avec lui, (3) liste chaque acteur distant (Terre, aimant…). Chaque objet exerce exactement une action. Rien d'autre ne compte.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "submit": "VALIDER",
+    "next": "SUIVANT",
+    "reset": "RÉINITIALISER",
+    "score": "SCORE",
+    "scene": "SCÈNE",
+    "submits": "VALIDATIONS",
+    "lit": "RÉUSSIES",
+    "tip1": "clique sur chaque flèche pour inspecter sa classification",
+    "tip2": "bascule les flèches, puis VALIDE l'inventaire",
+    "tip3": "choisis les actions applicables, puis VALIDE",
+    "category_contact": "CONTACT",
+    "category_distance": "À DISTANCE",
+    "distribution_localised": "LOCALISÉE",
+    "distribution_distributed": "RÉPARTIE",
+    "action_weight": "Poids (Terre)",
+    "action_table_contact": "Contact de la table",
+    "action_hand": "Poussée de la main",
+    "action_shelf_contact": "Contact de l'étagère",
+    "action_magnet": "Attraction de l'aimant",
+    "action_spring": "Traction du ressort",
+    "action_air": "Frottement de l'air",
+    "action_ground_contact": "Contact du sol",
+    "action_thread": "Tension du fil",
+    "scene_ball_on_table": "Balle sur une table, main poussant latéralement",
+    "scene_book_on_shelf": "Livre posé sur une étagère",
+    "scene_magnet_nail": "Aimant suspendu au-dessus d'un clou en fer",
+    "scene_spring_mass": "Masse tirée par un ressort horizontal sur une table",
+    "select": "SÉLECTIONNER",
+    "chosen": "CHOISIES",
+    "correct": "CORRECT",
+    "miss": "RATÉ",
+    "peek_hint": "Liste les voisins en contact = actions de contact. Acteurs distants (Terre, aimant) = à distance."
+  },
+  "hints": {
+    "1": {
+      "1": "Clique sur n'importe quelle flèche de la scène pour la sélectionner.",
+      "2": "La classification de chaque flèche apparaît en haut à droite lorsqu'elle est sélectionnée : contact vs à distance, et localisée vs répartie.",
+      "3": "Le poids est ici la seule action à distance ; le contact de la table est réparti sur le dessous de la balle ; la main agit en un seul point."
+    },
+    "2": {
+      "1": "Lis le nom de la scène dans la barre du haut. Ignore toute flèche candidate qui n'a pas d'acteur réel dans cette scène.",
+      "2": "Pour chaque acteur en contact avec le système, il y a une action de contact. Les acteurs distants (Terre, aimant) produisent des actions à distance.",
+      "3": "Livre sur étagère : poids + contact de l'étagère uniquement. Aimant + clou : poids + attraction magnétique (pas de contact direct). Traction du ressort : poids + contact de la table + traction du ressort."
+    },
+    "3": {
+      "1": "Nomme le système en silence, puis liste chaque objet voisin.",
+      "2": "Chaque objet voisin donne une action. Ajoute la Terre pour le poids, ainsi que tout aimant ou ressort agissant de loin.",
+      "3": "Élimine les distracteurs : le frottement de l'air est ici négligé, une main n'agit que si elle est dessinée en train de toucher l'objet."
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Pick a receiver, then move the sliders. Watch the load line $U = E - r \\cdot I$ swing on the graph and cross the receiver characteristic $U = f(I)$. Their intersection is the operating point $(I^*, U^*)$ — the one $(I, U)$ pair the circuit settles at.",
+      "concept": "A real generator obeys $U = E - r \\cdot I$ (a decreasing line on the $I$-$U$ plane). Every receiver has its own characteristic $U = f(I)$. In steady state the same current runs through both and the same voltage sits across them, so $(I^*, U^*)$ must be on both curves at once. Graphical solving handles non-linear receivers (a diode holds $U \\approx V_d$) just as easily as linear ones.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Reach the target operating point (red circle) by tuning $E$ and $r$. Both $I^*$ and $U^*$ must land within $\\pm 5\\%$ of the labelled target.",
+      "concept": "For a linear receiver $U = E' + r' \\cdot I$ (set $E' = 0$ for a passive resistor $R$), equating with the load line gives $I^* = (E - E') / (r + r')$ and $U^* = E' + r' \\cdot I^*$. Tilting $r$ pivots the load line; sliding $E$ shifts it up or down.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The intersection dot is hidden. The load line and receiver characteristic are still drawn, and the four circuit parameters are labelled. Compute $I^*$ and $U^*$ on paper, then enter both values. Three attempts per scenario — ace three consecutive scenarios to finish.",
+      "concept": "Solve the pair $U = E - r \\cdot I$ and $U = E' + r' \\cdot I$ simultaneously: $I^* = (E - E') / (r + r')$, then $U^* = E - r \\cdot I^*$ (or equivalently $U^* = E' + r' \\cdot I^*$). For a passive resistor set $E' = 0$ and $r' = R$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "schematic",
+    "graph": "I - U characteristics",
+    "targets": "TARGETS",
+    "deck": "DECK",
+    "attempts_left": "attempts left",
+    "correct": "correct",
+    "wrong": "wrong",
+    "given": "given",
+    "solve_for": "solve for",
+    "submit": "submit",
+    "unit_amp": "A",
+    "unit_volt": "V",
+    "unit_ohm": "Ω",
+    "recv_resistor": "resistor",
+    "recv_motor": "motor",
+    "recv_diode": "diode",
+    "diode_note": "ideal diode: Vd = 0.7 V, no slider",
+    "tip1": "cycle the three receiver types and slide E, r to feel how the intersection moves",
+    "tip2": "the target lives on the load line only when E and r are set right — read them off the graph",
+    "tip3": "read E, r and the receiver parameters, solve the two lines, enter I* and U*",
+    "peek_tip": "Two lines, one crossing. Linear receiver: I* = (E − E')/(r + r'); then U* = E' + r'·I* (a resistor is E'=0, r'=R). Diode: U* = Vd, I* = (E − Vd)/r.",
+    "scenario_progress": "scenario",
+    "of": "of",
+    "coverage_moved": "OP moved",
+    "load_line": "load line",
+    "recv_curve": "receiver",
+    "op_point": "operating point"
+  },
+  "hints": {
+    "1": {
+      "1": "Click one of the three receiver buttons and move any slider. The green curve is the receiver, the orange line is the generator.",
+      "2": "Try each receiver in turn. Notice the receiver curve shape: through the origin for the resistor, offset upward for the motor, flat at Vd for the diode.",
+      "3": "The intersection dot is the operating point. Raise E: the load line lifts and the intersection climbs the receiver curve. Raise r: the line tilts steeper and the intersection slides down."
+    },
+    "2": {
+      "1": "The target dot has fixed I* and U*. Move E and r until the yellow dot lands on it.",
+      "2": "Set E first so the load line's y-intercept is near the target's U-column, then adjust r so the line tilts through the target.",
+      "3": "For a resistor R, U* = R·I* is automatic once I* is right. For a motor, U* = E' + r'·I* is also automatic. Focus on making I* = (E − E')/(r + r') equal the target."
+    },
+    "3": {
+      "1": "Read the labels: E, r come from the generator; R (or E', r') come from the receiver. Write down the two line equations.",
+      "2": "Set the load line equal to the receiver line and solve for I*. Substitute back into either line to get U*. Watch the sign: I* must be positive.",
+      "3": "Linear receiver: I* = (E − E')/(r + r'). Resistor case: I* = E/(r + R), U* = R·I*. Motor case: U* = E' + r'·I*. Rounded to two decimals is enough — tolerance is ±5%."
+    }
+  }
+}

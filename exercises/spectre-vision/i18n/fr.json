@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "La lumière blanche de la lampe frappe un prisme en verre. Attrape le prisme et fais-le tourner — une bande arc-en-ciel complète apparaît sur l'écran. Remarque : le violet se trouve toujours plus haut que le rouge, et faire tourner le prisme décale toute la bande en bloc.",
+      "concept": "Un prisme disperse la lumière blanche parce que son indice de réfraction $n(\\lambda)$ dépend de la longueur d'onde. Plus $\\lambda$ est petite (violet) $\\Rightarrow$ plus $n$ est grand $\\Rightarrow$ plus la déviation est grande. L'ordre violet $\\to$ bleu $\\to$ vert $\\to$ jaune $\\to$ orange $\\to$ rouge est fixé par la physique — faire tourner le prisme ne fait que décaler la bande, il ne réordonne pas les couleurs.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois fentes colorées sont placées près de l'écran. Pour chacune, fais tourner le prisme pour que la bande correspondante du spectre tombe sur le repère de la fente, puis appuie sur Tirer (ou Espace). Tu disposes de $5$ tirs pour $3$ fentes.",
+      "concept": "L'angle $\\varphi$ du prisme contrôle où le spectre tombe sur l'écran. Chaque fente colorée demande un $\\varphi$ différent car les fentes sont à des hauteurs différentes — aligne la couleur correspondante, puis tire.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le spectre dispersé est masqué. Seuls le rayon incident blanc, le prisme et les trois fentes colorées restent. Pour chaque fente, lis $(\\lambda^{*}, y^{*})$, calcule l'angle $\\varphi$ requis du prisme, règle-le, puis tire. Un seul tir par fente — un raté et l'étape recommence.",
+      "concept": "Position sur l'écran d'une couleur à l'angle $\\varphi$ du prisme : $y(\\lambda, \\varphi) = 225 + 260\\,\\varphi + 0{,}35\\,(\\lambda - 550)$, avec $\\varphi$ en radians et $y$ en unités de la scène. Pour la cible $(\\lambda^{*}, y^{*})$ : $\\varphi = \\dfrac{y^{*} - 225 - 0{,}35\\,(\\lambda^{*} - 550)}{260}$. Enfin $1\\ \\text{rad} \\approx 57{,}3°$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "banc optique",
+    "source": "lumière blanche",
+    "prism": "attrape pour faire tourner",
+    "screen": "écran",
+    "angle": "φ",
+    "sweep": "BALAYER",
+    "shots": "TIRS",
+    "lit": "ALLUMÉES",
+    "shot": "TIR",
+    "aim": "VISER",
+    "fire": "TIRER",
+    "miss_reset": "cible ratée — réinitialisation...",
+    "tip1": "attrape le prisme pour le faire tourner — balaie le spectre sur l'écran",
+    "tip2": "aligne chaque couleur avec sa fente, puis appuie sur ESPACE pour tirer",
+    "tip3": "calcule φ avec la formule, règle-le, puis tire (un seul tir par fente)"
+  },
+  "hints": {
+    "1": {
+      "1": "Attrape le triangle du prisme et fais-le glisser d'un mouvement circulaire autour de son centre.",
+      "2": "Faire tourner le prisme translate tout le spectre vers le haut ou vers le bas — l'ordre des couleurs ne change jamais.",
+      "3": "Le violet finit toujours plus haut sur l'écran que le rouge parce que les longueurs d'onde plus courtes dévient plus."
+    },
+    "2": {
+      "1": "Chaque fente porte à côté une pastille de couleur — c'est la longueur d'onde que tu dois amener sur le repère de la fente.",
+      "2": "Tu peux seulement translater le spectre, pas l'étirer. Vise une couleur à la fois et tire.",
+      "3": "Si une couleur manque à l'angle courant, tourne le prisme davantage jusqu'à ce que cette bande atteigne la hauteur de la fente."
+    },
+    "3": {
+      "1": "Lis la hauteur cible y et la longueur d'onde cible λ de chaque fente sur les étiquettes de l'écran.",
+      "2": "Utilise φ = (y − 225 − 0,35·(λ − 550)) / 260. L'HUD affiche ton φ courant en degrés — 1 rad ≈ 57,3°.",
+      "3": "Aperçu confirme la formule et ton φ courant. Règle φ à environ 2° près de ta réponse, puis tire."
+    }
+  }
+}

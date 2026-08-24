@@ -1,0 +1,63 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une étoile lointaine envoie des rayons parallèles dans la lunette. L'objectif fait converger ces rayons vers une image intermédiaire dans son plan focal ; l'oculaire relaie ensuite cette image à ton œil. Manipule les trois curseurs — distance focale de l'objectif $f'_1$, distance focale de l'oculaire $f'_2$, et espacement des lentilles $d$ — et observe le faisceau se reformer.",
+      "concept": "Dans le montage afocal, $d = f'_1 + f'_2$ : le plan focal arrière de l'objectif coïncide avec le plan focal avant de l'oculaire ($F'_1 \\equiv F_2$). Rayons parallèles à l'entrée $\\rightarrow$ rayons parallèles à la sortie, avec un grossissement angulaire : $G = f'_1 / f'_2 = \\alpha' / \\alpha$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins successivement les 3 grossissements cibles. Ajuste $f'_1$ et $f'_2$ pour que leur rapport soit égal à $G^*$, puis règle $d = f'_1 + f'_2$ pour que les rayons de sortie soient parallèles (afocal). Les deux indicateurs doivent être verts — puis appuie sur Confirmer.",
+      "concept": "Deux contraintes, trois curseurs : choisis n'importe quel $f'_2$, puis $f'_1 = G^* \\cdot f'_2$, et $d = f'_1 + f'_2$. Objectif long + oculaire court $\\Rightarrow$ grand grossissement.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les rayons sont cachés. Pour chaque cible $G^*$ : calcule $f'_1$, $f'_2$, $d$ sur papier de sorte que $f'_1 / f'_2 = G^*$ et $d = f'_1 + f'_2$, règle les curseurs, puis Tire. Un tir par cible — un raté et le montage se réinitialise.",
+      "concept": "Afocal : $d = f'_1 + f'_2$. Grossissement : $G = f'_1 / f'_2 = \\alpha' / \\alpha$. Les deux conditions doivent être vérifiées — le rapport décide de $G$, la somme décide de la sortie parallèle.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "banc optique",
+    "objective": "objectif",
+    "eyepiece": "oculaire",
+    "star": "étoile lointaine",
+    "match_ok": "atteint",
+    "afocal_ok": "afocal",
+    "afocal_off": "non afocal",
+    "target_short": "CIBLE",
+    "shot": "TIR",
+    "confirm": "CONFIRMER",
+    "fire": "TIRER",
+    "hit": "TOUCHÉ",
+    "miss": "RATÉ",
+    "peek_line1": "Afocal : d = f'₁ + f'₂  ·  Rapport : G = f'₁ / f'₂",
+    "peek_line2": "Choisis f'₂ librement, puis f'₁ = G* × f'₂ et d = f'₁ + f'₂",
+    "tip1": "manipule les trois curseurs — le rapport fixe G, la somme fixe l'afocal",
+    "tip2": "atteins G* ET afocal — les deux verts, puis CONFIRME",
+    "tip3": "calcule f'₁, f'₂, d sur papier — un tir par cible"
+  },
+  "hints": {
+    "1": {
+      "1": "Essaie de doubler f'₁ — l'image intermédiaire glisse vers la droite, et G double.",
+      "2": "Essaie de diviser f'₂ par deux — G double à nouveau. Petit oculaire = grand grossissement.",
+      "3": "Pour une sortie parallèle propre, règle d = f'₁ + f'₂ exactement. Toute autre valeur et les rayons divergent ou convergent."
+    },
+    "2": {
+      "1": "Lis G* sur la ligne cible. Vise f'₁/f'₂ ≈ G*.",
+      "2": "Choisis f'₂ d'abord (n'importe quelle valeur dans la plage), puis règle f'₁ = G* × f'₂.",
+      "3": "Une fois G au vert, ajuste d jusqu'à ce qu'il soit égal à f'₁ + f'₂ — la barre afocale devient verte. Puis Confirme."
+    },
+    "3": {
+      "1": "Tu as exactement un tir par cible. Calcule f'₁, f'₂, d d'abord sur papier.",
+      "2": "Deux équations : f'₁ = G* × f'₂ (n'importe quel f'₂ dans [8, 40] fonctionne), puis d = f'₁ + f'₂.",
+      "3": "Aperçu montre la stratégie — il ne révèle pas la réponse. Règle les curseurs, puis Tire."
+    }
+  }
+}

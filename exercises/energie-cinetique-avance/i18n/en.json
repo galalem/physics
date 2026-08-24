@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the cannon barrel to aim, use the $v_0$ slider to set launch speed, then FIRE. Watch the live $E_c$ gauge. Try at least two different angles and change $v_0$ to see how kinetic energy evolves.",
+      "concept": "Kinetic energy: $E_c = \\tfrac{1}{2} m v^{2}$. Along a free trajectory, the work-energy theorem $\\Delta E_c = \\sum W(F_{\\text{ext}})$ reduces to $\\Delta E_c = W(P) = -m g \\Delta z$, so $E_c(z) = \\tfrac{1}{2} m v_0^{2} - m g z$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Each target shows its position $(x, z)$ and the required $E_c$ at impact. The mass $m$ is fixed and shown in the HUD. Use the preview arc to line up each shot. Deduce $v_0$ from $E_c$, then aim.",
+      "concept": "At a target of altitude $z_T$, the impact kinetic energy is $E_c^{T} = \\tfrac{1}{2} m v_0^{2} - m g z_T$. Invert to get $v_0 = \\sqrt{\\,2 E_c^{T}/m + 2 g z_T\\,}$. The angle $\\alpha$ then chooses which trajectory of speed $v_0$ passes through $(x_T, z_T)$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No preview arc. No $E_c$ gauge. Read each target's $(x, z)$ and required $E_c$. Compute $v_0$ from the work-energy theorem, then $\\alpha$ from the trajectory equation. You get one shot per target — no spray-and-pray.",
+      "concept": "Trajectory: $z(x) = x \\tan\\alpha - \\dfrac{g x^{2}}{2 v_0^{2} \\cos^{2}\\alpha}$. If a wall of height $h$ sits at $x_w$, require $z(x_w) > h$. Two $\\alpha$ solutions per target — pick the one that clears any obstacle.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "hits": "HITS",
+    "shots": "SHOTS",
+    "stage": "STAGE",
+    "mass": "m",
+    "ec_now": "E_c",
+    "ec_req": "req.",
+    "joule": "J",
+    "tip1": "aim, change v₀, then FIRE — watch the E_c gauge fill and empty",
+    "tip2": "compute v₀ from the required E_c, aim α with the preview arc",
+    "tip3": "compute v₀ from E_c, then α from (x, z). One shot per target.",
+    "peek_tip_energy": "v₀ from energy: ½m·v₀² = E_c(target) + m·g·z(target). Solve v₀ first — angle second.",
+    "peek_tip_complementary": "Two angles reach the same point at the same v₀ (α₁ + α₂ ≈ 90° on flat ground). Pick the one that clears the wall.",
+    "peek_tip_range_max": "Range peaks at α = 45°. If (x, z) is out of reach at your v₀, no angle helps — recheck the E_c calculation."
+  },
+  "hints": {
+    "1": {
+      "1": "Drag the barrel up or down to change the launch angle α.",
+      "2": "The v₀ slider on the right sets the initial speed. Higher v₀ means more initial E_c.",
+      "3": "Watch the E_c gauge: at the peak, gravity has done the most work against the projectile, so E_c is lowest."
+    },
+    "2": {
+      "1": "For each target, read (x, z) and the required E_c. The mass m is shown in the HUD.",
+      "2": "Work-energy theorem: E_c(target) = ½m·v₀² − m·g·z. Solve for v₀ first, then aim.",
+      "3": "Once v₀ is set, use the preview arc to fine-tune α. Two α values may work — either one hits."
+    },
+    "3": {
+      "1": "No live E_c. Compute v₀ from ½m·v₀² = E_c + m·g·z. No trial-and-error — one shot per target.",
+      "2": "Trajectory equation: z(x) = x·tan α − g·x²/(2·v₀²·cos²α). Substitute the target coords and solve for tan α.",
+      "3": "For any wall of height h at x_w, require z(x_w) > h. Pick the α solution that clears it (usually the steeper one)."
+    }
+  }
+}

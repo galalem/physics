@@ -1,0 +1,64 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Move each slider — $E$, $r$, $R_1$, $R_2$ — and toggle the bottom switch to include or bypass $R_2$. Watch the ammeter $I$ and the live formula strip respond. Advance when you have engaged each control and seen a non-zero current.",
+      "concept": "Pouillet's law: for a single series loop, $I = E / (r + R_{total})$ where $R_{total} = R_1 + R_2 + \\dots$ is the sum of every resistance in the loop. The generator's internal resistance $r$ counts too.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Reach each target ammeter reading in turn. Any combination of $E$, $r$, $R_1$, $R_2$ that lands within 5% of the target counts. Both targets must be achieved to advance.",
+      "concept": "Given a target current $I$ and a fixed EMF $E$, the required total resistance is $R_{total} = E/I - r$. Choose $R_1$ and $R_2$ so their sum matches, or bypass $R_2$ with the switch when only $R_1$ is needed.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The ammeter is hidden. Read $E$, $r$, $R_1$, $R_2$ from the given panel, compute $I$ on paper using Pouillet's law, then enter your answer in amperes. Three scenarios in a row — three attempts per scenario. Exhaust the budget on any one and the deck resets.",
+      "concept": "Pouillet's law: $I = E / (r + R_1 + R_2)$. The internal resistance $r$ is in series with the external resistors — leaving it out of the sum is the classic trap.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "schematic",
+    "controls": "controls",
+    "solve": "given",
+    "coverage": "COVERAGE",
+    "targets": "TARGETS",
+    "scenario": "SCENARIO",
+    "attempts_left": "attempts left",
+    "given": "GIVEN",
+    "find": "FIND",
+    "enter_I": "enter I in amperes",
+    "submit": "submit",
+    "correct": "correct",
+    "wrong": "wrong",
+    "deck_reset": "deck reset — start over",
+    "deck_complete": "deck complete — press next",
+    "tip1": "move each slider through two values; toggle the switch; watch the ammeter respond",
+    "tip2": "hit both targets — many valid E / r / R combinations exist",
+    "tip3": "read the givens, compute I = E / (r + R₁ + R₂) on paper, then enter your answer",
+    "peek_tip": "Pouillet's law: I = E / (r + R_total). R_total is the sum of every series resistance — including the generator's internal r. Do not leave r out."
+  },
+  "hints": {
+    "1": {
+      "1": "Try moving one slider at a time and watch the ammeter A on the left of the loop.",
+      "2": "The formula strip below the schematic shows I = E / (r + R_total) evaluated live from your slider values.",
+      "3": "Click the switch on the bottom side to bypass R₂ — see how R_total drops and I rises."
+    },
+    "2": {
+      "1": "Solve for the required R_total from the target: R_total = E/I − r. Then set R₁ (and optionally R₂) so their sum matches.",
+      "2": "The switch lets you bypass R₂ when you only need R₁. A lower R_total means a larger I for a given E.",
+      "3": "For low target currents, either drop E or raise the total resistance. r is small but is always in the sum."
+    },
+    "3": {
+      "1": "Read E, r, R₁, R₂ from the given panel at the top-right. Add r + R₁ + R₂ to get R_total. Divide E by R_total.",
+      "2": "The classic mistake is forgetting r. It may be small (0.5 Ω, 1 Ω), but it is in series with everything else.",
+      "3": "Worked example: E = 12 V, r = 2 Ω, R₁ = 10 Ω, R₂ = 12 Ω → R_total = 24 Ω → I = 12/24 = 0.50 A."
+    }
+  }
+}

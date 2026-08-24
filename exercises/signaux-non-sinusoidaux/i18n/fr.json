@@ -1,0 +1,76 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un multivibrateur astable n'a pas d'état stable — il bascule tout seul. Les deux collecteurs produisent des signaux carrés complémentaires à $f = 1/T$ avec $T = 2\\,R\\,C\\,\\ln 2$. Balaie $R$ pour changer la période. Atteins un réglage à basse fréquence ($f < 400\\,\\text{Hz}$) et un réglage à haute fréquence ($f > 1500\\,\\text{Hz}$) pour avancer.",
+      "concept": "Chaque réseau de couplage RC fixe une demi-période $t = R\\,C\\,\\ln 2$. Avec $R_1 = R_2 = R$ et $C_1 = C_2 = C$ symétriques : $T = 2\\,R\\,C\\,\\ln 2 \\approx 1{,}386\\,R\\,C$. Diviser $R$ ou $C$ par 2 double la fréquence. Pas de sinus, pas d'excitation extérieure — le circuit oscille tout seul.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "La fréquence cible est indiquée par une ligne orange sur l'oscillo. Bouge le curseur $R$ jusqu'à ce que ton signal carré vert colle à la cible à $\\pm 10\\%$ près. Surveille l'affichage de la fréquence en haut à droite.",
+      "concept": "$f = \\dfrac{1}{2\\,R\\,C\\,\\ln 2}$. Pour passer d'une fréquence de départ $f_0$ à une cible $f_t$, multiplie $R$ par $f_0 / f_t$. $R$ plus grand → période plus longue → fréquence plus basse.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'oscillo montre un signal cible (orange). Identifie la variante de circuit qui le produit — un astable symétrique simple, ou un astable suivi d'un intégrateur. Calcule d'abord sur papier, puis VALIDE. Une mauvaise réponse relance la série.",
+      "concept": "Astable symétrique à 2 transistors → signal carré (chaque sortie alterne entre $0$ et $V_{CC}$). Envoie ce carré dans un intégrateur à AO ($V_{out} = -\\frac{1}{RC}\\int V_{in}\\,dt$) → une rampe linéaire à chaque demi-période, autrement dit un signal triangulaire. La forme trahit la topologie.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "multivibrateur astable",
+    "scope": "oscillo",
+    "scenario": "SCÉNARIO",
+    "solved": "réussi",
+    "submit": "VALIDER",
+    "correct": "correct",
+    "wrong": "erreur · série reprise",
+    "target": "cible",
+    "your_pick": "ton choix",
+    "vcc": "V_CC",
+    "gnd": "GND",
+    "R_label": "R",
+    "C_label": "C",
+    "Q1": "Q1",
+    "Q2": "Q2",
+    "out1": "v_Q1",
+    "out2": "v_Q2",
+    "vin_int": "v_in",
+    "vout_int": "v_out",
+    "integrator": "intégrateur",
+    "tip1": "balaie R · vois comment la fréquence varie en 1 / (R C)",
+    "tip2": "colle à la fréquence cible · fais glisser R jusqu'à ce que la trace verte s'aligne",
+    "tip3": "détermine la forme sur papier · puis VALIDE",
+    "variant_square": "astable symétrique",
+    "variant_triangular": "astable + intégrateur",
+    "peek_tip_1": "Signal carré → astable symétrique seul. Signal triangulaire → un intégrateur en aval de l'astable transforme chaque demi-période en rampe linéaire.",
+    "peek_tip_2": "Fréquence : f = 1 / (1,386 R C). Diviser R par 2 double la fréquence. La forme est fixée par la topologie, pas par R ou C.",
+    "coverage_lo": "basse f vue",
+    "coverage_hi": "haute f vue",
+    "coverage_none": "balaie du bas au haut",
+    "matched": "collée"
+  },
+  "hints": {
+    "1": {
+      "1": "Amène R aux deux extrémités de sa plage. Regarde la période T grandir puis rétrécir sur l'oscillo.",
+      "2": "T = 2 R C ln 2. Plus R est grand → plus T est long → plus f est basse. Avec C fixé à 33 nF, R = 10 kΩ donne f ≈ 2,2 kHz ; R = 100 kΩ donne f ≈ 218 Hz.",
+      "3": "Il te faut un réglage avec f < 400 Hz ET un avec f > 1500 Hz. Essaie R près du max, puis R près du min."
+    },
+    "2": {
+      "1": "La trace orange donne la période cible. Ta trace verte doit se caler dessus dans le temps.",
+      "2": "La fréquence cible est écrite à côté de la trace cible. Lis ta fréquence courante dans le HUD et fais glisser R jusqu'à concordance (±10%).",
+      "3": "Si ta fréquence est trop basse, diminue R. Si elle est trop haute, augmente R. f est inversement proportionnelle à R."
+    },
+    "3": {
+      "1": "Pas de trace d'aide. Regarde uniquement la forme cible. Carré ? Triangulaire ?",
+      "2": "Un astable seul ne peut produire que des signaux carrés. Toute forme à rampes linéaires exige un intégrateur en aval.",
+      "3": "Signal carré = astable symétrique. Signal triangulaire = astable + intégrateur. Mauvaise validation = série relancée."
+    }
+  }
+}

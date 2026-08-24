@@ -1,0 +1,73 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Choisis chacune des quatre familles de filtres et déplace le curseur de la fréquence de coupure. Observe comment la courbe de gain de Bode se déforme : plate puis décroissante pour le passe-bas, croissante puis plate pour le passe-haut, un pic pour le passe-bande, une encoche pour le coupe-bande. Avance après avoir essayé au moins $3$ familles.",
+      "concept": "Un filtre linéaire est décrit par sa fonction de transfert complexe $H(j\\omega) = V_s/V_e$. Son module $|H(f)|$ indique quelles bandes sont passées et lesquelles sont atténuées : le **passe-bas** conserve $f < f_c$ ; le **passe-haut** conserve $f > f_c$ ; le **passe-bande** conserve une fenêtre autour de $f_0$ ; le **coupe-bande** rejette une fenêtre autour de $f_0$. Sur un axe $\\log_{10}(f)$ les silhouettes sont caractéristiques — c'est pour cela qu'on trace $|H|_{\\text{dB}}$ en fonction de $\\log_{10}(f)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Construis maintenant un passe-bas précis avec deux composants. Ajuste $R$ et $C$ pour que la fréquence de coupure $f_c$ tombe sur la cible orange en pointillés ($1\\,\\text{kHz}$). Plusieurs couples $(R, C)$ marchent — il faut $R\\,C = 1/(2\\pi\\,f_c)$.",
+      "concept": "Pour le passe-bas RC, $H(j\\omega) = 1/(1 + j\\,R\\,C\\,\\omega)$, donc $|H(f)| = 1/\\sqrt{1 + (f/f_c)^2}$ avec $f_c = 1/(2\\pi\\,R\\,C)$. À $f = f_c$ le gain chute à $1/\\sqrt{2}$ ($-3\\,\\text{dB}$). Pour $f_c = 1\\,\\text{kHz}$ : $R\\,C \\approx 1{,}59 \\times 10^{-4}\\,\\text{s}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le schéma est caché. Seule la courbe de gain de Bode est affichée. Classe chaque filtre en passe-bas, passe-haut, passe-bande ou coupe-bande. Réponds correctement à toutes les questions en une seule passe — une erreur remet le paquet à zéro.",
+      "concept": "Indices de classement sur $|H|_{\\text{dB}}$ en fonction de $\\log_{10}(f)$ : **passe-bas** — plat à $0\\,\\text{dB}$ à gauche, décroît à droite ; **passe-haut** — monte à gauche, plat à $0\\,\\text{dB}$ à droite ; **passe-bande** — culmine près de $f_0$ et décroît des deux côtés ; **coupe-bande** — plat puis plonge brusquement près de $f_0$ puis remonte.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage":           "ÉTAPE",
+    "circuit_title":   "quadripôle H(jω)",
+    "bode_title":      "|H(f)| — gain de Bode",
+    "phase_title":     "arg H  (deg)",
+    "controls_title":  "commandes",
+    "field_family":    "famille de filtre",
+    "field_cutoff":    "coupure f",
+    "field_R":         "résistance R",
+    "field_C":         "capacité C",
+    "field_derived":   "dérivé",
+    "families_seen":   "familles",
+    "matched":         "cible atteinte",
+    "target_fc":       "f_c cible",
+    "question":        "question",
+    "evaluate_prompt": "Classe le filtre à partir de sa courbe de gain de Bode.",
+    "wrong_restart":   "faux — reprise",
+    "all_correct":     "tout correct",
+    "family_lp":       "passe-bas",
+    "family_hp":       "passe-haut",
+    "family_bp":       "passe-bande",
+    "family_bs":       "coupe-bande",
+    "v_in":            "u_e",
+    "v_out":           "u_s",
+    "tip1":  "chaque famille a une silhouette distincte — parcours les quatre",
+    "tip2":  "R↑ ou C↑ → f_c se décale à gauche ;  f_c = 1/(2π·R·C)",
+    "tip3":  "lis le côté basses f puis le côté hautes f — plat ou en pente",
+    "peek_tip_1": "Regarde d'abord le côté basses fréquences. |H| est-il plat à 0 dB (passe les basses f) ou en chute (rejette les basses f) ?",
+    "peek_tip_2": "Maintenant le côté hautes fréquences. Plat = passe les hautes f. En chute = rejette les hautes f. Combine les deux côtés pour nommer la famille.",
+    "peek_tip_3": "Une seule encoche au milieu = coupe-bande. Un seul pic au milieu = passe-bande. Ni encoche ni pic = passe-bas ou passe-haut."
+  },
+  "hints": {
+    "1": {
+      "1": "Clique sur l'un des quatre boutons de famille et déplace le curseur de coupure — la courbe se déforme.",
+      "2": "Compare passe-bas (chute à droite) et passe-haut (chute à gauche). Puis passe-bande (pic) et coupe-bande (encoche).",
+      "3": "Il faut visiter 3 familles différentes. Le compteur en haut à droite suit la progression."
+    },
+    "2": {
+      "1": "Il faut R·C = 1/(2π·1000) ≈ 1,59×10⁻⁴ s. Choisis un C rond, puis calcule R.",
+      "2": "Essaie C = 100 nF. Alors R = 1,59×10⁻⁴ / 10⁻⁷ ≈ 1590 Ω.",
+      "3": "Ou C = 10 nF avec R = 16 kΩ. Ou C = 1 µF avec R = 160 Ω — tous donnent f_c ≈ 1 kHz."
+    },
+    "3": {
+      "1": "Balaie les deux extrémités de la courbe. Extrémité basse plate + extrémité haute en chute = passe-bas. L'inverse = passe-haut.",
+      "2": "Un seul pic (la courbe s'arque vers le haut au milieu) = passe-bande. Une seule encoche (la courbe plonge au milieu) = coupe-bande.",
+      "3": "Ignore la fréquence exacte. Seule la silhouette compte ici — plat / pente / pic / encoche."
+    }
+  }
+}

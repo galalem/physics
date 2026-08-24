@@ -1,0 +1,81 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser les deux curseurs et regarde les deux vues réagir. En haut : la forme d'onde FM $s(t) = \\cos(2\\pi f_p t + \\beta \\sin(2\\pi f_m t))$, dont l'oscillation rapide se comprime et s'étire au cours du temps. En bas : le spectre de Bessel — un peigne de raies à $f_p \\pm n f_m$ dont les hauteurs valent $|J_n(\\beta)|$. L'indice de modulation est $\\beta = \\Delta f / f_m$. Avance après avoir utilisé les deux curseurs ET observé les deux régimes : bande étroite ($\\beta < 0.3$, le spectre se réduit à la porteuse plus une paire) et bande large ($\\beta > 2$, de nombreuses raies latérales s'étalent).",
+      "concept": "La modulation de fréquence inscrit le message dans la fréquence instantanée de la porteuse : $f_i(t) = f_p + \\Delta f \\cos(2\\pi f_m t)$. L'intégration donne la phase $\\phi(t) = \\beta \\sin(2\\pi f_m t)$ avec $\\beta = \\Delta f / f_m$. Le spectre de sortie est un peigne à $f_p + n f_m$ d'amplitudes $|J_n(\\beta)|$ — les fonctions de Bessel de première espèce. Petit $\\beta$ : seules $n = 0, \\pm 1$ subsistent et la FM ressemble à de l'AM. Grand $\\beta$ : l'énergie se déverse dans les raies latérales d'ordre supérieur et la bande occupée s'élargit. La règle de Carson résume : $B \\approx 2(\\Delta f + f_m) = 2 f_m (\\beta + 1)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Chaque cible fixe un couple $(f_m, \\Delta f)$ précis. Règle tes curseurs pour que le signal turquoise se superpose à la courbe cible en pointillés gris et que les hauteurs de barres correspondent. La porteuse est fixée à $f_p = 10$ kHz. Tolérance : $\\pm 5\\%$ sur les deux fréquences.",
+      "concept": "Lecture visuelle de la FM : l'espacement des raies latérales sur le spectre vaut exactement $f_m$ ; le nombre de raies significatives autour de la porteuse indique $\\beta$ (environ $N \\approx \\beta + 1$), et la bande de Carson vaut $B \\approx 2(\\Delta f + f_m)$. Deux repères sur le spectre marquent la fin de la bande de Carson — vérification visuelle rapide que ton couple $(f_m, \\Delta f)$ correspond à l'étalement de la cible.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Forme d'onde masquée. À partir du seul spectre de Bessel — raies à $f_p \\pm n f_m$ avec leurs fréquences annotées — déduis $f_m$ et $\\Delta f$. L'espacement des raies latérales donne $f_m$ ; l'étendue des raies significatives donne $\\beta$, puis $\\Delta f = \\beta \\cdot f_m$. Saisis tes réponses et valide. Une mauvaise réponse verrouille la question — utilise Réessayer pour un nouveau spectre.",
+      "concept": "Lecture FM par spectre seul : (i) mesure l'écart entre deux raies adjacentes — cet écart est $f_m$. (ii) Compte $N$ = nombre de paires latérales significatives autour de la porteuse ; $\\beta \\approx N - 1$ pour $\\beta$ modéré. (iii) Calcule $\\Delta f = \\beta \\cdot f_m$. Vérifie avec Carson : bande occupée totale $\\approx 2(\\Delta f + f_m)$. C'est exactement ainsi qu'un analyste de spectre caractérise une transmission FM.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "étape",
+    "scene_title": "modulation de fréquence",
+    "controls_title": "contrôles",
+    "sliders": "curseurs",
+    "target": "cible",
+    "matched": "atteinte",
+    "matched_msg": "cible atteinte — avance ou essaie la suivante",
+    "question": "question",
+    "solved": "résolue",
+    "field_fm": "message f_m",
+    "field_df": "déviation Δf",
+    "field_fp": "porteuse f_p (fixe)",
+    "field_beta": "indice β = Δf/f_m",
+    "problem_prompt": "Lis le spectre et saisis f_m et Δf.",
+    "correct": "correct",
+    "exact_was": "réponse exacte :",
+    "next_q": "suivant",
+    "try_again": "réessayer",
+    "hidden_label": "forme d'onde masquée — lis le spectre",
+    "plot_time": "domaine temporel",
+    "plot_spectrum": "spectre",
+    "legend_signal": "signal s(t)",
+    "legend_target": "cible",
+    "legend_carson": "bande de Carson",
+    "carrier_label": "porteuse",
+    "sideband_label": "raies latérales",
+    "narrowband_title": "FM bande étroite (β < 0.3)",
+    "narrowband_desc": "le spectre se réduit à la porteuse plus une seule paire — la FM ressemble à l'AM",
+    "wideband_title": "FM bande large (β > 2)",
+    "wideband_desc": "l'énergie s'étale dans de nombreuses raies latérales ; la bande occupée croît vite",
+    "peek_tip_1": "Espacement des raies latérales adjacentes = f_m. Lis l'écart sur l'axe des fréquences.",
+    "peek_tip_2": "Compte les paires significatives N autour de la porteuse. Puis β ≈ N − 1 et Δf = β · f_m.",
+    "tip1": "fais glisser les deux curseurs — essaie β < 0.3 et β > 2",
+    "tip2": "aligne-toi sur la cible en pointillés : espacement = f_m, nombre = β",
+    "tip3": "lis le spectre : espacement = f_m, compte les paires → β, puis Δf = β·f_m",
+    "witness_narrow": "β < 0.3",
+    "witness_wide": "β > 2"
+  },
+  "hints": {
+    "1": {
+      "1": "Déplace chaque curseur une fois. Le tracé du haut est la forme d'onde FM ; celui du bas est son spectre de Bessel en raies.",
+      "2": "β = Δf / f_m. Un petit β réduit le spectre à porteuse + une paire latérale ; un grand β étale l'énergie sur plusieurs paires.",
+      "3": "Essaie Δf petit avec f_m grand pour atteindre β < 0.3, puis Δf grand avec f_m petit pour pousser β au-delà de 2."
+    },
+    "2": {
+      "1": "L'espacement des raies latérales sur le spectre vaut f_m — compte l'écart entre raies adjacentes.",
+      "2": "Le nombre de paires latérales significatives autour de f_p est environ β + 1. Vise d'abord l'étalement de la cible, puis affine.",
+      "3": "Une fois l'espacement des barres atteint, ajuste Δf pour que le nombre de barres visibles corresponde. La courbe cible en pointillés doit s'aligner."
+    },
+    "3": {
+      "1": "L'écart entre deux raies adjacentes est f_m. Lis-le sur l'axe des fréquences annoté.",
+      "2": "Compte N = nombre de paires latérales significatives (raies dont la hauteur s'élève nettement au-dessus de l'axe). Puis β ≈ N − 1.",
+      "3": "Δf = β · f_m. Si tu as compté 4 paires de chaque côté de f_p = 10 kHz avec un espacement de 1 kHz, alors β ≈ 3, donc Δf ≈ 3 kHz."
+    }
+  }
+}

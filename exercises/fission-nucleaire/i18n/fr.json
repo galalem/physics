@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Chaque point est un noyau de $^{235}\\text{U}$ dans une pastille de combustible. Un neutron égaré en heurte un et le scinde en deux noyaux fils plus légers, plus $\\nu$ neutrons neufs — ceux-ci amorcent de nouvelles fissions dans une réaction en chaîne. Balaie le facteur de multiplication $k$ (en déplaçant la barre absorbante), bascule LOG, et laisse la simulation tourner au-delà d'une demi-vie effective.",
+      "concept": "Pour $N_0$ noyaux fissiles consommés dans une chaîne, $N(t) = N_0\\,e^{-k\\,t\\,/\\,\\tau_0}$ avec $\\tau_0$ temps caractéristique fixé par la géométrie de la pastille. Plus $k$ est grand = plus de neutrons par fission survivent pour déclencher la suivante = combustible qui brûle plus vite. Comme les noyaux fils sont plus liés que le père (crochet $E_l/A$), chaque fission libère $Q > 0$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "La courbe de décroissance de la puissance d'un cœur inconnu (orange vif) est tracée sur le graphique avec trois points d'échantillonnage. Ajuste l'absorbeur pour régler $k$ jusqu'à ce que ton cœur simulé corresponde à $\\pm 5\\%$ près.",
+      "concept": "Deux cœurs de même $k$ brûlent leur combustible à la même vitesse relative. Sur un tracé log, pentes égales = $k$ égaux : la pente vaut $-k\\,/\\,\\tau_0$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Cahier de bord réacteur seul. Trois mesures bruitées $(t, N)$ d'un cœur blindé te sont fournies — pas de simulation en direct, pas de barre. Calcule $k = \\tau_0 \\,\\ln(N_1/N_2)\\,/\\,(t_2 - t_1)$ et saisis-le. Le peek révèle la vraie courbe de décroissance pendant $1{,}5$ s (jamais la valeur de $k$).",
+      "concept": "À partir de deux mesures quelconques : $\\lambda_{\\mathrm{eff}} = \\dfrac{\\ln(N_1/N_2)}{t_2 - t_1}$, donc $k = \\tau_0 \\, \\lambda_{\\mathrm{eff}}$. Sur un tracé log-$N$ la pente vaut $-k\\,/\\,\\tau_0$ ; $\\tau_0 = 20$ u pour cette pastille.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "nuclei": "noyaux ²³⁵U",
+    "field_measurements": "cahier de bord réacteur",
+    "find_T": "trouve k à partir des données",
+    "match_ok": "concordance",
+    "match_off": "écart — vérifie ta lecture",
+    "enter_prompt": "saisis k et valide",
+    "peek_reveal": "valeur réelle :",
+    "log_toggle": "LOG",
+    "submit": "VALIDER",
+    "tip1": "balaie k, bascule LOG, laisse tourner la simulation",
+    "tip2": "aligne-toi sur la cible orange vif — essaie LOG pour un ajustement linéaire",
+    "tip3": "calcule λ_eff à partir de deux points, puis k = τ₀ · λ_eff",
+    "absorber": "absorbeur",
+    "tau0_note": "τ₀ = 20 u"
+  },
+  "hints": {
+    "1": {
+      "1": "k est le facteur de multiplication — le nombre moyen de nouveaux neutrons que chaque fission produit et qui déclenchent une autre fission.",
+      "2": "Bascule LOG : sur une échelle log, N(t) est une droite dont la pente vaut −k/τ₀. Plus k est grand, plus la pente est raide.",
+      "3": "La courbe pointillée turquoise est la courbe analytique N₀·exp(−k·t/τ₀) ; la courbe orange pleine est le comptage stochastique. Elles coïncident en moyenne — la variance est un vrai bruit de Poisson."
+    },
+    "2": {
+      "1": "La courbe orange vif est le réacteur cible. Aligne-toi sur la pente, pas seulement sur les extrémités.",
+      "2": "En LOG, les courbes de même k sont des droites parallèles. En linéaire, la cible croise N₀/2 à t = τ₀·ln 2 / k.",
+      "3": "Le Δ affiché en haut à droite indique à quelle distance ton k est de la cible. Moins de 5 % suffit."
+    },
+    "3": {
+      "1": "Choisis deux mesures quelconques (t₁, N₁) et (t₂, N₂). Puis λ_eff = ln(N₁/N₂) / (t₂ − t₁), et k = τ₀ · λ_eff avec τ₀ = 20 u.",
+      "2": "Sur le tracé LOG les points d'analyse s'alignent. La pente de cette droite vaut −k/τ₀ — lis-la sur les axes si tu préfères la méthode graphique à l'algèbre.",
+      "3": "Tolérance ±3 % ; les lectures sont bruitées, de petits arrondis sont acceptables. Le peek te donne la vraie courbe pendant 1,5 s — il ne te donne PAS k."
+    }
+  }
+}

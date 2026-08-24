@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser les curseurs $m$ et $v$. Regarde la jauge $E_c$ se remplir en temps réel. Tire au moins trois fois en essayant différentes valeurs de $v$, et change $m$ au moins une fois.",
+      "concept": "Énergie cinétique d'un corps de masse $m$ animé d'une vitesse $v$ : $E_c = \\tfrac{1}{2}\\,m\\,v^{2}$. Unités : $m$ en kg, $v$ en m/s, $E_c$ en joules (J).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins chaque énergie cible sur la jauge. Ajuste $m$ et $v$ jusqu'à ce que l'aiguille $E_c$ en direct se pose sur une cible, puis TIRE. Remarque que plusieurs couples $(m, v)$ donnent le même $E_c$.",
+      "concept": "$E_c$ varie linéairement avec la masse mais quadratiquement avec la vitesse : doubler $m$ double $E_c$ ; doubler $v$ quadruple $E_c$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La jauge est masquée. Pour chaque $E_c$ cible, calcule $(m, v)$ sur papier avec $E_c = \\tfrac{1}{2}\\,m\\,v^{2}$, règle les curseurs, puis TIRE. Un tir par cible — pas de tir à l'aveugle.",
+      "concept": "Résous une variable en fonction de l'autre : $v = \\sqrt{2 E_c / m}$, ou $m = 2 E_c / v^{2}$. Choisis d'abord un $m$ pratique, puis calcule $v$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "hits": "TOUCHÉS",
+    "shots": "TIRS",
+    "stage": "ÉTAPE",
+    "mass": "m",
+    "speed": "v",
+    "energy": "Ec",
+    "unitMass": "kg",
+    "unitSpeed": "m/s",
+    "unitEnergy": "J",
+    "targets": "CIBLES",
+    "tip1": "déplace m, déplace v, puis TIRE",
+    "tip2": "aligne l'Ec en direct sur une cible, puis TIRE",
+    "tip3": "calcule (m, v) pour chaque Ec cible, puis TIRE",
+    "peek_tip_v_squared": "Doubler v quadruple Ec. Doubler m ne fait que doubler Ec. Utilise v pour de gros écarts d'Ec ; règle finement avec m.",
+    "peek_tip_solve_v": "Fixe un m pratique (par ex. 1 ou 4 kg), puis v = √(2·Ec / m). Le pas du curseur est 0,5.",
+    "peek_tip_pairs": "Chaque Ec cible admet plusieurs couples (m, v). Si un couple sort du curseur, essaie le couple équivalent : (1 kg, v) ↔ (4 kg, v/2)."
+  },
+  "hints": {
+    "1": {
+      "1": "Attrape le curseur m à gauche et le curseur v à droite, puis appuie sur TIRER.",
+      "2": "Observe la jauge Ec quand tu déplaces v — une petite variation de v fait plus varier Ec que la même variation de m.",
+      "3": "Essaie au moins deux valeurs différentes de v et change m une fois pour débloquer Suivant."
+    },
+    "2": {
+      "1": "La jauge affiche Ec en direct. Fais glisser jusqu'à ce que l'aiguille se pose sur une bande cible, puis TIRE.",
+      "2": "Ec = ½·m·v². Si Ec est trop petite, augmente v (effet plus fort) ou m. Si trop grande, baisse v.",
+      "3": "Une même Ec cible est atteignable par plusieurs couples (m, v) — essaie (1 kg, v élevé) ou (4 kg, v modéré)."
+    },
+    "3": {
+      "1": "Choisis d'abord une masse (par ex. m = 1 ou 4 kg), puis calcule v = √(2·Ec / m) sur papier.",
+      "2": "Arrondis au pas de 0,5 le plus proche. Si v tombe sur une valeur propre comme 4, 6, 8, 10 m/s, m était bien choisi.",
+      "3": "Exemple : Ec = 50 J avec m = 4 kg → v = √(100/4) = 5 m/s. Ou m = 1 kg → v = 10 m/s."
+    }
+  }
+}

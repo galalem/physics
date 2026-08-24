@@ -1,0 +1,82 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "The message ($f_m$) and carrier ($f_p$) are fixed. Drive the RC time constant $\\tau = RC$ and watch the envelope detector process the AM signal: half-wave rectify, then low-pass. The teal trace is the recovered signal $\\hat u_m(t)$; the dashed amber trace is the ideal message envelope. Sweep $\\tau$ small enough to see carrier ripple AND large enough to see envelope droop — both failure modes must be witnessed before advancing.",
+      "concept": "An envelope detector recovers the message $u_m(t)$ from an AM signal $s(t) = [1 + m\\cos(2\\pi f_m t)]\\cos(2\\pi f_p t)$ in two steps. First a diode half-wave rectifies: $r(t) = \\max(0, s(t))$. Then a resistor–capacitor low-pass filter smooths the rectified train, integrating with time constant $\\tau = RC$. The capacitor charges through the diode on positive peaks and discharges through $R$ between them. Faithful recovery needs $\\tau$ to sit between two clocks: fast enough to follow the message ($\\tau \\ll 1/f_m$) but slow enough to smooth the carrier ($\\tau \\gg 1/f_p$). The full constraint: $1/f_p \\ll \\tau \\ll 1/f_m$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Three targets. Each fixes $(f_m, f_p, m)$ and asks for a specific $\\tau$. Tune $\\tau$ until the teal recovered trace overlaps the dashed grey target. Tolerance: $\\pm 10\\%$ on $\\tau$.",
+      "concept": "The rule of thumb $\\tau \\approx \\sqrt{(1/f_p)(1/f_m)}$ — the geometric mean of the two limits — puts $\\tau$ safely inside the corridor. Move $\\tau$ up when $f_m$ drops (slower message ⇒ longer memory OK); move it down when $f_p$ drops (slower carrier ⇒ shorter memory needed to smooth). Each factor-of-two in $\\tau$ noticeably shifts the trade between ripple and droop.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "AM input and ideal envelope hidden. From the recovered trace alone — plus the labeled $f_m$, $f_p$, $m$ — deduce the RC time constant $\\tau$ used. Carrier ripple → $\\tau$ too small (measure ripple period $\\approx 1/f_p$). Envelope droop → $\\tau$ too large (compare droop tail to $1/f_m$). A wrong answer locks the question; use Try Again for a fresh setup.",
+      "concept": "Diagnostic reading. Ripple amplitude visible ≈ $\\Delta u / u \\approx 1/(2\\pi f_p \\tau)$ — so ripple gives $\\tau \\approx 1/(2\\pi f_p \\cdot \\Delta u/u)$. Droop over a message half-period gives $\\tau \\approx T_m / \\ln(1 + m)$ where $T_m = 1/f_m$. In both regimes, one number falls straight out of one visible feature; you never need to reverse-engineer the whole waveform.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "scene_title": "envelope detector",
+    "controls_title": "controls",
+    "sliders": "sliders",
+    "target": "target",
+    "matched": "matched",
+    "matched_msg": "target matched — advance or try the next",
+    "question": "question",
+    "solved": "solved",
+    "field_tau": "time constant tau",
+    "field_fm": "message f_m",
+    "field_fp": "carrier f_p",
+    "field_m": "modulation index m",
+    "problem_prompt": "Read the recovered trace. Enter the tau (ms) that produced it.",
+    "correct": "correct",
+    "exact_was": "exact value:",
+    "next_q": "next",
+    "try_again": "try again — new setup",
+    "hidden_label": "am input hidden — read output only",
+    "plot_time": "time domain",
+    "plot_output": "recovered u_m(t)",
+    "legend_input": "AM input s(t)",
+    "legend_rect": "rectified r(t)",
+    "legend_smoothed": "smoothed u_C(t)",
+    "legend_ideal": "ideal envelope",
+    "legend_target": "target output",
+    "given_label": "given",
+    "ripple_title": "carrier ripple — tau too small",
+    "ripple_desc": "the capacitor discharges between carrier peaks; ripple period ~ 1/f_p",
+    "droop_title": "envelope droop — tau too large",
+    "droop_desc": "the capacitor cannot follow the message; output flattens on the downstroke",
+    "ideal_title": "ideal window",
+    "ideal_desc": "1/f_p << tau << 1/f_m — clean recovery",
+    "peek_tip_1": "tau = RC. Carrier ripple => tau too small (~ 1/(2*pi*f_p)). Envelope droop => tau too large (~ 1/f_m).",
+    "peek_tip_2": "Ideal tau sits near the geometric mean sqrt((1/f_p)(1/f_m)). Anchor first, then read the deviation.",
+    "tip1": "sweep tau — witness both ripple (small) and droop (large)",
+    "tip2": "tune tau to match the dashed target",
+    "tip3": "output only — ripple => small tau, droop => large tau"
+  },
+  "hints": {
+    "1": {
+      "1": "Push tau to the far-left end. You should see fast wiggles riding on the envelope — that's carrier ripple.",
+      "2": "Push tau to the far-right end. The teal output stops tracking the amber dashed envelope on the downstroke — that's droop.",
+      "3": "The healthy middle is around tau ~ 0.15–0.3 ms with f_m = 1 kHz and f_p = 10 kHz. Both wrinkle indicators need to fire before Next lights up."
+    },
+    "2": {
+      "1": "Slide tau until the teal output overlaps the dashed grey target trace across the whole window.",
+      "2": "Tolerance is ±10%. Use the ± step buttons for fine trimming near the target value.",
+      "3": "If overlap looks close but is not registering, check both extremes of the window — bad tau often shows only in one half."
+    },
+    "3": {
+      "1": "Look for ripple. Fast oscillations on the trace mean tau is close to 1/(2*pi*f_p).",
+      "2": "Look for droop. A flattened downstroke means tau is close to 1/f_m or larger.",
+      "3": "If the trace is a clean copy of the envelope, tau is in the ideal window near sqrt((1/f_p)(1/f_m))."
+    }
+  }
+}

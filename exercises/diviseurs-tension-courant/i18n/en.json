@@ -1,0 +1,79 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Both dividers share the same two resistors $R_1$ and $R_2$. Move each slider and watch how the voltmeter $U_2$ and ammeter $I_1$ respond. Notice the duality: swapping the roles of series and parallel maps the voltage divider onto the current divider.",
+      "concept": "Voltage divider (series): $U_2 = E \\cdot R_2 / (R_1 + R_2)$. Current divider (parallel): $I_1 = I \\cdot R_2 / (R_1 + R_2)$. Same fraction $R_2 / (R_1 + R_2)$ — one applies to voltage across a series element, the other to current through the opposite parallel branch.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Choose $R_1$ and $R_2$ so that both readings match the target values shown in the top-right. The two targets share the resistor pair — the same $R_1, R_2$ must satisfy both formulas at once.",
+      "concept": "Because both dividers share the ratio $R_2 / (R_1 + R_2)$, hitting a target $U_2$ fixes the ratio; the target $I_1$ then either falls in line or contradicts it. Tolerance is $\\pm 5\\%$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Solve for the missing resistor. The live readouts are hidden. Read the given values and the target, compute $R_1$ on paper, then type the answer in ohms. Three scenarios in a row must be correct — three attempts per scenario.",
+      "concept": "Voltage divider inverted: $R_1 = R_2 \\cdot (E - U_2) / U_2$. Current divider inverted: $R_1 = R_2 \\cdot (I / I_1 - 1) = R_2 \\cdot (I - I_1) / I_1$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "voltage_divider": "voltage divider",
+    "current_divider": "current divider",
+    "controls": "controls",
+    "targets": "TARGETS",
+    "deck": "DECK",
+    "attempts_left": "attempts left",
+    "correct": "correct",
+    "wrong": "wrong",
+    "given": "given",
+    "target": "target",
+    "solve_for": "solve for",
+    "unit_ohm": "Ω",
+    "unit_volt": "V",
+    "unit_milliamp": "mA",
+    "enter_r1": "enter R₁",
+    "submit": "submit",
+    "hidden": "?",
+    "tip1": "move each slider through several values and watch both readings respond",
+    "tip2": "the ratio R₂ / (R₁+R₂) is shared — one setting must satisfy both targets",
+    "tip3": "compute R₁ on paper first; three attempts, then the scenario rotates",
+    "peek_tip": "Voltage divider: U₂ = E·R₂/(R₁+R₂), so R₁ = R₂·(E−U₂)/U₂. Current divider: I₁ = I·R₂/(R₁+R₂), so R₁ = R₂·(I−I₁)/I₁.",
+    "scenario_type_voltage": "voltage divider",
+    "scenario_type_current": "current divider",
+    "label_E": "E",
+    "label_I": "I",
+    "label_R1": "R₁",
+    "label_R2": "R₂",
+    "label_U2": "U₂",
+    "label_I1": "I₁",
+    "coverage_voltage_seen": "U₂ reads",
+    "coverage_current_seen": "I₁ reads",
+    "coverage_asymmetric": "R₁ ≠ R₂ tried",
+    "scenario_progress": "scenario",
+    "of": "of"
+  },
+  "hints": {
+    "1": {
+      "1": "Slide R₁ and R₂ up and down. Watch U₂ (top schematic) and I₁ (bottom schematic).",
+      "2": "When R₁ = R₂, both readings sit exactly halfway between zero and the source value. Try that first, then break the symmetry.",
+      "3": "Use the formula U₂ = E · R₂/(R₁+R₂): raising R₁ pulls U₂ down; raising R₂ pushes U₂ up. Current divider works with the mirror rule."
+    },
+    "2": {
+      "1": "Both readings share the same ratio R₂/(R₁+R₂). Pick R₂ first to set the ratio, then adjust R₁ to fine-tune.",
+      "2": "From the target U₂ and known E, the ratio R₂/(R₁+R₂) = U₂/E. Same ratio applies to I₁/I in the current divider — so check the second target lines up.",
+      "3": "Tolerance is ±5%. If both targets can't be hit simultaneously with the given E and I, the target values were chosen inconsistently — but here they are consistent by construction."
+    },
+    "3": {
+      "1": "Read the given values from the schematic labels. The target reading is shown as `target: ... V` or `target: ... mA` in the top-right.",
+      "2": "Voltage divider inversion: R₁ = R₂ · (E − U₂) / U₂. Current divider inversion: R₁ = R₂ · (I − I₁) / I₁. Plug in and compute.",
+      "3": "Both formulas share the same shape: R₁ = R₂ · (source − target) / target. That works whether the source is E and target is U₂, or source is I and target is I₁."
+    }
+  }
+}

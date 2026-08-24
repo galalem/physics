@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag $F'$ along the optical axis. Watch how the focal length $f'$ and the vergence $C$ move together — and notice that the lens itself grows thicker as the focal length shrinks.",
+      "concept": "For a thin converging lens, vergence is $C = 1/f'$, with $f'$ in metres and $C$ in dioptres ($\\delta = \\mathrm{m}^{-1}$). A shorter $f'$ means a larger $C$ and a physically thicker lens.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Three target focal points appear one at a time on the axis. Drag $F'$ onto each target, then press SET (or Space) to lock it in. You have 5 shots for 3 targets.",
+      "concept": "Every focal length carries a matching vergence: $C = 1/f'$. Aim your $F'$ at the target tick — the vergence follows the position automatically.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The focal marks are hidden. Only the target vergence $C^*$ is given. Compute $f'^* = 1/C^*$ on paper, drag $F'$ to that focal length using the live $f'$ readout, then press SET. One shot per target.",
+      "concept": "Vergence-to-focal-length inversion: given $C^*$ in dioptres, the required focal length is $f'^* = 1/C^*$ in metres, or $f'^* = 100/C^*$ in centimetres.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "set": "SET",
+    "shots": "SHOTS",
+    "lit": "LIT",
+    "target": "TARGET",
+    "stage": "STAGE",
+    "exhausted": "OUT OF SHOTS · RESET TO RETRY",
+    "tip1": "drag F' — watch f' and C move together",
+    "tip2": "align F' with the target tick, then SET",
+    "tip3": "compute f' = 1/C on paper, then SET",
+    "axis": "OPTICAL AXIS",
+    "peek_strategy": "f' (cm) = 100 / C — verify against your live f'",
+    "target_C": "TARGET C*",
+    "target_f": "TARGET f'*"
+  },
+  "hints": {
+    "1": {
+      "1": "Grab the F' marker on the right and slide it along the axis.",
+      "2": "As f' shrinks, C grows — they are inverses of one another.",
+      "3": "The relation is C = 1/f' with f' in metres. Example: f' = 0.10 m gives C = 10 diopters."
+    },
+    "2": {
+      "1": "Line up your F' with the orange target tick, then press SET.",
+      "2": "The C readout in the HUD updates as you drag — use it to double-check.",
+      "3": "If the target reads f'* = 10 cm, drag until your live f' reads 10.0 cm, then SET."
+    },
+    "3": {
+      "1": "Read the target C* from the HUD. That is your only clue.",
+      "2": "Convert: f'* (in metres) = 1 / C*, or f'* (in cm) = 100 / C*.",
+      "3": "Drag F' until the live f' readout equals your computed target, then press SET."
+    }
+  }
+}

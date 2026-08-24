@@ -1,0 +1,76 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "An astable multivibrator has no stable state — it flips itself. The two collectors produce complementary square waves at $f = 1/T$ with $T = 2\\,R\\,C\\,\\ln 2$. Sweep $R$ to change the period. Reach both a low-frequency setting ($f < 400\\,\\text{Hz}$) and a high-frequency setting ($f > 1500\\,\\text{Hz}$) to advance.",
+      "concept": "The two RC coupling networks each set a half-period $t = R\\,C\\,\\ln 2$. With symmetric $R_1 = R_2 = R$ and $C_1 = C_2 = C$: $T = 2\\,R\\,C\\,\\ln 2 \\approx 1.386\\,R\\,C$. Halving $R$ or $C$ doubles the frequency. No sine, no external drive — the circuit oscillates on its own.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "The target frequency is shown as an orange line on the scope. Move the $R$ slider until your green square wave matches the target within $\\pm 10\\%$. Watch the frequency readout at the top-right.",
+      "concept": "$f = \\dfrac{1}{2\\,R\\,C\\,\\ln 2}$. To tune from a starting frequency $f_0$ to a target $f_t$, scale $R$ by $f_0 / f_t$. Larger $R$ → longer period → lower frequency.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The scope shows a target waveform (orange). Identify the circuit variant that produces it — a plain symmetric astable, or an astable followed by an integrator. Compute on paper first, then SUBMIT. Wrong answers restart the deck.",
+      "concept": "Symmetric 2-transistor astable → square wave (each output alternates between $0$ and $V_{CC}$). Feed that square into an op-amp integrator ($V_{out} = -\\frac{1}{RC}\\int V_{in}\\,dt$) → a linear ramp on each half-period, i.e. a triangular wave. Shape reveals topology.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "astable multivibrator",
+    "scope": "scope",
+    "scenario": "SCENARIO",
+    "solved": "aced",
+    "submit": "SUBMIT",
+    "correct": "correct",
+    "wrong": "wrong · deck reset",
+    "target": "target",
+    "your_pick": "your pick",
+    "vcc": "V_CC",
+    "gnd": "GND",
+    "R_label": "R",
+    "C_label": "C",
+    "Q1": "Q1",
+    "Q2": "Q2",
+    "out1": "v_Q1",
+    "out2": "v_Q2",
+    "vin_int": "v_in",
+    "vout_int": "v_out",
+    "integrator": "integrator",
+    "tip1": "sweep R · see how frequency scales with 1 / (R C)",
+    "tip2": "match the target f · slide R until the green trace lines up",
+    "tip3": "compute the shape on paper · then SUBMIT",
+    "variant_square": "symmetric astable",
+    "variant_triangular": "astable + integrator",
+    "peek_tip_1": "Square wave → symmetric astable alone. Triangular → an integrator after the astable turns each half-period into a linear ramp.",
+    "peek_tip_2": "Frequency: f = 1 / (1.386 R C). Halve R to double the frequency. Shape is set by the topology, not R or C.",
+    "coverage_lo": "seen low f",
+    "coverage_hi": "seen high f",
+    "coverage_none": "sweep low and high",
+    "matched": "matched"
+  },
+  "hints": {
+    "1": {
+      "1": "Move R to the extreme ends of its range. Watch how the period T on the scope grows and shrinks.",
+      "2": "T = 2 R C ln 2. Bigger R → longer T → lower f. With C fixed at 33 nF, R = 10 kΩ gives f ≈ 2.2 kHz; R = 100 kΩ gives f ≈ 218 Hz.",
+      "3": "You need one setting with f < 400 Hz AND one with f > 1500 Hz. Try R near the max, then R near the min."
+    },
+    "2": {
+      "1": "The orange trace is the target period. Your green trace must line up with it in time.",
+      "2": "Target f is written next to the target trace. Read your current f in the HUD and slide R until they match (±10%).",
+      "3": "If your f is too low, decrease R. If too high, increase R. f is inversely proportional to R."
+    },
+    "3": {
+      "1": "There is no help trace. Look at the target shape only. Square? Triangular?",
+      "2": "A pure astable can only make square waves. Anything with linear ramps needs an integrator downstream.",
+      "3": "Square wave = symmetric astable. Triangular wave = astable + integrator. Wrong SUBMIT restarts the deck."
+    }
+  }
+}

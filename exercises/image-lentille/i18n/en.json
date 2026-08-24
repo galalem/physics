@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the object arrow $\\overline{AB}$ along the axis. Three characteristic rays leave $B$ and construct the image $\\overline{A'B'}$. Watch the image flip through infinity as $\\overline{AB}$ crosses the focal point $F$.",
+      "concept": "Thin-lens conjugation: $\\frac{1}{\\overline{OA'}} - \\frac{1}{\\overline{OA}} = \\frac{1}{f'}$. Magnification: $\\gamma = \\frac{\\overline{OA'}}{\\overline{OA}}$. Sign convention: real object $\\overline{OA} < 0$; converging lens $f' > 0$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Place the object $\\overline{AB}$ so its image $\\overline{A'B'}$ lands on each dashed target arrow. The three rays stay visible — use them to line up the image, then press Fire (or Space) to confirm. Light all 3 targets in 5 shots.",
+      "concept": "Each target specifies both a position $\\overline{OA'}$ and a magnification $\\gamma$. Only one object position $\\overline{OA}$ satisfies both simultaneously.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Rays and image are hidden — only the object and the dashed target arrows remain. Read $\\overline{OA'}$ from each target's base, compute the required $\\overline{OA}$ from the conjugation formula, drag $\\overline{AB}$ to that spot, then Fire. You have one shot per target.",
+      "concept": "Invert the formula: $\\overline{OA} = \\dfrac{1}{\\,\\frac{1}{\\overline{OA'}} - \\frac{1}{f'}\\,}$. Convert the axis reading to centimetres, apply the sign convention, then compute.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "shots": "SHOTS",
+    "lit": "LIT",
+    "target": "TARGET",
+    "stage": "STAGE",
+    "object": "AB",
+    "image": "A'B'",
+    "lens": "LENS",
+    "focal": "f'",
+    "real": "REAL · INVERTED",
+    "virtual": "VIRTUAL · UPRIGHT",
+    "infinity": "IMAGE AT INFINITY",
+    "exhausted": "OUT OF SHOTS · RESET TO RETRY",
+    "tip1": "drag AB along the axis",
+    "tip2": "align the image with the target, then press SPACE",
+    "tip3": "compute OA from the target, set AB, then fire",
+    "strategy": "OA = 1 / (1/OA' − 1/f'). Read OA' from target base on axis."
+  },
+  "hints": {
+    "1": {
+      "1": "Grab the object arrow and slide it left or right along the horizontal axis.",
+      "2": "F and F' are the focal points, both 20 cm from the lens. Watch what happens as AB crosses F.",
+      "3": "When OA < −f' the image is real and inverted on the right. When −f' < OA < 0 the image is virtual and upright on the left."
+    },
+    "2": {
+      "1": "Each dashed arrow tells you where the image should land — same base position on the axis, same size, same orientation.",
+      "2": "Slide AB while watching the constructed A'B' — align the base of A'B' with the base of the target, then press Fire.",
+      "3": "Farther object → smaller closer image. Object at 2f' → image at 2f' with γ = −1. Closer to F → larger farther image."
+    },
+    "3": {
+      "1": "The dashed target arrow's base tells you OA'. Read its x-coordinate, subtract the lens's x-coordinate, then convert to cm using the axis scale.",
+      "2": "Apply 1/OA' − 1/OA = 1/f' with f' = 20 cm. Solve for OA: OA = 1 / (1/OA' − 1/f'). Remember OA is negative for a real object.",
+      "3": "Drag AB to x = 400 + OA·(px/cm). Use Peek to verify your current OA in the sim matches your paper calculation, then Fire."
+    }
+  }
+}

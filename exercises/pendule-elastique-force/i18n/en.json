@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A mass on a spring is shaken by a periodic force $F(t) = F_0 \\cos(\\Omega t)$. Slide the drive pulsation $\\Omega$ and the damping $h$. Sweep $\\Omega$ across the natural pulsation $\\omega_0 = \\sqrt{k/m}$ and watch the amplitude $A$ peak at resonance.",
+      "concept": "Steady state: $x(t) = A(\\Omega)\\,\\cos(\\Omega t - \\varphi)$ with $A(\\Omega) = \\dfrac{F_0}{\\sqrt{(k - m\\Omega^2)^2 + (h\\Omega)^2}}$. $A$ is maximum near $\\Omega = \\omega_0$; damping $h$ sets how sharp the resonance peak is.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Match the orange target amplitude $A^{*}$. Tune $\\Omega$ and $h$ so your steady-state amplitude reaches the dashed band. Note that two values of $\\Omega$ — one below and one above $\\omega_0$ — give the same $A$.",
+      "concept": "Set $A(\\Omega, h) = A^{*}$ and solve: $(k - m\\Omega^2)^2 + (h\\Omega)^2 = (F_0 / A^{*})^2$. For a fixed $h < h_{\\text{crit}}$ there are two $\\Omega$-branches (sub-resonance $\\Omega < \\omega_0$ and supra-resonance $\\Omega > \\omega_0$).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The target curve $x^{*}(t)$ is shown. Read its period $T^{*}$ and its amplitude $A^{*}$ from the chart, compute $\\Omega^{*} = 2\\pi / T^{*}$ and solve for $h^{*}$ from $A^{*} = F_0 / \\sqrt{(k - m\\Omega^{*2})^2 + (h^{*}\\Omega^{*})^2}$. Set the sliders, then press RUN.",
+      "concept": "Read $T^{*}$ = time between two peaks $\\Rightarrow\\ \\Omega^{*} = 2\\pi / T^{*}$. Read $A^{*}$ = peak height. Then $h^{*} = \\dfrac{1}{\\Omega^{*}}\\sqrt{(F_0 / A^{*})^2 - (k - m\\Omega^{*2})^2}$. Match both to within $\\pm 5\\%$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "driven mass-spring",
+    "chart_title": "x(t) — steady state",
+    "y_axis": "x (cm)",
+    "x_axis": "t (s) →",
+    "wall": "wall",
+    "spring_label": "k",
+    "damper_label": "h",
+    "omega0_label": "omega_0",
+    "F0_label": "F_0",
+    "hit": "hit!",
+    "match_ok": "match",
+    "match_off": "off",
+    "submit_button": "RUN",
+    "omega_name": "Omega",
+    "h_name": "h",
+    "amplitude_readout": "A",
+    "target_short": "target",
+    "peek_hint": "read T from two adjacent peaks — Omega = 2*pi/T. Then A gives h from the amplitude formula.",
+    "tip1": "sweep Omega across omega_0 = 10 rad/s. Watch A grow then shrink. Try lowering h to sharpen the peak.",
+    "tip2": "match the dashed amplitude band. Two Omega choices work — one below, one above omega_0.",
+    "tip3": "read T* from the target peaks -> Omega*. Read A* height. Solve for h*. Set sliders, press RUN."
+  },
+  "hints": {
+    "1": {
+      "1": "Move the Omega slider slowly. The amplitude of x(t) grows as Omega approaches omega_0 = 10 rad/s.",
+      "2": "Lower h makes the resonance peak sharper and taller. Higher h flattens it.",
+      "3": "A full sweep should cover Omega well below (~4 rad/s) and well above (~15 rad/s) omega_0."
+    },
+    "2": {
+      "1": "The target is an amplitude, not a phase. Only |x| matters — you're aiming for the dashed band.",
+      "2": "Try setting Omega = omega_0 first — you'll overshoot A*. Then move Omega away from omega_0 to shrink A back to the target.",
+      "3": "For fixed h, two Omega values give the same A: one below omega_0, one above. Either is a valid answer."
+    },
+    "3": {
+      "1": "Count the time between two adjacent peaks of the target curve — that is T*. Then Omega* = 2*pi / T*.",
+      "2": "Read A* directly from the peak height of the target curve. Given Omega* and A*, solve the amplitude formula for h*.",
+      "3": "h* = (1/Omega*) * sqrt((F0/A*)^2 - (k - m*Omega*^2)^2). Set both sliders to match, then press RUN."
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un CAN transforme une tension continue en code binaire discret. Balaie l'entrée $V_{in}$ entre $0$ et $V_{ref} = 5\\,\\text{V}$ et regarde le code 4 bits sauter d'un cran à la fois. Visite une région BASSE, une MOYENNE et une HAUTE pour avancer.",
+      "concept": "Quantification uniforme de pas $\\text{LSB} = V_{ref}/2^n$. Pour $n = 4$ bits, $\\text{LSB} = 5/16 \\approx 0{,}3125\\,\\text{V}$. Le code de sortie vaut $\\text{code} = \\lfloor V_{in}/\\text{LSB} \\rfloor$ et l'erreur $\\varepsilon = V_{in} - \\text{code}\\cdot\\text{LSB}$ vaut au plus un LSB.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une sinusoïde est maintenant appliquée au CAN. Choisis le nombre de bits $n$ pour que la reconstruction en escalier (verte) épouse au plus près la cible analogique (orange). Monte jusqu'à $n \\geq 4$ pour ramener l'erreur de reconstruction sous une graduation visible.",
+      "concept": "Doubler $n$ divise le LSB par 2 et l'erreur de quantification crête par 4. Le rapport signal sur bruit croît selon $\\text{SNR} \\approx 6{,}02\\,n + 1{,}76\\,\\text{dB}$ : chaque bit supplémentaire apporte environ $6\\,\\text{dB}$ de fidélité.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Un code 4 bits est capturé en sortie du CAN. Avant de toucher à quoi que ce soit, calcule $V_{in} = \\text{code}\\cdot\\text{LSB}$ sur papier. Puis choisis la bande de tension (BASSE / MOYENNE / HAUTE) à laquelle il appartient et appuie sur $\\text{VALIDER}$. Réussis les trois captures d'affilée — un mauvais choix rebat les cartes.",
+      "concept": "Bandes avec $V_{ref} = 5\\,\\text{V}$ : BASSE $\\in [0,\\,1{,}25)\\,\\text{V}$ (codes 0000–0011), MOYENNE $\\in [1{,}875,\\,3{,}125)\\,\\text{V}$ (codes 0110–1001), HAUTE $\\in [3{,}75,\\,5]\\,\\text{V}$ (codes 1100–1111). Convertis le code en décimal, multiplie par $\\text{LSB} = 0{,}3125\\,\\text{V}$, cherche la bande.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "bloc CAN",
+    "characteristic": "escalier de quantification",
+    "scope": "oscillo",
+    "scenario": "CAPTURE",
+    "solved": "RÉUSSI",
+    "submit": "VALIDER",
+    "correct": "correct",
+    "wrong": "mauvaise bande",
+    "target": "cible",
+    "your_pick": "reconstruction",
+    "tip1": "balaie V_in · visite les régions basse, moyenne et haute",
+    "tip2": "monte n · l'escalier s'aplatit sur la sinusoïde",
+    "tip3": "lis le code · convertis en V_in · choisis la bande",
+    "peek_tip_1": "LSB = V_ref / 2^n. Multiplie le code décimal par le LSB pour retrouver V_in.",
+    "peek_tip_2": "Pour 4 bits, la plage 0..15 se partage en tiers : le quart bas est BASSE, le milieu est MOYENNE, le quart haut est HAUTE.",
+    "band_low": "BASSE · [0 ; 1,25) V",
+    "band_mid": "MOYENNE · [1,875 ; 3,125) V",
+    "band_high": "HAUTE · [3,75 ; 5] V",
+    "band_low_short": "BASSE",
+    "band_mid_short": "MOYENNE",
+    "band_high_short": "HAUTE",
+    "vin_label": "V_in",
+    "code_label": "code",
+    "vref_label": "V_ref",
+    "lsb_label": "LSB",
+    "bits_label": "bits",
+    "sine_label": "V_in(t)",
+    "recon_label": "reconstruction",
+    "captured_code": "code capturé",
+    "low_seen": "basse",
+    "mid_seen": "moyenne",
+    "high_seen": "haute",
+    "regions_seen": "régions vues",
+    "error_peak": "erreur crête",
+    "advance": "monte n pour avancer",
+    "n_values": "n essayés"
+  },
+  "hints": {
+    "1": {
+      "1": "Bouge le curseur doucement — le code reste le même sur toute une bande de V_in large d'un LSB.",
+      "2": "Un LSB vaut V_ref / 2^n = 5/16 ≈ 0,3125 V. C'est la largeur de chaque marche.",
+      "3": "Visite V_in < 1,25 V (BASSE), V_in dans [1,875 ; 3,125] V (MOYENNE), et V_in > 3,75 V (HAUTE)."
+    },
+    "2": {
+      "1": "L'escalier (vert) est ce que le CAN reconstruit réellement. La sinusoïde lisse (orange) est l'idéal.",
+      "2": "Chaque bit supplémentaire divise le LSB par 2 et double le nombre de marches par période.",
+      "3": "n = 2 donne 4 marches — une forme grossière en blocs. n = 4 donne 16 marches — la forme commence à ressembler à une sinusoïde."
+    },
+    "3": {
+      "1": "Convertis le code 4 bits en décimal. code = b3·8 + b2·4 + b1·2 + b0.",
+      "2": "Multiplie ce décimal par LSB = 0,3125 V. Le résultat donne la borne inférieure de la bande de V_in.",
+      "3": "Compare aux bornes des bandes : BASSE < 1,25 V, MOYENNE entre 1,875 V et 3,125 V, HAUTE > 3,75 V."
+    }
+  }
+}

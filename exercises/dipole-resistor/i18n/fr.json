@@ -1,0 +1,68 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Glisse une cartouche de résistor dans l'emplacement vide et bouge le curseur de tension $E$. Regarde la lecture de l'ampèremètre $I$ et le nuage de points $I(U)$ qui se remplit. Essaie au moins deux résistors différents et deux tensions différentes. La cartouche lampe est non ohmique — remarque comme son tracé diffère.",
+      "concept": "Loi d'Ohm pour un résistor : $U = R \\cdot I$, donc $I = E / R$ quand la pile est idéale. Sur le tracé $I(U)$ le résistor décrit une droite passant par l'origine dont la pente vaut $1/R$. La lampe n'est pas ohmique — son tracé se courbe.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins les deux lectures cibles affichées en haut à droite. Choisis le bon résistor et ajuste $E$ jusqu'à ce que l'ampèremètre affiche le courant cible dans la tolérance. L'ordre n'importe pas.",
+      "concept": "Pour une pile idéale, la tension aux bornes du résistor vaut la tension de la source : $U = E$. Donc $I = E / R$. Pour lire $I = 100$ mA à travers $R = 47\\,\\Omega$ il faut $E = R \\cdot I = 4{,}7$ V.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le nuage $I(U)$ à gauche montre des mesures faites avec un résistor inconnu. Lis la pente, calcule $R = U / I$ sur papier, puis dépose la cartouche correspondante depuis la palette restreinte dans l'emplacement vide. Un seul essai.",
+      "concept": "La pente de la droite $I(U)$ est $1/R$. Choisis n'importe quel point $(U, I)$ sur la droite et applique $R = U / I$. Tous les points sont sur la même droite pour un dipôle ohmique — choisis celui qui se lit le plus clairement.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "schéma",
+    "palette": "palette",
+    "plot": "I en fonction de U",
+    "voltage": "tension E",
+    "u_axis": "U (V)",
+    "i_axis": "I (mA)",
+    "targets": "CIBLES",
+    "target_prefix": "T",
+    "correct": "correct",
+    "wrong": "faux",
+    "attempts_left": "essais restants",
+    "place_resistor": "lis la pente · choisis le résistor",
+    "seen_r": "résistors essayés",
+    "seen_e": "tensions essayées",
+    "unknown_r": "R = ?",
+    "tip1": "glisse un résistor dans l'emplacement ; bouge le curseur E ; regarde l'ampèremètre et le tracé",
+    "tip2": "R fixe la pente ; E fixe le point de fonctionnement sur cette droite",
+    "tip3": "calcule R = U / I à partir de n'importe quel point de la droite tracée",
+    "peek_tip": "La pente de la droite I(U) vaut 1/R. Choisis n'importe quel point, puis R = U / I.",
+    "comp_r47": "47 Ohms",
+    "comp_r100": "100 Ohms",
+    "comp_r220": "220 Ohms",
+    "comp_lamp": "lampe (non ohmique)"
+  },
+  "hints": {
+    "1": {
+      "1": "Glisse une cartouche de résistor dans l'emplacement vide sur le côté droit du circuit.",
+      "2": "Bouge le curseur E vers le haut et le bas. La lecture de l'ampèremètre varie proportionnellement.",
+      "3": "Remplace par un autre résistor. Les deux tracés sont droits, mais leurs pentes diffèrent. La pente la plus raide correspond au plus petit R."
+    },
+    "2": {
+      "1": "Lis chaque cible : elle fixe à la fois la valeur du résistor et le courant cible.",
+      "2": "Loi d'Ohm réarrangée : E = R fois I. Pour 100 mA à travers 47 Ohms, règle E = 4,7 V.",
+      "3": "Place le résistor requis, puis ajuste E par pas de 0,1 V jusqu'à ce que l'ampèremètre soit dans la tolérance de la cible."
+    },
+    "3": {
+      "1": "Regarde le nuage à gauche. Toutes les mesures sont sur une droite passant par l'origine — cela signifie un seul résistor.",
+      "2": "Choisis n'importe quel point sur la droite. Lis son U et son I. Calcule R = U / I.",
+      "3": "Si R sort proche de 100, la réponse est 100 Ohms. Fais correspondre à la cartouche la plus proche dans la palette."
+    }
+  }
+}

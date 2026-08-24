@@ -1,0 +1,73 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un CNA convertit un mot binaire en tension analogique. Bascule les quatre interrupteurs de bits $b_3\\,b_2\\,b_1\\,b_0$ et regarde la sortie $V_s$ sauter entre $0$ et $V_{ref}$. Visite le code tout à zéro, le code tout à un, et au moins quatre codes intermédiaires pour avancer.",
+      "concept": "Pour un CNA à $n$ bits avec référence $V_{ref}$ : $V_s = V_{ref}\\cdot N / 2^n$, où $N$ est la valeur décimale du mot binaire. Le pas $\\text{LSB} = V_{ref}/2^n$ fixe la plus petite variation de tension. Avec $n = 4$ et $V_{ref} = 5\\,\\text{V}$, $\\text{LSB} = 0{,}3125\\,\\text{V}$ et la sortie prend $16$ niveaux discrets entre $0$ et $4{,}6875\\,\\text{V}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Un flux de bits pré-enregistré pilote le CNA pour reconstruire une sinusoïde cible (orange). Choisis la profondeur en bits $n \\in \\{3, 4, 5\\}$ pour que l'escalier (vert) approche la sinusoïde. Avance quand tu as essayé au moins deux profondeurs et atteint $n \\geq 4$.",
+      "concept": "Doubler $n$ divise le $\\text{LSB}$ par deux et double le nombre de niveaux. L'erreur crête de reconstruction évolue comme $\\text{LSB}/2 = V_{ref}/2^{n+1}$ : à $n = 3$ l'escalier est grossier ($\\text{LSB} = 0{,}625\\,\\text{V}$), à $n = 5$ chaque pas ne fait que $\\approx 0{,}156\\,\\text{V}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Une tension cible $V_{target}$ est affichée. Avant de toucher à quoi que ce soit, résous $N = V_{target} \\cdot 2^n / V_{ref}$ sur papier et écris $N$ en binaire. Règle les interrupteurs de bits sur ce code et appuie sur $\\text{VALIDER}$. Réussis les trois cibles d'un seul coup — un mauvais choix rebat le paquet.",
+      "concept": "Quantification inverse : $N = \\text{round}(V_{target} \\cdot 2^n / V_{ref})$. Avec $n = 4$ et $V_{ref} = 5\\,\\text{V}$ : divise $V_{target}$ par $0{,}3125\\,\\text{V}$ pour obtenir $N$, puis convertis $N$ en un mot binaire de 4 bits $b_3\\,b_2\\,b_1\\,b_0$ où $b_3$ est le MSB (poids $8$) et $b_0$ le LSB (poids $1$).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "CNA R-2R",
+    "characteristic": "V_s en fonction du code",
+    "scope": "reconstruction",
+    "scenario": "CIBLE",
+    "solved": "RÉUSSI",
+    "submit": "VALIDER",
+    "correct": "code correct",
+    "wrong": "code faux",
+    "target": "cible",
+    "your_pick": "ton code",
+    "tip1": "bascule b3..b0 · visite 0000, 1111 et les codes intermédiaires",
+    "tip2": "augmente n · l'escalier colle mieux à la sinusoïde",
+    "tip3": "calcule N = V_target / LSB · convertis en binaire · VALIDER",
+    "peek_tip_1": "Le MSB b3 vaut V_ref/2 = 2,5 V. Chaque bit inférieur divise ce poids par deux : 1,25 · 0,625 · 0,3125 V.",
+    "peek_tip_2": "Divise V_target par LSB = 0,3125 V pour obtenir N (décimal). Convertis N en un mot binaire de 4 bits.",
+    "vref_label": "V_ref",
+    "lsb_label": "LSB",
+    "vs_label": "V_s",
+    "bits_label": "bits",
+    "sine_label": "cible",
+    "recon_label": "escalier",
+    "target_voltage": "V_out cible",
+    "codes_seen": "codes vus",
+    "extremes_seen": "0000 · 1111",
+    "advance": "augmente n pour avancer",
+    "n_values": "n essayés",
+    "error_peak": "erreur crête",
+    "level_bar": "niveau de sortie"
+  },
+  "hints": {
+    "1": {
+      "1": "Chaque interrupteur multiplie son bit par une puissance de deux : b3 par 8, b2 par 4, b1 par 2, b0 par 1.",
+      "2": "La sortie vaut V_s = V_ref · N / 16 où N est le code décimal. Essaie 0000 (N=0), 1000 (N=8, mi-échelle), 1111 (N=15).",
+      "3": "Bascule uniquement l'interrupteur de gauche (b3=1) pour voir V_s sauter directement à 2,5 V — c'est la contribution du MSB."
+    },
+    "2": {
+      "1": "Plus le LSB est petit = plus les pas sont petits = plus l'escalier est lisse. n = 5 donne 32 niveaux contre 8 seulement pour n = 3.",
+      "2": "L'erreur crête évolue comme LSB/2 = V_ref / 2^(n+1). Chaque bit supplémentaire la divise par deux.",
+      "3": "Essaie d'abord n = 3 pour sentir la grossièreté, puis passe à n = 4 ou 5 pour remplir le critère d'avancement."
+    },
+    "3": {
+      "1": "Convertis V_target en code décimal : N = V_target / LSB où LSB = V_ref / 2^n = 0,3125 V.",
+      "2": "Arrondis N à l'entier le plus proche dans [0, 15]. Puis convertis en binaire sur 4 bits, MSB en tête.",
+      "3": "Exemple : V_target = 2,1875 V → N = 2,1875 / 0,3125 = 7 → binaire 0111 → b3=0, b2=1, b1=1, b0=1."
+    }
+  }
+}

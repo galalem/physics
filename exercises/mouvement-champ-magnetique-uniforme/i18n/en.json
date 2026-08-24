@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "The particle exits the emitter with speed $v$ into a uniform magnetic field $B$ pointing out of the page ($\\odot$). Slide $v$ and $B$, toggle the charge sign, and fire. Watch how the circle radius $r$ and rotation sense change.",
+      "concept": "Lorentz force: $\\vec{F} = q\\,\\vec{v} \\times \\vec{B}$. Perpendicular to $\\vec{v}$, so the speed stays constant and the trajectory closes into a circle of radius $r = \\dfrac{m v}{|q| B}$ with angular frequency $\\omega = \\dfrac{|q| B}{m}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit all three targets. The dashed preview circle shows the trajectory for the current $v$, $B$, and charge sign. If a target sits above the initial velocity line, flip the charge sign to reverse the rotation.",
+      "concept": "$r = \\dfrac{m v}{|q| B}$ — smaller $B$ gives a wider circle. Sign of $q$ decides which side of the initial velocity the centre lies on: $q > 0$ curves down, $q < 0$ curves up (for $\\vec{B}$ out of the page).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No preview. Each target's coordinates $(x, y)$ are shown. Compute $r$, then solve for $B$ from $r = \\dfrac{m v}{|q| B}$. You have exactly one shot per target — no spray-and-pray.",
+      "concept": "For a target at $(x, y)$ on the circle through the origin, $r = \\dfrac{x^{2} + y^{2}}{2\\,|y|}$. Sign of $y$ tells you the sign of $q$: target above $(y > 0) \\Rightarrow q < 0$; target below $(y < 0) \\Rightarrow q > 0$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "hits": "HITS",
+    "shots": "SHOTS",
+    "stage": "STAGE",
+    "charge_sign": "q",
+    "b_unit": "mT",
+    "b_out": "OUT",
+    "tip1": "change v, B, and the charge sign — watch how the circle moves",
+    "tip2": "line the dashed circle up so it passes through each target, then FIRE",
+    "tip3": "read (x, y), solve r and B on paper, pick the charge sign — then FIRE",
+    "peek_tip_radius": "r = mv/(|q|B). Same r ⇒ many (v, B) pairs. Halving B doubles r.",
+    "peek_tip_sign": "Sign of q flips rotation. Target above y = 0 ⇒ q must be negative.",
+    "peek_tip_geometry": "For a target on the circle through the origin, r = (x² + y²) / (2·|y|)."
+  },
+  "hints": {
+    "1": {
+      "1": "Move the v slider (left) and the B slider (right) — the dashed circle updates live.",
+      "2": "Toggle q from +e to −e. The centre of the circle jumps from below to above the initial velocity.",
+      "3": "Larger v ⇒ larger r. Larger B ⇒ smaller r. r = mv/(|q|B)."
+    },
+    "2": {
+      "1": "Move the dashed preview circle over each target, then fire. It has to pass THROUGH the target.",
+      "2": "Wider circle ⇒ lower B (or higher v). Tighter circle ⇒ higher B (or lower v).",
+      "3": "If a target sits above the emitter's horizontal line, you can't reach it with q = +e. Flip q to −e first."
+    },
+    "3": {
+      "1": "For each target: read (x, y). Compute r = (x² + y²) / (2·|y|). Then B = mv/(|q|·r).",
+      "2": "Pick the sign of q from the sign of y: target below ⇒ q = +e; target above ⇒ q = −e.",
+      "3": "Pick any v in range and compute B from B = v / r (sim units) — many (v, B) pairs share the same r."
+    }
+  }
+}

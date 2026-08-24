@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "An electron enters the deflection plates horizontally with speed $v_0$. Move the $U$ slider (voltage between plates) and the $v_0$ slider, then press FIRE. Notice how the beam bends inside the field and stays straight after.",
+      "concept": "Inside the plates the electric field is uniform: $E = U/d$. The electron feels a constant acceleration $a = qE/m = (q/m)\\,U/d$ perpendicular to $v_0$, so its path is parabolic while $x \\in [0, L]$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit the three target markers on the screen. The dashed line previews the beam — tune $U$ and $v_0$, then fire. Watch out: if the exit deflection exceeds $d/2$, the electron hits a plate and never reaches the screen.",
+      "concept": "Screen deflection: $Y = \\dfrac{(q/m)\\,U\\,L}{d\\,v_0^{2}}\\,\\left(D + \\tfrac{L}{2}\\right)$. Y scales with $U$ and with $1/v_0^{2}$; its sign follows $U$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No preview. Each target shows its screen coordinate $Y$ in cm. You have exactly 3 shots — one per target. Compute $U$ (given a $v_0$ you choose) from the deflection formula on paper, set the sliders, then fire.",
+      "concept": "Two constraints matter: (a) $Y_{\\text{screen}} = (q/m)\\,U\\,L\\,(D + L/2)/(d\\,v_0^{2})$ picks the pair $(U, v_0)$ up to a family; (b) the electron must survive the plates, $|y_{\\text{exit}}| = \\tfrac{1}{2}(q/m)\\,|U|\\,(L/v_0)^{2}/d < d/2$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "hits": "HITS",
+    "shots": "SHOTS",
+    "stage": "STAGE",
+    "voltage": "U",
+    "speed": "v₀",
+    "screen": "SCREEN",
+    "particle_electron": "e⁻",
+    "plate_top": "+U/2",
+    "plate_bot": "−U/2",
+    "tip1": "move U and v₀, then FIRE",
+    "tip2": "use the preview line to line up each target",
+    "tip3": "compute U from Y and v₀, then FIRE — 3 shots, one per target",
+    "peek_tip_scaling": "Y scales with U/v₀². Double v₀ → quarter Y for the same U. Flip the sign of U → beam flips to the other side.",
+    "peek_tip_survives": "Check |y_exit| = ½ · (q/m) · |U| · (L/v₀)² / d before firing. If it exceeds d/2 the electron hits a plate.",
+    "peek_tip_lever": "Longer field-free region D → bigger Y at the screen for the same exit angle. Y = y_exit + (D · v_y_exit / v₀)."
+  },
+  "hints": {
+    "1": {
+      "1": "Move the U slider up or down — the beam bends toward whichever plate is at higher potential.",
+      "2": "The v₀ slider changes how long the electron sits in the field. Faster v₀ = less time to bend = smaller deflection.",
+      "3": "Try U = 0: no field, no bending. The electron sails straight through and marks the screen center."
+    },
+    "2": {
+      "1": "The dashed preview shows the trajectory. Line it up with a target, then fire.",
+      "2": "A target above center needs U > 0; below center needs U < 0. Same |Y| takes the same |U| for a given v₀.",
+      "3": "Halving v₀ multiplies Y by four for the same U. Use v₀ as a coarse knob and U as a fine one."
+    },
+    "3": {
+      "1": "Read each target's Y (in cm). Pick a v₀ you can commit to, then solve U = Y · m · d · v₀² / (q · L · (D + L/2)).",
+      "2": "With L = 10 cm, d = 4 cm, D = 10 cm and q/m = 1.76×10¹¹ C/kg: U[V] ≈ Y[cm] · v₀[10⁷ m/s]² · 15.15.",
+      "3": "For extreme Y, either raise v₀ (safer — |y_exit| stays small) or accept a bigger |U|. Check |y_exit| < d/2 = 2 cm before you fire."
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the voltmeter across any dipole to measure the voltage $U$. Click the switch to break or close the loop and watch how each $U$ changes.",
+      "concept": "The voltage between two points is a difference of potential: $U_{AB} = V_A - V_B$. It is measured in volts $(V)$ by a voltmeter placed in parallel with the dipole.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Use the voltmeter to reach every target reading listed. Toggle the switch when a target asks for the open-loop case.",
+      "concept": "Around any closed loop the signed voltages sum to zero: $\\Sigma U = 0$. An open switch drops the full source voltage; a closed switch drops $0\\,V$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Three voltages are labeled. The fourth is hidden. Pick the instrument that measures voltage and place it across the missing dipole. One attempt.",
+      "concept": "Apply $\\Sigma U = 0$ on the loop to work out the unknown $U$ on paper. Only a voltmeter placed in parallel with the correct dipole verifies it.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "schematic",
+    "palette": "palette",
+    "targets": "TARGETS",
+    "unit_V": "V",
+    "comp_voltmeter": "voltmeter",
+    "comp_ammeter": "ammeter",
+    "comp_wire": "wire",
+    "dipole_battery": "battery",
+    "dipole_lamp1": "lamp 1",
+    "dipole_lamp2": "lamp 2",
+    "dipole_switch": "switch",
+    "battery_label": "E",
+    "lamp1_label": "L1",
+    "lamp2_label": "L2",
+    "switch_label": "K",
+    "sw_open": "switch open",
+    "sw_closed": "switch closed",
+    "sw_hint": "click switch to toggle",
+    "seen_battery": "measured battery",
+    "seen_lamp": "measured a lamp",
+    "seen_open": "witnessed open loop",
+    "target_prefix": "measure",
+    "target_across": "across",
+    "target_reads": "reads",
+    "target_when_closed": "(switch closed)",
+    "target_when_open": "(switch open)",
+    "reading_hidden": "reading appears after submit",
+    "place_probe": "place probe across the ? dipole",
+    "commit_hint": "drop the voltmeter to submit",
+    "correct": "correct",
+    "wrong": "wrong instrument or position",
+    "attempts_left": "attempts left",
+    "unknown": "?",
+    "tip1": "drag the voltmeter onto any dipole; click the switch to open/close",
+    "tip2": "hit every target — read the value shown on the voltmeter body",
+    "tip3": "reason on paper; the reading stays hidden until you commit",
+    "peek_tip": "KVL: around the closed loop the signed voltages sum to zero. Identify the missing dipole and compute U before placing the probe."
+  },
+  "hints": {
+    "1": {
+      "1": "Drag the voltmeter from the palette onto one of the four dipole positions in the loop.",
+      "2": "A voltmeter measures U = V_A - V_B between two nodes. Try measuring across the battery, then across a lamp.",
+      "3": "Now click the switch to open it. Measure across the open switch — you should read the full source voltage."
+    },
+    "2": {
+      "1": "Read every target line. Each asks for U across a specific dipole, sometimes with the switch open.",
+      "2": "Move the voltmeter from one dipole to another; the reading updates instantly.",
+      "3": "Open switch → lamps read 0 V and the switch itself reads the full E. Closed switch → the reverse."
+    },
+    "3": {
+      "1": "Only one of the three palette items is an instrument that measures voltage. Which one?",
+      "2": "The unknown U satisfies E - U_L1 - U_L2 - U_switch = 0 around the loop.",
+      "3": "Solve for the missing U, identify which dipole it belongs to, then place the voltmeter in parallel with that dipole."
+    }
+  }
+}

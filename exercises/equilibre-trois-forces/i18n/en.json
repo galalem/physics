@@ -1,0 +1,58 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A ring is pulled by three strings — forces $\\vec{F_1}$, $\\vec{F_2}$, $\\vec{F_3}$. Drag the tip of $\\vec{F_3}$ around the ring. On the right, the three forces are drawn head-to-tail (the 'dynamique'). The ring is at equilibrium only when the triangle closes.",
+      "concept": "For a solid at equilibrium under three coplanar forces: $\\vec{F_1} + \\vec{F_2} + \\vec{F_3} = \\vec{0}$. Placed head-to-tail, the three vectors form a closed triangle. Equivalently: $F_{3x} = -(F_{1x} + F_{2x})$ and $F_{3y} = -(F_{1y} + F_{2y})$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Three setups. For each: $\\vec{F_1}$ and $\\vec{F_2}$ are given (magnitude and angle labeled on the scene). Drag $\\vec{F_3}$ until the dynamique closes, then press Confirm (or Space). You have 5 shots for 3 setups.",
+      "concept": "Aim by closing the triangle visually: the tip of $\\vec{F_3}$ must land back on the origin of the dynamique. When it does, $\\vec{F_1} + \\vec{F_2} + \\vec{F_3} = \\vec{0}$ holds exactly.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The dynamique panel is hidden. Read $F_1$, $F_2$ and their angles from the ring diagram. Compute $F_{3x} = -(F_{1x} + F_{2x})$ and $F_{3y} = -(F_{1y} + F_{2y})$ on paper, convert to magnitude and angle, drag $\\vec{F_3}$ into place, then Confirm. One shot per setup — miss any and the stage restarts.",
+      "concept": "Project onto axes: $F_{3x} = -(F_1\\cos\\alpha_1 + F_2\\cos\\alpha_2)$, $F_{3y} = -(F_1\\sin\\alpha_1 + F_2\\sin\\alpha_2)$. Then $F_3 = \\sqrt{F_{3x}^2 + F_{3y}^2}$ and $\\alpha_3 = \\operatorname{atan2}(F_{3y},\\, F_{3x})$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "ring": "ring",
+    "dynamique": "dynamique",
+    "closed": "CLOSED",
+    "gap": "GAP",
+    "confirm": "CONFIRM",
+    "setup": "SETUP",
+    "shots": "SHOTS",
+    "cleared": "CLEARED",
+    "tip1": "drag F3 tip — the triangle closes at equilibrium",
+    "tip2": "close the triangle, then confirm",
+    "tip3": "sum components, then set F3 and confirm",
+    "peek_lead": "sum components — F3 = -(F1 + F2)",
+    "post_reveal": "triangle revealed"
+  },
+  "hints": {
+    "1": {
+      "1": "Drag the head of the orange F3 arrow (the one from the ring). Watch the right-hand triangle open and close.",
+      "2": "The right panel places F1, F2, F3 head-to-tail. The gap arrow shows how far from equilibrium you are.",
+      "3": "When the triangle closes, F1 + F2 + F3 = 0 — the ring is in equilibrium. The HUD gap goes to 0 N."
+    },
+    "2": {
+      "1": "Read F1 and F2 on the ring — magnitude and angle. Drag F3 until the dynamique triangle closes.",
+      "2": "F3 must be exactly the opposite of F1 + F2. Look at where the tip of F2 falls in the dynamique — F3 goes from there back to the origin.",
+      "3": "If you overshoot, the gap arrow points from your F3 tip back to the origin. Nudge F3 in that direction."
+    },
+    "3": {
+      "1": "The triangle is hidden. Read F1, F2 and their angles from the labels near the ring.",
+      "2": "Compute F3x = -(F1·cos α1 + F2·cos α2) and F3y = -(F1·sin α1 + F2·sin α2). Then magnitude = √(F3x² + F3y²), angle = atan2(F3y, F3x).",
+      "3": "Peek reveals your current F3 magnitude and angle so you can align them with your paper answer before confirming."
+    }
+  }
+}

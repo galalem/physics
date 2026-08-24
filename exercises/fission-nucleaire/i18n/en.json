@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Each dot is a $^{235}\\text{U}$ nucleus in a fuel pellet. A stray neutron hits one, splitting it into two lighter daughters plus $\\nu$ fresh neutrons — those seed new fissions in a chain reaction. Sweep the multiplication factor $k$ (moving the absorber rod), toggle LOG, and let the sim run past one effective half-life.",
+      "concept": "For $N_0$ fissile nuclei consumed in a chain, $N(t) = N_0\\,e^{-k\\,t\\,/\\,\\tau_0}$ with $\\tau_0$ a fixed characteristic time of the pellet geometry. Higher $k$ = more neutrons per fission survive to trigger the next one = fuel burns faster. Because the daughters are more tightly bound than the parent ($E_l/A$ hook), every fission releases $Q > 0$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A mystery core's power-decay curve (bright orange) is drawn over the plot with three sample points. Adjust the absorber to tune $k$ until your simulated core matches within $\\pm 5\\%$.",
+      "concept": "Two cores with the same $k$ burn through their fuel at the same relative rate. On a log plot, matching slopes = matching $k$: the slope is $-k\\,/\\,\\tau_0$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Reactor logbook only. Three noisy assay readings $(t, N)$ from a shielded core are given — no live sim, no rod. Compute $k = \\tau_0 \\,\\ln(N_1/N_2)\\,/\\,(t_2 - t_1)$ and enter it. Peek reveals the true decay curve for $1.5$ s (never the value of $k$).",
+      "concept": "From any two readings: $\\lambda_{\\mathrm{eff}} = \\dfrac{\\ln(N_1/N_2)}{t_2 - t_1}$, so $k = \\tau_0 \\, \\lambda_{\\mathrm{eff}}$. On a log-$N$ plot the slope is $-k\\,/\\,\\tau_0$; $\\tau_0 = 20$ u for this pellet.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "nuclei": "²³⁵U nuclei",
+    "field_measurements": "reactor logbook",
+    "find_T": "find k from the data",
+    "match_ok": "match",
+    "match_off": "off — check your reading",
+    "enter_prompt": "enter k and submit",
+    "peek_reveal": "true value:",
+    "log_toggle": "LOG",
+    "submit": "SUBMIT",
+    "tip1": "sweep k, toggle LOG, let the sim run",
+    "tip2": "match the bright orange target — try LOG for a linear fit",
+    "tip3": "compute λ_eff from two points, then k = τ₀ · λ_eff",
+    "absorber": "absorber",
+    "tau0_note": "τ₀ = 20 u"
+  },
+  "hints": {
+    "1": {
+      "1": "k is the multiplication factor — the average number of new neutrons each fission produces that go on to trigger another fission.",
+      "2": "Toggle LOG: on a log scale, N(t) is a straight line whose slope equals −k/τ₀. Higher k → steeper slope.",
+      "3": "The dashed teal curve is the analytic N₀·exp(−k·t/τ₀); the solid orange is the stochastic count. They agree on average — the variance is real Poisson noise."
+    },
+    "2": {
+      "1": "The bright orange curve is the target reactor. Match the slope, not just the endpoints.",
+      "2": "On LOG, curves with the same k are parallel straight lines. On linear, the target crosses N₀/2 at t = τ₀·ln 2 / k.",
+      "3": "The Δ readout in the top-right shows how far your k is from the target. Under 5% wins."
+    },
+    "3": {
+      "1": "Pick any two readings (t₁, N₁) and (t₂, N₂). Then λ_eff = ln(N₁/N₂) / (t₂ − t₁), and k = τ₀ · λ_eff with τ₀ = 20 u.",
+      "2": "On the LOG plot the assay dots line up. The slope of that line is −k/τ₀ — read it off the axes if you prefer graphical to algebraic.",
+      "3": "Tolerance is ±3%; the readings are noisy so small rounding differences are fine. Peek gives you the true curve for 1.5 s — it does NOT give you k."
+    }
+  }
+}

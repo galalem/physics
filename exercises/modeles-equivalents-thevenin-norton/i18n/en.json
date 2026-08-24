@@ -1,0 +1,83 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Slide $E$, $r$ and $R$. Both panels drive the same load $R$ — the Thévenin source ($E$ in series with $r$) and the Norton source ($I_0 = E/r$ in parallel with $r$) always yield identical terminal readings $U$ and $I$.",
+      "concept": "Any linear two-terminal network is equivalent to a voltage source $E$ in series with an internal resistance $r$ (Thévenin) — or, equivalently, a current source $I_0 = E/r$ in parallel with the same $r$ (Norton). External behavior is the same.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "$E$ and $r$ are locked. Adjust $R$ so the terminal voltage $U$ hits each of the three target values in sequence. Watch the Norton panel: it reports the same $U$ and $I$ for every $R$.",
+      "concept": "Terminal voltage: $U = E - r \\cdot I = R \\cdot I$. Solving: $I = E / (R + r)$, so $U = E \\cdot R / (R + r)$. The Norton form gives the same result: $U = R \\cdot (I_0 - U/r)$ rearranges to the same expression.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The source is a sealed black box. Two operating points $(R, I, U)$ are given. Compute $E$ and $r$ on paper, then enter them. 3 attempts per scenario — ace 3 scenarios in a row.",
+      "concept": "From two points on the line $U = E - r \\cdot I$: slope $-r = (U_2 - U_1) / (I_2 - I_1)$, so $r = (U_1 - U_2) / (I_2 - I_1)$. Intercept: $E = U_1 + r \\cdot I_1$. The Norton parameter follows: $I_0 = E / r$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "thevenin": "THÉVENIN",
+    "norton": "NORTON",
+    "black_box": "BLACK BOX",
+    "load": "load",
+    "src_int": "source (internal)",
+    "slider_E": "E",
+    "slider_r": "r",
+    "slider_R": "R",
+    "unit_v": "V",
+    "unit_ohm": "Ω",
+    "unit_a": "A",
+    "readout_U": "U",
+    "readout_I": "I",
+    "readout_I0": "I₀",
+    "readout_G0": "G₀",
+    "unit_s": "S",
+    "targets": "TARGETS",
+    "target_u": "target U",
+    "op_point": "operating point",
+    "input_E": "E =",
+    "input_r": "r =",
+    "submit": "submit",
+    "correct": "CORRECT",
+    "wrong": "WRONG",
+    "attempts_left": "attempts left",
+    "scenarios_solved": "solved",
+    "scenario": "scenario",
+    "tip1": "move E, r and R; watch both panels stay in agreement",
+    "tip2": "adjust R only — E and r are fixed for this stage",
+    "tip3": "napkin math first, then commit — no live meter to guess against",
+    "peek_tip": "Two points on the line $U = E - r I$: slope $-r = (U_2 - U_1)/(I_2 - I_1)$, intercept $E = U_1 + r I_1$.",
+    "cov_e": "moved E",
+    "cov_r": "moved r",
+    "cov_R": "moved R",
+    "hit": "hit",
+    "target_prompt": "set R so U =",
+    "given": "given",
+    "unknown": "?"
+  },
+  "hints": {
+    "1": {
+      "1": "Try sliding E first. Then r. Both panels update together.",
+      "2": "For any (E, r, R), the Thévenin and Norton panels give the same terminal U and I. They are equivalent representations of the same source.",
+      "3": "The Norton current source magnitude is I₀ = E / r. Change E and watch I₀ track it."
+    },
+    "2": {
+      "1": "Only R moves this stage. E and r are fixed at the shown values.",
+      "2": "Terminal voltage: U = E · R / (R + r). Set R for each target.",
+      "3": "For U = 6 V with E = 12 V, r = 2 Ω: 6 = 12·R/(R+2) → R = 2 Ω. Apply the same for U = 8 V and U = 10 V."
+    },
+    "3": {
+      "1": "Draw the line U(I) from the two given points. Its slope is −r; its y-intercept (I = 0) is E.",
+      "2": "r = (U₁ − U₂) / (I₂ − I₁). Once you have r, substitute back to find E.",
+      "3": "Method: compute r from the ΔU/ΔI ratio, then E = U₁ + r · I₁. Both fields are checked with ±3% tolerance."
+    }
+  }
+}

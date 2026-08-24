@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un repère parcourt le disque à vitesse angulaire constante $\\omega$ sur un cercle de rayon $R$. Glisse à l'intérieur du disque pour changer $R$, utilise le curseur $\\omega$, puis appuie sur VÉRIFIER. Observe comment la vitesse $\\vec{v}$ (tangente) et l'accélération centripète $\\vec{a}$ (radiale) se redessinent — même si la vitesse $|\\vec{v}|$ est constante, $\\vec{a}$ n'est pas nulle.",
+      "concept": "Mouvement circulaire uniforme : $v = R\\,\\omega$ (tangente) et $a_n = v^{2}/R = R\\,\\omega^{2}$ (centripète, vers le centre). La norme de la vitesse est constante mais le vecteur vitesse tourne, ce qui exige une accélération non nulle.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois cibles affichent chacune un couple $(v^{*},\\,a^{*})$ à atteindre. Règle $R$ et $\\omega$ pour que les lectures en direct correspondent, puis appuie sur VÉRIFIER pour valider la cible. Les flèches $\\vec{v}$ et $\\vec{a}$ en direct t'aident à comparer.",
+      "concept": "Inverse les définitions : à partir de $(v,\\,a)$, résous $R = v^{2}/a$ et $\\omega = a/v$. Deux cibles différentes peuvent partager le même $\\omega$ mais différer par $R$, ou partager le même $R$ et différer par $\\omega$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches $\\vec{v}$ et $\\vec{a}$ ainsi que les lectures en direct de $v,a$ sont masquées — tu ne vois que $R$ et $\\omega$. Lis pour chaque cible $(v^{*},\\,a^{*})$, calcule $R$ et $\\omega$ sur papier, puis VÉRIFIE. Tu as exactement trois tirs pour trois cibles — pas de tir à l'aveugle.",
+      "concept": "De $v^{*} = R\\,\\omega$ et $a^{*} = R\\,\\omega^{2}$ on tire $R = (v^{*})^{2}/a^{*}$ et $\\omega = a^{*}/v^{*}$. Erreur fréquente : supposer $a = 0$ parce que $|\\vec{v}|$ est constant — mais $\\vec{v}$ change de direction, donc $\\vec{a} \\ne \\vec{0}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "VÉRIFIER",
+    "stage": "ÉTAPE",
+    "hits": "TOUCHÉS",
+    "shots": "TIRS",
+    "target": "CIBLE",
+    "velocity": "v",
+    "accel": "a",
+    "radius": "R",
+    "omega": "ω",
+    "tip1": "redimensionne R, change ω, puis VÉRIFIE",
+    "tip2": "atteins chaque couple (v*, a*), puis VÉRIFIE pour le valider",
+    "tip3": "calcule R = v²/a et ω = a/v sur papier, puis VÉRIFIE",
+    "peek_tip_invert": "Inverse directement : R = v²/a et ω = a/v. Pas de recherche — de la simple algèbre.",
+    "peek_tip_misconception": "|v| est constant, mais a ≠ 0. La direction de la vitesse tourne ; cette rotation EST l'accélération.",
+    "peek_tip_ratio": "Même v avec un a plus grand → R plus petit. Même R avec un ω plus grand → v et a augmentent tous deux.",
+    "hit_flash": "TOUCHÉ",
+    "miss_flash": "RATÉ"
+  },
+  "hints": {
+    "1": {
+      "1": "Glisse n'importe où dans le disque pour changer R. Le repère tourne à ω rad/s.",
+      "2": "Le curseur ω est à droite. Observe comment la flèche tangente v et la flèche radiale a se redessinent en même temps.",
+      "3": "Remarque : |v| ne change jamais dans le temps à R et ω fixes, pourtant la flèche a pointe toujours vers le centre. C'est l'accélération centripète."
+    },
+    "2": {
+      "1": "Chaque cible affiche un couple (v*, a*). Utilise les lectures v et a en direct pour t'y ajuster.",
+      "2": "De v = R·ω et a = R·ω² : divise pour obtenir ω = a/v. Substitue pour obtenir R = v²/a.",
+      "3": "Règle d'abord R (R = v²/a), puis ajuste ω jusqu'à ce que v corresponde. Si v est bon, a l'est automatiquement aussi."
+    },
+    "3": {
+      "1": "Tu vois toujours R et ω dans le HUD. Utilise-les pour aligner sur ce que tu as calculé sur papier.",
+      "2": "Pour chaque cible : R = (v*)² / a*, ω = a* / v*. Arrondis au pas de curseur le plus proche.",
+      "3": "Même v avec des a différents implique des R différents. Ne suppose PAS a = 0 parce que la vitesse est constante — c'est cette erreur que cette étape teste."
+    }
+  }
+}

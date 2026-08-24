@@ -1,0 +1,67 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser l'un des trois récepteurs passifs (résistor, condensateur, bobine) depuis la palette sur l'emplacement vide en bas de la boucle. Ferme l'interrupteur. Observe comment l'ampèremètre $A$ et le voltmètre $V$ réagissent quand tu changes de récepteur. Essaie les trois au moins une fois.",
+      "concept": "En régime continu permanent, chaque récepteur passif se comporte différemment. Un résistor $R$ obéit à $U = R \\cdot I$. Un condensateur $C$ bloque le courant permanent : $I = 0$ et $U = E$. Une bobine idéale $L$ se comporte comme un court-circuit : $U = 0$ et $I = E / r$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Deux comportements à obtenir. Premier : fais que l'ampèremètre indique exactement $0$ (pas de courant permanent). Second : fais que le voltmètre indique exactement $0$ aux bornes du récepteur. Les deux cibles doivent être atteintes — change de récepteur selon les besoins.",
+      "concept": "Un courant nul dans une boucle fermée signifie que le récepteur bloque le passage des charges — le condensateur est complètement chargé et aucun courant ne passe. Une tension nulle aux bornes du récepteur signifie que le récepteur ne chute rien — la bobine idéale, un court-circuit en continu, laisse chuter tout $E$ sur la résistance interne $r$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le récepteur dans l'emplacement boîte noire est inconnu. Les lectures des appareils affichées sont les valeurs de régime permanent mesurées sur le circuit réel. À partir de ces deux nombres seulement, choisis le récepteur passif qui correspond. Un seul essai.",
+      "concept": "Identifie le récepteur à partir de sa signature en continu : $I = 0$ et $U = E$ désignent un condensateur. $U = 0$ et $I = E/r$ désignent une bobine. Tout autre couple $(U, I)$ fini avec $U = R \\cdot I$ désigne un résistor.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "schéma",
+    "palette": "palette",
+    "targets": "CIBLES",
+    "comp_resistor": "résistor",
+    "comp_capacitor": "condensateur",
+    "comp_coil": "bobine",
+    "tried_all": "les trois essayés",
+    "target_i0": "I = 0",
+    "target_u0": "U = 0",
+    "place_receiver": "place un récepteur",
+    "correct": "correct",
+    "wrong": "faux",
+    "attempts_left": "essais restants",
+    "diag_empty": "emplacement du récepteur vide",
+    "diag_switch_open": "interrupteur ouvert — clique pour fermer",
+    "diag_ok_resistor": "courant permanent à travers R",
+    "diag_ok_capacitor": "régime permanent : le condensateur bloque le courant",
+    "diag_ok_coil": "régime permanent : la bobine est un court-circuit",
+    "tip1": "glisse un récepteur dans l'emplacement ; clique l'interrupteur pour le basculer ; puis échange pour un autre type",
+    "tip2": "un récepteur donne I=0, un autre donne U=0 — change jusqu'à obtenir les deux",
+    "tip3": "lis les appareils, choisis le type, dépose-le — un seul essai",
+    "peek_tip": "condensateur : $I = 0$, $U = E$. bobine : $U = 0$, $I = E/r$. résistor : tout autre couple $(U, I)$ fini."
+  },
+  "hints": {
+    "1": {
+      "1": "Prends un récepteur dans la palette de droite et dépose-le dans l'emplacement vide en bas de la boucle.",
+      "2": "Ferme l'interrupteur en cliquant dessus. Lis maintenant l'ampèremètre et le voltmètre. Puis échange le récepteur pour un autre type et compare.",
+      "3": "Tu n'as pas encore placé l'un des trois types de récepteur. Essaie celui que tu n'as pas utilisé."
+    },
+    "2": {
+      "1": "Une cible dit I = 0, l'autre dit U = 0. Des récepteurs différents donnent des signatures différentes.",
+      "2": "Un condensateur en régime permanent continu ne laisse passer aucun courant. Une bobine idéale en régime permanent continu ne fait chuter aucune tension.",
+      "3": "Place un condensateur pour satisfaire la cible I = 0. Place une bobine pour satisfaire la cible U = 0."
+    },
+    "3": {
+      "1": "Compare les lectures d'appareils affichées aux signatures en continu de chaque récepteur.",
+      "2": "Si I est exactement nul et U vaut E, seul un condensateur convient. Si U est nul et I vaut E/r, seule une bobine convient.",
+      "3": "Calcule R = U / I. Si cela correspond à une valeur de résistor plausible, la réponse est un résistor. Sinon, utilise les cas extrêmes."
+    }
+  }
+}

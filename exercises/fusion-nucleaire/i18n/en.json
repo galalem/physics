@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Each dot is a co-located D–T pair (one deuterium + one tritium nucleus) inside a hot plasma. When two like-charged nuclei collide with enough kinetic energy to overcome the Coulomb barrier, they fuse into $^4\\mathrm{He} + n$ and release $Q \\approx 17.6$ MeV. Sweep the fusion half-life $T_{1/2}^{\\mathrm{fus}}$ (a proxy for plasma temperature), toggle LOG, and let the sim run past $T_{1/2}^{\\mathrm{fus}}$.",
+      "concept": "Fusion in a plasma is a stochastic Poisson process: $N(t) = N_0\\,e^{-\\lambda t}$, with $\\lambda = \\ln 2 \\,/\\, T_{1/2}^{\\mathrm{fus}}$. Temperature enters through the Gamow factor: $\\lambda \\propto \\exp\\!\\left(-\\alpha/\\sqrt{T}\\right)$. Hotter plasma $\\Rightarrow$ Coulomb barrier tunnelled more often $\\Rightarrow$ shorter $T_{1/2}^{\\mathrm{fus}}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A mystery plasma's un-fused $N(t)$ curve (bright orange) is drawn over the plot with three sample points. Tune $T_{1/2}^{\\mathrm{fus}}$ until your simulation matches within $\\pm 5\\%$.",
+      "concept": "Two plasmas with equal $T_{1/2}^{\\mathrm{fus}}$ fuse at the same relative rate, regardless of what temperature or density combination produced it. Matching slopes on a log scale $=$ matching $\\lambda$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No live plasma. A neutron-counter has sampled the reactor at three times $t$ and reported the number of un-fused D–T pairs remaining. Compute $T_{1/2}^{\\mathrm{fus}} = \\ln 2 \\,/\\, \\lambda$ from the data and type it in. Peek reveals the true depletion curve for $1.5$ s.",
+      "concept": "From any two readings: $\\lambda = \\dfrac{\\ln(N_1/N_2)}{t_2 - t_1}$, then $T_{1/2}^{\\mathrm{fus}} = \\ln 2 \\,/\\, \\lambda$. On a log-$N$ plot the slope is $-\\lambda$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "pairs": "D–T pairs",
+    "field_measurements": "reactor readings",
+    "find_T": "find T½ᶠᵘˢ from the data",
+    "match_ok": "match",
+    "match_off": "off — check your reading",
+    "enter_prompt": "enter T½ᶠᵘˢ and submit",
+    "peek_reveal": "true value:",
+    "log_toggle": "LOG",
+    "submit": "SUBMIT",
+    "tip1": "sweep T½ᶠᵘˢ, toggle LOG, let the sim pass T½ᶠᵘˢ",
+    "tip2": "match the bright orange target — try LOG for a linear fit",
+    "tip3": "compute λ from two points, then T½ᶠᵘˢ = ln 2 / λ"
+  },
+  "hints": {
+    "1": {
+      "1": "T½ᶠᵘˢ is the time it takes for half the D–T pairs to fuse.",
+      "2": "Toggling LOG turns the exponential decay into a straight line — the slope is −λ.",
+      "3": "The dashed teal curve is the theoretical N(t); the solid orange is the stochastic count. They should agree on average — fluctuations reflect the Poisson nature of nuclear collisions."
+    },
+    "2": {
+      "1": "The bright orange curve is the target plasma. Match its slope, not just its endpoints.",
+      "2": "On a linear plot, T½ᶠᵘˢ is where the curve crosses N₀/2. On a log plot, matching T½ᶠᵘˢ means parallel lines.",
+      "3": "The Δ% readout in the top-right shows your gap to the target. Under 5% wins."
+    },
+    "3": {
+      "1": "Pick any two readings (t₁, N₁) and (t₂, N₂). Then λ = ln(N₁/N₂) / (t₂ − t₁).",
+      "2": "Once you have λ, the fusion half-life is T½ᶠᵘˢ = ln 2 / λ ≈ 0.693 / λ.",
+      "3": "The neutron counter is noisy — the tolerance is ±3%, so small rounding differences are fine. Use peek to see the true depletion curve if you're stuck."
+    }
+  }
+}

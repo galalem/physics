@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Tout signal périodique est une somme de sinusoïdes pures. Active/désactive les harmoniques $n = 1$ à $7$, et fais varier l'exposant de décroissance $p$ qui fixe chaque amplitude $A_n = 1/n^{p}$. Regarde l'oscilloscope de gauche construire la forme d'onde tandis que le spectre de droite fait pousser une barre par harmonique active. Avance après avoir actionné au moins $4$ interrupteurs d'harmoniques et la décroissance au moins $2$ fois.",
+      "concept": "Fourier : $y(t) = \\sum_n A_n \\sin(n\\,\\omega_0\\,t)$ avec $\\omega_0 = 2\\pi f_0$. Harmoniques impaires seules + amplitudes $\\propto 1/n$ synthétisent un signal carré ; harmoniques impaires + $1/n^{2}$ donnent un triangle ; toutes les harmoniques + $1/n$ donnent un signal en dents de scie.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une forme d'onde cible en pointillés orange est affichée à gauche. Active exactement les harmoniques qu'elle contient et règle $p$ jusqu'à ce que ta forme d'onde turquoise se superpose à la cible et que chaque barre étudiant corresponde à la barre cible orange dans le spectre. La correspondance doit être exacte sur l'ensemble d'harmoniques et $|p - p^{*}| \\leq 0.15$.",
+      "concept": "Les harmoniques parasites comptent contre toi. Le spectre d'abord : identifie quelles fréquences portent de l'énergie, puis règle la décroissance pour que les amplitudes décroissent au bon rythme. Un carré est en $1/n$ ; un triangle en $1/n^{2}$ — la différence visible est la vitesse à laquelle les barres rétrécissent.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'oscilloscope temporel a disparu. Seul le spectre est affiché, chaque barre annotée de sa fréquence en Hz. Lis quelles harmoniques portent de l'énergie et comment leurs amplitudes décroissent, puis soumets la famille de forme d'onde et le fondamental $f_0$. Deux essais avant que la cible ne soit re-tirée.",
+      "concept": "La première barre non nulle est à $f_0$. Motif impair seul $\\Rightarrow$ carré ou triangle. Amplitudes décroissant en $1/n$ $\\Rightarrow$ carré (ou dents de scie si tous les $n$ sont présents). Amplitudes décroissant en $1/n^{2}$ $\\Rightarrow$ triangle. Une seule barre $\\Rightarrow$ sinusoïde pure.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "time_domain": "domaine temporel",
+    "spectrum": "spectre de magnitude",
+    "target": "cible",
+    "yours": "à toi",
+    "match_ok": "correspond",
+    "sine": "sinusoïde",
+    "square": "carré",
+    "triangle": "triangle",
+    "sawtooth": "dents de scie",
+    "family_prompt": "famille ?",
+    "f0_prompt": "f_0 (Hz) ?",
+    "submit": "VALIDER",
+    "rolloff": "décroissance p",
+    "attempts_left": "essais restants",
+    "correct": "correct",
+    "wrong": "pas celle-ci",
+    "peek_hint_1": "La première barre est à f_0. Lis sa fréquence sur l'axe.",
+    "peek_hint_2": "Barres impaires seules = carré ou triangle. Décroissance 1/n = carré, 1/n^2 = triangle.",
+    "tip1": "active les harmoniques · fais varier p · regarde forme d'onde et spectre grandir ensemble",
+    "tip2": "harmoniques parasites = erreur · désactive ce que la cible n'a pas",
+    "tip3": "lis f_0 sur la première barre · associe la vitesse de décroissance à une famille"
+  },
+  "hints": {
+    "1": {
+      "1": "Active d'abord l'harmonique 1 seule, puis ajoute 2, 3, 4… — regarde comment chaque nouvelle sinusoïde affine la forme.",
+      "2": "Fais varier p de 0,5 à 2,5 avec seulement les harmoniques impaires activées. Un p faible produit des angles vifs ; un p élevé les arrondit.",
+      "3": "Essaie p = 1 avec n = 1, 3, 5, 7 (carré). Puis p = 2 avec n = 1, 3, 5 (triangle). Puis p = 1 avec tous les n (dents de scie)."
+    },
+    "2": {
+      "1": "Commence par le spectre. Quelles barres de la cible orange sont non nulles ? Active exactement celles-là, ni plus ni moins.",
+      "2": "Regarde comment la hauteur des barres décroît. Division par moitié (1, 1/2, 1/3, ...) correspond à p = 1. Division par quart (1, 1/9, 1/25, ...) correspond à p = 2.",
+      "3": "Compare la barre 3 à la barre 1 dans la cible. Si elle fait environ 1/3 de la hauteur, p = 1. Si elle fait environ 1/9, p = 2. Règle p en conséquence."
+    },
+    "3": {
+      "1": "L'étiquette de fréquence sous la première barre non nulle est f_0. Lis-la directement.",
+      "2": "Compte les barres : seulement des fréquences impaires (f_0, 3f_0, 5f_0) ? Carré ou triangle. Toutes les fréquences ? Dents de scie. Une seule ? Sinusoïde.",
+      "3": "Rapport d'amplitude barre_3 / barre_1 : environ 1/3 -> carré ; environ 1/9 -> triangle ; environ 1/3 avec aussi les barres paires -> dents de scie."
+    }
+  }
+}

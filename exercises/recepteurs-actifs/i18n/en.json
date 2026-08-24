@@ -1,0 +1,81 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag a receiver into the empty slot at the bottom of the loop. Move the $E$ and $R$ sliders. Watch the current $I$ and the receiver voltage $U$ change together.",
+      "concept": "An active receiver has a back-EMF $E'$ (from chemistry or motion) and internal resistance $r'$. Its characteristic is $U = E' + r' \\cdot I$. No current flows until the source EMF exceeds $E'$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Two targets are given below. Choose the correct receiver and set the sliders so the ammeter and voltmeter both read within tolerance.",
+      "concept": "Loop equation (KVL): $E = r \\cdot I + R \\cdot I + E' + r' \\cdot I$, so $I = (E - E') / (r + R + r')$ and $U = E' + r' \\cdot I$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The receiver slot is empty. Sliders are locked at the values shown. A target voltmeter reading is given. Compute $U$ for each receiver on paper — only one matches. Place it. One attempt only.",
+      "concept": "For each candidate, compute $I = (E - E') / (r + R + r')$ then $U = E' + r' \\cdot I$. Compare with the target — the correct receiver is the one whose predicted $U$ matches within $\\pm 5\\%$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "schematic",
+    "palette": "receivers",
+    "controls": "controls",
+    "source": "source",
+    "resistor": "R",
+    "ammeter": "A",
+    "voltmeter": "V",
+    "comp_electrolyzer": "electrolyzer",
+    "comp_motor": "dc motor",
+    "elec_specs": "E'=1.7 V  r'=1.0 Ω",
+    "motor_specs": "E'=4.5 V  r'=2.0 Ω",
+    "slider_E": "E",
+    "slider_R": "R",
+    "unit_V": "V",
+    "unit_A": "A",
+    "unit_mA": "mA",
+    "unit_ohm": "Ω",
+    "meter_I": "I",
+    "meter_U": "U",
+    "target_I": "target I",
+    "target_U": "target U",
+    "seen_electrolyzer": "electrolyzer ran",
+    "seen_motor": "motor ran",
+    "place_receiver": "choose a receiver",
+    "correct": "correct",
+    "wrong": "wrong — reset",
+    "attempts_left": "attempts left",
+    "targets": "TARGETS",
+    "receiver_off": "receiver stopped: E ≤ E'",
+    "given": "given",
+    "generator_r": "r=0.5 Ω",
+    "tip1": "drag either receiver into the empty slot, then move E and R",
+    "tip2": "match each target one at a time — receiver choice matters",
+    "tip3": "solve U = E' + r'·I on paper for each receiver, then place",
+    "peek_tip": "For each candidate, compute I = (E − E')/(r + R + r'), then U = E' + r'·I. Only one matches the target U.",
+    "submit_reset": "wrong receiver — new scenario loading"
+  },
+  "hints": {
+    "1": {
+      "1": "Drag one of the two receivers from the right panel into the bottom slot of the loop.",
+      "2": "Now move the E slider up. Watch the ammeter — the current stays at zero until E crosses the receiver's back-EMF E'.",
+      "3": "Try both receivers so you feel the difference: the electrolyzer starts around 1.7 V; the motor needs about 4.5 V."
+    },
+    "2": {
+      "1": "Read the current target chip in the top-right corner. Adjust E and R until the ammeter matches within about 5%.",
+      "2": "The receiver choice sets E' and r'. For a given target I, only one receiver can be tuned to hit the voltage target as well.",
+      "3": "Rearrange the loop equation: E = (r + R + r')·I + E'. Fix I to the target, choose R, then solve for E."
+    },
+    "3": {
+      "1": "The sliders are locked. Read E and R off their labels. The target U is fixed too.",
+      "2": "For each receiver, compute I = (E − E')/(r + R + r'), then U = E' + r'·I. Do it on paper.",
+      "3": "Only one receiver gives U within ±5% of the target. Commit to that one — a wrong pick resets the scenario."
+    }
+  }
+}

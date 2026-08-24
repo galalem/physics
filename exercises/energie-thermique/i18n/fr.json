@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "De l'eau dans un bécher sur une plaque chauffante. La plaque délivre une puissance $P$ à une masse $m$ d'eau. Fais glisser $P$ et $m$, observe $T(t)$ monter. Amène l'eau à $80\\,^\\circ\\mathrm{C}$ au moins une fois avec chaque curseur déplacé.",
+      "concept": "Chaleur sensible : $Q = m\\,c\\,\\Delta T$ où $c \\approx 4180\\,\\mathrm{J\\,kg^{-1}\\,K^{-1}}$ pour l'eau. À puissance constante, $T(t) = T_0 + k\\,t$ où la pente $k = \\dfrac{P}{m\\,c}$ a pour unité $^\\circ\\mathrm{C}/s$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins le viseur orange : atteins la température $T^{*}$ exactement à l'instant $t^{*}$. Ajuste $P$ et $m$ pour que ta droite passe par la cible.",
+      "concept": "Tout couple $(P, m)$ convient tant que la pente correspond : $k^{*} = \\dfrac{T^{*} - T_0}{t^{*}} = \\dfrac{P}{m\\,c}$. Doubler $P$ et $m$ en même temps laisse $k$ inchangé.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Seule la droite cible est tracée. Lis sa pente $k^{*}$ sur le graphique, choisis $P$ et $m$ à l'aveugle, puis appuie sur LANCER. Fais correspondre $k$ à $\\pm 3\\%$ près.",
+      "concept": "Lis deux points sur la droite cible pour obtenir $k^{*} = \\dfrac{\\Delta T}{\\Delta t}$. Alors tout $(P, m)$ vérifiant $\\dfrac{P}{m\\,c} = k^{*}$ convient. Peek te donne une méthode de lecture — pas la réponse.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "scene": "bécher + plaque chauffante",
+    "chart_title": "T (t)",
+    "y_axis_label": "T (°C) →",
+    "x_axis_label": "t (s) →",
+    "hit": "atteint !",
+    "match_ok": "correspondance",
+    "match_off": "écart",
+    "target_short": "cible",
+    "submit_button": "LANCER",
+    "hot_plate": "plaque chauffante",
+    "water": "eau",
+    "boiling": "ébullition · 100°C",
+    "tip1": "déplace les curseurs P et m, puis laisse l'eau monter à 80°C au moins une fois",
+    "tip2": "ajuste P et m pour que ta droite passe par le viseur orange",
+    "tip3": "lis k* = ΔT/Δt sur la droite cible, puis règle P/(m·c) = k*",
+    "peek_hint": "lis la pente : choisis deux points sur la droite cible, k = (T2 − T1) / (t2 − t1) en °C/s ; puis règle P/(m·c) = k"
+  },
+  "hints": {
+    "1": {
+      "1": "Un P plus grand chauffe plus vite. Un m plus grand chauffe plus lentement. C'est la pente k = P/(m·c) qui compte.",
+      "2": "La ligne en pointillés à 100°C marque l'ébullition. Avec c ≈ 4180 J/kg·K, k s'exprime en °C/s.",
+      "3": "Doubler P et doubler m simultanément laisse la pente k inchangée."
+    },
+    "2": {
+      "1": "Calcule la pente cible : k* = (T* − T0) / t*. Puis règle P et m pour que P/(m·c) = k*.",
+      "2": "Choisis d'abord m (disons m = 0,5 kg), puis P = k* · m · c te donne la puissance à régler.",
+      "3": "Affine avec le curseur m une fois que tu es proche ; petites variations de m = petites variations de k."
+    },
+    "3": {
+      "1": "Choisis deux points sur la droite cible. Pente k* = (T2 − T1) / (t2 − t1) en °C/s.",
+      "2": "Pour l'eau c ≈ 4180 J/kg·K. Donc P/m = k* · c te donne le rapport requis.",
+      "3": "Appuie sur Peek pour la méthode de lecture. Puis règle P et m pour que P/(m·c) = k*, et appuie sur LANCER."
+    }
+  }
+}

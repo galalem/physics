@@ -1,0 +1,64 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Every electromagnetic wave — from FM radio to X-rays — travels through vacuum at the same speed $c = 3\\times 10^{8}$ m/s. Sweep the three sliders: frequency $f$ (log scale), amplitude $E_0$, and polarization angle $\\theta_p$. Watch how the wave shape and the spectrum-band marker respond.",
+      "concept": "The dispersion relation: $c = \\lambda \\cdot f$. Higher $f$ $\\Rightarrow$ shorter $\\lambda$. The amplitude $E_0$ scales the wave's height but not its wavelength. The polarization $\\theta_p$ rotates the $\\vec{E}$ vector in the plane transverse to propagation.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target wavelength $\\lambda^{*}$ is marked on the spectrum band. Tune $f$ until your current wavelength aligns with the target marker. Only $f$ controls $\\lambda$; $E_0$ and $\\theta_p$ are free to choose.",
+      "concept": "Invert the dispersion relation: $\\lambda^{*} = c / f^{*}\\ \\Rightarrow\\ f^{*} = c / \\lambda^{*}$. Read the target off the band, compute $f^{*}$, dial the slider.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The spectrum band and the live wave are hidden. Only the target label $\\lambda^{*}$ and the empty axis remain. Compute $f^{*} = c/\\lambda^{*}$ on paper, then set the frequency slider to that value and submit.",
+      "concept": "Blind calculation: $f^{*} = \\dfrac{c}{\\lambda^{*}} = \\dfrac{3\\times 10^{8}}{\\lambda^{*}}$. Watch your units — if $\\lambda^{*}$ is in nm, convert to meters first ($1\\,\\text{nm} = 10^{-9}\\,\\text{m}$).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "em wave",
+    "e_field": "E",
+    "b_field": "B",
+    "propagation": "z (propagation)",
+    "spectrum": "electromagnetic spectrum",
+    "match_ok": "match",
+    "target_short": "target",
+    "band_radio": "radio",
+    "band_microwave": "microwave",
+    "band_infrared": "infrared",
+    "band_visible": "visible",
+    "band_uv": "ultraviolet",
+    "band_xray": "X-ray",
+    "band_gamma": "gamma",
+    "tip1": "sweep each slider at least half its range",
+    "tip2": "compute f = c / lambda, then dial the f slider",
+    "tip3": "compute f = c / lambda* on paper first, then set the slider",
+    "peek_tip_formula": "Rearrange c = lambda * f  ->  f = c / lambda. Only f controls lambda.",
+    "peek_tip_anchor": "c = 3e8 m/s. Visible light (~500 nm) -> f ~ 6e14 Hz. Order-of-magnitude sanity check."
+  },
+  "hints": {
+    "1": {
+      "1": "Push the frequency slider up and down — the wave stretches and shrinks. Which slider changes the wave's height?",
+      "2": "Amplitude E_0 scales the wave vertically; polarization rotates the E vector; only f changes lambda.",
+      "3": "The spectrum marker moves left (long lambda) as f drops and right (short lambda) as f climbs. This IS c = lambda * f."
+    },
+    "2": {
+      "1": "Read the target lambda* off the band. Ask: what f gives that lambda?",
+      "2": "f = c / lambda = 3e8 / lambda*. Estimate the order of magnitude before dialing.",
+      "3": "Move the log-scale f slider so your marker sits under the target tick. E_0 and theta_p don't matter for the match."
+    },
+    "3": {
+      "1": "The band is hidden but the formula still holds. Write c = lambda * f, solve for f.",
+      "2": "Substitute c = 3e8 m/s and the target lambda*. Convert units first if lambda* is in nm or um.",
+      "3": "Peek to see the rearranged formula. Then set the slider to the f you computed and submit once."
+    }
+  }
+}

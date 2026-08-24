@@ -1,0 +1,67 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag one of the three passive receivers (resistor, capacitor, coil) from the palette onto the empty slot at the bottom of the loop. Close the switch. Watch how the ammeter $A$ and voltmeter $V$ react as you swap between receivers. Try all three at least once.",
+      "concept": "In DC steady state, each passive receiver behaves differently. A resistor $R$ obeys $U = R \\cdot I$. A capacitor $C$ blocks steady current: $I = 0$ and $U = E$. An ideal coil $L$ acts like a short: $U = 0$ and $I = E / r$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Two behaviours to match. First: make the ammeter read exactly $0$ (no steady current). Second: make the voltmeter read exactly $0$ across the receiver. Both targets must be hit — swap the receiver as needed.",
+      "concept": "Zero current in a closed loop means the receiver blocks charge flow — the capacitor is fully charged and no current passes. Zero voltage across the receiver means the receiver drops nothing — the ideal coil, a short in DC, drops all $E$ across the internal $r$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The receiver inside the black-box slot is unknown. The meter readings shown are the steady-state values measured on the real circuit. From those two numbers alone, pick the passive receiver that matches. One attempt.",
+      "concept": "Identify the receiver from its DC signature: $I = 0$ and $U = E$ points to a capacitor. $U = 0$ and $I = E/r$ points to a coil. Any other finite $(U, I)$ with $U = R \\cdot I$ points to a resistor.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "schematic",
+    "palette": "palette",
+    "targets": "TARGETS",
+    "comp_resistor": "resistor",
+    "comp_capacitor": "capacitor",
+    "comp_coil": "coil",
+    "tried_all": "tried all three",
+    "target_i0": "I = 0",
+    "target_u0": "U = 0",
+    "place_receiver": "place a receiver",
+    "correct": "correct",
+    "wrong": "wrong",
+    "attempts_left": "attempts left",
+    "diag_empty": "receiver slot is empty",
+    "diag_switch_open": "switch open — click to close",
+    "diag_ok_resistor": "steady current through R",
+    "diag_ok_capacitor": "steady state: capacitor blocks current",
+    "diag_ok_coil": "steady state: coil is a short",
+    "tip1": "drag a receiver into the slot; click the switch to toggle; then swap for another type",
+    "tip2": "one receiver gives I=0, another gives U=0 — swap until you hit both",
+    "tip3": "read the meters, decide the type, drop it in — one attempt only",
+    "peek_tip": "capacitor: $I = 0$, $U = E$. coil: $U = 0$, $I = E/r$. resistor: any other finite $(U, I)$."
+  },
+  "hints": {
+    "1": {
+      "1": "Grab a receiver from the palette on the right and drop it into the empty slot at the bottom of the loop.",
+      "2": "Close the switch by clicking it. Now read the ammeter and voltmeter. Then swap the receiver for a different type and compare.",
+      "3": "You have not yet placed one of the three receiver types. Try the one you haven't used."
+    },
+    "2": {
+      "1": "One target says I = 0, the other says U = 0. Different receivers give different signatures.",
+      "2": "A capacitor in DC steady state carries no current. An ideal coil in DC steady state drops no voltage.",
+      "3": "Place a capacitor to satisfy the I = 0 target. Place a coil to satisfy the U = 0 target."
+    },
+    "3": {
+      "1": "Compare the shown meter readings to the DC signatures of each receiver.",
+      "2": "If I is exactly zero and U equals E, only a capacitor fits. If U is zero and I is E/r, only a coil fits.",
+      "3": "Compute R = U / I. If it matches a plausible resistor value, the answer is a resistor. Otherwise use the extreme cases."
+    }
+  }
+}

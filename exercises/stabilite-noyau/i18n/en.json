@@ -1,0 +1,71 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Slide $Z$ (protons) and $N$ (neutrons) to build a nucleus. The chart on the right plots $(Z, N)$. The shaded green ribbon is the vallée de stabilité. Above the band the nucleus has too many neutrons ($\\beta^-$ prone); below, too few ($\\beta^+$ prone). Visit all three regions to advance.",
+      "concept": "Stable nuclei cluster along the vallée de stabilité where $N/Z \\approx 1$ for light nuclei and drifts up to $N/Z \\approx 1.5$ for heavy ones. Nuclei above the band emit an electron ($\\beta^-$: $n \\to p + e^- + \\bar{\\nu}$) to convert a neutron into a proton. Nuclei below the band emit a positron ($\\beta^+$: $p \\to n + e^+ + \\nu$) to convert a proton into a neutron.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Build each named target nucleus by setting $Z$ and $N$. Read the live classification below the chart — three canonical cases, one per stability class.",
+      "concept": "Same mass number $A$, different fates. $^{14}_{\\phantom{0}6}\\text{C}$ has too many neutrons for its $Z$: it decays $\\beta^-$. $^{56}_{26}\\text{Fe}$ sits at the peak of nuclear stability — nothing more tightly bound. $^{56}_{28}\\text{Ni}$ has the same $A = 56$ but too few neutrons: it decays $\\beta^+$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The stability band, the region colours, and the classification text are hidden. Given only $(Z, N)$ on the axes, decide whether each nucleus is stable, $\\beta^-$ unstable (excess neutrons), or $\\beta^+$ unstable (excess protons). All four correct in one pass — a wrong answer restarts the deck.",
+      "concept": "Reverse mapping: given $(Z, N)$, compare $N$ to the central curve $N \\approx Z\\,(1 + Z/166)$. If $N$ is above the curve, the nucleus is neutron-rich ($\\beta^-$). If below, proton-rich ($\\beta^+$). Inside the narrow band around the curve, the nucleus is stable against $\\beta$-decay.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "controls_title": "controls",
+    "nucleus": "nucleus",
+    "stability_chart": "N vs Z (stability)",
+    "field_Z": "atomic number Z",
+    "field_N": "neutron count N",
+    "regions_seen": "regions",
+    "matched": "matched",
+    "correct": "correct",
+    "target": "target nucleus",
+    "given": "given",
+    "which_class": "which class is this nucleus?",
+    "class_stable": "stable",
+    "class_beta_minus": "β⁻ unstable",
+    "class_beta_plus": "β⁺ unstable",
+    "excess_n": "excess neutrons",
+    "excess_p": "excess protons",
+    "in_band": "in the valley",
+    "n_axis": "N",
+    "z_axis": "Z",
+    "band_label": "valley of stability",
+    "beta_minus_region": "β⁻ region",
+    "beta_plus_region": "β⁺ region",
+    "peek_tip": "Compute the band centre from the geometry: for a given $Z$, the centre curve is $N \\approx Z\\,(1 + Z/166)$. Compare your $N$ to that number. Above by more than a few units → $\\beta^-$; below → $\\beta^+$; within a narrow band → stable. Do not look at colour cues — there are none in this stage.",
+    "tip1": "explore all three regions: above, inside, below the band",
+    "tip2": "same A, three fates: C-14, Fe-56, Ni-56",
+    "tip3": "N above curve → β⁻; N below → β⁺; inside band → stable"
+  },
+  "hints": {
+    "1": {
+      "1": "Slide N far above Z at some fixed Z (say Z = 20, N = 40). The dot lands above the band and turns orange — that's the β⁻ region.",
+      "2": "Now slide N below Z. The dot drops under the band and turns purple — the β⁺ region.",
+      "3": "For light nuclei, N ≈ Z is stable (green). For heavier nuclei (Z > 20), stable nuclei need MORE neutrons than protons — the band curves upward."
+    },
+    "2": {
+      "1": "Carbon-14: Carbon means Z = 6, and the 14 is the mass number A. So N = A − Z = 14 − 6 = 8.",
+      "2": "Iron-56 (Fe): Z = 26. The 56 is A, so N = 56 − 26 = 30. Fe-56 sits at the very peak of nuclear stability.",
+      "3": "Nickel-56: Z = 28. A = 56, so N = 28. Note this is the SAME A as Fe-56 but with two more protons — that pushes it below the band into the β⁺ region."
+    },
+    "3": {
+      "1": "First compute the centre of the band for this Z. For Z ≤ 20, the centre is roughly N ≈ Z. For heavier nuclei, N ≈ Z(1 + Z/166).",
+      "2": "Compare N to that centre. Higher by more than a couple of units → too many neutrons → β⁻. Lower → too few neutrons → β⁺.",
+      "3": "For Z = 6, the centre is at N ≈ 6, and the band is narrow (±2). N = 8 is above → β⁻. N = 6 is inside → stable. For Z = 55, the centre is around N ≈ 73; N = 82 is well above → β⁻."
+    }
+  }
+}

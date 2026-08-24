@@ -1,0 +1,74 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Close the switch and move the sliders. Watch the ammeter, voltmeter, and the live readout of $P = U \\cdot I$. Try at least two different values of $E$ and two different values of $R$. Notice how $P$ changes with $R$ at fixed $E$.",
+      "concept": "Electrical power is the instantaneous product of the voltage across a dipole and the current through it: $P = U \\cdot I$. For a resistor, Ohm's law gives $U = R \\cdot I$, so $P = R \\cdot I^2 = U^2 / R$. Energy delivered over a duration is $W = P \\cdot \\Delta t$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Reach each target power. The battery voltage $E$ is fixed for each target; adjust $R$ to make the resistor dissipate the target $P$. Both targets must be within $\\pm 5\\%$.",
+      "concept": "For a resistor connected across an ideal source $E$, the power dissipated is $P = E^2 / R$. To hit a target $P$ at fixed $E$: $R = E^2 / P$. Bigger $R$ dissipates less power at the same voltage.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The meters and the live $P$ readout are hidden. $E$ is fixed and the target $P$ is shown. Compute $R$ on paper using $P = E^2 / R$, set the slider, then close the switch to verify. You have 3 attempts per scenario — ace 3 different scenarios in a row to finish.",
+      "concept": "Blind evaluation. Because $P = E^2 / R$ for a pure resistor, $R = E^2 / P$. Do the arithmetic on paper before touching the slider — the sim is here to confirm your calculation, not to guess with.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "schematic",
+    "controls": "controls",
+    "slider_E": "E",
+    "slider_R": "R",
+    "slider_dt": "Δt",
+    "unit_V": "V",
+    "unit_ohm": "Ω",
+    "unit_A": "A",
+    "unit_mA": "mA",
+    "unit_W": "W",
+    "unit_J": "J",
+    "unit_s": "s",
+    "power_formula": "P = U·I",
+    "energy_formula": "W = P·Δt",
+    "target_label": "target",
+    "targets": "TARGETS",
+    "attempts_left": "attempts left",
+    "scenarios": "SCENARIOS",
+    "correct": "correct",
+    "wrong": "off — try again",
+    "verify": "close switch to verify",
+    "reveal_hint": "meters hidden until switch closes",
+    "coverage_R": "moved R",
+    "coverage_E": "moved E",
+    "coverage_P": "saw P > 0",
+    "tip1": "close the switch, then sweep E and R. The formula strip updates live.",
+    "tip2": "solve for R from P = E²/R. The R slider snaps to 1 Ω steps.",
+    "tip3": "R = E² / P — write it down before touching the slider",
+    "peek_tip": "For a resistor across an ideal source: P = U·I with U = E and I = E/R, so P = E²/R. Rearrange for R."
+  },
+  "hints": {
+    "1": {
+      "1": "Click the switch first — the meters only read while it's closed.",
+      "2": "Slide R while keeping E fixed. Watch P shrink as R grows.",
+      "3": "Try E = 12 V. Note P at R = 6 Ω, then again at R = 24 Ω — the numbers embody P = U²/R."
+    },
+    "2": {
+      "1": "Read the target: E is fixed, P is given. You choose R.",
+      "2": "Use P = E²/R. Solve for R = E²/P before dragging the slider.",
+      "3": "If E = 12 V and target P = 6 W, then R = 144/6 = 24 Ω."
+    },
+    "3": {
+      "1": "The relation P = E²/R still holds — the meters just aren't showing it live.",
+      "2": "Isolate R: R = E² / P. Plug in the visible E and target P.",
+      "3": "Do the division on paper first. The slider is 1 Ω steps; round to the nearest ohm."
+    }
+  }
+}

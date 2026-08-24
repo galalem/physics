@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A luminous object AB sits in front of a converging lens of known focal length $f' = 10\\,\\text{cm}$. Drag the screen along the bench until the image of AB looks sharp. Read $p$ (object $\\to$ lens) and $p'$ (lens $\\to$ screen) in the HUD, and watch $\\frac{1}{p} + \\frac{1}{p'}$ collapse onto $\\frac{1}{f'}$.",
+      "concept": "Descartes' conjugation formula: $\\frac{1}{\\overline{OA'}} - \\frac{1}{\\overline{OA}} = \\frac{1}{f'}$. Using positive bench distances $p = |\\overline{OA}|$ and $p' = |\\overline{OA'}|$, this becomes $\\frac{1}{p} + \\frac{1}{p'} = \\frac{1}{f'}$. Focometry = measure $p$ and $p'$, compute $f'$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Three lenses of unknown focal length are handed to you, one after the other. For each: slide the screen to find the sharp image, then press FIRE (or Space) to record your measurement. You have 5 shots to lock in all 3 focal lengths.",
+      "concept": "Sharp-screen protocol: at the sharp position, $p'$ satisfies $\\frac{1}{p} + \\frac{1}{p'} = \\frac{1}{f'}$. Since $p$ is fixed and known, one measured $p'$ yields $f' = \\frac{p \\cdot p'}{p + p'}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No sharpness bar, no rays — only a blurred image projected on the screen. Trust your eye: place the screen where the image looks sharpest, then FIRE to submit. One shot per lens, three lenses. Miss any, and the whole setup resets.",
+      "concept": "You measure $p'$ from the sharp position, then compute $f' = \\dfrac{p \\cdot p'}{p + p'}$ (with $p = 30\\,\\text{cm}$ fixed). Peek shows the current $p'$ readout and the plugged-in $f'$ so you can verify your paper arithmetic.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "optical bench",
+    "object": "AB",
+    "lens": "L",
+    "screen": "screen",
+    "fire": "FIRE",
+    "shots": "SHOTS",
+    "measured": "MEASURED",
+    "lens_short": "LENS",
+    "sharpness": "SHARPNESS",
+    "match_ok": "sharp",
+    "peek_reveal": "measured",
+    "tip1": "drag the screen — sharp image = image plane hit",
+    "tip2": "aim the screen, then SPACE to record f'",
+    "tip3": "eye the sharpest blur, then FIRE — one shot per lens"
+  },
+  "hints": {
+    "1": {
+      "1": "Slide the screen left and right; the image sharpens then blurs.",
+      "2": "At the sharp position, the ray triangle closes onto the screen. Read p and p' from the HUD.",
+      "3": "Verify: with p = 30 cm and p' at the sharp position, 1/p + 1/p' should equal 1/10 cm⁻¹."
+    },
+    "2": {
+      "1": "For each lens, the object is still at p = 30 cm. Only p' changes.",
+      "2": "Slide the screen until the arrow on it is crisp, then Fire to lock the measurement.",
+      "3": "Shorter f' → image forms closer to the lens. Watch the sharpness bar peak; that's your p'."
+    },
+    "3": {
+      "1": "No sharpness readout — read the blurred image on the screen. The sharpest position minimizes the blob size.",
+      "2": "Move the screen slowly. Overshoot each direction to bracket the sharp spot, then land in the middle.",
+      "3": "Peek reveals your current p' and the f' it implies via f' = p·p'/(p+p'). Compare with your paper estimate before firing."
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Déplace le rotor pour fixer l'angle initial $\\theta_0$, utilise le curseur $I$ à droite pour régler le courant, puis appuie sur TIRER. Le collecteur maintient le couple dans le même sens — la bobine accélère tant que le courant circule.",
+      "concept": "La force de Laplace sur une bobine parcourue par un courant dans un champ uniforme $\\vec B$ produit un moment $M = N \\cdot I \\cdot S \\cdot B \\cdot \\cos\\alpha$, où $\\alpha$ est l'angle entre le plan de la bobine et $\\vec B$. Le collecteur inverse $I$ à chaque demi-tour pour que $M$ reste positif en moyenne.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Balaie les trois angles cibles dans la fenêtre de simulation de $1{,}5\\,\\text{s}$. Un $I$ plus élevé = accélération angulaire plus grande = balayage plus large. L'arc en pointillés prévisualise le balayage pour tes valeurs actuelles de $I$ et $\\theta_0$.",
+      "concept": "Avec le collecteur, le moment moyen sur un tour est $M_{\\text{moy}} = \\dfrac{2 N I S B}{\\pi}$. En partant du repos, la bobine tourne selon $\\theta(t) = \\theta_0 + \\dfrac{M_{\\text{moy}}}{2 J}\\, t^{2}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas d'aperçu. Un unique angle cible doit être atteint exactement à l'échéance $t_{\\text{cib}}$ (tolérance $\\pm 0{,}1\\,\\text{s}$ et $\\pm 15^{\\circ}$). Calcule $I$ à partir de $\\theta_{\\text{cib}}$ et $t_{\\text{cib}}$ sur papier, puis tire. Tu disposes de trois tirs — rate les trois et le montage change.",
+      "concept": "Résous $\\theta_{\\text{cib}} = \\dfrac{M_{\\text{moy}}}{2 J} t_{\\text{cib}}^{2}$ pour $I$ : $I = \\dfrac{\\pi\\, J\\, \\theta_{\\text{cib}}}{N\\, S\\, B\\, t_{\\text{cib}}^{2}}$. Doubler $I$ double l'accélération angulaire.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "hits": "RÉUSSIS",
+    "shots": "TIRS",
+    "stage": "ÉTAPE",
+    "current": "I",
+    "coil": "bobine",
+    "target": "CIBLE",
+    "at": "à",
+    "np": "N",
+    "sp": "S",
+    "field": "B → 0,15 T · N = 100 · S = 5 cm²",
+    "tip1": "vise, change I, puis TIRER",
+    "tip2": "utilise l'arc d'aperçu pour atteindre chaque cible",
+    "tip3": "calcule I à partir de l'angle et du temps cibles, puis TIRER",
+    "peek_tip_avg": "Moment moyen avec le collecteur : M = 2·N·I·S·B / π. Constant en moyenne.",
+    "peek_tip_formula": "Depuis le repos : θ(t) = M·t² / (2J). Résous pour I connaissant θ_cib et t_cib.",
+    "peek_tip_scaling": "L'accélération angulaire est proportionnelle à I. Doubler I → même angle atteint en 1/√2 du temps."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplace le rotor pour changer l'angle initial θ₀, puis appuie sur TIRER.",
+      "2": "Le curseur I à droite règle le courant de la bobine. Plus I est grand, plus la mise en rotation est rapide.",
+      "3": "Essaie un petit I puis un grand I — remarque comment la bobine balaie un angle beaucoup plus large pour la même fenêtre de 1,5 s."
+    },
+    "2": {
+      "1": "L'arc en pointillés est le balayage prévu pour tes valeurs actuelles de I et θ₀ sur 1,5 s.",
+      "2": "La cible la plus lointaine se trouve au plus grand angle — augmente I jusqu'à ce que l'arc l'atteigne.",
+      "3": "L'angle initial θ₀ décale tout le balayage. Ajuste-le pour encadrer aussi la cible la plus proche."
+    },
+    "3": {
+      "1": "Lis θ_cib et t_cib. Utilise θ = M·t² / (2J) avec M = 2NISB/π pour résoudre I.",
+      "2": "I = π·J·θ_cib / (N·S·B·t_cib²). Valeurs : J = 10⁻³ kg·m², N = 100, S = 5·10⁻⁴ m², B = 0,15 T.",
+      "3": "Arrondis I au pas du curseur (0,1 A) — la tolérance de ±15° absorbe l'arrondi."
+    }
+  }
+}

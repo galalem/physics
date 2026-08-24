@@ -1,0 +1,63 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Touche chacune des six formes de lentille. Un faisceau de rayons parallèles traverse la lentille. Si les rayons convergent vers un point $F'$ à droite, la lentille est $\\textit{convergente}$. S'ils divergent comme s'ils venaient d'un $F'$ virtuel à gauche, la lentille est $\\textit{divergente}$.",
+      "concept": "Une lentille mince est $\\textit{convergente}$ quand elle est plus épaisse au centre qu'aux bords (biconvexe, plan-convexe, ménisque convergent). Elle est $\\textit{divergente}$ quand elle est plus mince au centre qu'aux bords (biconcave, plan-concave, ménisque divergent).",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois cartes de lentille étiquetées par forme. Fais glisser chacune vers le bon casier — CONVERGENTE ou DIVERGENTE. Une erreur remet la série à zéro ; il te faut les 3 correctes d'affilée.",
+      "concept": "Le nom de la forme encode la règle : les surfaces $\\textit{convexes}$ bombent vers l'extérieur (épaississent le milieu), les surfaces $\\textit{concaves}$ se creusent vers l'intérieur (amincissent le milieu). Pour un ménisque, la courbure la plus forte l'emporte.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Trois silhouettes sans étiquette. Lis le profil d'épaisseur : plus épais au centre ou plus épais aux bords ? Fais glisser chaque silhouette vers CONVERGENTE ou DIVERGENTE. Un tir par carte — une erreur remet la manche à zéro.",
+      "concept": "Seule la géométrie décide : compare l'épaisseur au centre de la lentille à l'épaisseur aux bords. Plus épais au milieu $\\Rightarrow$ convergente. Plus mince au milieu $\\Rightarrow$ divergente.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "converging": "CONVERGENTE",
+    "diverging": "DIVERGENTE",
+    "streak": "SÉRIE",
+    "of": "sur",
+    "biconvex": "BICONVEXE",
+    "plan_convex": "PLAN-CONVEXE",
+    "meniscus_conv": "MÉNISQUE CONVERGENT",
+    "biconcave": "BICONCAVE",
+    "plan_concave": "PLAN-CONCAVE",
+    "meniscus_div": "MÉNISQUE DIVERGENT",
+    "tip1": "touche une lentille pour changer — observe où vont les rayons",
+    "tip2": "glisse chaque carte dans le bon casier",
+    "tip3": "silhouette seule — plus épais au milieu ou aux bords ?",
+    "peek_prompt": "Trace le contour : la matière est-elle plus épaisse au centre ou aux bords ?",
+    "visited": "VISITÉES",
+    "type": "TYPE",
+    "card": "CARTE",
+    "cards": "CARTES"
+  },
+  "hints": {
+    "1": {
+      "1": "Touche chacun des six boutons du bas pour changer entre les formes de lentille.",
+      "2": "Observe les rayons orange : certaines lentilles les font converger en un point, d'autres les font diverger.",
+      "3": "Les trois lentilles convergentes (biconvexe, plan-convexe, ménisque convergent) sont plus épaisses au milieu. Les trois lentilles divergentes sont plus minces au milieu."
+    },
+    "2": {
+      "1": "L'étiquette sous chaque carte nomme la forme — cela suffit à la classer.",
+      "2": "Une erreur remet ta série à zéro. Lis l'étiquette attentivement avant de lâcher la carte.",
+      "3": "Biconvexe, plan-convexe et ménisque convergent sont convergentes. Biconcave, plan-concave et ménisque divergent sont divergentes."
+    },
+    "3": {
+      "1": "Tu n'as plus d'étiquettes — seulement le contour. Cherche la règle d'épaisseur de l'étape 1.",
+      "2": "Trace une ligne verticale au centre de la lentille et une ligne verticale sur son bord. Laquelle est la plus longue ?",
+      "3": "Si le centre est plus épais que les bords $\\to$ CONVERGENTE. Si les bords sont plus épais que le centre $\\to$ DIVERGENTE. Un tir par carte."
+    }
+  }
+}

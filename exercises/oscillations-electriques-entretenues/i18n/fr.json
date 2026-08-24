@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un circuit LC perd de l'énergie dans $R$ à chaque cycle. Un amplificateur réinjecte de l'énergie avec un gain $-G$ qui se comporte comme une $\\textit{résistance négative}$. Ajuste $L$, $C$ et $G$. Pousse $G$ en dessous, à hauteur, puis au-dessus de $R$. Observe l'enveloppe s'amortir, se maintenir, puis croître jusqu'à saturation.",
+      "concept": "L'équation de boucle s'écrit $L\\,\\ddot{q} + (R - G)\\,\\dot{q} + q/C = 0$. Quand $G < R$ l'amortissement effectif est positif : l'enveloppe s'amortit ; quand $G > R$ l'amplificateur surcompense et l'enveloppe croît jusqu'à atteindre le plafond de saturation $\\pm U_{sat}$. Ce n'est qu'à ce moment-là que l'oscillation devient $\\textit{entretenue}$, à la période propre $T_0 = 2\\pi\\sqrt{L\\,C}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Vise la croix orange : à l'instant $t^{*}$ la courbe doit atteindre le plafond de saturation $+U_{sat}$. Règle $L$ et $C$ pour caler la période sur $t^{*}$, et pousse $G$ au-dessus de $R$ pour que l'enveloppe croisse et se cale sur $U_{sat}$.",
+      "concept": "Condition sur la période : $T_0 = 2\\pi\\sqrt{L\\,C} = t^{*}$. Condition de saturation : $G > R$, l'amplificateur doit injecter plus que la boucle ne dissipe. Les deux conditions doivent être satisfaites — un même produit $L\\,C$ marche pour plusieurs couples.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Seule la courbe cible est tracée. Lis $T^{*}$ de pic à pic sur la cible, calcule $L\\,C = (T^{*}/2\\pi)^{2}$ sur papier, choisis n'importe quel couple $(L, C)$ ayant ce produit, et règle $G > R$ pour l'entretien. Puis appuie sur LANCER. Écart toléré sur $T$ : ±4%.",
+      "concept": "Les deux conditions se ramènent à un seul nombre : $L\\,C = (T^{*}/2\\pi)^{2}$. Tout couple $(L, C)$ ayant le bon produit convient — c'est là tout l'intérêt pédagogique d'un oscillateur $\\textit{autonome}$ : pas d'excitation extérieure, un seul invariant.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "LC + R + amplificateur en série",
+    "chart_title": "u_C (t)",
+    "x_axis_label": "t (ms) →",
+    "y_axis_label": "u_C (V) →",
+    "no_drive": "autonome — sans excitation extérieure",
+    "status_decay": "amortie (G < R)",
+    "status_edge": "seuil d'entretien (G ≈ R)",
+    "status_sustain": "entretenue (G > R)",
+    "match_ok": "concordance",
+    "match_off": "écart",
+    "submit_button": "LANCER",
+    "peek_hint": "compte les pics : T* = temps entre deux maxima successifs sur la cible",
+    "tip1": "bouge L, C, G — observe l'enveloppe s'amortir, se maintenir, puis croître jusqu'à saturation",
+    "tip2": "règle L·C pour que T₀ tombe sur t*, pousse G au-dessus de R pour que l'enveloppe atteigne U_sat à t*",
+    "tip3": "lis T* de pic à pic, calcule L·C = (T*/2π)², règle G > R, puis LANCER"
+  },
+  "hints": {
+    "1": {
+      "1": "Commence à G = 0 : la courbe s'amortit parce que R dissipe à chaque cycle.",
+      "2": "Maintenant pousse G au-delà de R = 10 Ω. L'enveloppe doit se mettre à croître jusqu'à écrêter à ±4 V.",
+      "3": "Diviser L par 2 et multiplier C par 2 laisse L·C inchangé — même période, mais courbure d'enveloppe différente. Essaie."
+    },
+    "2": {
+      "1": "La période vaut T₀ = 2π√(L·C). Calcule d'abord le L·C cible à partir de t*, PUIS choisis n'importe quel (L, C) ayant ce produit.",
+      "2": "Si l'enveloppe s'amortit au lieu de saturer, G est trop faible. Pousse G au-delà de R = 10 Ω.",
+      "3": "Doubler L et diviser C par 2 laisse T₀ inchangé. Sers-t'en pour échanger un curseur contre l'autre."
+    },
+    "3": {
+      "1": "Repère deux pics positifs successifs sur la courbe cible. L'écart entre eux, c'est T*.",
+      "2": "Calcule L·C = (T*/2π)² sur papier. Choisis n'importe quel couple (L, C) ayant ce produit.",
+      "3": "Puis pousse G au-delà de R (= 10 Ω) pour que l'enveloppe sature. Appuie sur LANCER — ta courbe doit se superposer à la cible."
+    }
+  }
+}

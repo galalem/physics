@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un objet lumineux AB est placé devant une lentille convergente de distance focale connue $f' = 10\\,\\text{cm}$. Fais glisser l'écran le long du banc jusqu'à ce que l'image d'AB apparaisse nette. Lis $p$ (objet $\\to$ lentille) et $p'$ (lentille $\\to$ écran) dans le HUD, et observe $\\frac{1}{p} + \\frac{1}{p'}$ tendre vers $\\frac{1}{f'}$.",
+      "concept": "Formule de conjugaison de Descartes : $\\frac{1}{\\overline{OA'}} - \\frac{1}{\\overline{OA}} = \\frac{1}{f'}$. Avec des distances de banc positives $p = |\\overline{OA}|$ et $p' = |\\overline{OA'}|$, cela devient $\\frac{1}{p} + \\frac{1}{p'} = \\frac{1}{f'}$. Focométrie = mesurer $p$ et $p'$, calculer $f'$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois lentilles de distance focale inconnue te sont confiées, l'une après l'autre. Pour chacune : fais glisser l'écran pour trouver l'image nette, puis appuie sur TIRER (ou Espace) pour enregistrer ta mesure. Tu disposes de 5 tirs pour verrouiller les 3 distances focales.",
+      "concept": "Protocole de l'écran net : à la position nette, $p'$ satisfait $\\frac{1}{p} + \\frac{1}{p'} = \\frac{1}{f'}$. Puisque $p$ est fixe et connue, un $p'$ mesuré donne $f' = \\frac{p \\cdot p'}{p + p'}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas de barre de netteté, pas de rayons — seulement une image floue projetée sur l'écran. Fais confiance à ton œil : place l'écran là où l'image te semble la plus nette, puis TIRE pour valider. Un tir par lentille, trois lentilles. Un raté et tout le montage se réinitialise.",
+      "concept": "Tu mesures $p'$ à partir de la position nette, puis calcules $f' = \\dfrac{p \\cdot p'}{p + p'}$ (avec $p = 30\\,\\text{cm}$ fixe). Aperçu montre l'affichage actuel de $p'$ et le $f'$ correspondant pour que tu vérifies ton arithmétique papier.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "banc optique",
+    "object": "AB",
+    "lens": "L",
+    "screen": "écran",
+    "fire": "TIRER",
+    "shots": "TIRS",
+    "measured": "MESURÉES",
+    "lens_short": "LENTILLE",
+    "sharpness": "NETTETÉ",
+    "match_ok": "net",
+    "peek_reveal": "mesuré",
+    "tip1": "fais glisser l'écran — image nette = plan image atteint",
+    "tip2": "vise l'écran, puis ESPACE pour enregistrer f'",
+    "tip3": "trouve le flou le plus net à l'œil, puis TIRE — un tir par lentille"
+  },
+  "hints": {
+    "1": {
+      "1": "Fais glisser l'écran à gauche et à droite ; l'image s'affine puis se floute.",
+      "2": "À la position nette, le triangle des rayons se ferme sur l'écran. Lis p et p' dans le HUD.",
+      "3": "Vérifie : avec p = 30 cm et p' à la position nette, 1/p + 1/p' doit être égal à 1/10 cm⁻¹."
+    },
+    "2": {
+      "1": "Pour chaque lentille, l'objet reste à p = 30 cm. Seul p' change.",
+      "2": "Fais glisser l'écran jusqu'à ce que la flèche dessus soit nette, puis Tire pour verrouiller la mesure.",
+      "3": "Un f' plus court → image formée plus près de la lentille. Observe le pic de la barre de netteté ; c'est ton p'."
+    },
+    "3": {
+      "1": "Pas d'affichage de netteté — lis l'image floue sur l'écran. La position la plus nette minimise la taille de la tache.",
+      "2": "Déplace l'écran lentement. Dépasse chaque direction pour encadrer le point net, puis atterris au milieu.",
+      "3": "Aperçu révèle ton p' actuel et le f' qu'il implique via f' = p·p'/(p+p'). Compare avec ton estimation papier avant de tirer."
+    }
+  }
+}

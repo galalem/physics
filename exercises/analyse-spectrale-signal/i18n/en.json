@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Every periodic signal is a sum of pure sinusoids. Toggle harmonics $n = 1$ to $7$ on and off, and sweep the rolloff exponent $p$ that sets each amplitude $A_n = 1/n^{p}$. Watch the left scope build up the waveform while the right spectrum sprouts a bar per active harmonic. Advance after moving at least $4$ harmonic toggles and the rolloff at least $2$ times.",
+      "concept": "Fourier: $y(t) = \\sum_n A_n \\sin(n\\,\\omega_0\\,t)$ with $\\omega_0 = 2\\pi f_0$. Odd harmonics only + amplitudes $\\propto 1/n$ synthesize a square wave; odd harmonics + $1/n^{2}$ give a triangle; all harmonics + $1/n$ give a sawtooth.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A dashed orange target waveform is shown on the left. Turn ON exactly the harmonics it contains and tune $p$ until your teal waveform overlays the target and every student bar matches the orange target bar in the spectrum. Match must be exact on the harmonic set and $|p - p^{*}| \\leq 0.15$.",
+      "concept": "Spurious harmonics count against you. Spectrum first: identify which frequencies carry energy, then set the rolloff so the amplitudes decay at the right rate. A square is $1/n$; a triangle is $1/n^{2}$ — the visible difference is how fast the bars shrink.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The time-domain scope is gone. Only the spectrum is shown, with each bar labeled by its frequency in Hz. Read off which harmonics carry energy and how their amplitudes decay, then submit the waveform family and the fundamental $f_0$. Two attempts before the target reseeds.",
+      "concept": "The first non-zero bar is at $f_0$. Odd-only pattern $\\Rightarrow$ square or triangle. Amplitudes decaying as $1/n$ $\\Rightarrow$ square (or sawtooth if all $n$ are present). Amplitudes decaying as $1/n^{2}$ $\\Rightarrow$ triangle. A single bar $\\Rightarrow$ pure sine.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "time_domain": "time domain",
+    "spectrum": "magnitude spectrum",
+    "target": "target",
+    "yours": "yours",
+    "match_ok": "match",
+    "sine": "sine",
+    "square": "square",
+    "triangle": "triangle",
+    "sawtooth": "sawtooth",
+    "family_prompt": "family?",
+    "f0_prompt": "f_0 (Hz)?",
+    "submit": "SUBMIT",
+    "rolloff": "rolloff p",
+    "attempts_left": "attempts left",
+    "correct": "correct",
+    "wrong": "not this one",
+    "peek_hint_1": "First bar sits at f_0. Read its frequency off the axis.",
+    "peek_hint_2": "Odd-only bars = square or triangle. 1/n decay = square, 1/n^2 = triangle.",
+    "tip1": "toggle harmonics · sweep p · watch waveform and spectrum grow together",
+    "tip2": "spurious harmonics = wrong · turn OFF whatever the target doesn't have",
+    "tip3": "read f_0 off the first bar · match decay rate to a family"
+  },
+  "hints": {
+    "1": {
+      "1": "Turn ON just harmonic 1 first, then add 2, 3, 4… — see how each new sinusoid sharpens the shape.",
+      "2": "Sweep p from 0.5 to 2.5 with only odd harmonics on. Low p makes sharp corners; high p rounds them.",
+      "3": "Try p = 1 with n = 1, 3, 5, 7 (square). Then p = 2 with n = 1, 3, 5 (triangle). Then p = 1 with all n (sawtooth)."
+    },
+    "2": {
+      "1": "Do the spectrum first. Which bars in the orange target are non-zero? Turn ON exactly those, no more, no less.",
+      "2": "Look at how the bar heights fall off. Halving (1, 1/2, 1/3, ...) is p = 1. Quartering (1, 1/9, 1/25, ...) is p = 2.",
+      "3": "Compare bar 3 to bar 1 in the target. If it is ~1/3 as tall, p = 1. If it is ~1/9 as tall, p = 2. Set p accordingly."
+    },
+    "3": {
+      "1": "The frequency label under the first non-zero bar is f_0. Read it directly.",
+      "2": "Count the bars: only odd-numbered frequencies (f_0, 3f_0, 5f_0)? Square or triangle. All frequencies? Sawtooth. Just one? Sine.",
+      "3": "Amplitude ratio bar_3 / bar_1: about 1/3 -> square; about 1/9 -> triangle; about 1/3 with even bars too -> sawtooth."
+    }
+  }
+}

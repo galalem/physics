@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Chaque point est une paire D–T co-localisée (un noyau de deutérium + un noyau de tritium) dans un plasma chaud. Lorsque deux noyaux de même charge entrent en collision avec une énergie cinétique suffisante pour franchir la barrière coulombienne, ils fusionnent en $^4\\mathrm{He} + n$ et libèrent $Q \\approx 17.6$ MeV. Balaie la demi-vie de fusion $T_{1/2}^{\\mathrm{fus}}$ (un indicateur de la température du plasma), active LOG, et laisse la simulation dépasser $T_{1/2}^{\\mathrm{fus}}$.",
+      "concept": "La fusion dans un plasma est un processus poissonien stochastique : $N(t) = N_0\\,e^{-\\lambda t}$, avec $\\lambda = \\ln 2 \\,/\\, T_{1/2}^{\\mathrm{fus}}$. La température intervient via le facteur de Gamow : $\\lambda \\propto \\exp\\!\\left(-\\alpha/\\sqrt{T}\\right)$. Plasma plus chaud $\\Rightarrow$ barrière coulombienne franchie par effet tunnel plus souvent $\\Rightarrow$ $T_{1/2}^{\\mathrm{fus}}$ plus court.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "La courbe $N(t)$ des paires non fusionnées d'un plasma mystère (orange vif) est tracée sur le graphique avec trois points échantillons. Ajuste $T_{1/2}^{\\mathrm{fus}}$ jusqu'à ce que ta simulation corresponde à $\\pm 5\\%$ près.",
+      "concept": "Deux plasmas de même $T_{1/2}^{\\mathrm{fus}}$ fusionnent au même rythme relatif, quelles que soient la température et la densité qui l'ont produit. Des pentes coïncidentes sur une échelle log $=$ des $\\lambda$ coïncidents.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas de plasma en direct. Un compteur de neutrons a échantillonné le réacteur à trois instants $t$ et a rapporté le nombre de paires D–T non fusionnées restantes. Calcule $T_{1/2}^{\\mathrm{fus}} = \\ln 2 \\,/\\, \\lambda$ à partir des données et saisis-le. Peek révèle la vraie courbe de décroissance sur $1.5$ s.",
+      "concept": "À partir de deux mesures quelconques : $\\lambda = \\dfrac{\\ln(N_1/N_2)}{t_2 - t_1}$, puis $T_{1/2}^{\\mathrm{fus}} = \\ln 2 \\,/\\, \\lambda$. Sur un tracé log-$N$, la pente vaut $-\\lambda$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "pairs": "paires D–T",
+    "field_measurements": "mesures du réacteur",
+    "find_T": "trouve T½ᶠᵘˢ à partir des données",
+    "match_ok": "correspond",
+    "match_off": "écart — vérifie ta lecture",
+    "enter_prompt": "saisis T½ᶠᵘˢ et valide",
+    "peek_reveal": "valeur exacte :",
+    "log_toggle": "LOG",
+    "submit": "VALIDER",
+    "tip1": "balaie T½ᶠᵘˢ, active LOG, laisse la sim dépasser T½ᶠᵘˢ",
+    "tip2": "aligne-toi sur la cible orange vif — essaie LOG pour un ajustement linéaire",
+    "tip3": "calcule λ à partir de deux points, puis T½ᶠᵘˢ = ln 2 / λ"
+  },
+  "hints": {
+    "1": {
+      "1": "T½ᶠᵘˢ est le temps qu'il faut pour que la moitié des paires D–T fusionnent.",
+      "2": "Activer LOG transforme la décroissance exponentielle en droite — la pente vaut −λ.",
+      "3": "La courbe turquoise en pointillés est le N(t) théorique ; l'orange plein est le comptage stochastique. Ils doivent coïncider en moyenne — les fluctuations reflètent la nature poissonienne des collisions nucléaires."
+    },
+    "2": {
+      "1": "La courbe orange vif est le plasma cible. Fais correspondre sa pente, pas seulement ses extrémités.",
+      "2": "Sur un tracé linéaire, T½ᶠᵘˢ est là où la courbe croise N₀/2. Sur un tracé log, T½ᶠᵘˢ coïncident signifie droites parallèles.",
+      "3": "L'indicateur Δ% en haut à droite montre ton écart à la cible. Moins de 5 % suffit."
+    },
+    "3": {
+      "1": "Choisis deux mesures quelconques (t₁, N₁) et (t₂, N₂). Puis λ = ln(N₁/N₂) / (t₂ − t₁).",
+      "2": "Une fois λ obtenu, la demi-vie de fusion vaut T½ᶠᵘˢ = ln 2 / λ ≈ 0,693 / λ.",
+      "3": "Le compteur de neutrons est bruité — la tolérance est ±3 %, donc de petits écarts d'arrondi sont admis. Utilise Peek pour voir la vraie courbe de décroissance si tu bloques."
+    }
+  }
+}

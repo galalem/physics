@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser $F'$ le long de l'axe optique. Observe comment la distance focale $f'$ et la vergence $C$ évoluent ensemble — et remarque que la lentille elle-même devient plus épaisse quand la distance focale diminue.",
+      "concept": "Pour une lentille mince convergente, la vergence est $C = 1/f'$, avec $f'$ en mètres et $C$ en dioptries ($\\delta = \\mathrm{m}^{-1}$). Un $f'$ plus court signifie un $C$ plus grand et une lentille physiquement plus épaisse.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois foyers cibles apparaissent l'un après l'autre sur l'axe. Fais glisser $F'$ sur chaque cible, puis appuie sur POSER (ou Espace) pour le verrouiller. Tu disposes de 5 tirs pour 3 cibles.",
+      "concept": "Chaque distance focale a une vergence associée : $C = 1/f'$. Vise ton $F'$ sur la marque cible — la vergence suit la position automatiquement.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les marques focales sont cachées. Seule la vergence cible $C^*$ est donnée. Calcule $f'^* = 1/C^*$ sur papier, fais glisser $F'$ jusqu'à cette distance focale en utilisant l'affichage en direct de $f'$, puis appuie sur POSER. Un tir par cible.",
+      "concept": "Inversion vergence-distance focale : donnée $C^*$ en dioptries, la distance focale requise est $f'^* = 1/C^*$ en mètres, ou $f'^* = 100/C^*$ en centimètres.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "set": "POSER",
+    "shots": "TIRS",
+    "lit": "RÉUSSIES",
+    "target": "CIBLE",
+    "stage": "ÉTAPE",
+    "exhausted": "TIRS ÉPUISÉS · RÉINITIALISE POUR RÉESSAYER",
+    "tip1": "fais glisser F' — observe f' et C évoluer ensemble",
+    "tip2": "aligne F' avec la marque cible, puis POSE",
+    "tip3": "calcule f' = 1/C sur papier, puis POSE",
+    "axis": "AXE OPTIQUE",
+    "peek_strategy": "f' (cm) = 100 / C — vérifie avec ton f' en direct",
+    "target_C": "C* CIBLE",
+    "target_f": "f'* CIBLE"
+  },
+  "hints": {
+    "1": {
+      "1": "Attrape le marqueur F' à droite et fais-le glisser le long de l'axe.",
+      "2": "Lorsque f' diminue, C augmente — ils sont inverses l'un de l'autre.",
+      "3": "La relation est C = 1/f' avec f' en mètres. Exemple : f' = 0,10 m donne C = 10 dioptries."
+    },
+    "2": {
+      "1": "Aligne ton F' avec la marque orange de la cible, puis appuie sur POSER.",
+      "2": "L'affichage de C dans le HUD se met à jour quand tu glisses — utilise-le pour vérifier.",
+      "3": "Si la cible affiche f'* = 10 cm, glisse jusqu'à ce que ton f' en direct affiche 10,0 cm, puis POSE."
+    },
+    "3": {
+      "1": "Lis le C* cible dans le HUD. C'est ton seul indice.",
+      "2": "Convertis : f'* (en mètres) = 1 / C*, ou f'* (en cm) = 100 / C*.",
+      "3": "Fais glisser F' jusqu'à ce que l'affichage en direct de f' soit égal à ta cible calculée, puis appuie sur POSER."
+    }
+  }
+}

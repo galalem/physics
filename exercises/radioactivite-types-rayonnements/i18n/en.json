@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Each dot is a parent nucleus of the selected isotope. Every parent decays at a random moment and emits its characteristic ray: $\\alpha$, $\\beta^{-}$, $\\beta^{+}$ or $\\gamma$. Click through the four isotopes; watch the grid drain and read the transformation written above the plot.",
+      "concept": "$\\alpha$ decay: ${}^{A}_{Z}X \\rightarrow {}^{A-4}_{Z-2}Y + {}^{4}_{2}\\text{He}$. $\\beta^{-}$: $n \\rightarrow p + e^{-}$, so $A$ unchanged, $Z$ increases by $1$. $\\beta^{+}$: $p \\rightarrow n + e^{+}$, so $A$ unchanged, $Z$ decreases by $1$. $\\gamma$: excited nucleus relaxes; both $A$ and $Z$ unchanged. In every case $A$ and $Z$ are conserved across the arrow.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "The transformation is written with the ray hidden: ${}^{A}_{Z}X \\rightarrow {}^{A'}_{Z'}Y + \\;?$. Read the change in $A$ and $Z$ and pick the correct ray. Answer three in a row to advance — a wrong pick resets the streak.",
+      "concept": "Read the arrow: $\\Delta A = A' - A$ and $\\Delta Z = Z' - Z$. $\\Delta A = -4, \\Delta Z = -2 \\Rightarrow \\alpha$. $\\Delta A = 0, \\Delta Z = +1 \\Rightarrow \\beta^{-}$. $\\Delta A = 0, \\Delta Z = -1 \\Rightarrow \\beta^{+}$. $\\Delta A = 0, \\Delta Z = 0 \\Rightarrow \\gamma$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No live simulation. You are shown the parent ${}^{A}_{Z}X$ and the emitted ray. Type the daughter's $A$ and $Z$ using conservation across the arrow. Three in one pass — a wrong answer resets the streak. Peek shows the conservation rule for the current ray as a strategy hint.",
+      "concept": "Conservation of nucleon number: $A_{\\text{parent}} = A_{\\text{daughter}} + A_{\\text{ray}}$. Conservation of charge: $Z_{\\text{parent}} = Z_{\\text{daughter}} + Z_{\\text{ray}}$. Ray charge and mass numbers: $\\alpha = {}^{4}_{2}\\text{He}$, $\\beta^{-} = {}^{0}_{-1}e$, $\\beta^{+} = {}^{0}_{+1}e$, $\\gamma = {}^{0}_{0}\\gamma$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "parent": "parent",
+    "daughter": "daughter",
+    "ray": "ray",
+    "select_isotope": "select isotope",
+    "pick_ray": "which ray?",
+    "solve_daughter": "solve for the daughter",
+    "streak": "streak",
+    "conservation": "conservation",
+    "conservation_A": "ΔA (mass)",
+    "conservation_Z": "ΔZ (charge)",
+    "match_ok": "correct",
+    "match_off": "wrong — streak reset",
+    "submit": "SUBMIT",
+    "peek_prefix": "hint:",
+    "peek_alpha": "α: A drops by 4, Z drops by 2",
+    "peek_beta_minus": "β⁻: A same, Z rises by 1 (n → p + e⁻)",
+    "peek_beta_plus": "β⁺: A same, Z drops by 1 (p → n + e⁺)",
+    "peek_gamma": "γ: A same, Z same (photon only)",
+    "tip1": "click each isotope · let the sim run past T½",
+    "tip2": "read ΔA and ΔZ across the arrow · pick the ray",
+    "tip3": "write the daughter from the parent using conservation"
+  },
+  "hints": {
+    "1": {
+      "1": "Each isotope emits one specific type of ray — click through all four to see the pattern.",
+      "2": "The four ray types are α (helium nucleus), β⁻ (electron), β⁺ (positron), γ (photon). Each changes A and Z in a fixed way.",
+      "3": "Half-life and ray type are two different properties of an isotope. The grid speed shows T½; the equation shows the ray type."
+    },
+    "2": {
+      "1": "Look at what A does and what Z does across the arrow. A drop of 4 in A means an α was emitted.",
+      "2": "If A doesn't change but Z rises by 1, it is β⁻ (a neutron turned into a proton). If A doesn't change and Z drops by 1, it is β⁺.",
+      "3": "If both A and Z are unchanged, the parent was excited and released a γ photon — nothing else was emitted."
+    },
+    "3": {
+      "1": "Write down: A_parent = A_daughter + A_ray, and Z_parent = Z_daughter + Z_ray. Then solve for the daughter's A and Z.",
+      "2": "α = ⁴₂He, β⁻ = ⁰₋₁e, β⁺ = ⁰₊₁e, γ = ⁰₀γ. Subtract these from the parent's A and Z to get the daughter's.",
+      "3": "Example: ²³⁸₉₂U emits α. Daughter's A = 238 − 4 = 234. Daughter's Z = 92 − 2 = 90."
+    }
+  }
+}

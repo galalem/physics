@@ -1,0 +1,69 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Push the temperature setpoint around and watch water pass through its three states. Notice the two plateaus where $T$ stops moving even as the heater keeps running — fusion at $0\\,^\\circ\\text{C}$ and vaporisation at $100\\,^\\circ\\text{C}$. Advance once you've witnessed 4 of the 5 phase segments.",
+      "concept": "A pure substance heated at constant power: $T$ rises inside each single phase, then flatlines during each transition. Plateau energy $Q = m\\,L$ (latent heat) breaks intermolecular bonds instead of raising $T$. Cooling reverses the same curve.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Target: reach liquid water at $40\\,^\\circ\\text{C}$, starting from solid ice. Set the initial state, then dial the temperature setpoint so the substance ends up exactly in the liquid segment at $40\\,^\\circ\\text{C}$.",
+      "concept": "To move from ice to warm water you must supply enough heat to (a) raise the solid to $0\\,^\\circ\\text{C}$, (b) pay the full fusion plateau $Q = m\\,L_f$, and (c) heat the resulting liquid up to the target. The setpoint alone tells the heater when to stop; the initial state determines which transitions the substance must cross.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The heating curve is shown but the state names are stripped. Label each numbered segment with the phase it belongs to. You must get all five labels correct at the same time.",
+      "concept": "A rising segment = single phase (heat raises $T$). A flat segment = phase transition in progress ($T$ stays constant while latent heat is absorbed). The sequence is invariant: solid $\\to$ fusion $\\to$ liquid $\\to$ vaporisation $\\to$ vapour.",
+      "peekable": false
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "beaker": "H2O beaker",
+    "thermometer": "T",
+    "plot_title": "T vs t",
+    "controls_title": "controls",
+    "field_setpoint": "setpoint",
+    "field_rate": "power",
+    "field_initial": "initial state",
+    "field_status": "status",
+    "field_target": "target",
+    "state_solid": "solid",
+    "state_fusion": "fusion",
+    "state_liquid": "liquid",
+    "state_vap": "vaporisation",
+    "state_vapor": "vapour",
+    "states_seen": "states",
+    "target_reached": "target reached",
+    "target_prompt": "liquid @ 40°C from solid",
+    "labels": "labels",
+    "reset_sim": "reset",
+    "evaluate_prompt": "Assign the correct phase to each numbered segment. All five must be correct at once.",
+    "pick_label": "pick",
+    "tip1": "drag the setpoint high and low; watch T pause at the plateaus",
+    "tip2": "start from solid, aim the setpoint at 40°C, and let the sim settle",
+    "tip3": "rising = single phase; flat = transition. Sequence is invariant."
+  },
+  "hints": {
+    "1": {
+      "1": "Raise the setpoint to +130°C and let the sim run. You'll see the two plateaus interrupt the temperature climb.",
+      "2": "The flat portions of the curve are fusion (0°C) and vaporisation (100°C). Heat keeps flowing there but T doesn't move — that's latent heat.",
+      "3": "To reach vapour you must set the target above 100°C and wait through the full vaporisation plateau. Push the power slider to 100% to speed it up."
+    },
+    "2": {
+      "1": "Start from solid. Any other starting state skips the transitions the target requires.",
+      "2": "The setpoint tells the heater when to stop. 40°C sits inside the liquid ramp, above the fusion plateau at 0°C.",
+      "3": "Pick initial state = solid, setpoint = 40°C, power to 100%. The sim will climb through the fusion plateau and stop at 40°C in the liquid segment."
+    },
+    "3": {
+      "1": "Segment 1 slopes upward from below 0°C — the substance starts frozen and is warming as a solid.",
+      "2": "The two flat segments are the transitions: segment 2 sits at 0°C, segment 4 at 100°C. The three sloping segments are single phases.",
+      "3": "The sequence is always: solid → fusion → liquid → vaporisation → vapour. Map each segment index to that order."
+    }
+  }
+}

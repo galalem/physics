@@ -1,0 +1,79 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Choisis une porte dans la palette. Bascule les deux entrées $A$ et $B$ à travers les quatre combinaisons $(0,0)$, $(0,1)$, $(1,0)$, $(1,1)$ et regarde la LED de sortie $S$ s'allumer ou rester éteinte. La table de vérité à droite consigne automatiquement chaque ligne visitée. Remplis complètement la table pour au moins deux portes différentes pour avancer.",
+      "concept": "Une porte logique est une fonction totale de ses entrées booléennes. ET vaut 1 uniquement quand les deux entrées valent 1 ; OU vaut 1 quand au moins une entrée vaut 1 ; XOR vaut 1 quand les entrées diffèrent ; NAND et NOR sont leurs négations ; NON inverse une entrée unique.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Construis un demi-additionneur. À partir des entrées $A$ et $B$, produis $S$ (somme) et $C$ (retenue). Choisis une porte pour chaque emplacement de sorte que dans la table de vérité de droite la colonne $S_{yours}$ colle à $S_{target}$ et $C_{yours}$ colle à $C_{target}$ sur les quatre lignes.",
+      "concept": "Un demi-additionneur somme deux bits sans retenue entrante. Par inspection : $S = A \\oplus B$ (XOR — 1 uniquement quand $A \\ne B$) et $C = A \\cdot B$ (ET — 1 uniquement quand les deux valent 1). Ensemble le couple $(C, S)$ est la somme binaire 2 bits de $A+B$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Une porte est cachée dans la boîte noire. Bascule $A$ et $B$, observe la LED, et remplis la colonne de sortie de la table de vérité en cliquant sur la case de chaque ligne pour la mettre à 0 ou 1. Appuie sur VALIDER quand la table est complète. Une table erronée relance toute la série.",
+      "concept": "Chaque porte à 2 entrées est déterminée de manière unique par sa colonne de sortie à 4 lignes. Un balayage systématique — tester les quatre combinaisons d'entrée — fixe l'identité de la porte. NAND, NOR, XOR ont chacune une signature distinctive : commence par la ligne tout-zéro et la ligne tout-un.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "circuit",
+    "table": "table de vérité",
+    "scenario": "SCÉNARIO",
+    "solved": "FAIT",
+    "submit": "VALIDER",
+    "correct": "correct",
+    "wrong": "table erronée",
+    "target": "cible",
+    "yours": "toi",
+    "your_pick": "ton choix",
+    "input_a": "A",
+    "input_b": "B",
+    "output_s": "S",
+    "output_c": "C",
+    "slot_sum": "SOMME",
+    "slot_carry": "RETENUE",
+    "record": "CONSIGNER",
+    "hidden": "?",
+    "gates_ok": "porte couverte",
+    "match_ok": "demi-additionneur validé",
+    "tip1": "bascule A et B à travers les quatre combinaisons · essaie au moins deux portes différentes",
+    "tip2": "la SOMME vaut 1 uniquement quand les entrées diffèrent · la RETENUE vaut 1 uniquement quand les deux valent 1",
+    "tip3": "bascule les entrées · lis la LED · clique sur la case de chaque ligne pour la mettre à 0 ou 1 · puis VALIDE",
+    "peek_tip_1": "La ligne (0,0) est la plus diagnostique : seules NAND et NOR sortent 1 pour des entrées tout-zéro.",
+    "peek_tip_2": "La ligne (1,1) sépare le reste : ET et XOR y diffèrent. Recoupe avec (0,1) pour conclure.",
+    "gate_and": "ET",
+    "gate_or": "OU",
+    "gate_not": "NON",
+    "gate_nand": "NAND",
+    "gate_nor": "NOR",
+    "gate_xor": "XOR",
+    "coverage": "couverture",
+    "gates_done": "portes complètes",
+    "row": "ligne"
+  },
+  "hints": {
+    "1": {
+      "1": "Choisis une porte. Puis bascule A et B — chaque nouvelle combinaison ajoute une nouvelle ligne.",
+      "2": "Il te faut chaque ligne (0,0), (0,1), (1,0), (1,1) remplie pour une porte, puis recommencer avec une seconde porte.",
+      "3": "Essaie ET puis OU : deux portes, quatre lignes chacune — huit enregistrements en tout, et c'est bouclé."
+    },
+    "2": {
+      "1": "S (somme) doit valoir 1 exactement quand A et B diffèrent. Quelle porte fait ça ?",
+      "2": "C (retenue) doit valoir 1 exactement quand A et B valent tous les deux 1. C'est le comportement classique du ET.",
+      "3": "SOMME = XOR, RETENUE = ET. Règle les deux emplacements sur XOR et ET et lis la table correspondante."
+    },
+    "3": {
+      "1": "Teste systématiquement (0,0), (0,1), (1,0), (1,1) — note d'abord sur papier ce que montre la LED, puis remplis les cases.",
+      "2": "Clique sur chaque case de sortie pour basculer 0/1. Les cases démarrent vides. Remplis les quatre avant d'appuyer sur VALIDER.",
+      "3": "Ligne (0,0) : la LED s'allume-t-elle ? Si oui, la porte est NAND ou NOR. Sinon, c'est une des trois : ET/OU/XOR."
+    }
+  }
+}

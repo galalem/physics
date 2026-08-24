@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Adjust the accelerating voltage $U$ and the magnetic field $B$, then press FIRE. Watch how the ion's circular radius $R$ responds. Try at least two values of $U$ and move $B$.",
+      "concept": "Acceleration sets the ion's speed: $v = \\sqrt{2\\,q\\,U/m}$. In the perpendicular magnetic field, the Lorentz force curves the ion into a circle of radius $R = m\\,v/(q\\,B) = \\sqrt{2\\,U\\,m/q}\\,/\\,B$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Three detector cells are labelled with target ion masses. Fire each ion so that it lands on its own cell. The dashed preview arc shows where the current $(U, B)$ sends the loaded ion — line it up, then FIRE.",
+      "concept": "Solved for the settings: $B = \\sqrt{2\\,U\\,m/q}\\,/\\,R$ or $U = q\\,B^{2}\\,R^{2}/(2\\,m)$. Two ions of different mass with the same $(U, B)$ separate because $R \\propto \\sqrt{m}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No preview arc. For each ion you get exactly one shot. Read the loaded mass $m$ and its target radius $R$, calculate $(U, B)$ on paper, dial them in, then FIRE. Miss the budget and the bench resets.",
+      "concept": "Isolate the mass: $m = q\\,B^{2}\\,R^{2}/(2\\,U)$. This is the identification equation of the mass spectrograph — the deflection radius $R$ is the observable that reveals $m$ once $U$, $B$, and $q$ are fixed.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "hits": "HITS",
+    "stage": "STAGE",
+    "shots": "SHOTS",
+    "loaded": "LOADED",
+    "u_unit": "V",
+    "b_unit": "mT",
+    "m_unit": "u",
+    "r_unit": "mm",
+    "u_label": "U",
+    "b_label": "B",
+    "cell_prefix": "m =",
+    "ion_source": "ION SOURCE",
+    "accelerator": "ACCELERATOR",
+    "b_field": "B FIELD",
+    "detector": "DETECTOR",
+    "tip1": "change U, move B, then FIRE",
+    "tip2": "use the preview arc to route each ion to its labelled cell",
+    "tip3": "compute U and B from m and target R, then FIRE",
+    "peek_tip_scaling": "R is proportional to sqrt(m). If two cells sit at radii R1 and R2, their masses satisfy m1/m2 = (R1/R2)^2 for one shared (U, B).",
+    "peek_tip_solve_b": "Fix U at a comfortable value, then solve B = sqrt(2 U m / q) / R. Small B = large radius; big B = tight radius.",
+    "peek_tip_solve_u": "Fix B at a comfortable value, then solve U = q B^2 R^2 / (2 m). Higher mass at the same cell needs less U."
+  },
+  "hints": {
+    "1": {
+      "1": "Move the U slider (right) and the B slider (left) and fire between changes.",
+      "2": "R grows with sqrt(U) and shrinks as B increases — check by doubling one at a time.",
+      "3": "For the same ion, R = sqrt(2 U m / q) / B: same R has many (U, B) solutions."
+    },
+    "2": {
+      "1": "Each cell is labelled with the mass of its ion. Aim the preview arc at that cell for the loaded ion.",
+      "2": "Solve for one setting: B = sqrt(2 U m / q) / R with U fixed, or U = q B^2 R^2 / (2 m) with B fixed.",
+      "3": "The loaded ion cycles through the queue automatically — hit one, the next mass loads."
+    },
+    "3": {
+      "1": "Write down m and R for the loaded ion. Pick a sensible U, solve for B (or vice versa).",
+      "2": "Rearrange R = sqrt(2 U m / q) / B into m = q B^2 R^2 / (2 U); use it to double-check your (U, B).",
+      "3": "Watch the ratio: for two ions in the same setup, R1/R2 = sqrt(m1/m2). One (U, B) can hit both if their cells respect that ratio."
+    }
+  }
+}

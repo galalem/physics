@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Déplace le satellite pour fixer sa distance $r$ à la Terre, utilise le curseur pour régler sa vitesse $v$, puis LANCER. Observe comment la forme de l'orbite change quand $v$ s'écarte de $v_{\\text{circ}}$.",
+      "concept": "Pour une orbite circulaire, la gravitation fournit la force centripète : $\\dfrac{G M}{r^{2}} = \\dfrac{v^{2}}{r}$, d'où $v_{\\text{circ}} = \\sqrt{\\dfrac{G M}{r}}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois orbites cibles en pointillés sont affichées, chacune étiquetée avec sa période $T$. Fais correspondre chacune d'elles : choisis $r$ pour t'aligner avec l'anneau, puis règle $v$ pour que l'anneau d'aperçu devienne turquoise plein (c'est $v = v_{\\text{circ}}$).",
+      "concept": "Troisième loi de Kepler : $T^{2} = \\dfrac{4\\pi^{2}}{G M} \\, r^{3}$. La période ne dépend que du rayon de l'orbite, pas de la masse du satellite.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas d'anneau d'aperçu. Seules les périodes cibles sont données. Pour chacune, calcule $r$ avec la troisième loi de Kepler, règle $v = v_{\\text{circ}}(r)$, puis LANCER. Tu disposes d'un nombre limité de tirs — papier et stylo d'abord.",
+      "concept": "$r = \\left(\\dfrac{G M \\, T^{2}}{4\\pi^{2}}\\right)^{1/3}$, puis $v_{\\text{circ}} = \\sqrt{\\dfrac{G M}{r}}$. Utilise $G M = 4 \\cdot 10^{5} \\ \\text{km}^{3}/\\text{s}^{2}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "launch": "LANCER",
+    "hits": "RÉUSSIES",
+    "shots": "TIRS",
+    "stage": "ÉTAPE",
+    "targets": "PÉRIODES CIBLES",
+    "vcirc": "v_circ",
+    "period_of_r": "T(r)",
+    "tip1": "déplace le satellite radialement, bouge v, puis LANCER — v = v_circ ferme l'orbite",
+    "tip2": "aligne l'anneau d'aperçu avec une cible, puis règle v jusqu'à ce qu'il devienne turquoise",
+    "tip3": "calcule r à partir de T, puis v_circ(r) sur papier avant de lancer",
+    "peek_tip_kepler": "T² est proportionnel à r³. Doubler r multiplie T par 2^(3/2) ≈ 2,83 — un petit changement de rayon fait beaucoup varier la période.",
+    "peek_tip_geo": "Une orbite géostationnaire a T = 24 h. Toute orbite de période ≈ 24 h → r ≈ 42 000 km. Sers-t'en comme point de repère.",
+    "peek_tip_vcirc": "Une fois que tu as r, termine toujours par v = √(μ/r). Sauter cette étape ouvre l'orbite en ellipse et rate la cible."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplace le point satellite en l'éloignant de la Terre pour changer r. Déplace ensuite le curseur vertical pour changer v.",
+      "2": "Remarque l'anneau d'aperçu : il devient turquoise plein seulement quand v est égal à v_circ(r). Loin de cette valeur, l'anneau est en pointillés.",
+      "3": "L'orbite n'est un cercle que pour une valeur précise de v à chaque r. Cette valeur est v_circ = √(μ/r)."
+    },
+    "2": {
+      "1": "Chaque anneau cible en pointillés est une orbite circulaire — son rayon est fixe, et la troisième loi de Kepler donne sa période.",
+      "2": "Règle r pour que l'anneau d'aperçu recouvre l'anneau cible, puis ajuste v jusqu'à ce que l'aperçu devienne turquoise. La réussite est validée au LANCER.",
+      "3": "Plus grand rayon → plus grande période. Classe les cibles par période et fais-les correspondre l'une après l'autre."
+    },
+    "3": {
+      "1": "Lis T dans la liste des cibles. Calcule r depuis T² = (4π²/μ)·r³. Utilise μ = 4·10⁵ km³/s².",
+      "2": "Pour T en secondes, r = (μ·T²/4π²)^(1/3). Convertis minutes → secondes avant d'injecter les valeurs.",
+      "3": "Une fois r obtenu, n'oublie pas v = √(μ/r). Seuls les lancers circulaires comptent comme réussis."
+    }
+  }
+}

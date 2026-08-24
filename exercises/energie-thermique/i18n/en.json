@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Water in a beaker on a hot plate. The plate delivers power $P$ to a mass $m$ of water. Slide $P$ and $m$, watch $T(t)$ climb. Get the water to $80\\,^\\circ\\mathrm{C}$ at least once with each slider moved.",
+      "concept": "Sensible heat: $Q = m\\,c\\,\\Delta T$ where $c \\approx 4180\\,\\mathrm{J\\,kg^{-1}\\,K^{-1}}$ for water. With constant power, $T(t) = T_0 + k\\,t$ where the slope $k = \\dfrac{P}{m\\,c}$ has units of $^\\circ\\mathrm{C}/s$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit the orange crosshair: reach temperature $T^{*}$ at exactly time $t^{*}$. Tune $P$ and $m$ so your line passes through the target.",
+      "concept": "Any pair $(P, m)$ works as long as the slope matches: $k^{*} = \\dfrac{T^{*} - T_0}{t^{*}} = \\dfrac{P}{m\\,c}$. Doubling $P$ and $m$ together keeps $k$ unchanged.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Only the target line is drawn. Read its slope $k^{*}$ from the graph on paper, pick $P$ and $m$ blind, then press RUN. Match $k$ to within $\\pm 3\\%$.",
+      "concept": "Read two points from the target line to get $k^{*} = \\dfrac{\\Delta T}{\\Delta t}$. Then any $(P, m)$ with $\\dfrac{P}{m\\,c} = k^{*}$ works. Peek gives you a reading method — not the answer.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "scene": "beaker + hot plate",
+    "chart_title": "T (t)",
+    "y_axis_label": "T (°C) →",
+    "x_axis_label": "t (s) →",
+    "hit": "hit!",
+    "match_ok": "match",
+    "match_off": "off",
+    "target_short": "target",
+    "submit_button": "RUN",
+    "hot_plate": "hot plate",
+    "water": "water",
+    "boiling": "boiling · 100°C",
+    "tip1": "move P and m sliders, then let the water climb to 80°C at least once",
+    "tip2": "tune P and m so your line passes through the orange crosshair",
+    "tip3": "read k* = ΔT/Δt from the target line, then set P/(m·c) = k*",
+    "peek_hint": "read the slope: pick two points on the target line, k = (T2 − T1) / (t2 − t1) in °C/s; then set P/(m·c) = k"
+  },
+  "hints": {
+    "1": {
+      "1": "Larger P heats faster. Larger m heats slower. The slope k = P/(m·c) is what matters.",
+      "2": "The dashed 100°C line marks boiling. With c ≈ 4180 J/kg·K, k has units of °C/s.",
+      "3": "Doubling P and doubling m at the same time keeps the slope k unchanged."
+    },
+    "2": {
+      "1": "Compute the target slope: k* = (T* − T0) / t*. Then set P and m so P/(m·c) = k*.",
+      "2": "Pick m first (say m = 0.5 kg), then P = k* · m · c gives you the power to dial in.",
+      "3": "Fine-tune with the m slider once you're close; small m changes = small k changes."
+    },
+    "3": {
+      "1": "Pick two points on the target line. Slope k* = (T2 − T1) / (t2 − t1) in °C/s.",
+      "2": "For water c ≈ 4180 J/kg·K. So P/m = k* · c gives you the required ratio.",
+      "3": "Press Peek for the reading method. Then set P and m so P/(m·c) = k*, and press RUN."
+    }
+  }
+}

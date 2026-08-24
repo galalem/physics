@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Set the applied force $F$ and the mass $m$, then FIRE. Watch how the net force $\\Sigma F = F - f$ drives the crate — try at least two different $F$ values and move the mass slider.",
+      "concept": "In a Galilean (inertial) frame, Newton's 2nd law gives $\\Sigma \\vec{F}_{\\text{ext}} = m \\cdot \\vec{a}_G$. Here $\\Sigma F = F - f$ along the track, so $a = \\dfrac{F - f}{m}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Land the crate on each flag. The dashed marker previews where it will stop after $T = 2\\,\\text{s}$. Fire once per target — pick $F$ and $m$ to match its position.",
+      "concept": "After a burst of duration $T$ from rest: $x_f = \\tfrac{1}{2} a T^{2} = \\dfrac{(F - f)\\, T^{2}}{2m}$. Doubling $m$ halves $a$; increasing $F$ raises $a$ linearly.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "No preview. Read each flag's distance $x$, then compute $F$ and $m$ so $\\dfrac{(F - f)\\, T^{2}}{2m} = x$ (with $T = 2\\,\\text{s}$, $f = 5\\,\\text{N}$). One shot per flag — no spray-and-pray.",
+      "concept": "The theorem of the centre of inertia states $\\vec{a}_G = \\dfrac{\\Sigma \\vec{F}_{\\text{ext}}}{m}$. All external forces sum to accelerate the centre of mass — valid only in a Galilean frame.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "hits": "HITS",
+    "shots": "SHOTS",
+    "stage": "STAGE",
+    "force_F": "F",
+    "force_f": "f",
+    "net_F": "ΣF",
+    "mass": "m",
+    "tip1": "adjust F and m, then FIRE",
+    "tip2": "the dashed marker previews where the crate stops",
+    "tip3": "compute F and m from each flag's distance, then FIRE",
+    "predicted": "predicted",
+    "galilean": "Galilean frame · f = 5 N · T = 2 s",
+    "peek_tip_solve": "For a flag at distance x, solve F − f = 2·m·x / T² (T = 2 s, f = 5 N). Pick m first, then read F.",
+    "peek_tip_mass": "Doubling m halves the acceleration for the same F. Distant flags → light crate; near flags → heavy crate.",
+    "peek_tip_friction": "Friction f = 5 N is constant. The net force ΣF = F − f is what drives the motion — it is ΣF, not F, that equals m·a."
+  },
+  "hints": {
+    "1": {
+      "1": "Drag the F slider (left) and the m slider (right). Then press FIRE.",
+      "2": "Watch the arrows above the crate: orange F pushes right, gray f pulls left, teal ΣF is the net.",
+      "3": "Change m without changing F: heavier crate → smaller acceleration. That's Newton's 2nd law: a = ΣF / m."
+    },
+    "2": {
+      "1": "The dashed vertical marker shows where the crate will stop after T = 2 s.",
+      "2": "Move F or m until the marker lands on a flag, then FIRE — that flag turns teal.",
+      "3": "Two very different (F, m) pairs can reach the same flag as long as (F − 5) / m is the same."
+    },
+    "3": {
+      "1": "Each flag shows its distance x in metres. On paper, solve x = (F − 5) · 4 / (2m) = 2(F − 5) / m.",
+      "2": "Rearrange: F = m · x / 2 + 5. Pick any m in [1, 10] kg that keeps F in [10, 100] N.",
+      "3": "For a far flag (x large), a light m needs a modest F; a heavy m may push F above the slider's max."
+    }
+  }
+}

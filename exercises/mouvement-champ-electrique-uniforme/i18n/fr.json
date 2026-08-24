@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un électron entre horizontalement dans les plaques de déviation avec la vitesse $v_0$. Bouge le curseur $U$ (tension entre plaques) et le curseur $v_0$, puis appuie sur TIRER. Remarque comment le faisceau se courbe dans le champ et reste rectiligne après.",
+      "concept": "Entre les plaques, le champ électrique est uniforme : $E = U/d$. L'électron subit une accélération constante $a = qE/m = (q/m)\\,U/d$ perpendiculaire à $v_0$, donc sa trajectoire est parabolique tant que $x \\in [0, L]$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Touche les trois marqueurs cibles sur l'écran. La ligne pointillée prévisualise le faisceau — règle $U$ et $v_0$, puis tire. Attention : si la déviation en sortie dépasse $d/2$, l'électron heurte une plaque et n'atteint jamais l'écran.",
+      "concept": "Déviation sur l'écran : $Y = \\dfrac{(q/m)\\,U\\,L}{d\\,v_0^{2}}\\,\\left(D + \\tfrac{L}{2}\\right)$. Y varie comme $U$ et comme $1/v_0^{2}$ ; son signe suit celui de $U$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas d'aperçu. Chaque cible affiche sa coordonnée $Y$ à l'écran en cm. Tu disposes d'exactement 3 tirs — un par cible. Calcule $U$ (pour un $v_0$ que tu choisis) à partir de la formule de déviation sur papier, règle les curseurs, puis tire.",
+      "concept": "Deux contraintes comptent : (a) $Y_{\\text{écran}} = (q/m)\\,U\\,L\\,(D + L/2)/(d\\,v_0^{2})$ fixe le couple $(U, v_0)$ à une famille près ; (b) l'électron doit sortir des plaques : $|y_{\\text{sortie}}| = \\tfrac{1}{2}(q/m)\\,|U|\\,(L/v_0)^{2}/d < d/2$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "hits": "TOUCHÉS",
+    "shots": "TIRS",
+    "stage": "ÉTAPE",
+    "voltage": "U",
+    "speed": "v₀",
+    "screen": "ÉCRAN",
+    "particle_electron": "e⁻",
+    "plate_top": "+U/2",
+    "plate_bot": "−U/2",
+    "tip1": "déplace U et v₀, puis TIRE",
+    "tip2": "utilise la ligne d'aperçu pour aligner chaque cible",
+    "tip3": "calcule U à partir de Y et v₀, puis TIRE — 3 tirs, un par cible",
+    "peek_tip_scaling": "Y varie comme U/v₀². Double v₀ → Y divisé par 4 pour le même U. Inverse le signe de U → le faisceau bascule de l'autre côté.",
+    "peek_tip_survives": "Vérifie |y_sortie| = ½ · (q/m) · |U| · (L/v₀)² / d avant de tirer. S'il dépasse d/2, l'électron heurte une plaque.",
+    "peek_tip_lever": "Plus la zone sans champ D est longue, plus Y sur l'écran est grand pour le même angle de sortie. Y = y_sortie + (D · v_y_sortie / v₀)."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplace le curseur U vers le haut ou le bas — le faisceau se courbe vers la plaque au potentiel le plus élevé.",
+      "2": "Le curseur v₀ change la durée passée par l'électron dans le champ. v₀ plus grand = moins de temps pour se courber = déviation plus petite.",
+      "3": "Essaie U = 0 : pas de champ, pas de courbure. L'électron traverse tout droit et vise le centre de l'écran."
+    },
+    "2": {
+      "1": "L'aperçu pointillé montre la trajectoire. Aligne-le avec une cible, puis tire.",
+      "2": "Une cible au-dessus du centre demande U > 0 ; en dessous, U < 0. Un même |Y| demande un même |U| pour un v₀ donné.",
+      "3": "Diviser v₀ par 2 multiplie Y par 4 pour le même U. Utilise v₀ comme réglage grossier et U comme réglage fin."
+    },
+    "3": {
+      "1": "Lis le Y de chaque cible (en cm). Choisis un v₀ auquel tu t'engages, puis résous U = Y · m · d · v₀² / (q · L · (D + L/2)).",
+      "2": "Avec L = 10 cm, d = 4 cm, D = 10 cm et q/m = 1,76×10¹¹ C/kg : U[V] ≈ Y[cm] · v₀[10⁷ m/s]² · 15,15.",
+      "3": "Pour un Y extrême, augmente v₀ (plus sûr — |y_sortie| reste petit) ou accepte un |U| plus grand. Vérifie |y_sortie| < d/2 = 2 cm avant de tirer."
+    }
+  }
+}

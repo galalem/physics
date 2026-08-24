@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "White light from the lamp hits a glass prism. Grab the prism and rotate it — a full rainbow band appears on the screen. Notice: violet always sits higher than red, and rotating the prism shifts the whole band together.",
+      "concept": "A prism disperses white light because its refractive index $n(\\lambda)$ depends on wavelength. Shorter $\\lambda$ (violet) $\\Rightarrow$ larger $n$ $\\Rightarrow$ larger deviation. The ordering violet $\\to$ blue $\\to$ green $\\to$ yellow $\\to$ orange $\\to$ red is fixed by physics — rotating the prism only shifts the band, it does not reorder the colors.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Three colored slits sit next to the screen. For each one, rotate the prism so the matching band of the spectrum lands on the slit's tick, then press Fire (or Space). You have $5$ shots for $3$ slits.",
+      "concept": "The prism angle $\\varphi$ controls where the spectrum lands on the screen. Each colored slit needs a different $\\varphi$ because the slits sit at different heights — align the matching color, then fire.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The dispersed spectrum is hidden. Only the white incident ray, the prism, and the three colored slits remain. For each slit, read $(\\lambda^{*}, y^{*})$, compute the required prism angle $\\varphi$, set it, then Fire. One shot per slit — miss any and the stage restarts.",
+      "concept": "Screen position of a color at prism angle $\\varphi$: $y(\\lambda, \\varphi) = 225 + 260\\,\\varphi + 0.35\\,(\\lambda - 550)$, with $\\varphi$ in radians and $y$ in scene units. For target $(\\lambda^{*}, y^{*})$: $\\varphi = \\dfrac{y^{*} - 225 - 0.35\\,(\\lambda^{*} - 550)}{260}$. Then $1\\ \\text{rad} \\approx 57.3°$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "optical bench",
+    "source": "white light",
+    "prism": "drag to rotate",
+    "screen": "screen",
+    "angle": "φ",
+    "sweep": "SWEEP",
+    "shots": "SHOTS",
+    "lit": "LIT",
+    "shot": "SHOT",
+    "aim": "AIM",
+    "fire": "FIRE",
+    "miss_reset": "missed target — resetting...",
+    "tip1": "drag the prism to rotate — sweep the spectrum across the screen",
+    "tip2": "align each color with its slit, then press SPACE to fire",
+    "tip3": "compute φ from the formula, set it, then fire (one shot per slit)"
+  },
+  "hints": {
+    "1": {
+      "1": "Grab the prism triangle and drag in a circular motion around its center.",
+      "2": "Rotating the prism translates the whole spectrum up or down — the color order never changes.",
+      "3": "Violet always ends up higher on the screen than red because shorter wavelengths deviate more."
+    },
+    "2": {
+      "1": "Each slit has a color chip beside it — that is the wavelength you must land on the slit's tick.",
+      "2": "You can only shift the spectrum, not stretch it. Aim one color at a time and fire.",
+      "3": "If a color is missing at the current angle, rotate the prism further until that band reaches the slit height."
+    },
+    "3": {
+      "1": "Read each slit's target height y and target wavelength λ from the labels on the screen.",
+      "2": "Use φ = (y − 225 − 0.35·(λ − 550)) / 260. The HUD shows your current φ in degrees — 1 rad ≈ 57.3°.",
+      "3": "Peek confirms the formula and your current φ. Set φ within about 2° of your answer, then fire."
+    }
+  }
+}

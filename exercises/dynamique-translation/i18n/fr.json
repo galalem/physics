@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Règle la force appliquée $F$ et la masse $m$, puis TIRER. Observe comment la force résultante $\\Sigma F = F - f$ entraîne la caisse — essaie au moins deux valeurs différentes de $F$ et déplace le curseur de masse.",
+      "concept": "Dans un référentiel galiléen (inertiel), la deuxième loi de Newton donne $\\Sigma \\vec{F}_{\\text{ext}} = m \\cdot \\vec{a}_G$. Ici $\\Sigma F = F - f$ selon la piste, d'où $a = \\dfrac{F - f}{m}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Fais atterrir la caisse sur chaque drapeau. Le repère en pointillés prévisualise l'endroit où elle s'arrêtera après $T = 2\\,\\text{s}$. Un tir par cible — choisis $F$ et $m$ pour correspondre à sa position.",
+      "concept": "Après une impulsion de durée $T$ depuis le repos : $x_f = \\tfrac{1}{2} a T^{2} = \\dfrac{(F - f)\\, T^{2}}{2m}$. Doubler $m$ divise $a$ par deux ; augmenter $F$ augmente $a$ linéairement.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas d'aperçu. Lis la distance $x$ de chaque drapeau, puis calcule $F$ et $m$ tels que $\\dfrac{(F - f)\\, T^{2}}{2m} = x$ (avec $T = 2\\,\\text{s}$, $f = 5\\,\\text{N}$). Un tir par drapeau — pas de rafale.",
+      "concept": "Le théorème du centre d'inertie énonce $\\vec{a}_G = \\dfrac{\\Sigma \\vec{F}_{\\text{ext}}}{m}$. La somme des forces extérieures accélère le centre de masse — valable uniquement dans un référentiel galiléen.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "hits": "RÉUSSIS",
+    "shots": "TIRS",
+    "stage": "ÉTAPE",
+    "force_F": "F",
+    "force_f": "f",
+    "net_F": "ΣF",
+    "mass": "m",
+    "tip1": "ajuste F et m, puis TIRER",
+    "tip2": "le repère en pointillés prévisualise l'arrêt de la caisse",
+    "tip3": "calcule F et m à partir de la distance de chaque drapeau, puis TIRER",
+    "predicted": "prévu",
+    "galilean": "Référentiel galiléen · f = 5 N · T = 2 s",
+    "peek_tip_solve": "Pour un drapeau à la distance x, résous F − f = 2·m·x / T² (T = 2 s, f = 5 N). Choisis m d'abord, puis lis F.",
+    "peek_tip_mass": "Doubler m divise l'accélération par deux pour un même F. Drapeaux lointains → caisse légère ; drapeaux proches → caisse lourde.",
+    "peek_tip_friction": "Le frottement f = 5 N est constant. C'est la force résultante ΣF = F − f qui entraîne le mouvement — c'est ΣF, pas F, qui est égal à m·a."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplace le curseur F (gauche) et le curseur m (droite). Puis appuie sur TIRER.",
+      "2": "Observe les flèches au-dessus de la caisse : F orange pousse vers la droite, f gris tire vers la gauche, ΣF turquoise est la résultante.",
+      "3": "Change m sans changer F : caisse plus lourde → accélération plus faible. C'est la deuxième loi de Newton : a = ΣF / m."
+    },
+    "2": {
+      "1": "Le repère vertical en pointillés indique où la caisse s'arrêtera après T = 2 s.",
+      "2": "Déplace F ou m jusqu'à ce que le repère tombe sur un drapeau, puis TIRER — ce drapeau devient turquoise.",
+      "3": "Deux couples (F, m) très différents peuvent atteindre le même drapeau tant que (F − 5) / m est identique."
+    },
+    "3": {
+      "1": "Chaque drapeau affiche sa distance x en mètres. Sur papier, résous x = (F − 5) · 4 / (2m) = 2(F − 5) / m.",
+      "2": "Réarrange : F = m · x / 2 + 5. Choisis n'importe quel m dans [1, 10] kg qui maintient F dans [10, 100] N.",
+      "3": "Pour un drapeau lointain (x grand), un m léger nécessite un F modéré ; un m lourd peut faire dépasser F au-delà du maximum du curseur."
+    }
+  }
+}

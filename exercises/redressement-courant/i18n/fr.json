@@ -1,0 +1,84 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Construis une chaîne redresseur + filtre. Fais glisser un redresseur (diode simple ou pont) dans l'emplacement du haut, et soit un condensateur soit un fil de contournement dans la branche parallèle. Observe $u_{out}(t)$ sur l'oscilloscope. Avance une fois que tu auras vu À LA FOIS une sortie non filtrée avec ondulation ET une sortie lissée.",
+      "concept": "Une diode bloque l'alternance négative d'un signal alternatif. Un pont de quatre diodes retourne l'alternance négative au lieu de la bloquer, doublant la fréquence d'ondulation. Un condensateur en parallèle avec la charge $R$ lisse la sortie pulsée — il se charge à chaque pic et se décharge lentement à travers $R$ entre les pics.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins les deux lectures cibles. La cible A exige du continu lisse (ondulation $U_{ripple}$ minime). La cible B exige l'impulsion brute non filtrée ($U_{avg}$ faible, ondulation énorme). Les deux doivent être atteintes au cours du même essai.",
+      "concept": "Le redressement double alternance utilise tout le cycle alternatif, donc la fréquence d'ondulation est $2f = 100\\,\\text{Hz}$ (et non $50\\,\\text{Hz}$) et la moyenne lissée est proche du pic $U_{max}$. Pour un condensateur de filtrage : $\\Delta U \\approx U_{max} / (f_{r} R C)$, où $f_r$ = fréquence d'ondulation.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La branche de filtrage est pré-réglée. Regarde $U_{max}$, $R$, $C$ et les valeurs cibles affichées. Calcule sur papier quel redresseur (mono-alternance ou pont) donne ces $U_{avg}$ et $U_{ripple}$, puis place-le dans l'emplacement vide. Un seul essai — un mauvais choix fait tourner vers un nouveau scénario.",
+      "concept": "Pour un pont + condensateur de filtrage : $U_{avg} \\approx U_{max} - 2 V_D - \\Delta U / 2$ et $\\Delta U \\approx (U_{max} - 2 V_D) / (2 f R C)$. Pour une mono-alternance + condensateur de filtrage : mêmes formules mais avec $V_D$ au lieu de $2 V_D$ et $f$ au lieu de $2 f$. Mono-alternance non filtrée : $U_{avg} = (U_{max} - V_D) / \\pi$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "schéma",
+    "palette": "palette",
+    "scope": "oscilloscope u_out(t)",
+    "comp_half": "mono-alternance",
+    "comp_bridge": "pont",
+    "comp_cap": "condensateur",
+    "comp_wire": "contournement (sans cap.)",
+    "targets": "CIBLES",
+    "target_a_label": "A · continu lisse",
+    "target_a_req": "U_ripple < 0,5 V",
+    "target_b_label": "B · impulsion brute",
+    "target_b_req": "U_avg < 7 V, ondulation > 10 V",
+    "u_avg": "U_avg",
+    "u_ripple": "ΔU",
+    "unit_v": "V",
+    "unit_hz": "Hz",
+    "unit_ohm": "Ω",
+    "unit_uf": "µF",
+    "u_max_label": "U_max",
+    "r_label": "R",
+    "c_label": "C",
+    "no_cap": "sans cap.",
+    "params": "paramètres",
+    "target": "cible",
+    "current": "réel",
+    "hidden": "?",
+    "stage3_place": "choisis un redresseur dans la palette",
+    "stage3_correct": "correct — le redresseur correspond à la cible",
+    "stage3_wrong": "faux — la fréquence d'ondulation ne correspond pas. Nouveau scénario…",
+    "seen_unfiltered": "ondulation brute",
+    "seen_smoothed": "lissé",
+    "diag_empty": "place un composant dans chaque emplacement en surbrillance",
+    "diag_ac_only": "pas de redresseur — la sortie est encore alternative",
+    "diag_ok_rippled": "redressé, non filtré — ondulation à 50/100 Hz",
+    "diag_ok_smoothed": "redressé + lissé — sortie proche du continu",
+    "tip1": "glisse depuis la palette vers les deux emplacements en pointillés ; glisse vers l'extérieur pour retirer ; essaie chacune des quatre combinaisons",
+    "tip2": "atteins la cible A avec pont + condensateur, la cible B avec une seule diode et sans condensateur — bascule entre les deux",
+    "tip3": "quel redresseur fait correspondre l'ondulation à la cible ?",
+    "peek_tip": "La fréquence d'ondulation identifie le redresseur : 50 Hz signifie mono-alternance, 100 Hz signifie pont. Avec un condensateur de filtrage, ΔU ≈ U_max/(f_r·R·C) — le pont double f_r et divise ΔU par deux."
+  },
+  "hints": {
+    "1": {
+      "1": "La palette de droite contient quatre éléments. Dépose un redresseur dans l'emplacement du haut, un choix de filtre dans l'emplacement vertical.",
+      "2": "Essaie d'abord diode simple + fil de contournement : tu verras la moitié de l'onde alternative, toutes les 20 ms.",
+      "3": "Puis remplace le fil par un condensateur : la trace de l'oscilloscope s'aplatit en quasi-continu. Les deux états sont requis pour avancer."
+    },
+    "2": {
+      "1": "La cible A veut du continu quasi-plat — seule la configuration la plus lisse l'atteint.",
+      "2": "La cible B veut une bosse mono-alternance non filtrée : impulsions à 50 Hz, ondulation élevée, moyenne faible.",
+      "3": "Tu n'as pas besoin d'atteindre les deux en même temps — atteins A avec une config, puis reconstruis pour B."
+    },
+    "3": {
+      "1": "Lis $U_{max}$, $R$ et $C$ sur le schéma. La branche de filtrage est fixée.",
+      "2": "Si le filtre est un condensateur, compare $U_{avg}$ proche de $U_{max}$ (pont, faible $\\Delta U$) à environ $U_{max} - \\Delta U_{half}/2$ (mono-alternance, ondulation deux fois plus grande).",
+      "3": "Si le filtre est contourné, la moyenne est $(U_{max}-V_D)/\\pi$ pour mono-alternance, $2(U_{max}-2V_D)/\\pi$ pour le pont — le pont double la moyenne."
+    }
+  }
+}

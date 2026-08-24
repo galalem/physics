@@ -1,0 +1,68 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser $Z$ (protons) et $N$ (neutrons) pour construire un noyau. Observe la courbe de l'énergie de liaison par nucléon ($E_\\ell / A$) et les deux barres de forces : l'attraction forte à courte portée et la répulsion coulombienne à longue portée. Avance après avoir visité $6$ éléments différents.",
+      "concept": "Tout noyau est maintenu par l'interaction forte à courte portée qui agit entre nucléons voisins. Elle s'oppose à la répulsion coulombienne entre protons, qui croît en $Z^2$. La courbe d'énergie de liaison par nucléon $E_\\ell / A$ mesure à quel point chaque nucléon est lié ; son maximum près de $A \\approx 56$ (fer) marque la zone la plus stable.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Construis chaque noyau cible en fixant $Z$ et $N$. Compare la position de chaque cible sur la courbe $E_\\ell / A$ et l'équilibre des deux barres de forces.",
+      "concept": "Les noyaux légers se situent sur la partie montante de la courbe — leur fusion libère de l'énergie. Les noyaux lourds se situent sur la partie descendante — les scinder (fission) libère de l'énergie. Le fer est au sommet : il est le point d'arrivée des deux processus.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les barres de forces et le repère sur la courbe sont masqués. Étant donnés $Z$ et $N$, décide où le noyau se situe sur la courbe $E_\\ell / A$ : partie montante, sommet, ou partie descendante. Tu dois répondre correctement à tout d'un coup — une mauvaise réponse relance le jeu.",
+      "concept": "Règle empirique : $A < 20$ est sur la partie montante (zone de fusion) ; $A \\approx 50$–$70$ est au sommet (fer / nickel) ; $A > 100$ est sur la partie descendante (zone de fission). Calcule $A = Z + N$, puis situe-le sur la courbe.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "étape",
+    "controls_title": "contrôles",
+    "nucleus": "noyau",
+    "binding_curve": "E_l / A  vs  A",
+    "force_bars": "forces (qualitatif)",
+    "strong_force": "forte (courte portée)",
+    "coulomb_force": "coulombienne (longue portée)",
+    "field_Z": "numéro atomique Z",
+    "field_N": "nombre de neutrons N",
+    "field_A": "nombre de masse A",
+    "elements_seen": "éléments",
+    "matched": "atteint",
+    "correct": "correct",
+    "target": "noyau cible",
+    "given": "donné",
+    "where_on_curve": "où ce noyau se situe-t-il sur la courbe E_l / A ?",
+    "choice_rising": "partie montante (noyaux légers)",
+    "choice_peak": "près du sommet (zone du fer)",
+    "choice_falling": "partie descendante (noyaux lourds)",
+    "peek_tip": "Calcule A = Z + N. Règle empirique : A inférieur à 20 = partie montante (fusion) ; A entre 50 et 70 = sommet (fer/nickel) ; A supérieur à 100 = partie descendante (fission). Ne regarde pas la courbe — raisonne à partir de A seul.",
+    "iron_marker": "Fe-56 (sommet)",
+    "tip1": "fais glisser Z et N — visite des éléments légers, moyens et lourds",
+    "tip2": "atteins chaque cible ; compare sa position sur la courbe",
+    "tip3": "calcule A = Z + N, puis situe-le sur la courbe"
+  },
+  "hints": {
+    "1": {
+      "1": "Essaie d'abord des noyaux légers : hydrogène (Z=1), hélium (Z=2), carbone (Z=6), oxygène (Z=8).",
+      "2": "Puis des noyaux moyens : fer (Z=26), nickel (Z=28). Remarque que la courbe E_l/A atteint son maximum là.",
+      "3": "Enfin des noyaux lourds : plomb (Z=82), uranium (Z=92). La courbe redescend — les noyaux lourds sont moins liés par nucléon."
+    },
+    "2": {
+      "1": "Pour l'hélium-4, fixe Z=2 et N=2. Il se situe bas sur la partie montante de la courbe — les noyaux légers sont moins liés par nucléon.",
+      "2": "Pour le fer-56, fixe Z=26 et N=30. C'est le sommet : le nucléon le plus fortement lié en moyenne.",
+      "3": "Pour l'uranium-235, fixe Z=92 et N=143. Regarde la barre coulombienne grandir — les noyaux lourds sont moins liés parce que la répulsion protonique finit par rattraper."
+    },
+    "3": {
+      "1": "Seul A compte pour cette classification. Calcule d'abord A = Z + N.",
+      "2": "A inférieur à 20 → partie montante (zone de fusion). A supérieur à 100 → partie descendante (zone de fission).",
+      "3": "Le sommet est étroit : seuls les noyaux près de A = 50 à 70 comptent comme « sommet ». Tout le reste est soit montant, soit descendant."
+    }
+  }
+}

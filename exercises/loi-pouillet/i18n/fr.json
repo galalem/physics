@@ -1,0 +1,64 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Déplace chaque curseur — $E$, $r$, $R_1$, $R_2$ — et bascule l'interrupteur du bas pour inclure ou court-circuiter $R_2$. Observe l'ampèremètre $I$ et le bandeau de formule en temps réel qui réagissent. Avance quand tu as manipulé chaque contrôle et vu un courant non nul.",
+      "concept": "Loi de Pouillet : pour une seule boucle série, $I = E / (r + R_{total})$ où $R_{total} = R_1 + R_2 + \\dots$ est la somme de toutes les résistances de la boucle. La résistance interne $r$ du générateur en fait partie aussi.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins tour à tour chaque lecture cible de l'ampèremètre. Toute combinaison de $E$, $r$, $R_1$, $R_2$ qui tombe à moins de 5 % de la cible compte. Les deux cibles doivent être atteintes pour avancer.",
+      "concept": "Pour une intensité cible $I$ et une f.é.m. $E$ fixée, la résistance totale requise est $R_{total} = E/I - r$. Choisis $R_1$ et $R_2$ pour que leur somme corresponde, ou court-circuite $R_2$ avec l'interrupteur quand seul $R_1$ est nécessaire.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'ampèremètre est caché. Lis $E$, $r$, $R_1$, $R_2$ dans le panneau des données, calcule $I$ sur papier avec la loi de Pouillet, puis saisis ta réponse en ampères. Trois scénarios d'affilée — trois essais par scénario. Épuise le budget sur l'un d'entre eux et le paquet se réinitialise.",
+      "concept": "Loi de Pouillet : $I = E / (r + R_1 + R_2)$. La résistance interne $r$ est en série avec les résistors externes — l'oublier dans la somme est le piège classique.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "schéma",
+    "controls": "contrôles",
+    "solve": "données",
+    "coverage": "COUVERTURE",
+    "targets": "CIBLES",
+    "scenario": "SCÉNARIO",
+    "attempts_left": "essais restants",
+    "given": "DONNÉES",
+    "find": "TROUVER",
+    "enter_I": "entrer I en ampères",
+    "submit": "valider",
+    "correct": "correct",
+    "wrong": "faux",
+    "deck_reset": "paquet réinitialisé — recommence",
+    "deck_complete": "paquet terminé — appuie sur suivant",
+    "tip1": "déplace chaque curseur sur deux valeurs ; bascule l'interrupteur ; observe l'ampèremètre réagir",
+    "tip2": "atteins les deux cibles — de nombreuses combinaisons E / r / R valides existent",
+    "tip3": "lis les données, calcule I = E / (r + R₁ + R₂) sur papier, puis saisis ta réponse",
+    "peek_tip": "Loi de Pouillet : I = E / (r + R_total). R_total est la somme de toutes les résistances en série — y compris la résistance interne r du générateur. Ne l'oublie pas."
+  },
+  "hints": {
+    "1": {
+      "1": "Essaie de déplacer un curseur à la fois et observe l'ampèremètre A à gauche de la boucle.",
+      "2": "Le bandeau de formule sous le schéma montre I = E / (r + R_total) évalué en direct à partir des valeurs de tes curseurs.",
+      "3": "Clique l'interrupteur du côté bas pour court-circuiter R₂ — vois comment R_total chute et I augmente."
+    },
+    "2": {
+      "1": "Résous d'abord la R_total requise à partir de la cible : R_total = E/I − r. Puis règle R₁ (et éventuellement R₂) pour que leur somme corresponde.",
+      "2": "L'interrupteur te permet de court-circuiter R₂ quand tu n'as besoin que de R₁. Une R_total plus faible signifie un I plus grand pour un E donné.",
+      "3": "Pour de faibles courants cibles, soit baisse E, soit augmente la résistance totale. r est petit mais toujours dans la somme."
+    },
+    "3": {
+      "1": "Lis E, r, R₁, R₂ dans le panneau des données en haut à droite. Additionne r + R₁ + R₂ pour obtenir R_total. Divise E par R_total.",
+      "2": "L'erreur classique est d'oublier r. Il peut être petit (0,5 Ω, 1 Ω), mais il est en série avec tout le reste.",
+      "3": "Exemple résolu : E = 12 V, r = 2 Ω, R₁ = 10 Ω, R₂ = 12 Ω → R_total = 24 Ω → I = 12/24 = 0,50 A."
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drive a real battery through a variable load. Move each slider — $E$ (e.m.f.), $r$ (internal resistance), $R$ (load) — and watch how $U$, $I$ and the U(I) line respond.",
+      "concept": "A real generator obeys $U = E - r\\cdot I$: its terminal voltage $U$ drops linearly with the current $I$ it delivers, at a rate set by its internal resistance $r$. The intercept is $E$, the slope is $-r$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "The dashed line shows a target characteristic. Adjust $E$ and $r$ (the load $R$ only moves the operating point along the line — it does not change the line itself) so your solid line matches the target. Two targets, ±5%.",
+      "concept": "Two batteries share the same characteristic only if they share both $E$ and $r$. Reading a characteristic: $y$-intercept is $E$, slope is $-r$, and $x$-intercept is the short-circuit current $I_{cc} = E/r$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "A sealed generator hides $E$ and $r$. The characteristic is off. Set the load $R$ to any value, read the meters, note $(U, I)$. Repeat at a different $R$. Deduce $E$ and $r$ on paper, then enter both. 3 attempts per battery; three batteries in a row.",
+      "concept": "Two operating points on the same line pin it down. From $(U_1, I_1)$ and $(U_2, I_2)$: $r = (U_1 - U_2) / (I_2 - I_1)$, then $E = U_1 + r \\cdot I_1$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "schematic",
+    "characteristic": "U(I) characteristic",
+    "controls": "controls",
+    "battery_case": "real battery",
+    "comp_battery": "battery E",
+    "comp_r": "internal r",
+    "comp_R": "load R",
+    "comp_ammeter": "ammeter",
+    "comp_voltmeter": "voltmeter",
+    "slider_E": "E",
+    "slider_r": "r",
+    "slider_R": "R",
+    "unit_V": "V",
+    "unit_Ohm": "Ω",
+    "unit_A": "A",
+    "unit_W": "W",
+    "unit_mW": "mW",
+    "axis_U": "U (V)",
+    "axis_I": "I (A)",
+    "op_point": "operating point",
+    "target_line": "target",
+    "your_line": "yours",
+    "coverage_E": "swept E",
+    "coverage_r": "swept r",
+    "coverage_R": "swept R",
+    "coverage_current": "current flowing",
+    "targets": "TARGETS",
+    "target_reached": "matched",
+    "measure_1": "point 1",
+    "measure_2": "point 2",
+    "measure_pending": "— set R and read the meters",
+    "solve_for_E": "E (V)",
+    "solve_for_r": "r (Ω)",
+    "submit_answer": "SUBMIT",
+    "attempts_left": "attempts left",
+    "battery_count": "battery",
+    "of_three": "of 3",
+    "correct": "correct — next battery",
+    "wrong": "wrong",
+    "hidden": "?",
+    "tip1": "each slider sweeps a different piece of the physics — try short-circuit (R small) and open-circuit (R large) too",
+    "tip2": "E sets where the line hits the U-axis; r sets how steeply it falls with I",
+    "tip3": "read (U, I) at two different R values — then solve on paper before typing",
+    "peek_tip": "The generator's line is $U = E - r\\cdot I$. Two operating points fix it: $r = (U_1 - U_2)/(I_2 - I_1)$, then $E = U_1 + r\\cdot I_1$."
+  },
+  "hints": {
+    "1": {
+      "1": "Try pushing R all the way down (near short-circuit) and all the way up (near open-circuit). Watch U and I swap roles.",
+      "2": "At open-circuit (R very large), I is tiny and U is close to E. At short-circuit (R very small), U is close to 0 and I peaks at about E/r.",
+      "3": "Move E: the whole line shifts up/down. Move r: the line tilts. Move R: only the dot slides along a fixed line."
+    },
+    "2": {
+      "1": "The dashed line's y-intercept is the target E. Its slope (rise/run) is minus the target r. Read those off before touching sliders.",
+      "2": "Match the y-intercept first with E, then adjust r so the two lines overlap. R does not matter for this stage.",
+      "3": "±5% tolerance means the numbers don't need to be exact. Get within a slider step of each target and the tick fires."
+    },
+    "3": {
+      "1": "Set R to any value in the low half of its range. Note U and I. Then set R higher and note U and I again. Two points fix a line.",
+      "2": "Slope = (U₂ − U₁) / (I₂ − I₁). Because U falls as I rises, that slope is negative, and r is its absolute value.",
+      "3": "Once r is known, plug either point into U = E − r·I and solve for E. Then type both and submit."
+    }
+  }
+}

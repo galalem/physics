@@ -1,0 +1,81 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser un récepteur dans l'emplacement vide en bas de la boucle. Déplace les curseurs $E$ et $R$. Observe l'intensité $I$ et la tension $U$ du récepteur changer ensemble.",
+      "concept": "Un récepteur actif possède une force contre-électromotrice $E'$ (d'origine chimique ou mécanique) et une résistance interne $r'$. Sa caractéristique est $U = E' + r' \\cdot I$. Aucun courant ne circule tant que la f.é.m. de la source ne dépasse pas $E'$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Deux cibles sont indiquées ci-dessous. Choisis le bon récepteur et règle les curseurs pour que l'ampèremètre et le voltmètre indiquent tous deux la valeur voulue dans la tolérance.",
+      "concept": "Équation de la boucle (loi des mailles) : $E = r \\cdot I + R \\cdot I + E' + r' \\cdot I$, donc $I = (E - E') / (r + R + r')$ et $U = E' + r' \\cdot I$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'emplacement du récepteur est vide. Les curseurs sont verrouillés aux valeurs affichées. Une lecture cible du voltmètre est donnée. Calcule $U$ pour chaque récepteur sur papier — un seul correspond. Place-le. Un seul essai.",
+      "concept": "Pour chaque candidat, calcule $I = (E - E') / (r + R + r')$ puis $U = E' + r' \\cdot I$. Compare avec la cible — le bon récepteur est celui dont le $U$ prédit correspond à $\\pm 5\\%$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "schéma",
+    "palette": "récepteurs",
+    "controls": "contrôles",
+    "source": "source",
+    "resistor": "R",
+    "ammeter": "A",
+    "voltmeter": "V",
+    "comp_electrolyzer": "électrolyseur",
+    "comp_motor": "moteur cc",
+    "elec_specs": "E'=1,7 V  r'=1,0 Ω",
+    "motor_specs": "E'=4,5 V  r'=2,0 Ω",
+    "slider_E": "E",
+    "slider_R": "R",
+    "unit_V": "V",
+    "unit_A": "A",
+    "unit_mA": "mA",
+    "unit_ohm": "Ω",
+    "meter_I": "I",
+    "meter_U": "U",
+    "target_I": "I cible",
+    "target_U": "U cible",
+    "seen_electrolyzer": "électrolyseur en fonctionnement",
+    "seen_motor": "moteur en fonctionnement",
+    "place_receiver": "choisis un récepteur",
+    "correct": "correct",
+    "wrong": "faux — réinitialisation",
+    "attempts_left": "essais restants",
+    "targets": "CIBLES",
+    "receiver_off": "récepteur arrêté : E ≤ E'",
+    "given": "donné",
+    "generator_r": "r=0,5 Ω",
+    "tip1": "fais glisser l'un des récepteurs dans l'emplacement vide, puis déplace E et R",
+    "tip2": "vise chaque cible une par une — le choix du récepteur compte",
+    "tip3": "résous U = E' + r'·I sur papier pour chaque récepteur, puis place",
+    "peek_tip": "Pour chaque candidat, calcule I = (E − E')/(r + R + r'), puis U = E' + r'·I. Un seul correspond au U cible.",
+    "submit_reset": "mauvais récepteur — nouveau scénario en chargement"
+  },
+  "hints": {
+    "1": {
+      "1": "Fais glisser l'un des deux récepteurs depuis le panneau de droite dans l'emplacement du bas de la boucle.",
+      "2": "Maintenant, monte le curseur E. Observe l'ampèremètre — le courant reste nul jusqu'à ce que E franchisse la f.c.é.m. E' du récepteur.",
+      "3": "Essaie les deux récepteurs pour sentir la différence : l'électrolyseur démarre autour de 1,7 V ; le moteur a besoin d'environ 4,5 V."
+    },
+    "2": {
+      "1": "Lis la puce d'intensité cible dans le coin supérieur droit. Ajuste E et R jusqu'à ce que l'ampèremètre corresponde à environ 5 % près.",
+      "2": "Le choix du récepteur fixe E' et r'. Pour une I cible donnée, un seul récepteur peut être ajusté pour atteindre aussi la tension cible.",
+      "3": "Réarrange l'équation de la boucle : E = (r + R + r')·I + E'. Fixe I à la cible, choisis R, puis résous pour E."
+    },
+    "3": {
+      "1": "Les curseurs sont verrouillés. Lis E et R sur leurs étiquettes. Le U cible est fixé aussi.",
+      "2": "Pour chaque récepteur, calcule I = (E − E')/(r + R + r'), puis U = E' + r'·I. Fais-le sur papier.",
+      "3": "Un seul récepteur donne U à ±5 % de la cible. Engage-toi sur celui-là — un mauvais choix réinitialise le scénario."
+    }
+  }
+}

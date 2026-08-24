@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un atome d'hydrogène est devant toi. Son électron ne peut occuper que les niveaux discrets $E_n = -13.6 / n^2$ eV tracés à gauche. Envoie des photons d'énergie $h\\nu$ (curseur de droite) depuis différents états initiaux $n_i$ (curseur de gauche). Observe quels photons sont absorbés et lesquels traversent.",
+      "concept": "Quantification de Bohr : les énergies des états liés forment une échelle discrète $E_n = -\\dfrac{E_1}{n^2}$ avec $E_1 = 13.6$ eV. L'absorption n'est autorisée que lorsque l'énergie du photon correspond exactement à un écart entre niveaux : $h\\nu = E_{n_f} - E_{n_i} = E_1 \\left(\\dfrac{1}{n_i^2} - \\dfrac{1}{n_f^2}\\right)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une transition cible est mise en évidence sur le diagramme : fais passer l'atome du $n_i$ marqué au $n_f$ marqué. Règle le niveau initial et ajuste $h\\nu$ jusqu'à ce que la pointe de la flèche atteigne la ligne cible.",
+      "concept": "Pour un état initial $n_i$ et un état final $n_f$ choisis, une seule énergie de photon convient : $h\\nu^{*} = E_1 \\left(\\dfrac{1}{n_i^2} - \\dfrac{1}{n_f^2}\\right)$. Toute autre valeur traverse — le spectre est un spectre de raies, pas un continuum.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le diagramme des niveaux d'énergie est caché. On te donne uniquement l'état initial $n_i$ et l'état final cible $n_f$. Calcule $h\\nu$ sur papier à partir de la formule de Bohr, puis règle les deux curseurs sur ta réponse et valide.",
+      "concept": "Isole l'énergie du photon : $h\\nu = E_1 \\left(\\dfrac{1}{n_i^2} - \\dfrac{1}{n_f^2}\\right)$ avec $E_1 = 13.6$ eV. Un seul essai par tentative — une validation erronée fait tourner sur une autre transition.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "diagram_title": "niveaux hydrogène",
+    "atom_label": "atome H",
+    "photon_label": "photon",
+    "target_label": "cible",
+    "match_ok": "absorbé",
+    "no_absorb": "traverse",
+    "ionized": "ionisé",
+    "level_e0": "E = 0 (ionisation)",
+    "level_e1": "E_1 = -13.6 eV",
+    "current_n": "n_i",
+    "target_arrow": "n_i vers n_f",
+    "tip1": "balaie les deux curseurs — essaie plusieurs n_i et plusieurs h-nu, remarque que seules certaines valeurs absorbent",
+    "tip2": "atteins la cible : règle n_i sur le niveau marqué, ajuste h-nu jusqu'à ce que la pointe touche n_f",
+    "tip3": "calcule h-nu sur papier d'abord, puis règle les deux curseurs et valide une seule fois",
+    "peek_tip_formula": "h-nu = 13.6 (1/n_i^2 - 1/n_f^2). Substitue les n_i et n_f cibles, en eV.",
+    "peek_tip_anchor": "Les transitions de Balmer (n_i=2) sont dans le visible 1,9-3,4 eV ; celles de Lyman (n_i=1) sont UV, 10-13 eV."
+  },
+  "hints": {
+    "1": {
+      "1": "Toutes les valeurs de h-nu ne produisent pas une absorption. Essaie de fixer n_i et de balayer lentement h-nu — la plupart des valeurs traversent.",
+      "2": "Quand l'absorption a lieu, la pointe de la flèche atterrit exactement sur un autre niveau. Quelle est la condition algébrique ? h-nu est égal à un écart précis entre deux niveaux.",
+      "3": "Pour n_i = 2, la plus petite absorption est n=2 vers n=3 à h-nu = 13,6 (1/4 - 1/9) = 1,89 eV. Essaie."
+    },
+    "2": {
+      "1": "Lis les deux niveaux en pointillés sur le diagramme : l'un est ton n_i, l'autre est n_f. Règle d'abord le curseur n_i.",
+      "2": "Une seule énergie de photon permet de monter de n_i à n_f. C'est h-nu = 13,6 (1/n_i^2 - 1/n_f^2). Substitue et règle le curseur.",
+      "3": "Si la cible indique n_i = 2 et n_f = 4 : h-nu = 13,6 (1/4 - 1/16) = 13,6 × 3/16 = 2,55 eV."
+    },
+    "3": {
+      "1": "Le diagramme a disparu mais pas la formule E_n = -13,6/n^2. Écris E_i et E_f pour les n_i et n_f donnés.",
+      "2": "Alors h-nu = E_f - E_i = 13,6 (1/n_i^2 - 1/n_f^2). Calcule les deux inverses, soustrais, multiplie par 13,6.",
+      "3": "N'oublie pas de régler n_i sur le curseur discret avant de valider. n_i et h-nu doivent tous deux correspondre."
+    }
+  }
+}

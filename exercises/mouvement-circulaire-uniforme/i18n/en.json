@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A marker orbits the disk at constant angular speed $\\omega$ on a circle of radius $R$. Drag inside the disk to resize $R$, use the $\\omega$ slider, then press CHECK. Watch how the velocity $\\vec{v}$ (tangent) and centripetal acceleration $\\vec{a}$ (radial) redraw — even though the speed $|\\vec{v}|$ is constant, $\\vec{a}$ is not zero.",
+      "concept": "Uniform circular motion: $v = R\\,\\omega$ (tangent) and $a_n = v^{2}/R = R\\,\\omega^{2}$ (centripetal, pointing to the centre). The speed is constant but the velocity vector rotates, which requires a non-zero acceleration.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Three targets each show a desired $(v^{*},\\,a^{*})$ pair. Set $R$ and $\\omega$ so the live readouts match, then press CHECK to lock in that target. Live $\\vec{v}$ and $\\vec{a}$ arrows help you compare.",
+      "concept": "Invert the definitions: given $(v,\\,a)$, solve $R = v^{2}/a$ and $\\omega = a/v$. Two different targets may share the same $\\omega$ but differ in $R$, or share the same $R$ and differ in $\\omega$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The $\\vec{v}$ and $\\vec{a}$ arrows and the live $v,a$ readouts are hidden — you only see $R$ and $\\omega$. Read each target's $(v^{*},\\,a^{*})$, compute $R$ and $\\omega$ on paper, then CHECK. You have exactly three shots for three targets — no spray-and-pray.",
+      "concept": "From $v^{*} = R\\,\\omega$ and $a^{*} = R\\,\\omega^{2}$ follow $R = (v^{*})^{2}/a^{*}$ and $\\omega = a^{*}/v^{*}$. A common mistake: assuming $a = 0$ because $|\\vec{v}|$ is constant — but $\\vec{v}$ changes direction, so $\\vec{a} \\ne \\vec{0}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "CHECK",
+    "stage": "STAGE",
+    "hits": "HITS",
+    "shots": "SHOTS",
+    "target": "TARGET",
+    "velocity": "v",
+    "accel": "a",
+    "radius": "R",
+    "omega": "ω",
+    "tip1": "resize R, change ω, then CHECK",
+    "tip2": "match each (v*, a*) pair, then CHECK to lock it in",
+    "tip3": "compute R = v²/a and ω = a/v on paper, then CHECK",
+    "peek_tip_invert": "Invert directly: R = v²/a and ω = a/v. No search — just algebra.",
+    "peek_tip_misconception": "|v| is constant, but a ≠ 0. The velocity direction rotates; that rotation IS the acceleration.",
+    "peek_tip_ratio": "Same v with larger a means smaller R. Same R with larger ω scales both v and a.",
+    "hit_flash": "HIT",
+    "miss_flash": "MISS"
+  },
+  "hints": {
+    "1": {
+      "1": "Drag anywhere in the disk to change R. The marker orbits at ω rad/s.",
+      "2": "The ω slider is on the right. Watch how the tangent v arrow and the radial a arrow both redraw.",
+      "3": "Notice: |v| never changes with time at fixed R and ω, yet the a arrow always points to the centre. That's centripetal acceleration."
+    },
+    "2": {
+      "1": "Each target shows a (v*, a*) pair. Use the live v and a readouts to match.",
+      "2": "From v = R·ω and a = R·ω²: divide to get ω = a/v. Substitute back to get R = v²/a.",
+      "3": "Set R first (R = v²/a), then adjust ω until v matches. If v is right, a is automatically right too."
+    },
+    "3": {
+      "1": "You still see R and ω in the HUD. Use them to align with what you computed on paper.",
+      "2": "For each target: R = (v*)² / a*, ω = a* / v*. Round to the nearest slider step.",
+      "3": "Same v with different a means different R. Do NOT assume a=0 because speed is constant — that misconception is what this stage tests."
+    }
+  }
+}

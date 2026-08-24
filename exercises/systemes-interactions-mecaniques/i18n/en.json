@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Click each object — book ($L$), table ($T$), Earth ($E$) — to toggle its membership in your **system**. Watch the six force arrows recolour: orange means the interaction crosses your boundary (external), grey dashed means it stays inside (internal). Try at least two different partitions.",
+      "concept": "A **system** is a choice, not a given. The same six forces get relabelled internal or external depending only on where you draw the boundary — the physics does not change.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Now the prompt asks you to build a specific system. Click objects to toggle membership, then press Confirm (or Space). You have 5 shots to hit all 3 targets.",
+      "concept": "For an interaction between $A$ and $B$ to be **internal**, both $A$ and $B$ must belong to the system. If only one belongs, the interaction crosses the boundary and is **external** — it appears on the free-body diagram of the system.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The arrows are gone. Only the three labelled dots remain. Draw each Newton third-law pair by clicking two objects in a row. You have exactly 3 attempts — one duplicate ends the round and resets the stage.",
+      "concept": "Newton's third law: $\\vec{F}_{A \\to B} = -\\vec{F}_{B \\to A}$. Every interaction between two objects — contact or gravitational — produces exactly one such pair.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "confirm": "CONFIRM",
+    "shots": "SHOTS",
+    "hits": "HITS",
+    "pairs": "PAIRS",
+    "tries": "TRIES",
+    "stage": "STAGE",
+    "system": "SYS",
+    "book": "book",
+    "table": "table",
+    "earth": "Earth",
+    "tip1": "click objects to toggle · try two different systems",
+    "tip2": "toggle to match the prompt · press SPACE to confirm",
+    "tip3": "compute the pairs on paper first · click two dots per pair",
+    "query_LT": "make F(L ↔ T) internal, F(L ↔ E) external",
+    "query_TE": "make F(T ↔ E) internal, F(L ↔ T) external",
+    "query_ALL": "make every interaction internal",
+    "peek_hint": "every pair of interacting objects — contact OR gravity — is one Newton pair. count each once."
+  },
+  "hints": {
+    "1": {
+      "1": "Click a shape (book, table, or the Earth band) to add it to your system. Click again to remove it.",
+      "2": "Look at the arrow colours after each toggle: orange arrows cross your dashed boundary; grey dashed arrows are entirely inside it.",
+      "3": "An interaction between two objects is internal only when BOTH endpoints are in the system. Try {L} vs {L, T} vs {L, T, E} to see the pattern."
+    },
+    "2": {
+      "1": "Read the prompt carefully: it names the interaction that must be internal. Both of its endpoints must sit inside your system.",
+      "2": "'F(L ↔ T) internal' means both L and T are in — and the second half of the prompt tells you which object must stay OUT.",
+      "3": "For 'every interaction internal', the system must contain all three objects — nothing is left outside the boundary."
+    },
+    "3": {
+      "1": "There is one Newton pair for every distinct pair of interacting objects in the scene.",
+      "2": "Book ↔ table is a contact interaction, one pair. Book ↔ Earth is a gravitational interaction, another pair. Do not forget table ↔ Earth.",
+      "3": "The three pairs are (L,T), (L,E) and (T,E). Draw each one exactly once — a duplicate ends the round."
+    }
+  }
+}

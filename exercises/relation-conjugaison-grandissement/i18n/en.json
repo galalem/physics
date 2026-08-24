@@ -1,0 +1,62 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A thin converging lens sits at $O$. A real object $AB$ sits to the left of the lens at algebraic position $\\overline{OA} = p$ (with $p < 0$ for a real object). Move both sliders and watch the image $A'B'$ redraw. Notice how the image flips through infinity when $p$ crosses $-f'$.",
+      "concept": "Relation de conjugaison (Descartes): $\\dfrac{1}{\\overline{OA'}} - \\dfrac{1}{\\overline{OA}} = \\dfrac{1}{f'}$. Grandissement: $\\gamma = \\dfrac{\\overline{A'B'}}{\\overline{AB}} = \\dfrac{\\overline{OA'}}{\\overline{OA}}$. Sign of $\\overline{OA'}$: positive $\\to$ real image (right of lens), negative $\\to$ virtual image (left of lens). Sign of $\\gamma$: positive $\\to$ upright, negative $\\to$ inverted.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Three ghost images are waiting on the bench. For each one, tune $p$ and $f'$ so your live image (orange arrow) overlays the ghost (teal arrow) in both position and height. Press CHECK to submit — you have 5 attempts total for the 3 ghosts.",
+      "concept": "Given a target image at $\\overline{OA'} = p'^*$ with magnification $\\gamma^*$: recover $\\overline{OA} = p'^{*}/\\gamma^{*}$, then $f' = \\dfrac{p \\cdot p'}{p - p'}$ from the conjugation formula. Or eyeball the ghost until the arrows line up.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The image is invisible. You are shown three targets as numbers: $(\\overline{OA'^{*}},\\ \\gamma^{*})$. For each one, compute the required $\\overline{OA}$ and $f'$ on paper, set the sliders, and press CHECK. Each target gets exactly one shot. Miss the sign of $\\overline{OA'}$ or the sign of $\\gamma$ and you are out of tolerance.",
+      "concept": "$\\overline{OA} = \\dfrac{\\overline{OA'^{*}}}{\\gamma^{*}}$ (from $\\gamma = \\overline{OA'}/\\overline{OA}$). Then $f' = \\dfrac{\\overline{OA}\\cdot \\overline{OA'^{*}}}{\\overline{OA} - \\overline{OA'^{*}}}$ (from $1/\\overline{OA'} - 1/\\overline{OA} = 1/f'$). Keep the signs — a virtual image ($\\overline{OA'^{*}} < 0$) forces $|\\gamma^{*}| > 1$ and $\\gamma^{*} > 0$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "optical bench (mm)",
+    "object": "object AB",
+    "image": "image A'B'",
+    "lens": "lens",
+    "focal": "F, F'",
+    "check": "CHECK",
+    "target": "TARGET",
+    "shots": "SHOTS",
+    "lit": "MATCHED",
+    "match_ok": "match",
+    "virtual": "virtual",
+    "real": "real",
+    "peek_hint": "solve p = p'/g, then f' = p·p'/(p−p')",
+    "tip1": "drag both sliders — cross p = −f' to see the flip",
+    "tip2": "align the orange arrow with the teal ghost, then CHECK",
+    "tip3": "compute p and f' on paper before you touch the sliders",
+    "exhausted": "OUT OF SHOTS · RESET FOR NEW GHOSTS"
+  },
+  "hints": {
+    "1": {
+      "1": "Slide p far left (large |p|). The image should shrink and stay real (right of the lens).",
+      "2": "Now slide p closer to the lens. Near p = −f' the image balloons and flips to virtual (left of lens).",
+      "3": "Watch the arrow: γ > 0 means it points up (upright, virtual); γ < 0 means it points down (inverted, real)."
+    },
+    "2": {
+      "1": "Look at the ghost arrow: its horizontal offset from the lens is p'*, its height ratio to your object is γ*.",
+      "2": "For a target (p'*, γ*): set p = p'*/γ*. Then adjust f' until the orange arrow lands on the ghost.",
+      "3": "Closed form: f' = p·p'/(p−p'). Compute once, set both sliders, then CHECK."
+    },
+    "3": {
+      "1": "You do NOT need to touch the sliders yet. Read the target numbers and solve on paper.",
+      "2": "Step 1: p = p'*/γ*. Step 2: f' = p·p'*/(p−p'*). Step 3: set the sliders to those numbers, then CHECK.",
+      "3": "Sign check: if p'* > 0 the image is real, so γ* must be negative (inverted). If p'* < 0 the image is virtual, so γ* must be positive and > 1."
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "An ideal op-amp obeys two golden rules with negative feedback: $V_+ = V_-$ and no current flows into the inputs. Cycle through the three montages (follower, inverting, non-inverting) and sweep $V_p$ to see how each one transforms the AC input. Note where the output starts to clip against the supply rails $\\pm V_{sat}$.",
+      "concept": "Three canonical montages: follower gives $V_s = V_e$ (gain 1). Inverting gives $V_s = -\\frac{R_2}{R_1} V_e$ (negative gain, phase flipped). Non-inverting gives $V_s = (1 + \\frac{R_2}{R_1}) V_e$ (positive gain, always $\\geq 1$). In all cases the output saturates at $\\pm V_{sat}$ when the linear formula would exceed the rails.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "The target output (orange) is drawn for a fixed input $V_e(t) = V_p \\sin(2\\pi f t)$. Choose the montage and tune the resistor ratio $R_2/R_1$ so your green trace overlaps the target. Match within $\\pm 5\\%$ of the target gain to advance.",
+      "concept": "Gain magnitude comes from the ratio $R_2/R_1$: inverting $|G| = R_2/R_1$; non-inverting $|G| = 1 + R_2/R_1$. Sign comes from the montage — inverting flips phase, non-inverting keeps it. Two levers to align: montage picks the sign, ratio picks the size.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "For each scenario, the scope shows only the target (orange) and the input $V_e$ (dashed). Read the target: is $V_s$ in phase with $V_e$ or inverted? Then pick the montage and press SUBMIT. A wrong submission restarts the deck from scenario 1. Peek gives a strategy hint — never the answer.",
+      "concept": "Phase decides the montage: output in phase with input $\\Rightarrow$ non-inverting; output flipped 180° $\\Rightarrow$ inverting. Compute $|G|$ from the peak-to-peak ratio if you want to double-check, but you only need to submit the montage type.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "circuit",
+    "scope": "scope",
+    "scenario": "SCENARIO",
+    "solved": "DONE",
+    "submit": "SUBMIT",
+    "correct": "correct",
+    "wrong": "wrong · deck reset",
+    "target": "target",
+    "your_pick": "your V_s",
+    "input": "V_e",
+    "tip1": "cycle montages · sweep V_p · watch for clipping",
+    "tip2": "pick montage for sign · tune R2/R1 for size · match target",
+    "tip3": "read the phase · submit the montage",
+    "peek_tip_1": "Same phase as V_e means no sign flip. Opposite phase means the sign is flipped.",
+    "peek_tip_2": "Gain magnitude equals the peak of V_s over the peak of V_e. Sign is only about phase.",
+    "montage_follower": "follower",
+    "montage_inv": "inverting",
+    "montage_noninv": "non-inverting",
+    "montages_seen": "montages seen",
+    "target_matched": "target matched",
+    "adjust": "adjust ratio",
+    "gain_label": "G",
+    "ratio_label": "R2/R1",
+    "vsat_label": "V_sat",
+    "target_gain": "target G",
+    "your_gain": "your G",
+    "op_plus": "V+",
+    "op_minus": "V-",
+    "op_out": "V_s",
+    "rail_pos": "+V_sat",
+    "rail_neg": "-V_sat"
+  },
+  "hints": {
+    "1": {
+      "1": "Open the montage selector below the circuit. Pick each of the three in turn.",
+      "2": "For inverting and non-inverting, drag the V_p slider up and watch the output start to flatten near +12 V and -12 V — that is saturation.",
+      "3": "You need to visit at least 2 distinct montages AND observe clipping at least once (V_p high enough to push V_s past V_sat) to advance."
+    },
+    "2": {
+      "1": "Check the target's phase: is it flipped or in phase with V_e? That tells you inverting vs non-inverting.",
+      "2": "Then measure peak-to-peak. If |V_s peak| = 2 * V_p, gain magnitude is 2 — so R2/R1 = 2 for inverting, or R2/R1 = 1 for non-inverting.",
+      "3": "Fine-tune the ratio slider until the green trace lies on top of the orange one. The gain display up top must be within 5% of the target."
+    },
+    "3": {
+      "1": "You have 2 scenarios to ace in one pass. A wrong submit throws you back to scenario 1.",
+      "2": "The only distinguishing feature you need is the phase: is V_s a mirror image of V_e, or does it track V_e up and down together?",
+      "3": "Same-phase, magnified → non-inverting. Mirror-image → inverting. Do not guess — read the trace, then press SUBMIT."
+    }
+  }
+}

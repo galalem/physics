@@ -1,0 +1,81 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the two sliders and watch both views react. On top: the FM waveform $s(t) = \\cos(2\\pi f_p t + \\beta \\sin(2\\pi f_m t))$, where the fast oscillation compresses and stretches over time. On the bottom: the Bessel spectrum — a comb of lines at $f_p \\pm n f_m$ whose heights are $|J_n(\\beta)|$. The modulation index is $\\beta = \\Delta f / f_m$. Advance after using both sliders AND witnessing both regimes: narrow-band ($\\beta < 0.3$, spectrum collapses to carrier plus one pair) and wide-band ($\\beta > 2$, many sidebands spread out).",
+      "concept": "Frequency modulation writes the message into the carrier's instantaneous frequency: $f_i(t) = f_p + \\Delta f \\cos(2\\pi f_m t)$. Integrating gives phase $\\phi(t) = \\beta \\sin(2\\pi f_m t)$ with $\\beta = \\Delta f / f_m$. The output spectrum is a comb at $f_p + n f_m$ with amplitudes $|J_n(\\beta)|$ — the Bessel functions of the first kind. Small $\\beta$: only $n = 0, \\pm 1$ survive and FM looks like AM. Large $\\beta$: energy pours into higher-order sidebands and the occupied bandwidth grows. Carson's rule packages this: $B \\approx 2(\\Delta f + f_m) = 2 f_m (\\beta + 1)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Each target locks a specific $(f_m, \\Delta f)$ pair. Tune your sliders so the teal signal overlaps the dashed grey target curve and the bar heights match. The carrier is fixed at $f_p = 10$ kHz. Tolerance: $\\pm 5\\%$ on both frequencies.",
+      "concept": "Reading FM by eye: sideband spacing on the spectrum is exactly $f_m$; the count of significant lines out from the carrier tells you $\\beta$ (roughly $N \\approx \\beta + 1$), and Carson's bandwidth is $B \\approx 2(\\Delta f + f_m)$. Two markers on the spectrum show where the Carson band ends — a fast visual check that your $(f_m, \\Delta f)$ pair matches the target's spread.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Waveform hidden. From the Bessel spectrum alone — bars at $f_p \\pm n f_m$ with labeled frequency values — deduce $f_m$ and $\\Delta f$. Sideband spacing gives $f_m$; the extent of significant lines gives $\\beta$, and then $\\Delta f = \\beta \\cdot f_m$. Enter your answers and submit. A wrong answer locks the question — use Try Again for a fresh spectrum.",
+      "concept": "Spectrum-only FM reading: (i) measure the gap between adjacent bars — that gap is $f_m$. (ii) Count $N$ = number of significant sideband pairs around the carrier; $\\beta \\approx N - 1$ for moderate $\\beta$. (iii) Compute $\\Delta f = \\beta \\cdot f_m$. Cross-check with Carson: total occupied bandwidth $\\approx 2(\\Delta f + f_m)$. This is exactly how a spectrum analyst characterizes an FM transmission.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "scene_title": "frequency modulation",
+    "controls_title": "controls",
+    "sliders": "sliders",
+    "target": "target",
+    "matched": "matched",
+    "matched_msg": "target matched — advance or try the next",
+    "question": "question",
+    "solved": "solved",
+    "field_fm": "message f_m",
+    "field_df": "deviation Δf",
+    "field_fp": "carrier f_p (fixed)",
+    "field_beta": "index β = Δf/f_m",
+    "problem_prompt": "Read the spectrum and enter f_m and Δf.",
+    "correct": "correct",
+    "exact_was": "exact answer:",
+    "next_q": "next",
+    "try_again": "try again",
+    "hidden_label": "waveform hidden — read the spectrum",
+    "plot_time": "time domain",
+    "plot_spectrum": "spectrum",
+    "legend_signal": "signal s(t)",
+    "legend_target": "target",
+    "legend_carson": "Carson band",
+    "carrier_label": "carrier",
+    "sideband_label": "sidebands",
+    "narrowband_title": "narrow-band FM (β < 0.3)",
+    "narrowband_desc": "spectrum collapses to carrier plus a single pair — FM looks like AM",
+    "wideband_title": "wide-band FM (β > 2)",
+    "wideband_desc": "energy spreads into many sidebands; occupied bandwidth grows fast",
+    "peek_tip_1": "Sideband spacing between adjacent bars = f_m. Read the gap off the frequency axis.",
+    "peek_tip_2": "Count significant pairs N around the carrier. Then β ≈ N − 1 and Δf = β · f_m.",
+    "tip1": "drag both sliders — try β < 0.3 and β > 2",
+    "tip2": "match the dashed target: sideband spacing = f_m, count = β",
+    "tip3": "read spectrum: spacing = f_m, count pairs → β, then Δf = β·f_m",
+    "witness_narrow": "β < 0.3",
+    "witness_wide": "β > 2"
+  },
+  "hints": {
+    "1": {
+      "1": "Move each slider once. The top plot is the FM waveform; the bottom is its Bessel line spectrum.",
+      "2": "β = Δf / f_m. Small β collapses the spectrum to carrier + one sideband pair; large β spreads energy into many pairs.",
+      "3": "Try Δf small with f_m large to reach β < 0.3, then Δf large with f_m small to push β past 2."
+    },
+    "2": {
+      "1": "Sideband spacing on the spectrum equals f_m — count the gap between adjacent bars.",
+      "2": "The number of significant sideband pairs around f_p is roughly β + 1. Aim for the target's spread first, then fine-tune.",
+      "3": "Once bar spacing matches, adjust Δf so the count of visible bars matches. The dashed target curve should snap into alignment."
+    },
+    "3": {
+      "1": "The gap between two adjacent bars is f_m. Read it off the labeled frequency axis.",
+      "2": "Count N = number of significant sideband pairs (bars whose height rises well above the axis). Then β ≈ N − 1.",
+      "3": "Δf = β · f_m. If you counted 4 pairs each side of f_p = 10 kHz with spacing 1 kHz, then β ≈ 3, so Δf ≈ 3 kHz."
+    }
+  }
+}

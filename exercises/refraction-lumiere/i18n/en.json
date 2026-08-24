@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the orange source along its dashed track. Watch the ray cross the air-water interface — the ratio $n_1 \\sin(i_1) / (n_2 \\sin(i_2))$ stays at $1$.",
+      "concept": "Snell-Descartes law: $n_1 \\sin(i_1) = n_2 \\sin(i_2)$. Going from air ($n_1 = 1.00$) into water ($n_2 = 1.33$), the ray bends toward the normal, so $i_2 < i_1$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Aim the source, then press Fire (or Space) to shoot. Light all 3 underwater targets — you have 7 shots.",
+      "concept": "Snell's law lets you predict where the beam surfaces under water. If you want the refracted ray to reach a target, solve $\\sin(i_1) = (n_2 / n_1) \\sin(i_2)$ for the required $i_1$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The refracted ray is hidden. Read the coordinates of $S$, $I$ and $T$, compute the incident angle $i_1$ that lands the beam on the target, place $S$, then Fire. Peek gives you the strategy.",
+      "concept": "For each target, compute $i_2 = \\arctan((T_x - I_x) / (I_y - T_y))$, then invert Snell: $\\sin(i_1) = (n_2 / n_1) \\sin(i_2)$. Place $S$ so the incident ray from $S$ to $I$ has that angle from the vertical normal.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "shots": "SHOTS",
+    "lit": "LIT",
+    "target": "TARGET",
+    "exhausted": "OUT OF SHOTS · RESET TO RETRY",
+    "stage": "STAGE",
+    "tip1": "drag the source to change i₁",
+    "tip2": "aim, then press SPACE to fire",
+    "tip3": "compute i₁ from Snell, place S, then fire",
+    "tir": "TOTAL INTERNAL REFLECTION · NO REFRACTED RAY",
+    "peek_strategy": "invert snell: sin(i₁) = (n₂/n₁)·sin(i₂). read T-I to get i₂ first."
+  },
+  "hints": {
+    "1": {
+      "1": "Grab the orange source and slide it across the dashed track.",
+      "2": "As you slide, watch the incident angle i₁ and the refracted angle i₂ in the corner readout — one is always smaller than the other.",
+      "3": "Water is denser than air (n₂ > n₁), so the ray bends toward the normal on entering water: i₂ < i₁ always."
+    },
+    "2": {
+      "1": "The beam fires only when you press Fire (or Space). Aim first by placing the source.",
+      "2": "To hit a target T beneath the water, the refracted ray from I must go through T. Compute i₂ from the T-to-I direction, then use Snell to get the incident angle i₁ you need at the surface.",
+      "3": "Sign check: if T is to the right of I, the source S must be to the LEFT of I (the ray bends but does not flip sides at the interface)."
+    },
+    "3": {
+      "1": "Write down S, I and T coordinates from the scene labels — you'll need them all.",
+      "2": "Step 1: from T and I, compute i₂ = arctan((T.x − I.x) / (I.y − T.y)) in Cartesian y-up. Step 2: sin(i₁) = (n₂ / n₁) · sin(i₂) — take arcsin to get i₁.",
+      "3": "Step 3: place S at S.x = I.x − sign(T.x − I.x) · (I.y − S.y) · tan(i₁), where I.y − S.y = 125 in Cartesian. Peek shows the current i₁ so you can verify before firing."
+    }
+  }
+}

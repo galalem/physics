@@ -1,0 +1,63 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A distant star sends parallel rays into the telescope. The objective lens converges them to an intermediate image at its focal plane; the eyepiece then relays that image to your eye. Sweep the three sliders — objective focal length $f'_1$, eyepiece focal length $f'_2$, and lens spacing $d$ — and watch the ray bundle reshape.",
+      "concept": "In the afocal setup, $d = f'_1 + f'_2$: the back focal plane of the objective coincides with the front focal plane of the eyepiece ($F'_1 \\equiv F_2$). Parallel rays in $\\rightarrow$ parallel rays out, magnified in angle: $G = f'_1 / f'_2 = \\alpha' / \\alpha$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Match each of the 3 target magnifications in sequence. Adjust $f'_1$ and $f'_2$ so their ratio equals $G^*$, then set $d = f'_1 + f'_2$ so the exit rays are parallel (afocal). Both indicators must be green — then press Confirm.",
+      "concept": "Two constraints, three sliders: pick any $f'_2$, then $f'_1 = G^* \\cdot f'_2$, and $d = f'_1 + f'_2$. Long objective + short eyepiece $\\Rightarrow$ big magnification.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The rays are hidden. For each target $G^*$: compute $f'_1$, $f'_2$, $d$ on paper so that $f'_1 / f'_2 = G^*$ and $d = f'_1 + f'_2$, set the sliders, then Fire. One shot per target — miss any and the setup resets.",
+      "concept": "Afocal: $d = f'_1 + f'_2$. Magnification: $G = f'_1 / f'_2 = \\alpha' / \\alpha$. Both conditions must hold — the ratio decides $G$, the sum decides parallel exit.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "bench": "optical bench",
+    "objective": "objective",
+    "eyepiece": "eyepiece",
+    "star": "distant star",
+    "match_ok": "match",
+    "afocal_ok": "afocal",
+    "afocal_off": "not afocal",
+    "target_short": "TARGET",
+    "shot": "SHOT",
+    "confirm": "CONFIRM",
+    "fire": "FIRE",
+    "hit": "HIT",
+    "miss": "MISS",
+    "peek_line1": "Afocal: d = f'₁ + f'₂  ·  Ratio: G = f'₁ / f'₂",
+    "peek_line2": "Pick f'₂ freely, then f'₁ = G* × f'₂ and d = f'₁ + f'₂",
+    "tip1": "sweep all three sliders — ratio sets G, sum sets afocal",
+    "tip2": "match G* AND afocal — both green, then CONFIRM",
+    "tip3": "compute f'₁, f'₂, d on paper — one shot per target"
+  },
+  "hints": {
+    "1": {
+      "1": "Try doubling f'₁ — the intermediate image slides right, and G doubles.",
+      "2": "Try halving f'₂ — G doubles again. Small eyepiece = big magnification.",
+      "3": "For clean parallel exit, set d = f'₁ + f'₂ exactly. Any other spacing and the rays fan out or converge."
+    },
+    "2": {
+      "1": "Read G* from the target line. Aim for f'₁/f'₂ ≈ G*.",
+      "2": "Pick f'₂ first (any value in range), then set f'₁ = G* × f'₂.",
+      "3": "Once G is green, tune d until it equals f'₁ + f'₂ — the afocal bar turns green. Then Confirm."
+    },
+    "3": {
+      "1": "You have exactly one shot per target. Compute f'₁, f'₂, d on paper first.",
+      "2": "Two equations: f'₁ = G* × f'₂ (any f'₂ in [8, 40] works), then d = f'₁ + f'₂.",
+      "3": "Peek shows the strategy — it doesn't reveal the answer. Set sliders, then Fire."
+    }
+  }
+}

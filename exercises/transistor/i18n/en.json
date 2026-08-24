@@ -1,0 +1,73 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "An NPN transistor has three operating regions set by the base current $I_B$. Sweep $I_B$ from $0$ to $160\\,\\mu\\text{A}$ and watch the operating point crawl along the load line. Reach the cut-off region ($I_B \\approx 0$), the active region (middle), and saturation ($I_B > I_{B,sat}$) to advance.",
+      "concept": "Cut-off ($I_B = 0$): $I_C \\approx 0$, $V_{CE} \\approx V_{CC}$. Active: $I_C = \\beta I_B$, so $V_{CE} = V_{CC} - \\beta I_B R_C$. Saturation ($I_B \\geq I_{B,sat}$): $V_{CE}$ clamps at $V_{CE,sat} \\approx 0.2\\,\\text{V}$, so $I_C \\approx V_{CC}/R_C$ — pushing $I_B$ higher changes nothing.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "The transistor can operate as a switch or as an amplifier. In SWITCH mode a square wave $I_B(t)$ toggles the transistor between cut-off and saturation — the collector lamp blinks. In AMPLIFIER mode a small sinusoid $i_b(t)$ around a mid-active bias produces an inverted, amplified $V_{CE}(t)$. Toggle both modes to advance.",
+      "concept": "Switch mode drives $V_{CE}$ between $V_{CC}$ and $V_{CE,sat}$ — the output is a rail-to-rail square wave. Amplifier mode holds the bias in the active region so small $\\Delta I_B$ maps linearly to $\\Delta V_{CE} = -\\beta R_C \\Delta I_B$: gain $= -\\beta R_C / r$ (inverted).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The scope shows a target $V_{CE}(t)$ produced by a hidden $I_B(t)$. Compute on paper first: which operating regime does this waveform belong to — cut-off, active, or saturated? Pick the mode, then SUBMIT. Miss any scenario and the deck restarts from the top.",
+      "concept": "A flat $V_{CE} \\approx V_{CC}$ trace means the transistor never conducts — cut-off. A clean inverted sinusoid means the bias sits inside the active region and stays there — active. A square-ish clipped trace slamming between the two rails means $I_B$ swings past $I_{B,sat}$ and pins $V_{CE}$ at $V_{CE,sat}$ on the peaks — saturated.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "circuit",
+    "characteristic": "I_C vs V_CE",
+    "scope": "V_CE(t) scope",
+    "scenario": "SCENARIO",
+    "solved": "DONE",
+    "submit": "SUBMIT",
+    "correct": "correct",
+    "wrong": "restart deck",
+    "target": "target",
+    "your_pick": "your trace",
+    "tip1": "sweep I_B · reach cut-off, active, and saturation",
+    "tip2": "toggle SWITCH and AMPLIFIER · watch V_CE change shape",
+    "tip3": "read the target · name the regime · SUBMIT",
+    "peek_tip_1": "Flat V_CE = V_CC means no conduction. Clipped square = both rails reached. Clean sine inside the rails = active linear region.",
+    "peek_tip_2": "In saturation I_C is capped at V_CC/R_C — beta stops mattering. In active I_C = beta*I_B so V_CE tracks I_B linearly.",
+    "regime_cutoff": "CUT-OFF",
+    "regime_active": "ACTIVE",
+    "regime_saturated": "SATURATED",
+    "mode_switch": "SWITCH",
+    "mode_amp": "AMPLIFIER",
+    "cutoff_seen": "cut-off",
+    "active_seen": "active",
+    "sat_seen": "saturation",
+    "witnessed": "regions witnessed",
+    "toggle_modes": "toggle modes",
+    "both_modes": "both modes seen",
+    "vcc_label": "V_CC = 12V",
+    "load_line": "load line"
+  },
+  "hints": {
+    "1": {
+      "1": "Start at I_B = 0. The lamp is off, V_CE sits at V_CC — that's cut-off.",
+      "2": "Push I_B up to about 60 uA. V_CE drops to roughly the middle — that's the active region.",
+      "3": "Beyond I_B = 120 uA (I_B,sat), V_CE flatlines at V_CE,sat ~ 0.2V — that's saturation. Visit all three."
+    },
+    "2": {
+      "1": "SWITCH mode: input is a square wave, output slams between V_CC and V_CE,sat — the lamp blinks.",
+      "2": "AMPLIFIER mode: input is a small sinusoid biased mid-active. V_CE is a scaled, INVERTED sinusoid.",
+      "3": "Click both mode buttons to toggle between them at least once."
+    },
+    "3": {
+      "1": "First: is the target waveform flat, sinusoidal, or clipped square? That decides the regime.",
+      "2": "Compute I_B,sat = V_CC / (beta * R_C) = 12 / (100 * 1000) = 120 uA. If I_B stays below, it's active.",
+      "3": "Flat at V_CC -> cut-off. Sine that never touches the rails -> active. Square clipped at both rails -> saturated."
+    }
+  }
+}

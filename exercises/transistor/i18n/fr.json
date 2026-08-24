@@ -1,0 +1,73 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un transistor NPN a trois régimes de fonctionnement fixés par le courant de base $I_B$. Balaie $I_B$ de $0$ à $160\\,\\mu\\text{A}$ et regarde le point de fonctionnement parcourir la droite de charge. Atteins la région de blocage ($I_B \\approx 0$), la région active (au milieu) et la saturation ($I_B > I_{B,sat}$) pour avancer.",
+      "concept": "Blocage ($I_B = 0$) : $I_C \\approx 0$, $V_{CE} \\approx V_{CC}$. Actif : $I_C = \\beta I_B$, donc $V_{CE} = V_{CC} - \\beta I_B R_C$. Saturation ($I_B \\geq I_{B,sat}$) : $V_{CE}$ se cale à $V_{CE,sat} \\approx 0{,}2\\,\\text{V}$, donc $I_C \\approx V_{CC}/R_C$ — augmenter $I_B$ ne change plus rien.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Le transistor peut fonctionner en interrupteur ou en amplificateur. En mode INTERRUPTEUR un signal carré $I_B(t)$ fait basculer le transistor entre blocage et saturation — la lampe au collecteur clignote. En mode AMPLIFICATEUR un petit signal sinusoïdal $i_b(t)$ autour d'une polarisation en zone active produit un $V_{CE}(t)$ inversé et amplifié. Bascule entre les deux modes pour avancer.",
+      "concept": "Le mode interrupteur fait varier $V_{CE}$ entre $V_{CC}$ et $V_{CE,sat}$ — la sortie est un signal carré rail à rail. Le mode amplificateur maintient la polarisation dans la région active de sorte qu'un petit $\\Delta I_B$ se traduit linéairement en $\\Delta V_{CE} = -\\beta R_C \\Delta I_B$ : gain $= -\\beta R_C / r$ (inversé).",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'oscilloscope montre un $V_{CE}(t)$ cible produit par un $I_B(t)$ caché. Calcule d'abord sur papier : à quel régime appartient ce signal — blocage, actif ou saturé ? Choisis le mode, puis VALIDE. Une erreur sur un scénario et la série reprend au début.",
+      "concept": "Une trace plate $V_{CE} \\approx V_{CC}$ signifie que le transistor ne conduit pas — blocage. Une sinusoïde inversée nette signifie que la polarisation reste dans la région active — actif. Un signal presque carré écrêté entre les deux rails signifie que $I_B$ dépasse $I_{B,sat}$ et cale $V_{CE}$ à $V_{CE,sat}$ sur les pics — saturé.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "circuit",
+    "characteristic": "I_C en fonction de V_CE",
+    "scope": "oscillo V_CE(t)",
+    "scenario": "SCÉNARIO",
+    "solved": "FAIT",
+    "submit": "VALIDER",
+    "correct": "correct",
+    "wrong": "reprise de la série",
+    "target": "cible",
+    "your_pick": "ta courbe",
+    "tip1": "balaie I_B · atteins blocage, actif et saturation",
+    "tip2": "bascule INTERRUPTEUR et AMPLIFICATEUR · observe V_CE changer de forme",
+    "tip3": "lis la cible · nomme le régime · VALIDE",
+    "peek_tip_1": "V_CE = V_CC plat = pas de conduction. Carré écrêté = les deux rails sont atteints. Sinusoïde nette entre les rails = région active linéaire.",
+    "peek_tip_2": "En saturation I_C est plafonné à V_CC/R_C — bêta n'a plus d'effet. En actif I_C = bêta·I_B donc V_CE suit I_B linéairement.",
+    "regime_cutoff": "BLOCAGE",
+    "regime_active": "ACTIF",
+    "regime_saturated": "SATURÉ",
+    "mode_switch": "INTERRUPTEUR",
+    "mode_amp": "AMPLIFICATEUR",
+    "cutoff_seen": "blocage",
+    "active_seen": "actif",
+    "sat_seen": "saturation",
+    "witnessed": "régions vues",
+    "toggle_modes": "bascule les modes",
+    "both_modes": "deux modes vus",
+    "vcc_label": "V_CC = 12V",
+    "load_line": "droite de charge"
+  },
+  "hints": {
+    "1": {
+      "1": "Commence à I_B = 0. La lampe est éteinte, V_CE est à V_CC — c'est le blocage.",
+      "2": "Pousse I_B jusqu'à environ 60 uA. V_CE tombe à peu près au milieu — c'est la région active.",
+      "3": "Au-delà de I_B = 120 uA (I_B,sat), V_CE se cale à V_CE,sat ~ 0,2V — c'est la saturation. Visite les trois."
+    },
+    "2": {
+      "1": "Mode INTERRUPTEUR : l'entrée est un signal carré, la sortie oscille entre V_CC et V_CE,sat — la lampe clignote.",
+      "2": "Mode AMPLIFICATEUR : l'entrée est une petite sinusoïde polarisée en zone active. V_CE est une sinusoïde amplifiée et INVERSÉE.",
+      "3": "Clique sur les deux boutons de mode pour basculer entre eux au moins une fois."
+    },
+    "3": {
+      "1": "D'abord : le signal cible est-il plat, sinusoïdal, ou carré écrêté ? Cela décide du régime.",
+      "2": "Calcule I_B,sat = V_CC / (bêta · R_C) = 12 / (100 · 1000) = 120 uA. Si I_B reste en dessous, c'est actif.",
+      "3": "Plat à V_CC → blocage. Sinusoïde qui ne touche jamais les rails → actif. Carré écrêté sur les deux rails → saturé."
+    }
+  }
+}

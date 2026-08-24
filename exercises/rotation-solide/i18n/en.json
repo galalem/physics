@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Set the initial angular velocity $\\omega_0$ and angular acceleration $\\alpha$, then press SPIN. Watch the tangential-velocity arrows at each marker as the disk turns. Fire at least three shots with two different $\\omega_0$ values and move the $\\alpha$ slider at least once.",
+      "concept": "Solid-body rotation: every point shares the same $\\omega$ and $\\alpha$. Tangential speed depends on radius: $v = r \\cdot \\omega$. Angular kinematics: $\\omega(t) = \\omega_0 + \\alpha t$, $\\theta(t) = \\omega_0 t + \\tfrac{1}{2}\\alpha t^{2}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Each target asks for a specific tangential speed at a specific marker. The live arrows show the current speed at each marker — tune $\\omega_0$ and $\\alpha$ so every marker hits its target speed at some moment during the spin.",
+      "concept": "For marker $k$ at radius $r_k$, hit condition is $r_k \\cdot \\omega(t_k) = v_k$ at some $t_k \\in [0, T]$. Uniform rotation ($\\alpha = 0$) hits every target only if all $v_k / r_k$ are equal; otherwise $\\alpha \\neq 0$ is needed to sweep $\\omega$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The arrows are hidden. Read each target's marker, radius $r$ and required speed $v$. Compute the required $\\omega = v/r$ for each, then choose $\\omega_0$ and $\\alpha$ so that $\\omega(t) = \\omega_0 + \\alpha t$ passes through every value during $t \\in [0, T]$. You have limited spins.",
+      "concept": "For a monotonic sweep from $\\omega_a$ to $\\omega_b$ over $T$: $\\omega_0 = \\omega_a$, $\\alpha = (\\omega_b - \\omega_a)/T$. Any required $\\omega^{*} \\in [\\omega_a, \\omega_b]$ is reached at $t^{*} = (\\omega^{*} - \\omega_0)/\\alpha$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "spin": "SPIN",
+    "hits": "HITS",
+    "shots": "SPINS",
+    "stage": "STAGE",
+    "targets": "TARGETS",
+    "marker": "MARKER",
+    "time": "t",
+    "tip1": "set ω₀ and α, then SPIN — try two different ω₀ values",
+    "tip2": "watch each marker's arrow — hit when its length matches the target speed",
+    "tip3": "compute ω = v/r for each target, pick ω₀ and α, then SPIN",
+    "peek_tip_vromega": "Recall v = r·ω. For each target, the required angular velocity is ω = v/r.",
+    "peek_tip_uniform": "Uniform rotation (α = 0) hits every target only when all v/r ratios are equal.",
+    "peek_tip_sweep": "For a sweep: pick ω₀ = smallest required ω, then α = (largest − smallest)/T."
+  },
+  "hints": {
+    "1": {
+      "1": "The vertical slider on the right sets ω₀; the horizontal slider at the bottom sets α.",
+      "2": "Tangential arrows scale with r·ω — a marker further from the axis draws a longer arrow at the same ω.",
+      "3": "Set α ≠ 0 and watch how the arrow lengths grow or shrink during a single spin."
+    },
+    "2": {
+      "1": "For each target, the required ω satisfies r·ω = v_target. Read the target chip and compute.",
+      "2": "If all required ω values are equal, set that ω₀ and leave α = 0.",
+      "3": "Otherwise, sort the required ω values, put the smallest at ω₀ and set α so ω reaches the largest by t = T."
+    },
+    "3": {
+      "1": "For each target: read r, read v_target, compute ω_k = v_target / r.",
+      "2": "If the ω_k values are all equal, α = 0 and ω₀ = that value clears every target in one spin.",
+      "3": "Sweep case: ω₀ = min(ω_k), α = (max(ω_k) − min(ω_k)) / T. Each ω_k is hit at t = (ω_k − ω₀)/α."
+    }
+  }
+}

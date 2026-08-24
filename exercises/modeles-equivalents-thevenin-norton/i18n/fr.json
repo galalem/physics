@@ -1,0 +1,83 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser $E$, $r$ et $R$. Les deux panneaux alimentent la même charge $R$ — la source de Thévenin ($E$ en série avec $r$) et la source de Norton ($I_0 = E/r$ en parallèle avec $r$) donnent toujours des lectures aux bornes $U$ et $I$ identiques.",
+      "concept": "Tout réseau linéaire à deux bornes est équivalent à une source de tension $E$ en série avec une résistance interne $r$ (Thévenin) — ou, de manière équivalente, à une source de courant $I_0 = E/r$ en parallèle avec la même $r$ (Norton). Le comportement externe est le même.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "$E$ et $r$ sont verrouillés. Ajuste $R$ pour que la tension aux bornes $U$ atteigne successivement chacune des trois valeurs cibles. Observe le panneau de Norton : il indique les mêmes $U$ et $I$ pour chaque $R$.",
+      "concept": "Tension aux bornes : $U = E - r \\cdot I = R \\cdot I$. En résolvant : $I = E / (R + r)$, donc $U = E \\cdot R / (R + r)$. La forme de Norton donne le même résultat : $U = R \\cdot (I_0 - U/r)$ se réarrange en la même expression.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La source est une boîte noire scellée. Deux points de fonctionnement $(R, I, U)$ sont donnés. Calcule $E$ et $r$ sur papier, puis saisis-les. 3 essais par scénario — réussis 3 scénarios d'affilée.",
+      "concept": "À partir de deux points de la droite $U = E - r \\cdot I$ : pente $-r = (U_2 - U_1) / (I_2 - I_1)$, donc $r = (U_1 - U_2) / (I_2 - I_1)$. Ordonnée à l'origine : $E = U_1 + r \\cdot I_1$. Le paramètre de Norton suit : $I_0 = E / r$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "thevenin": "THÉVENIN",
+    "norton": "NORTON",
+    "black_box": "BOÎTE NOIRE",
+    "load": "charge",
+    "src_int": "source (interne)",
+    "slider_E": "E",
+    "slider_r": "r",
+    "slider_R": "R",
+    "unit_v": "V",
+    "unit_ohm": "Ω",
+    "unit_a": "A",
+    "readout_U": "U",
+    "readout_I": "I",
+    "readout_I0": "I₀",
+    "readout_G0": "G₀",
+    "unit_s": "S",
+    "targets": "CIBLES",
+    "target_u": "U cible",
+    "op_point": "point de fonctionnement",
+    "input_E": "E =",
+    "input_r": "r =",
+    "submit": "valider",
+    "correct": "CORRECT",
+    "wrong": "FAUX",
+    "attempts_left": "essais restants",
+    "scenarios_solved": "résolus",
+    "scenario": "scénario",
+    "tip1": "déplace E, r et R ; observe les deux panneaux rester en accord",
+    "tip2": "n'ajuste que R — E et r sont fixés pour cette étape",
+    "tip3": "calcul au brouillon d'abord, puis validation — pas d'appareil en direct pour deviner",
+    "peek_tip": "Deux points sur la droite $U = E - r I$ : pente $-r = (U_2 - U_1)/(I_2 - I_1)$, ordonnée à l'origine $E = U_1 + r I_1$.",
+    "cov_e": "E déplacé",
+    "cov_r": "r déplacé",
+    "cov_R": "R déplacé",
+    "hit": "atteint",
+    "target_prompt": "règle R pour que U =",
+    "given": "donné",
+    "unknown": "?"
+  },
+  "hints": {
+    "1": {
+      "1": "Essaie de faire glisser E d'abord. Puis r. Les deux panneaux se mettent à jour ensemble.",
+      "2": "Pour tout (E, r, R), les panneaux de Thévenin et de Norton donnent les mêmes U et I aux bornes. Ce sont des représentations équivalentes de la même source.",
+      "3": "L'intensité de la source de courant de Norton est I₀ = E / r. Change E et observe I₀ le suivre."
+    },
+    "2": {
+      "1": "Seul R bouge à cette étape. E et r sont fixés aux valeurs affichées.",
+      "2": "Tension aux bornes : U = E · R / (R + r). Règle R pour chaque cible.",
+      "3": "Pour U = 6 V avec E = 12 V, r = 2 Ω : 6 = 12·R/(R+2) → R = 2 Ω. Applique la même méthode pour U = 8 V et U = 10 V."
+    },
+    "3": {
+      "1": "Trace la droite U(I) à partir des deux points donnés. Sa pente est −r ; son ordonnée à l'origine (I = 0) est E.",
+      "2": "r = (U₁ − U₂) / (I₂ − I₁). Une fois que tu as r, substitue pour trouver E.",
+      "3": "Méthode : calcule r à partir du rapport ΔU/ΔI, puis E = U₁ + r · I₁. Les deux champs sont vérifiés avec une tolérance de ±3 %."
+    }
+  }
+}

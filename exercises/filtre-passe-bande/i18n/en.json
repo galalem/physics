@@ -1,0 +1,69 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Move the $R$, $L$ and $C$ sliders. The Bode magnitude curve peaks at the resonant frequency $f_0 = 1/(2\\pi\\sqrt{L\\,C})$ and drops off on either side. $R$ controls the sharpness (quality factor $Q$ and bandwidth $\\Delta f$). Advance after visiting at least $3$ different $f_0$ decades.",
+      "concept": "A series R-L-C band-pass filter (output across $R$) has $|H(f)| = 1/\\sqrt{1 + Q^2\\,(f/f_0 - f_0/f)^2}$ with $f_0 = 1/(2\\pi\\sqrt{L\\,C})$ and $Q = 2\\pi\\,f_0\\,L/R$. At $f_0$ the reactances of $L$ and $C$ cancel, current is maximum and $|H| = 0\\,\\text{dB}$. The bandwidth between the two $-3\\,\\text{dB}$ points is $\\Delta f = f_0/Q$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Tune $L$ and $C$ so the peak sits on the dashed orange line at $f_0 = 2\\,\\text{kHz}$. Many $(L, C)$ pairs work — you need $L\\,C = 1/(2\\pi\\,f_0)^2$. $R$ does not change $f_0$; it only widens or narrows the peak.",
+      "concept": "Design: $L\\,C = 1/(2\\pi\\,f_0)^2$. For $f_0 = 2000\\,\\text{Hz}$: $L\\,C \\approx 6.33\\times10^{-9}\\,\\text{s}^2$. Examples: $L = 6.33\\,\\text{mH}$ with $C = 1\\,\\mu\\text{F}$, or $L = 63.3\\,\\text{mH}$ with $C = 100\\,\\text{nF}$. Only the product matters for $f_0$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Component values are hidden. Read the resonant frequency $f_0$ off the Bode magnitude curve — it is the peak (where $|H| = 0\\,\\text{dB}$). Answer every question correctly in one pass; a wrong answer restarts the deck.",
+      "concept": "Reading $f_0$: locate the top of the peak, then drop a vertical line to the frequency axis. The two $-3\\,\\text{dB}$ points on either side bracket the bandwidth $\\Delta f$; the peak sits (in log terms) between them.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "circuit_title": "series R-L-C band-pass",
+    "bode_title": "|H(f)| — Bode magnitude",
+    "phase_title": "arg H(f) — phase",
+    "controls_title": "controls",
+    "field_R": "resistance R",
+    "field_L": "inductance L",
+    "field_C": "capacitance C",
+    "field_derived": "derived",
+    "v_in": "u_in",
+    "v_out": "u_out",
+    "regions": "regions",
+    "matched": "target reached",
+    "target": "target",
+    "target_f0": "target f_0",
+    "question": "question",
+    "evaluate_prompt": "Component values hidden. Read f_0 (the peak) from the Bode plot alone.",
+    "wrong_restart": "wrong — restarting",
+    "all_correct": "all correct",
+    "tip1": "L↑ or C↑ → peak shifts left ;  f_0 = 1/(2π·√(L·C))",
+    "tip2": "adjust L·C until the peak sits on the orange line ;  R only sets width",
+    "tip3": "read f_0 at the peak — one wrong answer restarts the deck",
+    "peek_tip_1": "At $f = f_0$ the magnitude is maximum ($0\\,\\text{dB}$). Find the top of the peak and read the x-axis.",
+    "peek_tip_2": "The two $-3\\,\\text{dB}$ crossings straddle $f_0$. On a log axis, $f_0$ sits at the geometric mean: $f_0 = \\sqrt{f_L\\,f_H}$.",
+    "peek_tip_3": "The phase curve crosses $0°$ exactly at $f_0$. Trace the phase line down to the axis at the zero-crossing."
+  },
+  "hints": {
+    "1": {
+      "1": "The purple dot marks f_0, the peak of the curve. Try increasing L and watch it slide left.",
+      "2": "f_0 = 1/(2π·√(L·C)). Doubling L drops f_0 by √2. R alone does not move f_0 — it only changes Q.",
+      "3": "Visit 3 decades: try small L·C (peak near 100 kHz), medium (near 1 kHz), and large (near 100 Hz)."
+    },
+    "2": {
+      "1": "You need L·C = 1/(2π·2000)² ≈ 6.33×10⁻⁹ s². Pick a round C then compute L.",
+      "2": "Try C = 1 µF. Then L = 6.33×10⁻⁹ / 10⁻⁶ = 6.33 mH.",
+      "3": "Or C = 100 nF with L = 63.3 mH. Or C = 10 µF with L = 0.633 mH. R is free — it only sets width."
+    },
+    "3": {
+      "1": "Find the top of the peak. That frequency is f_0.",
+      "2": "The −3 dB reference line crosses the curve twice. f_0 is halfway between the crossings on the log axis (geometric mean).",
+      "3": "Cross-check with the phase plot: phase = 0° at f_0. Read the x-axis at the phase zero-crossing."
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Les deux diviseurs partagent les deux mêmes résistors $R_1$ et $R_2$. Bouge chaque curseur et observe comment le voltmètre $U_2$ et l'ampèremètre $I_1$ réagissent. Remarque la dualité : échanger les rôles série/parallèle fait passer du diviseur de tension au diviseur de courant.",
+      "concept": "Diviseur de tension (série) : $U_2 = E \\cdot R_2 / (R_1 + R_2)$. Diviseur de courant (parallèle) : $I_1 = I \\cdot R_2 / (R_1 + R_2)$. Même fraction $R_2 / (R_1 + R_2)$ — l'une s'applique à la tension aux bornes d'un élément série, l'autre au courant traversant la branche parallèle opposée.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Choisis $R_1$ et $R_2$ pour que les deux lectures correspondent aux valeurs cibles affichées en haut à droite. Les deux cibles partagent le même couple de résistors — les mêmes $R_1, R_2$ doivent satisfaire les deux formules à la fois.",
+      "concept": "Comme les deux diviseurs partagent le rapport $R_2 / (R_1 + R_2)$, atteindre une cible $U_2$ fixe le rapport ; la cible $I_1$ tombe alors juste ou la contredit. Tolérance $\\pm 5\\%$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Résous pour le résistor manquant. Les lectures en direct sont masquées. Lis les valeurs données et la cible, calcule $R_1$ sur papier, puis saisis la réponse en ohms. Trois scénarios à la suite doivent être corrects — trois essais par scénario.",
+      "concept": "Diviseur de tension inversé : $R_1 = R_2 \\cdot (E - U_2) / U_2$. Diviseur de courant inversé : $R_1 = R_2 \\cdot (I / I_1 - 1) = R_2 \\cdot (I - I_1) / I_1$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "voltage_divider": "diviseur de tension",
+    "current_divider": "diviseur de courant",
+    "controls": "commandes",
+    "targets": "CIBLES",
+    "deck": "PAQUET",
+    "attempts_left": "essais restants",
+    "correct": "correct",
+    "wrong": "faux",
+    "given": "donné",
+    "target": "cible",
+    "solve_for": "résous pour",
+    "unit_ohm": "Ω",
+    "unit_volt": "V",
+    "unit_milliamp": "mA",
+    "enter_r1": "saisir R₁",
+    "submit": "valider",
+    "hidden": "?",
+    "tip1": "bouge chaque curseur à travers plusieurs valeurs et regarde les deux lectures réagir",
+    "tip2": "le rapport R₂ / (R₁+R₂) est partagé — un seul réglage doit satisfaire les deux cibles",
+    "tip3": "calcule R₁ sur papier d'abord ; trois essais, puis le scénario tourne",
+    "peek_tip": "Diviseur de tension : U₂ = E·R₂/(R₁+R₂), donc R₁ = R₂·(E−U₂)/U₂. Diviseur de courant : I₁ = I·R₂/(R₁+R₂), donc R₁ = R₂·(I−I₁)/I₁.",
+    "scenario_type_voltage": "diviseur de tension",
+    "scenario_type_current": "diviseur de courant",
+    "label_E": "E",
+    "label_I": "I",
+    "label_R1": "R₁",
+    "label_R2": "R₂",
+    "label_U2": "U₂",
+    "label_I1": "I₁",
+    "coverage_voltage_seen": "lectures U₂",
+    "coverage_current_seen": "lectures I₁",
+    "coverage_asymmetric": "R₁ ≠ R₂ essayé",
+    "scenario_progress": "scénario",
+    "of": "sur"
+  },
+  "hints": {
+    "1": {
+      "1": "Fais glisser R₁ et R₂ vers le haut et le bas. Regarde U₂ (schéma du haut) et I₁ (schéma du bas).",
+      "2": "Quand R₁ = R₂, les deux lectures se placent exactement à mi-chemin entre zéro et la valeur de la source. Essaie d'abord, puis casse la symétrie.",
+      "3": "Utilise la formule U₂ = E · R₂/(R₁+R₂) : augmenter R₁ fait baisser U₂ ; augmenter R₂ fait monter U₂. Le diviseur de courant obéit à la règle miroir."
+    },
+    "2": {
+      "1": "Les deux lectures partagent le même rapport R₂/(R₁+R₂). Choisis d'abord R₂ pour fixer le rapport, puis ajuste R₁ pour affiner.",
+      "2": "À partir de la cible U₂ et de E connu, le rapport R₂/(R₁+R₂) = U₂/E. Le même rapport s'applique à I₁/I dans le diviseur de courant — vérifie donc que la seconde cible s'aligne.",
+      "3": "Tolérance ±5 %. Si les deux cibles ne peuvent pas être atteintes simultanément avec les E et I donnés, les valeurs cibles ont été choisies de manière incohérente — mais ici elles sont cohérentes par construction."
+    },
+    "3": {
+      "1": "Lis les valeurs données sur les étiquettes du schéma. La lecture cible est affichée en haut à droite sous la forme « cible : ... V » ou « cible : ... mA ».",
+      "2": "Inversion du diviseur de tension : R₁ = R₂ · (E − U₂) / U₂. Inversion du diviseur de courant : R₁ = R₂ · (I − I₁) / I₁. Injecte les valeurs et calcule.",
+      "3": "Les deux formules ont la même forme : R₁ = R₂ · (source − cible) / cible. Ça marche que la source soit E et la cible U₂, ou que la source soit I et la cible I₁."
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Des rayons lumineux lointains entrent dans l'œil au repos — parallèles à l'axe optique. Fais glisser $F'$ le long de l'axe pour déplacer le foyer. Quand le point de focalisation orange atterrit sur la rétine, l'œil voit net.",
+      "concept": "Une lentille convergente ramène les rayons parallèles en un point à son foyer image $F'$. Pour un œil normal au repos ($d' = 17$ mm), $F'$ se situe exactement sur la rétine, donc les objets lointains y sont focalisés nettement.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Pour chaque distance objet $d$, ajuste l'accommodation de l'œil pour que l'image tombe sur la rétine. Appuie sur Tirer (ou Espace) pour confirmer. Trois cibles, cinq tirs.",
+      "concept": "Conjugaison d'une lentille mince : $1/f' = 1/d + 1/d'$ (distances non signées). Quand $d$ diminue (objet plus proche), $f'$ doit diminuer — le muscle ciliaire se contracte pour rendre le cristallin plus convexe.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'œil a un défaut : sa longueur $d'$ n'est pas les 17 mm normaux. Les rayons sont cachés. Lis $d$ et $d'$ sur les étiquettes de la scène, calcule le $f'$ requis sur papier, fais glisser $F'$ à cette valeur, puis Tire — un tir par cible.",
+      "concept": "Pour qu'un œil de longueur $d'$ voie nettement un objet à la distance $d$ : $f' = \\dfrac{d \\cdot d'}{d + d'}$. Un $d'$ court (hypermétropie) nécessite un $f'$ plus petit ; un $d'$ long (myopie) nécessite un $f'$ plus grand.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "shots": "TIRS",
+    "hits": "TOUCHÉES",
+    "target": "CIBLE",
+    "stage": "ÉTAPE",
+    "tip1": "fais glisser F' le long de l'axe",
+    "tip2": "règle F' pour chaque objet, puis tire",
+    "tip3": "calcule f' depuis d et d', règle F', tire",
+    "objectAt": "d",
+    "retinaAt": "d'",
+    "infinity": "infini"
+  },
+  "hints": {
+    "1": {
+      "1": "Fais glisser le point orange F' horizontalement le long de l'axe optique en pointillés pour déplacer le foyer.",
+      "2": "Les rayons réfractés se croisent en F'. Quand ce croisement atterrit sur la rétine (la courbe orange), l'œil voit l'objet lointain nettement.",
+      "3": "Pour un œil normal au repos regardant à l'infini, F' se situe exactement sur la rétine — à 17 mm derrière la lentille."
+    },
+    "2": {
+      "1": "Chaque distance objet nécessite une accommodation différente. Les objets plus proches nécessitent un f' plus court.",
+      "2": "Utilise la formule de la lentille mince 1/f' = 1/d + 1/d'. Pour l'œil normal, d' = 17 mm.",
+      "3": "Pour d = 1 m (1000 mm) et d' = 17 mm : 1/f' = 1/1000 + 1/17 ≈ 0,0598, donc f' ≈ 16,72 mm. Même méthode pour les autres cibles."
+    },
+    "3": {
+      "1": "Lis les coordonnées étiquetées sur la scène : d (distance objet) et d' (rétine, à côté du corps de l'œil).",
+      "2": "Applique 1/f' = 1/d + 1/d'. Convertis toutes les distances en millimètres. Résous pour f' avant de toucher F'.",
+      "3": "Pour un objet à l'infini (1/d = 0) : f' = d'. Pour un d fini : f' = d·d' / (d + d'). Utilise Aperçu pour confirmer que ta valeur de F' correspond à la simulation."
+    }
+  }
+}

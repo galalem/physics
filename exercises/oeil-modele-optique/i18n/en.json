@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Distant light rays enter the relaxed eye — parallel to the optical axis. Drag $F'$ along the axis to move the focal point. When the orange focus dot lands on the retina, the eye sees sharply.",
+      "concept": "A converging lens brings parallel rays to a point at its rear focal point $F'$. For a normal relaxed eye ($d' = 17$ mm), $F'$ sits exactly on the retina, so distant objects focus sharply on it.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "For each object distance $d$, adjust the eye's accommodation so the image lands on the retina. Press Fire (or Space) to confirm. Three targets, five shots.",
+      "concept": "Thin-lens conjugation: $1/f' = 1/d + 1/d'$ (unsigned distances). As $d$ decreases (object closer), $f'$ must decrease — the ciliary muscle contracts to make the crystalline more convex.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The eye has a defect: its length $d'$ is not the normal $17$ mm. Rays are hidden. Read $d$ and $d'$ from the scene labels, compute the required $f'$ on paper, drag $F'$ to that value, then Fire — one shot per target.",
+      "concept": "For an eye of length $d'$ to see an object at distance $d$ sharply: $f' = \\dfrac{d \\cdot d'}{d + d'}$. Short $d'$ (hypermétropie) needs a smaller $f'$; long $d'$ (myopie) needs a larger $f'$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "shots": "SHOTS",
+    "hits": "HITS",
+    "target": "TARGET",
+    "stage": "STAGE",
+    "tip1": "drag F' along the axis",
+    "tip2": "set F' for each object, then fire",
+    "tip3": "compute f' from d and d', set F', fire",
+    "objectAt": "d",
+    "retinaAt": "d'",
+    "infinity": "infini"
+  },
+  "hints": {
+    "1": {
+      "1": "Drag the orange F' dot horizontally along the dashed optical axis to move the focal point.",
+      "2": "The refracted rays cross at F'. When that crossing lands on the retina (the orange curve), the eye sees the distant object sharply.",
+      "3": "For a relaxed normal eye looking at infinity, F' sits exactly on the retina — 17 mm behind the lens."
+    },
+    "2": {
+      "1": "Each object distance requires a different accommodation. Closer objects need a shorter f'.",
+      "2": "Use the thin-lens formula 1/f' = 1/d + 1/d'. For the normal eye, d' = 17 mm.",
+      "3": "For d = 1 m (1000 mm) and d' = 17 mm: 1/f' = 1/1000 + 1/17 ≈ 0.0598, so f' ≈ 16.72 mm. Same method for the other targets."
+    },
+    "3": {
+      "1": "Read the labeled coordinates on the scene: d (object distance) and d' (retina, next to the eye body).",
+      "2": "Apply 1/f' = 1/d + 1/d'. Convert all distances to millimeters. Solve for f' before touching F'.",
+      "3": "For an object at infinity (1/d = 0): f' = d'. For a finite d: f' = d·d' / (d + d'). Use Peek to confirm your F' value matches the sim."
+    }
+  }
+}

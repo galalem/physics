@@ -1,0 +1,56 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un champ magnétique $\\vec{B}$ SORT de la page. Déplace l'émetteur pour orienter la vitesse $\\vec{v}$, utilise le curseur $v_0$ pour régler la vitesse, puis TIRE la charge positive. Observe comment la force de Lorentz $\\vec{F} = q\\,\\vec{v} \\wedge \\vec{B}$ (dessinée en orange sur la particule) reste perpendiculaire à $\\vec{v}$ et courbe la trajectoire en cercle.",
+      "concept": "Force de Lorentz : $\\vec{F} = q\\,\\vec{v} \\wedge \\vec{B}$. Avec $\\vec{B} \\perp \\vec{v}$, $|\\vec{F}| = q\\,v\\,B$ et $\\vec{F}$ pointe toujours vers le centre du cercle. La particule décrit un cercle de rayon $r = \\dfrac{m\\,v}{q\\,B}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins les trois cibles à l'intérieur du champ. Le cercle d'aperçu en pointillés montre où ira la trajectoire — vise, ajuste $v_0$, puis TIRE. Rappel : avec $q > 0$ et $\\vec{B}$ sortant de la page, la particule tourne vers la DROITE de $\\vec{v}$.",
+      "concept": "Le rayon ne dépend que de la vitesse : $r = \\dfrac{m\\,v}{q\\,B}$. Le centre du cercle se situe à $90^{\\circ}$ à droite de $\\vec{v}$ (règle de la main droite pour $+q$). Doubler $v_0$ double $r$ ; la période $T = \\dfrac{2\\pi m}{q B}$ reste inchangée.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas de cercle d'aperçu. Lis les coordonnées $(x, z)$ de chaque cible, applique la règle de la main droite pour trouver la direction du centre, puis choisis $\\alpha$ et $v_0$ pour que l'arc passe par la cible. Tu as un seul tir par cible — pas de rafale.",
+      "concept": "Le centre $C$ de l'arc se trouve à la distance $r = \\dfrac{m v}{q B}$ perpendiculairement à droite de $\\vec{v}$. Une cible en $(x_T, z_T)$ est atteignable si et seulement si elle appartient à ce cercle : $|CT| = r$. Combinée à la direction du centre, cette condition fixe $\\alpha$ et $v_0$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "hits": "RÉUSSIES",
+    "shots": "TIRS",
+    "stage": "ÉTAPE",
+    "field": "B ⊙ (sortant de la page)",
+    "charge": "q > 0",
+    "tip1": "oriente v, change v₀, puis TIRER",
+    "tip2": "utilise le cercle d'aperçu pour aligner chaque cible",
+    "tip3": "calcule α et v₀ à partir des coordonnées de la cible, puis TIRER",
+    "peek_tip_radius": "Le rayon est proportionnel à la vitesse : r = m·v / (q·B). Doubler v₀ double le rayon de l'arc ; la période T = 2πm/(qB) reste inchangée.",
+    "peek_tip_centre": "Le centre de l'arc est à 90° à DROITE de v (règle de la main droite pour q > 0, B sortant de la page). Trace d'abord cette perpendiculaire — la cible doit se trouver à la distance r de celle-ci.",
+    "peek_tip_geometry": "Deux inconnues (α, v₀), deux contraintes : la cible sur le cercle ET le centre perpendiculaire-droite de v à distance r. Détermine d'abord r à partir de la géométrie cible-émetteur."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplace la tête de l'émetteur pour changer la direction de lancement α de v.",
+      "2": "Le curseur v₀ à droite règle la vitesse de lancement. Plus v₀ est grand, plus le cercle est grand.",
+      "3": "La flèche orange F sur la particule est la force de Lorentz. Remarque qu'elle pointe toujours de la particule vers le centre du cercle."
+    },
+    "2": {
+      "1": "Le cercle en pointillés prévisualise la trajectoire complète. Déplace-le en ajustant α et v₀.",
+      "2": "La vitesse fixe le rayon (r ∝ v₀). L'angle fait pivoter le cercle autour de l'émetteur — le centre du cercle est toujours perpendiculaire-droite de v.",
+      "3": "Si une cible se trouve dans l'anneau accessible, deux couples (α, v₀) permettent en général de l'atteindre — essaie un petit rayon puis un grand pour voir."
+    },
+    "3": {
+      "1": "Lis les coordonnées (x, z) de chaque cible. Esquisse sur papier l'émetteur, la cible et la direction perpendiculaire-droite de v.",
+      "2": "Pour un α donné, le centre C = (r sin α, −r cos α) à partir de l'émetteur. La cible doit vérifier (x − r sin α)² + (z + r cos α)² = r².",
+      "3": "Développe : x² + z² = 2r(x sin α − z cos α). Pour un α choisi, on obtient r = (x² + z²) / [2 (x sin α − z cos α)], puis v₀ = r · (q B / m)."
+    }
+  }
+}

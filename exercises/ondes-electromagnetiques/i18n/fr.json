@@ -1,0 +1,64 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Toute onde électromagnétique — de la radio FM aux rayons X — se propage dans le vide à la même vitesse $c = 3\\times 10^{8}$ m/s. Balaie les trois curseurs : fréquence $f$ (échelle log), amplitude $E_0$ et angle de polarisation $\\theta_p$. Observe comment la forme de l'onde et le repère sur la bande spectrale répondent.",
+      "concept": "Relation de dispersion : $c = \\lambda \\cdot f$. Plus $f$ est élevée $\\Rightarrow$ plus $\\lambda$ est courte. L'amplitude $E_0$ met à l'échelle la hauteur de l'onde mais pas sa longueur d'onde. La polarisation $\\theta_p$ fait tourner le vecteur $\\vec{E}$ dans le plan transverse à la propagation.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Une longueur d'onde cible $\\lambda^{*}$ est marquée sur la bande spectrale. Ajuste $f$ jusqu'à ce que ta longueur d'onde actuelle s'aligne sur le repère cible. Seul $f$ contrôle $\\lambda$ ; $E_0$ et $\\theta_p$ sont libres.",
+      "concept": "Inverse la relation de dispersion : $\\lambda^{*} = c / f^{*}\\ \\Rightarrow\\ f^{*} = c / \\lambda^{*}$. Lis la cible sur la bande, calcule $f^{*}$, règle le curseur.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "La bande spectrale et l'onde en direct sont cachées. Seule l'étiquette cible $\\lambda^{*}$ et l'axe vide restent. Calcule $f^{*} = c/\\lambda^{*}$ sur papier, puis règle le curseur de fréquence sur cette valeur et valide.",
+      "concept": "Calcul à l'aveugle : $f^{*} = \\dfrac{c}{\\lambda^{*}} = \\dfrac{3\\times 10^{8}}{\\lambda^{*}}$. Attention aux unités — si $\\lambda^{*}$ est en nm, convertis d'abord en mètres ($1\\,\\text{nm} = 10^{-9}\\,\\text{m}$).",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "onde EM",
+    "e_field": "E",
+    "b_field": "B",
+    "propagation": "z (propagation)",
+    "spectrum": "spectre électromagnétique",
+    "match_ok": "correspondance",
+    "target_short": "cible",
+    "band_radio": "radio",
+    "band_microwave": "micro-onde",
+    "band_infrared": "infrarouge",
+    "band_visible": "visible",
+    "band_uv": "ultraviolet",
+    "band_xray": "rayons X",
+    "band_gamma": "gamma",
+    "tip1": "balaie chaque curseur sur au moins la moitié de sa plage",
+    "tip2": "calcule f = c / lambda, puis règle le curseur f",
+    "tip3": "calcule d'abord f = c / lambda* sur papier, puis règle le curseur",
+    "peek_tip_formula": "Réarrange c = lambda * f  ->  f = c / lambda. Seul f contrôle lambda.",
+    "peek_tip_anchor": "c = 3e8 m/s. Lumière visible (~500 nm) -> f ~ 6e14 Hz. Vérification d'ordre de grandeur."
+  },
+  "hints": {
+    "1": {
+      "1": "Pousse le curseur de fréquence vers le haut et vers le bas — l'onde s'étire et se rétracte. Quel curseur change la hauteur de l'onde ?",
+      "2": "L'amplitude E_0 met à l'échelle l'onde verticalement ; la polarisation fait tourner le vecteur E ; seul f change lambda.",
+      "3": "Le repère spectral se déplace vers la gauche (lambda long) quand f baisse, et vers la droite (lambda court) quand f monte. C'EST c = lambda * f."
+    },
+    "2": {
+      "1": "Lis la cible lambda* sur la bande. Demande-toi : quel f donne cette lambda ?",
+      "2": "f = c / lambda = 3e8 / lambda*. Estime l'ordre de grandeur avant de régler.",
+      "3": "Déplace le curseur f (échelle log) pour que ton repère se trouve sous la graduation cible. E_0 et theta_p n'ont pas d'importance pour la correspondance."
+    },
+    "3": {
+      "1": "La bande est cachée mais la formule reste valable. Écris c = lambda * f, isole f.",
+      "2": "Substitue c = 3e8 m/s et la cible lambda*. Convertis d'abord les unités si lambda* est en nm ou µm.",
+      "3": "Utilise Peek pour voir la formule réarrangée. Puis règle le curseur sur la valeur de f calculée et valide une seule fois."
+    }
+  }
+}

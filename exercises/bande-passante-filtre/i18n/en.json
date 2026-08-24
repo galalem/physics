@@ -1,0 +1,73 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Move the $R$, $L$, and $C$ sliders. Watch the resonant bell shift and change width. The two purple markers sit on the cut-off frequencies $f_L$ and $f_H$ (where $|H| = -3\\,\\text{dB}$). The bandwidth is $\\Delta f = f_H - f_L$. Advance after visiting at least $3$ different $\\Delta f$ decades.",
+      "concept": "A series RLC band-pass has resonant frequency $f_0 = 1/(2\\pi\\sqrt{L\\,C})$ and quality factor $Q = (1/R)\\sqrt{L/C} = f_0/\\Delta f$. In dB: $|H|_{\\text{dB}} = -10\\,\\log_{10}\\!\\bigl(1 + Q^2(f/f_0 - f_0/f)^2\\bigr)$. Peak $0\\,\\text{dB}$ at $f_0$; the two $-3\\,\\text{dB}$ crossings give $f_L$ and $f_H$, with $\\Delta f = R/(2\\pi\\,L)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Adjust $R$, $L$, and $C$ so the bandwidth matches the target width $\\Delta f = 200\\,\\text{Hz}$ (dashed orange span between the two orange lines). Many combinations work — you need $R/L = 2\\pi\\,\\Delta f$.",
+      "concept": "Bandwidth depends only on $R$ and $L$: $\\Delta f = R/(2\\pi\\,L)$. $C$ shifts the centre $f_0$ but not the width. For $\\Delta f = 200\\,\\text{Hz}$: $R/L = 2\\pi\\cdot 200 \\approx 1257\\,\\text{s}^{-1}$. E.g. $R = 126\\,\\Omega$ with $L = 100\\,\\text{mH}$, or $R = 12.6\\,\\Omega$ with $L = 10\\,\\text{mH}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Component values are hidden. Read the bandwidth $\\Delta f$ directly from the Bode plot — it is the width of the bell at the $-3\\,\\text{dB}$ level, i.e. $\\Delta f = f_H - f_L$. Answer every question correctly in one pass.",
+      "concept": "Reading $\\Delta f$: locate the two frequencies where the bell crosses $-3\\,\\text{dB}$ (the horizontal orange line). Read them off the log x-axis, then subtract. On a log axis, equal visual spacing means equal factors, not equal differences — mind the ticks.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "circuit_title": "RLC band-pass",
+    "bode_title": "|H(f)| — Bode magnitude",
+    "controls_title": "controls",
+    "field_R": "resistance R",
+    "field_L": "inductance L",
+    "field_C": "capacitance C",
+    "field_derived": "derived",
+    "v_in": "u_in",
+    "v_out": "u_out",
+    "regions": "regions",
+    "matched": "target reached",
+    "target": "target",
+    "target_df": "target Δf",
+    "question": "question",
+    "evaluate_prompt": "Component values hidden. Read the bandwidth Δf from the Bode plot alone.",
+    "wrong_restart": "wrong — restarting",
+    "all_correct": "all correct",
+    "fL_label": "f_L",
+    "fH_label": "f_H",
+    "df_label": "Δf",
+    "f0_label": "f_0",
+    "q_label": "Q",
+    "tip1": "R↑ or L↓ widens Δf ;  Δf = R/(2π·L)",
+    "tip2": "tune R/L until the bell width matches the orange span",
+    "tip3": "read Δf where |H| = −3 dB — all questions must pass",
+    "peek_tip_1": "Δf is the width of the bell at the −3 dB level. Find where the curve crosses the orange line on both sides and read the x-axis.",
+    "peek_tip_2": "The peak sits at f_0 (0 dB). Drop by 3 dB and mark the two frequencies. Δf = f_H − f_L.",
+    "peek_tip_3": "The x-axis is a log scale — the visual midpoint between f_L and f_H is not (f_L+f_H)/2 but √(f_L·f_H) ≈ f_0."
+  },
+  "hints": {
+    "1": {
+      "1": "The two purple dots mark f_L and f_H. Slide R or L and watch the bell get wider or narrower.",
+      "2": "Δf = R/(2π·L). Bigger R or smaller L widens the pass-band. C moves the centre f_0 but keeps the width fixed.",
+      "3": "To visit 3 decades of Δf: try R = 10 Ω with L = 100 mH (narrow), then R = 100 Ω with L = 10 mH (medium), then R = 1 kΩ with L = 1 mH (wide)."
+    },
+    "2": {
+      "1": "You need Δf = 200 Hz. Only R and L matter: R/L = 2π·200 ≈ 1257 s⁻¹.",
+      "2": "Pick a round L then compute R. L = 100 mH gives R = 1257·0.1 ≈ 126 Ω. C shifts f_0 but not the width — put it anywhere sensible.",
+      "3": "Or L = 10 mH with R = 12.6 Ω. Or L = 1 H with R = 1257 Ω. Any C works; try C = 1 µF for a comfortable centre frequency."
+    },
+    "3": {
+      "1": "Find where the bell curve crosses the horizontal −3 dB reference line — on the left and on the right.",
+      "2": "Read the x-axis at both crossings: those are f_L and f_H. Then Δf = f_H − f_L.",
+      "3": "Careful with the log axis: each big tick is ×10. A crossing halfway between two big ticks is ~×3, not ×5."
+    }
+  }
+}

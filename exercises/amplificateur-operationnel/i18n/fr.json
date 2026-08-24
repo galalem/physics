@@ -1,0 +1,76 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Un AO idéal obéit à deux règles d'or en rétroaction négative : $V_+ = V_-$ et aucun courant ne rentre dans les entrées. Passe en revue les trois montages (suiveur, inverseur, non-inverseur) et balaie $V_p$ pour voir comment chacun transforme le signal d'entrée alternatif. Repère où la sortie commence à écrêter contre les rails d'alimentation $\\pm V_{sat}$.",
+      "concept": "Trois montages canoniques : le suiveur donne $V_s = V_e$ (gain 1). L'inverseur donne $V_s = -\\frac{R_2}{R_1} V_e$ (gain négatif, phase inversée). Le non-inverseur donne $V_s = (1 + \\frac{R_2}{R_1}) V_e$ (gain positif, toujours $\\geq 1$). Dans tous les cas la sortie sature à $\\pm V_{sat}$ dès que la formule linéaire dépasserait les rails.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "La sortie cible (orange) est tracée pour une entrée fixée $V_e(t) = V_p \\sin(2\\pi f t)$. Choisis le montage et ajuste le rapport des résistances $R_2/R_1$ pour que ta trace verte se superpose à la cible. Colle au gain cible à $\\pm 5\\%$ près pour avancer.",
+      "concept": "Le module du gain vient du rapport $R_2/R_1$ : inverseur $|G| = R_2/R_1$ ; non-inverseur $|G| = 1 + R_2/R_1$. Le signe vient du montage — l'inverseur inverse la phase, le non-inverseur la conserve. Deux leviers pour caler : le montage choisit le signe, le rapport choisit le module.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pour chaque scénario, l'oscillo montre uniquement la cible (orange) et l'entrée $V_e$ (pointillé). Lis la cible : $V_s$ est-il en phase avec $V_e$ ou inversé ? Choisis alors le montage et appuie sur VALIDER. Une validation erronée relance la série au scénario 1. Peek donne un indice de stratégie — jamais la réponse.",
+      "concept": "La phase décide du montage : sortie en phase avec l'entrée $\\Rightarrow$ non-inverseur ; sortie déphasée de 180° $\\Rightarrow$ inverseur. Tu peux calculer $|G|$ à partir du rapport crête à crête pour recouper, mais il suffit de valider le type de montage.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "circuit",
+    "scope": "oscillo",
+    "scenario": "SCÉNARIO",
+    "solved": "FAIT",
+    "submit": "VALIDER",
+    "correct": "correct",
+    "wrong": "erreur · série reprise",
+    "target": "cible",
+    "your_pick": "ton V_s",
+    "input": "V_e",
+    "tip1": "parcours les montages · balaie V_p · guette l'écrêtage",
+    "tip2": "choisis le montage pour le signe · ajuste R2/R1 pour le module · colle à la cible",
+    "tip3": "lis la phase · valide le montage",
+    "peek_tip_1": "Même phase que V_e = pas d'inversion de signe. Phase opposée = signe inversé.",
+    "peek_tip_2": "Le module du gain vaut le pic de V_s divisé par le pic de V_e. Le signe ne concerne que la phase.",
+    "montage_follower": "suiveur",
+    "montage_inv": "inverseur",
+    "montage_noninv": "non-inverseur",
+    "montages_seen": "montages vus",
+    "target_matched": "cible atteinte",
+    "adjust": "ajuste le rapport",
+    "gain_label": "G",
+    "ratio_label": "R2/R1",
+    "vsat_label": "V_sat",
+    "target_gain": "G cible",
+    "your_gain": "ton G",
+    "op_plus": "V+",
+    "op_minus": "V-",
+    "op_out": "V_s",
+    "rail_pos": "+V_sat",
+    "rail_neg": "-V_sat"
+  },
+  "hints": {
+    "1": {
+      "1": "Ouvre le sélecteur de montage sous le circuit. Choisis chacun des trois tour à tour.",
+      "2": "Pour l'inverseur et le non-inverseur, monte le curseur V_p et regarde la sortie s'aplatir près de +12 V et -12 V — c'est la saturation.",
+      "3": "Il te faut visiter au moins 2 montages distincts ET observer l'écrêtage au moins une fois (V_p assez élevé pour pousser V_s au-delà de V_sat) pour avancer."
+    },
+    "2": {
+      "1": "Regarde la phase de la cible : est-elle inversée ou en phase avec V_e ? Cela te dit inverseur ou non-inverseur.",
+      "2": "Puis mesure crête à crête. Si |pic de V_s| = 2 · V_p, le module du gain vaut 2 — donc R2/R1 = 2 pour l'inverseur, ou R2/R1 = 1 pour le non-inverseur.",
+      "3": "Affine le curseur de rapport jusqu'à ce que la trace verte se pose sur l'orange. Le gain affiché en haut doit être à moins de 5% de la cible."
+    },
+    "3": {
+      "1": "Tu as 2 scénarios à réussir d'affilée. Une mauvaise validation te ramène au scénario 1.",
+      "2": "Le seul indice utile à observer, c'est la phase : V_s est-il l'image miroir de V_e, ou monte-t-il et descend-il en même temps que V_e ?",
+      "3": "Même phase, amplifié → non-inverseur. Image miroir → inverseur. Ne devine pas — lis la trace, puis appuie sur VALIDER."
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser le voltmètre aux bornes de n'importe quel dipôle pour mesurer la tension $U$. Clique l'interrupteur pour couper ou fermer la boucle et observe comment chaque $U$ change.",
+      "concept": "La tension entre deux points est une différence de potentiel : $U_{AB} = V_A - V_B$. Elle se mesure en volts $(V)$ par un voltmètre placé en dérivation aux bornes du dipôle.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Utilise le voltmètre pour atteindre chaque lecture cible listée. Bascule l'interrupteur quand une cible demande le cas boucle ouverte.",
+      "concept": "Autour de toute boucle fermée, les tensions signées se somment à zéro : $\\Sigma U = 0$. Un interrupteur ouvert supporte la totalité de la tension de la source ; un interrupteur fermé supporte $0\\,V$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Trois tensions sont étiquetées. La quatrième est cachée. Choisis l'instrument qui mesure la tension et place-le aux bornes du dipôle manquant. Un seul essai.",
+      "concept": "Applique $\\Sigma U = 0$ sur la boucle pour trouver le $U$ inconnu sur papier. Seul un voltmètre placé en dérivation aux bornes du bon dipôle le vérifie.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "schéma",
+    "palette": "palette",
+    "targets": "CIBLES",
+    "unit_V": "V",
+    "comp_voltmeter": "voltmètre",
+    "comp_ammeter": "ampèremètre",
+    "comp_wire": "fil",
+    "dipole_battery": "pile",
+    "dipole_lamp1": "lampe 1",
+    "dipole_lamp2": "lampe 2",
+    "dipole_switch": "interrupteur",
+    "battery_label": "E",
+    "lamp1_label": "L1",
+    "lamp2_label": "L2",
+    "switch_label": "K",
+    "sw_open": "interrupteur ouvert",
+    "sw_closed": "interrupteur fermé",
+    "sw_hint": "clique l'interrupteur pour basculer",
+    "seen_battery": "pile mesurée",
+    "seen_lamp": "une lampe mesurée",
+    "seen_open": "boucle ouverte observée",
+    "target_prefix": "mesure",
+    "target_across": "aux bornes de",
+    "target_reads": "indique",
+    "target_when_closed": "(interrupteur fermé)",
+    "target_when_open": "(interrupteur ouvert)",
+    "reading_hidden": "lecture affichée après validation",
+    "place_probe": "place la sonde aux bornes du dipôle ?",
+    "commit_hint": "dépose le voltmètre pour valider",
+    "correct": "correct",
+    "wrong": "mauvais instrument ou position",
+    "attempts_left": "essais restants",
+    "unknown": "?",
+    "tip1": "glisse le voltmètre sur n'importe quel dipôle ; clique l'interrupteur pour ouvrir/fermer",
+    "tip2": "atteins chaque cible — lis la valeur affichée sur le corps du voltmètre",
+    "tip3": "raisonne sur papier ; la lecture reste cachée jusqu'à validation",
+    "peek_tip": "Loi des mailles : autour de la boucle fermée, les tensions signées se somment à zéro. Identifie le dipôle manquant et calcule U avant de placer la sonde."
+  },
+  "hints": {
+    "1": {
+      "1": "Fais glisser le voltmètre depuis la palette sur l'une des quatre positions de dipôle dans la boucle.",
+      "2": "Un voltmètre mesure U = V_A - V_B entre deux nœuds. Essaie de mesurer aux bornes de la pile, puis aux bornes d'une lampe.",
+      "3": "Maintenant, clique l'interrupteur pour l'ouvrir. Mesure aux bornes de l'interrupteur ouvert — tu dois lire la totalité de la tension de la source."
+    },
+    "2": {
+      "1": "Lis chaque ligne de cible. Chacune demande U aux bornes d'un dipôle précis, parfois avec l'interrupteur ouvert.",
+      "2": "Déplace le voltmètre d'un dipôle à l'autre ; la lecture se met à jour instantanément.",
+      "3": "Interrupteur ouvert → les lampes indiquent 0 V et l'interrupteur lui-même indique E complet. Interrupteur fermé → l'inverse."
+    },
+    "3": {
+      "1": "Un seul des trois éléments de la palette est un instrument qui mesure la tension. Lequel ?",
+      "2": "Le U inconnu satisfait E - U_L1 - U_L2 - U_interrupteur = 0 autour de la boucle.",
+      "3": "Résous le U manquant, identifie à quel dipôle il appartient, puis place le voltmètre en dérivation aux bornes de ce dipôle."
+    }
+  }
+}

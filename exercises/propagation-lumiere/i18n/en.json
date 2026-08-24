@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag the source $S$ up and down along its rail. The rays fan out in straight lines from $S$ — the opaque bar cuts a sharp geometric shadow, and the whole shadow slides as $S$ moves.",
+      "concept": "Light propagates in straight lines. A point source at $S$ sends rays radially outward; any ray that meets an opaque object stops there, leaving a geometric shadow behind the object.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Three targets sit around the bar. Position $S$ so each target has a clear straight line to it, then press Fire (or Space). You have 5 shots to light all 3.",
+      "concept": "Target $T$ is illuminated iff the segment $ST$ misses the bar. The line $ST$ crosses the plane $x = O_x$ at height $y_{\\text{hit}} = S_y + \\frac{O_x - S_x}{T_x - S_x}\\,(T_y - S_y)$; $T$ is lit when $y_{\\text{hit}}$ falls outside the bar's vertical interval.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Rays and shadow are hidden. Read the coordinates of $S$, of the bar, and of target $T$ from the scene. Compute $y_{\\text{hit}} = S_y + \\frac{O_x - S_x}{T_x - S_x}\\,(T_y - S_y)$ on paper, set $S_y$ so $y_{\\text{hit}}$ lies outside the bar, then Fire. One shot per target.",
+      "concept": "$y_{\\text{hit}}$ is a linear interpolation between $S_y$ and $T_y$ evaluated at $x = O_x$. If $y_{\\text{hit}} \\in [O_{y1},\\,O_{y2}]$ the ray is blocked and $T$ stays dark.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "FIRE",
+    "shots": "SHOTS",
+    "lit": "LIT",
+    "target": "TARGET",
+    "stage": "STAGE",
+    "exhausted": "OUT OF SHOTS · RESET TO RETRY",
+    "tip1": "drag the source along its rail",
+    "tip2": "aim, then press SPACE to fire",
+    "tip3": "compute Sy from coordinates, then fire",
+    "bar": "BAR",
+    "source": "SOURCE"
+  },
+  "hints": {
+    "1": {
+      "1": "Grab the orange source disk and drag it up or down. It slides along the dashed rail at x = 120.",
+      "2": "Every ray from S is a straight line. The bar stops any ray that would cross it.",
+      "3": "The dark cone behind the bar is the shadow — the set of points no straight line from S can reach."
+    },
+    "2": {
+      "1": "Position S first, then press Fire (or Space) to test the current target.",
+      "2": "For a target above the bar, raise S so the ray dips down past the top of the bar. For a target below the bar, lower S so the ray climbs past the bottom.",
+      "3": "Check the boundary Sy: set y_hit = 175 (top) or 275 (bottom) and solve for Sy. Move to just past that boundary."
+    },
+    "3": {
+      "1": "Read Sx, Tx, Ty, and the bar coordinates from the scene. Then Sy is your only unknown.",
+      "2": "The ray S→T reaches x = 400 at y_hit = Sy + (400 − Sx)/(Tx − Sx) · (Ty − Sy). Solve for Sy so y_hit lands outside [175, 275].",
+      "3": "Set y_hit at the bar edge (175 or 275) to find the critical Sy, then nudge past. Use Peek to confirm your Sy matches the sim."
+    }
+  }
+}

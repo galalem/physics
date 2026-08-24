@@ -1,0 +1,82 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Le message ($f_m$) et la porteuse ($f_p$) sont fixés. Fais varier la constante de temps RC $\\tau = RC$ et regarde le détecteur d'enveloppe traiter le signal AM : redressement mono-alternance, puis filtrage passe-bas. La trace turquoise est le signal récupéré $\\hat u_m(t)$ ; la trace ambre en pointillés est l'enveloppe idéale du message. Balaie $\\tau$ jusqu'à des valeurs assez petites pour voir l'ondulation de porteuse ET assez grandes pour voir l'affaissement d'enveloppe — les deux modes de défaillance doivent être observés avant de continuer.",
+      "concept": "Un détecteur d'enveloppe récupère le message $u_m(t)$ à partir d'un signal AM $s(t) = [1 + m\\cos(2\\pi f_m t)]\\cos(2\\pi f_p t)$ en deux étapes. D'abord une diode redresse mono-alternance : $r(t) = \\max(0, s(t))$. Puis un filtre passe-bas résistance–condensateur lisse le train redressé, en intégrant avec la constante de temps $\\tau = RC$. Le condensateur se charge à travers la diode aux crêtes positives et se décharge à travers $R$ entre elles. Une récupération fidèle exige que $\\tau$ se place entre deux horloges : assez rapide pour suivre le message ($\\tau \\ll 1/f_m$) mais assez lente pour lisser la porteuse ($\\tau \\gg 1/f_p$). La contrainte complète : $1/f_p \\ll \\tau \\ll 1/f_m$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois cibles. Chacune fixe $(f_m, f_p, m)$ et demande un $\\tau$ précis. Ajuste $\\tau$ jusqu'à ce que la trace turquoise récupérée se superpose à la cible en pointillés gris. Tolérance : $\\pm 10\\%$ sur $\\tau$.",
+      "concept": "La règle empirique $\\tau \\approx \\sqrt{(1/f_p)(1/f_m)}$ — la moyenne géométrique des deux limites — place $\\tau$ en sécurité dans le corridor. Augmente $\\tau$ quand $f_m$ baisse (message plus lent $\\Rightarrow$ mémoire plus longue admise) ; diminue-le quand $f_p$ baisse (porteuse plus lente $\\Rightarrow$ mémoire plus courte nécessaire pour lisser). Chaque facteur 2 sur $\\tau$ déplace nettement le compromis entre ondulation et affaissement.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'entrée AM et l'enveloppe idéale sont masquées. À partir de la seule trace récupérée — plus les valeurs affichées de $f_m$, $f_p$, $m$ — déduis la constante de temps RC $\\tau$ utilisée. Ondulation de porteuse $\\rightarrow$ $\\tau$ trop petit (mesure la période d'ondulation $\\approx 1/f_p$). Affaissement d'enveloppe $\\rightarrow$ $\\tau$ trop grand (compare la queue d'affaissement à $1/f_m$). Une mauvaise réponse verrouille la question ; utilise Réessayer pour une nouvelle configuration.",
+      "concept": "Lecture diagnostique. Amplitude d'ondulation visible $\\approx \\Delta u / u \\approx 1/(2\\pi f_p \\tau)$ — donc l'ondulation donne $\\tau \\approx 1/(2\\pi f_p \\cdot \\Delta u/u)$. L'affaissement sur une demi-période de message donne $\\tau \\approx T_m / \\ln(1 + m)$ avec $T_m = 1/f_m$. Dans les deux régimes, un nombre sort directement d'une caractéristique visible ; tu n'as jamais à rétro-ingénier toute la forme d'onde.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "étape",
+    "scene_title": "détecteur d'enveloppe",
+    "controls_title": "contrôles",
+    "sliders": "curseurs",
+    "target": "cible",
+    "matched": "atteinte",
+    "matched_msg": "cible atteinte — avance ou essaie la suivante",
+    "question": "question",
+    "solved": "résolue",
+    "field_tau": "constante de temps tau",
+    "field_fm": "message f_m",
+    "field_fp": "porteuse f_p",
+    "field_m": "indice de modulation m",
+    "problem_prompt": "Lis la trace récupérée. Saisis le tau (ms) qui l'a produite.",
+    "correct": "correct",
+    "exact_was": "valeur exacte :",
+    "next_q": "suivant",
+    "try_again": "réessayer — nouvelle configuration",
+    "hidden_label": "entrée AM masquée — lis uniquement la sortie",
+    "plot_time": "domaine temporel",
+    "plot_output": "u_m(t) récupéré",
+    "legend_input": "entrée AM s(t)",
+    "legend_rect": "signal redressé r(t)",
+    "legend_smoothed": "u_C(t) lissé",
+    "legend_ideal": "enveloppe idéale",
+    "legend_target": "sortie cible",
+    "given_label": "donné",
+    "ripple_title": "ondulation de porteuse — tau trop petit",
+    "ripple_desc": "le condensateur se décharge entre les crêtes de porteuse ; période d'ondulation ~ 1/f_p",
+    "droop_title": "affaissement d'enveloppe — tau trop grand",
+    "droop_desc": "le condensateur ne peut pas suivre le message ; la sortie s'aplatit à la descente",
+    "ideal_title": "fenêtre idéale",
+    "ideal_desc": "1/f_p << tau << 1/f_m — récupération propre",
+    "peek_tip_1": "tau = RC. Ondulation de porteuse => tau trop petit (~ 1/(2*pi*f_p)). Affaissement d'enveloppe => tau trop grand (~ 1/f_m).",
+    "peek_tip_2": "Le tau idéal est proche de la moyenne géométrique sqrt((1/f_p)(1/f_m)). Ancre-toi d'abord, puis lis l'écart.",
+    "tip1": "balaie tau — observe l'ondulation (petit) et l'affaissement (grand)",
+    "tip2": "ajuste tau pour atteindre la cible en pointillés",
+    "tip3": "sortie seule — ondulation => petit tau, affaissement => grand tau"
+  },
+  "hints": {
+    "1": {
+      "1": "Pousse tau à l'extrême gauche. Tu dois voir des oscillations rapides sur l'enveloppe — c'est l'ondulation de porteuse.",
+      "2": "Pousse tau à l'extrême droite. La sortie turquoise cesse de suivre l'enveloppe ambre en pointillés à la descente — c'est l'affaissement.",
+      "3": "Le milieu sain est autour de tau ~ 0,15–0,3 ms avec f_m = 1 kHz et f_p = 10 kHz. Les deux indicateurs de défaut doivent s'allumer avant que Suivant ne s'active."
+    },
+    "2": {
+      "1": "Fais glisser tau jusqu'à ce que la sortie turquoise se superpose à la trace cible en pointillés gris sur toute la fenêtre.",
+      "2": "Tolérance ±10 %. Utilise les boutons ± pour un réglage fin près de la valeur cible.",
+      "3": "Si la superposition semble proche mais n'est pas validée, vérifie les deux extrémités de la fenêtre — un mauvais tau ne se voit souvent que dans une moitié."
+    },
+    "3": {
+      "1": "Cherche l'ondulation. Des oscillations rapides sur la trace signifient que tau est proche de 1/(2*pi*f_p).",
+      "2": "Cherche l'affaissement. Une descente aplatie signifie que tau est proche de 1/f_m ou plus grand.",
+      "3": "Si la trace est une copie propre de l'enveloppe, tau est dans la fenêtre idéale près de sqrt((1/f_p)(1/f_m))."
+    }
+  }
+}

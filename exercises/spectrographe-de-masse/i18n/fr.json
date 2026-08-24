@@ -1,0 +1,66 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Ajuste la tension accélératrice $U$ et le champ magnétique $B$, puis appuie sur TIRER. Observe comment le rayon $R$ du cercle décrit par l'ion réagit. Essaie au moins deux valeurs de $U$ et déplace $B$.",
+      "concept": "L'accélération fixe la vitesse de l'ion : $v = \\sqrt{2\\,q\\,U/m}$. Dans le champ magnétique perpendiculaire, la force de Lorentz courbe l'ion en un cercle de rayon $R = m\\,v/(q\\,B) = \\sqrt{2\\,U\\,m/q}\\,/\\,B$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois cellules du détecteur sont étiquetées avec les masses des ions cibles. Tire chaque ion pour qu'il atterrisse sur sa propre cellule. L'arc d'aperçu en pointillés montre où le couple $(U, B)$ actuel envoie l'ion chargé — aligne-le, puis TIRER.",
+      "concept": "En résolvant pour les réglages : $B = \\sqrt{2\\,U\\,m/q}\\,/\\,R$ ou $U = q\\,B^{2}\\,R^{2}/(2\\,m)$. Deux ions de masses différentes avec le même $(U, B)$ se séparent car $R \\propto \\sqrt{m}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Pas d'arc d'aperçu. Tu disposes d'un seul tir par ion. Lis la masse chargée $m$ et son rayon cible $R$, calcule $(U, B)$ sur papier, règle-les, puis TIRER. Épuise le budget et le banc se réinitialise.",
+      "concept": "Isole la masse : $m = q\\,B^{2}\\,R^{2}/(2\\,U)$. C'est l'équation d'identification du spectrographe de masse — le rayon de déviation $R$ est l'observable qui révèle $m$ une fois $U$, $B$ et $q$ fixés.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "hits": "RÉUSSIS",
+    "stage": "ÉTAPE",
+    "shots": "TIRS",
+    "loaded": "CHARGÉ",
+    "u_unit": "V",
+    "b_unit": "mT",
+    "m_unit": "u",
+    "r_unit": "mm",
+    "u_label": "U",
+    "b_label": "B",
+    "cell_prefix": "m =",
+    "ion_source": "SOURCE D'IONS",
+    "accelerator": "ACCÉLÉRATEUR",
+    "b_field": "CHAMP B",
+    "detector": "DÉTECTEUR",
+    "tip1": "change U, bouge B, puis TIRER",
+    "tip2": "utilise l'arc d'aperçu pour diriger chaque ion vers sa cellule",
+    "tip3": "calcule U et B à partir de m et du R cible, puis TIRER",
+    "peek_tip_scaling": "R est proportionnel à √m. Si deux cellules sont aux rayons R1 et R2, leurs masses vérifient m1/m2 = (R1/R2)² pour un même (U, B).",
+    "peek_tip_solve_b": "Fixe U à une valeur confortable, puis résous B = √(2 U m / q) / R. Petit B = grand rayon ; grand B = rayon serré.",
+    "peek_tip_solve_u": "Fixe B à une valeur confortable, puis résous U = q B² R² / (2 m). Une masse plus grande à la même cellule demande moins de U."
+  },
+  "hints": {
+    "1": {
+      "1": "Déplace le curseur U (droite) et le curseur B (gauche) et tire entre les changements.",
+      "2": "R croît avec √U et décroît quand B augmente — vérifie en doublant l'un puis l'autre.",
+      "3": "Pour un même ion, R = √(2 U m / q) / B : un même R admet plusieurs couples (U, B)."
+    },
+    "2": {
+      "1": "Chaque cellule est étiquetée avec la masse de son ion. Dirige l'arc d'aperçu vers cette cellule pour l'ion chargé.",
+      "2": "Résous pour un des réglages : B = √(2 U m / q) / R à U fixé, ou U = q B² R² / (2 m) à B fixé.",
+      "3": "L'ion chargé change automatiquement dans la file — après une réussite, la masse suivante est chargée."
+    },
+    "3": {
+      "1": "Note m et R pour l'ion chargé. Choisis un U raisonnable, résous pour B (ou vice versa).",
+      "2": "Réarrange R = √(2 U m / q) / B en m = q B² R² / (2 U) ; utilise-la pour vérifier ton couple (U, B).",
+      "3": "Observe le rapport : pour deux ions dans le même montage, R1/R2 = √(m1/m2). Un seul (U, B) peut atteindre les deux si leurs cellules respectent ce rapport."
+    }
+  }
+}

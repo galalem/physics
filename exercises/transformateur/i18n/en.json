@@ -1,0 +1,84 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Move the sliders $N_1$, $N_2$, and $U_1$ to explore the ideal transformer. The ratio $m = N_2/N_1$ sets everything: $U_2 = m \\cdot U_1$ and $I_1 = m \\cdot I_2$. Witness one step-up configuration ($m > 1$) AND one step-down ($m < 1$).",
+      "concept": "An ideal transformer transfers all primary power to the secondary through magnetic coupling in the iron core: $U_2/U_1 = N_2/N_1 = I_1/I_2$. Both windings share the same frequency and are in phase.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit each target secondary voltage $U_2$ by adjusting the number of secondary turns $N_2$. $N_1$ and $U_1$ are given. The live readout confirms when you land within $\\pm 5\\%$ of the target.",
+      "concept": "To reach a target $U_2$ from a fixed $U_1$, choose $N_2 = N_1 \\cdot (U_2/U_1)$. Direct rearrangement of the transformer ratio.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The secondary readouts are hidden. You are given $U_1$, $N_1$, and a target $U_2$. Compute the required $N_2$ on paper, then type it in and submit. Three scenarios in a row, three attempts each.",
+      "concept": "From $U_2/U_1 = N_2/N_1$, isolate $N_2 = N_1 \\cdot U_2/U_1$. Work it out first — the sim will only tell you right or wrong after you commit.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "transformer",
+    "scope": "oscilloscope",
+    "controls": "controls",
+    "primary": "primary",
+    "secondary": "secondary",
+    "core": "iron core",
+    "load": "load",
+    "n1": "N₁",
+    "n2": "N₂",
+    "u1": "U₁",
+    "u2": "U₂",
+    "i1": "I₁",
+    "i2": "I₂",
+    "m_ratio": "m = N₂/N₁",
+    "ac_source": "AC",
+    "sawStepUp_label": "step-up (m>1)",
+    "sawStepDown_label": "step-down (m<1)",
+    "sawU1_label": "primary sweep",
+    "targets": "TARGETS",
+    "target_prefix": "target U₂",
+    "given_u1": "given U₁",
+    "given_n1": "given N₁",
+    "unit_v": "V",
+    "unit_ma": "mA",
+    "unit_turns": "turns",
+    "scenario": "SCENARIO",
+    "attempts_left": "attempts",
+    "enter_n2": "enter N₂",
+    "submit": "submit",
+    "correct": "correct",
+    "wrong": "wrong",
+    "resetting": "resetting…",
+    "load_r": "R = 100 Ω",
+    "u1_wave": "u₁(t)",
+    "u2_wave": "u₂(t)",
+    "tip1": "sweep each slider; witness a step-up and a step-down configuration",
+    "tip2": "isolate N₂ from the ratio, then dial the slider until U₂ hits the target",
+    "tip3": "compute N₂ on paper first — submit only when you're sure",
+    "peek_tip": "Ideal transformer: U₂/U₁ = N₂/N₁. Isolate N₂ from the target U₂ and given U₁, N₁."
+  },
+  "hints": {
+    "1": {
+      "1": "Grab any slider and watch the secondary voltmeter respond.",
+      "2": "When $N_2 > N_1$ the transformer is step-up; when $N_2 < N_1$ it is step-down. Try both.",
+      "3": "Also move $U_1$ across at least two distinct values so you see $U_2$ scale linearly with the primary voltage."
+    },
+    "2": {
+      "1": "For a target $U_2$, the required ratio is $m = U_2/U_1$.",
+      "2": "Then $N_2 = m \\cdot N_1$. Move the $N_2$ slider until the live $U_2$ readout lands on the target.",
+      "3": "Tolerance is $\\pm 5\\%$. If the target is 110 V and U₁ is 220 V with N₁ = 1000, then N₂ = 500."
+    },
+    "3": {
+      "1": "Write down the given $U_1$, $N_1$, and target $U_2$ on paper first.",
+      "2": "Apply $N_2 = N_1 \\cdot (U_2/U_1)$. Plug in the three numbers and simplify.",
+      "3": "Example: $U_1 = 220$ V, $N_1 = 1000$, target $U_2 = 55$ V $\\Rightarrow N_2 = 1000 \\cdot 55 / 220 = 250$."
+    }
+  }
+}

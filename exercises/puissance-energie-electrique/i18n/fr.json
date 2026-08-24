@@ -1,0 +1,74 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Ferme l'interrupteur et déplace les curseurs. Observe l'ampèremètre, le voltmètre et l'affichage en direct de $P = U \\cdot I$. Essaie au moins deux valeurs différentes de $E$ et deux valeurs différentes de $R$. Note comment $P$ change avec $R$ à $E$ fixé.",
+      "concept": "La puissance électrique est le produit instantané de la tension aux bornes d'un dipôle et du courant qui le traverse : $P = U \\cdot I$. Pour un résistor, la loi d'Ohm donne $U = R \\cdot I$, donc $P = R \\cdot I^2 = U^2 / R$. L'énergie fournie pendant une durée est $W = P \\cdot \\Delta t$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins chaque puissance cible. La tension $E$ de la pile est fixée pour chaque cible ; ajuste $R$ pour que le résistor dissipe la puissance $P$ cible. Les deux cibles doivent être atteintes à $\\pm 5\\%$.",
+      "concept": "Pour un résistor branché aux bornes d'une source idéale $E$, la puissance dissipée est $P = E^2 / R$. Pour atteindre une puissance $P$ cible à $E$ fixé : $R = E^2 / P$. Un $R$ plus grand dissipe moins de puissance à la même tension.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les appareils de mesure et l'affichage en direct de $P$ sont cachés. $E$ est fixé et la puissance $P$ cible est indiquée. Calcule $R$ sur papier avec $P = E^2 / R$, règle le curseur, puis ferme l'interrupteur pour vérifier. Tu as 3 essais par scénario — réussis 3 scénarios différents d'affilée pour finir.",
+      "concept": "Évaluation à l'aveugle. Comme $P = E^2 / R$ pour un résistor pur, $R = E^2 / P$. Fais le calcul sur papier avant de toucher au curseur — la simulation est là pour confirmer ton calcul, pas pour deviner.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "schéma",
+    "controls": "contrôles",
+    "slider_E": "E",
+    "slider_R": "R",
+    "slider_dt": "Δt",
+    "unit_V": "V",
+    "unit_ohm": "Ω",
+    "unit_A": "A",
+    "unit_mA": "mA",
+    "unit_W": "W",
+    "unit_J": "J",
+    "unit_s": "s",
+    "power_formula": "P = U·I",
+    "energy_formula": "W = P·Δt",
+    "target_label": "cible",
+    "targets": "CIBLES",
+    "attempts_left": "essais restants",
+    "scenarios": "SCÉNARIOS",
+    "correct": "correct",
+    "wrong": "à côté — réessaie",
+    "verify": "ferme l'interrupteur pour vérifier",
+    "reveal_hint": "appareils cachés jusqu'à la fermeture",
+    "coverage_R": "R déplacé",
+    "coverage_E": "E déplacé",
+    "coverage_P": "P > 0 observé",
+    "tip1": "ferme l'interrupteur, puis balaie E et R. Le bandeau de formule se met à jour en direct.",
+    "tip2": "résous R à partir de P = E²/R. Le curseur R s'accroche par pas de 1 Ω.",
+    "tip3": "R = E² / P — écris-le avant de toucher au curseur",
+    "peek_tip": "Pour un résistor aux bornes d'une source idéale : P = U·I avec U = E et I = E/R, donc P = E²/R. Réarrange pour R."
+  },
+  "hints": {
+    "1": {
+      "1": "Clique d'abord l'interrupteur — les appareils ne mesurent que lorsqu'il est fermé.",
+      "2": "Fais glisser R en gardant E fixé. Observe P diminuer quand R augmente.",
+      "3": "Essaie E = 12 V. Note P à R = 6 Ω, puis à R = 24 Ω — les nombres incarnent P = U²/R."
+    },
+    "2": {
+      "1": "Lis la cible : E est fixé, P est donné. Tu choisis R.",
+      "2": "Utilise P = E²/R. Résous R = E²/P avant de faire glisser le curseur.",
+      "3": "Si E = 12 V et P cible = 6 W, alors R = 144/6 = 24 Ω."
+    },
+    "3": {
+      "1": "La relation P = E²/R tient toujours — les appareils ne le montrent simplement pas en direct.",
+      "2": "Isole R : R = E² / P. Insère le E visible et le P cible.",
+      "3": "Fais la division sur papier d'abord. Le curseur va par pas de 1 Ω ; arrondis à l'ohm le plus proche."
+    }
+  }
+}

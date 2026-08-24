@@ -1,0 +1,55 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser la source orange le long de sa piste en pointillés. Regarde le rayon traverser l'interface air-eau — le rapport $n_1 \\sin(i_1) / (n_2 \\sin(i_2))$ reste égal à $1$.",
+      "concept": "Loi de Snell-Descartes : $n_1 \\sin(i_1) = n_2 \\sin(i_2)$. En passant de l'air ($n_1 = 1{,}00$) à l'eau ($n_2 = 1{,}33$), le rayon se rapproche de la normale, donc $i_2 < i_1$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Vise avec la source, puis appuie sur Tirer (ou Espace) pour lancer le rayon. Allume les 3 cibles sous l'eau — tu disposes de 7 tirs.",
+      "concept": "La loi de Snell permet de prévoir où le rayon réfracté ressort sous l'eau. Pour que le rayon réfracté atteigne une cible, résous $\\sin(i_1) = (n_2 / n_1) \\sin(i_2)$ pour trouver l'angle $i_1$ nécessaire.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le rayon réfracté est masqué. Lis les coordonnées de $S$, $I$ et $T$, calcule l'angle d'incidence $i_1$ qui fait tomber le rayon sur la cible, place $S$, puis tire. Aperçu te donne la stratégie.",
+      "concept": "Pour chaque cible, calcule $i_2 = \\arctan((T_x - I_x) / (I_y - T_y))$, puis inverse la loi de Snell : $\\sin(i_1) = (n_2 / n_1) \\sin(i_2)$. Place $S$ pour que le rayon incident de $S$ vers $I$ forme cet angle avec la normale verticale.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "shots": "TIRS",
+    "lit": "ALLUMÉES",
+    "target": "CIBLE",
+    "exhausted": "TIRS ÉPUISÉS · RÉINITIALISE POUR RÉESSAYER",
+    "stage": "ÉTAPE",
+    "tip1": "fais glisser la source pour changer i₁",
+    "tip2": "vise, puis appuie sur ESPACE pour tirer",
+    "tip3": "calcule i₁ avec Snell, place S, puis tire",
+    "tir": "RÉFLEXION TOTALE · PAS DE RAYON RÉFRACTÉ",
+    "peek_strategy": "inverse Snell : sin(i₁) = (n₂/n₁)·sin(i₂). Lis T-I pour trouver i₂ d'abord."
+  },
+  "hints": {
+    "1": {
+      "1": "Attrape la source orange et fais-la glisser sur la piste en pointillés.",
+      "2": "En la déplaçant, observe l'angle d'incidence i₁ et l'angle de réfraction i₂ dans le cadran — l'un est toujours plus petit que l'autre.",
+      "3": "L'eau est plus dense que l'air (n₂ > n₁), donc le rayon se rapproche de la normale en entrant dans l'eau : i₂ < i₁ toujours."
+    },
+    "2": {
+      "1": "Le rayon ne part que lorsque tu appuies sur Tirer (ou Espace). Vise d'abord en plaçant la source.",
+      "2": "Pour atteindre une cible T sous l'eau, le rayon réfracté depuis I doit passer par T. Calcule i₂ à partir de la direction T→I, puis utilise Snell pour obtenir l'angle d'incidence i₁ nécessaire à la surface.",
+      "3": "Vérification des signes : si T est à droite de I, la source S doit être à GAUCHE de I (le rayon dévie mais ne change pas de côté à l'interface)."
+    },
+    "3": {
+      "1": "Note les coordonnées de S, I et T lues dans la scène — tu vas toutes en avoir besoin.",
+      "2": "Étape 1 : depuis T et I, calcule i₂ = arctan((T.x − I.x) / (I.y − T.y)) en cartésien avec y vers le haut. Étape 2 : sin(i₁) = (n₂ / n₁) · sin(i₂) — prends arcsin pour obtenir i₁.",
+      "3": "Étape 3 : place S en S.x = I.x − sign(T.x − I.x) · (I.y − S.y) · tan(i₁), avec I.y − S.y = 125 en cartésien. Aperçu montre le i₁ courant pour que tu vérifies avant de tirer."
+    }
+  }
+}

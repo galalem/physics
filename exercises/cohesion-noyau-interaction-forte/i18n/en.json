@@ -1,0 +1,68 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Slide $Z$ (protons) and $N$ (neutrons) to build a nucleus. Watch the binding-energy-per-nucleon curve ($E_\\ell / A$) and the two force bars: the short-range strong attraction and the long-range Coulomb repulsion. Advance after visiting $6$ different elements.",
+      "concept": "Every nucleus is held together by the short-range strong nuclear force acting between neighbouring nucleons. It is opposed by Coulomb repulsion between protons, which grows with $Z^2$. The binding-energy-per-nucleon curve $E_\\ell / A$ measures how tightly each nucleon is bound; its peak near $A \\approx 56$ (iron) marks the most stable region.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Build each named target nucleus by setting $Z$ and $N$. Compare where each target sits on the $E_\\ell / A$ curve and how the two force bars balance.",
+      "concept": "Light nuclei sit on the rising side of the curve — fusing them releases energy. Heavy nuclei sit on the falling side — splitting them (fission) releases energy. Iron sits at the peak: it is the endpoint of both processes.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Force bars and curve marker are hidden. Given $Z$ and $N$, decide where the nucleus sits on the $E_\\ell / A$ curve: rising side, peak, or falling side. You must answer all correctly in one pass — a wrong answer restarts the deck.",
+      "concept": "Rule of thumb: $A < 20$ is on the rising side (fusion territory); $A \\approx 50$–$70$ is at the peak (iron / nickel); $A > 100$ is on the falling side (fission territory). Compute $A = Z + N$, then place it on the curve.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "stage",
+    "controls_title": "controls",
+    "nucleus": "nucleus",
+    "binding_curve": "E_l / A  vs  A",
+    "force_bars": "forces (qualitative)",
+    "strong_force": "strong (short-range)",
+    "coulomb_force": "coulomb (long-range)",
+    "field_Z": "atomic number Z",
+    "field_N": "neutron count N",
+    "field_A": "mass number A",
+    "elements_seen": "elements",
+    "matched": "matched",
+    "correct": "correct",
+    "target": "target nucleus",
+    "given": "given",
+    "where_on_curve": "where does this nucleus sit on the E_l / A curve?",
+    "choice_rising": "rising side (light nuclei)",
+    "choice_peak": "near the peak (iron region)",
+    "choice_falling": "falling side (heavy nuclei)",
+    "peek_tip": "Compute A = Z + N. Rule of thumb: A below 20 = rising side (fusion); A between 50 and 70 = peak (iron/nickel); A above 100 = falling side (fission). Do not look at the curve — reason from A alone.",
+    "iron_marker": "Fe-56 (peak)",
+    "tip1": "slide Z and N — visit light, medium, and heavy elements",
+    "tip2": "match each target; compare where it sits on the curve",
+    "tip3": "compute A = Z + N, then place it on the curve"
+  },
+  "hints": {
+    "1": {
+      "1": "Try light nuclei first: hydrogen (Z=1), helium (Z=2), carbon (Z=6), oxygen (Z=8).",
+      "2": "Then medium nuclei: iron (Z=26), nickel (Z=28). Notice the E_l/A curve peaks there.",
+      "3": "Finally heavy nuclei: lead (Z=82), uranium (Z=92). The curve comes back down — heavy nuclei are less tightly bound per nucleon."
+    },
+    "2": {
+      "1": "For Helium-4 set Z=2 and N=2. It sits low on the rising side of the curve — light nuclei are less bound per nucleon.",
+      "2": "For Iron-56 set Z=26 and N=30. This is the peak: the most tightly bound nucleon on average.",
+      "3": "For Uranium-235 set Z=92 and N=143. Watch the Coulomb bar grow — heavy nuclei are less bound because proton repulsion catches up."
+    },
+    "3": {
+      "1": "Only A matters for this classification. Compute A = Z + N first.",
+      "2": "A below 20 → rising side (fusion territory). A above 100 → falling side (fission territory).",
+      "3": "The peak is narrow: only nuclei near A = 50 to 70 count as 'peak'. Everything else is either rising or falling."
+    }
+  }
+}

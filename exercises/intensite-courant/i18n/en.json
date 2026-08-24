@@ -1,0 +1,77 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Four slots form a series loop. Drag components from the palette to build a working circuit and place the ammeter to read the current $I$ (in mA). Move the ammeter to two different slots and confirm the reading is the same — current is conserved around a series loop.",
+      "concept": "Electric current $I$ measures the rate at which charge crosses a section: $I = \\Delta Q / \\Delta t$, in amperes ($1\\,\\text{A} = 1\\,\\text{C/s}$). In a series loop, $I$ is the same at every point — an ammeter reads the same value no matter where it sits in the loop.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Two targets. Insert the ammeter into the loop and choose the right dipoles so the reading matches each target current in turn. Adding a resistor drops the current; removing it restores the full value.",
+      "concept": "The intensity $I$ of the current is set by the source and by what the circuit contains. For a given battery, a larger total resistance means a smaller $I$. The ammeter, wired in series, does not perturb the loop — it only reports.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Three slots are pre-placed. One is empty. Pick the single component that satisfies the goal shown in the corner and drop it in — one attempt. The ammeter reading stays hidden until you commit.",
+      "concept": "Before touching the palette, reason on paper: is the loop already closed? Is there a receiver? Do we need to measure, complete, or receive current? Then commit.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "schematic",
+    "palette": "palette",
+    "targets": "TARGETS",
+    "comp_battery": "battery",
+    "comp_lamp": "lamp",
+    "comp_wire": "wire",
+    "comp_resistor": "resistor",
+    "comp_ammeter": "ammeter",
+    "measured_I": "measured I",
+    "uniform_I": "same I twice",
+    "target_current": "target",
+    "current_read": "I",
+    "unit_mA": "mA",
+    "hidden_reading": "?",
+    "place_component": "choose and place",
+    "correct": "correct",
+    "wrong": "wrong",
+    "attempts_left": "attempts left",
+    "puzzle_of": "puzzle",
+    "goal_prefix": "goal",
+    "goal_measure": "add a device that measures I without changing the circuit",
+    "goal_receive": "add the receiver so current can flow",
+    "goal_close": "close the loop without changing the ammeter reading",
+    "diag_incomplete": "loop broken — fill every slot",
+    "diag_no_battery": "no source — nothing drives the current",
+    "diag_no_lamp": "no receiver in the loop",
+    "diag_no_ammeter": "loop closed — drop the ammeter in to read I",
+    "diag_ok": "circuit closed",
+    "tip1": "drag from the palette; drag a placed component out to remove it; the ammeter shows I in mA",
+    "tip2": "the ammeter must be in the loop for the reading to count — swap resistors to change I",
+    "tip3": "read the goal, reason on paper, then place one component",
+    "peek_tip": "The intensity I is the same at every point of a series loop. Ask what the goal really needs: a measuring device (ammeter), a receiver (lamp), or a plain conductor (wire)?"
+  },
+  "hints": {
+    "1": {
+      "1": "Start by dragging four components onto the four slots so a lamp lights.",
+      "2": "Put the ammeter into one of the empty slots and read the number that appears above it.",
+      "3": "Move the ammeter to a second slot in the same loop. The reading should not change — that is what 'I is uniform' means."
+    },
+    "2": {
+      "1": "Only readings taken with the ammeter actually in the loop count toward a target.",
+      "2": "The full-lit current is 240 mA. Adding a single resistor drops it to 60 mA.",
+      "3": "For target 240 mA: battery + wire + lamp + ammeter. For target 60 mA: battery + resistor + lamp + ammeter."
+    },
+    "3": {
+      "1": "Read the goal chip in the top-right corner. It tells you what role the missing component must play.",
+      "2": "A wire completes a loop without adding resistance. An ammeter measures I. A lamp is a receiver. A resistor lowers I.",
+      "3": "Match the missing role to the goal: 'measure I' → ammeter, 'receiver' → lamp, 'close the loop' → wire."
+    }
+  }
+}

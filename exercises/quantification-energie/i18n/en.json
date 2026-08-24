@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "A hydrogen atom sits in front of you. Its electron can only occupy the discrete levels $E_n = -13.6 / n^2$ eV drawn on the left. Send in photons of energy $h\\nu$ (right slider) from different starting states $n_i$ (left slider). Watch which photons are absorbed and which pass through.",
+      "concept": "Bohr quantization: bound-state energies form a discrete ladder $E_n = -\\dfrac{E_1}{n^2}$ with $E_1 = 13.6$ eV. Absorption is allowed only when the photon's energy matches an exact level gap: $h\\nu = E_{n_f} - E_{n_i} = E_1 \\left(\\dfrac{1}{n_i^2} - \\dfrac{1}{n_f^2}\\right)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "A target transition is highlighted on the diagram: bring the atom from the marked $n_i$ up to the marked $n_f$. Set the starting level and tune $h\\nu$ until the arrow tip lands on the target line.",
+      "concept": "For a chosen initial state $n_i$ and a chosen final state $n_f$, exactly one photon energy works: $h\\nu^{*} = E_1 \\left(\\dfrac{1}{n_i^2} - \\dfrac{1}{n_f^2}\\right)$. Any other value passes through — the spectrum is a line spectrum, not a continuum.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The energy-level diagram is hidden. You are told the initial state $n_i$ and the target final state $n_f$ only. Compute $h\\nu$ on paper from the Bohr formula, then set the two sliders to your answer and submit.",
+      "concept": "Rearrange for the photon energy: $h\\nu = E_1 \\left(\\dfrac{1}{n_i^2} - \\dfrac{1}{n_f^2}\\right)$ with $E_1 = 13.6$ eV. One shot per attempt — a wrong submit rotates to a different transition.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "diagram_title": "hydrogen levels",
+    "atom_label": "H atom",
+    "photon_label": "photon",
+    "target_label": "target",
+    "match_ok": "absorbed",
+    "no_absorb": "passes through",
+    "ionized": "ionized",
+    "level_e0": "E = 0 (ionization)",
+    "level_e1": "E_1 = -13.6 eV",
+    "current_n": "n_i",
+    "target_arrow": "n_i to n_f",
+    "tip1": "sweep both sliders — try many n_i and many h-nu, notice only certain values absorb",
+    "tip2": "match the target: set n_i to the marked level, tune h-nu until the arrow tip hits n_f",
+    "tip3": "compute h-nu on paper first, then set both sliders and submit once",
+    "peek_tip_formula": "h-nu = 13.6 (1/n_i^2 - 1/n_f^2). Substitute the target n_i and n_f, in eV.",
+    "peek_tip_anchor": "Balmer (n_i=2) transitions are in visible range 1.9-3.4 eV; Lyman (n_i=1) are UV, 10-13 eV."
+  },
+  "hints": {
+    "1": {
+      "1": "Not every h-nu produces absorption. Try holding n_i fixed and slowly sweeping h-nu — most values pass through.",
+      "2": "When absorption happens, the arrow tip lands exactly on another level. What is the algebraic condition? h-nu equals a specific level-to-level gap.",
+      "3": "For n_i = 2, the smallest absorption is n=2 to n=3 at h-nu = 13.6 (1/4 - 1/9) = 1.89 eV. Try it."
+    },
+    "2": {
+      "1": "Read the two dashed levels on the diagram: one is your n_i, the other is n_f. Set the n_i slider first.",
+      "2": "Only one photon energy climbs from n_i to n_f. It is h-nu = 13.6 (1/n_i^2 - 1/n_f^2). Plug in and set the slider.",
+      "3": "If the target says n_i = 2 and n_f = 4: h-nu = 13.6 (1/4 - 1/16) = 13.6 x 3/16 = 2.55 eV."
+    },
+    "3": {
+      "1": "The diagram is gone but the formula E_n = -13.6/n^2 is not. Write out E_i and E_f for the given n_i and n_f.",
+      "2": "Then h-nu = E_f - E_i = 13.6 (1/n_i^2 - 1/n_f^2). Compute the two reciprocals, subtract, multiply by 13.6.",
+      "3": "Do not forget to set n_i on the discrete slider before submitting. Both n_i and h-nu must match."
+    }
+  }
+}

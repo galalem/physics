@@ -1,0 +1,68 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Drag a resistor cartridge into the empty slot and move the voltage slider $E$. Watch the ammeter reading $I$ and the growing $I(U)$ scatter plot. Try at least two different resistors and two different voltages. The lamp cartridge is non-ohmic — note how its trace differs.",
+      "concept": "Ohm's law for a resistor: $U = R \\cdot I$, so $I = E / R$ when the battery is ideal. On the $I(U)$ plot the resistor traces a straight line through the origin whose slope is $1/R$. The lamp is not ohmic — its trace curves.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit both target readings shown top-right. Pick the correct resistor and adjust $E$ until the ammeter reads the target current within tolerance. Order does not matter.",
+      "concept": "For an ideal battery, the voltage across the resistor equals the source voltage: $U = E$. So $I = E / R$. To read $I = 100$ mA through $R = 47\\,\\Omega$ you need $E = R \\cdot I = 4.7$ V.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The $I(U)$ scatter on the left shows measurements taken with an unknown resistor. Read the slope, compute $R = U / I$ on paper, then drop the matching cartridge from the restricted palette into the empty slot. One attempt.",
+      "concept": "Slope of the $I(U)$ line is $1/R$. Pick any point $(U, I)$ on the line and use $R = U / I$. All points lie on the same line for an ohmic dipole — pick the one that reads most cleanly.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "schematic",
+    "palette": "palette",
+    "plot": "I vs U",
+    "voltage": "voltage E",
+    "u_axis": "U (V)",
+    "i_axis": "I (mA)",
+    "targets": "TARGETS",
+    "target_prefix": "T",
+    "correct": "correct",
+    "wrong": "wrong",
+    "attempts_left": "attempts left",
+    "place_resistor": "read the slope · pick the resistor",
+    "seen_r": "resistors tried",
+    "seen_e": "voltages tried",
+    "unknown_r": "R = ?",
+    "tip1": "drag a resistor into the slot; move the E slider; watch the ammeter and the plot",
+    "tip2": "R sets the slope; E sets the operating point on that line",
+    "tip3": "compute R = U / I from any point on the plotted line",
+    "peek_tip": "Slope of the I(U) line equals 1/R. Pick any point, then R = U / I.",
+    "comp_r47": "47 Ohm",
+    "comp_r100": "100 Ohm",
+    "comp_r220": "220 Ohm",
+    "comp_lamp": "lamp (non-ohmic)"
+  },
+  "hints": {
+    "1": {
+      "1": "Drag a resistor cartridge into the empty slot on the right side of the circuit.",
+      "2": "Move the E slider up and down. The ammeter reading changes proportionally.",
+      "3": "Swap in a different resistor. Both traces are straight, but their slopes differ. The steeper slope is the smaller R."
+    },
+    "2": {
+      "1": "Read each target: it fixes both the resistor value and the target current.",
+      "2": "Ohm's law rearranged: E = R times I. For 100 mA through 47 Ohm, set E = 4.7 V.",
+      "3": "Place the required resistor, then nudge E in 0.1 V steps until the ammeter is within tolerance of the target."
+    },
+    "3": {
+      "1": "Look at the scatter plot on the left. All measurements are on a straight line through the origin — that means one resistor.",
+      "2": "Pick any point on the line. Read its U and its I. Compute R = U / I.",
+      "3": "If R comes out near 100, the answer is 100 Ohm. Match to the closest cartridge in the palette."
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser $U_{max}$ et $f$ pour façonner la tension alternative $u(t) = U_{max}\\,\\sin(2\\pi f\\,t)$. Complète au moins une période entière pour avancer.",
+      "concept": "La tension alternative oscille entre $+U_{max}$ et $-U_{max}$ avec la période $T = 1/f$. Un multimètre affiche la valeur efficace $U_{eff} = U_{max}/\\sqrt{2}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Superpose ta courbe en direct sur la cible en pointillés : ajuste $U_{max}$ et $f$ jusqu'à ce que les deux correspondent à la tolérance près.",
+      "concept": "Crête à crête $= 2\\,U_{max}$. La période $T$ est la distance horizontale entre deux maxima consécutifs. Fréquence $f = 1/T$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Seule la courbe cible est tracée. Lis $U_{max}$ sur son sommet et $f$ à partir de sa période, règle les curseurs, puis appuie sur LANCER.",
+      "concept": "Méthode : mesure la hauteur du sommet $\\Rightarrow U_{max}$. Mesure le temps entre deux sommets $\\Rightarrow T$, puis $f = 1/T$. Vérifie avec $U_{eff} = U_{max}/\\sqrt{2}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit": "circuit alternatif",
+    "chart_title": "u(t)",
+    "y_axis_label": "u (V)",
+    "hit": "correspondance",
+    "match_ok": "correspondance",
+    "match_off": "écart",
+    "submit_button": "LANCER",
+    "param1_name": "U_max",
+    "param2_name": "f",
+    "source_label": "AC",
+    "resistor_label": "R",
+    "peek_hint": "la hauteur du sommet donne U_max ; le temps entre deux sommets donne T, puis f = 1/T",
+    "tip1": "fais glisser U_max et f — observe les sommets, les creux et la valeur efficace U_eff",
+    "tip2": "fais correspondre à la cible en pointillés : ajuste U_max pour la hauteur des sommets, f pour leur espacement",
+    "tip3": "lis U_max sur le sommet et T sur l'espacement des sommets, calcule f = 1/T, appuie sur LANCER"
+  },
+  "hints": {
+    "1": {
+      "1": "Déplace les deux curseurs — observe comment U_max met à l'échelle les sommets et f resserre la période.",
+      "2": "Les lignes en pointillés à +U_max et -U_max sont des enveloppes. La ligne en pointillés à U_eff = U_max/sqrt(2) marque ce que lit un multimètre.",
+      "3": "Une période entière = une crête + un creux. Attends que l'horloge de la simulation dépasse t = T = 1/f."
+    },
+    "2": {
+      "1": "La hauteur du sommet de la cible est ton U_max. Règle d'abord le curseur U_max.",
+      "2": "Compte combien de périodes tiennent dans la fenêtre visible ; chaque période fait T = 1/f de large.",
+      "3": "Affine f en dernier — de petites variations de f décalent visiblement plusieurs sommets."
+    },
+    "3": {
+      "1": "Regarde la cible : quelle est la valeur maximale qu'elle atteint ? C'est U_max.",
+      "2": "Repère deux sommets consécutifs sur la cible. La distance horizontale est T. Puis f = 1/T.",
+      "3": "Appuie sur Peek pour la méthode de lecture. Règle U_max et f, puis LANCER."
+    }
+  }
+}

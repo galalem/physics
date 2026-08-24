@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Fais glisser la flèche objet $\\overline{AB}$ le long de l'axe. Trois rayons caractéristiques partent de $B$ et construisent l'image $\\overline{A'B'}$. Observe l'image basculer à travers l'infini quand $\\overline{AB}$ franchit le foyer $F$.",
+      "concept": "Conjugaison d'une lentille mince : $\\frac{1}{\\overline{OA'}} - \\frac{1}{\\overline{OA}} = \\frac{1}{f'}$. Grandissement : $\\gamma = \\frac{\\overline{OA'}}{\\overline{OA}}$. Convention de signe : objet réel $\\overline{OA} < 0$ ; lentille convergente $f' > 0$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Place l'objet $\\overline{AB}$ pour que son image $\\overline{A'B'}$ tombe sur chaque flèche cible en pointillés. Les trois rayons restent visibles — utilise-les pour aligner l'image, puis appuie sur Tirer (ou Espace) pour confirmer. Allume les 3 cibles en 5 tirs.",
+      "concept": "Chaque cible spécifie à la fois une position $\\overline{OA'}$ et un grandissement $\\gamma$. Une seule position d'objet $\\overline{OA}$ satisfait les deux simultanément.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les rayons et l'image sont cachés — il ne reste que l'objet et les flèches cibles en pointillés. Lis $\\overline{OA'}$ sur la base de chaque cible, calcule le $\\overline{OA}$ requis par la formule de conjugaison, fais glisser $\\overline{AB}$ à cet endroit, puis Tire. Tu as un tir par cible.",
+      "concept": "Inverse la formule : $\\overline{OA} = \\dfrac{1}{\\,\\frac{1}{\\overline{OA'}} - \\frac{1}{f'}\\,}$. Convertis la lecture de l'axe en centimètres, applique la convention de signe, puis calcule.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "fire": "TIRER",
+    "shots": "TIRS",
+    "lit": "ALLUMÉES",
+    "target": "CIBLE",
+    "stage": "ÉTAPE",
+    "object": "AB",
+    "image": "A'B'",
+    "lens": "LENTILLE",
+    "focal": "f'",
+    "real": "RÉELLE · INVERSÉE",
+    "virtual": "VIRTUELLE · DROITE",
+    "infinity": "IMAGE À L'INFINI",
+    "exhausted": "TIRS ÉPUISÉS · RÉINITIALISE POUR RÉESSAYER",
+    "tip1": "fais glisser AB le long de l'axe",
+    "tip2": "aligne l'image avec la cible, puis appuie sur ESPACE",
+    "tip3": "calcule OA depuis la cible, règle AB, puis tire",
+    "strategy": "OA = 1 / (1/OA' − 1/f'). Lis OA' sur la base de la cible sur l'axe."
+  },
+  "hints": {
+    "1": {
+      "1": "Attrape la flèche objet et fais-la glisser à gauche ou à droite le long de l'axe horizontal.",
+      "2": "F et F' sont les foyers, tous deux à 20 cm de la lentille. Observe ce qui se passe quand AB franchit F.",
+      "3": "Quand OA < −f' l'image est réelle et inversée à droite. Quand −f' < OA < 0 l'image est virtuelle et droite à gauche."
+    },
+    "2": {
+      "1": "Chaque flèche en pointillés te dit où l'image doit tomber — même position de base sur l'axe, même taille, même orientation.",
+      "2": "Fais glisser AB en observant l'A'B' construit — aligne la base de A'B' avec la base de la cible, puis appuie sur Tirer.",
+      "3": "Objet plus loin → image plus petite et plus proche. Objet à 2f' → image à 2f' avec γ = −1. Plus proche de F → image plus grande et plus loin."
+    },
+    "3": {
+      "1": "La base de la flèche cible en pointillés te dit OA'. Lis sa coordonnée x, soustrais la coordonnée x de la lentille, puis convertis en cm avec l'échelle de l'axe.",
+      "2": "Applique 1/OA' − 1/OA = 1/f' avec f' = 20 cm. Résous pour OA : OA = 1 / (1/OA' − 1/f'). Rappelle-toi que OA est négatif pour un objet réel.",
+      "3": "Fais glisser AB à x = 400 + OA·(px/cm). Utilise Aperçu pour vérifier que ton OA actuel dans la simulation correspond à ton calcul papier, puis Tire."
+    }
+  }
+}

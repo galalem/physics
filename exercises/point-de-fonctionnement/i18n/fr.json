@@ -1,0 +1,72 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Choisis un récepteur, puis déplace les curseurs. Observe la droite de charge $U = E - r \\cdot I$ pivoter sur le graphique et croiser la caractéristique du récepteur $U = f(I)$. Leur intersection est le point de fonctionnement $(I^*, U^*)$ — le seul couple $(I, U)$ auquel le circuit s'établit.",
+      "concept": "Un générateur réel obéit à $U = E - r \\cdot I$ (une droite décroissante dans le plan $I$-$U$). Chaque récepteur a sa propre caractéristique $U = f(I)$. En régime permanent, le même courant traverse les deux et la même tension existe à leurs bornes, donc $(I^*, U^*)$ doit être sur les deux courbes à la fois. La résolution graphique traite les récepteurs non linéaires (une diode maintient $U \\approx V_d$) aussi facilement que les linéaires.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins le point de fonctionnement cible (cercle rouge) en réglant $E$ et $r$. $I^*$ et $U^*$ doivent tous deux tomber à $\\pm 5\\%$ de la cible étiquetée.",
+      "concept": "Pour un récepteur linéaire $U = E' + r' \\cdot I$ (pose $E' = 0$ pour un résistor passif $R$), l'égalité avec la droite de charge donne $I^* = (E - E') / (r + r')$ et $U^* = E' + r' \\cdot I^*$. Incliner $r$ fait pivoter la droite de charge ; faire glisser $E$ la déplace vers le haut ou le bas.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Le point d'intersection est caché. La droite de charge et la caractéristique du récepteur sont toujours tracées, et les quatre paramètres du circuit sont étiquetés. Calcule $I^*$ et $U^*$ sur papier, puis saisis les deux valeurs. Trois essais par scénario — réussis trois scénarios consécutifs pour finir.",
+      "concept": "Résous simultanément le couple $U = E - r \\cdot I$ et $U = E' + r' \\cdot I$ : $I^* = (E - E') / (r + r')$, puis $U^* = E - r \\cdot I^*$ (ou de manière équivalente $U^* = E' + r' \\cdot I^*$). Pour un résistor passif, pose $E' = 0$ et $r' = R$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "schéma",
+    "graph": "caractéristiques I - U",
+    "targets": "CIBLES",
+    "deck": "PAQUET",
+    "attempts_left": "essais restants",
+    "correct": "correct",
+    "wrong": "faux",
+    "given": "donné",
+    "solve_for": "résoudre pour",
+    "submit": "valider",
+    "unit_amp": "A",
+    "unit_volt": "V",
+    "unit_ohm": "Ω",
+    "recv_resistor": "résistor",
+    "recv_motor": "moteur",
+    "recv_diode": "diode",
+    "diode_note": "diode idéale : Vd = 0,7 V, pas de curseur",
+    "tip1": "parcours les trois types de récepteur et déplace E, r pour sentir comment l'intersection bouge",
+    "tip2": "la cible n'est sur la droite de charge que si E et r sont bien réglés — lis-les sur le graphique",
+    "tip3": "lis E, r et les paramètres du récepteur, résous les deux droites, saisis I* et U*",
+    "peek_tip": "Deux droites, un croisement. Récepteur linéaire : I* = (E − E')/(r + r') ; puis U* = E' + r'·I* (un résistor est E'=0, r'=R). Diode : U* = Vd, I* = (E − Vd)/r.",
+    "scenario_progress": "scénario",
+    "of": "sur",
+    "coverage_moved": "PF déplacé",
+    "load_line": "droite de charge",
+    "recv_curve": "récepteur",
+    "op_point": "point de fonctionnement"
+  },
+  "hints": {
+    "1": {
+      "1": "Clique l'un des trois boutons de récepteur et déplace n'importe quel curseur. La courbe verte est le récepteur, la droite orange est le générateur.",
+      "2": "Essaie chaque récepteur tour à tour. Note la forme de la courbe : passant par l'origine pour le résistor, décalée vers le haut pour le moteur, plate à Vd pour la diode.",
+      "3": "Le point d'intersection est le point de fonctionnement. Augmente E : la droite de charge monte et l'intersection grimpe le long de la courbe du récepteur. Augmente r : la droite s'incline davantage et l'intersection glisse vers le bas."
+    },
+    "2": {
+      "1": "Le point cible a I* et U* fixés. Déplace E et r jusqu'à ce que le point jaune tombe dessus.",
+      "2": "Règle d'abord E pour que l'ordonnée à l'origine de la droite de charge soit près de la colonne U de la cible, puis ajuste r pour que la droite passe par la cible.",
+      "3": "Pour un résistor R, U* = R·I* est automatique une fois que I* est correct. Pour un moteur, U* = E' + r'·I* est aussi automatique. Concentre-toi sur l'égalité I* = (E − E')/(r + r') avec la cible."
+    },
+    "3": {
+      "1": "Lis les étiquettes : E, r viennent du générateur ; R (ou E', r') viennent du récepteur. Écris les deux équations de droite.",
+      "2": "Égale la droite de charge à la droite du récepteur et résous pour I*. Substitue dans l'une des droites pour obtenir U*. Attention au signe : I* doit être positif.",
+      "3": "Récepteur linéaire : I* = (E − E')/(r + r'). Cas du résistor : I* = E/(r + R), U* = R·I*. Cas du moteur : U* = E' + r'·I*. Arrondir à deux décimales suffit — la tolérance est ±5 %."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Pick a material from the palette and drop it into the sample slot. Move the length slider. Watch how the current $I$ and the category bar respond.",
+      "concept": "The resistance of a sample of length $\\ell$ and cross-section $S$ is $R = \\rho \\cdot \\ell / S$, where $\\rho$ is the material's resistivity. Low $\\rho$ (metals) $\\Rightarrow$ high current $\\Rightarrow$ conductor. Very high $\\rho$ (plastic, dry wood) $\\Rightarrow$ almost no current $\\Rightarrow$ insulator.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Hit each target lamp state. Choose a material and a length so the lamp reaches the requested brightness.",
+      "concept": "The lamp lights brightly for good conductors, glows dimly for materials of intermediate resistivity (semi-conductors like graphite), and stays off for insulators. Geometry matters: doubling the length doubles $R$ and halves $I$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "The current readout is hidden. From the material and geometry shown, predict the lamp state: bright, dim, or off. Three correct predictions in a row.",
+      "concept": "Categorise materials by orders of magnitude of $\\rho$. Metals: $\\rho \\approx 10^{-8}\\,\\Omega\\cdot\\text{m}$. Graphite: $\\rho \\approx 10^{-4}\\,\\Omega\\cdot\\text{m}$. Salt water: $\\rho \\approx 10^{-1}\\,\\Omega\\cdot\\text{m}$. Pure water and plastic: $\\rho \\geq 10^{5}\\,\\Omega\\cdot\\text{m}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "schematic": "circuit",
+    "palette": "materials",
+    "predict": "prediction",
+    "targets": "TARGETS",
+    "chain": "STREAK",
+    "sample_hint": "drop a material here",
+    "length": "length ℓ",
+    "cross_section": "S = 1 mm²",
+    "battery": "12 V",
+    "resistivity": "ρ",
+    "ohm_meter": "Ω·m",
+    "current": "I",
+    "milliamp": "mA",
+    "category_conductor": "conductor",
+    "category_semi": "semi-conductor",
+    "category_insulator": "insulator",
+    "lamp_bright": "bright",
+    "lamp_dim": "dim",
+    "lamp_off": "off",
+    "mat_copper": "copper",
+    "mat_aluminum": "aluminum",
+    "mat_graphite": "graphite",
+    "mat_salt_water": "salt water",
+    "mat_tap_water": "tap water",
+    "mat_distilled": "distilled water",
+    "mat_plastic": "plastic",
+    "correct": "correct",
+    "wrong": "wrong — streak reset",
+    "target_bright_lamp": "make lamp BRIGHT",
+    "target_dim_lamp": "make lamp DIM",
+    "target_off_lamp": "make lamp OFF",
+    "target_done": "hit",
+    "target_pending": "·",
+    "tip1": "pick materials one by one; slide length to see it stretch and thin the current",
+    "tip2": "graphite lights the lamp dimly when long; a metal wire always burns bright",
+    "tip3": "one attempt per scenario — reason before you click",
+    "peek_tip": "R = ρ·ℓ/S. Larger ρ or longer sample ⇒ higher R ⇒ smaller I. Rank the material's ρ before answering.",
+    "empty_slot": "no material — circuit is open"
+  },
+  "hints": {
+    "1": {
+      "1": "Drop any material into the slot on the right side of the loop.",
+      "2": "Try a metal first, then a plastic. The lamp brightness should be very different.",
+      "3": "Now try graphite and drag the length slider. That is the interesting middle case."
+    },
+    "2": {
+      "1": "For BRIGHT: any metal works. Copper or aluminum at any length.",
+      "2": "For DIM: graphite with a long length. The formula R = ρ·ℓ/S grows R when ℓ grows.",
+      "3": "For OFF: pick a poor conductor — tap water, distilled water, or plastic. Length barely matters."
+    },
+    "3": {
+      "1": "Look at ρ. If it's around 10⁻⁸ the material is a metal — bright.",
+      "2": "Compute R = ρ·ℓ/S in your head (S = 10⁻⁶ m²). Then I ≈ 12 / (100 + R).",
+      "3": "Bright if I > 60 mA. Dim if I between 3 and 60 mA. Off if I < 3 mA."
+    }
+  }
+}

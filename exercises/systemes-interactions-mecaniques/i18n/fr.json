@@ -1,0 +1,61 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Clique sur chaque objet — livre ($L$), table ($T$), Terre ($E$) — pour basculer son appartenance à ton **système**. Regarde les six flèches de forces changer de couleur : orange signifie que l'interaction traverse ta frontière (externe), gris pointillé qu'elle reste à l'intérieur (interne). Essaie au moins deux partitions différentes.",
+      "concept": "Un **système** est un choix, pas une donnée. Les six mêmes forces se retrouvent étiquetées internes ou externes selon uniquement l'endroit où tu traces la frontière — la physique, elle, ne change pas.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Maintenant la consigne te demande de construire un système précis. Clique sur les objets pour basculer leur appartenance, puis appuie sur Confirmer (ou Espace). Tu disposes de 5 tirs pour atteindre les 3 cibles.",
+      "concept": "Pour qu'une interaction entre $A$ et $B$ soit **interne**, il faut que $A$ et $B$ appartiennent tous les deux au système. Si un seul appartient, l'interaction traverse la frontière et est **externe** — elle apparaît sur le diagramme du système isolé.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les flèches ont disparu. Il ne reste que les trois points étiquetés. Trace chaque paire d'action-réaction (troisième loi de Newton) en cliquant deux objets à la suite. Tu disposes exactement de 3 essais — un doublon met fin à la manche et réinitialise l'étape.",
+      "concept": "Troisième loi de Newton : $\\vec{F}_{A \\to B} = -\\vec{F}_{B \\to A}$. Chaque interaction entre deux objets — contact ou gravitationnelle — produit exactement une telle paire.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "confirm": "CONFIRMER",
+    "shots": "TIRS",
+    "hits": "RÉUSSIS",
+    "pairs": "PAIRES",
+    "tries": "ESSAIS",
+    "stage": "ÉTAPE",
+    "system": "SYS",
+    "book": "livre",
+    "table": "table",
+    "earth": "Terre",
+    "tip1": "clique sur les objets pour basculer · essaie deux systèmes différents",
+    "tip2": "bascule pour correspondre à la consigne · appuie sur ESPACE pour confirmer",
+    "tip3": "calcule les paires sur papier d'abord · clique deux points par paire",
+    "query_LT": "rends F(L ↔ T) interne, F(L ↔ E) externe",
+    "query_TE": "rends F(T ↔ E) interne, F(L ↔ T) externe",
+    "query_ALL": "rends toutes les interactions internes",
+    "peek_hint": "chaque paire d'objets en interaction — contact OU gravité — est une paire de Newton. compte chacune une seule fois."
+  },
+  "hints": {
+    "1": {
+      "1": "Clique sur une forme (livre, table, ou la bande Terre) pour l'ajouter à ton système. Clique à nouveau pour la retirer.",
+      "2": "Regarde les couleurs des flèches après chaque bascule : les flèches orange traversent ta frontière en pointillés ; les flèches gris pointillé sont entièrement à l'intérieur.",
+      "3": "Une interaction entre deux objets est interne uniquement quand les DEUX extrémités sont dans le système. Essaie {L} puis {L, T} puis {L, T, E} pour voir le motif."
+    },
+    "2": {
+      "1": "Lis la consigne attentivement : elle nomme l'interaction qui doit être interne. Ses deux extrémités doivent être dans ton système.",
+      "2": "« F(L ↔ T) interne » veut dire que L et T sont tous deux dedans — et la seconde moitié de la consigne te dit quel objet doit rester DEHORS.",
+      "3": "Pour « toutes les interactions internes », le système doit contenir les trois objets — rien n'est laissé hors de la frontière."
+    },
+    "3": {
+      "1": "Il y a une paire de Newton pour chaque paire distincte d'objets en interaction dans la scène.",
+      "2": "Livre ↔ table est une interaction de contact, une paire. Livre ↔ Terre est une interaction gravitationnelle, une autre paire. N'oublie pas table ↔ Terre.",
+      "3": "Les trois paires sont (L,T), (L,E) et (T,E). Trace chacune exactement une fois — un doublon met fin à la manche."
+    }
+  }
+}

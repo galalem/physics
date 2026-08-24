@@ -1,0 +1,62 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Une lentille mince convergente est placée en $O$. Un objet réel $AB$ se trouve à gauche de la lentille à la position algébrique $\\overline{OA} = p$ (avec $p < 0$ pour un objet réel). Bouge les deux curseurs et regarde l'image $A'B'$ se redessiner. Remarque comment l'image bascule par l'infini quand $p$ franchit $-f'$.",
+      "concept": "Relation de conjugaison (Descartes) : $\\dfrac{1}{\\overline{OA'}} - \\dfrac{1}{\\overline{OA}} = \\dfrac{1}{f'}$. Grandissement : $\\gamma = \\dfrac{\\overline{A'B'}}{\\overline{AB}} = \\dfrac{\\overline{OA'}}{\\overline{OA}}$. Signe de $\\overline{OA'}$ : positif $\\to$ image réelle (à droite de la lentille), négatif $\\to$ image virtuelle (à gauche de la lentille). Signe de $\\gamma$ : positif $\\to$ droite, négatif $\\to$ renversée.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Trois images fantômes t'attendent sur le banc. Pour chacune, règle $p$ et $f'$ pour que ton image en direct (flèche orange) recouvre le fantôme (flèche turquoise) en position et en hauteur. Appuie sur VÉRIFIER pour valider — tu disposes de 5 tentatives au total pour les 3 fantômes.",
+      "concept": "Étant donnée une image cible en $\\overline{OA'} = p'^*$ avec grandissement $\\gamma^*$ : retrouve $\\overline{OA} = p'^{*}/\\gamma^{*}$, puis $f' = \\dfrac{p \\cdot p'}{p - p'}$ à partir de la relation de conjugaison. Ou aligne les flèches à l'œil.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "L'image est invisible. On te donne trois cibles sous forme de nombres : $(\\overline{OA'^{*}},\\ \\gamma^{*})$. Pour chacune, calcule $\\overline{OA}$ et $f'$ sur papier, règle les curseurs, puis appuie sur VÉRIFIER. Chaque cible a droit à un seul essai. Rate le signe de $\\overline{OA'}$ ou celui de $\\gamma$ et tu sors de la tolérance.",
+      "concept": "$\\overline{OA} = \\dfrac{\\overline{OA'^{*}}}{\\gamma^{*}}$ (à partir de $\\gamma = \\overline{OA'}/\\overline{OA}$). Puis $f' = \\dfrac{\\overline{OA}\\cdot \\overline{OA'^{*}}}{\\overline{OA} - \\overline{OA'^{*}}}$ (à partir de $1/\\overline{OA'} - 1/\\overline{OA} = 1/f'$). Conserve les signes — une image virtuelle ($\\overline{OA'^{*}} < 0$) impose $|\\gamma^{*}| > 1$ et $\\gamma^{*} > 0$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "bench": "banc optique (mm)",
+    "object": "objet AB",
+    "image": "image A'B'",
+    "lens": "lentille",
+    "focal": "F, F'",
+    "check": "VÉRIFIER",
+    "target": "CIBLE",
+    "shots": "ESSAIS",
+    "lit": "RÉUSSIES",
+    "match_ok": "aligné",
+    "virtual": "virtuelle",
+    "real": "réelle",
+    "peek_hint": "résous p = p'/γ, puis f' = p·p'/(p−p')",
+    "tip1": "bouge les deux curseurs — franchis p = −f' pour voir le basculement",
+    "tip2": "aligne la flèche orange sur le fantôme turquoise, puis VÉRIFIER",
+    "tip3": "calcule p et f' sur papier avant de toucher aux curseurs",
+    "exhausted": "ESSAIS ÉPUISÉS · RÉINITIALISE POUR DE NOUVEAUX FANTÔMES"
+  },
+  "hints": {
+    "1": {
+      "1": "Glisse p loin vers la gauche (grand |p|). L'image devrait rétrécir et rester réelle (à droite de la lentille).",
+      "2": "Maintenant rapproche p de la lentille. Près de p = −f' l'image explose et bascule en virtuelle (à gauche de la lentille).",
+      "3": "Observe la flèche : γ > 0 signifie qu'elle pointe vers le haut (droite, virtuelle) ; γ < 0 signifie qu'elle pointe vers le bas (renversée, réelle)."
+    },
+    "2": {
+      "1": "Regarde la flèche fantôme : son décalage horizontal par rapport à la lentille est p'*, son rapport de hauteur avec ton objet est γ*.",
+      "2": "Pour une cible (p'*, γ*) : pose p = p'*/γ*. Puis ajuste f' jusqu'à ce que la flèche orange se pose sur le fantôme.",
+      "3": "Forme fermée : f' = p·p'/(p−p'). Calcule une fois, règle les deux curseurs, puis VÉRIFIER."
+    },
+    "3": {
+      "1": "Tu n'as PAS encore à toucher aux curseurs. Lis les nombres cibles et résous sur papier.",
+      "2": "Étape 1 : p = p'*/γ*. Étape 2 : f' = p·p'*/(p−p'*). Étape 3 : règle les curseurs sur ces valeurs, puis VÉRIFIER.",
+      "3": "Vérification des signes : si p'* > 0 l'image est réelle, donc γ* doit être négatif (renversée). Si p'* < 0 l'image est virtuelle, donc γ* doit être positif et > 1."
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observe",
+      "instruction": "Slide $U_{max}$ and $f$ to shape the AC voltage $u(t) = U_{max}\\,\\sin(2\\pi f\\,t)$. Complete at least one full period to advance.",
+      "concept": "Alternating voltage oscillates between $+U_{max}$ and $-U_{max}$ with period $T = 1/f$. A multimeter reads the effective value $U_{eff} = U_{max}/\\sqrt{2}$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Experiment",
+      "instruction": "Overlay your live curve on the dashed target: tune $U_{max}$ and $f$ until both match within tolerance.",
+      "concept": "Peak-to-peak $= 2\\,U_{max}$. Period $T$ is the horizontal distance between two consecutive maxima. Frequency $f = 1/T$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Evaluate",
+      "instruction": "Only the target curve is drawn. Read $U_{max}$ from its peak and $f$ from its period, set the sliders, then press RUN.",
+      "concept": "Method: measure peak height $\\Rightarrow U_{max}$. Measure time between two peaks $\\Rightarrow T$, then $f = 1/T$. Verify with $U_{eff} = U_{max}/\\sqrt{2}$.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "STAGE",
+    "circuit": "AC circuit",
+    "chart_title": "u(t)",
+    "y_axis_label": "u (V)",
+    "hit": "match",
+    "match_ok": "match",
+    "match_off": "off",
+    "submit_button": "RUN",
+    "param1_name": "U_max",
+    "param2_name": "f",
+    "source_label": "AC",
+    "resistor_label": "R",
+    "peek_hint": "peak height gives U_max; time between two peaks gives T, then f = 1/T",
+    "tip1": "slide U_max and f — watch peaks, valleys, and the effective value U_eff",
+    "tip2": "match dashed target: adjust U_max for peak height, f for peak spacing",
+    "tip3": "read U_max from the peak and T from peak spacing, compute f = 1/T, press RUN"
+  },
+  "hints": {
+    "1": {
+      "1": "Move both sliders — watch how U_max scales the peaks and f squeezes the period.",
+      "2": "The dashed lines at +U_max and -U_max are envelopes. The dashed line at U_eff = U_max/sqrt(2) marks what a multimeter reads.",
+      "3": "One full period is one crest + one trough. Wait until the sim clock passes t = T = 1/f."
+    },
+    "2": {
+      "1": "The target's peak height is your U_max. Adjust the U_max slider first.",
+      "2": "Count how many periods fit in the visible window; each period is T = 1/f wide.",
+      "3": "Fine-tune f last — small f changes shift many peaks visibly."
+    },
+    "3": {
+      "1": "Look at the target: what is the highest value it reaches? That is U_max.",
+      "2": "Find two consecutive peaks on the target. The horizontal distance is T. Then f = 1/T.",
+      "3": "Press Peek for the reading method. Set U_max and f, then RUN."
+    }
+  }
+}

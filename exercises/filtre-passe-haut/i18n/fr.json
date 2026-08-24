@@ -1,0 +1,69 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Déplace les curseurs $R$ et $C$. Observe la courbe de gain de Bode monter de gauche à droite. Le repère violet se place sur la fréquence de coupure $f_c$ (là où $|H| = -3\\,\\text{dB}$). Au-dessus de $f_c$ le filtre passe ; en dessous, il atténue à $+20\\,\\text{dB/décade}$. Avance après avoir visité au moins $3$ décades différentes de $f_c$.",
+      "concept": "Un passe-haut CR du premier ordre a pour fonction de transfert $|H(f)| = (f/f_c)/\\sqrt{1 + (f/f_c)^2}$, avec la coupure $f_c = 1/(2\\pi\\,R\\,C)$. En décibels : $|H|_{\\text{dB}} = 10\\,\\log_{10}\\!\\bigl((f/f_c)^2/(1 + (f/f_c)^2)\\bigr)$. Le gain monte à $+20\\,\\text{dB/décade}$ loin sous $f_c$, vaut $-3\\,\\text{dB}$ à $f_c$, puis s'aplatit à $\\approx 0\\,\\text{dB}$ au-dessus.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Un signal de microphone est pollué par le ronflement secteur à $50\\,\\text{Hz}$. Ajuste $R$ et $C$ pour placer la coupure sur la fréquence cible indiquée par le trait orange en pointillés ($f_c = 200\\,\\text{Hz}$) de sorte que le ronflement soit atténué tandis que la bande vocale passe. Plusieurs couples $(R, C)$ marchent — il faut $R\\,C = 1/(2\\pi\\,f_c)$.",
+      "concept": "Formule de dimensionnement : $f_c = 1/(2\\pi\\,R\\,C)$, donc $R\\,C = 1/(2\\pi\\,f_c)$. Pour $f_c = 200\\,\\text{Hz}$ il faut $R\\,C \\approx 7{,}96\\times10^{-4}\\,\\text{s}$ ($796\\,\\mu\\text{s}$). Combinaisons possibles : $R = 8\\,\\text{k}\\Omega$ avec $C = 100\\,\\text{nF}$, ou $R = 800\\,\\Omega$ avec $C = 1\\,\\mu\\text{F}$. C'est le produit qui compte, pas les valeurs prises séparément. Usage courant : $C$ bloque le continu et le ronflement basse fréquence, $R$ fixe le coude.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les valeurs des composants sont cachées. Lis $f_c$ directement sur la courbe de gain de Bode — c'est là où $|H|$ croise $-3\\,\\text{dB}$, ou bien le coude où la pente montante à $+20\\,\\text{dB/décade}$ rejoint la partie plate. Réponds correctement à toutes les questions en une seule passe.",
+      "concept": "Lecture de $f_c$ sur un diagramme de Bode : trouve là où la courbe se situe $3\\,\\text{dB}$ sous le gain de la bande passante (le trait horizontal à $-3\\,\\text{dB}$ est tracé). Autre méthode : l'intersection des deux asymptotes (le côté en pente montante et le sommet plat) donne exactement $f_c$. Les deux méthodes donnent la même réponse.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit_title": "passe-haut CR",
+    "bode_title": "|H(f)| — gain de Bode",
+    "controls_title": "commandes",
+    "field_R": "résistance R",
+    "field_C": "capacité C",
+    "field_derived": "dérivé",
+    "v_in": "u_e",
+    "v_out": "u_s",
+    "fc_seen": "régions",
+    "matched": "cible atteinte",
+    "target": "cible",
+    "target_fc": "f_c cible",
+    "question": "question",
+    "read_fc": "lis f_c sur le tracé",
+    "fc_definition": "f_c est là où |H| = −3 dB (repère violet)",
+    "evaluate_prompt": "Valeurs des composants cachées. Lis f_c uniquement sur le diagramme de Bode.",
+    "wrong_restart": "faux — reprise",
+    "all_correct": "tout correct",
+    "tip1": "R↑ ou C↑ → f_c se décale à gauche ; f_c = 1/(2π·R·C)",
+    "tip2": "règle R·C jusqu'à ce que le repère violet se place sur le trait orange",
+    "tip3": "lis f_c sur le tracé là où |H| = −3 dB — toutes doivent passer",
+    "peek_tip_1": "À f = f_c le gain chute à 1/√2 (−3 dB). Trouve le coude et lis l'axe des x.",
+    "peek_tip_2": "Le trait de référence à −3 dB est tracé. Suis la courbe jusqu'au point de croisement.",
+    "peek_tip_3": "L'intersection des asymptotes est exactement f_c — prolonge les traits montant et plat jusqu'à leur rencontre."
+  },
+  "hints": {
+    "1": {
+      "1": "Le point violet sur le tracé marque f_c. Essaie d'augmenter R et regarde-le se décaler à gauche.",
+      "2": "f_c = 1/(2π·R·C). Doubler R divise f_c par 2. Diviser C par 2 double f_c.",
+      "3": "Visite 3 décades différentes de f_c. Essaie R = 100 Ω avec un petit C, puis un grand C, puis un grand R."
+    },
+    "2": {
+      "1": "Il faut R·C = 1/(2π·200) ≈ 7,96×10⁻⁴ s. Choisis un C rond puis calcule R.",
+      "2": "Essaie C = 100 nF (= 10⁻⁷ F). Alors R = 7,96×10⁻⁴ / 10⁻⁷ ≈ 7960 Ω ≈ 8 kΩ.",
+      "3": "Ou essaie C = 1 µF et R = 800 Ω. Ou C = 10 nF et R = 80 kΩ. Tous donnent f_c = 200 Hz."
+    },
+    "3": {
+      "1": "Regarde où la courbe montante croise le trait horizontal à −3 dB (orange en pointillés).",
+      "2": "Ou trouve le « coude » — là où la partie en pente montante s'aplatit. Ce coude est f_c.",
+      "3": "Lis l'axe des x en ce point. C'est une échelle log : chaque grande graduation vaut un facteur 10."
+    }
+  }
+}

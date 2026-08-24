@@ -1,0 +1,84 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Déplace les curseurs $N_1$, $N_2$ et $U_1$ pour explorer le transformateur idéal. Le rapport $m = N_2/N_1$ fixe tout : $U_2 = m \\cdot U_1$ et $I_1 = m \\cdot I_2$. Observe une configuration élévatrice ($m > 1$) ET une configuration abaisseuse ($m < 1$).",
+      "concept": "Un transformateur idéal transmet toute la puissance primaire au secondaire par couplage magnétique dans le noyau de fer : $U_2/U_1 = N_2/N_1 = I_1/I_2$. Les deux enroulements partagent la même fréquence et sont en phase.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Atteins chaque tension secondaire $U_2$ cible en ajustant le nombre de spires secondaires $N_2$. $N_1$ et $U_1$ sont donnés. L'affichage en direct confirme quand tu tombes à $\\pm 5\\%$ de la cible.",
+      "concept": "Pour atteindre un $U_2$ cible à partir d'un $U_1$ fixe, choisis $N_2 = N_1 \\cdot (U_2/U_1)$. Réarrangement direct du rapport de transformation.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les affichages secondaires sont cachés. On te donne $U_1$, $N_1$ et un $U_2$ cible. Calcule le $N_2$ requis sur papier, puis saisis-le et valide. Trois scénarios d'affilée, trois essais chacun.",
+      "concept": "À partir de $U_2/U_1 = N_2/N_1$, isole $N_2 = N_1 \\cdot U_2/U_1$. Fais-le d'abord — la simulation ne te dira juste ou faux qu'après validation.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "schematic": "transformateur",
+    "scope": "oscilloscope",
+    "controls": "contrôles",
+    "primary": "primaire",
+    "secondary": "secondaire",
+    "core": "noyau de fer",
+    "load": "charge",
+    "n1": "N₁",
+    "n2": "N₂",
+    "u1": "U₁",
+    "u2": "U₂",
+    "i1": "I₁",
+    "i2": "I₂",
+    "m_ratio": "m = N₂/N₁",
+    "ac_source": "CA",
+    "sawStepUp_label": "élévateur (m>1)",
+    "sawStepDown_label": "abaisseur (m<1)",
+    "sawU1_label": "balayage primaire",
+    "targets": "CIBLES",
+    "target_prefix": "U₂ cible",
+    "given_u1": "U₁ donné",
+    "given_n1": "N₁ donné",
+    "unit_v": "V",
+    "unit_ma": "mA",
+    "unit_turns": "spires",
+    "scenario": "SCÉNARIO",
+    "attempts_left": "essais",
+    "enter_n2": "entrer N₂",
+    "submit": "valider",
+    "correct": "correct",
+    "wrong": "faux",
+    "resetting": "réinitialisation…",
+    "load_r": "R = 100 Ω",
+    "u1_wave": "u₁(t)",
+    "u2_wave": "u₂(t)",
+    "tip1": "balaie chaque curseur ; observe une configuration élévatrice et une abaisseuse",
+    "tip2": "isole N₂ du rapport, puis règle le curseur jusqu'à ce que U₂ atteigne la cible",
+    "tip3": "calcule N₂ sur papier d'abord — ne valide que si tu es sûr",
+    "peek_tip": "Transformateur idéal : U₂/U₁ = N₂/N₁. Isole N₂ à partir du U₂ cible et des U₁, N₁ donnés."
+  },
+  "hints": {
+    "1": {
+      "1": "Prends n'importe quel curseur et observe la réponse du voltmètre secondaire.",
+      "2": "Quand $N_2 > N_1$ le transformateur est élévateur ; quand $N_2 < N_1$ il est abaisseur. Essaie les deux.",
+      "3": "Déplace aussi $U_1$ sur au moins deux valeurs distinctes pour voir $U_2$ varier linéairement avec la tension primaire."
+    },
+    "2": {
+      "1": "Pour un $U_2$ cible, le rapport requis est $m = U_2/U_1$.",
+      "2": "Puis $N_2 = m \\cdot N_1$. Déplace le curseur $N_2$ jusqu'à ce que la lecture en direct de $U_2$ tombe sur la cible.",
+      "3": "La tolérance est $\\pm 5\\%$. Si la cible est 110 V et U₁ vaut 220 V avec N₁ = 1000, alors N₂ = 500."
+    },
+    "3": {
+      "1": "Écris d'abord $U_1$, $N_1$ et le $U_2$ cible donnés sur papier.",
+      "2": "Applique $N_2 = N_1 \\cdot (U_2/U_1)$. Insère les trois nombres et simplifie.",
+      "3": "Exemple : $U_1 = 220$ V, $N_1 = 1000$, cible $U_2 = 55$ V $\\Rightarrow N_2 = 1000 \\cdot 55 / 220 = 250$."
+    }
+  }
+}

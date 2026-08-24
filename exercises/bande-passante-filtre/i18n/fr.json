@@ -1,0 +1,73 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Observer",
+      "instruction": "Déplace les curseurs $R$, $L$ et $C$. Observe la cloche de résonance se décaler et changer de largeur. Les deux repères violets se placent sur les fréquences de coupure $f_L$ et $f_H$ (là où $|H| = -3\\,\\text{dB}$). La bande passante est $\\Delta f = f_H - f_L$. Avance après avoir visité au moins $3$ décades différentes de $\\Delta f$.",
+      "concept": "Un passe-bande RLC série a pour fréquence de résonance $f_0 = 1/(2\\pi\\sqrt{L\\,C})$ et pour facteur de qualité $Q = (1/R)\\sqrt{L/C} = f_0/\\Delta f$. En dB : $|H|_{\\text{dB}} = -10\\,\\log_{10}\\!\\bigl(1 + Q^2(f/f_0 - f_0/f)^2\\bigr)$. Pic à $0\\,\\text{dB}$ à $f_0$ ; les deux points à $-3\\,\\text{dB}$ donnent $f_L$ et $f_H$, avec $\\Delta f = R/(2\\pi\\,L)$.",
+      "peekable": false
+    },
+    {
+      "index": 2,
+      "name": "Expérimenter",
+      "instruction": "Ajuste $R$, $L$ et $C$ pour que la bande passante corresponde à la largeur cible $\\Delta f = 200\\,\\text{Hz}$ (bande orange en pointillés entre les deux traits orange). Plusieurs combinaisons marchent — il faut $R/L = 2\\pi\\,\\Delta f$.",
+      "concept": "La bande passante ne dépend que de $R$ et $L$ : $\\Delta f = R/(2\\pi\\,L)$. $C$ décale le centre $f_0$ mais pas la largeur. Pour $\\Delta f = 200\\,\\text{Hz}$ : $R/L = 2\\pi\\cdot 200 \\approx 1257\\,\\text{s}^{-1}$. Par ex. $R = 126\\,\\Omega$ avec $L = 100\\,\\text{mH}$, ou $R = 12{,}6\\,\\Omega$ avec $L = 10\\,\\text{mH}$.",
+      "peekable": false
+    },
+    {
+      "index": 3,
+      "name": "Évaluer",
+      "instruction": "Les valeurs des composants sont cachées. Lis la bande passante $\\Delta f$ directement sur le diagramme de Bode — c'est la largeur de la cloche au niveau $-3\\,\\text{dB}$, soit $\\Delta f = f_H - f_L$. Réponds correctement à toutes les questions en une seule passe.",
+      "concept": "Lecture de $\\Delta f$ : repère les deux fréquences où la cloche croise $-3\\,\\text{dB}$ (le trait horizontal orange). Lis-les sur l'axe log des f, puis soustrais. Sur un axe log, un même écart visuel signifie un même facteur, pas un même écart — attention aux graduations.",
+      "peekable": true
+    }
+  ],
+  "labels": {
+    "stage": "ÉTAPE",
+    "circuit_title": "passe-bande RLC",
+    "bode_title": "|H(f)| — gain de Bode",
+    "controls_title": "commandes",
+    "field_R": "résistance R",
+    "field_L": "inductance L",
+    "field_C": "capacité C",
+    "field_derived": "dérivé",
+    "v_in": "u_e",
+    "v_out": "u_s",
+    "regions": "régions",
+    "matched": "cible atteinte",
+    "target": "cible",
+    "target_df": "Δf cible",
+    "question": "question",
+    "evaluate_prompt": "Valeurs des composants cachées. Lis la bande passante Δf uniquement sur le diagramme de Bode.",
+    "wrong_restart": "faux — reprise",
+    "all_correct": "tout correct",
+    "fL_label": "f_L",
+    "fH_label": "f_H",
+    "df_label": "Δf",
+    "f0_label": "f_0",
+    "q_label": "Q",
+    "tip1": "R↑ ou L↓ élargit Δf ;  Δf = R/(2π·L)",
+    "tip2": "règle R/L jusqu'à ce que la largeur de la cloche corresponde à la bande orange",
+    "tip3": "lis Δf là où |H| = −3 dB — toutes les questions doivent passer",
+    "peek_tip_1": "Δf est la largeur de la cloche au niveau −3 dB. Trouve où la courbe croise le trait orange des deux côtés et lis l'axe des x.",
+    "peek_tip_2": "Le pic se trouve à f_0 (0 dB). Descends de 3 dB et repère les deux fréquences. Δf = f_H − f_L.",
+    "peek_tip_3": "L'axe des x est en échelle log — le milieu visuel entre f_L et f_H n'est pas (f_L+f_H)/2 mais √(f_L·f_H) ≈ f_0."
+  },
+  "hints": {
+    "1": {
+      "1": "Les deux points violets marquent f_L et f_H. Fais varier R ou L et observe la cloche s'élargir ou se resserrer.",
+      "2": "Δf = R/(2π·L). Plus R est grand ou plus L est petit, plus la bande passante s'élargit. C déplace le centre f_0 mais laisse la largeur inchangée.",
+      "3": "Pour visiter 3 décades de Δf : essaie R = 10 Ω avec L = 100 mH (étroit), puis R = 100 Ω avec L = 10 mH (moyen), puis R = 1 kΩ avec L = 1 mH (large)."
+    },
+    "2": {
+      "1": "Il faut Δf = 200 Hz. Seuls R et L comptent : R/L = 2π·200 ≈ 1257 s⁻¹.",
+      "2": "Choisis un L rond puis calcule R. L = 100 mH donne R = 1257·0,1 ≈ 126 Ω. C décale f_0 mais pas la largeur — mets-le à une valeur raisonnable.",
+      "3": "Ou L = 10 mH avec R = 12,6 Ω. Ou L = 1 H avec R = 1257 Ω. N'importe quel C marche ; essaie C = 1 µF pour une fréquence centrale confortable."
+    },
+    "3": {
+      "1": "Trouve où la cloche croise le trait horizontal de référence à −3 dB — à gauche et à droite.",
+      "2": "Lis l'axe des x aux deux croisements : ce sont f_L et f_H. Puis Δf = f_H − f_L.",
+      "3": "Attention à l'axe log : chaque grande graduation vaut ×10. Un croisement à mi-chemin entre deux grandes graduations vaut environ ×3, pas ×5."
+    }
+  }
+}
