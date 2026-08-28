@@ -3,8 +3,6 @@
  *
  * The postMessage contract between the LMS host chrome and a sandboxed
  * exercise iframe. Types + a single version constant. Zero runtime code.
- *
- * See docs/physicsruntimedesign.md §6 for the full protocol spec.
  */
 
 // ─────────────────────────────────────────────────────────────────────────

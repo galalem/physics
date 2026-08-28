@@ -4,8 +4,6 @@
  * Public API is intentionally tiny:
  *   - `mount(container, config)` — creates the iframe, returns a Handle.
  *   - Types for MountConfig, MountHandle, LifecycleState.
- *
- * See docs/physicsruntimedesign.md §9 for the intended usage shape.
  */
 
 import { Host } from './internal/host.js'

@@ -7,8 +7,6 @@
  *   - lifecycle state machine (LOADING → INIT → RUNNING → PAUSED/DONE/FAILED)
  *   - LMS callback fan-out (onProgress, onSaveState, onComplete, onError, ...)
  *   - LMS-triggered actions (pause, resume, reset, requestHint, requestState)
- *
- * See docs/physicsruntimedesign.md §5–§7.
  */
 
 import { PROTOCOL_VERSION } from '@physics/protocol'

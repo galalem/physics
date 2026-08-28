@@ -13,7 +13,7 @@
 import { useSyncExternalStore, useState, useEffect, type CSSProperties } from 'react'
 import type { FakeHost } from './fake-host.js'
 
-// Design tokens (approximate — see design/design_handoff_physics_app/README.md)
+// Design tokens (approximate — dev-shell only)
 const T = {
   cream: '#EFEDE7',
   cardCream: '#FAF9F5',

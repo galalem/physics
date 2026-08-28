@@ -30,3 +30,7 @@ pnpm-debug.log*
 coverage/
 .vite/
 .cache/
+
+# test artifacts
+test-results/
+playwright-report/

@@ -64,7 +64,7 @@
             "type": "string"
           },
           "minItems": 1,
-          "description": "One or more level ids from families.yaml (e.g., 1ere, bac-maths)."
+          "description": "One or more level tag slugs (e.g., 1ere, bac-maths)."
         },
         "field": {
           "type": "array",
@@ -72,11 +72,11 @@
             "type": "string"
           },
           "minItems": 1,
-          "description": "One or more field ids from families.yaml (e.g., mecanique, nucleaire)."
+          "description": "One or more field tag slugs (e.g., mecanique, nucleaire)."
         },
         "pattern": {
           "type": "string",
-          "description": "Exactly one pattern id from families.yaml (e.g., 2d-trajectory-launcher). Also mirrored in top-level `pattern`."
+          "description": "Exactly one pattern tag slug (e.g., 2d-trajectory-launcher). Also mirrored in top-level `pattern`."
         }
       }
     },

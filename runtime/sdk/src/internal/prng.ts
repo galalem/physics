@@ -1,9 +1,9 @@
 /**
  * xoshiro128** — 128-bit state PRNG with fork()-able substreams.
  *
- * Rationale in docs/physicsruntimedesign.md §8: reproducibility is
- * load-bearing for bug reports, and `fork()` per subsystem prevents
- * decorative additions from shifting the physics stream.
+ * Reproducibility is load-bearing for bug reports; `fork()` per
+ * subsystem prevents decorative additions from shifting the physics
+ * stream.
  */
 
 export interface Rng {
