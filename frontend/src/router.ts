@@ -1,5 +1,6 @@
-import { auth, createRouter, layout } from '@galalem/react-router'
+import { auth, createRouter, guards, layout, type Guard } from '@galalem/react-router'
 import { ensureMe } from './hooks/useMe'
+import { tutorial } from './lib/tutorial'
 import {
   AppLayout,
   AuthLayout,
@@ -17,8 +18,18 @@ import {
   ResetPasswordPage,
   SignupPage,
   TermsPage,
+  TutorialPage,
   VerifyEmailPage,
 } from './pages'
+
+// Signed-in users are pushed through the tutorial before they can reach
+// the app proper. Applied to the app-shaped routes only — the marketing
+// home, pricing and legal pages stay reachable, so a redirect never traps
+// someone who just wanted to read the terms.
+const requireTutorial: Guard = async () => {
+  const me = await ensureMe()
+  return tutorial.isPending(me) ? { redirect: '/tutorial' } : true
+}
 
 export const router = createRouter({
   auth: {
@@ -32,7 +43,9 @@ export const router = createRouter({
       { path: '/terms', component: TermsPage },
       { path: '/pricing', component: PricingPage },
       { path: '/checkout/success', component: CheckoutSuccessPage },
-      auth([{ path: '/exercises/:slug', component: ExercisePage }]),
+      // Public on purpose — the tutorial doubles as the pitch for guests.
+      { path: '/tutorial', component: TutorialPage },
+      auth([guards([requireTutorial], [{ path: '/exercises/:slug', component: ExercisePage }])]),
     ]),
     layout(AuthLayout, [
       { path: '/login', component: LoginPage },
@@ -42,7 +55,7 @@ export const router = createRouter({
       { path: '/verify-email', component: VerifyEmailPage },
     ]),
     layout(AppLayout, [
-      auth([{ path: '/dashboard', component: DashboardPage }]),
+      auth([guards([requireTutorial], [{ path: '/dashboard', component: DashboardPage }])]),
     ]),
   ],
 })

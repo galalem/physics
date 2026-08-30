@@ -6,6 +6,7 @@ import ProfileDeleteRoute from './profile-delete.route';
 import ProfileReadRoute from './profile-read.route';
 import ProfileUpdateRoute from './profile-update.route';
 import SubscriptionRoute from './subscription.route';
+import TutorialRoute from './tutorial.route';
 import type { MyEnv } from './types';
 
 const hono = new Hono<MyEnv>();
@@ -20,6 +21,7 @@ const routes: Array<(app: Hono<MyEnv>) => void> = [
   ProfileReadRoute,
   ProfileUpdateRoute,
   SubscriptionRoute,
+  TutorialRoute,
 ];
 
 routes.forEach((r) => r(hono));

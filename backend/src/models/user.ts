@@ -21,6 +21,7 @@ export interface UserRow {
   locale: string;
   role: string;
   email_verified: boolean;
+  tutorial_done_at: Date | null;
 }
 
 interface UserRowForAuth extends UserRow {
@@ -42,6 +43,7 @@ export class User {
       locale: row.locale as Locale,
       role: row.role as UserRole,
       emailVerified: row.email_verified,
+      tutorialDoneAt: row.tutorial_done_at?.toISOString() ?? null,
     };
   }
 
@@ -66,7 +68,7 @@ export class User {
     if (!ipCheck.ok) throw errors.rateLimited(ipCheck.retryAfter);
 
     const rows = await sql<UserRowForAuth[]>`
-      SELECT id, email, password_hash, first_name, last_name, locale, role,
+      SELECT id, email, password_hash, first_name, last_name, locale, role, tutorial_done_at,
              email_verified, locked_until
       FROM users
       WHERE email = ${email}
@@ -111,10 +113,25 @@ export class User {
 
   static async findById(userId: string, db: Db = sql): Promise<UserRow | null> {
     const [row] = await db<UserRow[]>`
-      SELECT id, email, first_name, last_name, locale, role, email_verified
+      SELECT id, email, first_name, last_name, locale, role, email_verified, tutorial_done_at
       FROM users WHERE id = ${userId}
     `;
     return row ?? null;
+  }
+
+  // Terminal either way — finishing and skipping both close the gate. First
+  // write wins, so a guest flag syncing after a real completion cannot
+  // downgrade the recorded outcome.
+  static async markTutorialDone(
+    userId: string,
+    outcome: 'completed' | 'skipped',
+    db: Db = sql,
+  ): Promise<void> {
+    await db`
+      UPDATE users
+      SET tutorial_done_at = now(), tutorial_outcome = ${outcome}
+      WHERE id = ${userId} AND tutorial_done_at IS NULL
+    `;
   }
 
   static async getCustomerId(userId: string, db: Db = sql): Promise<string | null> {

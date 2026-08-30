@@ -17,6 +17,8 @@ export interface AuthedUser {
   locale: Locale;
   role: UserRole;
   emailVerified: boolean;
+  /** Null until the user finishes or skips the onboarding tutorial. */
+  tutorialDoneAt: string | null;
 }
 
 type Resolution =
@@ -33,6 +35,7 @@ interface SessionRow {
   locale: string;
   role: string;
   email_verified: boolean;
+  tutorial_done_at: Date | null;
   session_id: string;
   session_created_at: Date;
   expires_at: Date;
@@ -43,6 +46,7 @@ async function resolveCookieToken(token: string): Promise<Resolution> {
   const rows = await sql<SessionRow[]>`
     SELECT
       u.id, u.email, u.first_name, u.last_name, u.locale, u.role, u.email_verified,
+      u.tutorial_done_at,
       s.id AS session_id, s.created_at AS session_created_at, s.expires_at
     FROM sessions s
     JOIN users u ON u.id = s.user_id

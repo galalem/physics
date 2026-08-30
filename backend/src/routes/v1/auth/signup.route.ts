@@ -62,7 +62,7 @@ export default function registerRoutes(app: Hono<AuthEnv>): void {
         >`
           INSERT INTO users (email, password_hash, first_name, last_name, locale)
           VALUES (${email}, ${password_hash}, ${firstName}, ${lastName}, ${bodyLocale})
-          RETURNING id, email, first_name, last_name, locale, role, email_verified
+          RETURNING id, email, first_name, last_name, locale, role, email_verified, tutorial_done_at
         `;
         userRow = rows[0];
       } catch (err: unknown) {

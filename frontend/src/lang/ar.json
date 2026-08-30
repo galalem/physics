@@ -298,5 +298,150 @@
   "pages.settings.support.description": "شيء ما لا يعمل أو لديك سؤال؟ يسعدنا مساعدتك.",
   "pages.settings.support.email_title": "راسِلنا",
   "pages.settings.support.email_body_before": "راسلنا على",
-  "pages.settings.support.email_body_after": "— نُجيب عادةً خلال يوم عمل. سيصل قريباً نظام تذاكر متكامل."
+  "pages.settings.support.email_body_after": "— نُجيب عادةً خلال يوم عمل. سيصل قريباً نظام تذاكر متكامل.",
+
+  "pages.tutorial.back_home": "العودة إلى الرئيسية",
+  "pages.tutorial.title": "انعكاس الضوء",
+  "pages.tutorial.complete_badge": "انتهى الدليل",
+  "pages.tutorial.complete_title": "الآن تعرف كيف يعمل هذا.",
+  "pages.tutorial.complete_browse": "تصفّح الفهرس",
+  "pages.tutorial.replay": "أعِد الدليل",
+  "pages.tutorial.resume_tour": "أعِد تشغيل الدليل",
+  "pages.tutorial.skip": "تخطَّ الدليل",
+  "pages.tutorial.continue": "متابعة",
+  "pages.tutorial.waiting_default": "جرّب في الأعلى",
+  "pages.tutorial.fullscreen_enter": "ملء الشاشة",
+  "pages.tutorial.fullscreen_exit": "إنهاء ملء الشاشة",
+
+  "pages.tutorial.chapter.ui": "الواجهة",
+  "pages.tutorial.chapter.observe": "المرحلة 1 — لاحظ",
+  "pages.tutorial.chapter.experiment": "المرحلة 2 — جرب",
+  "pages.tutorial.chapter.evaluate": "المرحلة 3 — قيّم",
+
+  "pages.tutorial.stage.observe.name": "لاحظ",
+  "pages.tutorial.stage.observe.instruction": "أمسك المرآة وأدِرها. ينعكس الشعاع البرتقالي — تبقى الزاويتان حول الخط العمودي المتقطع متساويتين دائماً.",
+  "pages.tutorial.stage.observe.concept": "قانون الانعكاس: $\\theta_i = \\theta_r$ — زاوية السقوط تساوي زاوية الانعكاس.",
+  "pages.tutorial.stage.experiment.name": "جرب",
+  "pages.tutorial.stage.experiment.instruction": "وجّه المرآة ثم اضغط إطلاق (أو مسطرة المسافة) لإطلاق الشعاع. أضِئ النجوم الثلاث — لديك 7 طلقات.",
+  "pages.tutorial.stage.experiment.concept": "تصوّب فقط بالتحكم في زاوية المرآة.",
+  "pages.tutorial.stage.evaluate.name": "قيّم",
+  "pages.tutorial.stage.evaluate.instruction": "الشعاع غير مرئي. اقرأ إحداثيات $S$ و$M$ و$T$، احسب زاوية المرآة $\\varphi$ التي توجّه الشعاع إلى الهدف، وجّه المرآة ثم أطلق. زر \"نظرة سريعة\" يكشف قيمة $\\varphi$ الحالية للتحقق من حسابك.",
+  "pages.tutorial.stage.evaluate.concept": "المرآة عمودية على منصّف الزاوية المكوّنة من $\\overrightarrow{MS}$ و$\\overrightarrow{MT}$.",
+
+  "pages.tutorial.scene.fire": "إطلاق",
+  "pages.tutorial.scene.shots": "طلقات",
+  "pages.tutorial.scene.lit": "مضاءة",
+  "pages.tutorial.scene.target": "هدف",
+  "pages.tutorial.scene.stage": "مرحلة",
+  "pages.tutorial.scene.exhausted": "نفدت الطلقات · أعِد المحاولة",
+  "pages.tutorial.scene.tip1": "أدِر المرآة",
+  "pages.tutorial.scene.tip2": "صوّب ثم اضغط مسطرة المسافة للإطلاق",
+  "pages.tutorial.scene.tip3": "احسب φ من الإحداثيات ثم أطلق",
+
+  "pages.tutorial.tour.welcome.title": "هذا تمرين حقيقي",
+  "pages.tutorial.tour.welcome.body": "ليس عرضاً تجريبياً — هكذا تبدو التمارين الـ125 جميعها. دقيقتان وستعرف كيف تعمل كلها.",
+  "pages.tutorial.tour.welcome.cta": "أرِني",
+
+  "pages.tutorial.tour.canvas.title": "الساحة",
+  "pages.tutorial.tour.canvas.body": "كل تمرين محاكاة صغيرة. تتعلّم بتحريك الأشياء ومراقبة ما يحدث — لا بالقراءة.",
+
+  "pages.tutorial.tour.rail.title": "ثلاث مراحل، دائماً",
+  "pages.tutorial.tour.rail.body": "**لاحظ** ← **جرب** ← **قيّم**. كل تمرين يتبع هذا المسار، والمرحلة الأخيرة تختلف عن الأوليين اختلافاً مهماً. سنصل إلى ذلك.",
+
+  "pages.tutorial.tour.instruction.title": "مهمتك",
+  "pages.tutorial.tour.instruction.body": "دائماً هنا، أعلى العمود. اقرأها قبل أن تلمس أي شيء — فهي تحدّد بدقة ما تطلبه المرحلة.",
+
+  "pages.tutorial.tour.concept.title": "الفيزياء التي تحتاجها",
+  "pages.tutorial.tour.concept.body": "القانون المطلوب، بعبارة واضحة. هنا قانون الانعكاس: $\\theta_i = \\theta_r$ — يرتد الضوء بالزاوية نفسها التي وصل بها.",
+
+  "pages.tutorial.tour.hud-tl.title": "زوايا الساحة",
+  "pages.tutorial.tour.hud-tl.body": "الأركان الأربعة تحمل معلومات حيّة. أعلى اليسار: المرحلة التي أنت فيها.",
+
+  "pages.tutorial.tour.hud-tr.title": "قياسات حيّة",
+  "pages.tutorial.tour.hud-tr.body": "أعلى اليمين يعرض ما تقيسه المحاكاة الآن — هنا الزاويتان. راقب هذا الرقم وأنت تحرّك الأشياء.",
+
+  "pages.tutorial.tour.fullscreen.title": "مساحة أوسع",
+  "pages.tutorial.tour.fullscreen.body": "هذا الزر يكبّر الساحة لتملأ الشاشة — مفيد على الهاتف، حيث المشهد صغير ويلزمك تصويب دقيق.",
+
+  "pages.tutorial.tour.controls.title": "أدوات التحكم",
+  "pages.tutorial.tour.controls.body": "**إعادة** تعيد المرحلة من البداية إن تعقّدت الأمور. **التالي** يُفتح بعد أن تنجز ما تطلبه المرحلة.",
+
+  "pages.tutorial.tour.source.title": "منبع الضوء",
+  "pages.tutorial.tour.source.body": "نسمّيه $S$. ينطلق منه شعاع نحو المرآة.",
+
+  "pages.tutorial.tour.mirror-intro.title": "المرآة",
+  "pages.tutorial.tour.mirror-intro.body": "نسمّيها $M$. النقطتان الفيروزيتان طرفاها — أمسك إحداهما لتدويرها.",
+
+  "pages.tutorial.tour.mirror-drag.title": "أدِرها",
+  "pages.tutorial.tour.mirror-drag.body": "أدِر المرآة وراقب الشعاع البرتقالي وهو يتحرك. لاحظ أن الشعاع المنعكس يدور **ضعف** سرعة المرآة.",
+  "pages.tutorial.tour.mirror-drag.waiting": "أدِر المرآة للمتابعة",
+
+  "pages.tutorial.tour.normal.title": "الخط العمودي (النظير)",
+  "pages.tutorial.tour.normal.body": "الخط المتقطع هو **العمود المُقام** — خط وهمي عمودي على سطح المرآة. كل زوايا الانعكاس تُقاس منه، لا من المرآة نفسها.",
+
+  "pages.tutorial.tour.arcs.title": "القانون على الشاشة",
+  "pages.tutorial.tour.arcs.body": "القوسان الفيروزيان هما زاوية السقوط ($\\theta_i$) وزاوية الانعكاس ($\\theta_r$)، وكلتاهما تُقاس من العمود. واصل التدوير — تبقيان متساويتين مهما فعلت. **هذا هو القانون كله.**",
+
+  "pages.tutorial.tour.stage1-done.title": "تلك كانت: لاحظ",
+  "pages.tutorial.tour.stage1-done.body": "لم تحسب شيئاً — بل رأيت قاعدة تتحقق. هذا هو الغرض من المرحلة الأولى. اضغط **التالي**.",
+  "pages.tutorial.tour.stage1-done.waiting": "اضغط التالي للمتابعة",
+
+  "pages.tutorial.tour.stage2-intro.title": "المرحلة 2 — جرب",
+  "pages.tutorial.tour.stage2-intro.body": "الآن تستعمل القانون بدل أن تراقبه. المساعدة ما زالت ظاهرة، لكن أمامك مهمة.",
+
+  "pages.tutorial.tour.stars.title": "ثلاثة أهداف",
+  "pages.tutorial.tour.stars.body": "أضِئ النجوم الثلاث بعكس الشعاع عليها.",
+
+  "pages.tutorial.tour.fire-intro.title": "الشعاع لم يعد متواصلاً",
+  "pages.tutorial.tour.fire-intro.body": "تصوّب أولاً ثم تطلق. اضغط **إطلاق** — أو مسطرة المسافة — لإرسال نبضة واحدة في اتجاه تصويبك الحالي.",
+
+  "pages.tutorial.tour.shots.title": "الطلقات محدودة",
+  "pages.tutorial.tour.shots.body": "سبع طلقات لثلاث نجوم. التصويب العشوائي يكلّفك واحدة، فاضبط الشعاع قبل الإطلاق — وهذا هو مغزى القيد.",
+
+  "pages.tutorial.tour.stage2-play.title": "أضِئ الثلاث جميعاً",
+  "pages.tutorial.tour.stage2-play.body": "صوّب بالمرآة، وانظر إلى أين يتجه الشعاع، ثم أطلق. تذكّر: تدوير المرآة بمقدار $x°$ يحرّك الشعاع المنعكس بمقدار $2x°$.",
+  "pages.tutorial.tour.stage2-play.waiting": "أضِئ النجوم الثلاث للمتابعة",
+
+  "pages.tutorial.tour.stage2-done.title": "تلك كانت: جرب",
+  "pages.tutorial.tour.stage2-done.body": "طبّقت القانون لإصابة هدف عن قصد — والشعاع ما زال مرئياً ليرشدك. اضغط **التالي**، واقرأ الشاشة التالية بعناية.",
+  "pages.tutorial.tour.stage2-done.waiting": "اضغط التالي للمتابعة",
+
+  "pages.tutorial.tour.stage3-warning.title": "المرحلة 3 مختلفة. اقرأ هذا.",
+  "pages.tutorial.tour.stage3-warning.body": "المساعدة التي كنت تعتمد عليها **اختفت — عن قصد.** لا شعاع مرئي قبل الإطلاق، ولا أقواس للزوايا، ولا تغذية راجعة فورية. هذا ليس عطلاً في التطبيق، بل هو التمرين وهو يسألك إن كنت قد فهمت فعلاً، بدل أن يقيس قدرتك على المحاولة العشوائية حتى تنجح.",
+  "pages.tutorial.tour.stage3-warning.cta": "فهمت",
+
+  "pages.tutorial.tour.get-paper.title": "أحضر ورقة وقلماً",
+  "pages.tutorial.tour.get-paper.body": "بجدّية — الآن. كل مرحلة «قيّم» في هذا التطبيق مصمّمة لتُحلّ على الورق أولاً ثم تُتحقّق في المحاكاة. إن استطعت إنهاء واحدة دون أن تكتب شيئاً، فالتمرين مبني بشكل خاطئ.",
+  "pages.tutorial.tour.get-paper.cta": "حسناً",
+
+  "pages.tutorial.tour.coords.title": "كل ما تحتاجه على الشاشة",
+  "pages.tutorial.tour.coords.body": "ظهرت شبكة، والنقاط الثلاث مُعلَّمة: المنبع $S\\,(100,\\ 350)$، والمرآة $M\\,(400,\\ 200)$، والهدف $T\\,(700,\\ 350)$. دوّنها.",
+
+  "pages.tutorial.tour.calc-1.title": "هيّئ الحساب",
+  "pages.tutorial.tour.calc-1.body": "لوحة المفهوم تعطيك القاعدة: يجب أن تكون المرآة **عمودية على منصّف** الزاوية المكوّنة من $\\overrightarrow{MS}$ و$\\overrightarrow{MT}$. فابدأ بإيجاد هذين الاتجاهين.",
+
+  "pages.tutorial.tour.calc-2.title": "اتجاهان",
+  "pages.tutorial.tour.calc-2.body": "من $M\\,(400,200)$: $\\overrightarrow{MS} = (-300,\\ 150)$ ويشير إلى $153.4°$. و$\\overrightarrow{MT} = (300,\\ 150)$ ويشير إلى $26.6°$.",
+
+  "pages.tutorial.tour.calc-3.title": "نصّف الزاوية ثم أدِر 90°",
+  "pages.tutorial.tour.calc-3.body": "المنصّف هو المتوسط: $(153.4° + 26.6°)/2 = 90°$ — إلى أعلى مباشرة. والمرآة عمودية عليه، إذن $\\varphi = 90° - 90° = \\mathbf{0°}$. **أفقية.**",
+
+  "pages.tutorial.tour.calc-check.title": "تحقّق من معقولية النتيجة",
+  "pages.tutorial.tour.calc-check.body": "انظر إلى الأرقام مجدداً: $S$ و$T$ كلاهما على الارتفاع $350$، و$M$ تحتهما عند $200$. الشكل متناظر — فمن الطبيعي أن ترسل مرآة أفقية الشعاع من إحداهما إلى الأخرى. تحقّق دائماً من معقولية جوابك قبل أن تثق به.",
+
+  "pages.tutorial.tour.set-mirror.title": "اضبط المرآة الآن على 0°",
+  "pages.tutorial.tour.set-mirror.body": "أدِرها حتى تصير أفقية. لا ترى الشعاع، فاستعمل **لمحة** في أدوات التحكم — تكشف قيمة $\\varphi$ الحالية لتقارن ضبطك بحسابك. «لمحة» لا تعطي الجواب أبداً.",
+  "pages.tutorial.tour.set-mirror.waiting": "اضبط المرآة أفقياً (φ ≈ 0°)",
+
+  "pages.tutorial.tour.fire-final.title": "أطلق",
+  "pages.tutorial.tour.fire-final.body": "حسابك يقول إنها ستصيب. تأكّد.",
+  "pages.tutorial.tour.fire-final.waiting": "أطلق على الهدف",
+
+  "pages.tutorial.tour.second-target.title": "الهدف الثاني لك وحدك",
+  "pages.tutorial.tour.second-target.body": "ظهر هدف جديد، وهذه المرة لن يرافقك أحد. الطريقة نفسها: اقرأ الإحداثيات، جِد الاتجاهين، نصّف الزاوية، واطرح $90°$. الورقة أولاً.",
+  "pages.tutorial.tour.second-target.waiting": "أصِب الهدف الثاني لتنهي",
+
+  "pages.tutorial.tour.finish.title": "هذا هو النموذج كله",
+  "pages.tutorial.tour.finish.body": "**لاحظ** تريك القاعدة. **جرب** تجعلك تستعملها والمساعدة حاضرة. **قيّم** تسحب المساعدة وتسألك إن كنت قد فهمت. التمارين الـ125 تعمل بهذه الطريقة تماماً — فيزياء مختلفة، البنية نفسها.",
+  "pages.tutorial.tour.finish.cta": "إنهاء"
 }

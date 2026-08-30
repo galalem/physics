@@ -297,5 +297,150 @@
   "pages.settings.support.description": "Something wrong or a question? We'd love to help.",
   "pages.settings.support.email_title": "Email us",
   "pages.settings.support.email_body_before": "Drop us a line at",
-  "pages.settings.support.email_body_after": "— we typically reply within a working day. A proper ticketing surface will land later."
+  "pages.settings.support.email_body_after": "— we typically reply within a working day. A proper ticketing surface will land later.",
+
+  "pages.tutorial.back_home": "Back to home",
+  "pages.tutorial.title": "Reflection of Light",
+  "pages.tutorial.complete_badge": "Tutorial complete",
+  "pages.tutorial.complete_title": "You know how this works now.",
+  "pages.tutorial.complete_browse": "Browse the catalogue",
+  "pages.tutorial.replay": "Replay the tour",
+  "pages.tutorial.resume_tour": "Restart the guided tour",
+  "pages.tutorial.skip": "Skip tutorial",
+  "pages.tutorial.continue": "Continue",
+  "pages.tutorial.waiting_default": "Try it above",
+  "pages.tutorial.fullscreen_enter": "Fullscreen",
+  "pages.tutorial.fullscreen_exit": "Exit fullscreen",
+
+  "pages.tutorial.chapter.ui": "The interface",
+  "pages.tutorial.chapter.observe": "Stage 1 — Observe",
+  "pages.tutorial.chapter.experiment": "Stage 2 — Experiment",
+  "pages.tutorial.chapter.evaluate": "Stage 3 — Evaluate",
+
+  "pages.tutorial.stage.observe.name": "Observe",
+  "pages.tutorial.stage.observe.instruction": "Grab the mirror and rotate it. Watch the orange beam bounce — the two angles around the dotted normal always stay equal.",
+  "pages.tutorial.stage.observe.concept": "Law of reflection: $\\theta_i = \\theta_r$ — the angle of incidence equals the angle of reflection.",
+  "pages.tutorial.stage.experiment.name": "Experiment",
+  "pages.tutorial.stage.experiment.instruction": "Aim the mirror, then press Fire (or Space) to shoot the beam. Light all 3 stars — you have 7 shots.",
+  "pages.tutorial.stage.experiment.concept": "You aim only by controlling the mirror's angle.",
+  "pages.tutorial.stage.evaluate.name": "Evaluate",
+  "pages.tutorial.stage.evaluate.instruction": "The beam is invisible. Read the coordinates of $S$, $M$ and $T$, compute the mirror angle $\\varphi$ that sends the beam onto the target, set the mirror, then Fire. Peek reveals your current $\\varphi$ so you can verify your calculation.",
+  "pages.tutorial.stage.evaluate.concept": "The mirror is perpendicular to the bisector of the angle formed by $\\overrightarrow{MS}$ and $\\overrightarrow{MT}$.",
+
+  "pages.tutorial.scene.fire": "FIRE",
+  "pages.tutorial.scene.shots": "SHOTS",
+  "pages.tutorial.scene.lit": "LIT",
+  "pages.tutorial.scene.target": "TARGET",
+  "pages.tutorial.scene.stage": "STAGE",
+  "pages.tutorial.scene.exhausted": "OUT OF SHOTS · RESET TO RETRY",
+  "pages.tutorial.scene.tip1": "drag the mirror to rotate",
+  "pages.tutorial.scene.tip2": "aim, then press SPACE to fire",
+  "pages.tutorial.scene.tip3": "compute φ from coordinates, then fire",
+
+  "pages.tutorial.tour.welcome.title": "This is a real exercise",
+  "pages.tutorial.tour.welcome.body": "Not a demo — this is exactly what every one of the 125 exercises looks like. Two minutes and you'll know how all of them work.",
+  "pages.tutorial.tour.welcome.cta": "Show me",
+
+  "pages.tutorial.tour.canvas.title": "The canvas",
+  "pages.tutorial.tour.canvas.body": "Every exercise is a small simulation. You learn by moving things and watching what happens — not by reading.",
+
+  "pages.tutorial.tour.rail.title": "Three stages, always",
+  "pages.tutorial.tour.rail.body": "**Observe** → **Experiment** → **Evaluate**. Every exercise follows this arc, and the last one is different from the first two in a way that matters. More on that when we get there.",
+
+  "pages.tutorial.tour.instruction.title": "Your task",
+  "pages.tutorial.tour.instruction.body": "Always here, at the top of the rail. Read it before touching anything — it tells you exactly what this stage wants.",
+
+  "pages.tutorial.tour.concept.title": "The physics you need",
+  "pages.tutorial.tour.concept.body": "The law in play, stated plainly. Here it is the law of reflection: $\\theta_i = \\theta_r$ — light bounces off at the same angle it arrives.",
+
+  "pages.tutorial.tour.hud-tl.title": "Corner readouts",
+  "pages.tutorial.tour.hud-tl.body": "The four corners of the canvas carry live information. Top-left is always which stage you are on.",
+
+  "pages.tutorial.tour.hud-tr.title": "Live measurements",
+  "pages.tutorial.tour.hud-tr.body": "Top-right shows what the simulation is measuring right now — here, the two angles. Watch this number as you move things.",
+
+  "pages.tutorial.tour.fullscreen.title": "More room",
+  "pages.tutorial.tour.fullscreen.body": "This corner button blows the canvas up to fill your screen — worth it on a phone, where the scene is small and you need to aim precisely.",
+
+  "pages.tutorial.tour.controls.title": "Your controls",
+  "pages.tutorial.tour.controls.body": "**Retry** resets the stage if you get tangled. **Next** unlocks once you have done what the stage asks.",
+
+  "pages.tutorial.tour.source.title": "The light source",
+  "pages.tutorial.tour.source.body": "Call it $S$. A beam leaves here and travels to the mirror.",
+
+  "pages.tutorial.tour.mirror-intro.title": "The mirror",
+  "pages.tutorial.tour.mirror-intro.body": "Call it $M$. The two teal dots are its ends — grab either one to rotate it.",
+
+  "pages.tutorial.tour.mirror-drag.title": "Rotate it",
+  "pages.tutorial.tour.mirror-drag.body": "Drag the mirror around and watch the orange beam swing. Notice the reflected beam moves **twice** as fast as the mirror does.",
+  "pages.tutorial.tour.mirror-drag.waiting": "Drag the mirror to continue",
+
+  "pages.tutorial.tour.normal.title": "The normal",
+  "pages.tutorial.tour.normal.body": "The dotted line is the **normal** — an imaginary line perpendicular to the mirror surface. Every angle in reflection is measured from it, never from the mirror itself.",
+
+  "pages.tutorial.tour.arcs.title": "The law, on screen",
+  "pages.tutorial.tour.arcs.body": "The two teal arcs are the angle in ($\\theta_i$) and the angle out ($\\theta_r$), both measured from the normal. Keep dragging — they stay equal no matter what you do. **That is the whole law.**",
+
+  "pages.tutorial.tour.stage1-done.title": "That was Observe",
+  "pages.tutorial.tour.stage1-done.body": "You did not calculate anything — you watched a rule hold. That is what stage 1 is for. Hit **Next**.",
+  "pages.tutorial.tour.stage1-done.waiting": "Click Next to continue",
+
+  "pages.tutorial.tour.stage2-intro.title": "Stage 2 — Experiment",
+  "pages.tutorial.tour.stage2-intro.body": "Now you use the law instead of watching it. The help is still on screen, but you have a job to do.",
+
+  "pages.tutorial.tour.stars.title": "Three targets",
+  "pages.tutorial.tour.stars.body": "Light all three stars by bouncing the beam onto them.",
+
+  "pages.tutorial.tour.fire-intro.title": "The beam is not continuous now",
+  "pages.tutorial.tour.fire-intro.body": "You aim first, then shoot. Press **FIRE** — or the spacebar — to send one pulse along your current aim.",
+
+  "pages.tutorial.tour.shots.title": "Shots are limited",
+  "pages.tutorial.tour.shots.body": "Seven shots for three stars. Aiming carelessly costs you one, so line the beam up before firing — that is the point of the constraint.",
+
+  "pages.tutorial.tour.stage2-play.title": "Light all three",
+  "pages.tutorial.tour.stage2-play.body": "Aim with the mirror, watch where the beam points, then fire. Remember: rotating the mirror by $x°$ swings the reflected beam by $2x°$.",
+  "pages.tutorial.tour.stage2-play.waiting": "Light all 3 stars to continue",
+
+  "pages.tutorial.tour.stage2-done.title": "That was Experiment",
+  "pages.tutorial.tour.stage2-done.body": "You applied the law to hit something on purpose — still with the beam visible to guide you. Hit **Next**, and read the following screen carefully.",
+  "pages.tutorial.tour.stage2-done.waiting": "Click Next to continue",
+
+  "pages.tutorial.tour.stage3-warning.title": "Stage 3 is different. Read this.",
+  "pages.tutorial.tour.stage3-warning.body": "The help you have been leaning on is **gone — deliberately.** No visible beam before you fire, no angle arcs, no live feedback. This is not the app breaking. It is the exercise asking whether you actually understood, instead of whether you can nudge things until they work.",
+  "pages.tutorial.tour.stage3-warning.cta": "Understood",
+
+  "pages.tutorial.tour.get-paper.title": "Get a pencil and paper",
+  "pages.tutorial.tour.get-paper.body": "Seriously — right now. Every Evaluate stage in this app is designed to be worked out on paper first, then checked in the simulation. If you can finish one without writing anything down, the exercise was built wrong.",
+  "pages.tutorial.tour.get-paper.cta": "Got it",
+
+  "pages.tutorial.tour.coords.title": "Everything you need is on screen",
+  "pages.tutorial.tour.coords.body": "A grid appeared, and the three points are labelled: the source $S\\,(100,\\ 350)$, the mirror $M\\,(400,\\ 200)$, and the target $T\\,(700,\\ 350)$. Write them down.",
+
+  "pages.tutorial.tour.calc-1.title": "Set up the calculation",
+  "pages.tutorial.tour.calc-1.body": "The concept panel gives you the rule: the mirror must be **perpendicular to the bisector** of the angle formed by $\\overrightarrow{MS}$ and $\\overrightarrow{MT}$. So find those two directions first.",
+
+  "pages.tutorial.tour.calc-2.title": "Two directions",
+  "pages.tutorial.tour.calc-2.body": "From $M\\,(400,200)$: $\\overrightarrow{MS} = (-300,\\ 150)$, which points at $153.4°$. And $\\overrightarrow{MT} = (300,\\ 150)$, which points at $26.6°$.",
+
+  "pages.tutorial.tour.calc-3.title": "Bisect, then turn 90°",
+  "pages.tutorial.tour.calc-3.body": "The bisector is the average: $(153.4° + 26.6°)/2 = 90°$ — straight up. The mirror is perpendicular to it, so $\\varphi = 90° - 90° = \\mathbf{0°}$. **Level.**",
+
+  "pages.tutorial.tour.calc-check.title": "Sanity-check it",
+  "pages.tutorial.tour.calc-check.body": "Look at the numbers again: $S$ and $T$ are both at height $350$, with $M$ below them at $200$. The picture is symmetric — so of course a level mirror sends the beam from one to the other. Always check whether your answer makes sense before you trust it.",
+
+  "pages.tutorial.tour.set-mirror.title": "Now set the mirror to 0°",
+  "pages.tutorial.tour.set-mirror.body": "Drag it level. You cannot see the beam, so use **Peek** in the controls — it reveals your current $\\varphi$ so you can check your setting against your calculation. Peek never gives you the answer.",
+  "pages.tutorial.tour.set-mirror.waiting": "Set the mirror level (φ ≈ 0°)",
+
+  "pages.tutorial.tour.fire-final.title": "Fire",
+  "pages.tutorial.tour.fire-final.body": "Your calculation says this hits. Find out.",
+  "pages.tutorial.tour.fire-final.waiting": "Fire at the target",
+
+  "pages.tutorial.tour.second-target.title": "The second one is yours",
+  "pages.tutorial.tour.second-target.body": "A new target appeared, and this time nobody walks you through it. Same method: read the coordinates, find the two directions, bisect, subtract $90°$. Paper first.",
+  "pages.tutorial.tour.second-target.waiting": "Hit the second target to finish",
+
+  "pages.tutorial.tour.finish.title": "That's the whole model",
+  "pages.tutorial.tour.finish.body": "**Observe** shows you the rule. **Experiment** makes you use it with help still on. **Evaluate** takes the help away and asks if you understood. All 125 exercises work exactly like this — different physics, same shape.",
+  "pages.tutorial.tour.finish.cta": "Finish"
 }

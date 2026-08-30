@@ -3,21 +3,15 @@ import { useId, useState } from 'react'
 import { computePriceTND, formatTND } from '../pricing'
 import { useTags } from '~/hooks';
 
-// Days until the Tunisian Baccalaureate. Approximation: 5 June each year.
-// If today is on or past this year's Bac day, roll to next year — always
-// returns days >= 1 so the checkout call stays inside the backend's
-// MIN_VALIDITY (24h) window.
+// Days until the Tunisian Baccalaureate — first Wednesday of June, pinned
+// per session because the date shifts year to year. Once the session opens
+// the countdown hits 0 and the whole CTA unmounts, so the checkout call can
+// never fall under the backend's MIN_VALIDITY (24h) window.
 function daysUntilBac(): { days: number; year: number } {
-  const today = new Date()
-  const bac = new Date(1970, 5, 5) // the year does not matter
-  const daysToBac = (year: number) => Math.round((new Date(Date.UTC(year, bac.getMonth(), bac.getDate())).getTime() - today.getTime()) / 86_400_000)
-  let year = today.getFullYear()
-  let days = daysToBac(year)
-  if (days < 1) {
-    year += 1
-    days = daysToBac(year)
-  }
-  return { days, year }
+  const now = new Date().getTime();
+  const bac = new Date(Date.UTC(2027, 5, 2)).getTime(); // TODO replace this date each year
+  const daysToBac = Math.max(0, Math.round((bac - now) / 86_400_000));
+  return { days: daysToBac, year: 2027 }
 }
 
 const SPECIALTIES = [
@@ -38,6 +32,9 @@ export function BacCta({ onSubscribeBac, busy }: Props) {
   const { days, year } = daysUntilBac()
   const [specialty, setSpecialty] = useState<string>('')
   const selectId = useId()
+
+  if (days <= 0)
+    return null;
 
   const fullPrice = computePriceTND(days)
   const discountedPrice = Math.ceil(fullPrice * 0.5)

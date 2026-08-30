@@ -20,7 +20,7 @@ export function HeroSection() {
           <T>pages.home.hero_sub</T>
         </p>
         <div className="d-flex flex-wrap" style={{ gap: '12px' }}>
-          <Link to="/exercises/reflexion-lumiere" className="btn btn-primary rounded-pill hero-cta">
+          <Link to="/tutorial" className="btn btn-primary rounded-pill hero-cta">
             <T>pages.home.hero_cta</T>
           </Link>
           <a href="#how" className="btn btn-outline-dark rounded-pill hero-cta">

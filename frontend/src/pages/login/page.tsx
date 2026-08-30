@@ -3,6 +3,8 @@ import { Link, useRouter } from '@galalem/react-router'
 import { useState } from 'react'
 import { refreshMe } from '~/hooks/useMe'
 import { auth, type ApiError } from '~/lib/auth'
+import { ensureMe } from '~/hooks/useMe'
+import { tutorial } from '~/lib/tutorial'
 
 const ERROR_KEYS: Record<string, string> = {
   invalid_credentials: 'common.error.invalid_credentials',
@@ -30,6 +32,9 @@ export function LoginPage() {
     const res = await auth.login({ email: email.trim(), password })
     if (!res.error) {
       await refreshMe()
+      // A guest may have taken the tutorial before registering — carry that
+      // up so the gate does not push them through it a second time.
+      if (await tutorial.syncGuestFlag(await ensureMe())) await refreshMe()
       setSubmitting(false)
       router.redirect('/')
       return

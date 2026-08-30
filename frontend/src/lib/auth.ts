@@ -14,6 +14,8 @@ export interface Me {
   locale: Locale
   role: UserRole
   emailVerified: boolean
+  /** Null until the user finishes or skips the onboarding tutorial. */
+  tutorialDoneAt: string | null
 }
 
 export const auth = {

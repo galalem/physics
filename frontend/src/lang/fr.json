@@ -297,5 +297,150 @@
   "pages.settings.support.description": "Un souci ou une question ? On serait ravis de t'aider.",
   "pages.settings.support.email_title": "Écris-nous",
   "pages.settings.support.email_body_before": "Envoie-nous un message à",
-  "pages.settings.support.email_body_after": "— nous répondons généralement dans la journée ouvrée. Un vrai système de tickets arrivera plus tard."
+  "pages.settings.support.email_body_after": "— nous répondons généralement dans la journée ouvrée. Un vrai système de tickets arrivera plus tard.",
+
+  "pages.tutorial.back_home": "Retour à l'accueil",
+  "pages.tutorial.title": "Réflexion de la lumière",
+  "pages.tutorial.complete_badge": "Tutoriel terminé",
+  "pages.tutorial.complete_title": "Tu sais maintenant comment ça marche.",
+  "pages.tutorial.complete_browse": "Parcourir le catalogue",
+  "pages.tutorial.replay": "Revoir le guide",
+  "pages.tutorial.resume_tour": "Relancer le guide",
+  "pages.tutorial.skip": "Passer le tutoriel",
+  "pages.tutorial.continue": "Continuer",
+  "pages.tutorial.waiting_default": "Essaie ci-dessus",
+  "pages.tutorial.fullscreen_enter": "Plein écran",
+  "pages.tutorial.fullscreen_exit": "Quitter le plein écran",
+
+  "pages.tutorial.chapter.ui": "L'interface",
+  "pages.tutorial.chapter.observe": "Étape 1 — Observer",
+  "pages.tutorial.chapter.experiment": "Étape 2 — Expérimenter",
+  "pages.tutorial.chapter.evaluate": "Étape 3 — Évaluer",
+
+  "pages.tutorial.stage.observe.name": "Observer",
+  "pages.tutorial.stage.observe.instruction": "Attrape le miroir et fais-le pivoter. Le faisceau orange se réfléchit — les deux angles autour de la normale en pointillés restent toujours égaux.",
+  "pages.tutorial.stage.observe.concept": "Loi de la réflexion : $\\theta_i = \\theta_r$ — l'angle d'incidence est égal à l'angle de réflexion.",
+  "pages.tutorial.stage.experiment.name": "Expérimenter",
+  "pages.tutorial.stage.experiment.instruction": "Oriente le miroir, puis appuie sur Tirer (ou Espace) pour lancer le faisceau. Allume les 3 étoiles — tu disposes de 7 tirs.",
+  "pages.tutorial.stage.experiment.concept": "Tu vises uniquement en contrôlant l'angle du miroir.",
+  "pages.tutorial.stage.evaluate.name": "Évaluer",
+  "pages.tutorial.stage.evaluate.instruction": "Le faisceau est invisible. Lis les coordonnées de $S$, $M$ et $T$, calcule l'angle $\\varphi$ du miroir qui dirige le faisceau vers la cible, oriente le miroir puis tire. Peek révèle ton $\\varphi$ actuel pour vérifier ton calcul.",
+  "pages.tutorial.stage.evaluate.concept": "Le miroir est perpendiculaire à la bissectrice de l'angle formé par $\\overrightarrow{MS}$ et $\\overrightarrow{MT}$.",
+
+  "pages.tutorial.scene.fire": "TIRER",
+  "pages.tutorial.scene.shots": "TIRS",
+  "pages.tutorial.scene.lit": "ALLUMÉES",
+  "pages.tutorial.scene.target": "CIBLE",
+  "pages.tutorial.scene.stage": "ÉTAPE",
+  "pages.tutorial.scene.exhausted": "TIRS ÉPUISÉS · RÉINITIALISE POUR RÉESSAYER",
+  "pages.tutorial.scene.tip1": "fais pivoter le miroir",
+  "pages.tutorial.scene.tip2": "vise, puis appuie sur ESPACE pour tirer",
+  "pages.tutorial.scene.tip3": "calcule φ depuis les coordonnées, puis tire",
+
+  "pages.tutorial.tour.welcome.title": "Ceci est un vrai exercice",
+  "pages.tutorial.tour.welcome.body": "Pas une démo — c'est exactement à quoi ressemblent les 125 exercices. Deux minutes et tu sauras comment ils fonctionnent tous.",
+  "pages.tutorial.tour.welcome.cta": "Montre-moi",
+
+  "pages.tutorial.tour.canvas.title": "La scène",
+  "pages.tutorial.tour.canvas.body": "Chaque exercice est une petite simulation. Tu apprends en déplaçant les choses et en observant ce qui se passe — pas en lisant.",
+
+  "pages.tutorial.tour.rail.title": "Trois étapes, toujours",
+  "pages.tutorial.tour.rail.body": "**Observer** → **Expérimenter** → **Évaluer**. Chaque exercice suit ce parcours, et la dernière étape diffère des deux premières d'une manière qui compte. On y reviendra.",
+
+  "pages.tutorial.tour.instruction.title": "Ta tâche",
+  "pages.tutorial.tour.instruction.body": "Toujours ici, en haut de la colonne. Lis-la avant de toucher à quoi que ce soit — elle dit exactement ce que l'étape attend de toi.",
+
+  "pages.tutorial.tour.concept.title": "La physique dont tu as besoin",
+  "pages.tutorial.tour.concept.body": "La loi en jeu, énoncée simplement. Ici, la loi de la réflexion : $\\theta_i = \\theta_r$ — la lumière repart avec le même angle qu'à l'arrivée.",
+
+  "pages.tutorial.tour.hud-tl.title": "Les coins de la scène",
+  "pages.tutorial.tour.hud-tl.body": "Les quatre coins portent des informations en direct. En haut à gauche : l'étape où tu te trouves.",
+
+  "pages.tutorial.tour.hud-tr.title": "Mesures en direct",
+  "pages.tutorial.tour.hud-tr.body": "En haut à droite, ce que la simulation mesure en ce moment — ici, les deux angles. Surveille ce nombre pendant que tu bouges les choses.",
+
+  "pages.tutorial.tour.fullscreen.title": "Plus de place",
+  "pages.tutorial.tour.fullscreen.body": "Ce bouton agrandit la scène sur tout l'écran — utile sur téléphone, où la scène est petite et où il faut viser précisément.",
+
+  "pages.tutorial.tour.controls.title": "Tes commandes",
+  "pages.tutorial.tour.controls.body": "**Réessayer** remet l'étape à zéro si tu t'emmêles. **Suivant** se débloque une fois que tu as fait ce que l'étape demande.",
+
+  "pages.tutorial.tour.source.title": "La source lumineuse",
+  "pages.tutorial.tour.source.body": "On l'appelle $S$. Un faisceau en part et se dirige vers le miroir.",
+
+  "pages.tutorial.tour.mirror-intro.title": "Le miroir",
+  "pages.tutorial.tour.mirror-intro.body": "On l'appelle $M$. Les deux points turquoise sont ses extrémités — attrape l'une d'elles pour le faire pivoter.",
+
+  "pages.tutorial.tour.mirror-drag.title": "Fais-le pivoter",
+  "pages.tutorial.tour.mirror-drag.body": "Fais pivoter le miroir et observe le faisceau orange balayer la scène. Remarque que le faisceau réfléchi tourne **deux fois** plus vite que le miroir.",
+  "pages.tutorial.tour.mirror-drag.waiting": "Fais pivoter le miroir pour continuer",
+
+  "pages.tutorial.tour.normal.title": "La normale",
+  "pages.tutorial.tour.normal.body": "La ligne pointillée est la **normale** — une ligne imaginaire perpendiculaire à la surface du miroir. En réflexion, tous les angles se mesurent par rapport à elle, jamais par rapport au miroir.",
+
+  "pages.tutorial.tour.arcs.title": "La loi, à l'écran",
+  "pages.tutorial.tour.arcs.body": "Les deux arcs turquoise sont l'angle d'incidence ($\\theta_i$) et l'angle de réflexion ($\\theta_r$), mesurés depuis la normale. Continue de faire pivoter — ils restent égaux quoi que tu fasses. **C'est toute la loi.**",
+
+  "pages.tutorial.tour.stage1-done.title": "C'était Observer",
+  "pages.tutorial.tour.stage1-done.body": "Tu n'as rien calculé — tu as vu une règle se vérifier. C'est à cela que sert l'étape 1. Appuie sur **Suivant**.",
+  "pages.tutorial.tour.stage1-done.waiting": "Clique sur Suivant pour continuer",
+
+  "pages.tutorial.tour.stage2-intro.title": "Étape 2 — Expérimenter",
+  "pages.tutorial.tour.stage2-intro.body": "Maintenant tu utilises la loi au lieu de l'observer. L'aide est toujours à l'écran, mais tu as un travail à faire.",
+
+  "pages.tutorial.tour.stars.title": "Trois cibles",
+  "pages.tutorial.tour.stars.body": "Allume les trois étoiles en y faisant rebondir le faisceau.",
+
+  "pages.tutorial.tour.fire-intro.title": "Le faisceau n'est plus continu",
+  "pages.tutorial.tour.fire-intro.body": "Tu vises d'abord, puis tu tires. Appuie sur **TIRER** — ou sur la barre d'espace — pour envoyer une impulsion selon ta visée actuelle.",
+
+  "pages.tutorial.tour.shots.title": "Les tirs sont comptés",
+  "pages.tutorial.tour.shots.body": "Sept tirs pour trois étoiles. Viser au hasard t'en coûte un, alors aligne bien le faisceau avant de tirer — c'est tout l'intérêt de la contrainte.",
+
+  "pages.tutorial.tour.stage2-play.title": "Allume les trois",
+  "pages.tutorial.tour.stage2-play.body": "Vise avec le miroir, regarde où pointe le faisceau, puis tire. Rappelle-toi : faire pivoter le miroir de $x°$ fait tourner le faisceau réfléchi de $2x°$.",
+  "pages.tutorial.tour.stage2-play.waiting": "Allume les 3 étoiles pour continuer",
+
+  "pages.tutorial.tour.stage2-done.title": "C'était Expérimenter",
+  "pages.tutorial.tour.stage2-done.body": "Tu as appliqué la loi pour atteindre une cible volontairement — avec le faisceau encore visible pour te guider. Appuie sur **Suivant**, et lis attentivement l'écran qui suit.",
+  "pages.tutorial.tour.stage2-done.waiting": "Clique sur Suivant pour continuer",
+
+  "pages.tutorial.tour.stage3-warning.title": "L'étape 3 est différente. Lis ceci.",
+  "pages.tutorial.tour.stage3-warning.body": "L'aide sur laquelle tu t'appuyais a **disparu — volontairement.** Plus de faisceau visible avant le tir, plus d'arcs d'angles, plus de retour en direct. Ce n'est pas une panne. C'est l'exercice qui te demande si tu as vraiment compris, au lieu de vérifier si tu sais tâtonner jusqu'à ce que ça marche.",
+  "pages.tutorial.tour.stage3-warning.cta": "Compris",
+
+  "pages.tutorial.tour.get-paper.title": "Prends un crayon et une feuille",
+  "pages.tutorial.tour.get-paper.body": "Sérieusement — tout de suite. Chaque étape Évaluer de cette application est conçue pour être résolue d'abord sur papier, puis vérifiée dans la simulation. Si tu peux en terminer une sans rien écrire, c'est que l'exercice est mal construit.",
+  "pages.tutorial.tour.get-paper.cta": "C'est bon",
+
+  "pages.tutorial.tour.coords.title": "Tout ce qu'il te faut est à l'écran",
+  "pages.tutorial.tour.coords.body": "Une grille est apparue et les trois points sont repérés : la source $S\\,(100,\\ 350)$, le miroir $M\\,(400,\\ 200)$ et la cible $T\\,(700,\\ 350)$. Note-les.",
+
+  "pages.tutorial.tour.calc-1.title": "Pose le calcul",
+  "pages.tutorial.tour.calc-1.body": "Le panneau Concept te donne la règle : le miroir doit être **perpendiculaire à la bissectrice** de l'angle formé par $\\overrightarrow{MS}$ et $\\overrightarrow{MT}$. Commence donc par trouver ces deux directions.",
+
+  "pages.tutorial.tour.calc-2.title": "Deux directions",
+  "pages.tutorial.tour.calc-2.body": "Depuis $M\\,(400,200)$ : $\\overrightarrow{MS} = (-300,\\ 150)$, qui pointe à $153{,}4°$. Et $\\overrightarrow{MT} = (300,\\ 150)$, qui pointe à $26{,}6°$.",
+
+  "pages.tutorial.tour.calc-3.title": "Bissecte, puis tourne de 90°",
+  "pages.tutorial.tour.calc-3.body": "La bissectrice est la moyenne : $(153{,}4° + 26{,}6°)/2 = 90°$ — vers le haut. Le miroir lui est perpendiculaire, donc $\\varphi = 90° - 90° = \\mathbf{0°}$. **Horizontal.**",
+
+  "pages.tutorial.tour.calc-check.title": "Vérifie que c'est cohérent",
+  "pages.tutorial.tour.calc-check.body": "Regarde à nouveau les nombres : $S$ et $T$ sont tous deux à la hauteur $350$, avec $M$ en dessous à $200$. La figure est symétrique — il est donc logique qu'un miroir horizontal renvoie le faisceau de l'un vers l'autre. Vérifie toujours que ton résultat a du sens avant de lui faire confiance.",
+
+  "pages.tutorial.tour.set-mirror.title": "Place maintenant le miroir à 0°",
+  "pages.tutorial.tour.set-mirror.body": "Mets-le à l'horizontale. Tu ne vois pas le faisceau : utilise **Aperçu** dans les commandes — il révèle ton $\\varphi$ actuel pour que tu compares ton réglage à ton calcul. Aperçu ne donne jamais la réponse.",
+  "pages.tutorial.tour.set-mirror.waiting": "Mets le miroir à l'horizontale (φ ≈ 0°)",
+
+  "pages.tutorial.tour.fire-final.title": "Tire",
+  "pages.tutorial.tour.fire-final.body": "D'après ton calcul, ça touche. Vérifie.",
+  "pages.tutorial.tour.fire-final.waiting": "Tire sur la cible",
+
+  "pages.tutorial.tour.second-target.title": "La deuxième est pour toi",
+  "pages.tutorial.tour.second-target.body": "Une nouvelle cible est apparue, et cette fois personne ne t'accompagne. Même méthode : lis les coordonnées, trouve les deux directions, bissecte, retire $90°$. Le papier d'abord.",
+  "pages.tutorial.tour.second-target.waiting": "Touche la deuxième cible pour terminer",
+
+  "pages.tutorial.tour.finish.title": "Voilà tout le modèle",
+  "pages.tutorial.tour.finish.body": "**Observer** te montre la règle. **Expérimenter** te la fait utiliser avec l'aide encore présente. **Évaluer** retire l'aide et demande si tu as compris. Les 125 exercices fonctionnent exactement ainsi — physique différente, même structure.",
+  "pages.tutorial.tour.finish.cta": "Terminer"
 }

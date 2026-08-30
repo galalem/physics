@@ -71,6 +71,7 @@ interface UpdatedRow {
   locale: string;
   role: string;
   email_verified: boolean;
+  tutorial_done_at: Date | null;
 }
 
 export default function registerRoutes(app: Hono<MyEnv>): void {
@@ -88,7 +89,7 @@ export default function registerRoutes(app: Hono<MyEnv>): void {
           last_name  = COALESCE(${body.lastName ?? null}, last_name),
           locale     = COALESCE(${body.locale ?? null}, locale)
         WHERE id = ${user.id}
-        RETURNING id, email, first_name, last_name, locale, role, email_verified
+        RETURNING id, email, first_name, last_name, locale, role, email_verified, tutorial_done_at
       `;
       const updated = rows[0];
       if (!updated) throw errors.authenticationInvalid();
@@ -129,7 +130,7 @@ export default function registerRoutes(app: Hono<MyEnv>): void {
             last_name      = COALESCE(${body.lastName ?? null}, last_name),
             locale         = COALESCE(${body.locale ?? null}, locale)
           WHERE id = ${user.id}
-          RETURNING id, email, first_name, last_name, locale, role, email_verified
+          RETURNING id, email, first_name, last_name, locale, role, email_verified, tutorial_done_at
         `;
         const row = updRows[0];
         if (!row) throw errors.authenticationInvalid();

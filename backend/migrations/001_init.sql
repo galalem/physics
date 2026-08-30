@@ -28,6 +28,12 @@ CREATE TABLE users (
   locale                text NOT NULL,
   role                  text NOT NULL DEFAULT 'learner',
   customer_id           text,
+  -- Onboarding tutorial gate. Signed-in users are redirected to /tutorial
+  -- until `tutorial_done_at` is set. Finishing and skipping are both
+  -- terminal; `tutorial_outcome` records which, so we can tell whether the
+  -- tutorial works rather than only whether people got past it.
+  tutorial_done_at      timestamptz,
+  tutorial_outcome      text,
   failed_login_count    integer NOT NULL DEFAULT 0,
   locked_until          timestamptz,
   created_at            timestamptz NOT NULL DEFAULT now()
