@@ -24,6 +24,14 @@ interface Props {
   index: number
   /** True when the step's advance condition is satisfied (or it is click-advance). */
   canAdvance: boolean
+  /**
+   * The scene has reached a state no further action can clear — stage 2's
+   * shot budget spent with stars still dark. The step's predicate can never
+   * fire, and the Retry button sits outside the spotlight, so the way out
+   * has to live in here.
+   */
+  stuck?: boolean
+  onRetry?: () => void
   onNext: () => void
   onBack: () => void
   onSkip: () => void
@@ -74,7 +82,7 @@ function readRect(selector: string | undefined, padding: number): Rect | null {
   }
 }
 
-export function TourOverlay({ step, index, canAdvance, onNext, onBack, onSkip }: Props) {
+export function TourOverlay({ step, index, canAdvance, stuck, onRetry, onNext, onBack, onSkip }: Props) {
   const { __ } = useLocale()
   const chapter = chapterProgress(index)
   const [rect, setRect] = useState<Rect | null>(null)
@@ -285,6 +293,10 @@ export function TourOverlay({ step, index, canAdvance, onNext, onBack, onSkip }:
           ) : canAdvance ? (
             <button type="button" className="btn btn-primary rounded-pill btn-sm" onClick={onNext}>
               <T>{step.cta ?? 'pages.tutorial.continue'}</T>
+            </button>
+          ) : stuck && onRetry ? (
+            <button type="button" className="btn btn-primary rounded-pill btn-sm" onClick={onRetry}>
+              <span className="icon-rtl-flip">↻</span> <T>pages.tutorial.tour_retry</T>
             </button>
           ) : (
             <span className="tour-waiting">

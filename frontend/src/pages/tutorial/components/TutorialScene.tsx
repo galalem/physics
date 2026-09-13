@@ -75,6 +75,22 @@ function hitStar(r: { x: number; y: number }, st: { x: number; y: number }) {
   const py = M.y + r.y * t
   return Math.hypot(st.x - px, st.y - py) < 17
 }
+/**
+ * Angle at the mirror between the source and a star, in degrees.
+ *
+ * Pure geometry — S, M and the stars are all fixed, so this never changes
+ * as the student drags. It is the one number stage 2 hands over: aiming
+ * correctly means the normal bisects this angle, so the incidence readout
+ * in the top-right HUD has to land on half of it. The tutorial states the
+ * angle and lets the student find the halving themselves.
+ */
+function angleAtMirror(st: { x: number; y: number }) {
+  const a = norm({ x: S.x - M.x, y: S.y - M.y })
+  const b = norm({ x: st.x - M.x, y: st.y - M.y })
+  const dot = Math.max(-1, Math.min(1, a.x * b.x + a.y * b.y))
+  return Math.round((Math.acos(dot) * 180) / Math.PI)
+}
+
 /** Mirror angle in the Cartesian (y-up) convention the student computes in. */
 function displayDeg(phi: number) {
   let d = (-phi * 180) / Math.PI
@@ -101,6 +117,8 @@ export type SceneSnapshot = {
   canSubmit: boolean
   incidenceDeg: number
   readout: string
+  /** Stage 2 dead end: shots spent, stars still dark. Only a reset clears it. */
+  stuck: boolean
 }
 
 export type TutorialSceneHandle = {
@@ -213,6 +231,11 @@ export const TutorialScene = forwardRef<TutorialSceneHandle, Props>(function Tut
       ? lit.length === activeStars.length
       : targetIdx >= activeStars.length
 
+  // Stage 2 is the only stage that can be failed — it is the only one with
+  // a shot budget. Surfaced upward so the tour can offer a way out, since
+  // the tour's own spotlight is what puts the Retry button out of reach.
+  const stuck = isStage2 && shots >= maxShots && lit.length < activeStars.length
+
   const incidenceDeg = useMemo(() => {
     const { n, d0 } = reflectDir(phi)
     const dot = Math.min(1, Math.abs(d0.x * n.x + d0.y * n.y))
@@ -244,10 +267,11 @@ export const TutorialScene = forwardRef<TutorialSceneHandle, Props>(function Tut
       canSubmit,
       incidenceDeg,
       readout,
+      stuck,
     })
   }, [
     onSnapshot, stage, phi, moved, fired, lit, shots, maxShots,
-    targetIdx, activeStars.length, canSubmit, incidenceDeg, readout,
+    targetIdx, activeStars.length, canSubmit, incidenceDeg, readout, stuck,
   ])
 
   useEffect(() => {
@@ -501,6 +525,12 @@ export const TutorialScene = forwardRef<TutorialSceneHandle, Props>(function Tut
                   {on && <circle cx={s.x} cy={s.y} r={20} fill="#37C9B8" opacity={0.22} />}
                   <circle cx={s.x} cy={s.y} r={9} fill={on ? '#37C9B8' : 'none'}
                     stroke={on ? '#37C9B8' : '#6C7A93'} strokeWidth={2} />
+                  {!on && (
+                    <text x={s.x + 14} y={s.y - 12} fill="#F9A968"
+                      fontFamily="'JetBrains Mono', monospace" fontSize={11}>
+                      ∠ {angleAtMirror(s)}°
+                    </text>
+                  )}
                 </g>
               )
             })}

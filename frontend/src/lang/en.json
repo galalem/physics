@@ -308,6 +308,7 @@
   "pages.tutorial.skip": "Skip tutorial",
   "pages.tutorial.continue": "Continue",
   "pages.tutorial.waiting_default": "Try it above",
+  "pages.tutorial.tour_retry": "Reset and try again",
   "pages.tutorial.fullscreen_enter": "Fullscreen",
   "pages.tutorial.fullscreen_exit": "Exit fullscreen",
 
@@ -320,7 +321,7 @@
   "pages.tutorial.stage.observe.instruction": "Grab the mirror and rotate it. Watch the orange beam bounce — the two angles around the dotted normal always stay equal.",
   "pages.tutorial.stage.observe.concept": "Law of reflection: $\\theta_i = \\theta_r$ — the angle of incidence equals the angle of reflection.",
   "pages.tutorial.stage.experiment.name": "Experiment",
-  "pages.tutorial.stage.experiment.instruction": "Aim the mirror, then press Fire (or Space) to shoot the beam. Light all 3 stars — you have 7 shots.",
+  "pages.tutorial.stage.experiment.instruction": "Aim the mirror, then press Fire (or Space) to shoot the beam. Each star shows ∠, its angle from the source measured at the mirror. Light all 3 stars — you have 7 shots.",
   "pages.tutorial.stage.experiment.concept": "You aim only by controlling the mirror's angle.",
   "pages.tutorial.stage.evaluate.name": "Evaluate",
   "pages.tutorial.stage.evaluate.instruction": "The beam is invisible. Read the coordinates of $S$, $M$ and $T$, compute the mirror angle $\\varphi$ that sends the beam onto the target, set the mirror, then Fire. Peek reveals your current $\\varphi$ so you can verify your calculation.",
@@ -397,7 +398,7 @@
   "pages.tutorial.tour.shots.body": "Seven shots for three stars. Aiming carelessly costs you one, so line the beam up before firing — that is the point of the constraint.",
 
   "pages.tutorial.tour.stage2-play.title": "Light all three",
-  "pages.tutorial.tour.stage2-play.body": "Aim with the mirror, watch where the beam points, then fire. Remember: rotating the mirror by $x°$ swings the reflected beam by $2x°$.",
+  "pages.tutorial.tour.stage2-play.body": "Each star is labelled ∠ — the angle at the mirror between the source and that star. Top right, $\\theta_i$ shows the angle of incidence you are currently set to. **One tells you the other.** Work it out, aim until the readout matches, then fire.",
   "pages.tutorial.tour.stage2-play.waiting": "Light all 3 stars to continue",
 
   "pages.tutorial.tour.stage2-done.title": "That was Experiment",

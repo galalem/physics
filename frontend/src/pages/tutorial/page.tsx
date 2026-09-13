@@ -132,7 +132,13 @@ export function TutorialPage() {
     }
     setStepIndex((i) => i + 1)
   }
-  const onTourBack = () => setStepIndex((i) => Math.max(0, i - 1))
+  // Back is an explicit "let me redo this", so the scene goes back to a
+  // clean slate with it. Without this a student who spent stage 2's shot
+  // budget stayed spent, and stepping back looked like it did nothing.
+  const onTourBack = () => {
+    sceneRef.current?.reset()
+    setStepIndex((i) => Math.max(0, i - 1))
+  }
   const onTourSkip = () => {
     setTourActive(false)
     markDone('skipped')
@@ -243,6 +249,10 @@ export function TutorialPage() {
           step={step}
           index={stepIndex}
           canAdvance={canAdvance}
+          // The spotlight makes the Retry button in `.controls` unclickable,
+          // so the only way out of a spent shot budget is offered here.
+          stuck={!!snapshot?.stuck}
+          onRetry={() => sceneRef.current?.reset()}
           onNext={onTourNext}
           onBack={onTourBack}
           onSkip={onTourSkip}

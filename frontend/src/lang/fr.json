@@ -308,6 +308,7 @@
   "pages.tutorial.skip": "Passer le tutoriel",
   "pages.tutorial.continue": "Continuer",
   "pages.tutorial.waiting_default": "Essaie ci-dessus",
+  "pages.tutorial.tour_retry": "Réinitialiser et réessayer",
   "pages.tutorial.fullscreen_enter": "Plein écran",
   "pages.tutorial.fullscreen_exit": "Quitter le plein écran",
 
@@ -320,7 +321,7 @@
   "pages.tutorial.stage.observe.instruction": "Attrape le miroir et fais-le pivoter. Le faisceau orange se réfléchit — les deux angles autour de la normale en pointillés restent toujours égaux.",
   "pages.tutorial.stage.observe.concept": "Loi de la réflexion : $\\theta_i = \\theta_r$ — l'angle d'incidence est égal à l'angle de réflexion.",
   "pages.tutorial.stage.experiment.name": "Expérimenter",
-  "pages.tutorial.stage.experiment.instruction": "Oriente le miroir, puis appuie sur Tirer (ou Espace) pour lancer le faisceau. Allume les 3 étoiles — tu disposes de 7 tirs.",
+  "pages.tutorial.stage.experiment.instruction": "Oriente le miroir, puis appuie sur Tirer (ou Espace) pour lancer le faisceau. Chaque étoile affiche ∠, son angle depuis la source mesuré au miroir. Allume les 3 étoiles — tu disposes de 7 tirs.",
   "pages.tutorial.stage.experiment.concept": "Tu vises uniquement en contrôlant l'angle du miroir.",
   "pages.tutorial.stage.evaluate.name": "Évaluer",
   "pages.tutorial.stage.evaluate.instruction": "Le faisceau est invisible. Lis les coordonnées de $S$, $M$ et $T$, calcule l'angle $\\varphi$ du miroir qui dirige le faisceau vers la cible, oriente le miroir puis tire. Peek révèle ton $\\varphi$ actuel pour vérifier ton calcul.",
@@ -397,7 +398,7 @@
   "pages.tutorial.tour.shots.body": "Sept tirs pour trois étoiles. Viser au hasard t'en coûte un, alors aligne bien le faisceau avant de tirer — c'est tout l'intérêt de la contrainte.",
 
   "pages.tutorial.tour.stage2-play.title": "Allume les trois",
-  "pages.tutorial.tour.stage2-play.body": "Vise avec le miroir, regarde où pointe le faisceau, puis tire. Rappelle-toi : faire pivoter le miroir de $x°$ fait tourner le faisceau réfléchi de $2x°$.",
+  "pages.tutorial.tour.stage2-play.body": "Chaque étoile porte un ∠ — l'angle au miroir entre la source et cette étoile. En haut à droite, $\\theta_i$ indique l'angle d'incidence actuel. **L'un donne l'autre.** Trouve la relation, vise jusqu'à ce que l'affichage corresponde, puis tire.",
   "pages.tutorial.tour.stage2-play.waiting": "Allume les 3 étoiles pour continuer",
 
   "pages.tutorial.tour.stage2-done.title": "C'était Expérimenter",

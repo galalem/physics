@@ -309,6 +309,7 @@
   "pages.tutorial.skip": "تخطَّ الدليل",
   "pages.tutorial.continue": "متابعة",
   "pages.tutorial.waiting_default": "جرّب في الأعلى",
+  "pages.tutorial.tour_retry": "إعادة الضبط والمحاولة من جديد",
   "pages.tutorial.fullscreen_enter": "ملء الشاشة",
   "pages.tutorial.fullscreen_exit": "إنهاء ملء الشاشة",
 
@@ -321,7 +322,7 @@
   "pages.tutorial.stage.observe.instruction": "أمسك المرآة وأدِرها. ينعكس الشعاع البرتقالي — تبقى الزاويتان حول الخط العمودي المتقطع متساويتين دائماً.",
   "pages.tutorial.stage.observe.concept": "قانون الانعكاس: $\\theta_i = \\theta_r$ — زاوية السقوط تساوي زاوية الانعكاس.",
   "pages.tutorial.stage.experiment.name": "جرب",
-  "pages.tutorial.stage.experiment.instruction": "وجّه المرآة ثم اضغط إطلاق (أو مسطرة المسافة) لإطلاق الشعاع. أضِئ النجوم الثلاث — لديك 7 طلقات.",
+  "pages.tutorial.stage.experiment.instruction": "وجّه المرآة ثم اضغط إطلاق (أو مسطرة المسافة) لإطلاق الشعاع. كل نجمة تعرض ∠، أي زاويتها عن المصدر مقيسة عند المرآة. أضِئ النجوم الثلاث — لديك 7 طلقات.",
   "pages.tutorial.stage.experiment.concept": "تصوّب فقط بالتحكم في زاوية المرآة.",
   "pages.tutorial.stage.evaluate.name": "قيّم",
   "pages.tutorial.stage.evaluate.instruction": "الشعاع غير مرئي. اقرأ إحداثيات $S$ و$M$ و$T$، احسب زاوية المرآة $\\varphi$ التي توجّه الشعاع إلى الهدف، وجّه المرآة ثم أطلق. زر \"نظرة سريعة\" يكشف قيمة $\\varphi$ الحالية للتحقق من حسابك.",
@@ -398,7 +399,7 @@
   "pages.tutorial.tour.shots.body": "سبع طلقات لثلاث نجوم. التصويب العشوائي يكلّفك واحدة، فاضبط الشعاع قبل الإطلاق — وهذا هو مغزى القيد.",
 
   "pages.tutorial.tour.stage2-play.title": "أضِئ الثلاث جميعاً",
-  "pages.tutorial.tour.stage2-play.body": "صوّب بالمرآة، وانظر إلى أين يتجه الشعاع، ثم أطلق. تذكّر: تدوير المرآة بمقدار $x°$ يحرّك الشعاع المنعكس بمقدار $2x°$.",
+  "pages.tutorial.tour.stage2-play.body": "كل نجمة تحمل ∠ — الزاوية عند المرآة بين المصدر وتلك النجمة. في أعلى اليمين، يعرض $\\theta_i$ زاوية السقوط الحالية. **إحداهما تدلّك على الأخرى.** استنتج العلاقة، وصوّب حتى تتطابق القراءة، ثم أطلق.",
   "pages.tutorial.tour.stage2-play.waiting": "أضِئ النجوم الثلاث للمتابعة",
 
   "pages.tutorial.tour.stage2-done.title": "تلك كانت: جرب",
