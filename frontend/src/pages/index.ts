@@ -1,5 +1,4 @@
 export { CheckoutSuccessPage } from "./checkout-success"
-export { DashboardPage } from "./dashboard"
 export { ExercisePage } from "./exercise"
 export { ForgotPasswordPage } from "./forgot-password"
 export { HomePage } from "./home"

@@ -32,11 +32,13 @@ export function LoginPage() {
     const res = await auth.login({ email: email.trim(), password })
     if (!res.error) {
       await refreshMe()
+      const me = await ensureMe()
       // A guest may have taken the tutorial before registering — carry that
       // up so the gate does not push them through it a second time.
-      if (await tutorial.syncGuestFlag(await ensureMe())) await refreshMe()
+      if (await tutorial.syncGuestFlag(me)) await refreshMe()
       setSubmitting(false)
-      router.redirect('/')
+      // Admins land straight in the console; everyone else on the home page.
+      router.redirect(me?.role === 'admin' ? '/admin' : '/')
       return
     }
     setSubmitting(false)
