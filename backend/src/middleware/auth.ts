@@ -51,6 +51,8 @@ async function resolveCookieToken(token: string): Promise<Resolution> {
     FROM sessions s
     JOIN users u ON u.id = s.user_id
     WHERE s.token_hash = ${tokenHash}
+      AND u.deleted_at IS NULL
+      AND u.active
     LIMIT 1
   `;
   const row = rows[0];
@@ -97,6 +99,21 @@ function readCredentials(c: Parameters<MiddlewareHandler>[0]): {
   const apiKey = c.req.header('x-api-key') ?? null;
   return { cookieToken, bearer, apiKey };
 }
+
+/**
+ * Role gate. Runs AFTER requireAuth, which has already attached `user`.
+ *
+ * Deliberately 403 rather than 404: an authenticated learner probing
+ * /admin learns only that they are not allowed, and hiding the route's
+ * existence buys nothing when the frontend bundle names it anyway.
+ */
+export const requireRole =
+  (...allowed: UserRole[]): MiddlewareHandler<{ Variables: { user: AuthedUser } }> =>
+  async (c, next) => {
+    const user = c.get('user');
+    if (!user || !allowed.includes(user.role)) throw errors.forbidden();
+    await next();
+  };
 
 // Required auth: throws on any resolution other than `valid`.
 export const requireAuth: MiddlewareHandler<{ Variables: { user: AuthedUser } }> = async (c, next) => {

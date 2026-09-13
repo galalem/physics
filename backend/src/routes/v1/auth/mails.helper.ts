@@ -26,6 +26,20 @@ export async function sendPasswordResetEmail(to: string, token: string, locale: 
   await sendMail({ to, ...rendered });
 }
 
+// Admin invite. Points at the same /reset-password page a reset link
+// uses — the invited user is choosing a first password rather than
+// replacing one, but the flow and the token are identical.
+export async function sendInviteEmail(
+  to: string,
+  token: string,
+  firstName: string,
+  locale: Locale,
+): Promise<void> {
+  const link = `${baseUrl()}/reset-password?token=${encodeURIComponent(token)}`;
+  const rendered = render('user-invite', locale, { link, firstName });
+  await sendMail({ to, ...rendered });
+}
+
 // Fire-and-forget notice to the OLD email after an email change. Purely
 // informational — recovery is "log in with old email + change back".
 export async function sendEmailChangedNotice(to: string, locale: Locale): Promise<void> {

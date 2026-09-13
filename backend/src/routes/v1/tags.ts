@@ -15,10 +15,10 @@ tagsRoutes.get('/', async (c) => {
 
   const [rootRows, leafRows, translationRows] = await Promise.all([
     sql<{ id: string; slug: string; index: number }[]>`
-      SELECT id, slug, index FROM tags WHERE parent_id IS NULL ORDER BY index
+      SELECT id, slug, index FROM tags WHERE parent_id IS NULL AND deleted_at IS NULL ORDER BY index
     `,
     sql<{ id: string; parent_id: string; slug: string; index: number }[]>`
-      SELECT id, parent_id, slug, index FROM tags WHERE parent_id IS NOT NULL ORDER BY index
+      SELECT id, parent_id, slug, index FROM tags WHERE parent_id IS NOT NULL AND deleted_at IS NULL ORDER BY index
     `,
     sql<TranslationRow[]>`
       SELECT record_type, record_id, locale, field, value

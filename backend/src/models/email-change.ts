@@ -92,6 +92,7 @@ export class EmailChange {
         AND ec.verified_at IS NULL
         AND ec.token_expires_at > now()
         AND u.id = ec.user_id
+        AND u.deleted_at IS NULL
         AND LOWER(u.email) = LOWER(ec.new_email)
       RETURNING ec.user_id, ec.new_email
     `;

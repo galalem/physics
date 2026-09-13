@@ -44,7 +44,7 @@ function registerMintRoute(app: Hono<AuthEnv>): void {
 
     // Silent 200 for unknown / unverified accounts — enumeration protection.
     const rows = await sql<{ id: string; locale: string; email_verified: boolean }[]>`
-      SELECT id, locale, email_verified FROM users WHERE email = ${email}
+      SELECT id, locale, email_verified FROM users WHERE email = ${email} AND deleted_at IS NULL AND active
     `;
     const user = rows[0];
 
@@ -86,9 +86,14 @@ function registerConsumeRoute(app: Hono<AuthEnv>): void {
         if (result.reason === 'expired') throw errors.tokenExpired();
         throw errors.tokenInvalid();
       }
+      // `email_verified` is set here because redeeming a link that was
+      // mailed to the address proves control of it. For a normal reset it
+      // is already true (mint only issues for verified accounts), so this
+      // is a no-op there; for an admin invite it is what opens the account.
       await tx`
         UPDATE users
         SET password_hash = ${password_hash},
+            email_verified = true,
             failed_login_count = 0,
             locked_until = NULL
         WHERE id = ${result.userId}

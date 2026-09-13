@@ -23,6 +23,8 @@ export const errors = {
     new HttpError(401, 'authentication_expired', 'Session expired.', extras),
   invalidCredentials: (message = 'Invalid email or password.') =>
     new HttpError(401, 'invalid_credentials', message),
+  accountDisabled: (message = 'This account has been disabled. Contact support if you think this is a mistake.') =>
+    new HttpError(403, 'account_disabled', message),
   emailNotVerified: (message = 'Email not verified. Please verify your email before logging in.') =>
     new HttpError(401, 'email_not_verified', message, { resendUrl: '/api/v1/auth/verify-email/resend' }),
   invalidValue: (message: string, fields?: Array<{ field: string; message: string }>) =>
@@ -35,6 +37,8 @@ export const errors = {
     new HttpError(400, 'token_expired', message),
   rateLimited: (retryAfter: number, message = 'Too many requests, please try again later.') =>
     new HttpError(429, 'rate_limited', message, { retryAfter }),
+  forbidden: (message = 'You do not have access to this resource.') =>
+    new HttpError(403, 'forbidden', message),
   resourceMissing: (message = 'Not found.') =>
     new HttpError(404, 'resource_missing', message),
   entitlementRequired: (

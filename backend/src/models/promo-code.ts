@@ -13,7 +13,7 @@ export class PromoCode {
     const [row] = await db<PromoCodeRow[]>`
       SELECT id, code, discount, active, created_at
       FROM promo_codes
-      WHERE code = ${code} AND active = true
+      WHERE code = ${code} AND active = true AND deleted_at IS NULL
     `;
     return row ?? null;
   }

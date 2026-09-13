@@ -63,7 +63,7 @@ function registerResendVerifyEmailRoute(app: Hono<AuthEnv>): void {
 
     // Silent 200 if the account doesn't exist or is already verified.
     const rows = await sql<{ id: string; locale: string; email_verified: boolean }[]>`
-      SELECT id, locale, email_verified FROM users WHERE email = ${email}
+      SELECT id, locale, email_verified FROM users WHERE email = ${email} AND deleted_at IS NULL
     `;
     const user = rows[0];
 

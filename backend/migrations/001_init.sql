@@ -36,6 +36,11 @@ CREATE TABLE users (
   tutorial_outcome      text,
   failed_login_count    integer NOT NULL DEFAULT 0,
   locked_until          timestamptz,
+  -- Disable an account without destroying it (admin action, reversible).
+  active                boolean NOT NULL DEFAULT true,
+  -- Soft delete, Laravel-style. Present on first-class models only —
+  -- never on utility tables (sessions, tokens, audit rows) or join tables.
+  deleted_at            timestamptz,
   created_at            timestamptz NOT NULL DEFAULT now()
 );
 CREATE UNIQUE INDEX users_email_lower_idx ON users (LOWER(email));
@@ -114,6 +119,7 @@ CREATE TABLE tags (
   parent_id      uuid REFERENCES tags(id) ON DELETE CASCADE,
   slug           text NOT NULL,
   index          integer NOT NULL,
+  deleted_at     timestamptz,
   UNIQUE (parent_id, slug)
 );
 -- UNIQUE(parent_id, slug) doesn't catch two roots with the same slug
@@ -137,6 +143,7 @@ CREATE TABLE exercises (
   version        text NOT NULL DEFAULT '0.0.0',
   tier           text NOT NULL DEFAULT 'standard',
   published      boolean NOT NULL DEFAULT true,
+  deleted_at     timestamptz,
   created_at     timestamptz NOT NULL DEFAULT now()
 );
 
@@ -169,6 +176,7 @@ CREATE TABLE promo_codes (
   code           text UNIQUE NOT NULL,
   discount       integer NOT NULL CHECK (discount BETWEEN 1 AND 100),
   active         boolean NOT NULL DEFAULT true,
+  deleted_at     timestamptz,
   created_at     timestamptz NOT NULL DEFAULT now()
 );
 

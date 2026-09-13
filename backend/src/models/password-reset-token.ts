@@ -3,6 +3,14 @@ import { type Db, sql } from '~/lib/db';
 
 const TTL_MS = 60 * 60 * 1000;
 
+/**
+ * Invites reuse this table: the mechanism is identical (one-time, hashed
+ * at rest, expiring) and redeeming one lands on the same "set your
+ * password" page. Only the lifetime differs — a reset is a response to
+ * something the user just did, an invite may sit in an inbox for days.
+ */
+export const INVITE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+
 function hashToken(token: string): string {
   return createHash('sha256').update(token).digest('hex');
 }
@@ -14,10 +22,10 @@ export type RedeemResult =
 export class PasswordResetToken {
   // Mints a fresh reset token. Returns the plaintext — caller mails it
   // inside the reset link.
-  static async mint(userId: string, db: Db = sql): Promise<string> {
+  static async mint(userId: string, db: Db = sql, ttlMs: number = TTL_MS): Promise<string> {
     const token = randomBytes(32).toString('base64url');
     const tokenHash = hashToken(token);
-    const expiresAt = new Date(Date.now() + TTL_MS);
+    const expiresAt = new Date(Date.now() + ttlMs);
     await db`
       INSERT INTO password_reset_tokens (user_id, token_hash, expires_at)
       VALUES (${userId}, ${tokenHash}, ${expiresAt})

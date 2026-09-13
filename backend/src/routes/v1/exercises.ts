@@ -55,7 +55,7 @@ exercisesRoutes.get('/', optionalAuth, async (c) => {
   const user = c.get('user');
 
   const [exerciseRows, tagRows, titleRows, recRows, entitlements, attemptStatus] = await Promise.all([
-    sql<ExerciseRow[]>`SELECT id, slug, formula, tier FROM exercises WHERE published = true`,
+    sql<ExerciseRow[]>`SELECT id, slug, formula, tier FROM exercises WHERE published = true AND deleted_at IS NULL`,
     sql<{ exercise_id: string; compound: string }[]>`
       SELECT et.exercise_id, p.slug || ':' || t.slug AS compound
       FROM exercises_tags et
@@ -71,7 +71,7 @@ exercisesRoutes.get('/', optionalAuth, async (c) => {
       SELECT r.from_id, r.direction, e.slug
       FROM exercises_recommendations r
       JOIN exercises e ON e.id = r.to_id
-      WHERE e.published = true
+      WHERE e.published = true AND e.deleted_at IS NULL
     `,
     user ? Entitlement.activeForUser(user.id) : Promise.resolve([]),
     user ? Attempt.statusByExerciseForUser(user.id) : Promise.resolve(new Map()),
@@ -160,7 +160,7 @@ exercisesRoutes.get('/:slug', optionalAuth, async (c) => {
   >`
     SELECT id, slug, formula, version, bundle_url, tier
     FROM exercises
-    WHERE slug = ${slug} AND published = true
+    WHERE slug = ${slug} AND published = true AND deleted_at IS NULL
   `;
   if (!exercise) throw errors.resourceMissing(`Exercise not found: ${slug}`);
 
@@ -181,7 +181,7 @@ exercisesRoutes.get('/:slug', optionalAuth, async (c) => {
       SELECT r.direction, e.slug, e.id
       FROM exercises_recommendations r
       JOIN exercises e ON e.id = r.to_id
-      WHERE r.from_id = ${exercise.id} AND e.published = true
+      WHERE r.from_id = ${exercise.id} AND e.published = true AND e.deleted_at IS NULL
     `,
   ]);
 

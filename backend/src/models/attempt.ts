@@ -132,6 +132,29 @@ export class Attempt {
     return row ?? null;
   }
 
+  // Admin: one-line activity summary for a user's detail screen. Counts
+  // only, no rows — the raw log lives in its own area.
+  static async summaryForUser(
+    userId: string,
+    db: Db = sql,
+  ): Promise<{ total: number; completed: number; succeeded: number; lastActivityAt: string | null }> {
+    const [row] = await db<
+      { total: string; completed: string; succeeded: string; last_at: Date | null }[]
+    >`
+      SELECT count(*)                                        AS total,
+             count(*) FILTER (WHERE completed_at IS NOT NULL) AS completed,
+             count(*) FILTER (WHERE succeeded)                AS succeeded,
+             max(last_action_at)                             AS last_at
+      FROM attempts WHERE user_id = ${userId}
+    `;
+    return {
+      total: Number(row?.total ?? 0),
+      completed: Number(row?.completed ?? 0),
+      succeeded: Number(row?.succeeded ?? 0),
+      lastActivityAt: row?.last_at ? row.last_at.toISOString() : null,
+    };
+  }
+
   static async listForUser(
     userId: string,
     filters: AttemptListFilters,
