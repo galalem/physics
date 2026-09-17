@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /signup
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /verify-email
+Disallow: /checkout/
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://physics.galalem.tn/sitemap.xml

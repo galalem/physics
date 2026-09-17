@@ -442,5 +442,18 @@
 
   "pages.tutorial.tour.finish.title": "Voilà tout le modèle",
   "pages.tutorial.tour.finish.body": "**Observer** te montre la règle. **Expérimenter** te la fait utiliser avec l'aide encore présente. **Évaluer** retire l'aide et demande si tu as compris. Les 125 exercices fonctionnent exactement ainsi — physique différente, même structure.",
-  "pages.tutorial.tour.finish.cta": "Terminer"
+  "pages.tutorial.tour.finish.cta": "Terminer",
+
+  "seo.home.title": "Φysics — La physique du secondaire, jouable",
+  "seo.home.description": "Physique interactive pour le programme tunisien du secondaire. 125 exercices soignés couvrant tout le programme CNP — chaque notion, un petit jeu. Disponible en français, anglais et arabe.",
+  "seo.pricing.title": "Tarifs — Φysics",
+  "seo.pricing.description": "Paiement unique, sans reconduction. Les 125 exercices, tous les niveaux, toutes les spécialités — débloqués pour la durée de ton choix, d'une semaine à une année scolaire complète.",
+  "seo.tutorial.title": "Tutoriel — comment Φysics fonctionne",
+  "seo.tutorial.description": "Découvre le modèle Observer → Expérimenter → Évaluer en trois minutes. Une visite guidée d'un vrai exercice — sans inscription.",
+  "seo.privacy.title": "Politique de confidentialité — Φysics",
+  "seo.privacy.description": "Comment Φysics collecte, conserve et protège tes données — ainsi que tes droits RGPD.",
+  "seo.terms.title": "Conditions d'utilisation — Φysics",
+  "seo.terms.description": "Les conditions selon lesquelles Φysics est proposé aux élèves, enseignants et visiteurs.",
+  "seo.exercise.title_suffix": " — Φysics",
+  "seo.exercise.description_fallback": "Exercice de physique interactif sur Φysics — observe le phénomène, expérimente la notion, puis prouve que tu as compris."
 }

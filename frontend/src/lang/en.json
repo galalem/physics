@@ -442,5 +442,18 @@
 
   "pages.tutorial.tour.finish.title": "That's the whole model",
   "pages.tutorial.tour.finish.body": "**Observe** shows you the rule. **Experiment** makes you use it with help still on. **Evaluate** takes the help away and asks if you understood. All 125 exercises work exactly like this — different physics, same shape.",
-  "pages.tutorial.tour.finish.cta": "Finish"
+  "pages.tutorial.tour.finish.cta": "Finish",
+
+  "seo.home.title": "Φysics — Play your way through high-school physics",
+  "seo.home.description": "Interactive high-school physics for the Tunisian curriculum. 125 handcrafted exercises across the full CNP program — every topic a small game. Available in English, French and Arabic.",
+  "seo.pricing.title": "Pricing — Φysics",
+  "seo.pricing.description": "One-time purchase, no auto-renew. All 125 exercises, every level, every specialty — unlocked for the period you choose, from a week to a full school year.",
+  "seo.tutorial.title": "Tutorial — how Φysics works",
+  "seo.tutorial.description": "See the Observe → Experiment → Evaluate model in three minutes. A guided tour through a real exercise — no signup required.",
+  "seo.privacy.title": "Privacy Policy — Φysics",
+  "seo.privacy.description": "How Φysics collects, stores and protects your data — plus your GDPR rights.",
+  "seo.terms.title": "Terms of Service — Φysics",
+  "seo.terms.description": "The terms under which Φysics is offered to students, teachers and guests.",
+  "seo.exercise.title_suffix": " — Φysics",
+  "seo.exercise.description_fallback": "Interactive physics exercise on Φysics — observe the phenomenon, experiment with the concept, then prove you understood."
 }

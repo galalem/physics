@@ -1,0 +1,7 @@
+{
+  "name": "@physics/generate-sitemap",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Writes frontend/public/sitemap.xml from the curriculum index. Run via `pnpm generate-sitemap` from the repo root."
+}
