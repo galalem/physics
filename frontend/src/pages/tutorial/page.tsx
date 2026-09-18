@@ -5,6 +5,7 @@ import { MathText } from '~/components'
 import { TutorialScene, type SceneAllow, type SceneSnapshot, type TutorialSceneHandle } from './components/TutorialScene'
 import { TourOverlay } from './components/TourOverlay'
 import { TOUR, stepAllow } from './tour-script'
+import { useDocumentHead } from '~/hooks'
 import { useMe, refreshMe } from '~/hooks/useMe'
 import { tutorial } from '~/lib/tutorial'
 // Shared chrome — see the snapshot note below.
@@ -35,6 +36,11 @@ const TOTAL_STAGES = STAGES.length
 export function TutorialPage() {
   const { __ } = useLocale()
   const { me } = useMe()
+  useDocumentHead({
+    title: __('seo.tutorial.title'),
+    description: __('seo.tutorial.description'),
+    path: '/tutorial',
+  })
   const [stage, setStage] = useState(1)
   const [snapshot, setSnapshot] = useState<SceneSnapshot | null>(null)
   const [done, setDone] = useState(false)

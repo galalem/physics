@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import { MathText } from '~/components'
 import { bread, type ApiError } from '~/lib/api'
 import { useAttempts } from '~/hooks/useAttempts'
+import { useDocumentHead } from '~/hooks'
 import './styles.scss'
 
 // Backend GET /api/v1/exercises/:slug response shape.
@@ -82,6 +83,19 @@ export function ExercisePage() {
   }
 
   useEffect(load, [slug, locale])
+
+  // SEO head — dynamic per exercise, `noindex` when the slug 404s so we
+  // don't leak error pages into the index.
+  const exerciseForHead = state.kind === 'success' ? state.exercise : null
+  useDocumentHead({
+    title: exerciseForHead
+      ? `${exerciseForHead.title}${__('seo.exercise.title_suffix')}`
+      : `${slug || 'Exercise'}${__('seo.exercise.title_suffix')}`,
+    description:
+      exerciseForHead?.description || __('seo.exercise.description_fallback'),
+    path: slug ? `/exercises/${slug}` : undefined,
+    noindex: state.kind === 'error',
+  })
 
   // Mount the exercise iframe once we have data. Re-mounts if the slug,
   // resumable-attempt hint, or locale changes. Resume when GET

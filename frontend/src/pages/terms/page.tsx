@@ -1,5 +1,6 @@
 import { useLocale } from '@galalem/react-localization'
 import { MarkdownDoc } from '~/components'
+import { useDocumentHead } from '~/hooks'
 import { LEGAL_VARS } from '~/lib/legal-vars'
 
 const sources = import.meta.glob('./terms.*.md', {
@@ -9,6 +10,11 @@ const sources = import.meta.glob('./terms.*.md', {
 }) as Record<string, string>
 
 export function TermsPage() {
-  const { locale } = useLocale()
+  const { locale, __ } = useLocale()
+  useDocumentHead({
+    title: __('seo.terms.title'),
+    description: __('seo.terms.description'),
+    path: '/terms',
+  })
   return <MarkdownDoc sources={sources} locale={locale ?? 'en'} vars={LEGAL_VARS} />
 }

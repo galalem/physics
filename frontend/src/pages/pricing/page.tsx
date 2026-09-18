@@ -1,6 +1,7 @@
 import { T, useLocale } from '@galalem/react-localization'
 import { useRouter } from '@galalem/react-router'
 import { useState } from 'react'
+import { useDocumentHead } from '~/hooks'
 import { useMe } from '~/hooks/useMe'
 import { checkout } from '~/lib/checkout'
 import { BacCta } from './components/BacCta'
@@ -17,6 +18,12 @@ export function PricingPage() {
   const { me, loading } = useMe()
   const [busyKey, setBusyKey] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+
+  useDocumentHead({
+    title: __('seo.pricing.title'),
+    description: __('seo.pricing.description'),
+    path: '/pricing',
+  })
 
   async function startCheckout(
     days: number,
